@@ -16,6 +16,7 @@ namespace ExampleApplication
         public Form1()
         {
             InitializeComponent();
+            //Auto login only for debug purpose
             LoginClick(null, null);
         }
 
@@ -26,7 +27,8 @@ namespace ExampleApplication
         {
             get
             {
-                return new Configuration(new ApiClient("http://localhost/ARXivarResourceServer/"))
+                //Build a configuration object with the Token provided during login procedure or refresh token procedure
+                return new Configuration(new ApiClient("http://localhost:81/"))
                 {
                     ApiKey = new Dictionary<string, string>() { { "Authorization", _authToken} },
                     ApiKeyPrefix = new Dictionary<string, string>() { { "Authorization", "Bearer" } }
@@ -38,13 +40,18 @@ namespace ExampleApplication
         {
             try
             {
-                var authApi = new IO.Swagger.Api.AuthenticationApi("http://localhost/ARXivarResourceServer/");
+                //Inizialize Authentication api (Authentication api not require authentication token)
+                var authApi = new IO.Swagger.Api.AuthenticationApi("http://localhost:81/");
+                //Login to obtain a valid token (and a refresh token)
                 var resultToken = authApi.AuthenticationGetToken(userTxt.Text, passwordTxt.Text);
+
                 _authToken = resultToken.AccessToken;
                 _refreshToken = resultToken.RefreshToken;
+
                 tokenLabel.Text = "Token presente";
                 tokenLabel.ForeColor = Color.Green;
                 tokenValue.Text = string.Empty;
+                //Print token information
                 foreach (var propertyInfo in resultToken.GetType().GetProperties())
                 {
                     tokenValue.Text += string.Format("{0}: {1}{2}", propertyInfo.Name, propertyInfo.GetValue(resultToken), Environment.NewLine);
@@ -60,13 +67,16 @@ namespace ExampleApplication
         {
             try
             {
-                var authApi = new IO.Swagger.Api.AuthenticationApi("http://localhost/ARXivarResourceServer/");
+                //Inizialize Authentication api (Authentication api not require authentication token)
+                var authApi = new IO.Swagger.Api.AuthenticationApi("http://localhost:81/");
+                //Try to obtain a new token with the refresh token provided durin login procedure
                 var resultToken = authApi.AuthenticationRefresh(_refreshToken);
                 _authToken = resultToken.AccessToken;
                 _refreshToken = resultToken.RefreshToken;
                 tokenLabel.Text = "Token presente";
                 tokenLabel.ForeColor = Color.Green;
                 tokenValue.Text = string.Empty;
+                //Print token information
                 foreach (var propertyInfo in resultToken.GetType().GetProperties())
                 {
                     tokenValue.Text += string.Format("{0}: {1}{2}", propertyInfo.Name, propertyInfo.GetValue(resultToken), Environment.NewLine);
@@ -83,8 +93,11 @@ namespace ExampleApplication
         {
             try
             {
+                //Inizialize BusinessUnit Api
                 var aooApi = new IO.Swagger.Api.BusinessUnitsApi(Configuration);
+                //Get Aoo list
                 var businessUnits = aooApi.BusinessUnitsGet();
+                //Bind to the grid as IEnumerable<T>
                 aooTable.DataSource = businessUnits;
             }
             catch (Exception exception)
@@ -97,8 +110,11 @@ namespace ExampleApplication
         {
             try
             {
+                //Inizialize DocumentTypes Api
                 var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
+                //Get DocumentTypes list
                 var docTypes = docTypesApi.DocumentTypesGet("search", "AbleBS");
+                //Bind to the grid
                 aooTable.DataSource = docTypes;
             }
             catch (Exception exception)
