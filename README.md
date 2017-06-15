@@ -1,4 +1,4 @@
-[![Arxivar](https://www.arxivar.it/images/stories/arxivar/logo_b.png)](http://www.arxivar.it/)
+[![Arxivar](http://www.arxivar.it/download/resources/loghi/Logo-ARXivar_orizzontale-nero.png)](http://www.arxivar.it/)
 # ARXivar-NEXT-Dev
 
 > Examples for DEV course of ARXivar NEXT
@@ -16,4 +16,4 @@ Alternatively you can download the missing packages manually using the "Restore 
 
 ## License
 
- © [Abletech S.r.l.](http://www.arxivar.it/)
+ Â© [Abletech S.r.l.](http://www.arxivar.it/)
