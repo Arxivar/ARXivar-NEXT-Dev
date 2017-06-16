@@ -257,7 +257,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling DocToOcrApi->DocToOcrDocToOcrQueue");
 
-            var localVarPath = "/api/docToOcr/{docnumber}";
+            var localVarPath = "/api/DocToOcr/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -332,7 +332,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling DocToOcrApi->DocToOcrDocToOcrQueue");
 
-            var localVarPath = "/api/docToOcr/{docnumber}";
+            var localVarPath = "/api/DocToOcr/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -406,7 +406,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling DocToOcrApi->DocToOcrGetByDocnumber");
 
-            var localVarPath = "/api/docToOcr/{docnumber}";
+            var localVarPath = "/api/DocToOcr/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -486,7 +486,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling DocToOcrApi->DocToOcrGetByDocnumber");
 
-            var localVarPath = "/api/docToOcr/{docnumber}";
+            var localVarPath = "/api/DocToOcr/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

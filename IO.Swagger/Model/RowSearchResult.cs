@@ -86,7 +86,25 @@ namespace IO.Swagger.Model
             /// Enum TaskWork for "TaskWork"
             /// </summary>
             [EnumMember(Value = "TaskWork")]
-            TaskWork
+            TaskWork,
+            
+            /// <summary>
+            /// Enum TaskWorkAttachements for "TaskWorkAttachements"
+            /// </summary>
+            [EnumMember(Value = "TaskWorkAttachements")]
+            TaskWorkAttachements,
+            
+            /// <summary>
+            /// Enum TaskNotes for "TaskNotes"
+            /// </summary>
+            [EnumMember(Value = "TaskNotes")]
+            TaskNotes,
+            
+            /// <summary>
+            /// Enum TaskWorkHistory for "TaskWorkHistory"
+            /// </summary>
+            [EnumMember(Value = "TaskWorkHistory")]
+            TaskWorkHistory
         }
 
         /// <summary>

@@ -37,26 +37,26 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// This call change the flag that enable show of the search fields
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="quickSearchId"></param>
-        /// <param name="showFields"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
+        /// <param name="showFields">Value for the flag</param>
         /// <returns></returns>
         void QuickSearchesChangeShowFields (string quickSearchId, bool? showFields);
 
         /// <summary>
-        /// 
+        /// This call change the flag that enable show of the search fields
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="quickSearchId"></param>
-        /// <param name="showFields"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
+        /// <param name="showFields">Value for the flag</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> QuickSearchesChangeShowFieldsWithHttpInfo (string quickSearchId, bool? showFields);
         /// <summary>
@@ -66,9 +66,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id of the quincksearch</param>
+        /// <param name="quickSearchId">Id of the quincksearch</param>
         /// <returns></returns>
-        void QuickSearchesDeleteQuickSearchById (string id);
+        void QuickSearchesDeleteQuickSearchById (string quickSearchId);
 
         /// <summary>
         /// This call can delete a quick search by the given id
@@ -77,11 +77,11 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id of the quincksearch</param>
+        /// <param name="quickSearchId">Id of the quincksearch</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> QuickSearchesDeleteQuickSearchByIdWithHttpInfo (string id);
+        ApiResponse<Object> QuickSearchesDeleteQuickSearchByIdWithHttpInfo (string quickSearchId);
         /// <summary>
-        /// 
+        /// This call returns all wuick search
         /// </summary>
         /// <remarks>
         /// 
@@ -91,7 +91,7 @@ namespace IO.Swagger.Api
         List<FindDTO> QuickSearchesGetQuickSearch ();
 
         /// <summary>
-        /// 
+        /// This call returns all wuick search
         /// </summary>
         /// <remarks>
         /// 
@@ -100,28 +100,28 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of List&lt;FindDTO&gt;</returns>
         ApiResponse<List<FindDTO>> QuickSearchesGetQuickSearchWithHttpInfo ();
         /// <summary>
-        /// 
+        /// Thi call return a quick search by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
         /// <returns>QuickSearchDto</returns>
-        QuickSearchDto QuickSearchesGetQuickSearchById (string id);
+        QuickSearchDto QuickSearchesGetQuickSearchById (string quickSearchId);
 
         /// <summary>
-        /// 
+        /// Thi call return a quick search by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
         /// <returns>ApiResponse of QuickSearchDto</returns>
-        ApiResponse<QuickSearchDto> QuickSearchesGetQuickSearchByIdWithHttpInfo (string id);
+        ApiResponse<QuickSearchDto> QuickSearchesGetQuickSearchByIdWithHttpInfo (string quickSearchId);
         /// <summary>
-        /// 
+        /// This call add a new quinck search
         /// </summary>
         /// <remarks>
         /// 
@@ -132,7 +132,7 @@ namespace IO.Swagger.Api
         string QuickSearchesPost (QuickSearchDto criteria = null);
 
         /// <summary>
-        /// 
+        /// This call add a new quinck search
         /// </summary>
         /// <remarks>
         /// 
@@ -142,30 +142,30 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> QuickSearchesPostWithHttpInfo (QuickSearchDto criteria = null);
         /// <summary>
-        /// 
+        /// This call update a quick search by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
         /// <param name="criteria"> (optional)</param>
         /// <returns>string</returns>
-        string QuickSearchesPut (string id, QuickSearchDto criteria = null);
+        string QuickSearchesPut (string quickSearchId, QuickSearchDto criteria = null);
 
         /// <summary>
-        /// 
+        /// This call update a quick search by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
         /// <param name="criteria"> (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> QuickSearchesPutWithHttpInfo (string id, QuickSearchDto criteria = null);
+        ApiResponse<string> QuickSearchesPutWithHttpInfo (string quickSearchId, QuickSearchDto criteria = null);
         /// <summary>
-        /// 
+        /// This call rename a quick search
         /// </summary>
         /// <remarks>
         /// 
@@ -176,7 +176,7 @@ namespace IO.Swagger.Api
         void QuickSearchesRename (RenamedQuickSearchDto quickSearchRenamed);
 
         /// <summary>
-        /// 
+        /// This call rename a quick search
         /// </summary>
         /// <remarks>
         /// 
@@ -188,26 +188,26 @@ namespace IO.Swagger.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// This call change the flag that enable show of the search fields
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="quickSearchId"></param>
-        /// <param name="showFields"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
+        /// <param name="showFields">Value for the flag</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task QuickSearchesChangeShowFieldsAsync (string quickSearchId, bool? showFields);
 
         /// <summary>
-        /// 
+        /// This call change the flag that enable show of the search fields
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="quickSearchId"></param>
-        /// <param name="showFields"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
+        /// <param name="showFields">Value for the flag</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> QuickSearchesChangeShowFieldsAsyncWithHttpInfo (string quickSearchId, bool? showFields);
         /// <summary>
@@ -217,9 +217,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id of the quincksearch</param>
+        /// <param name="quickSearchId">Id of the quincksearch</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task QuickSearchesDeleteQuickSearchByIdAsync (string id);
+        System.Threading.Tasks.Task QuickSearchesDeleteQuickSearchByIdAsync (string quickSearchId);
 
         /// <summary>
         /// This call can delete a quick search by the given id
@@ -228,11 +228,11 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id of the quincksearch</param>
+        /// <param name="quickSearchId">Id of the quincksearch</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> QuickSearchesDeleteQuickSearchByIdAsyncWithHttpInfo (string id);
+        System.Threading.Tasks.Task<ApiResponse<Object>> QuickSearchesDeleteQuickSearchByIdAsyncWithHttpInfo (string quickSearchId);
         /// <summary>
-        /// 
+        /// This call returns all wuick search
         /// </summary>
         /// <remarks>
         /// 
@@ -242,7 +242,7 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<List<FindDTO>> QuickSearchesGetQuickSearchAsync ();
 
         /// <summary>
-        /// 
+        /// This call returns all wuick search
         /// </summary>
         /// <remarks>
         /// 
@@ -251,28 +251,28 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (List&lt;FindDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<FindDTO>>> QuickSearchesGetQuickSearchAsyncWithHttpInfo ();
         /// <summary>
-        /// 
+        /// Thi call return a quick search by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
         /// <returns>Task of QuickSearchDto</returns>
-        System.Threading.Tasks.Task<QuickSearchDto> QuickSearchesGetQuickSearchByIdAsync (string id);
+        System.Threading.Tasks.Task<QuickSearchDto> QuickSearchesGetQuickSearchByIdAsync (string quickSearchId);
 
         /// <summary>
-        /// 
+        /// Thi call return a quick search by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
         /// <returns>Task of ApiResponse (QuickSearchDto)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QuickSearchDto>> QuickSearchesGetQuickSearchByIdAsyncWithHttpInfo (string id);
+        System.Threading.Tasks.Task<ApiResponse<QuickSearchDto>> QuickSearchesGetQuickSearchByIdAsyncWithHttpInfo (string quickSearchId);
         /// <summary>
-        /// 
+        /// This call add a new quinck search
         /// </summary>
         /// <remarks>
         /// 
@@ -283,7 +283,7 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<string> QuickSearchesPostAsync (QuickSearchDto criteria = null);
 
         /// <summary>
-        /// 
+        /// This call add a new quinck search
         /// </summary>
         /// <remarks>
         /// 
@@ -293,30 +293,30 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> QuickSearchesPostAsyncWithHttpInfo (QuickSearchDto criteria = null);
         /// <summary>
-        /// 
+        /// This call update a quick search by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
         /// <param name="criteria"> (optional)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> QuickSearchesPutAsync (string id, QuickSearchDto criteria = null);
+        System.Threading.Tasks.Task<string> QuickSearchesPutAsync (string quickSearchId, QuickSearchDto criteria = null);
 
         /// <summary>
-        /// 
+        /// This call update a quick search by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
         /// <param name="criteria"> (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> QuickSearchesPutAsyncWithHttpInfo (string id, QuickSearchDto criteria = null);
+        System.Threading.Tasks.Task<ApiResponse<string>> QuickSearchesPutAsyncWithHttpInfo (string quickSearchId, QuickSearchDto criteria = null);
         /// <summary>
-        /// 
+        /// This call rename a quick search
         /// </summary>
         /// <remarks>
         /// 
@@ -327,7 +327,7 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task QuickSearchesRenameAsync (RenamedQuickSearchDto quickSearchRenamed);
 
         /// <summary>
-        /// 
+        /// This call rename a quick search
         /// </summary>
         /// <remarks>
         /// 
@@ -449,11 +449,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call change the flag that enable show of the search fields 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="quickSearchId"></param>
-        /// <param name="showFields"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
+        /// <param name="showFields">Value for the flag</param>
         /// <returns></returns>
         public void QuickSearchesChangeShowFields (string quickSearchId, bool? showFields)
         {
@@ -461,11 +461,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call change the flag that enable show of the search fields 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="quickSearchId"></param>
-        /// <param name="showFields"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
+        /// <param name="showFields">Value for the flag</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> QuickSearchesChangeShowFieldsWithHttpInfo (string quickSearchId, bool? showFields)
         {
@@ -476,7 +476,7 @@ namespace IO.Swagger.Api
             if (showFields == null)
                 throw new ApiException(400, "Missing required parameter 'showFields' when calling QuickSearchesApi->QuickSearchesChangeShowFields");
 
-            var localVarPath = "/api/quicksearches/showFields/{quickSearchId}/{showFields}";
+            var localVarPath = "/api/QuickSearches/showFields/{quickSearchId}/{showFields}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -529,11 +529,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call change the flag that enable show of the search fields 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="quickSearchId"></param>
-        /// <param name="showFields"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
+        /// <param name="showFields">Value for the flag</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task QuickSearchesChangeShowFieldsAsync (string quickSearchId, bool? showFields)
         {
@@ -542,11 +542,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call change the flag that enable show of the search fields 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="quickSearchId"></param>
-        /// <param name="showFields"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
+        /// <param name="showFields">Value for the flag</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> QuickSearchesChangeShowFieldsAsyncWithHttpInfo (string quickSearchId, bool? showFields)
         {
@@ -557,7 +557,7 @@ namespace IO.Swagger.Api
             if (showFields == null)
                 throw new ApiException(400, "Missing required parameter 'showFields' when calling QuickSearchesApi->QuickSearchesChangeShowFields");
 
-            var localVarPath = "/api/quicksearches/showFields/{quickSearchId}/{showFields}";
+            var localVarPath = "/api/QuickSearches/showFields/{quickSearchId}/{showFields}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -612,26 +612,26 @@ namespace IO.Swagger.Api
         /// This call can delete a quick search by the given id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id of the quincksearch</param>
+        /// <param name="quickSearchId">Id of the quincksearch</param>
         /// <returns></returns>
-        public void QuickSearchesDeleteQuickSearchById (string id)
+        public void QuickSearchesDeleteQuickSearchById (string quickSearchId)
         {
-             QuickSearchesDeleteQuickSearchByIdWithHttpInfo(id);
+             QuickSearchesDeleteQuickSearchByIdWithHttpInfo(quickSearchId);
         }
 
         /// <summary>
         /// This call can delete a quick search by the given id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id of the quincksearch</param>
+        /// <param name="quickSearchId">Id of the quincksearch</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> QuickSearchesDeleteQuickSearchByIdWithHttpInfo (string id)
+        public ApiResponse<Object> QuickSearchesDeleteQuickSearchByIdWithHttpInfo (string quickSearchId)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling QuickSearchesApi->QuickSearchesDeleteQuickSearchById");
+            // verify the required parameter 'quickSearchId' is set
+            if (quickSearchId == null)
+                throw new ApiException(400, "Missing required parameter 'quickSearchId' when calling QuickSearchesApi->QuickSearchesDeleteQuickSearchById");
 
-            var localVarPath = "/api/quicksearches/{Id}";
+            var localVarPath = "/api/QuickSearches/{quickSearchId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -654,7 +654,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("Id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (quickSearchId != null) localVarPathParams.Add("quickSearchId", Configuration.ApiClient.ParameterToString(quickSearchId)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -686,11 +686,11 @@ namespace IO.Swagger.Api
         /// This call can delete a quick search by the given id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id of the quincksearch</param>
+        /// <param name="quickSearchId">Id of the quincksearch</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task QuickSearchesDeleteQuickSearchByIdAsync (string id)
+        public async System.Threading.Tasks.Task QuickSearchesDeleteQuickSearchByIdAsync (string quickSearchId)
         {
-             await QuickSearchesDeleteQuickSearchByIdAsyncWithHttpInfo(id);
+             await QuickSearchesDeleteQuickSearchByIdAsyncWithHttpInfo(quickSearchId);
 
         }
 
@@ -698,15 +698,15 @@ namespace IO.Swagger.Api
         /// This call can delete a quick search by the given id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id of the quincksearch</param>
+        /// <param name="quickSearchId">Id of the quincksearch</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> QuickSearchesDeleteQuickSearchByIdAsyncWithHttpInfo (string id)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> QuickSearchesDeleteQuickSearchByIdAsyncWithHttpInfo (string quickSearchId)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling QuickSearchesApi->QuickSearchesDeleteQuickSearchById");
+            // verify the required parameter 'quickSearchId' is set
+            if (quickSearchId == null)
+                throw new ApiException(400, "Missing required parameter 'quickSearchId' when calling QuickSearchesApi->QuickSearchesDeleteQuickSearchById");
 
-            var localVarPath = "/api/quicksearches/{Id}";
+            var localVarPath = "/api/QuickSearches/{quickSearchId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -729,7 +729,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("Id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (quickSearchId != null) localVarPathParams.Add("quickSearchId", Configuration.ApiClient.ParameterToString(quickSearchId)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -757,7 +757,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all wuick search 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;FindDTO&gt;</returns>
@@ -768,14 +768,14 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all wuick search 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;FindDTO&gt;</returns>
         public ApiResponse< List<FindDTO> > QuickSearchesGetQuickSearchWithHttpInfo ()
         {
 
-            var localVarPath = "/api/quicksearches";
+            var localVarPath = "/api/QuickSearches";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -830,7 +830,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all wuick search 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;FindDTO&gt;</returns>
@@ -842,14 +842,14 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all wuick search 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;FindDTO&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<FindDTO>>> QuickSearchesGetQuickSearchAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/quicksearches";
+            var localVarPath = "/api/QuickSearches";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -903,30 +903,30 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// Thi call return a quick search by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
         /// <returns>QuickSearchDto</returns>
-        public QuickSearchDto QuickSearchesGetQuickSearchById (string id)
+        public QuickSearchDto QuickSearchesGetQuickSearchById (string quickSearchId)
         {
-             ApiResponse<QuickSearchDto> localVarResponse = QuickSearchesGetQuickSearchByIdWithHttpInfo(id);
+             ApiResponse<QuickSearchDto> localVarResponse = QuickSearchesGetQuickSearchByIdWithHttpInfo(quickSearchId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        ///  
+        /// Thi call return a quick search by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
         /// <returns>ApiResponse of QuickSearchDto</returns>
-        public ApiResponse< QuickSearchDto > QuickSearchesGetQuickSearchByIdWithHttpInfo (string id)
+        public ApiResponse< QuickSearchDto > QuickSearchesGetQuickSearchByIdWithHttpInfo (string quickSearchId)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling QuickSearchesApi->QuickSearchesGetQuickSearchById");
+            // verify the required parameter 'quickSearchId' is set
+            if (quickSearchId == null)
+                throw new ApiException(400, "Missing required parameter 'quickSearchId' when calling QuickSearchesApi->QuickSearchesGetQuickSearchById");
 
-            var localVarPath = "/api/quicksearches/{Id}";
+            var localVarPath = "/api/QuickSearches/{quickSearchId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -953,7 +953,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("Id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (quickSearchId != null) localVarPathParams.Add("quickSearchId", Configuration.ApiClient.ParameterToString(quickSearchId)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -982,31 +982,31 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// Thi call return a quick search by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
         /// <returns>Task of QuickSearchDto</returns>
-        public async System.Threading.Tasks.Task<QuickSearchDto> QuickSearchesGetQuickSearchByIdAsync (string id)
+        public async System.Threading.Tasks.Task<QuickSearchDto> QuickSearchesGetQuickSearchByIdAsync (string quickSearchId)
         {
-             ApiResponse<QuickSearchDto> localVarResponse = await QuickSearchesGetQuickSearchByIdAsyncWithHttpInfo(id);
+             ApiResponse<QuickSearchDto> localVarResponse = await QuickSearchesGetQuickSearchByIdAsyncWithHttpInfo(quickSearchId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        ///  
+        /// Thi call return a quick search by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
         /// <returns>Task of ApiResponse (QuickSearchDto)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QuickSearchDto>> QuickSearchesGetQuickSearchByIdAsyncWithHttpInfo (string id)
+        public async System.Threading.Tasks.Task<ApiResponse<QuickSearchDto>> QuickSearchesGetQuickSearchByIdAsyncWithHttpInfo (string quickSearchId)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling QuickSearchesApi->QuickSearchesGetQuickSearchById");
+            // verify the required parameter 'quickSearchId' is set
+            if (quickSearchId == null)
+                throw new ApiException(400, "Missing required parameter 'quickSearchId' when calling QuickSearchesApi->QuickSearchesGetQuickSearchById");
 
-            var localVarPath = "/api/quicksearches/{Id}";
+            var localVarPath = "/api/QuickSearches/{quickSearchId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1033,7 +1033,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("Id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (quickSearchId != null) localVarPathParams.Add("quickSearchId", Configuration.ApiClient.ParameterToString(quickSearchId)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1061,7 +1061,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add a new quinck search 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="criteria"> (optional)</param>
@@ -1073,7 +1073,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add a new quinck search 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="criteria"> (optional)</param>
@@ -1081,7 +1081,7 @@ namespace IO.Swagger.Api
         public ApiResponse< string > QuickSearchesPostWithHttpInfo (QuickSearchDto criteria = null)
         {
 
-            var localVarPath = "/api/quicksearches";
+            var localVarPath = "/api/QuickSearches";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1144,7 +1144,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add a new quinck search 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="criteria"> (optional)</param>
@@ -1157,7 +1157,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add a new quinck search 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="criteria"> (optional)</param>
@@ -1165,7 +1165,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<string>> QuickSearchesPostAsyncWithHttpInfo (QuickSearchDto criteria = null)
         {
 
-            var localVarPath = "/api/quicksearches";
+            var localVarPath = "/api/QuickSearches";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1227,32 +1227,32 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update a quick search by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
         /// <param name="criteria"> (optional)</param>
         /// <returns>string</returns>
-        public string QuickSearchesPut (string id, QuickSearchDto criteria = null)
+        public string QuickSearchesPut (string quickSearchId, QuickSearchDto criteria = null)
         {
-             ApiResponse<string> localVarResponse = QuickSearchesPutWithHttpInfo(id, criteria);
+             ApiResponse<string> localVarResponse = QuickSearchesPutWithHttpInfo(quickSearchId, criteria);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        ///  
+        /// This call update a quick search by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
         /// <param name="criteria"> (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > QuickSearchesPutWithHttpInfo (string id, QuickSearchDto criteria = null)
+        public ApiResponse< string > QuickSearchesPutWithHttpInfo (string quickSearchId, QuickSearchDto criteria = null)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling QuickSearchesApi->QuickSearchesPut");
+            // verify the required parameter 'quickSearchId' is set
+            if (quickSearchId == null)
+                throw new ApiException(400, "Missing required parameter 'quickSearchId' when calling QuickSearchesApi->QuickSearchesPut");
 
-            var localVarPath = "/api/quicksearches/{id}";
+            var localVarPath = "/api/QuickSearches/{quickSearchId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1279,7 +1279,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (quickSearchId != null) localVarPathParams.Add("quickSearchId", Configuration.ApiClient.ParameterToString(quickSearchId)); // path parameter
             if (criteria != null && criteria.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(criteria); // http body (model) parameter
@@ -1316,33 +1316,33 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update a quick search by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
         /// <param name="criteria"> (optional)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> QuickSearchesPutAsync (string id, QuickSearchDto criteria = null)
+        public async System.Threading.Tasks.Task<string> QuickSearchesPutAsync (string quickSearchId, QuickSearchDto criteria = null)
         {
-             ApiResponse<string> localVarResponse = await QuickSearchesPutAsyncWithHttpInfo(id, criteria);
+             ApiResponse<string> localVarResponse = await QuickSearchesPutAsyncWithHttpInfo(quickSearchId, criteria);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        ///  
+        /// This call update a quick search by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="quickSearchId">Id of the quick search</param>
         /// <param name="criteria"> (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> QuickSearchesPutAsyncWithHttpInfo (string id, QuickSearchDto criteria = null)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> QuickSearchesPutAsyncWithHttpInfo (string quickSearchId, QuickSearchDto criteria = null)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling QuickSearchesApi->QuickSearchesPut");
+            // verify the required parameter 'quickSearchId' is set
+            if (quickSearchId == null)
+                throw new ApiException(400, "Missing required parameter 'quickSearchId' when calling QuickSearchesApi->QuickSearchesPut");
 
-            var localVarPath = "/api/quicksearches/{id}";
+            var localVarPath = "/api/QuickSearches/{quickSearchId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1369,7 +1369,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (quickSearchId != null) localVarPathParams.Add("quickSearchId", Configuration.ApiClient.ParameterToString(quickSearchId)); // path parameter
             if (criteria != null && criteria.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(criteria); // http body (model) parameter
@@ -1405,7 +1405,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call rename a quick search 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="quickSearchRenamed"></param>
@@ -1416,7 +1416,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call rename a quick search 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="quickSearchRenamed"></param>
@@ -1427,7 +1427,7 @@ namespace IO.Swagger.Api
             if (quickSearchRenamed == null)
                 throw new ApiException(400, "Missing required parameter 'quickSearchRenamed' when calling QuickSearchesApi->QuickSearchesRename");
 
-            var localVarPath = "/api/quicksearches/rename";
+            var localVarPath = "/api/QuickSearches/rename";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1491,7 +1491,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call rename a quick search 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="quickSearchRenamed"></param>
@@ -1503,7 +1503,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call rename a quick search 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="quickSearchRenamed"></param>
@@ -1514,7 +1514,7 @@ namespace IO.Swagger.Api
             if (quickSearchRenamed == null)
                 throw new ApiException(400, "Missing required parameter 'quickSearchRenamed' when calling QuickSearchesApi->QuickSearchesRename");
 
-            var localVarPath = "/api/quicksearches/rename";
+            var localVarPath = "/api/QuickSearches/rename";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

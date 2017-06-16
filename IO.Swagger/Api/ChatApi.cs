@@ -58,47 +58,47 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> ChatGetAvatarWithHttpInfo (int? id);
         /// <summary>
-        /// 
+        /// This call returns the share option by a share object
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="shareObject"></param>
+        /// <param name="shareObject">ShareObject dto</param>
         /// <returns>ShareObjectOptionsDTO</returns>
         ShareObjectOptionsDTO ChatGetShareOptions (ShareObjectBaseDTO shareObject);
 
         /// <summary>
-        /// 
+        /// This call returns the share option by a share object
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="shareObject"></param>
+        /// <param name="shareObject">ShareObject dto</param>
         /// <returns>ApiResponse of ShareObjectOptionsDTO</returns>
         ApiResponse<ShareObjectOptionsDTO> ChatGetShareOptionsWithHttpInfo (ShareObjectBaseDTO shareObject);
         /// <summary>
-        /// 
+        /// This call share an object to conversation
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationid"></param>
-        /// <param name="shareObject"></param>
+        /// <param name="conversationid">Id of the conversation</param>
+        /// <param name="shareObject">Object to share</param>
         /// <returns></returns>
         void ChatShareObject (int? conversationid, ShareObjectDTO shareObject);
 
         /// <summary>
-        /// 
+        /// This call share an object to conversation
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationid"></param>
-        /// <param name="shareObject"></param>
+        /// <param name="conversationid">Id of the conversation</param>
+        /// <param name="shareObject">Object to share</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ChatShareObjectWithHttpInfo (int? conversationid, ShareObjectDTO shareObject);
         #endregion Synchronous Operations
@@ -125,47 +125,47 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ChatGetAvatarAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// 
+        /// This call returns the share option by a share object
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="shareObject"></param>
+        /// <param name="shareObject">ShareObject dto</param>
         /// <returns>Task of ShareObjectOptionsDTO</returns>
         System.Threading.Tasks.Task<ShareObjectOptionsDTO> ChatGetShareOptionsAsync (ShareObjectBaseDTO shareObject);
 
         /// <summary>
-        /// 
+        /// This call returns the share option by a share object
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="shareObject"></param>
+        /// <param name="shareObject">ShareObject dto</param>
         /// <returns>Task of ApiResponse (ShareObjectOptionsDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<ShareObjectOptionsDTO>> ChatGetShareOptionsAsyncWithHttpInfo (ShareObjectBaseDTO shareObject);
         /// <summary>
-        /// 
+        /// This call share an object to conversation
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationid"></param>
-        /// <param name="shareObject"></param>
+        /// <param name="conversationid">Id of the conversation</param>
+        /// <param name="shareObject">Object to share</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task ChatShareObjectAsync (int? conversationid, ShareObjectDTO shareObject);
 
         /// <summary>
-        /// 
+        /// This call share an object to conversation
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationid"></param>
-        /// <param name="shareObject"></param>
+        /// <param name="conversationid">Id of the conversation</param>
+        /// <param name="shareObject">Object to share</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ChatShareObjectAsyncWithHttpInfo (int? conversationid, ShareObjectDTO shareObject);
         #endregion Asynchronous Operations
@@ -304,7 +304,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ChatApi->ChatGetAvatar");
 
-            var localVarPath = "/api/chat/{id}";
+            var localVarPath = "/api/Chat/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -384,7 +384,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ChatApi->ChatGetAvatar");
 
-            var localVarPath = "/api/chat/{id}";
+            var localVarPath = "/api/Chat/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -439,10 +439,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the share option by a share object 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="shareObject"></param>
+        /// <param name="shareObject">ShareObject dto</param>
         /// <returns>ShareObjectOptionsDTO</returns>
         public ShareObjectOptionsDTO ChatGetShareOptions (ShareObjectBaseDTO shareObject)
         {
@@ -451,10 +451,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the share option by a share object 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="shareObject"></param>
+        /// <param name="shareObject">ShareObject dto</param>
         /// <returns>ApiResponse of ShareObjectOptionsDTO</returns>
         public ApiResponse< ShareObjectOptionsDTO > ChatGetShareOptionsWithHttpInfo (ShareObjectBaseDTO shareObject)
         {
@@ -462,7 +462,7 @@ namespace IO.Swagger.Api
             if (shareObject == null)
                 throw new ApiException(400, "Missing required parameter 'shareObject' when calling ChatApi->ChatGetShareOptions");
 
-            var localVarPath = "/api/chat/ShareOptions";
+            var localVarPath = "/api/Chat/ShareOptions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -530,10 +530,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the share option by a share object 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="shareObject"></param>
+        /// <param name="shareObject">ShareObject dto</param>
         /// <returns>Task of ShareObjectOptionsDTO</returns>
         public async System.Threading.Tasks.Task<ShareObjectOptionsDTO> ChatGetShareOptionsAsync (ShareObjectBaseDTO shareObject)
         {
@@ -543,10 +543,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the share option by a share object 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="shareObject"></param>
+        /// <param name="shareObject">ShareObject dto</param>
         /// <returns>Task of ApiResponse (ShareObjectOptionsDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ShareObjectOptionsDTO>> ChatGetShareOptionsAsyncWithHttpInfo (ShareObjectBaseDTO shareObject)
         {
@@ -554,7 +554,7 @@ namespace IO.Swagger.Api
             if (shareObject == null)
                 throw new ApiException(400, "Missing required parameter 'shareObject' when calling ChatApi->ChatGetShareOptions");
 
-            var localVarPath = "/api/chat/ShareOptions";
+            var localVarPath = "/api/Chat/ShareOptions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -621,11 +621,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call share an object to conversation 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationid"></param>
-        /// <param name="shareObject"></param>
+        /// <param name="conversationid">Id of the conversation</param>
+        /// <param name="shareObject">Object to share</param>
         /// <returns></returns>
         public void ChatShareObject (int? conversationid, ShareObjectDTO shareObject)
         {
@@ -633,11 +633,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call share an object to conversation 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationid"></param>
-        /// <param name="shareObject"></param>
+        /// <param name="conversationid">Id of the conversation</param>
+        /// <param name="shareObject">Object to share</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> ChatShareObjectWithHttpInfo (int? conversationid, ShareObjectDTO shareObject)
         {
@@ -648,7 +648,7 @@ namespace IO.Swagger.Api
             if (shareObject == null)
                 throw new ApiException(400, "Missing required parameter 'shareObject' when calling ChatApi->ChatShareObject");
 
-            var localVarPath = "/api/chat/Share/{conversationid}";
+            var localVarPath = "/api/Chat/Share/{conversationid}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -713,11 +713,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call share an object to conversation 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationid"></param>
-        /// <param name="shareObject"></param>
+        /// <param name="conversationid">Id of the conversation</param>
+        /// <param name="shareObject">Object to share</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task ChatShareObjectAsync (int? conversationid, ShareObjectDTO shareObject)
         {
@@ -726,11 +726,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call share an object to conversation 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="conversationid"></param>
-        /// <param name="shareObject"></param>
+        /// <param name="conversationid">Id of the conversation</param>
+        /// <param name="shareObject">Object to share</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> ChatShareObjectAsyncWithHttpInfo (int? conversationid, ShareObjectDTO shareObject)
         {
@@ -741,7 +741,7 @@ namespace IO.Swagger.Api
             if (shareObject == null)
                 throw new ApiException(400, "Missing required parameter 'shareObject' when calling ChatApi->ChatShareObject");
 
-            var localVarPath = "/api/chat/Share/{conversationid}";
+            var localVarPath = "/api/Chat/Share/{conversationid}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

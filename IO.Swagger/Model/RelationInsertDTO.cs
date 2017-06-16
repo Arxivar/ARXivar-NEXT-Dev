@@ -42,8 +42,8 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RelationInsertDTO" /> class.
         /// </summary>
-        /// <param name="DocNumber">DocNumber.</param>
-        /// <param name="Items">Items.</param>
+        /// <param name="DocNumber">Docnumber of the profile.</param>
+        /// <param name="Items">Items to add in the relation.</param>
         public RelationInsertDTO(int? DocNumber = null, List<RelationInsertItemDTO> Items = null)
         {
             this.DocNumber = DocNumber;
@@ -51,13 +51,15 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets DocNumber
+        /// Docnumber of the profile
         /// </summary>
+        /// <value>Docnumber of the profile</value>
         [DataMember(Name="docNumber", EmitDefaultValue=false)]
         public int? DocNumber { get; set; }
         /// <summary>
-        /// Gets or Sets Items
+        /// Items to add in the relation
         /// </summary>
+        /// <value>Items to add in the relation</value>
         [DataMember(Name="items", EmitDefaultValue=false)]
         public List<RelationInsertItemDTO> Items { get; set; }
         /// <summary>

@@ -410,7 +410,7 @@ namespace IO.Swagger.Api
             if (undoCheckOut == null)
                 throw new ApiException(400, "Missing required parameter 'undoCheckOut' when calling CheckInOutApi->CheckInOutCheckIn");
 
-            var localVarPath = "/api/checkinout/checkIn/{docnumber}/{fileId}/{option}/{undoCheckOut}";
+            var localVarPath = "/api/CheckInOut/checkIn/{docnumber}/{fileId}/{option}/{undoCheckOut}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -503,7 +503,7 @@ namespace IO.Swagger.Api
             if (undoCheckOut == null)
                 throw new ApiException(400, "Missing required parameter 'undoCheckOut' when calling CheckInOutApi->CheckInOutCheckIn");
 
-            var localVarPath = "/api/checkinout/checkIn/{docnumber}/{fileId}/{option}/{undoCheckOut}";
+            var localVarPath = "/api/CheckInOut/checkIn/{docnumber}/{fileId}/{option}/{undoCheckOut}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -579,7 +579,7 @@ namespace IO.Swagger.Api
             if (docNumber == null)
                 throw new ApiException(400, "Missing required parameter 'docNumber' when calling CheckInOutApi->CheckInOutCheckOut");
 
-            var localVarPath = "/api/checkinout/checkOut/{docNumber}";
+            var localVarPath = "/api/CheckInOut/checkOut/{docNumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -654,7 +654,7 @@ namespace IO.Swagger.Api
             if (docNumber == null)
                 throw new ApiException(400, "Missing required parameter 'docNumber' when calling CheckInOutApi->CheckInOutCheckOut");
 
-            var localVarPath = "/api/checkinout/checkOut/{docNumber}";
+            var localVarPath = "/api/CheckInOut/checkOut/{docNumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -910,7 +910,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling CheckInOutApi->CheckInOutIsAlreadyInCheckOutByUserConnected");
 
-            var localVarPath = "/api/checkinout/isInCheckOut/{docnumber}";
+            var localVarPath = "/api/CheckInOut/isInCheckOut/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -990,7 +990,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling CheckInOutApi->CheckInOutIsAlreadyInCheckOutByUserConnected");
 
-            var localVarPath = "/api/checkinout/isInCheckOut/{docnumber}";
+            var localVarPath = "/api/CheckInOut/isInCheckOut/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1067,7 +1067,7 @@ namespace IO.Swagger.Api
             if (docNumbers == null)
                 throw new ApiException(400, "Missing required parameter 'docNumbers' when calling CheckInOutApi->CheckInOutUndoCheckOut");
 
-            var localVarPath = "/api/checkinout/undoCheckOut";
+            var localVarPath = "/api/CheckInOut/undoCheckOut";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1154,7 +1154,7 @@ namespace IO.Swagger.Api
             if (docNumbers == null)
                 throw new ApiException(400, "Missing required parameter 'docNumbers' when calling CheckInOutApi->CheckInOutUndoCheckOut");
 
-            var localVarPath = "/api/checkinout/undoCheckOut";
+            var localVarPath = "/api/CheckInOut/undoCheckOut";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

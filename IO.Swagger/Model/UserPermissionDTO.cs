@@ -40,8 +40,9 @@ namespace IO.Swagger.Model
     public partial class UserPermissionDTO :  IEquatable<UserPermissionDTO>
     {
         /// <summary>
-        /// Gets or Sets Category
+        /// Category for the user
         /// </summary>
+        /// <value>Category for the user</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum CategoryEnum
         {
@@ -90,18 +91,19 @@ namespace IO.Swagger.Model
         }
 
         /// <summary>
-        /// Gets or Sets Category
+        /// Category for the user
         /// </summary>
+        /// <value>Category for the user</value>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public CategoryEnum? Category { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="UserPermissionDTO" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="User">User.</param>
-        /// <param name="UserDescription">UserDescription.</param>
-        /// <param name="Category">Category.</param>
-        /// <param name="Permissions">Permissions.</param>
+        /// <param name="Id">Id of the permission.</param>
+        /// <param name="User">User id.</param>
+        /// <param name="UserDescription">Description of the user.</param>
+        /// <param name="Category">Category for the user.</param>
+        /// <param name="Permissions">Permission list for the user.</param>
         public UserPermissionDTO(string Id = null, int? User = null, string UserDescription = null, CategoryEnum? Category = null, List<PermissionItemDTO> Permissions = null)
         {
             this.Id = Id;
@@ -112,23 +114,27 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Id of the permission
         /// </summary>
+        /// <value>Id of the permission</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         /// <summary>
-        /// Gets or Sets User
+        /// User id
         /// </summary>
+        /// <value>User id</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public int? User { get; set; }
         /// <summary>
-        /// Gets or Sets UserDescription
+        /// Description of the user
         /// </summary>
+        /// <value>Description of the user</value>
         [DataMember(Name="userDescription", EmitDefaultValue=false)]
         public string UserDescription { get; set; }
         /// <summary>
-        /// Gets or Sets Permissions
+        /// Permission list for the user
         /// </summary>
+        /// <value>Permission list for the user</value>
         [DataMember(Name="permissions", EmitDefaultValue=false)]
         public List<PermissionItemDTO> Permissions { get; set; }
         /// <summary>

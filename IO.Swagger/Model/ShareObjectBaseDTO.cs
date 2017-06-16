@@ -42,8 +42,8 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ShareObjectBaseDTO" /> class.
         /// </summary>
-        /// <param name="ObjectType">ObjectType.</param>
-        /// <param name="ObjectId">ObjectId.</param>
+        /// <param name="ObjectType">Object type.</param>
+        /// <param name="ObjectId">Object unique identifier.</param>
         public ShareObjectBaseDTO(int? ObjectType = null, string ObjectId = null)
         {
             this.ObjectType = ObjectType;
@@ -51,13 +51,15 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets ObjectType
+        /// Object type
         /// </summary>
+        /// <value>Object type</value>
         [DataMember(Name="objectType", EmitDefaultValue=false)]
         public int? ObjectType { get; set; }
         /// <summary>
-        /// Gets or Sets ObjectId
+        /// Object unique identifier
         /// </summary>
+        /// <value>Object unique identifier</value>
         [DataMember(Name="objectId", EmitDefaultValue=false)]
         public string ObjectId { get; set; }
         /// <summary>

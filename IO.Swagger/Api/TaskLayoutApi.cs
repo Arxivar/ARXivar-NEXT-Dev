@@ -79,6 +79,27 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of TaskLayoutDTO</returns>
         ApiResponse<TaskLayoutDTO> TaskLayoutGetTaskLayoutByIdWithHttpInfo (int? tasklayoutid);
         /// <summary>
+        /// This method returns the task layout by the task id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">the id of the taskWork</param>
+        /// <returns>TaskLayoutDTO</returns>
+        TaskLayoutDTO TaskLayoutGetTaskLayoutByTaskWorkId (int? taskWorkId);
+
+        /// <summary>
+        /// This method returns the task layout by the task id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">the id of the taskWork</param>
+        /// <returns>ApiResponse of TaskLayoutDTO</returns>
+        ApiResponse<TaskLayoutDTO> TaskLayoutGetTaskLayoutByTaskWorkIdWithHttpInfo (int? taskWorkId);
+        /// <summary>
         /// This method returns all task layouts configured
         /// </summary>
         /// <remarks>
@@ -206,6 +227,27 @@ namespace IO.Swagger.Api
         /// <param name="tasklayoutid">the id of the task layout</param>
         /// <returns>Task of ApiResponse (TaskLayoutDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<TaskLayoutDTO>> TaskLayoutGetTaskLayoutByIdAsyncWithHttpInfo (int? tasklayoutid);
+        /// <summary>
+        /// This method returns the task layout by the task id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">the id of the taskWork</param>
+        /// <returns>Task of TaskLayoutDTO</returns>
+        System.Threading.Tasks.Task<TaskLayoutDTO> TaskLayoutGetTaskLayoutByTaskWorkIdAsync (int? taskWorkId);
+
+        /// <summary>
+        /// This method returns the task layout by the task id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">the id of the taskWork</param>
+        /// <returns>Task of ApiResponse (TaskLayoutDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TaskLayoutDTO>> TaskLayoutGetTaskLayoutByTaskWorkIdAsyncWithHttpInfo (int? taskWorkId);
         /// <summary>
         /// This method returns all task layouts configured
         /// </summary>
@@ -425,7 +467,7 @@ namespace IO.Swagger.Api
             if (tasklayoutid == null)
                 throw new ApiException(400, "Missing required parameter 'tasklayoutid' when calling TaskLayoutApi->TaskLayoutDeleteTaskLayout");
 
-            var localVarPath = "/api/tasklayout/{tasklayoutid}";
+            var localVarPath = "/api/TaskLayout/{tasklayoutid}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -500,7 +542,7 @@ namespace IO.Swagger.Api
             if (tasklayoutid == null)
                 throw new ApiException(400, "Missing required parameter 'tasklayoutid' when calling TaskLayoutApi->TaskLayoutDeleteTaskLayout");
 
-            var localVarPath = "/api/tasklayout/{tasklayoutid}";
+            var localVarPath = "/api/TaskLayout/{tasklayoutid}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -574,7 +616,7 @@ namespace IO.Swagger.Api
             if (tasklayoutid == null)
                 throw new ApiException(400, "Missing required parameter 'tasklayoutid' when calling TaskLayoutApi->TaskLayoutGetTaskLayoutById");
 
-            var localVarPath = "/api/tasklayout/{tasklayoutid}";
+            var localVarPath = "/api/TaskLayout/{tasklayoutid}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -654,7 +696,7 @@ namespace IO.Swagger.Api
             if (tasklayoutid == null)
                 throw new ApiException(400, "Missing required parameter 'tasklayoutid' when calling TaskLayoutApi->TaskLayoutGetTaskLayoutById");
 
-            var localVarPath = "/api/tasklayout/{tasklayoutid}";
+            var localVarPath = "/api/TaskLayout/{tasklayoutid}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -709,6 +751,164 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
+        /// This method returns the task layout by the task id 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">the id of the taskWork</param>
+        /// <returns>TaskLayoutDTO</returns>
+        public TaskLayoutDTO TaskLayoutGetTaskLayoutByTaskWorkId (int? taskWorkId)
+        {
+             ApiResponse<TaskLayoutDTO> localVarResponse = TaskLayoutGetTaskLayoutByTaskWorkIdWithHttpInfo(taskWorkId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This method returns the task layout by the task id 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">the id of the taskWork</param>
+        /// <returns>ApiResponse of TaskLayoutDTO</returns>
+        public ApiResponse< TaskLayoutDTO > TaskLayoutGetTaskLayoutByTaskWorkIdWithHttpInfo (int? taskWorkId)
+        {
+            // verify the required parameter 'taskWorkId' is set
+            if (taskWorkId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkId' when calling TaskLayoutApi->TaskLayoutGetTaskLayoutByTaskWorkId");
+
+            var localVarPath = "/api/TaskLayout/taskwork/{taskWorkId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (taskWorkId != null) localVarPathParams.Add("taskWorkId", Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskLayoutGetTaskLayoutByTaskWorkId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TaskLayoutDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TaskLayoutDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TaskLayoutDTO)));
+            
+        }
+
+        /// <summary>
+        /// This method returns the task layout by the task id 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">the id of the taskWork</param>
+        /// <returns>Task of TaskLayoutDTO</returns>
+        public async System.Threading.Tasks.Task<TaskLayoutDTO> TaskLayoutGetTaskLayoutByTaskWorkIdAsync (int? taskWorkId)
+        {
+             ApiResponse<TaskLayoutDTO> localVarResponse = await TaskLayoutGetTaskLayoutByTaskWorkIdAsyncWithHttpInfo(taskWorkId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This method returns the task layout by the task id 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">the id of the taskWork</param>
+        /// <returns>Task of ApiResponse (TaskLayoutDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TaskLayoutDTO>> TaskLayoutGetTaskLayoutByTaskWorkIdAsyncWithHttpInfo (int? taskWorkId)
+        {
+            // verify the required parameter 'taskWorkId' is set
+            if (taskWorkId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkId' when calling TaskLayoutApi->TaskLayoutGetTaskLayoutByTaskWorkId");
+
+            var localVarPath = "/api/TaskLayout/taskwork/{taskWorkId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (taskWorkId != null) localVarPathParams.Add("taskWorkId", Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskLayoutGetTaskLayoutByTaskWorkId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TaskLayoutDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TaskLayoutDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TaskLayoutDTO)));
+            
+        }
+
+        /// <summary>
         /// This method returns all task layouts configured 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
@@ -727,7 +927,7 @@ namespace IO.Swagger.Api
         public ApiResponse< List<TaskLayoutDTO> > TaskLayoutGetTaskLayoutsWithHttpInfo ()
         {
 
-            var localVarPath = "/api/tasklayout";
+            var localVarPath = "/api/TaskLayout";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -801,7 +1001,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<TaskLayoutDTO>>> TaskLayoutGetTaskLayoutsAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/tasklayout";
+            var localVarPath = "/api/TaskLayout";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -878,7 +1078,7 @@ namespace IO.Swagger.Api
             if (taskLayout == null)
                 throw new ApiException(400, "Missing required parameter 'taskLayout' when calling TaskLayoutApi->TaskLayoutNewTaskLayout");
 
-            var localVarPath = "/api/tasklayout";
+            var localVarPath = "/api/TaskLayout";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -970,7 +1170,7 @@ namespace IO.Swagger.Api
             if (taskLayout == null)
                 throw new ApiException(400, "Missing required parameter 'taskLayout' when calling TaskLayoutApi->TaskLayoutNewTaskLayout");
 
-            var localVarPath = "/api/tasklayout";
+            var localVarPath = "/api/TaskLayout";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1060,7 +1260,7 @@ namespace IO.Swagger.Api
             if (taskLayout == null)
                 throw new ApiException(400, "Missing required parameter 'taskLayout' when calling TaskLayoutApi->TaskLayoutUpdateTaskLayout");
 
-            var localVarPath = "/api/tasklayout";
+            var localVarPath = "/api/TaskLayout";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1152,7 +1352,7 @@ namespace IO.Swagger.Api
             if (taskLayout == null)
                 throw new ApiException(400, "Missing required parameter 'taskLayout' when calling TaskLayoutApi->TaskLayoutUpdateTaskLayout");
 
-            var localVarPath = "/api/tasklayout";
+            var localVarPath = "/api/TaskLayout";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1246,7 +1446,7 @@ namespace IO.Swagger.Api
             if (priority == null)
                 throw new ApiException(400, "Missing required parameter 'priority' when calling TaskLayoutApi->TaskLayoutUpdateTaskLayoutPriority");
 
-            var localVarPath = "/api/tasklayout/changepriority/{tasklayoutid}/{priority}";
+            var localVarPath = "/api/TaskLayout/changepriority/{tasklayoutid}/{priority}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1327,7 +1527,7 @@ namespace IO.Swagger.Api
             if (priority == null)
                 throw new ApiException(400, "Missing required parameter 'priority' when calling TaskLayoutApi->TaskLayoutUpdateTaskLayoutPriority");
 
-            var localVarPath = "/api/tasklayout/changepriority/{tasklayoutid}/{priority}";
+            var localVarPath = "/api/TaskLayout/changepriority/{tasklayoutid}/{priority}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

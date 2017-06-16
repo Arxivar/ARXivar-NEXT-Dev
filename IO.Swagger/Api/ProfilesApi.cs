@@ -211,24 +211,24 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of ProfileDTO</returns>
         ApiResponse<ProfileDTO> ProfilesGet_0WithHttpInfo (int? docNumber);
         /// <summary>
-        /// 
+        /// This call lock a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
+        /// <param name="docNumber">Docnumber of profile to lock</param>
         /// <returns>bool?</returns>
         bool? ProfilesLockProfile (int? docNumber);
 
         /// <summary>
-        /// 
+        /// This call lock a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
+        /// <param name="docNumber">Docnumber of profile to lock</param>
         /// <returns>ApiResponse of bool?</returns>
         ApiResponse<bool?> ProfilesLockProfileWithHttpInfo (int? docNumber);
         /// <summary>
@@ -253,47 +253,47 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ProfilesPostWithHttpInfo (ProfileDTO profile = null);
         /// <summary>
-        /// 
+        /// This call update an existent profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of profile to update</param>
         /// <param name="profile"> (optional)</param>
         /// <returns></returns>
         void ProfilesPut (int? docnumber, ProfileDTO profile = null);
 
         /// <summary>
-        /// 
+        /// This call update an existent profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of profile to update</param>
         /// <param name="profile"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ProfilesPutWithHttpInfo (int? docnumber, ProfileDTO profile = null);
         /// <summary>
-        /// 
+        /// This call unlock profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
+        /// <param name="docNumber">Docnumber of profile to unlock</param>
         /// <returns>bool?</returns>
         bool? ProfilesUnLockProfile (int? docNumber);
 
         /// <summary>
-        /// 
+        /// This call unlock profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
+        /// <param name="docNumber">Docnumber of profile to unlock</param>
         /// <returns>ApiResponse of bool?</returns>
         ApiResponse<bool?> ProfilesUnLockProfileWithHttpInfo (int? docNumber);
         #endregion Synchronous Operations
@@ -473,24 +473,24 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (ProfileDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<ProfileDTO>> ProfilesGet_0AsyncWithHttpInfo (int? docNumber);
         /// <summary>
-        /// 
+        /// This call lock a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
+        /// <param name="docNumber">Docnumber of profile to lock</param>
         /// <returns>Task of bool?</returns>
         System.Threading.Tasks.Task<bool?> ProfilesLockProfileAsync (int? docNumber);
 
         /// <summary>
-        /// 
+        /// This call lock a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
+        /// <param name="docNumber">Docnumber of profile to lock</param>
         /// <returns>Task of ApiResponse (bool?)</returns>
         System.Threading.Tasks.Task<ApiResponse<bool?>> ProfilesLockProfileAsyncWithHttpInfo (int? docNumber);
         /// <summary>
@@ -515,47 +515,47 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ProfilesPostAsyncWithHttpInfo (ProfileDTO profile = null);
         /// <summary>
-        /// 
+        /// This call update an existent profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of profile to update</param>
         /// <param name="profile"> (optional)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task ProfilesPutAsync (int? docnumber, ProfileDTO profile = null);
 
         /// <summary>
-        /// 
+        /// This call update an existent profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of profile to update</param>
         /// <param name="profile"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ProfilesPutAsyncWithHttpInfo (int? docnumber, ProfileDTO profile = null);
         /// <summary>
-        /// 
+        /// This call unlock profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
+        /// <param name="docNumber">Docnumber of profile to unlock</param>
         /// <returns>Task of bool?</returns>
         System.Threading.Tasks.Task<bool?> ProfilesUnLockProfileAsync (int? docNumber);
 
         /// <summary>
-        /// 
+        /// This call unlock profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
+        /// <param name="docNumber">Docnumber of profile to unlock</param>
         /// <returns>Task of ApiResponse (bool?)</returns>
         System.Threading.Tasks.Task<ApiResponse<bool?>> ProfilesUnLockProfileAsyncWithHttpInfo (int? docNumber);
         #endregion Asynchronous Operations
@@ -693,7 +693,7 @@ namespace IO.Swagger.Api
             if (docNumber == null)
                 throw new ApiException(400, "Missing required parameter 'docNumber' when calling ProfilesApi->ProfilesDeleteProfile");
 
-            var localVarPath = "/api/profiles/{docNumber}";
+            var localVarPath = "/api/Profiles/{docNumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -768,7 +768,7 @@ namespace IO.Swagger.Api
             if (docNumber == null)
                 throw new ApiException(400, "Missing required parameter 'docNumber' when calling ProfilesApi->ProfilesDeleteProfile");
 
-            var localVarPath = "/api/profiles/{docNumber}";
+            var localVarPath = "/api/Profiles/{docNumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -837,7 +837,7 @@ namespace IO.Swagger.Api
         public ApiResponse< ProfileDTO > ProfilesGetWithHttpInfo ()
         {
 
-            var localVarPath = "/api/profiles";
+            var localVarPath = "/api/Profiles";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -911,7 +911,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<ProfileDTO>> ProfilesGetAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/profiles";
+            var localVarPath = "/api/Profiles";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1003,7 +1003,7 @@ namespace IO.Swagger.Api
             if (aoo == null)
                 throw new ApiException(400, "Missing required parameter 'aoo' when calling ProfilesApi->ProfilesGetAdditionalByClasse");
 
-            var localVarPath = "/api/profiles/Additional/{tipoUno}/{tipoDue}/{tipoTre}/{aoo}";
+            var localVarPath = "/api/Profiles/Additional/{tipoUno}/{tipoDue}/{tipoTre}/{aoo}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1101,7 +1101,7 @@ namespace IO.Swagger.Api
             if (aoo == null)
                 throw new ApiException(400, "Missing required parameter 'aoo' when calling ProfilesApi->ProfilesGetAdditionalByClasse");
 
-            var localVarPath = "/api/profiles/Additional/{tipoUno}/{tipoDue}/{tipoTre}/{aoo}";
+            var localVarPath = "/api/Profiles/Additional/{tipoUno}/{tipoDue}/{tipoTre}/{aoo}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1179,7 +1179,7 @@ namespace IO.Swagger.Api
         public ApiResponse< FieldFilterDTO > ProfilesGetFiltersForArchiveWithHttpInfo (FieldValuesArchiveCriteriaDto fieldcriteria = null)
         {
 
-            var localVarPath = "/api/profiles/Filters";
+            var localVarPath = "/api/Profiles/Filters";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1263,7 +1263,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<FieldFilterDTO>> ProfilesGetFiltersForArchiveAsyncWithHttpInfo (FieldValuesArchiveCriteriaDto fieldcriteria = null)
         {
 
-            var localVarPath = "/api/profiles/Filters";
+            var localVarPath = "/api/Profiles/Filters";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1345,7 +1345,7 @@ namespace IO.Swagger.Api
         public ApiResponse< string > ProfilesGetFormulaForArchiveWithHttpInfo (FieldFormulaCalculateArchiveCriteriaDto fieldcriteria = null)
         {
 
-            var localVarPath = "/api/profiles/Formula";
+            var localVarPath = "/api/Profiles/Formula";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1429,7 +1429,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<string>> ProfilesGetFormulaForArchiveAsyncWithHttpInfo (FieldFormulaCalculateArchiveCriteriaDto fieldcriteria = null)
         {
 
-            var localVarPath = "/api/profiles/Formula";
+            var localVarPath = "/api/Profiles/Formula";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1519,7 +1519,7 @@ namespace IO.Swagger.Api
             if (switched == null)
                 throw new ApiException(400, "Missing required parameter 'switched' when calling ProfilesApi->ProfilesGetSchema");
 
-            var localVarPath = "/api/profiles/{docNumber}/schema/{switched}";
+            var localVarPath = "/api/Profiles/{docNumber}/schema/{switched}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1605,7 +1605,7 @@ namespace IO.Swagger.Api
             if (switched == null)
                 throw new ApiException(400, "Missing required parameter 'switched' when calling ProfilesApi->ProfilesGetSchema");
 
-            var localVarPath = "/api/profiles/{docNumber}/schema/{switched}";
+            var localVarPath = "/api/Profiles/{docNumber}/schema/{switched}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1681,7 +1681,7 @@ namespace IO.Swagger.Api
         public ApiResponse< FieldValuesDTO > ProfilesGetValuesForArchiveWithHttpInfo (FieldValuesArchiveCriteriaDto fieldcriteria = null)
         {
 
-            var localVarPath = "/api/profiles/Values";
+            var localVarPath = "/api/Profiles/Values";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1765,7 +1765,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<FieldValuesDTO>> ProfilesGetValuesForArchiveAsyncWithHttpInfo (FieldValuesArchiveCriteriaDto fieldcriteria = null)
         {
 
-            var localVarPath = "/api/profiles/Values";
+            var localVarPath = "/api/Profiles/Values";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1850,7 +1850,7 @@ namespace IO.Swagger.Api
             if (docNumber == null)
                 throw new ApiException(400, "Missing required parameter 'docNumber' when calling ProfilesApi->ProfilesGet_0");
 
-            var localVarPath = "/api/profiles/detail/{docNumber}";
+            var localVarPath = "/api/Profiles/detail/{docNumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1930,7 +1930,7 @@ namespace IO.Swagger.Api
             if (docNumber == null)
                 throw new ApiException(400, "Missing required parameter 'docNumber' when calling ProfilesApi->ProfilesGet_0");
 
-            var localVarPath = "/api/profiles/detail/{docNumber}";
+            var localVarPath = "/api/Profiles/detail/{docNumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1985,10 +1985,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call lock a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
+        /// <param name="docNumber">Docnumber of profile to lock</param>
         /// <returns>bool?</returns>
         public bool? ProfilesLockProfile (int? docNumber)
         {
@@ -1997,10 +1997,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call lock a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
+        /// <param name="docNumber">Docnumber of profile to lock</param>
         /// <returns>ApiResponse of bool?</returns>
         public ApiResponse< bool? > ProfilesLockProfileWithHttpInfo (int? docNumber)
         {
@@ -2008,7 +2008,7 @@ namespace IO.Swagger.Api
             if (docNumber == null)
                 throw new ApiException(400, "Missing required parameter 'docNumber' when calling ProfilesApi->ProfilesLockProfile");
 
-            var localVarPath = "/api/profiles/lock/{docNumber}";
+            var localVarPath = "/api/Profiles/lock/{docNumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2064,10 +2064,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call lock a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
+        /// <param name="docNumber">Docnumber of profile to lock</param>
         /// <returns>Task of bool?</returns>
         public async System.Threading.Tasks.Task<bool?> ProfilesLockProfileAsync (int? docNumber)
         {
@@ -2077,10 +2077,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call lock a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
+        /// <param name="docNumber">Docnumber of profile to lock</param>
         /// <returns>Task of ApiResponse (bool?)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<bool?>> ProfilesLockProfileAsyncWithHttpInfo (int? docNumber)
         {
@@ -2088,7 +2088,7 @@ namespace IO.Swagger.Api
             if (docNumber == null)
                 throw new ApiException(400, "Missing required parameter 'docNumber' when calling ProfilesApi->ProfilesLockProfile");
 
-            var localVarPath = "/api/profiles/lock/{docNumber}";
+            var localVarPath = "/api/Profiles/lock/{docNumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2162,7 +2162,7 @@ namespace IO.Swagger.Api
         public ApiResponse<Object> ProfilesPostWithHttpInfo (ProfileDTO profile = null)
         {
 
-            var localVarPath = "/api/profiles";
+            var localVarPath = "/api/Profiles";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2245,7 +2245,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<Object>> ProfilesPostAsyncWithHttpInfo (ProfileDTO profile = null)
         {
 
-            var localVarPath = "/api/profiles";
+            var localVarPath = "/api/Profiles";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2307,10 +2307,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update an existent profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of profile to update</param>
         /// <param name="profile"> (optional)</param>
         /// <returns></returns>
         public void ProfilesPut (int? docnumber, ProfileDTO profile = null)
@@ -2319,10 +2319,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update an existent profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of profile to update</param>
         /// <param name="profile"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> ProfilesPutWithHttpInfo (int? docnumber, ProfileDTO profile = null)
@@ -2331,7 +2331,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling ProfilesApi->ProfilesPut");
 
-            var localVarPath = "/api/profiles/{docnumber}";
+            var localVarPath = "/api/Profiles/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2391,10 +2391,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update an existent profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of profile to update</param>
         /// <param name="profile"> (optional)</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task ProfilesPutAsync (int? docnumber, ProfileDTO profile = null)
@@ -2404,10 +2404,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update an existent profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of profile to update</param>
         /// <param name="profile"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> ProfilesPutAsyncWithHttpInfo (int? docnumber, ProfileDTO profile = null)
@@ -2416,7 +2416,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling ProfilesApi->ProfilesPut");
 
-            var localVarPath = "/api/profiles/{docnumber}";
+            var localVarPath = "/api/Profiles/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2475,10 +2475,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call unlock profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
+        /// <param name="docNumber">Docnumber of profile to unlock</param>
         /// <returns>bool?</returns>
         public bool? ProfilesUnLockProfile (int? docNumber)
         {
@@ -2487,10 +2487,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call unlock profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
+        /// <param name="docNumber">Docnumber of profile to unlock</param>
         /// <returns>ApiResponse of bool?</returns>
         public ApiResponse< bool? > ProfilesUnLockProfileWithHttpInfo (int? docNumber)
         {
@@ -2498,7 +2498,7 @@ namespace IO.Swagger.Api
             if (docNumber == null)
                 throw new ApiException(400, "Missing required parameter 'docNumber' when calling ProfilesApi->ProfilesUnLockProfile");
 
-            var localVarPath = "/api/profiles/unlock/{docNumber}";
+            var localVarPath = "/api/Profiles/unlock/{docNumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2554,10 +2554,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call unlock profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
+        /// <param name="docNumber">Docnumber of profile to unlock</param>
         /// <returns>Task of bool?</returns>
         public async System.Threading.Tasks.Task<bool?> ProfilesUnLockProfileAsync (int? docNumber)
         {
@@ -2567,10 +2567,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call unlock profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
+        /// <param name="docNumber">Docnumber of profile to unlock</param>
         /// <returns>Task of ApiResponse (bool?)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<bool?>> ProfilesUnLockProfileAsyncWithHttpInfo (int? docNumber)
         {
@@ -2578,7 +2578,7 @@ namespace IO.Swagger.Api
             if (docNumber == null)
                 throw new ApiException(400, "Missing required parameter 'docNumber' when calling ProfilesApi->ProfilesUnLockProfile");
 
-            var localVarPath = "/api/profiles/unlock/{docNumber}";
+            var localVarPath = "/api/Profiles/unlock/{docNumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

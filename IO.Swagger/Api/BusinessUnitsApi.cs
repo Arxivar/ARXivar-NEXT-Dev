@@ -430,7 +430,7 @@ namespace IO.Swagger.Api
             if (aoo == null)
                 throw new ApiException(400, "Missing required parameter 'aoo' when calling BusinessUnitsApi->BusinessUnitsGetLastProtocolValue");
 
-            var localVarPath = "/api/businessunits/LastProtocolValue/{aoo}";
+            var localVarPath = "/api/BusinessUnits/LastProtocolValue/{aoo}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -510,7 +510,7 @@ namespace IO.Swagger.Api
             if (aoo == null)
                 throw new ApiException(400, "Missing required parameter 'aoo' when calling BusinessUnitsApi->BusinessUnitsGetLastProtocolValue");
 
-            var localVarPath = "/api/businessunits/LastProtocolValue/{aoo}";
+            var localVarPath = "/api/BusinessUnits/LastProtocolValue/{aoo}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

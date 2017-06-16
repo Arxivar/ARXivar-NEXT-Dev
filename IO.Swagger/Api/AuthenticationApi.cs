@@ -37,133 +37,91 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// This call provide a new tokenDTO for a given authentication request
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="username"></param>
-        /// <param name="password"></param>
+        /// <param name="authenticationTokenRequest"></param>
         /// <returns>AuthenticationTokenDTO</returns>
-        AuthenticationTokenDTO AuthenticationGetToken (string username, string password);
+        AuthenticationTokenDTO AuthenticationGetToken (AuthenticationTokenRequestDTO authenticationTokenRequest);
 
         /// <summary>
-        /// 
+        /// This call provide a new tokenDTO for a given authentication request
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="username"></param>
-        /// <param name="password"></param>
+        /// <param name="authenticationTokenRequest"></param>
         /// <returns>ApiResponse of AuthenticationTokenDTO</returns>
-        ApiResponse<AuthenticationTokenDTO> AuthenticationGetTokenWithHttpInfo (string username, string password);
+        ApiResponse<AuthenticationTokenDTO> AuthenticationGetTokenWithHttpInfo (AuthenticationTokenRequestDTO authenticationTokenRequest);
         /// <summary>
-        /// 
+        /// This call return a new AuthenticationTokenDTO by a refresh token string
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="refreshToken"></param>
+        /// <param name="refreshTokenRequest"></param>
         /// <returns>AuthenticationTokenDTO</returns>
-        AuthenticationTokenDTO AuthenticationRefresh (string refreshToken);
+        AuthenticationTokenDTO AuthenticationRefresh (RefreshTokenRequestDTO refreshTokenRequest);
 
         /// <summary>
-        /// 
+        /// This call return a new AuthenticationTokenDTO by a refresh token string
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="refreshToken"></param>
+        /// <param name="refreshTokenRequest"></param>
         /// <returns>ApiResponse of AuthenticationTokenDTO</returns>
-        ApiResponse<AuthenticationTokenDTO> AuthenticationRefreshWithHttpInfo (string refreshToken);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>string</returns>
-        string AuthenticationResultFormula ();
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> AuthenticationResultFormulaWithHttpInfo ();
+        ApiResponse<AuthenticationTokenDTO> AuthenticationRefreshWithHttpInfo (RefreshTokenRequestDTO refreshTokenRequest);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// This call provide a new tokenDTO for a given authentication request
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="username"></param>
-        /// <param name="password"></param>
+        /// <param name="authenticationTokenRequest"></param>
         /// <returns>Task of AuthenticationTokenDTO</returns>
-        System.Threading.Tasks.Task<AuthenticationTokenDTO> AuthenticationGetTokenAsync (string username, string password);
+        System.Threading.Tasks.Task<AuthenticationTokenDTO> AuthenticationGetTokenAsync (AuthenticationTokenRequestDTO authenticationTokenRequest);
 
         /// <summary>
-        /// 
+        /// This call provide a new tokenDTO for a given authentication request
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="username"></param>
-        /// <param name="password"></param>
+        /// <param name="authenticationTokenRequest"></param>
         /// <returns>Task of ApiResponse (AuthenticationTokenDTO)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AuthenticationTokenDTO>> AuthenticationGetTokenAsyncWithHttpInfo (string username, string password);
+        System.Threading.Tasks.Task<ApiResponse<AuthenticationTokenDTO>> AuthenticationGetTokenAsyncWithHttpInfo (AuthenticationTokenRequestDTO authenticationTokenRequest);
         /// <summary>
-        /// 
+        /// This call return a new AuthenticationTokenDTO by a refresh token string
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="refreshToken"></param>
+        /// <param name="refreshTokenRequest"></param>
         /// <returns>Task of AuthenticationTokenDTO</returns>
-        System.Threading.Tasks.Task<AuthenticationTokenDTO> AuthenticationRefreshAsync (string refreshToken);
+        System.Threading.Tasks.Task<AuthenticationTokenDTO> AuthenticationRefreshAsync (RefreshTokenRequestDTO refreshTokenRequest);
 
         /// <summary>
-        /// 
+        /// This call return a new AuthenticationTokenDTO by a refresh token string
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="refreshToken"></param>
+        /// <param name="refreshTokenRequest"></param>
         /// <returns>Task of ApiResponse (AuthenticationTokenDTO)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AuthenticationTokenDTO>> AuthenticationRefreshAsyncWithHttpInfo (string refreshToken);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> AuthenticationResultFormulaAsync ();
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> AuthenticationResultFormulaAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<AuthenticationTokenDTO>> AuthenticationRefreshAsyncWithHttpInfo (RefreshTokenRequestDTO refreshTokenRequest);
         #endregion Asynchronous Operations
     }
 
@@ -277,200 +235,30 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call provide a new tokenDTO for a given authentication request 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="username"></param>
-        /// <param name="password"></param>
+        /// <param name="authenticationTokenRequest"></param>
         /// <returns>AuthenticationTokenDTO</returns>
-        public AuthenticationTokenDTO AuthenticationGetToken (string username, string password)
+        public AuthenticationTokenDTO AuthenticationGetToken (AuthenticationTokenRequestDTO authenticationTokenRequest)
         {
-             ApiResponse<AuthenticationTokenDTO> localVarResponse = AuthenticationGetTokenWithHttpInfo(username, password);
+             ApiResponse<AuthenticationTokenDTO> localVarResponse = AuthenticationGetTokenWithHttpInfo(authenticationTokenRequest);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        ///  
+        /// This call provide a new tokenDTO for a given authentication request 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="username"></param>
-        /// <param name="password"></param>
+        /// <param name="authenticationTokenRequest"></param>
         /// <returns>ApiResponse of AuthenticationTokenDTO</returns>
-        public ApiResponse< AuthenticationTokenDTO > AuthenticationGetTokenWithHttpInfo (string username, string password)
+        public ApiResponse< AuthenticationTokenDTO > AuthenticationGetTokenWithHttpInfo (AuthenticationTokenRequestDTO authenticationTokenRequest)
         {
-            // verify the required parameter 'username' is set
-            if (username == null)
-                throw new ApiException(400, "Missing required parameter 'username' when calling AuthenticationApi->AuthenticationGetToken");
-            // verify the required parameter 'password' is set
-            if (password == null)
-                throw new ApiException(400, "Missing required parameter 'password' when calling AuthenticationApi->AuthenticationGetToken");
+            // verify the required parameter 'authenticationTokenRequest' is set
+            if (authenticationTokenRequest == null)
+                throw new ApiException(400, "Missing required parameter 'authenticationTokenRequest' when calling AuthenticationApi->AuthenticationGetToken");
 
             var localVarPath = "/api/Authentication";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (username != null) localVarQueryParams.Add("username", Configuration.ApiClient.ParameterToString(username)); // query parameter
-            if (password != null) localVarQueryParams.Add("password", Configuration.ApiClient.ParameterToString(password)); // query parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("AuthenticationGetToken", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<AuthenticationTokenDTO>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AuthenticationTokenDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthenticationTokenDTO)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="username"></param>
-        /// <param name="password"></param>
-        /// <returns>Task of AuthenticationTokenDTO</returns>
-        public async System.Threading.Tasks.Task<AuthenticationTokenDTO> AuthenticationGetTokenAsync (string username, string password)
-        {
-             ApiResponse<AuthenticationTokenDTO> localVarResponse = await AuthenticationGetTokenAsyncWithHttpInfo(username, password);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="username"></param>
-        /// <param name="password"></param>
-        /// <returns>Task of ApiResponse (AuthenticationTokenDTO)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AuthenticationTokenDTO>> AuthenticationGetTokenAsyncWithHttpInfo (string username, string password)
-        {
-            // verify the required parameter 'username' is set
-            if (username == null)
-                throw new ApiException(400, "Missing required parameter 'username' when calling AuthenticationApi->AuthenticationGetToken");
-            // verify the required parameter 'password' is set
-            if (password == null)
-                throw new ApiException(400, "Missing required parameter 'password' when calling AuthenticationApi->AuthenticationGetToken");
-
-            var localVarPath = "/api/Authentication";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (username != null) localVarQueryParams.Add("username", Configuration.ApiClient.ParameterToString(username)); // query parameter
-            if (password != null) localVarQueryParams.Add("password", Configuration.ApiClient.ParameterToString(password)); // query parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("AuthenticationGetToken", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<AuthenticationTokenDTO>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AuthenticationTokenDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthenticationTokenDTO)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="refreshToken"></param>
-        /// <returns>AuthenticationTokenDTO</returns>
-        public AuthenticationTokenDTO AuthenticationRefresh (string refreshToken)
-        {
-             ApiResponse<AuthenticationTokenDTO> localVarResponse = AuthenticationRefreshWithHttpInfo(refreshToken);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="refreshToken"></param>
-        /// <returns>ApiResponse of AuthenticationTokenDTO</returns>
-        public ApiResponse< AuthenticationTokenDTO > AuthenticationRefreshWithHttpInfo (string refreshToken)
-        {
-            // verify the required parameter 'refreshToken' is set
-            if (refreshToken == null)
-                throw new ApiException(400, "Missing required parameter 'refreshToken' when calling AuthenticationApi->AuthenticationRefresh");
-
-            var localVarPath = "/api/authentication/refreshtoken";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -502,13 +290,13 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (refreshToken != null && refreshToken.GetType() != typeof(byte[]))
+            if (authenticationTokenRequest != null && authenticationTokenRequest.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(refreshToken); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(authenticationTokenRequest); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = refreshToken; // byte array
+                localVarPostBody = authenticationTokenRequest; // byte array
             }
 
             // authentication (Authorization) required
@@ -527,7 +315,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AuthenticationRefresh", localVarResponse);
+                Exception exception = ExceptionFactory("AuthenticationGetToken", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -538,31 +326,31 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call provide a new tokenDTO for a given authentication request 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="refreshToken"></param>
+        /// <param name="authenticationTokenRequest"></param>
         /// <returns>Task of AuthenticationTokenDTO</returns>
-        public async System.Threading.Tasks.Task<AuthenticationTokenDTO> AuthenticationRefreshAsync (string refreshToken)
+        public async System.Threading.Tasks.Task<AuthenticationTokenDTO> AuthenticationGetTokenAsync (AuthenticationTokenRequestDTO authenticationTokenRequest)
         {
-             ApiResponse<AuthenticationTokenDTO> localVarResponse = await AuthenticationRefreshAsyncWithHttpInfo(refreshToken);
+             ApiResponse<AuthenticationTokenDTO> localVarResponse = await AuthenticationGetTokenAsyncWithHttpInfo(authenticationTokenRequest);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        ///  
+        /// This call provide a new tokenDTO for a given authentication request 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="refreshToken"></param>
+        /// <param name="authenticationTokenRequest"></param>
         /// <returns>Task of ApiResponse (AuthenticationTokenDTO)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AuthenticationTokenDTO>> AuthenticationRefreshAsyncWithHttpInfo (string refreshToken)
+        public async System.Threading.Tasks.Task<ApiResponse<AuthenticationTokenDTO>> AuthenticationGetTokenAsyncWithHttpInfo (AuthenticationTokenRequestDTO authenticationTokenRequest)
         {
-            // verify the required parameter 'refreshToken' is set
-            if (refreshToken == null)
-                throw new ApiException(400, "Missing required parameter 'refreshToken' when calling AuthenticationApi->AuthenticationRefresh");
+            // verify the required parameter 'authenticationTokenRequest' is set
+            if (authenticationTokenRequest == null)
+                throw new ApiException(400, "Missing required parameter 'authenticationTokenRequest' when calling AuthenticationApi->AuthenticationGetToken");
 
-            var localVarPath = "/api/authentication/refreshtoken";
+            var localVarPath = "/api/Authentication";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -594,13 +382,195 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (refreshToken != null && refreshToken.GetType() != typeof(byte[]))
+            if (authenticationTokenRequest != null && authenticationTokenRequest.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(refreshToken); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(authenticationTokenRequest); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = refreshToken; // byte array
+                localVarPostBody = authenticationTokenRequest; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AuthenticationGetToken", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AuthenticationTokenDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AuthenticationTokenDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthenticationTokenDTO)));
+            
+        }
+
+        /// <summary>
+        /// This call return a new AuthenticationTokenDTO by a refresh token string 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="refreshTokenRequest"></param>
+        /// <returns>AuthenticationTokenDTO</returns>
+        public AuthenticationTokenDTO AuthenticationRefresh (RefreshTokenRequestDTO refreshTokenRequest)
+        {
+             ApiResponse<AuthenticationTokenDTO> localVarResponse = AuthenticationRefreshWithHttpInfo(refreshTokenRequest);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call return a new AuthenticationTokenDTO by a refresh token string 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="refreshTokenRequest"></param>
+        /// <returns>ApiResponse of AuthenticationTokenDTO</returns>
+        public ApiResponse< AuthenticationTokenDTO > AuthenticationRefreshWithHttpInfo (RefreshTokenRequestDTO refreshTokenRequest)
+        {
+            // verify the required parameter 'refreshTokenRequest' is set
+            if (refreshTokenRequest == null)
+                throw new ApiException(400, "Missing required parameter 'refreshTokenRequest' when calling AuthenticationApi->AuthenticationRefresh");
+
+            var localVarPath = "/api/Authentication/refreshtoken";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (refreshTokenRequest != null && refreshTokenRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(refreshTokenRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = refreshTokenRequest; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AuthenticationRefresh", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AuthenticationTokenDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AuthenticationTokenDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthenticationTokenDTO)));
+            
+        }
+
+        /// <summary>
+        /// This call return a new AuthenticationTokenDTO by a refresh token string 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="refreshTokenRequest"></param>
+        /// <returns>Task of AuthenticationTokenDTO</returns>
+        public async System.Threading.Tasks.Task<AuthenticationTokenDTO> AuthenticationRefreshAsync (RefreshTokenRequestDTO refreshTokenRequest)
+        {
+             ApiResponse<AuthenticationTokenDTO> localVarResponse = await AuthenticationRefreshAsyncWithHttpInfo(refreshTokenRequest);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call return a new AuthenticationTokenDTO by a refresh token string 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="refreshTokenRequest"></param>
+        /// <returns>Task of ApiResponse (AuthenticationTokenDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AuthenticationTokenDTO>> AuthenticationRefreshAsyncWithHttpInfo (RefreshTokenRequestDTO refreshTokenRequest)
+        {
+            // verify the required parameter 'refreshTokenRequest' is set
+            if (refreshTokenRequest == null)
+                throw new ApiException(400, "Missing required parameter 'refreshTokenRequest' when calling AuthenticationApi->AuthenticationRefresh");
+
+            var localVarPath = "/api/Authentication/refreshtoken";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (refreshTokenRequest != null && refreshTokenRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(refreshTokenRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = refreshTokenRequest; // byte array
             }
 
             // authentication (Authorization) required
@@ -625,152 +595,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<AuthenticationTokenDTO>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AuthenticationTokenDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AuthenticationTokenDTO)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>string</returns>
-        public string AuthenticationResultFormula ()
-        {
-             ApiResponse<string> localVarResponse = AuthenticationResultFormulaWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > AuthenticationResultFormulaWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/Authentication";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("AuthenticationResultFormula", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> AuthenticationResultFormulaAsync ()
-        {
-             ApiResponse<string> localVarResponse = await AuthenticationResultFormulaAsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> AuthenticationResultFormulaAsyncWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/Authentication";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("AuthenticationResultFormula", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
         }
 

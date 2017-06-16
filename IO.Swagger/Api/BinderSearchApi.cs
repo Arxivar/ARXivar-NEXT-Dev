@@ -216,7 +216,7 @@ namespace IO.Swagger.Api
             if (request == null)
                 throw new ApiException(400, "Missing required parameter 'request' when calling BinderSearchApi->BinderSearchGetProfilesByPratica");
 
-            var localVarPath = "/api/bindersearches";
+            var localVarPath = "/api/BinderSearches";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -308,7 +308,7 @@ namespace IO.Swagger.Api
             if (request == null)
                 throw new ApiException(400, "Missing required parameter 'request' when calling BinderSearchApi->BinderSearchGetProfilesByPratica");
 
-            var localVarPath = "/api/bindersearches";
+            var localVarPath = "/api/BinderSearches";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

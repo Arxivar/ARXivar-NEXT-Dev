@@ -32,7 +32,7 @@ namespace ExampleApplication
             get
             {
                 //Build a configuration object with the Token provided during login procedure or refresh token procedure
-                return new Configuration(new ApiClient("http://localhost:81/"))
+                return new Configuration(new ApiClient("http://arxnextgr:81/"))
                 {
                     ApiKey = new Dictionary<string, string>() { { "Authorization", _authToken } },
                     ApiKeyPrefix = new Dictionary<string, string>() { { "Authorization", "Bearer" } }
@@ -45,9 +45,9 @@ namespace ExampleApplication
             try
             {
                 //Inizialize Authentication api (Authentication api not require authentication token)
-                var authApi = new IO.Swagger.Api.AuthenticationApi("http://localhost:81/");
+                var authApi = new IO.Swagger.Api.AuthenticationApi("http://arxnextgr:81/");
                 //Login to obtain a valid token (and a refresh token)
-                var resultToken = authApi.AuthenticationGetToken(userTxt.Text, passwordTxt.Text);
+                var resultToken = authApi.AuthenticationGetToken(new AuthenticationTokenRequestDTO(userTxt.Text, passwordTxt.Text));
 
                 _authToken = resultToken.AccessToken;
                 _refreshToken = resultToken.RefreshToken;
@@ -72,9 +72,9 @@ namespace ExampleApplication
             try
             {
                 //Inizialize Authentication api (Authentication api not require authentication token)
-                var authApi = new IO.Swagger.Api.AuthenticationApi("http://localhost:81/");
+                var authApi = new IO.Swagger.Api.AuthenticationApi("http://arxnextgr:81/");
                 //Try to obtain a new token with the refresh token provided durin login procedure
-                var resultToken = authApi.AuthenticationRefresh(_refreshToken);
+                var resultToken = authApi.AuthenticationRefresh(new RefreshTokenRequestDTO(null, null, _refreshToken));
                 _authToken = resultToken.AccessToken;
                 _refreshToken = resultToken.RefreshToken;
                 tokenLabel.Text = "Token presente";
@@ -92,6 +92,7 @@ namespace ExampleApplication
                 throw;
             }
         }
+
 
         private void buttonGetAoo_Click(object sender, EventArgs e)
         {
@@ -114,12 +115,18 @@ namespace ExampleApplication
         {
             try
             {
-                //Inizialize DocumentTypes Api
-                var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
-                //Get DocumentTypes list
-                var docTypes = docTypesApi.DocumentTypesGet("search", "AbleBS");
-                //Bind to the grid
-                aooTable.DataSource = docTypes;
+                if (aooTable.SelectedRows != null && aooTable.SelectedRows.Count > 0)
+                {
+                    var aooCode = ((BusinessUnitDTO)aooTable.SelectedRows[0].DataBoundItem).Code;
+                    //Inizialize DocumentTypes Api
+                    var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
+                    //Get DocumentTypes list
+
+                    var docTypes = docTypesApi.DocumentTypesGet("search", aooCode);
+                    //Bind to the grid
+                    aooTable.DataSource = docTypes;
+                }
+
             }
             catch (Exception exception)
             {
@@ -137,7 +144,7 @@ namespace ExampleApplication
                 //Call Async method
                 AsyncDocTypes(aooApi, docTypesApi);
                 //Test asyncronous operations
-                var x = 2;
+                MessageBox.Show("Step forward from async call: " + DateTime.Now.ToString("O"));
             }
             catch (Exception exception)
             {
@@ -147,19 +154,17 @@ namespace ExampleApplication
 
         private async Task AsyncDocTypes(IO.Swagger.Api.BusinessUnitsApi aooApi, IO.Swagger.Api.DocumentTypesApi docTypesApi)
         {
-            var x = aooApi.BusinessUnitsGetAsync(2, "Ricerca", "");
-            var y = aooApi.BusinessUnitsGetAsync(2, "Ricerca", "");
-            var tasks = new List<Task<List<BusinessUnitDTO>>>();
-            tasks.Add(x);
-            tasks.Add(y);
+            List<DocumentTypeBaseDTO> doctypes = null;
+            for (int i = 0; i < 100; i++)
+            {
+                var aoos = await aooApi.BusinessUnitsGetAsync(2, "Ricerca", "");
+                doctypes = await docTypesApi.DocumentTypesGetAsync("search", aoos.First().Code);
+            }
 
-            Task.WaitAll(tasks.ToArray());
-
-            var aoos = await aooApi.BusinessUnitsGetAsync(2, "Ricerca", "");
-            var documentTypes = await docTypesApi.DocumentTypesGetAsync("search", aoos.First().Code);
             aooTable.Invoke((MethodInvoker)delegate ()
             {
-                aooTable.DataSource = documentTypes;
+                aooTable.DataSource = doctypes;
+                MessageBox.Show("End of async calls: " + DateTime.Now.ToString("O"));
             });
         }
     }

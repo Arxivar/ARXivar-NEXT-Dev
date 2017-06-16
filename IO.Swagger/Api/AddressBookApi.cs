@@ -33,278 +33,324 @@ namespace IO.Swagger.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface ITestApi : IApiAccessor
+    public interface IAddressBookApi : IApiAccessor
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// This call return new profile data (for archiving purpose) by its addresso book Id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressBookId">Id of the adress book</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>UserProfileDTO</returns>
+        UserProfileDTO AddressBookGetByAddressBookId (int? addressBookId, string type);
+
+        /// <summary>
+        /// This call return new profile data (for archiving purpose) by its addresso book Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressBookId">Id of the adress book</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>ApiResponse of UserProfileDTO</returns>
+        ApiResponse<UserProfileDTO> AddressBookGetByAddressBookIdWithHttpInfo (int? addressBookId, string type);
+        /// <summary>
+        /// This call return new profile data (for archiving purpose) by its contact Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">Id of the contact</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>UserProfileDTO</returns>
+        UserProfileDTO AddressBookGetByContactId (int? contactId, string type);
+
+        /// <summary>
+        /// This call return new profile data (for archiving purpose) by its contact Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">Id of the contact</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>ApiResponse of UserProfileDTO</returns>
+        ApiResponse<UserProfileDTO> AddressBookGetByContactIdWithHttpInfo (int? contactId, string type);
+        /// <summary>
+        /// This call return new profile data (for archiving purpose) by its user Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>UserProfileDTO</returns>
+        UserProfileDTO AddressBookGetByUserId (int? userId, string type);
+
+        /// <summary>
+        /// This call return new profile data (for archiving purpose) by its user Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>ApiResponse of UserProfileDTO</returns>
+        ApiResponse<UserProfileDTO> AddressBookGetByUserIdWithHttpInfo (int? userId, string type);
+        /// <summary>
+        /// This call return all the possible search fileds for search in adress book
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List&lt;RubricaFieldDTO&gt;</returns>
+        List<RubricaFieldDTO> AddressBookGetSearchField ();
+
+        /// <summary>
+        /// This call return all the possible search fileds for search in adress book
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List&lt;RubricaFieldDTO&gt;</returns>
+        ApiResponse<List<RubricaFieldDTO>> AddressBookGetSearchFieldWithHttpInfo ();
+        /// <summary>
+        /// This call return all the possible select fileds for search in adress book
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List&lt;RubricaFieldDTO&gt;</returns>
+        List<RubricaFieldDTO> AddressBookGetSelectField ();
+
+        /// <summary>
+        /// This call return all the possible select fileds for search in adress book
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List&lt;RubricaFieldDTO&gt;</returns>
+        ApiResponse<List<RubricaFieldDTO>> AddressBookGetSelectFieldWithHttpInfo ();
+        /// <summary>
+        /// This call make the search in adress book
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="searchDto">The Dto of the search</param>
+        /// <returns>AddressBookSearchResultDTO</returns>
+        AddressBookSearchResultDTO AddressBookPostSearch (AddressBookSearchCriteriaDTO searchDto);
+
+        /// <summary>
+        /// This call make the search in adress book
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="searchDto">The Dto of the search</param>
+        /// <returns>ApiResponse of AddressBookSearchResultDTO</returns>
+        ApiResponse<AddressBookSearchResultDTO> AddressBookPostSearchWithHttpInfo (AddressBookSearchCriteriaDTO searchDto);
+        /// <summary>
+        /// This call save the select fields with the user settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="selectFields">Array of select fields</param>
         /// <returns></returns>
-        void TestGetArgumentException ();
+        void AddressBookPutSelectField (List<RubricaFieldDTO> selectFields);
 
         /// <summary>
-        /// 
+        /// This call save the select fields with the user settings
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="selectFields">Array of select fields</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> TestGetArgumentExceptionWithHttpInfo ();
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void TestGetGenericException ();
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> TestGetGenericExceptionWithHttpInfo ();
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void TestGetNotImplemented ();
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> TestGetNotImplementedWithHttpInfo ();
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <param name="x1"></param>
-        /// <param name="y1"></param>
-        /// <param name="W"></param>
-        /// <param name="H"></param>
-        /// <returns>string</returns>
-        string TestGetOcr (int? docnumber, double? x1, double? y1, double? W, double? H);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <param name="x1"></param>
-        /// <param name="y1"></param>
-        /// <param name="W"></param>
-        /// <param name="H"></param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> TestGetOcrWithHttpInfo (int? docnumber, double? x1, double? y1, double? W, double? H);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <returns>TesseractHocr</returns>
-        TesseractHocr TestGetOcrMap (int? docnumber);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <returns>ApiResponse of TesseractHocr</returns>
-        ApiResponse<TesseractHocr> TestGetOcrMapWithHttpInfo (int? docnumber);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void TestGetSecurityException ();
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> TestGetSecurityExceptionWithHttpInfo ();
+        ApiResponse<Object> AddressBookPutSelectFieldWithHttpInfo (List<RubricaFieldDTO> selectFields);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// This call return new profile data (for archiving purpose) by its addresso book Id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressBookId">Id of the adress book</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>Task of UserProfileDTO</returns>
+        System.Threading.Tasks.Task<UserProfileDTO> AddressBookGetByAddressBookIdAsync (int? addressBookId, string type);
+
+        /// <summary>
+        /// This call return new profile data (for archiving purpose) by its addresso book Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="addressBookId">Id of the adress book</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>Task of ApiResponse (UserProfileDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserProfileDTO>> AddressBookGetByAddressBookIdAsyncWithHttpInfo (int? addressBookId, string type);
+        /// <summary>
+        /// This call return new profile data (for archiving purpose) by its contact Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">Id of the contact</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>Task of UserProfileDTO</returns>
+        System.Threading.Tasks.Task<UserProfileDTO> AddressBookGetByContactIdAsync (int? contactId, string type);
+
+        /// <summary>
+        /// This call return new profile data (for archiving purpose) by its contact Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">Id of the contact</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>Task of ApiResponse (UserProfileDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserProfileDTO>> AddressBookGetByContactIdAsyncWithHttpInfo (int? contactId, string type);
+        /// <summary>
+        /// This call return new profile data (for archiving purpose) by its user Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>Task of UserProfileDTO</returns>
+        System.Threading.Tasks.Task<UserProfileDTO> AddressBookGetByUserIdAsync (int? userId, string type);
+
+        /// <summary>
+        /// This call return new profile data (for archiving purpose) by its user Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>Task of ApiResponse (UserProfileDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserProfileDTO>> AddressBookGetByUserIdAsyncWithHttpInfo (int? userId, string type);
+        /// <summary>
+        /// This call return all the possible search fileds for search in adress book
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of List&lt;RubricaFieldDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<RubricaFieldDTO>> AddressBookGetSearchFieldAsync ();
+
+        /// <summary>
+        /// This call return all the possible search fileds for search in adress book
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (List&lt;RubricaFieldDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<RubricaFieldDTO>>> AddressBookGetSearchFieldAsyncWithHttpInfo ();
+        /// <summary>
+        /// This call return all the possible select fileds for search in adress book
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of List&lt;RubricaFieldDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<RubricaFieldDTO>> AddressBookGetSelectFieldAsync ();
+
+        /// <summary>
+        /// This call return all the possible select fileds for search in adress book
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (List&lt;RubricaFieldDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<RubricaFieldDTO>>> AddressBookGetSelectFieldAsyncWithHttpInfo ();
+        /// <summary>
+        /// This call make the search in adress book
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="searchDto">The Dto of the search</param>
+        /// <returns>Task of AddressBookSearchResultDTO</returns>
+        System.Threading.Tasks.Task<AddressBookSearchResultDTO> AddressBookPostSearchAsync (AddressBookSearchCriteriaDTO searchDto);
+
+        /// <summary>
+        /// This call make the search in adress book
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="searchDto">The Dto of the search</param>
+        /// <returns>Task of ApiResponse (AddressBookSearchResultDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AddressBookSearchResultDTO>> AddressBookPostSearchAsyncWithHttpInfo (AddressBookSearchCriteriaDTO searchDto);
+        /// <summary>
+        /// This call save the select fields with the user settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="selectFields">Array of select fields</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task TestGetArgumentExceptionAsync ();
+        System.Threading.Tasks.Task AddressBookPutSelectFieldAsync (List<RubricaFieldDTO> selectFields);
 
         /// <summary>
-        /// 
+        /// This call save the select fields with the user settings
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="selectFields">Array of select fields</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> TestGetArgumentExceptionAsyncWithHttpInfo ();
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task TestGetGenericExceptionAsync ();
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> TestGetGenericExceptionAsyncWithHttpInfo ();
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task TestGetNotImplementedAsync ();
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> TestGetNotImplementedAsyncWithHttpInfo ();
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <param name="x1"></param>
-        /// <param name="y1"></param>
-        /// <param name="W"></param>
-        /// <param name="H"></param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> TestGetOcrAsync (int? docnumber, double? x1, double? y1, double? W, double? H);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <param name="x1"></param>
-        /// <param name="y1"></param>
-        /// <param name="W"></param>
-        /// <param name="H"></param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> TestGetOcrAsyncWithHttpInfo (int? docnumber, double? x1, double? y1, double? W, double? H);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <returns>Task of TesseractHocr</returns>
-        System.Threading.Tasks.Task<TesseractHocr> TestGetOcrMapAsync (int? docnumber);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <returns>Task of ApiResponse (TesseractHocr)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TesseractHocr>> TestGetOcrMapAsyncWithHttpInfo (int? docnumber);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task TestGetSecurityExceptionAsync ();
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> TestGetSecurityExceptionAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<Object>> AddressBookPutSelectFieldAsyncWithHttpInfo (List<RubricaFieldDTO> selectFields);
         #endregion Asynchronous Operations
     }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class TestApi : ITestApi
+    public partial class AddressBookApi : IAddressBookApi
     {
         private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TestApi"/> class.
+        /// Initializes a new instance of the <see cref="AddressBookApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public TestApi(String basePath)
+        public AddressBookApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
 
@@ -318,12 +364,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TestApi"/> class
+        /// Initializes a new instance of the <see cref="AddressBookApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public TestApi(Configuration configuration = null)
+        public AddressBookApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Configuration.Default;
@@ -403,458 +449,35 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return new profile data (for archiving purpose) by its addresso book Id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void TestGetArgumentException ()
+        /// <param name="addressBookId">Id of the adress book</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>UserProfileDTO</returns>
+        public UserProfileDTO AddressBookGetByAddressBookId (int? addressBookId, string type)
         {
-             TestGetArgumentExceptionWithHttpInfo();
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> TestGetArgumentExceptionWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/test/Argument";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("TestGetArgumentException", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task TestGetArgumentExceptionAsync ()
-        {
-             await TestGetArgumentExceptionAsyncWithHttpInfo();
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> TestGetArgumentExceptionAsyncWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/test/Argument";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("TestGetArgumentException", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void TestGetGenericException ()
-        {
-             TestGetGenericExceptionWithHttpInfo();
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> TestGetGenericExceptionWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/test/Generic";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("TestGetGenericException", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task TestGetGenericExceptionAsync ()
-        {
-             await TestGetGenericExceptionAsyncWithHttpInfo();
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> TestGetGenericExceptionAsyncWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/test/Generic";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("TestGetGenericException", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void TestGetNotImplemented ()
-        {
-             TestGetNotImplementedWithHttpInfo();
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> TestGetNotImplementedWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/test/NotIMplemented";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("TestGetNotImplemented", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task TestGetNotImplementedAsync ()
-        {
-             await TestGetNotImplementedAsyncWithHttpInfo();
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> TestGetNotImplementedAsyncWithHttpInfo ()
-        {
-
-            var localVarPath = "/api/test/NotIMplemented";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("TestGetNotImplemented", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <param name="x1"></param>
-        /// <param name="y1"></param>
-        /// <param name="W"></param>
-        /// <param name="H"></param>
-        /// <returns>string</returns>
-        public string TestGetOcr (int? docnumber, double? x1, double? y1, double? W, double? H)
-        {
-             ApiResponse<string> localVarResponse = TestGetOcrWithHttpInfo(docnumber, x1, y1, W, H);
+             ApiResponse<UserProfileDTO> localVarResponse = AddressBookGetByAddressBookIdWithHttpInfo(addressBookId, type);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        ///  
+        /// This call return new profile data (for archiving purpose) by its addresso book Id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <param name="x1"></param>
-        /// <param name="y1"></param>
-        /// <param name="W"></param>
-        /// <param name="H"></param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > TestGetOcrWithHttpInfo (int? docnumber, double? x1, double? y1, double? W, double? H)
+        /// <param name="addressBookId">Id of the adress book</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>ApiResponse of UserProfileDTO</returns>
+        public ApiResponse< UserProfileDTO > AddressBookGetByAddressBookIdWithHttpInfo (int? addressBookId, string type)
         {
-            // verify the required parameter 'docnumber' is set
-            if (docnumber == null)
-                throw new ApiException(400, "Missing required parameter 'docnumber' when calling TestApi->TestGetOcr");
-            // verify the required parameter 'x1' is set
-            if (x1 == null)
-                throw new ApiException(400, "Missing required parameter 'x1' when calling TestApi->TestGetOcr");
-            // verify the required parameter 'y1' is set
-            if (y1 == null)
-                throw new ApiException(400, "Missing required parameter 'y1' when calling TestApi->TestGetOcr");
-            // verify the required parameter 'W' is set
-            if (W == null)
-                throw new ApiException(400, "Missing required parameter 'W' when calling TestApi->TestGetOcr");
-            // verify the required parameter 'H' is set
-            if (H == null)
-                throw new ApiException(400, "Missing required parameter 'H' when calling TestApi->TestGetOcr");
+            // verify the required parameter 'addressBookId' is set
+            if (addressBookId == null)
+                throw new ApiException(400, "Missing required parameter 'addressBookId' when calling AddressBookApi->AddressBookGetByAddressBookId");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling AddressBookApi->AddressBookGetByAddressBookId");
 
-            var localVarPath = "/api/test/Ocr/{docnumber}/{X1}/{Y1}/{W}/{H}";
+            var localVarPath = "/api/AddressBook/AddressBook/{addressBookId}/UserProfile/{type}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -881,11 +504,8 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (docnumber != null) localVarPathParams.Add("docnumber", Configuration.ApiClient.ParameterToString(docnumber)); // path parameter
-            if (x1 != null) localVarPathParams.Add("X1", Configuration.ApiClient.ParameterToString(x1)); // path parameter
-            if (y1 != null) localVarPathParams.Add("Y1", Configuration.ApiClient.ParameterToString(y1)); // path parameter
-            if (W != null) localVarPathParams.Add("W", Configuration.ApiClient.ParameterToString(W)); // path parameter
-            if (H != null) localVarPathParams.Add("H", Configuration.ApiClient.ParameterToString(H)); // path parameter
+            if (addressBookId != null) localVarPathParams.Add("addressBookId", Configuration.ApiClient.ParameterToString(addressBookId)); // path parameter
+            if (type != null) localVarPathParams.Add("type", Configuration.ApiClient.ParameterToString(type)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -903,62 +523,47 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TestGetOcr", localVarResponse);
+                Exception exception = ExceptionFactory("AddressBookGetByAddressBookId", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<string>(localVarStatusCode,
+            return new ApiResponse<UserProfileDTO>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+                (UserProfileDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserProfileDTO)));
             
         }
 
         /// <summary>
-        ///  
+        /// This call return new profile data (for archiving purpose) by its addresso book Id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <param name="x1"></param>
-        /// <param name="y1"></param>
-        /// <param name="W"></param>
-        /// <param name="H"></param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> TestGetOcrAsync (int? docnumber, double? x1, double? y1, double? W, double? H)
+        /// <param name="addressBookId">Id of the adress book</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>Task of UserProfileDTO</returns>
+        public async System.Threading.Tasks.Task<UserProfileDTO> AddressBookGetByAddressBookIdAsync (int? addressBookId, string type)
         {
-             ApiResponse<string> localVarResponse = await TestGetOcrAsyncWithHttpInfo(docnumber, x1, y1, W, H);
+             ApiResponse<UserProfileDTO> localVarResponse = await AddressBookGetByAddressBookIdAsyncWithHttpInfo(addressBookId, type);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        ///  
+        /// This call return new profile data (for archiving purpose) by its addresso book Id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <param name="x1"></param>
-        /// <param name="y1"></param>
-        /// <param name="W"></param>
-        /// <param name="H"></param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> TestGetOcrAsyncWithHttpInfo (int? docnumber, double? x1, double? y1, double? W, double? H)
+        /// <param name="addressBookId">Id of the adress book</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>Task of ApiResponse (UserProfileDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserProfileDTO>> AddressBookGetByAddressBookIdAsyncWithHttpInfo (int? addressBookId, string type)
         {
-            // verify the required parameter 'docnumber' is set
-            if (docnumber == null)
-                throw new ApiException(400, "Missing required parameter 'docnumber' when calling TestApi->TestGetOcr");
-            // verify the required parameter 'x1' is set
-            if (x1 == null)
-                throw new ApiException(400, "Missing required parameter 'x1' when calling TestApi->TestGetOcr");
-            // verify the required parameter 'y1' is set
-            if (y1 == null)
-                throw new ApiException(400, "Missing required parameter 'y1' when calling TestApi->TestGetOcr");
-            // verify the required parameter 'W' is set
-            if (W == null)
-                throw new ApiException(400, "Missing required parameter 'W' when calling TestApi->TestGetOcr");
-            // verify the required parameter 'H' is set
-            if (H == null)
-                throw new ApiException(400, "Missing required parameter 'H' when calling TestApi->TestGetOcr");
+            // verify the required parameter 'addressBookId' is set
+            if (addressBookId == null)
+                throw new ApiException(400, "Missing required parameter 'addressBookId' when calling AddressBookApi->AddressBookGetByAddressBookId");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling AddressBookApi->AddressBookGetByAddressBookId");
 
-            var localVarPath = "/api/test/Ocr/{docnumber}/{X1}/{Y1}/{W}/{H}";
+            var localVarPath = "/api/AddressBook/AddressBook/{addressBookId}/UserProfile/{type}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -985,11 +590,8 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (docnumber != null) localVarPathParams.Add("docnumber", Configuration.ApiClient.ParameterToString(docnumber)); // path parameter
-            if (x1 != null) localVarPathParams.Add("X1", Configuration.ApiClient.ParameterToString(x1)); // path parameter
-            if (y1 != null) localVarPathParams.Add("Y1", Configuration.ApiClient.ParameterToString(y1)); // path parameter
-            if (W != null) localVarPathParams.Add("W", Configuration.ApiClient.ParameterToString(W)); // path parameter
-            if (H != null) localVarPathParams.Add("H", Configuration.ApiClient.ParameterToString(H)); // path parameter
+            if (addressBookId != null) localVarPathParams.Add("addressBookId", Configuration.ApiClient.ParameterToString(addressBookId)); // path parameter
+            if (type != null) localVarPathParams.Add("type", Configuration.ApiClient.ParameterToString(type)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1006,41 +608,46 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TestGetOcr", localVarResponse);
+                Exception exception = ExceptionFactory("AddressBookGetByAddressBookId", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<string>(localVarStatusCode,
+            return new ApiResponse<UserProfileDTO>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+                (UserProfileDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserProfileDTO)));
             
         }
 
         /// <summary>
-        ///  
+        /// This call return new profile data (for archiving purpose) by its contact Id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <returns>TesseractHocr</returns>
-        public TesseractHocr TestGetOcrMap (int? docnumber)
+        /// <param name="contactId">Id of the contact</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>UserProfileDTO</returns>
+        public UserProfileDTO AddressBookGetByContactId (int? contactId, string type)
         {
-             ApiResponse<TesseractHocr> localVarResponse = TestGetOcrMapWithHttpInfo(docnumber);
+             ApiResponse<UserProfileDTO> localVarResponse = AddressBookGetByContactIdWithHttpInfo(contactId, type);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        ///  
+        /// This call return new profile data (for archiving purpose) by its contact Id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <returns>ApiResponse of TesseractHocr</returns>
-        public ApiResponse< TesseractHocr > TestGetOcrMapWithHttpInfo (int? docnumber)
+        /// <param name="contactId">Id of the contact</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>ApiResponse of UserProfileDTO</returns>
+        public ApiResponse< UserProfileDTO > AddressBookGetByContactIdWithHttpInfo (int? contactId, string type)
         {
-            // verify the required parameter 'docnumber' is set
-            if (docnumber == null)
-                throw new ApiException(400, "Missing required parameter 'docnumber' when calling TestApi->TestGetOcrMap");
+            // verify the required parameter 'contactId' is set
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling AddressBookApi->AddressBookGetByContactId");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling AddressBookApi->AddressBookGetByContactId");
 
-            var localVarPath = "/api/test/OcrMap/{docnumber}";
+            var localVarPath = "/api/AddressBook/Contact/{contactId}/UserProfile/{type}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1067,7 +674,8 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (docnumber != null) localVarPathParams.Add("docnumber", Configuration.ApiClient.ParameterToString(docnumber)); // path parameter
+            if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
+            if (type != null) localVarPathParams.Add("type", Configuration.ApiClient.ParameterToString(type)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1085,42 +693,47 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TestGetOcrMap", localVarResponse);
+                Exception exception = ExceptionFactory("AddressBookGetByContactId", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TesseractHocr>(localVarStatusCode,
+            return new ApiResponse<UserProfileDTO>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TesseractHocr) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TesseractHocr)));
+                (UserProfileDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserProfileDTO)));
             
         }
 
         /// <summary>
-        ///  
+        /// This call return new profile data (for archiving purpose) by its contact Id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <returns>Task of TesseractHocr</returns>
-        public async System.Threading.Tasks.Task<TesseractHocr> TestGetOcrMapAsync (int? docnumber)
+        /// <param name="contactId">Id of the contact</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>Task of UserProfileDTO</returns>
+        public async System.Threading.Tasks.Task<UserProfileDTO> AddressBookGetByContactIdAsync (int? contactId, string type)
         {
-             ApiResponse<TesseractHocr> localVarResponse = await TestGetOcrMapAsyncWithHttpInfo(docnumber);
+             ApiResponse<UserProfileDTO> localVarResponse = await AddressBookGetByContactIdAsyncWithHttpInfo(contactId, type);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        ///  
+        /// This call return new profile data (for archiving purpose) by its contact Id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <returns>Task of ApiResponse (TesseractHocr)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TesseractHocr>> TestGetOcrMapAsyncWithHttpInfo (int? docnumber)
+        /// <param name="contactId">Id of the contact</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>Task of ApiResponse (UserProfileDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserProfileDTO>> AddressBookGetByContactIdAsyncWithHttpInfo (int? contactId, string type)
         {
-            // verify the required parameter 'docnumber' is set
-            if (docnumber == null)
-                throw new ApiException(400, "Missing required parameter 'docnumber' when calling TestApi->TestGetOcrMap");
+            // verify the required parameter 'contactId' is set
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling AddressBookApi->AddressBookGetByContactId");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling AddressBookApi->AddressBookGetByContactId");
 
-            var localVarPath = "/api/test/OcrMap/{docnumber}";
+            var localVarPath = "/api/AddressBook/Contact/{contactId}/UserProfile/{type}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1147,7 +760,8 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (docnumber != null) localVarPathParams.Add("docnumber", Configuration.ApiClient.ParameterToString(docnumber)); // path parameter
+            if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
+            if (type != null) localVarPathParams.Add("type", Configuration.ApiClient.ParameterToString(type)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1164,35 +778,684 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TestGetOcrMap", localVarResponse);
+                Exception exception = ExceptionFactory("AddressBookGetByContactId", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TesseractHocr>(localVarStatusCode,
+            return new ApiResponse<UserProfileDTO>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TesseractHocr) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TesseractHocr)));
+                (UserProfileDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserProfileDTO)));
             
         }
 
         /// <summary>
-        ///  
+        /// This call return new profile data (for archiving purpose) by its user Id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>UserProfileDTO</returns>
+        public UserProfileDTO AddressBookGetByUserId (int? userId, string type)
+        {
+             ApiResponse<UserProfileDTO> localVarResponse = AddressBookGetByUserIdWithHttpInfo(userId, type);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call return new profile data (for archiving purpose) by its user Id 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>ApiResponse of UserProfileDTO</returns>
+        public ApiResponse< UserProfileDTO > AddressBookGetByUserIdWithHttpInfo (int? userId, string type)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling AddressBookApi->AddressBookGetByUserId");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling AddressBookApi->AddressBookGetByUserId");
+
+            var localVarPath = "/api/AddressBook/User/{userId}/UserProfile/{type}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (type != null) localVarPathParams.Add("type", Configuration.ApiClient.ParameterToString(type)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressBookGetByUserId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UserProfileDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UserProfileDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserProfileDTO)));
+            
+        }
+
+        /// <summary>
+        /// This call return new profile data (for archiving purpose) by its user Id 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>Task of UserProfileDTO</returns>
+        public async System.Threading.Tasks.Task<UserProfileDTO> AddressBookGetByUserIdAsync (int? userId, string type)
+        {
+             ApiResponse<UserProfileDTO> localVarResponse = await AddressBookGetByUserIdAsyncWithHttpInfo(userId, type);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call return new profile data (for archiving purpose) by its user Id 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">Id of the user</param>
+        /// <param name="type">type of profile data wanted</param>
+        /// <returns>Task of ApiResponse (UserProfileDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserProfileDTO>> AddressBookGetByUserIdAsyncWithHttpInfo (int? userId, string type)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling AddressBookApi->AddressBookGetByUserId");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling AddressBookApi->AddressBookGetByUserId");
+
+            var localVarPath = "/api/AddressBook/User/{userId}/UserProfile/{type}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (type != null) localVarPathParams.Add("type", Configuration.ApiClient.ParameterToString(type)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressBookGetByUserId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UserProfileDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UserProfileDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserProfileDTO)));
+            
+        }
+
+        /// <summary>
+        /// This call return all the possible search fileds for search in adress book 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List&lt;RubricaFieldDTO&gt;</returns>
+        public List<RubricaFieldDTO> AddressBookGetSearchField ()
+        {
+             ApiResponse<List<RubricaFieldDTO>> localVarResponse = AddressBookGetSearchFieldWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call return all the possible search fileds for search in adress book 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List&lt;RubricaFieldDTO&gt;</returns>
+        public ApiResponse< List<RubricaFieldDTO> > AddressBookGetSearchFieldWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/AddressBook/SearchField";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressBookGetSearchField", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<RubricaFieldDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<RubricaFieldDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RubricaFieldDTO>)));
+            
+        }
+
+        /// <summary>
+        /// This call return all the possible search fileds for search in adress book 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of List&lt;RubricaFieldDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<RubricaFieldDTO>> AddressBookGetSearchFieldAsync ()
+        {
+             ApiResponse<List<RubricaFieldDTO>> localVarResponse = await AddressBookGetSearchFieldAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call return all the possible search fileds for search in adress book 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (List&lt;RubricaFieldDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<RubricaFieldDTO>>> AddressBookGetSearchFieldAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/AddressBook/SearchField";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressBookGetSearchField", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<RubricaFieldDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<RubricaFieldDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RubricaFieldDTO>)));
+            
+        }
+
+        /// <summary>
+        /// This call return all the possible select fileds for search in adress book 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List&lt;RubricaFieldDTO&gt;</returns>
+        public List<RubricaFieldDTO> AddressBookGetSelectField ()
+        {
+             ApiResponse<List<RubricaFieldDTO>> localVarResponse = AddressBookGetSelectFieldWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call return all the possible select fileds for search in adress book 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List&lt;RubricaFieldDTO&gt;</returns>
+        public ApiResponse< List<RubricaFieldDTO> > AddressBookGetSelectFieldWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/AddressBook/SelectField";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressBookGetSelectField", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<RubricaFieldDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<RubricaFieldDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RubricaFieldDTO>)));
+            
+        }
+
+        /// <summary>
+        /// This call return all the possible select fileds for search in adress book 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of List&lt;RubricaFieldDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<RubricaFieldDTO>> AddressBookGetSelectFieldAsync ()
+        {
+             ApiResponse<List<RubricaFieldDTO>> localVarResponse = await AddressBookGetSelectFieldAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call return all the possible select fileds for search in adress book 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (List&lt;RubricaFieldDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<RubricaFieldDTO>>> AddressBookGetSelectFieldAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/AddressBook/SelectField";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressBookGetSelectField", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<RubricaFieldDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<RubricaFieldDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RubricaFieldDTO>)));
+            
+        }
+
+        /// <summary>
+        /// This call make the search in adress book 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="searchDto">The Dto of the search</param>
+        /// <returns>AddressBookSearchResultDTO</returns>
+        public AddressBookSearchResultDTO AddressBookPostSearch (AddressBookSearchCriteriaDTO searchDto)
+        {
+             ApiResponse<AddressBookSearchResultDTO> localVarResponse = AddressBookPostSearchWithHttpInfo(searchDto);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call make the search in adress book 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="searchDto">The Dto of the search</param>
+        /// <returns>ApiResponse of AddressBookSearchResultDTO</returns>
+        public ApiResponse< AddressBookSearchResultDTO > AddressBookPostSearchWithHttpInfo (AddressBookSearchCriteriaDTO searchDto)
+        {
+            // verify the required parameter 'searchDto' is set
+            if (searchDto == null)
+                throw new ApiException(400, "Missing required parameter 'searchDto' when calling AddressBookApi->AddressBookPostSearch");
+
+            var localVarPath = "/api/AddressBook";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (searchDto != null && searchDto.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(searchDto); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = searchDto; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressBookPostSearch", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AddressBookSearchResultDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AddressBookSearchResultDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddressBookSearchResultDTO)));
+            
+        }
+
+        /// <summary>
+        /// This call make the search in adress book 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="searchDto">The Dto of the search</param>
+        /// <returns>Task of AddressBookSearchResultDTO</returns>
+        public async System.Threading.Tasks.Task<AddressBookSearchResultDTO> AddressBookPostSearchAsync (AddressBookSearchCriteriaDTO searchDto)
+        {
+             ApiResponse<AddressBookSearchResultDTO> localVarResponse = await AddressBookPostSearchAsyncWithHttpInfo(searchDto);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call make the search in adress book 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="searchDto">The Dto of the search</param>
+        /// <returns>Task of ApiResponse (AddressBookSearchResultDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AddressBookSearchResultDTO>> AddressBookPostSearchAsyncWithHttpInfo (AddressBookSearchCriteriaDTO searchDto)
+        {
+            // verify the required parameter 'searchDto' is set
+            if (searchDto == null)
+                throw new ApiException(400, "Missing required parameter 'searchDto' when calling AddressBookApi->AddressBookPostSearch");
+
+            var localVarPath = "/api/AddressBook";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (searchDto != null && searchDto.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(searchDto); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = searchDto; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddressBookPostSearch", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AddressBookSearchResultDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AddressBookSearchResultDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AddressBookSearchResultDTO)));
+            
+        }
+
+        /// <summary>
+        /// This call save the select fields with the user settings 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="selectFields">Array of select fields</param>
         /// <returns></returns>
-        public void TestGetSecurityException ()
+        public void AddressBookPutSelectField (List<RubricaFieldDTO> selectFields)
         {
-             TestGetSecurityExceptionWithHttpInfo();
+             AddressBookPutSelectFieldWithHttpInfo(selectFields);
         }
 
         /// <summary>
-        ///  
+        /// This call save the select fields with the user settings 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="selectFields">Array of select fields</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> TestGetSecurityExceptionWithHttpInfo ()
+        public ApiResponse<Object> AddressBookPutSelectFieldWithHttpInfo (List<RubricaFieldDTO> selectFields)
         {
+            // verify the required parameter 'selectFields' is set
+            if (selectFields == null)
+                throw new ApiException(400, "Missing required parameter 'selectFields' when calling AddressBookApi->AddressBookPutSelectField");
 
-            var localVarPath = "/api/test/Security";
+            var localVarPath = "/api/AddressBook/SelectField";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1202,6 +1465,11 @@ namespace IO.Swagger.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1215,6 +1483,14 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            if (selectFields != null && selectFields.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(selectFields); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = selectFields; // byte array
+            }
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1225,14 +1501,14 @@ namespace IO.Swagger.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TestGetSecurityException", localVarResponse);
+                Exception exception = ExceptionFactory("AddressBookPutSelectField", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1243,25 +1519,30 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call save the select fields with the user settings 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="selectFields">Array of select fields</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task TestGetSecurityExceptionAsync ()
+        public async System.Threading.Tasks.Task AddressBookPutSelectFieldAsync (List<RubricaFieldDTO> selectFields)
         {
-             await TestGetSecurityExceptionAsyncWithHttpInfo();
+             await AddressBookPutSelectFieldAsyncWithHttpInfo(selectFields);
 
         }
 
         /// <summary>
-        ///  
+        /// This call save the select fields with the user settings 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="selectFields">Array of select fields</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> TestGetSecurityExceptionAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> AddressBookPutSelectFieldAsyncWithHttpInfo (List<RubricaFieldDTO> selectFields)
         {
+            // verify the required parameter 'selectFields' is set
+            if (selectFields == null)
+                throw new ApiException(400, "Missing required parameter 'selectFields' when calling AddressBookApi->AddressBookPutSelectField");
 
-            var localVarPath = "/api/test/Security";
+            var localVarPath = "/api/AddressBook/SelectField";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1271,6 +1552,11 @@ namespace IO.Swagger.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1284,6 +1570,14 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            if (selectFields != null && selectFields.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(selectFields); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = selectFields; // byte array
+            }
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1293,14 +1587,14 @@ namespace IO.Swagger.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TestGetSecurityException", localVarResponse);
+                Exception exception = ExceptionFactory("AddressBookPutSelectField", localVarResponse);
                 if (exception != null) throw exception;
             }
 

@@ -40,87 +40,19 @@ namespace IO.Swagger.Model
     public partial class AttachmentRevisionDTO :  IEquatable<AttachmentRevisionDTO>
     {
         /// <summary>
-        /// Gets or Sets CompressionMode
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum CompressionModeEnum
-        {
-            
-            /// <summary>
-            /// Enum None for "None"
-            /// </summary>
-            [EnumMember(Value = "None")]
-            None,
-            
-            /// <summary>
-            /// Enum CompressChilkat91 for "CompressChilkat91"
-            /// </summary>
-            [EnumMember(Value = "CompressChilkat91")]
-            CompressChilkat91,
-            
-            /// <summary>
-            /// Enum CompressChilkat95 for "CompressChilkat95"
-            /// </summary>
-            [EnumMember(Value = "CompressChilkat95")]
-            CompressChilkat95,
-            
-            /// <summary>
-            /// Enum CompressChilkat95AndCryptoAes256 for "CompressChilkat95AndCryptoAes256"
-            /// </summary>
-            [EnumMember(Value = "CompressChilkat95AndCryptoAes256")]
-            CompressChilkat95AndCryptoAes256
-        }
-
-        /// <summary>
-        /// Gets or Sets SaveType
-        /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum SaveTypeEnum
-        {
-            
-            /// <summary>
-            /// Enum FileSystem for "File_System"
-            /// </summary>
-            [EnumMember(Value = "File_System")]
-            FileSystem,
-            
-            /// <summary>
-            /// Enum Database for "Database"
-            /// </summary>
-            [EnumMember(Value = "Database")]
-            Database
-        }
-
-        /// <summary>
-        /// Gets or Sets CompressionMode
-        /// </summary>
-        [DataMember(Name="compressionMode", EmitDefaultValue=false)]
-        public CompressionModeEnum? CompressionMode { get; set; }
-        /// <summary>
-        /// Gets or Sets SaveType
-        /// </summary>
-        [DataMember(Name="saveType", EmitDefaultValue=false)]
-        public SaveTypeEnum? SaveType { get; set; }
-        /// <summary>
         /// Initializes a new instance of the <see cref="AttachmentRevisionDTO" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="AttachmentId">AttachmentId.</param>
-        /// <param name="Revision">Revision.</param>
-        /// <param name="User">User.</param>
-        /// <param name="UserDescription">UserDescription.</param>
-        /// <param name="CreationDate">CreationDate.</param>
-        /// <param name="Path">Path.</param>
-        /// <param name="FileName">FileName.</param>
-        /// <param name="OriginalFileName">OriginalFileName.</param>
-        /// <param name="Hash">Hash.</param>
-        /// <param name="ZipPassword">ZipPassword.</param>
-        /// <param name="Cstring">Cstring.</param>
-        /// <param name="Compressed">Compressed.</param>
-        /// <param name="FileSize">FileSize.</param>
-        /// <param name="CompressionMode">CompressionMode.</param>
-        /// <param name="SaveType">SaveType.</param>
-        public AttachmentRevisionDTO(int? Id = null, int? AttachmentId = null, int? Revision = null, int? User = null, string UserDescription = null, DateTime? CreationDate = null, string Path = null, string FileName = null, string OriginalFileName = null, string Hash = null, string ZipPassword = null, string Cstring = null, bool? Compressed = null, long? FileSize = null, CompressionModeEnum? CompressionMode = null, SaveTypeEnum? SaveType = null)
+        /// <param name="Id">Id of the revision.</param>
+        /// <param name="AttachmentId">Id of the attachment.</param>
+        /// <param name="Revision">Revision number.</param>
+        /// <param name="User">Id of the author.</param>
+        /// <param name="UserDescription">Description of the author.</param>
+        /// <param name="CreationDate">DateTime of this revision.</param>
+        /// <param name="Path">Path to store the revision file.</param>
+        /// <param name="FileName">File name of the compressed revision file.</param>
+        /// <param name="OriginalFileName">File name for the revision file.</param>
+        /// <param name="Hash">Hash of the document.</param>
+        public AttachmentRevisionDTO(int? Id = null, int? AttachmentId = null, int? Revision = null, int? User = null, string UserDescription = null, DateTime? CreationDate = null, string Path = null, string FileName = null, string OriginalFileName = null, string Hash = null)
         {
             this.Id = Id;
             this.AttachmentId = AttachmentId;
@@ -132,84 +64,68 @@ namespace IO.Swagger.Model
             this.FileName = FileName;
             this.OriginalFileName = OriginalFileName;
             this.Hash = Hash;
-            this.ZipPassword = ZipPassword;
-            this.Cstring = Cstring;
-            this.Compressed = Compressed;
-            this.FileSize = FileSize;
-            this.CompressionMode = CompressionMode;
-            this.SaveType = SaveType;
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Id of the revision
         /// </summary>
+        /// <value>Id of the revision</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
         /// <summary>
-        /// Gets or Sets AttachmentId
+        /// Id of the attachment
         /// </summary>
+        /// <value>Id of the attachment</value>
         [DataMember(Name="attachmentId", EmitDefaultValue=false)]
         public int? AttachmentId { get; set; }
         /// <summary>
-        /// Gets or Sets Revision
+        /// Revision number
         /// </summary>
+        /// <value>Revision number</value>
         [DataMember(Name="revision", EmitDefaultValue=false)]
         public int? Revision { get; set; }
         /// <summary>
-        /// Gets or Sets User
+        /// Id of the author
         /// </summary>
+        /// <value>Id of the author</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public int? User { get; set; }
         /// <summary>
-        /// Gets or Sets UserDescription
+        /// Description of the author
         /// </summary>
+        /// <value>Description of the author</value>
         [DataMember(Name="userDescription", EmitDefaultValue=false)]
         public string UserDescription { get; set; }
         /// <summary>
-        /// Gets or Sets CreationDate
+        /// DateTime of this revision
         /// </summary>
+        /// <value>DateTime of this revision</value>
         [DataMember(Name="creationDate", EmitDefaultValue=false)]
         public DateTime? CreationDate { get; set; }
         /// <summary>
-        /// Gets or Sets Path
+        /// Path to store the revision file
         /// </summary>
+        /// <value>Path to store the revision file</value>
         [DataMember(Name="path", EmitDefaultValue=false)]
         public string Path { get; set; }
         /// <summary>
-        /// Gets or Sets FileName
+        /// File name of the compressed revision file
         /// </summary>
+        /// <value>File name of the compressed revision file</value>
         [DataMember(Name="fileName", EmitDefaultValue=false)]
         public string FileName { get; set; }
         /// <summary>
-        /// Gets or Sets OriginalFileName
+        /// File name for the revision file
         /// </summary>
+        /// <value>File name for the revision file</value>
         [DataMember(Name="originalFileName", EmitDefaultValue=false)]
         public string OriginalFileName { get; set; }
         /// <summary>
-        /// Gets or Sets Hash
+        /// Hash of the document
         /// </summary>
+        /// <value>Hash of the document</value>
         [DataMember(Name="hash", EmitDefaultValue=false)]
         public string Hash { get; set; }
-        /// <summary>
-        /// Gets or Sets ZipPassword
-        /// </summary>
-        [DataMember(Name="zipPassword", EmitDefaultValue=false)]
-        public string ZipPassword { get; set; }
-        /// <summary>
-        /// Gets or Sets Cstring
-        /// </summary>
-        [DataMember(Name="cstring", EmitDefaultValue=false)]
-        public string Cstring { get; set; }
-        /// <summary>
-        /// Gets or Sets Compressed
-        /// </summary>
-        [DataMember(Name="compressed", EmitDefaultValue=false)]
-        public bool? Compressed { get; set; }
-        /// <summary>
-        /// Gets or Sets FileSize
-        /// </summary>
-        [DataMember(Name="fileSize", EmitDefaultValue=false)]
-        public long? FileSize { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -228,12 +144,6 @@ namespace IO.Swagger.Model
             sb.Append("  FileName: ").Append(FileName).Append("\n");
             sb.Append("  OriginalFileName: ").Append(OriginalFileName).Append("\n");
             sb.Append("  Hash: ").Append(Hash).Append("\n");
-            sb.Append("  ZipPassword: ").Append(ZipPassword).Append("\n");
-            sb.Append("  Cstring: ").Append(Cstring).Append("\n");
-            sb.Append("  Compressed: ").Append(Compressed).Append("\n");
-            sb.Append("  FileSize: ").Append(FileSize).Append("\n");
-            sb.Append("  CompressionMode: ").Append(CompressionMode).Append("\n");
-            sb.Append("  SaveType: ").Append(SaveType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -319,36 +229,6 @@ namespace IO.Swagger.Model
                     this.Hash == other.Hash ||
                     this.Hash != null &&
                     this.Hash.Equals(other.Hash)
-                ) && 
-                (
-                    this.ZipPassword == other.ZipPassword ||
-                    this.ZipPassword != null &&
-                    this.ZipPassword.Equals(other.ZipPassword)
-                ) && 
-                (
-                    this.Cstring == other.Cstring ||
-                    this.Cstring != null &&
-                    this.Cstring.Equals(other.Cstring)
-                ) && 
-                (
-                    this.Compressed == other.Compressed ||
-                    this.Compressed != null &&
-                    this.Compressed.Equals(other.Compressed)
-                ) && 
-                (
-                    this.FileSize == other.FileSize ||
-                    this.FileSize != null &&
-                    this.FileSize.Equals(other.FileSize)
-                ) && 
-                (
-                    this.CompressionMode == other.CompressionMode ||
-                    this.CompressionMode != null &&
-                    this.CompressionMode.Equals(other.CompressionMode)
-                ) && 
-                (
-                    this.SaveType == other.SaveType ||
-                    this.SaveType != null &&
-                    this.SaveType.Equals(other.SaveType)
                 );
         }
 
@@ -383,18 +263,6 @@ namespace IO.Swagger.Model
                     hash = hash * 59 + this.OriginalFileName.GetHashCode();
                 if (this.Hash != null)
                     hash = hash * 59 + this.Hash.GetHashCode();
-                if (this.ZipPassword != null)
-                    hash = hash * 59 + this.ZipPassword.GetHashCode();
-                if (this.Cstring != null)
-                    hash = hash * 59 + this.Cstring.GetHashCode();
-                if (this.Compressed != null)
-                    hash = hash * 59 + this.Compressed.GetHashCode();
-                if (this.FileSize != null)
-                    hash = hash * 59 + this.FileSize.GetHashCode();
-                if (this.CompressionMode != null)
-                    hash = hash * 59 + this.CompressionMode.GetHashCode();
-                if (this.SaveType != null)
-                    hash = hash * 59 + this.SaveType.GetHashCode();
                 return hash;
             }
         }

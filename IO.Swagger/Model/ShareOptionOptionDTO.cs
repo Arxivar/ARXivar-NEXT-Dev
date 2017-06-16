@@ -40,35 +40,37 @@ namespace IO.Swagger.Model
     public partial class ShareOptionOptionDTO :  IEquatable<ShareOptionOptionDTO>
     {
         /// <summary>
-        /// Gets or Sets Option
+        /// Share option type
         /// </summary>
+        /// <value>Share option type</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum OptionEnum
         {
             
             /// <summary>
-            /// Enum Lettura for "Lettura"
+            /// Enum Read for "Read"
             /// </summary>
-            [EnumMember(Value = "Lettura")]
-            Lettura,
+            [EnumMember(Value = "Read")]
+            Read,
             
             /// <summary>
-            /// Enum LetturaScrittura for "LetturaScrittura"
+            /// Enum ReadAndWrite for "ReadAndWrite"
             /// </summary>
-            [EnumMember(Value = "LetturaScrittura")]
-            LetturaScrittura
+            [EnumMember(Value = "ReadAndWrite")]
+            ReadAndWrite
         }
 
         /// <summary>
-        /// Gets or Sets Option
+        /// Share option type
         /// </summary>
+        /// <value>Share option type</value>
         [DataMember(Name="option", EmitDefaultValue=false)]
         public OptionEnum? Option { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ShareOptionOptionDTO" /> class.
         /// </summary>
-        /// <param name="Option">Option.</param>
-        /// <param name="OptionUserMessage">OptionUserMessage.</param>
+        /// <param name="Option">Share option type.</param>
+        /// <param name="OptionUserMessage">User label for this option.</param>
         public ShareOptionOptionDTO(OptionEnum? Option = null, string OptionUserMessage = null)
         {
             this.Option = Option;
@@ -76,8 +78,9 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets OptionUserMessage
+        /// User label for this option
         /// </summary>
+        /// <value>User label for this option</value>
         [DataMember(Name="optionUserMessage", EmitDefaultValue=false)]
         public string OptionUserMessage { get; set; }
         /// <summary>

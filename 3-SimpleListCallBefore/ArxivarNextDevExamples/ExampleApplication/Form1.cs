@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IO.Swagger.Model;
 
 namespace ExampleApplication
 {
@@ -25,11 +26,13 @@ namespace ExampleApplication
             try
             {
                 //Inizialize Authentication api (Authentication api not require authentication token)
-                var authApi = new IO.Swagger.Api.AuthenticationApi("http://localhost:81/");
+                var authApi = new IO.Swagger.Api.AuthenticationApi("http://arxnextgr:81/");
                 //Login to obtain a valid token (and a refresh token)
-                var resultToken = authApi.AuthenticationGetToken(userTxt.Text, passwordTxt.Text);
+                var resultToken = authApi.AuthenticationGetToken(new AuthenticationTokenRequestDTO(userTxt.Text, passwordTxt.Text));
+
                 _authToken = resultToken.AccessToken;
                 _refreshToken = resultToken.RefreshToken;
+
                 tokenLabel.Text = "Token presente";
                 tokenLabel.ForeColor = Color.Green;
                 tokenValue.Text = string.Empty;
@@ -50,9 +53,9 @@ namespace ExampleApplication
             try
             {
                 //Inizialize Authentication api (Authentication api not require authentication token)
-                var authApi = new IO.Swagger.Api.AuthenticationApi("http://localhost:81/");
+                var authApi = new IO.Swagger.Api.AuthenticationApi("http://arxnextgr:81/");
                 //Try to obtain a new token with the refresh token provided durin login procedure
-                var resultToken = authApi.AuthenticationRefresh(_refreshToken);
+                var resultToken = authApi.AuthenticationRefresh(new RefreshTokenRequestDTO(null, null, _refreshToken));
                 _authToken = resultToken.AccessToken;
                 _refreshToken = resultToken.RefreshToken;
                 tokenLabel.Text = "Token presente";

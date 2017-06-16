@@ -22,6 +22,7 @@ namespace ExampleApplication
         public Form1()
         {
             InitializeComponent();
+            //Auto login only for debug purpose
             LoginClick(null, null);
         }
 
@@ -32,9 +33,10 @@ namespace ExampleApplication
         {
             get
             {
-                return new Configuration(new ApiClient("http://localhost/ARXivarResourceServer/"))
+                //Build a configuration object with the Token provided during login procedure or refresh token procedure
+                return new Configuration(new ApiClient("http://arxnextgr:81/"))
                 {
-                    ApiKey = new Dictionary<string, string>() { { "Authorization", _authToken} },
+                    ApiKey = new Dictionary<string, string>() { { "Authorization", _authToken } },
                     ApiKeyPrefix = new Dictionary<string, string>() { { "Authorization", "Bearer" } }
                 };
             }
@@ -44,13 +46,18 @@ namespace ExampleApplication
         {
             try
             {
-                var authApi = new IO.Swagger.Api.AuthenticationApi("http://localhost/ARXivarResourceServer/");
-                var resultToken = authApi.AuthenticationGetToken(userTxt.Text, passwordTxt.Text);
+                //Inizialize Authentication api (Authentication api not require authentication token)
+                var authApi = new IO.Swagger.Api.AuthenticationApi("http://arxnextgr:81/");
+                //Login to obtain a valid token (and a refresh token)
+                var resultToken = authApi.AuthenticationGetToken(new AuthenticationTokenRequestDTO(userTxt.Text, passwordTxt.Text));
+
                 _authToken = resultToken.AccessToken;
                 _refreshToken = resultToken.RefreshToken;
+
                 tokenLabel.Text = "Token presente";
                 tokenLabel.ForeColor = Color.Green;
                 tokenValue.Text = string.Empty;
+                //Print token information
                 foreach (var propertyInfo in resultToken.GetType().GetProperties())
                 {
                     tokenValue.Text += string.Format("{0}: {1}{2}", propertyInfo.Name, propertyInfo.GetValue(resultToken), Environment.NewLine);
@@ -66,13 +73,16 @@ namespace ExampleApplication
         {
             try
             {
-                var authApi = new IO.Swagger.Api.AuthenticationApi("http://localhost/ARXivarResourceServer/");
-                var resultToken = authApi.AuthenticationRefresh(_refreshToken);
+                //Inizialize Authentication api (Authentication api not require authentication token)
+                var authApi = new IO.Swagger.Api.AuthenticationApi("http://arxnextgr:81/");
+                //Try to obtain a new token with the refresh token provided durin login procedure
+                var resultToken = authApi.AuthenticationRefresh(new RefreshTokenRequestDTO(null, null, _refreshToken));
                 _authToken = resultToken.AccessToken;
                 _refreshToken = resultToken.RefreshToken;
                 tokenLabel.Text = "Token presente";
                 tokenLabel.ForeColor = Color.Green;
                 tokenValue.Text = string.Empty;
+                //Print token information
                 foreach (var propertyInfo in resultToken.GetType().GetProperties())
                 {
                     tokenValue.Text += string.Format("{0}: {1}{2}", propertyInfo.Name, propertyInfo.GetValue(resultToken), Environment.NewLine);
@@ -85,27 +95,40 @@ namespace ExampleApplication
             }
         }
 
+
         private void buttonGetAoo_Click(object sender, EventArgs e)
         {
             try
             {
+                //Inizialize BusinessUnit Api
                 var aooApi = new IO.Swagger.Api.BusinessUnitsApi(Configuration);
+                //Get Aoo list
                 var businessUnits = aooApi.BusinessUnitsGet();
+                //Bind to the grid as IEnumerable<T>
                 aooTable.DataSource = businessUnits;
             }
             catch (Exception exception)
             {
                 errorLabel.Text = exception.Message;
-            }   
+            }
         }
 
         private void buttonGetDocTypes_Click(object sender, EventArgs e)
         {
             try
             {
-                var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
-                var docTypes = docTypesApi.DocumentTypesGet("search", "AbleBS");
-                aooTable.DataSource = docTypes;
+                if (aooTable.SelectedRows != null && aooTable.SelectedRows.Count > 0)
+                {
+                    var aooCode = ((BusinessUnitDTO)aooTable.SelectedRows[0].DataBoundItem).Code;
+                    //Inizialize DocumentTypes Api
+                    var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
+                    //Get DocumentTypes list
+
+                    var docTypes = docTypesApi.DocumentTypesGet("search", aooCode);
+                    //Bind to the grid
+                    aooTable.DataSource = docTypes;
+                }
+
             }
             catch (Exception exception)
             {
@@ -117,10 +140,13 @@ namespace ExampleApplication
         {
             try
             {
+                //Inizialize BusinessUnit & DocumentTypes Api
                 var aooApi = new IO.Swagger.Api.BusinessUnitsApi(Configuration);
                 var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
+                //Call Async method
                 AsyncDocTypes(aooApi, docTypesApi);
-                var x = 2;
+                //Test asyncronous operations
+                MessageBox.Show("Step forward from async call: " + DateTime.Now.ToString("O"));
             }
             catch (Exception exception)
             {
@@ -130,9 +156,18 @@ namespace ExampleApplication
 
         private async Task AsyncDocTypes(IO.Swagger.Api.BusinessUnitsApi aooApi, IO.Swagger.Api.DocumentTypesApi docTypesApi)
         {
-            var aoos = await aooApi.BusinessUnitsGetAsync();
-            var doctypes = await docTypesApi.DocumentTypesGetAsync("search", aoos.First().Code);
-            aooTable.DataSource = doctypes;
+            List<DocumentTypeBaseDTO> doctypes = null;
+            for (int i = 0; i < 100; i++)
+            {
+                var aoos = await aooApi.BusinessUnitsGetAsync(2, "Ricerca", "");
+                doctypes = await docTypesApi.DocumentTypesGetAsync("search", aoos.First().Code);
+            }
+
+            aooTable.Invoke((MethodInvoker)delegate ()
+            {
+                aooTable.DataSource = doctypes;
+                MessageBox.Show("End of async calls: " + DateTime.Now.ToString("O"));
+            });
         }
 
         private void maskGetData(object sender, EventArgs e)
@@ -150,7 +185,7 @@ namespace ExampleApplication
             }
         }
 
-        
+
         private void getMaskByIdHandler(object sender, EventArgs e)
         {
             try
@@ -158,7 +193,7 @@ namespace ExampleApplication
                 var maskApi = new IO.Swagger.Api.MasksApi(Configuration);
                 if (datagridComplex.SelectedRows != null && datagridComplex.SelectedRows.Count > 0)
                 {
-                    var mascheraSelezionata = (MaskDTO) datagridComplex.SelectedRows[0].DataBoundItem;
+                    var mascheraSelezionata = (MaskDTO)datagridComplex.SelectedRows[0].DataBoundItem;
                     var mascheraDettaglio = maskApi.MasksGetById(mascheraSelezionata.Id);
                     MessageBox.Show(string.Format("La maschera {0} contiene {1} dettagli", mascheraDettaglio.MaskName, mascheraDettaglio.MaskDetails.Count));
                 }
@@ -201,6 +236,7 @@ namespace ExampleApplication
                 errorLabel.Text = exception.Message;
             }
         }
+
 
         private void buttonSearch_click(object sender, EventArgs e)
         {
@@ -274,11 +310,13 @@ namespace ExampleApplication
                 errorLabel.Text = exception.Message;
             }
         }
+    
 
-        private void buttonImport_Click(object sender, EventArgs e)
+    private void buttonImport_Click(object sender, EventArgs e)
         {
             var bufferApi = new IO.Swagger.Api.BufferApi(Configuration);
             var profileApi = new IO.Swagger.Api.ProfilesVApi(Configuration);
+            var statesApi = new IO.Swagger.Api.StatesApi(Configuration);
 
             var aooApi = new IO.Swagger.Api.BusinessUnitsApi(Configuration);
             var aoo = aooApi.BusinessUnitsGet();
@@ -295,7 +333,10 @@ namespace ExampleApplication
 
                 var profileDto = profileApi.ProfilesV2Get();
                 var classeGneric = doctypes.FirstOrDefault(i => i.Key.Equals("GENERIC", StringComparison.CurrentCultureIgnoreCase));
+                var status = statesApi.StatesGet();
+                profileDto.Fields.StateField.Value = status.First().Id;
                 profileDto.Fields.DocumentTypeField.Value = classeGneric.Id;
+                profileDto.Fields.OriginField.Value = 0;
                 profileDto.Document = new FileDTO(bufferId);
 
                 var additional = profileApi.ProfilesV2GetAdditionalByClasse(classeGneric.DocumentType, classeGneric.Type2, classeGneric.Type3, "AbleBS");

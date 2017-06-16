@@ -51,11 +51,11 @@
             this.aooTable = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.buttonPredProfById = new System.Windows.Forms.Button();
+            this.buttonPredefinedProfile = new System.Windows.Forms.Button();
+            this.getMaskById = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.datagridComplex = new System.Windows.Forms.DataGridView();
-            this.getMaskById = new System.Windows.Forms.Button();
-            this.buttonPredefinedProfile = new System.Windows.Forms.Button();
-            this.buttonPredProfById = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -188,7 +188,7 @@
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.Size = new System.Drawing.Size(126, 20);
             this.passwordTxt.TabIndex = 3;
-            this.passwordTxt.Text = "123..";
+            this.passwordTxt.Text = "123";
             // 
             // userTxt
             // 
@@ -327,6 +327,36 @@
             this.splitContainer3.SplitterDistance = 175;
             this.splitContainer3.TabIndex = 0;
             // 
+            // buttonPredProfById
+            // 
+            this.buttonPredProfById.Location = new System.Drawing.Point(8, 90);
+            this.buttonPredProfById.Name = "buttonPredProfById";
+            this.buttonPredProfById.Size = new System.Drawing.Size(165, 23);
+            this.buttonPredProfById.TabIndex = 3;
+            this.buttonPredProfById.Text = "get PredProf by Id";
+            this.buttonPredProfById.UseVisualStyleBackColor = true;
+            this.buttonPredProfById.Click += new System.EventHandler(this.buttonPredProfById_Click);
+            // 
+            // buttonPredefinedProfile
+            // 
+            this.buttonPredefinedProfile.Location = new System.Drawing.Point(7, 61);
+            this.buttonPredefinedProfile.Name = "buttonPredefinedProfile";
+            this.buttonPredefinedProfile.Size = new System.Drawing.Size(165, 23);
+            this.buttonPredefinedProfile.TabIndex = 2;
+            this.buttonPredefinedProfile.Text = "get PredefinedProfile";
+            this.buttonPredefinedProfile.UseVisualStyleBackColor = true;
+            this.buttonPredefinedProfile.Click += new System.EventHandler(this.buttonPredefinedProfile_Click);
+            // 
+            // getMaskById
+            // 
+            this.getMaskById.Location = new System.Drawing.Point(7, 32);
+            this.getMaskById.Name = "getMaskById";
+            this.getMaskById.Size = new System.Drawing.Size(166, 23);
+            this.getMaskById.TabIndex = 1;
+            this.getMaskById.Text = "get Mask By Id";
+            this.getMaskById.UseVisualStyleBackColor = true;
+            this.getMaskById.Click += new System.EventHandler(this.getMaskByIdHandler);
+            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(6, 3);
@@ -345,36 +375,6 @@
             this.datagridComplex.Name = "datagridComplex";
             this.datagridComplex.Size = new System.Drawing.Size(894, 502);
             this.datagridComplex.TabIndex = 0;
-            // 
-            // getMaskById
-            // 
-            this.getMaskById.Location = new System.Drawing.Point(7, 32);
-            this.getMaskById.Name = "getMaskById";
-            this.getMaskById.Size = new System.Drawing.Size(166, 23);
-            this.getMaskById.TabIndex = 1;
-            this.getMaskById.Text = "get Mask By Id";
-            this.getMaskById.UseVisualStyleBackColor = true;
-            this.getMaskById.Click += new System.EventHandler(this.getMaskByIdHandler);
-            // 
-            // buttonPredefinedProfile
-            // 
-            this.buttonPredefinedProfile.Location = new System.Drawing.Point(7, 61);
-            this.buttonPredefinedProfile.Name = "buttonPredefinedProfile";
-            this.buttonPredefinedProfile.Size = new System.Drawing.Size(165, 23);
-            this.buttonPredefinedProfile.TabIndex = 2;
-            this.buttonPredefinedProfile.Text = "get PredefinedProfile";
-            this.buttonPredefinedProfile.UseVisualStyleBackColor = true;
-            this.buttonPredefinedProfile.Click += new System.EventHandler(this.buttonPredefinedProfile_Click);
-            // 
-            // buttonPredProfById
-            // 
-            this.buttonPredProfById.Location = new System.Drawing.Point(8, 90);
-            this.buttonPredProfById.Name = "buttonPredProfById";
-            this.buttonPredProfById.Size = new System.Drawing.Size(165, 23);
-            this.buttonPredProfById.TabIndex = 3;
-            this.buttonPredProfById.Text = "get PredProf by Id";
-            this.buttonPredProfById.UseVisualStyleBackColor = true;
-            this.buttonPredProfById.Click += new System.EventHandler(this.buttonPredProfById_Click);
             // 
             // Form1
             // 

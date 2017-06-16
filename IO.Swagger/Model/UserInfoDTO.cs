@@ -274,7 +274,7 @@ namespace IO.Swagger.Model
         /// <param name="Provider">Provider.</param>
         /// <param name="Database">Database.</param>
         /// <param name="IsUnicode">IsUnicode.</param>
-        /// <param name="Avatar">Avatar.</param>
+        /// <param name="HasAvatar">HasAvatar.</param>
         /// <param name="User">User.</param>
         /// <param name="Group">Group.</param>
         /// <param name="Description">Description.</param>
@@ -327,13 +327,13 @@ namespace IO.Swagger.Model
         /// <param name="DisablePswExpired">DisablePswExpired.</param>
         /// <param name="LockOutDateTimeUtc">LockOutDateTimeUtc.</param>
         /// <param name="CompleteName">CompleteName.</param>
-        public UserInfoDTO(string ServerName = null, string Provider = null, string Database = null, bool? IsUnicode = null, string Avatar = null, int? User = null, GroupEnum? Group = null, string Description = null, string Email = null, string BusinessUnit = null, string Password = null, string PasswordNew = null, int? DefaultType = null, int? Type2 = null, int? Type3 = null, string InternalFax = null, DateTime? LastMail = null, CategoryEnum? Category = null, bool? Workflow = null, string DefaultState = null, bool? AddressBook = null, UserStateEnum? UserState = null, string MailServer = null, bool? WebAccess = null, bool? Upload = null, bool? Folders = null, bool? Flow = null, bool? Sign = null, ViewerEnum? Viewer = null, bool? Protocol = null, bool? Models = null, string Domain = null, string OutState = null, string MailBody = null, bool? Notify = null, string MailClient = null, HtmlBodyEnum? HtmlBody = null, bool? RespAos = null, bool? AssAos = null, string CodFis = null, string Pin = null, bool? Guest = null, bool? PasswordChange = null, byte[] Marking = null, int? Type = null, bool? MailOutDefault = null, bool? BarcodeAccess = null, MustChangePasswordEnum? MustChangePassword = null, string Lang = null, int? ProfileDefaultId = null, bool? Ws = null, int? PswFailCount = null, DateTime? PswLastFailDate = null, string PswFailIpCaller = null, bool? DisablePswExpired = null, DateTime? LockOutDateTimeUtc = null, string CompleteName = null)
+        public UserInfoDTO(string ServerName = null, string Provider = null, string Database = null, bool? IsUnicode = null, bool? HasAvatar = null, int? User = null, GroupEnum? Group = null, string Description = null, string Email = null, string BusinessUnit = null, string Password = null, string PasswordNew = null, int? DefaultType = null, int? Type2 = null, int? Type3 = null, string InternalFax = null, DateTime? LastMail = null, CategoryEnum? Category = null, bool? Workflow = null, string DefaultState = null, bool? AddressBook = null, UserStateEnum? UserState = null, string MailServer = null, bool? WebAccess = null, bool? Upload = null, bool? Folders = null, bool? Flow = null, bool? Sign = null, ViewerEnum? Viewer = null, bool? Protocol = null, bool? Models = null, string Domain = null, string OutState = null, string MailBody = null, bool? Notify = null, string MailClient = null, HtmlBodyEnum? HtmlBody = null, bool? RespAos = null, bool? AssAos = null, string CodFis = null, string Pin = null, bool? Guest = null, bool? PasswordChange = null, byte[] Marking = null, int? Type = null, bool? MailOutDefault = null, bool? BarcodeAccess = null, MustChangePasswordEnum? MustChangePassword = null, string Lang = null, int? ProfileDefaultId = null, bool? Ws = null, int? PswFailCount = null, DateTime? PswLastFailDate = null, string PswFailIpCaller = null, bool? DisablePswExpired = null, DateTime? LockOutDateTimeUtc = null, string CompleteName = null)
         {
             this.ServerName = ServerName;
             this.Provider = Provider;
             this.Database = Database;
             this.IsUnicode = IsUnicode;
-            this.Avatar = Avatar;
+            this.HasAvatar = HasAvatar;
             this.User = User;
             this.Group = Group;
             this.Description = Description;
@@ -409,10 +409,10 @@ namespace IO.Swagger.Model
         [DataMember(Name="isUnicode", EmitDefaultValue=false)]
         public bool? IsUnicode { get; set; }
         /// <summary>
-        /// Gets or Sets Avatar
+        /// Gets or Sets HasAvatar
         /// </summary>
-        [DataMember(Name="avatar", EmitDefaultValue=false)]
-        public string Avatar { get; set; }
+        [DataMember(Name="hasAvatar", EmitDefaultValue=false)]
+        public bool? HasAvatar { get; set; }
         /// <summary>
         /// Gets or Sets User
         /// </summary>
@@ -655,7 +655,7 @@ namespace IO.Swagger.Model
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  Database: ").Append(Database).Append("\n");
             sb.Append("  IsUnicode: ").Append(IsUnicode).Append("\n");
-            sb.Append("  Avatar: ").Append(Avatar).Append("\n");
+            sb.Append("  HasAvatar: ").Append(HasAvatar).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Group: ").Append(Group).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -765,9 +765,9 @@ namespace IO.Swagger.Model
                     this.IsUnicode.Equals(other.IsUnicode)
                 ) && 
                 (
-                    this.Avatar == other.Avatar ||
-                    this.Avatar != null &&
-                    this.Avatar.Equals(other.Avatar)
+                    this.HasAvatar == other.HasAvatar ||
+                    this.HasAvatar != null &&
+                    this.HasAvatar.Equals(other.HasAvatar)
                 ) && 
                 (
                     this.User == other.User ||
@@ -1050,8 +1050,8 @@ namespace IO.Swagger.Model
                     hash = hash * 59 + this.Database.GetHashCode();
                 if (this.IsUnicode != null)
                     hash = hash * 59 + this.IsUnicode.GetHashCode();
-                if (this.Avatar != null)
-                    hash = hash * 59 + this.Avatar.GetHashCode();
+                if (this.HasAvatar != null)
+                    hash = hash * 59 + this.HasAvatar.GetHashCode();
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
                 if (this.Group != null)

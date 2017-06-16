@@ -45,11 +45,11 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.buttonGetAooAsync = new System.Windows.Forms.Button();
             this.buttonGetDocTypes = new System.Windows.Forms.Button();
             this.buttonGetAoo = new System.Windows.Forms.Button();
             this.aooTable = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.buttonGetAooAsync = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -176,7 +176,7 @@
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.Size = new System.Drawing.Size(126, 20);
             this.passwordTxt.TabIndex = 3;
-            this.passwordTxt.Text = "123..";
+            this.passwordTxt.Text = "123";
             // 
             // userTxt
             // 
@@ -245,6 +245,16 @@
             this.splitContainer2.SplitterDistance = 201;
             this.splitContainer2.TabIndex = 0;
             // 
+            // buttonGetAooAsync
+            // 
+            this.buttonGetAooAsync.Location = new System.Drawing.Point(6, 71);
+            this.buttonGetAooAsync.Name = "buttonGetAooAsync";
+            this.buttonGetAooAsync.Size = new System.Drawing.Size(192, 23);
+            this.buttonGetAooAsync.TabIndex = 2;
+            this.buttonGetAooAsync.Text = "get AOO Async";
+            this.buttonGetAooAsync.UseVisualStyleBackColor = true;
+            this.buttonGetAooAsync.Click += new System.EventHandler(this.buttonGetAooAsync_Click);
+            // 
             // buttonGetDocTypes
             // 
             this.buttonGetDocTypes.Location = new System.Drawing.Point(6, 42);
@@ -283,16 +293,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "DocumentTypes";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // buttonGetAooAsync
-            // 
-            this.buttonGetAooAsync.Location = new System.Drawing.Point(6, 71);
-            this.buttonGetAooAsync.Name = "buttonGetAooAsync";
-            this.buttonGetAooAsync.Size = new System.Drawing.Size(192, 23);
-            this.buttonGetAooAsync.TabIndex = 2;
-            this.buttonGetAooAsync.Text = "get AOO Async";
-            this.buttonGetAooAsync.UseVisualStyleBackColor = true;
-            this.buttonGetAooAsync.Click += new System.EventHandler(this.buttonGetAooAsync_Click);
             // 
             // Form1
             // 

@@ -43,8 +43,8 @@ namespace IO.Swagger.Model
         /// Initializes a new instance of the <see cref="FolderPermissionsDTO" /> class.
         /// </summary>
         /// <param name="Spread">Spread.</param>
-        /// <param name="UsersPermissions">UsersPermissions.</param>
-        /// <param name="PermissionsProperties">PermissionsProperties.</param>
+        /// <param name="UsersPermissions">List of user permissions.</param>
+        /// <param name="PermissionsProperties">Possibile permission for the object.</param>
         public FolderPermissionsDTO(bool? Spread = null, List<UserPermissionDTO> UsersPermissions = null, List<PermissionPropertiesDTO> PermissionsProperties = null)
         {
             this.Spread = Spread;
@@ -58,13 +58,15 @@ namespace IO.Swagger.Model
         [DataMember(Name="spread", EmitDefaultValue=false)]
         public bool? Spread { get; set; }
         /// <summary>
-        /// Gets or Sets UsersPermissions
+        /// List of user permissions
         /// </summary>
+        /// <value>List of user permissions</value>
         [DataMember(Name="usersPermissions", EmitDefaultValue=false)]
         public List<UserPermissionDTO> UsersPermissions { get; set; }
         /// <summary>
-        /// Gets or Sets PermissionsProperties
+        /// Possibile permission for the object
         /// </summary>
+        /// <value>Possibile permission for the object</value>
         [DataMember(Name="permissionsProperties", EmitDefaultValue=false)]
         public List<PermissionPropertiesDTO> PermissionsProperties { get; set; }
         /// <summary>

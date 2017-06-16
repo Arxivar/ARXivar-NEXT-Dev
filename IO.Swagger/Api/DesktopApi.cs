@@ -37,7 +37,7 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// This call return the desktop items for the user (old ARXivar desktop functionality)
         /// </summary>
         /// <remarks>
         /// 
@@ -47,7 +47,7 @@ namespace IO.Swagger.Api
         DesktopDTO DesktopGet ();
 
         /// <summary>
-        /// 
+        /// This call return the desktop items for the user (old ARXivar desktop functionality)
         /// </summary>
         /// <remarks>
         /// 
@@ -58,7 +58,7 @@ namespace IO.Swagger.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// This call return the desktop items for the user (old ARXivar desktop functionality)
         /// </summary>
         /// <remarks>
         /// 
@@ -68,7 +68,7 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<DesktopDTO> DesktopGetAsync ();
 
         /// <summary>
-        /// 
+        /// This call return the desktop items for the user (old ARXivar desktop functionality)
         /// </summary>
         /// <remarks>
         /// 
@@ -189,7 +189,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the desktop items for the user (old ARXivar desktop functionality) 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>DesktopDTO</returns>
@@ -200,7 +200,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the desktop items for the user (old ARXivar desktop functionality) 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of DesktopDTO</returns>
@@ -262,7 +262,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the desktop items for the user (old ARXivar desktop functionality) 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of DesktopDTO</returns>
@@ -274,7 +274,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the desktop items for the user (old ARXivar desktop functionality) 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (DesktopDTO)</returns>

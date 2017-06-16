@@ -42,8 +42,8 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RelationExploredDTO" /> class.
         /// </summary>
-        /// <param name="RootNode">RootNode.</param>
-        /// <param name="ComposedValues">ComposedValues.</param>
+        /// <param name="RootNode">Root node.</param>
+        /// <param name="ComposedValues">Entire datasource of contained profiles.</param>
         public RelationExploredDTO(RelationNodeDTO RootNode = null, List<RowSearchResult> ComposedValues = null)
         {
             this.RootNode = RootNode;
@@ -51,13 +51,15 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets RootNode
+        /// Root node
         /// </summary>
+        /// <value>Root node</value>
         [DataMember(Name="rootNode", EmitDefaultValue=false)]
         public RelationNodeDTO RootNode { get; set; }
         /// <summary>
-        /// Gets or Sets ComposedValues
+        /// Entire datasource of contained profiles
         /// </summary>
+        /// <value>Entire datasource of contained profiles</value>
         [DataMember(Name="composedValues", EmitDefaultValue=false)]
         public List<RowSearchResult> ComposedValues { get; set; }
         /// <summary>

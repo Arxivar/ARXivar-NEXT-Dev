@@ -37,7 +37,7 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// This call returns all shippings stored in ARXivar
         /// </summary>
         /// <remarks>
         /// 
@@ -47,7 +47,7 @@ namespace IO.Swagger.Api
         List<ShippingDTO> ShippingGetShippings ();
 
         /// <summary>
-        /// 
+        /// This call returns all shippings stored in ARXivar
         /// </summary>
         /// <remarks>
         /// 
@@ -58,7 +58,7 @@ namespace IO.Swagger.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// This call returns all shippings stored in ARXivar
         /// </summary>
         /// <remarks>
         /// 
@@ -68,7 +68,7 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<List<ShippingDTO>> ShippingGetShippingsAsync ();
 
         /// <summary>
-        /// 
+        /// This call returns all shippings stored in ARXivar
         /// </summary>
         /// <remarks>
         /// 
@@ -189,7 +189,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all shippings stored in ARXivar 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;ShippingDTO&gt;</returns>
@@ -200,14 +200,14 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all shippings stored in ARXivar 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;ShippingDTO&gt;</returns>
         public ApiResponse< List<ShippingDTO> > ShippingGetShippingsWithHttpInfo ()
         {
 
-            var localVarPath = "/api/shippings";
+            var localVarPath = "/api/Shippings";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -262,7 +262,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all shippings stored in ARXivar 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;ShippingDTO&gt;</returns>
@@ -274,14 +274,14 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all shippings stored in ARXivar 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;ShippingDTO&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<ShippingDTO>>> ShippingGetShippingsAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/shippings";
+            var localVarPath = "/api/Shippings";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

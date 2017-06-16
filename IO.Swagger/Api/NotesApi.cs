@@ -37,353 +37,353 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// Change value for the aos flag of a note
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
-        /// <param name="aosFlag"></param>
+        /// <param name="noteId">Id of the note</param>
+        /// <param name="aosFlag">Aos Flag value</param>
         /// <returns></returns>
         void NotesChangeAosFlag (int? noteId, bool? aosFlag);
 
         /// <summary>
-        /// 
+        /// Change value for the aos flag of a note
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
-        /// <param name="aosFlag"></param>
+        /// <param name="noteId">Id of the note</param>
+        /// <param name="aosFlag">Aos Flag value</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> NotesChangeAosFlagWithHttpInfo (int? noteId, bool? aosFlag);
         /// <summary>
-        /// 
+        /// This call delete a note by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
+        /// <param name="noteId">Id of the note</param>
         /// <returns></returns>
         void NotesDeleteById (int? noteId);
 
         /// <summary>
-        /// 
+        /// This call delete a note by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
+        /// <param name="noteId">Id of the note</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> NotesDeleteByIdWithHttpInfo (int? noteId);
         /// <summary>
-        /// 
+        /// This call retruns all the notes for a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>List&lt;NoteDTO&gt;</returns>
         List<NoteDTO> NotesGetByDocnumber (int? docnumber);
 
         /// <summary>
-        /// 
+        /// This call retruns all the notes for a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>ApiResponse of List&lt;NoteDTO&gt;</returns>
         ApiResponse<List<NoteDTO>> NotesGetByDocnumberWithHttpInfo (int? docnumber);
         /// <summary>
-        /// 
+        /// This call returns a note by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Note id</param>
         /// <returns>NoteDTO</returns>
         NoteDTO NotesGetById (int? id);
 
         /// <summary>
-        /// 
+        /// This call returns a note by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Note id</param>
         /// <returns>ApiResponse of NoteDTO</returns>
         ApiResponse<NoteDTO> NotesGetByIdWithHttpInfo (int? id);
         /// <summary>
-        /// 
+        /// This call returns the permissions for a note
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
+        /// <param name="noteId">Id of the note</param>
         /// <returns>PermissionsDTO</returns>
         PermissionsDTO NotesGetPermissions (int? noteId);
 
         /// <summary>
-        /// 
+        /// This call returns the permissions for a note
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
+        /// <param name="noteId">Id of the note</param>
         /// <returns>ApiResponse of PermissionsDTO</returns>
         ApiResponse<PermissionsDTO> NotesGetPermissionsWithHttpInfo (int? noteId);
         /// <summary>
-        /// 
+        /// This call add new note
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="note"></param>
+        /// <param name="note">Note dto to add</param>
         /// <returns>NoteDTO</returns>
         NoteDTO NotesNewNote (NoteDTO note);
 
         /// <summary>
-        /// 
+        /// This call add new note
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="note"></param>
+        /// <param name="note">Note dto to add</param>
         /// <returns>ApiResponse of NoteDTO</returns>
         ApiResponse<NoteDTO> NotesNewNoteWithHttpInfo (NoteDTO note);
         /// <summary>
-        /// 
+        /// This call update a note by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="note"></param>
+        /// <param name="id">Id of the note</param>
+        /// <param name="note">Note to update</param>
         /// <returns>NoteDTO</returns>
         NoteDTO NotesUpdateNote (int? id, NoteDTO note);
 
         /// <summary>
-        /// 
+        /// This call update a note by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="note"></param>
+        /// <param name="id">Id of the note</param>
+        /// <param name="note">Note to update</param>
         /// <returns>ApiResponse of NoteDTO</returns>
         ApiResponse<NoteDTO> NotesUpdateNoteWithHttpInfo (int? id, NoteDTO note);
         /// <summary>
-        /// 
+        /// This call update the permissions for a note
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="noteId">Id of the note</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns></returns>
         void NotesWritePermissions (int? noteId, PermissionsDTO permissions);
 
         /// <summary>
-        /// 
+        /// This call update the permissions for a note
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="noteId">Id of the note</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> NotesWritePermissionsWithHttpInfo (int? noteId, PermissionsDTO permissions);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// Change value for the aos flag of a note
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
-        /// <param name="aosFlag"></param>
+        /// <param name="noteId">Id of the note</param>
+        /// <param name="aosFlag">Aos Flag value</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task NotesChangeAosFlagAsync (int? noteId, bool? aosFlag);
 
         /// <summary>
-        /// 
+        /// Change value for the aos flag of a note
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
-        /// <param name="aosFlag"></param>
+        /// <param name="noteId">Id of the note</param>
+        /// <param name="aosFlag">Aos Flag value</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> NotesChangeAosFlagAsyncWithHttpInfo (int? noteId, bool? aosFlag);
         /// <summary>
-        /// 
+        /// This call delete a note by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
+        /// <param name="noteId">Id of the note</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task NotesDeleteByIdAsync (int? noteId);
 
         /// <summary>
-        /// 
+        /// This call delete a note by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
+        /// <param name="noteId">Id of the note</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> NotesDeleteByIdAsyncWithHttpInfo (int? noteId);
         /// <summary>
-        /// 
+        /// This call retruns all the notes for a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of List&lt;NoteDTO&gt;</returns>
         System.Threading.Tasks.Task<List<NoteDTO>> NotesGetByDocnumberAsync (int? docnumber);
 
         /// <summary>
-        /// 
+        /// This call retruns all the notes for a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of ApiResponse (List&lt;NoteDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<NoteDTO>>> NotesGetByDocnumberAsyncWithHttpInfo (int? docnumber);
         /// <summary>
-        /// 
+        /// This call returns a note by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Note id</param>
         /// <returns>Task of NoteDTO</returns>
         System.Threading.Tasks.Task<NoteDTO> NotesGetByIdAsync (int? id);
 
         /// <summary>
-        /// 
+        /// This call returns a note by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Note id</param>
         /// <returns>Task of ApiResponse (NoteDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<NoteDTO>> NotesGetByIdAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// 
+        /// This call returns the permissions for a note
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
+        /// <param name="noteId">Id of the note</param>
         /// <returns>Task of PermissionsDTO</returns>
         System.Threading.Tasks.Task<PermissionsDTO> NotesGetPermissionsAsync (int? noteId);
 
         /// <summary>
-        /// 
+        /// This call returns the permissions for a note
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
+        /// <param name="noteId">Id of the note</param>
         /// <returns>Task of ApiResponse (PermissionsDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<PermissionsDTO>> NotesGetPermissionsAsyncWithHttpInfo (int? noteId);
         /// <summary>
-        /// 
+        /// This call add new note
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="note"></param>
+        /// <param name="note">Note dto to add</param>
         /// <returns>Task of NoteDTO</returns>
         System.Threading.Tasks.Task<NoteDTO> NotesNewNoteAsync (NoteDTO note);
 
         /// <summary>
-        /// 
+        /// This call add new note
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="note"></param>
+        /// <param name="note">Note dto to add</param>
         /// <returns>Task of ApiResponse (NoteDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<NoteDTO>> NotesNewNoteAsyncWithHttpInfo (NoteDTO note);
         /// <summary>
-        /// 
+        /// This call update a note by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="note"></param>
+        /// <param name="id">Id of the note</param>
+        /// <param name="note">Note to update</param>
         /// <returns>Task of NoteDTO</returns>
         System.Threading.Tasks.Task<NoteDTO> NotesUpdateNoteAsync (int? id, NoteDTO note);
 
         /// <summary>
-        /// 
+        /// This call update a note by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="note"></param>
+        /// <param name="id">Id of the note</param>
+        /// <param name="note">Note to update</param>
         /// <returns>Task of ApiResponse (NoteDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<NoteDTO>> NotesUpdateNoteAsyncWithHttpInfo (int? id, NoteDTO note);
         /// <summary>
-        /// 
+        /// This call update the permissions for a note
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="noteId">Id of the note</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task NotesWritePermissionsAsync (int? noteId, PermissionsDTO permissions);
 
         /// <summary>
-        /// 
+        /// This call update the permissions for a note
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="noteId">Id of the note</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> NotesWritePermissionsAsyncWithHttpInfo (int? noteId, PermissionsDTO permissions);
         #endregion Asynchronous Operations
@@ -499,11 +499,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// Change value for the aos flag of a note 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
-        /// <param name="aosFlag"></param>
+        /// <param name="noteId">Id of the note</param>
+        /// <param name="aosFlag">Aos Flag value</param>
         /// <returns></returns>
         public void NotesChangeAosFlag (int? noteId, bool? aosFlag)
         {
@@ -511,11 +511,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// Change value for the aos flag of a note 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
-        /// <param name="aosFlag"></param>
+        /// <param name="noteId">Id of the note</param>
+        /// <param name="aosFlag">Aos Flag value</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> NotesChangeAosFlagWithHttpInfo (int? noteId, bool? aosFlag)
         {
@@ -526,7 +526,7 @@ namespace IO.Swagger.Api
             if (aosFlag == null)
                 throw new ApiException(400, "Missing required parameter 'aosFlag' when calling NotesApi->NotesChangeAosFlag");
 
-            var localVarPath = "/api/notes/aosflag/{noteId}/{aosFlag}";
+            var localVarPath = "/api/Notes/aosflag/{noteId}/{aosFlag}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -579,11 +579,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// Change value for the aos flag of a note 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
-        /// <param name="aosFlag"></param>
+        /// <param name="noteId">Id of the note</param>
+        /// <param name="aosFlag">Aos Flag value</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task NotesChangeAosFlagAsync (int? noteId, bool? aosFlag)
         {
@@ -592,11 +592,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// Change value for the aos flag of a note 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
-        /// <param name="aosFlag"></param>
+        /// <param name="noteId">Id of the note</param>
+        /// <param name="aosFlag">Aos Flag value</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> NotesChangeAosFlagAsyncWithHttpInfo (int? noteId, bool? aosFlag)
         {
@@ -607,7 +607,7 @@ namespace IO.Swagger.Api
             if (aosFlag == null)
                 throw new ApiException(400, "Missing required parameter 'aosFlag' when calling NotesApi->NotesChangeAosFlag");
 
-            var localVarPath = "/api/notes/aosflag/{noteId}/{aosFlag}";
+            var localVarPath = "/api/Notes/aosflag/{noteId}/{aosFlag}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -659,10 +659,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call delete a note by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
+        /// <param name="noteId">Id of the note</param>
         /// <returns></returns>
         public void NotesDeleteById (int? noteId)
         {
@@ -670,10 +670,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call delete a note by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
+        /// <param name="noteId">Id of the note</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> NotesDeleteByIdWithHttpInfo (int? noteId)
         {
@@ -681,7 +681,7 @@ namespace IO.Swagger.Api
             if (noteId == null)
                 throw new ApiException(400, "Missing required parameter 'noteId' when calling NotesApi->NotesDeleteById");
 
-            var localVarPath = "/api/notes/{noteId}";
+            var localVarPath = "/api/Notes/{noteId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -733,10 +733,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call delete a note by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
+        /// <param name="noteId">Id of the note</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task NotesDeleteByIdAsync (int? noteId)
         {
@@ -745,10 +745,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call delete a note by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
+        /// <param name="noteId">Id of the note</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> NotesDeleteByIdAsyncWithHttpInfo (int? noteId)
         {
@@ -756,7 +756,7 @@ namespace IO.Swagger.Api
             if (noteId == null)
                 throw new ApiException(400, "Missing required parameter 'noteId' when calling NotesApi->NotesDeleteById");
 
-            var localVarPath = "/api/notes/{noteId}";
+            var localVarPath = "/api/Notes/{noteId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -807,10 +807,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call retruns all the notes for a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>List&lt;NoteDTO&gt;</returns>
         public List<NoteDTO> NotesGetByDocnumber (int? docnumber)
         {
@@ -819,10 +819,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call retruns all the notes for a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>ApiResponse of List&lt;NoteDTO&gt;</returns>
         public ApiResponse< List<NoteDTO> > NotesGetByDocnumberWithHttpInfo (int? docnumber)
         {
@@ -830,7 +830,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling NotesApi->NotesGetByDocnumber");
 
-            var localVarPath = "/api/notes/{docnumber}";
+            var localVarPath = "/api/Notes/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -886,10 +886,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call retruns all the notes for a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of List&lt;NoteDTO&gt;</returns>
         public async System.Threading.Tasks.Task<List<NoteDTO>> NotesGetByDocnumberAsync (int? docnumber)
         {
@@ -899,10 +899,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call retruns all the notes for a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of ApiResponse (List&lt;NoteDTO&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<NoteDTO>>> NotesGetByDocnumberAsyncWithHttpInfo (int? docnumber)
         {
@@ -910,7 +910,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling NotesApi->NotesGetByDocnumber");
 
-            var localVarPath = "/api/notes/{docnumber}";
+            var localVarPath = "/api/Notes/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -965,10 +965,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a note by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Note id</param>
         /// <returns>NoteDTO</returns>
         public NoteDTO NotesGetById (int? id)
         {
@@ -977,10 +977,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a note by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Note id</param>
         /// <returns>ApiResponse of NoteDTO</returns>
         public ApiResponse< NoteDTO > NotesGetByIdWithHttpInfo (int? id)
         {
@@ -988,7 +988,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling NotesApi->NotesGetById");
 
-            var localVarPath = "/api/notes/byid/{id}";
+            var localVarPath = "/api/Notes/byid/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1044,10 +1044,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a note by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Note id</param>
         /// <returns>Task of NoteDTO</returns>
         public async System.Threading.Tasks.Task<NoteDTO> NotesGetByIdAsync (int? id)
         {
@@ -1057,10 +1057,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a note by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Note id</param>
         /// <returns>Task of ApiResponse (NoteDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<NoteDTO>> NotesGetByIdAsyncWithHttpInfo (int? id)
         {
@@ -1068,7 +1068,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling NotesApi->NotesGetById");
 
-            var localVarPath = "/api/notes/byid/{id}";
+            var localVarPath = "/api/Notes/byid/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1123,10 +1123,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the permissions for a note 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
+        /// <param name="noteId">Id of the note</param>
         /// <returns>PermissionsDTO</returns>
         public PermissionsDTO NotesGetPermissions (int? noteId)
         {
@@ -1135,10 +1135,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the permissions for a note 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
+        /// <param name="noteId">Id of the note</param>
         /// <returns>ApiResponse of PermissionsDTO</returns>
         public ApiResponse< PermissionsDTO > NotesGetPermissionsWithHttpInfo (int? noteId)
         {
@@ -1146,7 +1146,7 @@ namespace IO.Swagger.Api
             if (noteId == null)
                 throw new ApiException(400, "Missing required parameter 'noteId' when calling NotesApi->NotesGetPermissions");
 
-            var localVarPath = "/api/notes/permissions/{noteId}";
+            var localVarPath = "/api/Notes/permissions/{noteId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1202,10 +1202,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the permissions for a note 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
+        /// <param name="noteId">Id of the note</param>
         /// <returns>Task of PermissionsDTO</returns>
         public async System.Threading.Tasks.Task<PermissionsDTO> NotesGetPermissionsAsync (int? noteId)
         {
@@ -1215,10 +1215,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the permissions for a note 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
+        /// <param name="noteId">Id of the note</param>
         /// <returns>Task of ApiResponse (PermissionsDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PermissionsDTO>> NotesGetPermissionsAsyncWithHttpInfo (int? noteId)
         {
@@ -1226,7 +1226,7 @@ namespace IO.Swagger.Api
             if (noteId == null)
                 throw new ApiException(400, "Missing required parameter 'noteId' when calling NotesApi->NotesGetPermissions");
 
-            var localVarPath = "/api/notes/permissions/{noteId}";
+            var localVarPath = "/api/Notes/permissions/{noteId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1281,10 +1281,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add new note 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="note"></param>
+        /// <param name="note">Note dto to add</param>
         /// <returns>NoteDTO</returns>
         public NoteDTO NotesNewNote (NoteDTO note)
         {
@@ -1293,10 +1293,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add new note 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="note"></param>
+        /// <param name="note">Note dto to add</param>
         /// <returns>ApiResponse of NoteDTO</returns>
         public ApiResponse< NoteDTO > NotesNewNoteWithHttpInfo (NoteDTO note)
         {
@@ -1304,7 +1304,7 @@ namespace IO.Swagger.Api
             if (note == null)
                 throw new ApiException(400, "Missing required parameter 'note' when calling NotesApi->NotesNewNote");
 
-            var localVarPath = "/api/notes";
+            var localVarPath = "/api/Notes";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1372,10 +1372,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add new note 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="note"></param>
+        /// <param name="note">Note dto to add</param>
         /// <returns>Task of NoteDTO</returns>
         public async System.Threading.Tasks.Task<NoteDTO> NotesNewNoteAsync (NoteDTO note)
         {
@@ -1385,10 +1385,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add new note 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="note"></param>
+        /// <param name="note">Note dto to add</param>
         /// <returns>Task of ApiResponse (NoteDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<NoteDTO>> NotesNewNoteAsyncWithHttpInfo (NoteDTO note)
         {
@@ -1396,7 +1396,7 @@ namespace IO.Swagger.Api
             if (note == null)
                 throw new ApiException(400, "Missing required parameter 'note' when calling NotesApi->NotesNewNote");
 
-            var localVarPath = "/api/notes";
+            var localVarPath = "/api/Notes";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1463,11 +1463,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update a note by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="note"></param>
+        /// <param name="id">Id of the note</param>
+        /// <param name="note">Note to update</param>
         /// <returns>NoteDTO</returns>
         public NoteDTO NotesUpdateNote (int? id, NoteDTO note)
         {
@@ -1476,11 +1476,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update a note by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="note"></param>
+        /// <param name="id">Id of the note</param>
+        /// <param name="note">Note to update</param>
         /// <returns>ApiResponse of NoteDTO</returns>
         public ApiResponse< NoteDTO > NotesUpdateNoteWithHttpInfo (int? id, NoteDTO note)
         {
@@ -1491,7 +1491,7 @@ namespace IO.Swagger.Api
             if (note == null)
                 throw new ApiException(400, "Missing required parameter 'note' when calling NotesApi->NotesUpdateNote");
 
-            var localVarPath = "/api/notes/{id}";
+            var localVarPath = "/api/Notes/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1560,11 +1560,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update a note by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="note"></param>
+        /// <param name="id">Id of the note</param>
+        /// <param name="note">Note to update</param>
         /// <returns>Task of NoteDTO</returns>
         public async System.Threading.Tasks.Task<NoteDTO> NotesUpdateNoteAsync (int? id, NoteDTO note)
         {
@@ -1574,11 +1574,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update a note by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="note"></param>
+        /// <param name="id">Id of the note</param>
+        /// <param name="note">Note to update</param>
         /// <returns>Task of ApiResponse (NoteDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<NoteDTO>> NotesUpdateNoteAsyncWithHttpInfo (int? id, NoteDTO note)
         {
@@ -1589,7 +1589,7 @@ namespace IO.Swagger.Api
             if (note == null)
                 throw new ApiException(400, "Missing required parameter 'note' when calling NotesApi->NotesUpdateNote");
 
-            var localVarPath = "/api/notes/{id}";
+            var localVarPath = "/api/Notes/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1657,11 +1657,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update the permissions for a note 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="noteId">Id of the note</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns></returns>
         public void NotesWritePermissions (int? noteId, PermissionsDTO permissions)
         {
@@ -1669,11 +1669,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update the permissions for a note 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="noteId">Id of the note</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> NotesWritePermissionsWithHttpInfo (int? noteId, PermissionsDTO permissions)
         {
@@ -1684,7 +1684,7 @@ namespace IO.Swagger.Api
             if (permissions == null)
                 throw new ApiException(400, "Missing required parameter 'permissions' when calling NotesApi->NotesWritePermissions");
 
-            var localVarPath = "/api/notes/permissions/{noteId}";
+            var localVarPath = "/api/Notes/permissions/{noteId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1749,11 +1749,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update the permissions for a note 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="noteId">Id of the note</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task NotesWritePermissionsAsync (int? noteId, PermissionsDTO permissions)
         {
@@ -1762,11 +1762,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update the permissions for a note 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="noteId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="noteId">Id of the note</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> NotesWritePermissionsAsyncWithHttpInfo (int? noteId, PermissionsDTO permissions)
         {
@@ -1777,7 +1777,7 @@ namespace IO.Swagger.Api
             if (permissions == null)
                 throw new ApiException(400, "Missing required parameter 'permissions' when calling NotesApi->NotesWritePermissions");
 
-            var localVarPath = "/api/notes/permissions/{noteId}";
+            var localVarPath = "/api/Notes/permissions/{noteId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

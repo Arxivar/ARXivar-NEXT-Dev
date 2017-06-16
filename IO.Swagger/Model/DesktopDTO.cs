@@ -42,12 +42,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DesktopDTO" /> class.
         /// </summary>
-        /// <param name="Masks">Masks.</param>
-        /// <param name="QuickSearches">QuickSearches.</param>
-        /// <param name="Profiles">Profiles.</param>
-        /// <param name="Views">Views.</param>
-        /// <param name="Models">Models.</param>
-        /// <param name="Folders">Folders.</param>
+        /// <param name="Masks">List of Masks in desktop.</param>
+        /// <param name="QuickSearches">List of quickSearch in desktop.</param>
+        /// <param name="Profiles">List of profile in desktop.</param>
+        /// <param name="Views">List of view in desktop.</param>
+        /// <param name="Models">List of models in desktop.</param>
+        /// <param name="Folders">List of folders in desktop.</param>
         public DesktopDTO(List<MaskDTO> Masks = null, List<FindDTO> QuickSearches = null, List<ProfileForDesktopDTO> Profiles = null, List<ViewDTO> Views = null, List<ModelDTO> Models = null, List<FolderDTO> Folders = null)
         {
             this.Masks = Masks;
@@ -59,33 +59,39 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets Masks
+        /// List of Masks in desktop
         /// </summary>
+        /// <value>List of Masks in desktop</value>
         [DataMember(Name="masks", EmitDefaultValue=false)]
         public List<MaskDTO> Masks { get; set; }
         /// <summary>
-        /// Gets or Sets QuickSearches
+        /// List of quickSearch in desktop
         /// </summary>
+        /// <value>List of quickSearch in desktop</value>
         [DataMember(Name="quickSearches", EmitDefaultValue=false)]
         public List<FindDTO> QuickSearches { get; set; }
         /// <summary>
-        /// Gets or Sets Profiles
+        /// List of profile in desktop
         /// </summary>
+        /// <value>List of profile in desktop</value>
         [DataMember(Name="profiles", EmitDefaultValue=false)]
         public List<ProfileForDesktopDTO> Profiles { get; set; }
         /// <summary>
-        /// Gets or Sets Views
+        /// List of view in desktop
         /// </summary>
+        /// <value>List of view in desktop</value>
         [DataMember(Name="views", EmitDefaultValue=false)]
         public List<ViewDTO> Views { get; set; }
         /// <summary>
-        /// Gets or Sets Models
+        /// List of models in desktop
         /// </summary>
+        /// <value>List of models in desktop</value>
         [DataMember(Name="models", EmitDefaultValue=false)]
         public List<ModelDTO> Models { get; set; }
         /// <summary>
-        /// Gets or Sets Folders
+        /// List of folders in desktop
         /// </summary>
+        /// <value>List of folders in desktop</value>
         [DataMember(Name="folders", EmitDefaultValue=false)]
         public List<FolderDTO> Folders { get; set; }
         /// <summary>

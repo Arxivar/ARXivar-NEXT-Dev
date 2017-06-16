@@ -42,9 +42,9 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ShareObjectDTO" /> class.
         /// </summary>
-        /// <param name="Option">Option.</param>
-        /// <param name="ObjectType">ObjectType.</param>
-        /// <param name="ObjectId">ObjectId.</param>
+        /// <param name="Option">Share option.</param>
+        /// <param name="ObjectType">Object type.</param>
+        /// <param name="ObjectId">Object unique identifier.</param>
         public ShareObjectDTO(ShareOptionOptionDTO Option = null, int? ObjectType = null, string ObjectId = null)
         {
             this.Option = Option;
@@ -53,18 +53,21 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets Option
+        /// Share option
         /// </summary>
+        /// <value>Share option</value>
         [DataMember(Name="option", EmitDefaultValue=false)]
         public ShareOptionOptionDTO Option { get; set; }
         /// <summary>
-        /// Gets or Sets ObjectType
+        /// Object type
         /// </summary>
+        /// <value>Object type</value>
         [DataMember(Name="objectType", EmitDefaultValue=false)]
         public int? ObjectType { get; set; }
         /// <summary>
-        /// Gets or Sets ObjectId
+        /// Object unique identifier
         /// </summary>
+        /// <value>Object unique identifier</value>
         [DataMember(Name="objectId", EmitDefaultValue=false)]
         public string ObjectId { get; set; }
         /// <summary>

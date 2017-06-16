@@ -37,30 +37,30 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// This call update &#39;show field&#39; in view execution
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="showFields"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="showFields">Value for the flag</param>
         /// <returns></returns>
         void ViewsBuilderChangeShowFields (string viewId, bool? showFields);
 
         /// <summary>
-        /// 
+        /// This call update &#39;show field&#39; in view execution
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="showFields"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="showFields">Value for the flag</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ViewsBuilderChangeShowFieldsWithHttpInfo (string viewId, bool? showFields);
         /// <summary>
-        /// 
+        /// this call update a view
         /// </summary>
         /// <remarks>
         /// 
@@ -71,7 +71,7 @@ namespace IO.Swagger.Api
         ViewDTO ViewsBuilderEditView (ViewEditDTO viewedit = null);
 
         /// <summary>
-        /// 
+        /// this call update a view
         /// </summary>
         /// <remarks>
         /// 
@@ -81,7 +81,7 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of ViewDTO</returns>
         ApiResponse<ViewDTO> ViewsBuilderEditViewWithHttpInfo (ViewEditDTO viewedit = null);
         /// <summary>
-        /// 
+        /// this call update a view
         /// </summary>
         /// <remarks>
         /// 
@@ -92,7 +92,7 @@ namespace IO.Swagger.Api
         ViewDTO ViewsBuilderEditView_0 (ViewEditDTO viewedit = null);
 
         /// <summary>
-        /// 
+        /// this call update a view
         /// </summary>
         /// <remarks>
         /// 
@@ -102,145 +102,145 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of ViewDTO</returns>
         ApiResponse<ViewDTO> ViewsBuilderEditView_0WithHttpInfo (ViewEditDTO viewedit = null);
         /// <summary>
-        /// 
+        /// This call returns a new search dto by a document type system id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
+        /// <param name="documentType">Document type system id</param>
         /// <returns>SearchDTO</returns>
         SearchDTO ViewsBuilderGetSearch (int? documentType);
 
         /// <summary>
-        /// 
+        /// This call returns a new search dto by a document type system id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
+        /// <param name="documentType">Document type system id</param>
         /// <returns>ApiResponse of SearchDTO</returns>
         ApiResponse<SearchDTO> ViewsBuilderGetSearchWithHttpInfo (int? documentType);
         /// <summary>
-        /// 
+        /// This call returns a new search dto by a document ids
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type 1)</param>
+        /// <param name="tipo2">Document type type 2</param>
+        /// <param name="tipo3">Document type type 3</param>
         /// <returns>SearchDTO</returns>
         SearchDTO ViewsBuilderGetSearch_0 (int? documentType, int? tipo2, int? tipo3);
 
         /// <summary>
-        /// 
+        /// This call returns a new search dto by a document ids
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type 1)</param>
+        /// <param name="tipo2">Document type type 2</param>
+        /// <param name="tipo3">Document type type 3</param>
         /// <returns>ApiResponse of SearchDTO</returns>
         ApiResponse<SearchDTO> ViewsBuilderGetSearch_0WithHttpInfo (int? documentType, int? tipo2, int? tipo3);
         /// <summary>
-        /// 
+        /// This call returns a new select dto by a document system id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
+        /// <param name="documentType">Document type system id</param>
         /// <returns>SelectDTO</returns>
         SelectDTO ViewsBuilderGetSelect (int? documentType);
 
         /// <summary>
-        /// 
+        /// This call returns a new select dto by a document system id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
+        /// <param name="documentType">Document type system id</param>
         /// <returns>ApiResponse of SelectDTO</returns>
         ApiResponse<SelectDTO> ViewsBuilderGetSelectWithHttpInfo (int? documentType);
         /// <summary>
-        /// 
+        /// This call returns a new select dto by a document ids
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type 1)</param>
+        /// <param name="tipo2">Document type type 2</param>
+        /// <param name="tipo3">Document type type 3</param>
         /// <returns>SelectDTO</returns>
         SelectDTO ViewsBuilderGetSelect_0 (int? documentType, int? tipo2, int? tipo3);
 
         /// <summary>
-        /// 
+        /// This call returns a new select dto by a document ids
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type 1)</param>
+        /// <param name="tipo2">Document type type 2</param>
+        /// <param name="tipo3">Document type type 3</param>
         /// <returns>ApiResponse of SelectDTO</returns>
         ApiResponse<SelectDTO> ViewsBuilderGetSelect_0WithHttpInfo (int? documentType, int? tipo2, int? tipo3);
         /// <summary>
-        /// 
+        /// This call returns a view for edit purpose
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
+        /// <param name="viewId">Id of the view</param>
         /// <returns>ViewEditDTO</returns>
         ViewEditDTO ViewsBuilderGetViewForEdit (string viewId);
 
         /// <summary>
-        /// 
+        /// This call returns a view for edit purpose
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
+        /// <param name="viewId">Id of the view</param>
         /// <returns>ApiResponse of ViewEditDTO</returns>
         ApiResponse<ViewEditDTO> ViewsBuilderGetViewForEditWithHttpInfo (string viewId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// This call update &#39;show field&#39; in view execution
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="showFields"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="showFields">Value for the flag</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task ViewsBuilderChangeShowFieldsAsync (string viewId, bool? showFields);
 
         /// <summary>
-        /// 
+        /// This call update &#39;show field&#39; in view execution
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="showFields"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="showFields">Value for the flag</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ViewsBuilderChangeShowFieldsAsyncWithHttpInfo (string viewId, bool? showFields);
         /// <summary>
-        /// 
+        /// this call update a view
         /// </summary>
         /// <remarks>
         /// 
@@ -251,7 +251,7 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ViewDTO> ViewsBuilderEditViewAsync (ViewEditDTO viewedit = null);
 
         /// <summary>
-        /// 
+        /// this call update a view
         /// </summary>
         /// <remarks>
         /// 
@@ -261,7 +261,7 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (ViewDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<ViewDTO>> ViewsBuilderEditViewAsyncWithHttpInfo (ViewEditDTO viewedit = null);
         /// <summary>
-        /// 
+        /// this call update a view
         /// </summary>
         /// <remarks>
         /// 
@@ -272,7 +272,7 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ViewDTO> ViewsBuilderEditView_0Async (ViewEditDTO viewedit = null);
 
         /// <summary>
-        /// 
+        /// this call update a view
         /// </summary>
         /// <remarks>
         /// 
@@ -282,116 +282,116 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (ViewDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<ViewDTO>> ViewsBuilderEditView_0AsyncWithHttpInfo (ViewEditDTO viewedit = null);
         /// <summary>
-        /// 
+        /// This call returns a new search dto by a document type system id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
+        /// <param name="documentType">Document type system id</param>
         /// <returns>Task of SearchDTO</returns>
         System.Threading.Tasks.Task<SearchDTO> ViewsBuilderGetSearchAsync (int? documentType);
 
         /// <summary>
-        /// 
+        /// This call returns a new search dto by a document type system id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
+        /// <param name="documentType">Document type system id</param>
         /// <returns>Task of ApiResponse (SearchDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<SearchDTO>> ViewsBuilderGetSearchAsyncWithHttpInfo (int? documentType);
         /// <summary>
-        /// 
+        /// This call returns a new search dto by a document ids
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type 1)</param>
+        /// <param name="tipo2">Document type type 2</param>
+        /// <param name="tipo3">Document type type 3</param>
         /// <returns>Task of SearchDTO</returns>
         System.Threading.Tasks.Task<SearchDTO> ViewsBuilderGetSearch_0Async (int? documentType, int? tipo2, int? tipo3);
 
         /// <summary>
-        /// 
+        /// This call returns a new search dto by a document ids
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type 1)</param>
+        /// <param name="tipo2">Document type type 2</param>
+        /// <param name="tipo3">Document type type 3</param>
         /// <returns>Task of ApiResponse (SearchDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<SearchDTO>> ViewsBuilderGetSearch_0AsyncWithHttpInfo (int? documentType, int? tipo2, int? tipo3);
         /// <summary>
-        /// 
+        /// This call returns a new select dto by a document system id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
+        /// <param name="documentType">Document type system id</param>
         /// <returns>Task of SelectDTO</returns>
         System.Threading.Tasks.Task<SelectDTO> ViewsBuilderGetSelectAsync (int? documentType);
 
         /// <summary>
-        /// 
+        /// This call returns a new select dto by a document system id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
+        /// <param name="documentType">Document type system id</param>
         /// <returns>Task of ApiResponse (SelectDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<SelectDTO>> ViewsBuilderGetSelectAsyncWithHttpInfo (int? documentType);
         /// <summary>
-        /// 
+        /// This call returns a new select dto by a document ids
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type 1)</param>
+        /// <param name="tipo2">Document type type 2</param>
+        /// <param name="tipo3">Document type type 3</param>
         /// <returns>Task of SelectDTO</returns>
         System.Threading.Tasks.Task<SelectDTO> ViewsBuilderGetSelect_0Async (int? documentType, int? tipo2, int? tipo3);
 
         /// <summary>
-        /// 
+        /// This call returns a new select dto by a document ids
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type 1)</param>
+        /// <param name="tipo2">Document type type 2</param>
+        /// <param name="tipo3">Document type type 3</param>
         /// <returns>Task of ApiResponse (SelectDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<SelectDTO>> ViewsBuilderGetSelect_0AsyncWithHttpInfo (int? documentType, int? tipo2, int? tipo3);
         /// <summary>
-        /// 
+        /// This call returns a view for edit purpose
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
+        /// <param name="viewId">Id of the view</param>
         /// <returns>Task of ViewEditDTO</returns>
         System.Threading.Tasks.Task<ViewEditDTO> ViewsBuilderGetViewForEditAsync (string viewId);
 
         /// <summary>
-        /// 
+        /// This call returns a view for edit purpose
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
+        /// <param name="viewId">Id of the view</param>
         /// <returns>Task of ApiResponse (ViewEditDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<ViewEditDTO>> ViewsBuilderGetViewForEditAsyncWithHttpInfo (string viewId);
         #endregion Asynchronous Operations
@@ -507,11 +507,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update &#39;show field&#39; in view execution 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="showFields"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="showFields">Value for the flag</param>
         /// <returns></returns>
         public void ViewsBuilderChangeShowFields (string viewId, bool? showFields)
         {
@@ -519,11 +519,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update &#39;show field&#39; in view execution 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="showFields"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="showFields">Value for the flag</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> ViewsBuilderChangeShowFieldsWithHttpInfo (string viewId, bool? showFields)
         {
@@ -534,7 +534,7 @@ namespace IO.Swagger.Api
             if (showFields == null)
                 throw new ApiException(400, "Missing required parameter 'showFields' when calling ViewsBuilderApi->ViewsBuilderChangeShowFields");
 
-            var localVarPath = "/api/viewsbuilder/showFields/{viewId}/{showFields}";
+            var localVarPath = "/api/ViewsBuilder/showFields/{viewId}/{showFields}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -587,11 +587,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update &#39;show field&#39; in view execution 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="showFields"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="showFields">Value for the flag</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task ViewsBuilderChangeShowFieldsAsync (string viewId, bool? showFields)
         {
@@ -600,11 +600,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update &#39;show field&#39; in view execution 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="showFields"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="showFields">Value for the flag</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> ViewsBuilderChangeShowFieldsAsyncWithHttpInfo (string viewId, bool? showFields)
         {
@@ -615,7 +615,7 @@ namespace IO.Swagger.Api
             if (showFields == null)
                 throw new ApiException(400, "Missing required parameter 'showFields' when calling ViewsBuilderApi->ViewsBuilderChangeShowFields");
 
-            var localVarPath = "/api/viewsbuilder/showFields/{viewId}/{showFields}";
+            var localVarPath = "/api/ViewsBuilder/showFields/{viewId}/{showFields}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -667,7 +667,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// this call update a view 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewedit"> (optional)</param>
@@ -679,7 +679,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// this call update a view 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewedit"> (optional)</param>
@@ -687,7 +687,7 @@ namespace IO.Swagger.Api
         public ApiResponse< ViewDTO > ViewsBuilderEditViewWithHttpInfo (ViewEditDTO viewedit = null)
         {
 
-            var localVarPath = "/api/viewsbuilder";
+            var localVarPath = "/api/ViewsBuilder";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -750,7 +750,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// this call update a view 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewedit"> (optional)</param>
@@ -763,7 +763,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// this call update a view 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewedit"> (optional)</param>
@@ -771,7 +771,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<ViewDTO>> ViewsBuilderEditViewAsyncWithHttpInfo (ViewEditDTO viewedit = null)
         {
 
-            var localVarPath = "/api/viewsbuilder";
+            var localVarPath = "/api/ViewsBuilder";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -833,7 +833,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// this call update a view 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewedit"> (optional)</param>
@@ -845,7 +845,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// this call update a view 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewedit"> (optional)</param>
@@ -853,7 +853,7 @@ namespace IO.Swagger.Api
         public ApiResponse< ViewDTO > ViewsBuilderEditView_0WithHttpInfo (ViewEditDTO viewedit = null)
         {
 
-            var localVarPath = "/api/viewsbuilder";
+            var localVarPath = "/api/ViewsBuilder";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -916,7 +916,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// this call update a view 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewedit"> (optional)</param>
@@ -929,7 +929,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// this call update a view 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="viewedit"> (optional)</param>
@@ -937,7 +937,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<ViewDTO>> ViewsBuilderEditView_0AsyncWithHttpInfo (ViewEditDTO viewedit = null)
         {
 
-            var localVarPath = "/api/viewsbuilder";
+            var localVarPath = "/api/ViewsBuilder";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -999,10 +999,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new search dto by a document type system id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
+        /// <param name="documentType">Document type system id</param>
         /// <returns>SearchDTO</returns>
         public SearchDTO ViewsBuilderGetSearch (int? documentType)
         {
@@ -1011,10 +1011,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new search dto by a document type system id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
+        /// <param name="documentType">Document type system id</param>
         /// <returns>ApiResponse of SearchDTO</returns>
         public ApiResponse< SearchDTO > ViewsBuilderGetSearchWithHttpInfo (int? documentType)
         {
@@ -1022,7 +1022,7 @@ namespace IO.Swagger.Api
             if (documentType == null)
                 throw new ApiException(400, "Missing required parameter 'documentType' when calling ViewsBuilderApi->ViewsBuilderGetSearch");
 
-            var localVarPath = "/api/viewsbuilder/search/{documentType}";
+            var localVarPath = "/api/ViewsBuilder/search/{documentType}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1078,10 +1078,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new search dto by a document type system id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
+        /// <param name="documentType">Document type system id</param>
         /// <returns>Task of SearchDTO</returns>
         public async System.Threading.Tasks.Task<SearchDTO> ViewsBuilderGetSearchAsync (int? documentType)
         {
@@ -1091,10 +1091,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new search dto by a document type system id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
+        /// <param name="documentType">Document type system id</param>
         /// <returns>Task of ApiResponse (SearchDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<SearchDTO>> ViewsBuilderGetSearchAsyncWithHttpInfo (int? documentType)
         {
@@ -1102,7 +1102,7 @@ namespace IO.Swagger.Api
             if (documentType == null)
                 throw new ApiException(400, "Missing required parameter 'documentType' when calling ViewsBuilderApi->ViewsBuilderGetSearch");
 
-            var localVarPath = "/api/viewsbuilder/search/{documentType}";
+            var localVarPath = "/api/ViewsBuilder/search/{documentType}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1157,12 +1157,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new search dto by a document ids 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type 1)</param>
+        /// <param name="tipo2">Document type type 2</param>
+        /// <param name="tipo3">Document type type 3</param>
         /// <returns>SearchDTO</returns>
         public SearchDTO ViewsBuilderGetSearch_0 (int? documentType, int? tipo2, int? tipo3)
         {
@@ -1171,12 +1171,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new search dto by a document ids 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type 1)</param>
+        /// <param name="tipo2">Document type type 2</param>
+        /// <param name="tipo3">Document type type 3</param>
         /// <returns>ApiResponse of SearchDTO</returns>
         public ApiResponse< SearchDTO > ViewsBuilderGetSearch_0WithHttpInfo (int? documentType, int? tipo2, int? tipo3)
         {
@@ -1190,7 +1190,7 @@ namespace IO.Swagger.Api
             if (tipo3 == null)
                 throw new ApiException(400, "Missing required parameter 'tipo3' when calling ViewsBuilderApi->ViewsBuilderGetSearch_0");
 
-            var localVarPath = "/api/viewsbuilder/search/{documentType}/{tipo2}/{tipo3}";
+            var localVarPath = "/api/ViewsBuilder/search/{documentType}/{tipo2}/{tipo3}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1248,12 +1248,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new search dto by a document ids 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type 1)</param>
+        /// <param name="tipo2">Document type type 2</param>
+        /// <param name="tipo3">Document type type 3</param>
         /// <returns>Task of SearchDTO</returns>
         public async System.Threading.Tasks.Task<SearchDTO> ViewsBuilderGetSearch_0Async (int? documentType, int? tipo2, int? tipo3)
         {
@@ -1263,12 +1263,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new search dto by a document ids 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type 1)</param>
+        /// <param name="tipo2">Document type type 2</param>
+        /// <param name="tipo3">Document type type 3</param>
         /// <returns>Task of ApiResponse (SearchDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<SearchDTO>> ViewsBuilderGetSearch_0AsyncWithHttpInfo (int? documentType, int? tipo2, int? tipo3)
         {
@@ -1282,7 +1282,7 @@ namespace IO.Swagger.Api
             if (tipo3 == null)
                 throw new ApiException(400, "Missing required parameter 'tipo3' when calling ViewsBuilderApi->ViewsBuilderGetSearch_0");
 
-            var localVarPath = "/api/viewsbuilder/search/{documentType}/{tipo2}/{tipo3}";
+            var localVarPath = "/api/ViewsBuilder/search/{documentType}/{tipo2}/{tipo3}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1339,10 +1339,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new select dto by a document system id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
+        /// <param name="documentType">Document type system id</param>
         /// <returns>SelectDTO</returns>
         public SelectDTO ViewsBuilderGetSelect (int? documentType)
         {
@@ -1351,10 +1351,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new select dto by a document system id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
+        /// <param name="documentType">Document type system id</param>
         /// <returns>ApiResponse of SelectDTO</returns>
         public ApiResponse< SelectDTO > ViewsBuilderGetSelectWithHttpInfo (int? documentType)
         {
@@ -1362,7 +1362,7 @@ namespace IO.Swagger.Api
             if (documentType == null)
                 throw new ApiException(400, "Missing required parameter 'documentType' when calling ViewsBuilderApi->ViewsBuilderGetSelect");
 
-            var localVarPath = "/api/viewsbuilder/select/{documentType}";
+            var localVarPath = "/api/ViewsBuilder/select/{documentType}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1418,10 +1418,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new select dto by a document system id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
+        /// <param name="documentType">Document type system id</param>
         /// <returns>Task of SelectDTO</returns>
         public async System.Threading.Tasks.Task<SelectDTO> ViewsBuilderGetSelectAsync (int? documentType)
         {
@@ -1431,10 +1431,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new select dto by a document system id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
+        /// <param name="documentType">Document type system id</param>
         /// <returns>Task of ApiResponse (SelectDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<SelectDTO>> ViewsBuilderGetSelectAsyncWithHttpInfo (int? documentType)
         {
@@ -1442,7 +1442,7 @@ namespace IO.Swagger.Api
             if (documentType == null)
                 throw new ApiException(400, "Missing required parameter 'documentType' when calling ViewsBuilderApi->ViewsBuilderGetSelect");
 
-            var localVarPath = "/api/viewsbuilder/select/{documentType}";
+            var localVarPath = "/api/ViewsBuilder/select/{documentType}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1497,12 +1497,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new select dto by a document ids 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type 1)</param>
+        /// <param name="tipo2">Document type type 2</param>
+        /// <param name="tipo3">Document type type 3</param>
         /// <returns>SelectDTO</returns>
         public SelectDTO ViewsBuilderGetSelect_0 (int? documentType, int? tipo2, int? tipo3)
         {
@@ -1511,12 +1511,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new select dto by a document ids 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type 1)</param>
+        /// <param name="tipo2">Document type type 2</param>
+        /// <param name="tipo3">Document type type 3</param>
         /// <returns>ApiResponse of SelectDTO</returns>
         public ApiResponse< SelectDTO > ViewsBuilderGetSelect_0WithHttpInfo (int? documentType, int? tipo2, int? tipo3)
         {
@@ -1530,7 +1530,7 @@ namespace IO.Swagger.Api
             if (tipo3 == null)
                 throw new ApiException(400, "Missing required parameter 'tipo3' when calling ViewsBuilderApi->ViewsBuilderGetSelect_0");
 
-            var localVarPath = "/api/viewsbuilder/select/{documentType}/{tipo2}/{tipo3}";
+            var localVarPath = "/api/ViewsBuilder/select/{documentType}/{tipo2}/{tipo3}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1588,12 +1588,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new select dto by a document ids 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type 1)</param>
+        /// <param name="tipo2">Document type type 2</param>
+        /// <param name="tipo3">Document type type 3</param>
         /// <returns>Task of SelectDTO</returns>
         public async System.Threading.Tasks.Task<SelectDTO> ViewsBuilderGetSelect_0Async (int? documentType, int? tipo2, int? tipo3)
         {
@@ -1603,12 +1603,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new select dto by a document ids 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type 1)</param>
+        /// <param name="tipo2">Document type type 2</param>
+        /// <param name="tipo3">Document type type 3</param>
         /// <returns>Task of ApiResponse (SelectDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<SelectDTO>> ViewsBuilderGetSelect_0AsyncWithHttpInfo (int? documentType, int? tipo2, int? tipo3)
         {
@@ -1622,7 +1622,7 @@ namespace IO.Swagger.Api
             if (tipo3 == null)
                 throw new ApiException(400, "Missing required parameter 'tipo3' when calling ViewsBuilderApi->ViewsBuilderGetSelect_0");
 
-            var localVarPath = "/api/viewsbuilder/select/{documentType}/{tipo2}/{tipo3}";
+            var localVarPath = "/api/ViewsBuilder/select/{documentType}/{tipo2}/{tipo3}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1679,10 +1679,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a view for edit purpose 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
+        /// <param name="viewId">Id of the view</param>
         /// <returns>ViewEditDTO</returns>
         public ViewEditDTO ViewsBuilderGetViewForEdit (string viewId)
         {
@@ -1691,10 +1691,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a view for edit purpose 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
+        /// <param name="viewId">Id of the view</param>
         /// <returns>ApiResponse of ViewEditDTO</returns>
         public ApiResponse< ViewEditDTO > ViewsBuilderGetViewForEditWithHttpInfo (string viewId)
         {
@@ -1702,7 +1702,7 @@ namespace IO.Swagger.Api
             if (viewId == null)
                 throw new ApiException(400, "Missing required parameter 'viewId' when calling ViewsBuilderApi->ViewsBuilderGetViewForEdit");
 
-            var localVarPath = "/api/viewsbuilder/{viewId}";
+            var localVarPath = "/api/ViewsBuilder/{viewId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1758,10 +1758,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a view for edit purpose 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
+        /// <param name="viewId">Id of the view</param>
         /// <returns>Task of ViewEditDTO</returns>
         public async System.Threading.Tasks.Task<ViewEditDTO> ViewsBuilderGetViewForEditAsync (string viewId)
         {
@@ -1771,10 +1771,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a view for edit purpose 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
+        /// <param name="viewId">Id of the view</param>
         /// <returns>Task of ApiResponse (ViewEditDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ViewEditDTO>> ViewsBuilderGetViewForEditAsyncWithHttpInfo (string viewId)
         {
@@ -1782,7 +1782,7 @@ namespace IO.Swagger.Api
             if (viewId == null)
                 throw new ApiException(400, "Missing required parameter 'viewId' when calling ViewsBuilderApi->ViewsBuilderGetViewForEdit");
 
-            var localVarPath = "/api/viewsbuilder/{viewId}";
+            var localVarPath = "/api/ViewsBuilder/{viewId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

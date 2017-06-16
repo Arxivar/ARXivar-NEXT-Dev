@@ -216,7 +216,7 @@ namespace IO.Swagger.Api
             if (type == null)
                 throw new ApiException(400, "Missing required parameter 'type' when calling DevicesApi->DevicesGetDevices");
 
-            var localVarPath = "/api/devices/{type}";
+            var localVarPath = "/api/Devices/{type}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -296,7 +296,7 @@ namespace IO.Swagger.Api
             if (type == null)
                 throw new ApiException(400, "Missing required parameter 'type' when calling DevicesApi->DevicesGetDevices");
 
-            var localVarPath = "/api/devices/{type}";
+            var localVarPath = "/api/Devices/{type}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

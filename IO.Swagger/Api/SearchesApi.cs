@@ -163,6 +163,29 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of SearchDTO</returns>
         ApiResponse<SearchDTO> SearchesGetLastSearchWithHttpInfo ();
         /// <summary>
+        /// This call returns a complete search dto for search a profile for a class additional field
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="additionalFieldName">Class additional field name</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>SearchDTO</returns>
+        SearchDTO SearchesGetSearchForClasseBox (string additionalFieldName, ProfileDTO profile = null);
+
+        /// <summary>
+        /// This call returns a complete search dto for search a profile for a class additional field
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="additionalFieldName">Class additional field name</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>ApiResponse of SearchDTO</returns>
+        ApiResponse<SearchDTO> SearchesGetSearchForClasseBoxWithHttpInfo (string additionalFieldName, ProfileDTO profile = null);
+        /// <summary>
         /// This call returns a default select according to the Arxivar system settings
         /// </summary>
         /// <remarks>
@@ -182,7 +205,7 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of SelectDTO</returns>
         ApiResponse<SelectDTO> SearchesGetSelectWithHttpInfo ();
         /// <summary>
-        /// 
+        /// This call returns a new select dto by document type system id
         /// </summary>
         /// <remarks>
         /// 
@@ -193,7 +216,7 @@ namespace IO.Swagger.Api
         SelectDTO SearchesGetSelect_0 (int? documentType);
 
         /// <summary>
-        /// 
+        /// This call returns a new select dto by document type system id
         /// </summary>
         /// <remarks>
         /// 
@@ -203,28 +226,28 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of SelectDTO</returns>
         ApiResponse<SelectDTO> SearchesGetSelect_0WithHttpInfo (int? documentType);
         /// <summary>
-        /// 
+        /// This call returns a new select dto by document type ids
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type1)</param>
+        /// <param name="tipo2">Type 2 of document type</param>
+        /// <param name="tipo3">Type 3 of document type</param>
         /// <returns>SelectDTO</returns>
         SelectDTO SearchesGetSelect_1 (int? documentType, int? tipo2, int? tipo3);
 
         /// <summary>
-        /// 
+        /// This call returns a new select dto by document type ids
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type1)</param>
+        /// <param name="tipo2">Type 2 of document type</param>
+        /// <param name="tipo3">Type 3 of document type</param>
         /// <returns>ApiResponse of SelectDTO</returns>
         ApiResponse<SelectDTO> SearchesGetSelect_1WithHttpInfo (int? documentType, int? tipo2, int? tipo3);
         /// <summary>
@@ -503,6 +526,29 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (SearchDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<SearchDTO>> SearchesGetLastSearchAsyncWithHttpInfo ();
         /// <summary>
+        /// This call returns a complete search dto for search a profile for a class additional field
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="additionalFieldName">Class additional field name</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>Task of SearchDTO</returns>
+        System.Threading.Tasks.Task<SearchDTO> SearchesGetSearchForClasseBoxAsync (string additionalFieldName, ProfileDTO profile = null);
+
+        /// <summary>
+        /// This call returns a complete search dto for search a profile for a class additional field
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="additionalFieldName">Class additional field name</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>Task of ApiResponse (SearchDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SearchDTO>> SearchesGetSearchForClasseBoxAsyncWithHttpInfo (string additionalFieldName, ProfileDTO profile = null);
+        /// <summary>
         /// This call returns a default select according to the Arxivar system settings
         /// </summary>
         /// <remarks>
@@ -522,7 +568,7 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (SelectDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<SelectDTO>> SearchesGetSelectAsyncWithHttpInfo ();
         /// <summary>
-        /// 
+        /// This call returns a new select dto by document type system id
         /// </summary>
         /// <remarks>
         /// 
@@ -533,7 +579,7 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<SelectDTO> SearchesGetSelect_0Async (int? documentType);
 
         /// <summary>
-        /// 
+        /// This call returns a new select dto by document type system id
         /// </summary>
         /// <remarks>
         /// 
@@ -543,28 +589,28 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (SelectDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<SelectDTO>> SearchesGetSelect_0AsyncWithHttpInfo (int? documentType);
         /// <summary>
-        /// 
+        /// This call returns a new select dto by document type ids
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type1)</param>
+        /// <param name="tipo2">Type 2 of document type</param>
+        /// <param name="tipo3">Type 3 of document type</param>
         /// <returns>Task of SelectDTO</returns>
         System.Threading.Tasks.Task<SelectDTO> SearchesGetSelect_1Async (int? documentType, int? tipo2, int? tipo3);
 
         /// <summary>
-        /// 
+        /// This call returns a new select dto by document type ids
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type1)</param>
+        /// <param name="tipo2">Type 2 of document type</param>
+        /// <param name="tipo3">Type 3 of document type</param>
         /// <returns>Task of ApiResponse (SelectDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<SelectDTO>> SearchesGetSelect_1AsyncWithHttpInfo (int? documentType, int? tipo2, int? tipo3);
         /// <summary>
@@ -844,7 +890,7 @@ namespace IO.Swagger.Api
         public ApiResponse<Object> SearchesDeleteWithHttpInfo ()
         {
 
-            var localVarPath = "/api/searches";
+            var localVarPath = "/api/Searches";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -913,7 +959,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<Object>> SearchesDeleteAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/searches";
+            var localVarPath = "/api/Searches";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -981,7 +1027,7 @@ namespace IO.Swagger.Api
         public ApiResponse< SearchDTO > SearchesGetWithHttpInfo ()
         {
 
-            var localVarPath = "/api/searches";
+            var localVarPath = "/api/Searches";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1055,7 +1101,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<SearchDTO>> SearchesGetAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/searches";
+            var localVarPath = "/api/Searches";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1147,7 +1193,7 @@ namespace IO.Swagger.Api
             if (aoo == null)
                 throw new ApiException(400, "Missing required parameter 'aoo' when calling SearchesApi->SearchesGetAdditionalByClasse");
 
-            var localVarPath = "/api/searches/Additional/{tipoUno}/{tipoDue}/{tipoTre}/{aoo}";
+            var localVarPath = "/api/Searches/Additional/{tipoUno}/{tipoDue}/{tipoTre}/{aoo}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1245,7 +1291,7 @@ namespace IO.Swagger.Api
             if (aoo == null)
                 throw new ApiException(400, "Missing required parameter 'aoo' when calling SearchesApi->SearchesGetAdditionalByClasse");
 
-            var localVarPath = "/api/searches/Additional/{tipoUno}/{tipoDue}/{tipoTre}/{aoo}";
+            var localVarPath = "/api/Searches/Additional/{tipoUno}/{tipoDue}/{tipoTre}/{aoo}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1323,7 +1369,7 @@ namespace IO.Swagger.Api
         public ApiResponse< FieldFilterDTO > SearchesGetFiltersForSearchWithHttpInfo (FieldValuesSearchCriteriaDto fieldcriteria = null)
         {
 
-            var localVarPath = "/api/searches/Filters";
+            var localVarPath = "/api/Searches/Filters";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1407,7 +1453,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<FieldFilterDTO>> SearchesGetFiltersForSearchAsyncWithHttpInfo (FieldValuesSearchCriteriaDto fieldcriteria = null)
         {
 
-            var localVarPath = "/api/searches/Filters";
+            var localVarPath = "/api/Searches/Filters";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1489,7 +1535,7 @@ namespace IO.Swagger.Api
         public ApiResponse< string > SearchesGetFormulaForSearchWithHttpInfo (FieldFormulaCalculateCriteriaDto fieldcriteria = null)
         {
 
-            var localVarPath = "/api/searches/Formula";
+            var localVarPath = "/api/Searches/Formula";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1573,7 +1619,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<string>> SearchesGetFormulaForSearchAsyncWithHttpInfo (FieldFormulaCalculateCriteriaDto fieldcriteria = null)
         {
 
-            var localVarPath = "/api/searches/Formula";
+            var localVarPath = "/api/Searches/Formula";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1653,7 +1699,7 @@ namespace IO.Swagger.Api
         public ApiResponse< SearchDTO > SearchesGetLastSearchWithHttpInfo ()
         {
 
-            var localVarPath = "/api/searches/lastsearch";
+            var localVarPath = "/api/Searches/lastsearch";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1727,7 +1773,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<SearchDTO>> SearchesGetLastSearchAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/searches/lastsearch";
+            var localVarPath = "/api/Searches/lastsearch";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1781,6 +1827,184 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
+        /// This call returns a complete search dto for search a profile for a class additional field 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="additionalFieldName">Class additional field name</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>SearchDTO</returns>
+        public SearchDTO SearchesGetSearchForClasseBox (string additionalFieldName, ProfileDTO profile = null)
+        {
+             ApiResponse<SearchDTO> localVarResponse = SearchesGetSearchForClasseBoxWithHttpInfo(additionalFieldName, profile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns a complete search dto for search a profile for a class additional field 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="additionalFieldName">Class additional field name</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>ApiResponse of SearchDTO</returns>
+        public ApiResponse< SearchDTO > SearchesGetSearchForClasseBoxWithHttpInfo (string additionalFieldName, ProfileDTO profile = null)
+        {
+            // verify the required parameter 'additionalFieldName' is set
+            if (additionalFieldName == null)
+                throw new ApiException(400, "Missing required parameter 'additionalFieldName' when calling SearchesApi->SearchesGetSearchForClasseBox");
+
+            var localVarPath = "/api/Searches/byclassadditionalfield/{additionalFieldName}/Search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (additionalFieldName != null) localVarPathParams.Add("additionalFieldName", Configuration.ApiClient.ParameterToString(additionalFieldName)); // path parameter
+            if (profile != null && profile.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(profile); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = profile; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SearchesGetSearchForClasseBox", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SearchDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SearchDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchDTO)));
+            
+        }
+
+        /// <summary>
+        /// This call returns a complete search dto for search a profile for a class additional field 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="additionalFieldName">Class additional field name</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>Task of SearchDTO</returns>
+        public async System.Threading.Tasks.Task<SearchDTO> SearchesGetSearchForClasseBoxAsync (string additionalFieldName, ProfileDTO profile = null)
+        {
+             ApiResponse<SearchDTO> localVarResponse = await SearchesGetSearchForClasseBoxAsyncWithHttpInfo(additionalFieldName, profile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns a complete search dto for search a profile for a class additional field 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="additionalFieldName">Class additional field name</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>Task of ApiResponse (SearchDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SearchDTO>> SearchesGetSearchForClasseBoxAsyncWithHttpInfo (string additionalFieldName, ProfileDTO profile = null)
+        {
+            // verify the required parameter 'additionalFieldName' is set
+            if (additionalFieldName == null)
+                throw new ApiException(400, "Missing required parameter 'additionalFieldName' when calling SearchesApi->SearchesGetSearchForClasseBox");
+
+            var localVarPath = "/api/Searches/byclassadditionalfield/{additionalFieldName}/Search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (additionalFieldName != null) localVarPathParams.Add("additionalFieldName", Configuration.ApiClient.ParameterToString(additionalFieldName)); // path parameter
+            if (profile != null && profile.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(profile); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = profile; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SearchesGetSearchForClasseBox", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SearchDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SearchDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SearchDTO)));
+            
+        }
+
+        /// <summary>
         /// This call returns a default select according to the Arxivar system settings 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1799,7 +2023,7 @@ namespace IO.Swagger.Api
         public ApiResponse< SelectDTO > SearchesGetSelectWithHttpInfo ()
         {
 
-            var localVarPath = "/api/searches/Select";
+            var localVarPath = "/api/Searches/Select";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1873,7 +2097,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<SelectDTO>> SearchesGetSelectAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/searches/Select";
+            var localVarPath = "/api/Searches/Select";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1927,7 +2151,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new select dto by document type system id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentType"></param>
@@ -1939,7 +2163,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new select dto by document type system id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentType"></param>
@@ -1950,7 +2174,7 @@ namespace IO.Swagger.Api
             if (documentType == null)
                 throw new ApiException(400, "Missing required parameter 'documentType' when calling SearchesApi->SearchesGetSelect_0");
 
-            var localVarPath = "/api/searches/Select/{documentType}";
+            var localVarPath = "/api/Searches/Select/{documentType}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2006,7 +2230,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new select dto by document type system id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentType"></param>
@@ -2019,7 +2243,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new select dto by document type system id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="documentType"></param>
@@ -2030,7 +2254,7 @@ namespace IO.Swagger.Api
             if (documentType == null)
                 throw new ApiException(400, "Missing required parameter 'documentType' when calling SearchesApi->SearchesGetSelect_0");
 
-            var localVarPath = "/api/searches/Select/{documentType}";
+            var localVarPath = "/api/Searches/Select/{documentType}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2085,12 +2309,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new select dto by document type ids 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type1)</param>
+        /// <param name="tipo2">Type 2 of document type</param>
+        /// <param name="tipo3">Type 3 of document type</param>
         /// <returns>SelectDTO</returns>
         public SelectDTO SearchesGetSelect_1 (int? documentType, int? tipo2, int? tipo3)
         {
@@ -2099,12 +2323,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new select dto by document type ids 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type1)</param>
+        /// <param name="tipo2">Type 2 of document type</param>
+        /// <param name="tipo3">Type 3 of document type</param>
         /// <returns>ApiResponse of SelectDTO</returns>
         public ApiResponse< SelectDTO > SearchesGetSelect_1WithHttpInfo (int? documentType, int? tipo2, int? tipo3)
         {
@@ -2118,7 +2342,7 @@ namespace IO.Swagger.Api
             if (tipo3 == null)
                 throw new ApiException(400, "Missing required parameter 'tipo3' when calling SearchesApi->SearchesGetSelect_1");
 
-            var localVarPath = "/api/searches/Select/{documentType}/{tipo2}/{tipo3}";
+            var localVarPath = "/api/Searches/Select/{documentType}/{tipo2}/{tipo3}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2176,12 +2400,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new select dto by document type ids 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type1)</param>
+        /// <param name="tipo2">Type 2 of document type</param>
+        /// <param name="tipo3">Type 3 of document type</param>
         /// <returns>Task of SelectDTO</returns>
         public async System.Threading.Tasks.Task<SelectDTO> SearchesGetSelect_1Async (int? documentType, int? tipo2, int? tipo3)
         {
@@ -2191,12 +2415,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a new select dto by document type ids 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentType"></param>
-        /// <param name="tipo2"></param>
-        /// <param name="tipo3"></param>
+        /// <param name="documentType">Document type (or type1)</param>
+        /// <param name="tipo2">Type 2 of document type</param>
+        /// <param name="tipo3">Type 3 of document type</param>
         /// <returns>Task of ApiResponse (SelectDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<SelectDTO>> SearchesGetSelect_1AsyncWithHttpInfo (int? documentType, int? tipo2, int? tipo3)
         {
@@ -2210,7 +2434,7 @@ namespace IO.Swagger.Api
             if (tipo3 == null)
                 throw new ApiException(400, "Missing required parameter 'tipo3' when calling SearchesApi->SearchesGetSelect_1");
 
-            var localVarPath = "/api/searches/Select/{documentType}/{tipo2}/{tipo3}";
+            var localVarPath = "/api/Searches/Select/{documentType}/{tipo2}/{tipo3}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2287,7 +2511,7 @@ namespace IO.Swagger.Api
         public ApiResponse< FieldValuesDTO > SearchesGetValuesForSearchWithHttpInfo (FieldValuesSearchCriteriaDto fieldcriteria = null)
         {
 
-            var localVarPath = "/api/searches/Values";
+            var localVarPath = "/api/Searches/Values";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2371,7 +2595,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<FieldValuesDTO>> SearchesGetValuesForSearchAsyncWithHttpInfo (FieldValuesSearchCriteriaDto fieldcriteria = null)
         {
 
-            var localVarPath = "/api/searches/Values";
+            var localVarPath = "/api/Searches/Values";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2461,7 +2685,7 @@ namespace IO.Swagger.Api
             if (selectDto == null)
                 throw new ApiException(400, "Missing required parameter 'selectDto' when calling SearchesApi->SearchesLastDocuments");
 
-            var localVarPath = "/api/searches/lastdocuments/{maxRows}";
+            var localVarPath = "/api/Searches/lastdocuments/{maxRows}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2559,7 +2783,7 @@ namespace IO.Swagger.Api
             if (selectDto == null)
                 throw new ApiException(400, "Missing required parameter 'selectDto' when calling SearchesApi->SearchesLastDocuments");
 
-            var localVarPath = "/api/searches/lastdocuments/{maxRows}";
+            var localVarPath = "/api/Searches/lastdocuments/{maxRows}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2647,7 +2871,7 @@ namespace IO.Swagger.Api
         public ApiResponse< List<RowSearchResult> > SearchesPostSearchWithHttpInfo (SearchCriteriaDto searchwebapidto = null)
         {
 
-            var localVarPath = "/api/searches";
+            var localVarPath = "/api/Searches";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2731,7 +2955,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<RowSearchResult>>> SearchesPostSearchAsyncWithHttpInfo (SearchCriteriaDto searchwebapidto = null)
         {
 
-            var localVarPath = "/api/searches";
+            var localVarPath = "/api/Searches";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2815,7 +3039,7 @@ namespace IO.Swagger.Api
             if (selectDto == null)
                 throw new ApiException(400, "Missing required parameter 'selectDto' when calling SearchesApi->SearchesPostSelect");
 
-            var localVarPath = "/api/searches/Select";
+            var localVarPath = "/api/Searches/Select";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2902,7 +3126,7 @@ namespace IO.Swagger.Api
             if (selectDto == null)
                 throw new ApiException(400, "Missing required parameter 'selectDto' when calling SearchesApi->SearchesPostSelect");
 
-            var localVarPath = "/api/searches/Select";
+            var localVarPath = "/api/Searches/Select";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2982,7 +3206,7 @@ namespace IO.Swagger.Api
         public ApiResponse<Object> SearchesResetSelectWithHttpInfo ()
         {
 
-            var localVarPath = "/api/searches/Reset";
+            var localVarPath = "/api/Searches/Reset";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3051,7 +3275,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<Object>> SearchesResetSelectAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/searches/Reset";
+            var localVarPath = "/api/Searches/Reset";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3120,7 +3344,7 @@ namespace IO.Swagger.Api
         public ApiResponse<Object> SearchesSetDefaultSearchWithHttpInfo (SearchCriteriaDto searchwebapidto = null)
         {
 
-            var localVarPath = "/api/searches/defaultsearch";
+            var localVarPath = "/api/Searches/defaultsearch";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3199,7 +3423,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<Object>> SearchesSetDefaultSearchAsyncWithHttpInfo (SearchCriteriaDto searchwebapidto = null)
         {
 
-            var localVarPath = "/api/searches/defaultsearch";
+            var localVarPath = "/api/Searches/defaultsearch";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3276,7 +3500,7 @@ namespace IO.Swagger.Api
         public ApiResponse<Object> SearchesSetLastSearchWithHttpInfo (SearchCriteriaDto searchwebapidto = null)
         {
 
-            var localVarPath = "/api/searches/lastsearch";
+            var localVarPath = "/api/Searches/lastsearch";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3355,7 +3579,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<Object>> SearchesSetLastSearchAsyncWithHttpInfo (SearchCriteriaDto searchwebapidto = null)
         {
 
-            var localVarPath = "/api/searches/lastsearch";
+            var localVarPath = "/api/Searches/lastsearch";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

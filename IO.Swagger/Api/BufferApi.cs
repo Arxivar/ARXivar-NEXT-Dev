@@ -215,7 +215,7 @@ namespace IO.Swagger.Api
             if (file == null)
                 throw new ApiException(400, "Missing required parameter 'file' when calling BufferApi->BufferInsert");
 
-            var localVarPath = "/api/buffer/insert";
+            var localVarPath = "/api/Buffer/insert";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -296,7 +296,7 @@ namespace IO.Swagger.Api
             if (file == null)
                 throw new ApiException(400, "Missing required parameter 'file' when calling BufferApi->BufferInsert");
 
-            var localVarPath = "/api/buffer/insert";
+            var localVarPath = "/api/Buffer/insert";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

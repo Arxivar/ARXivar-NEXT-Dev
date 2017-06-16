@@ -37,139 +37,139 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// This call returns all permissions for a view
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
+        /// <param name="viewId">Id of the view</param>
         /// <returns>PermissionsDTO</returns>
         PermissionsDTO ViewsPermissionsGetPermissionByView (string viewId);
 
         /// <summary>
-        /// 
+        /// This call returns all permissions for a view
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
+        /// <param name="viewId">Id of the view</param>
         /// <returns>ApiResponse of PermissionsDTO</returns>
         ApiResponse<PermissionsDTO> ViewsPermissionsGetPermissionByViewWithHttpInfo (string viewId);
         /// <summary>
-        /// 
+        /// This call save permissions for a view
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="permissions">Permission to set</param>
         /// <returns></returns>
         void ViewsPermissionsWritePermissionByView (string viewId, PermissionsDTO permissions);
 
         /// <summary>
-        /// 
+        /// This call save permissions for a view
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="permissions">Permission to set</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ViewsPermissionsWritePermissionByViewWithHttpInfo (string viewId, PermissionsDTO permissions);
         /// <summary>
-        /// 
+        /// This call save permissions for a view
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="permissions">Permission to set</param>
         /// <returns></returns>
         void ViewsPermissionsWritePermissionByView_0 (string viewId, PermissionsDTO permissions);
 
         /// <summary>
-        /// 
+        /// This call save permissions for a view
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="permissions">Permission to set</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ViewsPermissionsWritePermissionByView_0WithHttpInfo (string viewId, PermissionsDTO permissions);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// This call returns all permissions for a view
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
+        /// <param name="viewId">Id of the view</param>
         /// <returns>Task of PermissionsDTO</returns>
         System.Threading.Tasks.Task<PermissionsDTO> ViewsPermissionsGetPermissionByViewAsync (string viewId);
 
         /// <summary>
-        /// 
+        /// This call returns all permissions for a view
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
+        /// <param name="viewId">Id of the view</param>
         /// <returns>Task of ApiResponse (PermissionsDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<PermissionsDTO>> ViewsPermissionsGetPermissionByViewAsyncWithHttpInfo (string viewId);
         /// <summary>
-        /// 
+        /// This call save permissions for a view
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="permissions">Permission to set</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task ViewsPermissionsWritePermissionByViewAsync (string viewId, PermissionsDTO permissions);
 
         /// <summary>
-        /// 
+        /// This call save permissions for a view
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="permissions">Permission to set</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ViewsPermissionsWritePermissionByViewAsyncWithHttpInfo (string viewId, PermissionsDTO permissions);
         /// <summary>
-        /// 
+        /// This call save permissions for a view
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="permissions">Permission to set</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task ViewsPermissionsWritePermissionByView_0Async (string viewId, PermissionsDTO permissions);
 
         /// <summary>
-        /// 
+        /// This call save permissions for a view
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="permissions">Permission to set</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ViewsPermissionsWritePermissionByView_0AsyncWithHttpInfo (string viewId, PermissionsDTO permissions);
         #endregion Asynchronous Operations
@@ -285,10 +285,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all permissions for a view 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
+        /// <param name="viewId">Id of the view</param>
         /// <returns>PermissionsDTO</returns>
         public PermissionsDTO ViewsPermissionsGetPermissionByView (string viewId)
         {
@@ -297,10 +297,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all permissions for a view 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
+        /// <param name="viewId">Id of the view</param>
         /// <returns>ApiResponse of PermissionsDTO</returns>
         public ApiResponse< PermissionsDTO > ViewsPermissionsGetPermissionByViewWithHttpInfo (string viewId)
         {
@@ -308,7 +308,7 @@ namespace IO.Swagger.Api
             if (viewId == null)
                 throw new ApiException(400, "Missing required parameter 'viewId' when calling ViewsPermissionsApi->ViewsPermissionsGetPermissionByView");
 
-            var localVarPath = "/api/viewspermissions/{viewId}";
+            var localVarPath = "/api/ViewsPermissions/{viewId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -364,10 +364,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all permissions for a view 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
+        /// <param name="viewId">Id of the view</param>
         /// <returns>Task of PermissionsDTO</returns>
         public async System.Threading.Tasks.Task<PermissionsDTO> ViewsPermissionsGetPermissionByViewAsync (string viewId)
         {
@@ -377,10 +377,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all permissions for a view 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
+        /// <param name="viewId">Id of the view</param>
         /// <returns>Task of ApiResponse (PermissionsDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PermissionsDTO>> ViewsPermissionsGetPermissionByViewAsyncWithHttpInfo (string viewId)
         {
@@ -388,7 +388,7 @@ namespace IO.Swagger.Api
             if (viewId == null)
                 throw new ApiException(400, "Missing required parameter 'viewId' when calling ViewsPermissionsApi->ViewsPermissionsGetPermissionByView");
 
-            var localVarPath = "/api/viewspermissions/{viewId}";
+            var localVarPath = "/api/ViewsPermissions/{viewId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -443,11 +443,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call save permissions for a view 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="permissions">Permission to set</param>
         /// <returns></returns>
         public void ViewsPermissionsWritePermissionByView (string viewId, PermissionsDTO permissions)
         {
@@ -455,11 +455,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call save permissions for a view 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="permissions">Permission to set</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> ViewsPermissionsWritePermissionByViewWithHttpInfo (string viewId, PermissionsDTO permissions)
         {
@@ -470,7 +470,7 @@ namespace IO.Swagger.Api
             if (permissions == null)
                 throw new ApiException(400, "Missing required parameter 'permissions' when calling ViewsPermissionsApi->ViewsPermissionsWritePermissionByView");
 
-            var localVarPath = "/api/viewspermissions/{viewId}";
+            var localVarPath = "/api/ViewsPermissions/{viewId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -535,11 +535,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call save permissions for a view 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="permissions">Permission to set</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task ViewsPermissionsWritePermissionByViewAsync (string viewId, PermissionsDTO permissions)
         {
@@ -548,11 +548,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call save permissions for a view 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="permissions">Permission to set</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> ViewsPermissionsWritePermissionByViewAsyncWithHttpInfo (string viewId, PermissionsDTO permissions)
         {
@@ -563,7 +563,7 @@ namespace IO.Swagger.Api
             if (permissions == null)
                 throw new ApiException(400, "Missing required parameter 'permissions' when calling ViewsPermissionsApi->ViewsPermissionsWritePermissionByView");
 
-            var localVarPath = "/api/viewspermissions/{viewId}";
+            var localVarPath = "/api/ViewsPermissions/{viewId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -627,11 +627,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call save permissions for a view 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="permissions">Permission to set</param>
         /// <returns></returns>
         public void ViewsPermissionsWritePermissionByView_0 (string viewId, PermissionsDTO permissions)
         {
@@ -639,11 +639,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call save permissions for a view 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="permissions">Permission to set</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> ViewsPermissionsWritePermissionByView_0WithHttpInfo (string viewId, PermissionsDTO permissions)
         {
@@ -654,7 +654,7 @@ namespace IO.Swagger.Api
             if (permissions == null)
                 throw new ApiException(400, "Missing required parameter 'permissions' when calling ViewsPermissionsApi->ViewsPermissionsWritePermissionByView_0");
 
-            var localVarPath = "/api/viewspermissions/{viewId}";
+            var localVarPath = "/api/ViewsPermissions/{viewId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -719,11 +719,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call save permissions for a view 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="permissions">Permission to set</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task ViewsPermissionsWritePermissionByView_0Async (string viewId, PermissionsDTO permissions)
         {
@@ -732,11 +732,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call save permissions for a view 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="viewId"></param>
-        /// <param name="permissions"></param>
+        /// <param name="viewId">Id of the view</param>
+        /// <param name="permissions">Permission to set</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> ViewsPermissionsWritePermissionByView_0AsyncWithHttpInfo (string viewId, PermissionsDTO permissions)
         {
@@ -747,7 +747,7 @@ namespace IO.Swagger.Api
             if (permissions == null)
                 throw new ApiException(400, "Missing required parameter 'permissions' when calling ViewsPermissionsApi->ViewsPermissionsWritePermissionByView_0");
 
-            var localVarPath = "/api/viewspermissions/{viewId}";
+            var localVarPath = "/api/ViewsPermissions/{viewId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

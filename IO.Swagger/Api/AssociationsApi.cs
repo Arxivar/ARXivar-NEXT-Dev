@@ -37,28 +37,28 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// This call delete an existing association
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the association to delete</param>
         /// <returns></returns>
         void AssociationsDelete (int? id);
 
         /// <summary>
-        /// 
+        /// This call delete an existing association
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the association to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> AssociationsDeleteWithHttpInfo (int? id);
         /// <summary>
-        /// 
+        /// This calls return all ARXivar associations
         /// </summary>
         /// <remarks>
         /// 
@@ -68,7 +68,7 @@ namespace IO.Swagger.Api
         List<AssociationDTO> AssociationsGet ();
 
         /// <summary>
-        /// 
+        /// This calls return all ARXivar associations
         /// </summary>
         /// <remarks>
         /// 
@@ -77,187 +77,187 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of List&lt;AssociationDTO&gt;</returns>
         ApiResponse<List<AssociationDTO>> AssociationsGetWithHttpInfo ();
         /// <summary>
-        /// 
+        /// This call returns all associations by a docnumber
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber</param>
         /// <returns>List&lt;AssociationDTO&gt;</returns>
         List<AssociationDTO> AssociationsGetByDocNumber (int? docnumber);
 
         /// <summary>
-        /// 
+        /// This call returns all associations by a docnumber
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber</param>
         /// <returns>ApiResponse of List&lt;AssociationDTO&gt;</returns>
         ApiResponse<List<AssociationDTO>> AssociationsGetByDocNumberWithHttpInfo (int? docnumber);
         /// <summary>
-        /// 
+        /// This call returns the datasource for the profiles contained in a association
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="select"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="select">SelectDTO for returned columns settings</param>
         /// <returns>List&lt;RowSearchResult&gt;</returns>
         List<RowSearchResult> AssociationsGetById (int? id, SelectDTO select);
 
         /// <summary>
-        /// 
+        /// This call returns the datasource for the profiles contained in a association
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="select"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="select">SelectDTO for returned columns settings</param>
         /// <returns>ApiResponse of List&lt;RowSearchResult&gt;</returns>
         ApiResponse<List<RowSearchResult>> AssociationsGetByIdWithHttpInfo (int? id, SelectDTO select);
         /// <summary>
-        /// 
+        /// This call add profiles in a new association with auto generated name
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">Docnumbers of the profiles to add</param>
         /// <returns>List&lt;AssociationDTO&gt;</returns>
         List<AssociationDTO> AssociationsInsertNew (List<int?> docnumbers);
 
         /// <summary>
-        /// 
+        /// This call add profiles in a new association with auto generated name
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">Docnumbers of the profiles to add</param>
         /// <returns>ApiResponse of List&lt;AssociationDTO&gt;</returns>
         ApiResponse<List<AssociationDTO>> AssociationsInsertNewWithHttpInfo (List<int?> docnumbers);
         /// <summary>
-        /// 
+        /// This call add profiles in an association by association Id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="docnumbers"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="docnumbers">Docnumbers for the profiles to add</param>
         /// <returns>List&lt;AssociationDTO&gt;</returns>
         List<AssociationDTO> AssociationsInsertWithId (int? id, List<int?> docnumbers);
 
         /// <summary>
-        /// 
+        /// This call add profiles in an association by association Id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="docnumbers"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="docnumbers">Docnumbers for the profiles to add</param>
         /// <returns>ApiResponse of List&lt;AssociationDTO&gt;</returns>
         ApiResponse<List<AssociationDTO>> AssociationsInsertWithIdWithHttpInfo (int? id, List<int?> docnumbers);
         /// <summary>
-        /// 
+        /// This call add profiles to an existing association by association name
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="docnumbers"></param>
+        /// <param name="name">Name of the new association</param>
+        /// <param name="docnumbers">Docnumber to insert in this association</param>
         /// <returns>List&lt;AssociationDTO&gt;</returns>
         List<AssociationDTO> AssociationsInsertWithName (string name, List<int?> docnumbers);
 
         /// <summary>
-        /// 
+        /// This call add profiles to an existing association by association name
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="docnumbers"></param>
+        /// <param name="name">Name of the new association</param>
+        /// <param name="docnumbers">Docnumber to insert in this association</param>
         /// <returns>ApiResponse of List&lt;AssociationDTO&gt;</returns>
         ApiResponse<List<AssociationDTO>> AssociationsInsertWithNameWithHttpInfo (string name, List<int?> docnumbers);
         /// <summary>
-        /// 
+        /// This call remove a profile from association
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="docnumber"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="docnumber">Docnumber of the profile to remove</param>
         /// <returns></returns>
         void AssociationsRemove (int? id, int? docnumber);
 
         /// <summary>
-        /// 
+        /// This call remove a profile from association
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="docnumber"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="docnumber">Docnumber of the profile to remove</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> AssociationsRemoveWithHttpInfo (int? id, int? docnumber);
         /// <summary>
-        /// 
+        /// This call rename an existing association
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="name"></param>
+        /// <param name="id">Id of the association to rename</param>
+        /// <param name="name">New name</param>
         /// <returns></returns>
         void AssociationsRename (int? id, string name);
 
         /// <summary>
-        /// 
+        /// This call rename an existing association
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="name"></param>
+        /// <param name="id">Id of the association to rename</param>
+        /// <param name="name">New name</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> AssociationsRenameWithHttpInfo (int? id, string name);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// This call delete an existing association
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the association to delete</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task AssociationsDeleteAsync (int? id);
 
         /// <summary>
-        /// 
+        /// This call delete an existing association
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the association to delete</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AssociationsDeleteAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// 
+        /// This calls return all ARXivar associations
         /// </summary>
         /// <remarks>
         /// 
@@ -267,7 +267,7 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<List<AssociationDTO>> AssociationsGetAsync ();
 
         /// <summary>
-        /// 
+        /// This calls return all ARXivar associations
         /// </summary>
         /// <remarks>
         /// 
@@ -276,160 +276,160 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (List&lt;AssociationDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<AssociationDTO>>> AssociationsGetAsyncWithHttpInfo ();
         /// <summary>
-        /// 
+        /// This call returns all associations by a docnumber
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber</param>
         /// <returns>Task of List&lt;AssociationDTO&gt;</returns>
         System.Threading.Tasks.Task<List<AssociationDTO>> AssociationsGetByDocNumberAsync (int? docnumber);
 
         /// <summary>
-        /// 
+        /// This call returns all associations by a docnumber
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber</param>
         /// <returns>Task of ApiResponse (List&lt;AssociationDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<AssociationDTO>>> AssociationsGetByDocNumberAsyncWithHttpInfo (int? docnumber);
         /// <summary>
-        /// 
+        /// This call returns the datasource for the profiles contained in a association
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="select"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="select">SelectDTO for returned columns settings</param>
         /// <returns>Task of List&lt;RowSearchResult&gt;</returns>
         System.Threading.Tasks.Task<List<RowSearchResult>> AssociationsGetByIdAsync (int? id, SelectDTO select);
 
         /// <summary>
-        /// 
+        /// This call returns the datasource for the profiles contained in a association
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="select"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="select">SelectDTO for returned columns settings</param>
         /// <returns>Task of ApiResponse (List&lt;RowSearchResult&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<RowSearchResult>>> AssociationsGetByIdAsyncWithHttpInfo (int? id, SelectDTO select);
         /// <summary>
-        /// 
+        /// This call add profiles in a new association with auto generated name
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">Docnumbers of the profiles to add</param>
         /// <returns>Task of List&lt;AssociationDTO&gt;</returns>
         System.Threading.Tasks.Task<List<AssociationDTO>> AssociationsInsertNewAsync (List<int?> docnumbers);
 
         /// <summary>
-        /// 
+        /// This call add profiles in a new association with auto generated name
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">Docnumbers of the profiles to add</param>
         /// <returns>Task of ApiResponse (List&lt;AssociationDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<AssociationDTO>>> AssociationsInsertNewAsyncWithHttpInfo (List<int?> docnumbers);
         /// <summary>
-        /// 
+        /// This call add profiles in an association by association Id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="docnumbers"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="docnumbers">Docnumbers for the profiles to add</param>
         /// <returns>Task of List&lt;AssociationDTO&gt;</returns>
         System.Threading.Tasks.Task<List<AssociationDTO>> AssociationsInsertWithIdAsync (int? id, List<int?> docnumbers);
 
         /// <summary>
-        /// 
+        /// This call add profiles in an association by association Id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="docnumbers"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="docnumbers">Docnumbers for the profiles to add</param>
         /// <returns>Task of ApiResponse (List&lt;AssociationDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<AssociationDTO>>> AssociationsInsertWithIdAsyncWithHttpInfo (int? id, List<int?> docnumbers);
         /// <summary>
-        /// 
+        /// This call add profiles to an existing association by association name
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="docnumbers"></param>
+        /// <param name="name">Name of the new association</param>
+        /// <param name="docnumbers">Docnumber to insert in this association</param>
         /// <returns>Task of List&lt;AssociationDTO&gt;</returns>
         System.Threading.Tasks.Task<List<AssociationDTO>> AssociationsInsertWithNameAsync (string name, List<int?> docnumbers);
 
         /// <summary>
-        /// 
+        /// This call add profiles to an existing association by association name
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="docnumbers"></param>
+        /// <param name="name">Name of the new association</param>
+        /// <param name="docnumbers">Docnumber to insert in this association</param>
         /// <returns>Task of ApiResponse (List&lt;AssociationDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<AssociationDTO>>> AssociationsInsertWithNameAsyncWithHttpInfo (string name, List<int?> docnumbers);
         /// <summary>
-        /// 
+        /// This call remove a profile from association
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="docnumber"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="docnumber">Docnumber of the profile to remove</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task AssociationsRemoveAsync (int? id, int? docnumber);
 
         /// <summary>
-        /// 
+        /// This call remove a profile from association
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="docnumber"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="docnumber">Docnumber of the profile to remove</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AssociationsRemoveAsyncWithHttpInfo (int? id, int? docnumber);
         /// <summary>
-        /// 
+        /// This call rename an existing association
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="name"></param>
+        /// <param name="id">Id of the association to rename</param>
+        /// <param name="name">New name</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task AssociationsRenameAsync (int? id, string name);
 
         /// <summary>
-        /// 
+        /// This call rename an existing association
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="name"></param>
+        /// <param name="id">Id of the association to rename</param>
+        /// <param name="name">New name</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AssociationsRenameAsyncWithHttpInfo (int? id, string name);
         #endregion Asynchronous Operations
@@ -545,10 +545,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call delete an existing association 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the association to delete</param>
         /// <returns></returns>
         public void AssociationsDelete (int? id)
         {
@@ -556,10 +556,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call delete an existing association 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the association to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> AssociationsDeleteWithHttpInfo (int? id)
         {
@@ -567,7 +567,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling AssociationsApi->AssociationsDelete");
 
-            var localVarPath = "/api/associations/{id}";
+            var localVarPath = "/api/Associations/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -619,10 +619,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call delete an existing association 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the association to delete</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task AssociationsDeleteAsync (int? id)
         {
@@ -631,10 +631,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call delete an existing association 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the association to delete</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> AssociationsDeleteAsyncWithHttpInfo (int? id)
         {
@@ -642,7 +642,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling AssociationsApi->AssociationsDelete");
 
-            var localVarPath = "/api/associations/{id}";
+            var localVarPath = "/api/Associations/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -693,7 +693,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This calls return all ARXivar associations 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;AssociationDTO&gt;</returns>
@@ -704,14 +704,14 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This calls return all ARXivar associations 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;AssociationDTO&gt;</returns>
         public ApiResponse< List<AssociationDTO> > AssociationsGetWithHttpInfo ()
         {
 
-            var localVarPath = "/api/associations";
+            var localVarPath = "/api/Associations";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -766,7 +766,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This calls return all ARXivar associations 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;AssociationDTO&gt;</returns>
@@ -778,14 +778,14 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This calls return all ARXivar associations 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;AssociationDTO&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<AssociationDTO>>> AssociationsGetAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/associations";
+            var localVarPath = "/api/Associations";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -839,10 +839,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all associations by a docnumber 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber</param>
         /// <returns>List&lt;AssociationDTO&gt;</returns>
         public List<AssociationDTO> AssociationsGetByDocNumber (int? docnumber)
         {
@@ -851,10 +851,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all associations by a docnumber 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber</param>
         /// <returns>ApiResponse of List&lt;AssociationDTO&gt;</returns>
         public ApiResponse< List<AssociationDTO> > AssociationsGetByDocNumberWithHttpInfo (int? docnumber)
         {
@@ -862,7 +862,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling AssociationsApi->AssociationsGetByDocNumber");
 
-            var localVarPath = "/api/associations/docnumber/{docnumber}";
+            var localVarPath = "/api/Associations/docnumber/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -918,10 +918,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all associations by a docnumber 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber</param>
         /// <returns>Task of List&lt;AssociationDTO&gt;</returns>
         public async System.Threading.Tasks.Task<List<AssociationDTO>> AssociationsGetByDocNumberAsync (int? docnumber)
         {
@@ -931,10 +931,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all associations by a docnumber 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber</param>
         /// <returns>Task of ApiResponse (List&lt;AssociationDTO&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<AssociationDTO>>> AssociationsGetByDocNumberAsyncWithHttpInfo (int? docnumber)
         {
@@ -942,7 +942,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling AssociationsApi->AssociationsGetByDocNumber");
 
-            var localVarPath = "/api/associations/docnumber/{docnumber}";
+            var localVarPath = "/api/Associations/docnumber/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -997,11 +997,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the datasource for the profiles contained in a association 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="select"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="select">SelectDTO for returned columns settings</param>
         /// <returns>List&lt;RowSearchResult&gt;</returns>
         public List<RowSearchResult> AssociationsGetById (int? id, SelectDTO select)
         {
@@ -1010,11 +1010,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the datasource for the profiles contained in a association 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="select"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="select">SelectDTO for returned columns settings</param>
         /// <returns>ApiResponse of List&lt;RowSearchResult&gt;</returns>
         public ApiResponse< List<RowSearchResult> > AssociationsGetByIdWithHttpInfo (int? id, SelectDTO select)
         {
@@ -1025,7 +1025,7 @@ namespace IO.Swagger.Api
             if (select == null)
                 throw new ApiException(400, "Missing required parameter 'select' when calling AssociationsApi->AssociationsGetById");
 
-            var localVarPath = "/api/associations/items/{id}";
+            var localVarPath = "/api/Associations/items/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1094,11 +1094,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the datasource for the profiles contained in a association 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="select"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="select">SelectDTO for returned columns settings</param>
         /// <returns>Task of List&lt;RowSearchResult&gt;</returns>
         public async System.Threading.Tasks.Task<List<RowSearchResult>> AssociationsGetByIdAsync (int? id, SelectDTO select)
         {
@@ -1108,11 +1108,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the datasource for the profiles contained in a association 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="select"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="select">SelectDTO for returned columns settings</param>
         /// <returns>Task of ApiResponse (List&lt;RowSearchResult&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<RowSearchResult>>> AssociationsGetByIdAsyncWithHttpInfo (int? id, SelectDTO select)
         {
@@ -1123,7 +1123,7 @@ namespace IO.Swagger.Api
             if (select == null)
                 throw new ApiException(400, "Missing required parameter 'select' when calling AssociationsApi->AssociationsGetById");
 
-            var localVarPath = "/api/associations/items/{id}";
+            var localVarPath = "/api/Associations/items/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1191,10 +1191,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add profiles in a new association with auto generated name 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">Docnumbers of the profiles to add</param>
         /// <returns>List&lt;AssociationDTO&gt;</returns>
         public List<AssociationDTO> AssociationsInsertNew (List<int?> docnumbers)
         {
@@ -1203,10 +1203,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add profiles in a new association with auto generated name 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">Docnumbers of the profiles to add</param>
         /// <returns>ApiResponse of List&lt;AssociationDTO&gt;</returns>
         public ApiResponse< List<AssociationDTO> > AssociationsInsertNewWithHttpInfo (List<int?> docnumbers)
         {
@@ -1214,7 +1214,7 @@ namespace IO.Swagger.Api
             if (docnumbers == null)
                 throw new ApiException(400, "Missing required parameter 'docnumbers' when calling AssociationsApi->AssociationsInsertNew");
 
-            var localVarPath = "/api/associations/insert/new";
+            var localVarPath = "/api/Associations/insert/new";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1282,10 +1282,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add profiles in a new association with auto generated name 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">Docnumbers of the profiles to add</param>
         /// <returns>Task of List&lt;AssociationDTO&gt;</returns>
         public async System.Threading.Tasks.Task<List<AssociationDTO>> AssociationsInsertNewAsync (List<int?> docnumbers)
         {
@@ -1295,10 +1295,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add profiles in a new association with auto generated name 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">Docnumbers of the profiles to add</param>
         /// <returns>Task of ApiResponse (List&lt;AssociationDTO&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<AssociationDTO>>> AssociationsInsertNewAsyncWithHttpInfo (List<int?> docnumbers)
         {
@@ -1306,7 +1306,7 @@ namespace IO.Swagger.Api
             if (docnumbers == null)
                 throw new ApiException(400, "Missing required parameter 'docnumbers' when calling AssociationsApi->AssociationsInsertNew");
 
-            var localVarPath = "/api/associations/insert/new";
+            var localVarPath = "/api/Associations/insert/new";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1373,11 +1373,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add profiles in an association by association Id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="docnumbers"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="docnumbers">Docnumbers for the profiles to add</param>
         /// <returns>List&lt;AssociationDTO&gt;</returns>
         public List<AssociationDTO> AssociationsInsertWithId (int? id, List<int?> docnumbers)
         {
@@ -1386,11 +1386,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add profiles in an association by association Id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="docnumbers"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="docnumbers">Docnumbers for the profiles to add</param>
         /// <returns>ApiResponse of List&lt;AssociationDTO&gt;</returns>
         public ApiResponse< List<AssociationDTO> > AssociationsInsertWithIdWithHttpInfo (int? id, List<int?> docnumbers)
         {
@@ -1401,7 +1401,7 @@ namespace IO.Swagger.Api
             if (docnumbers == null)
                 throw new ApiException(400, "Missing required parameter 'docnumbers' when calling AssociationsApi->AssociationsInsertWithId");
 
-            var localVarPath = "/api/associations/{id}";
+            var localVarPath = "/api/Associations/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1470,11 +1470,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add profiles in an association by association Id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="docnumbers"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="docnumbers">Docnumbers for the profiles to add</param>
         /// <returns>Task of List&lt;AssociationDTO&gt;</returns>
         public async System.Threading.Tasks.Task<List<AssociationDTO>> AssociationsInsertWithIdAsync (int? id, List<int?> docnumbers)
         {
@@ -1484,11 +1484,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add profiles in an association by association Id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="docnumbers"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="docnumbers">Docnumbers for the profiles to add</param>
         /// <returns>Task of ApiResponse (List&lt;AssociationDTO&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<AssociationDTO>>> AssociationsInsertWithIdAsyncWithHttpInfo (int? id, List<int?> docnumbers)
         {
@@ -1499,7 +1499,7 @@ namespace IO.Swagger.Api
             if (docnumbers == null)
                 throw new ApiException(400, "Missing required parameter 'docnumbers' when calling AssociationsApi->AssociationsInsertWithId");
 
-            var localVarPath = "/api/associations/{id}";
+            var localVarPath = "/api/Associations/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1567,11 +1567,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add profiles to an existing association by association name 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="docnumbers"></param>
+        /// <param name="name">Name of the new association</param>
+        /// <param name="docnumbers">Docnumber to insert in this association</param>
         /// <returns>List&lt;AssociationDTO&gt;</returns>
         public List<AssociationDTO> AssociationsInsertWithName (string name, List<int?> docnumbers)
         {
@@ -1580,11 +1580,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add profiles to an existing association by association name 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="docnumbers"></param>
+        /// <param name="name">Name of the new association</param>
+        /// <param name="docnumbers">Docnumber to insert in this association</param>
         /// <returns>ApiResponse of List&lt;AssociationDTO&gt;</returns>
         public ApiResponse< List<AssociationDTO> > AssociationsInsertWithNameWithHttpInfo (string name, List<int?> docnumbers)
         {
@@ -1595,7 +1595,7 @@ namespace IO.Swagger.Api
             if (docnumbers == null)
                 throw new ApiException(400, "Missing required parameter 'docnumbers' when calling AssociationsApi->AssociationsInsertWithName");
 
-            var localVarPath = "/api/associations/insert/name/{name}";
+            var localVarPath = "/api/Associations/insert/name/{name}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1664,11 +1664,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add profiles to an existing association by association name 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="docnumbers"></param>
+        /// <param name="name">Name of the new association</param>
+        /// <param name="docnumbers">Docnumber to insert in this association</param>
         /// <returns>Task of List&lt;AssociationDTO&gt;</returns>
         public async System.Threading.Tasks.Task<List<AssociationDTO>> AssociationsInsertWithNameAsync (string name, List<int?> docnumbers)
         {
@@ -1678,11 +1678,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add profiles to an existing association by association name 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="docnumbers"></param>
+        /// <param name="name">Name of the new association</param>
+        /// <param name="docnumbers">Docnumber to insert in this association</param>
         /// <returns>Task of ApiResponse (List&lt;AssociationDTO&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<AssociationDTO>>> AssociationsInsertWithNameAsyncWithHttpInfo (string name, List<int?> docnumbers)
         {
@@ -1693,7 +1693,7 @@ namespace IO.Swagger.Api
             if (docnumbers == null)
                 throw new ApiException(400, "Missing required parameter 'docnumbers' when calling AssociationsApi->AssociationsInsertWithName");
 
-            var localVarPath = "/api/associations/insert/name/{name}";
+            var localVarPath = "/api/Associations/insert/name/{name}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1761,11 +1761,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call remove a profile from association 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="docnumber"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="docnumber">Docnumber of the profile to remove</param>
         /// <returns></returns>
         public void AssociationsRemove (int? id, int? docnumber)
         {
@@ -1773,11 +1773,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call remove a profile from association 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="docnumber"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="docnumber">Docnumber of the profile to remove</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> AssociationsRemoveWithHttpInfo (int? id, int? docnumber)
         {
@@ -1788,7 +1788,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling AssociationsApi->AssociationsRemove");
 
-            var localVarPath = "/api/associations/{id}/docnumber/{docnumber}";
+            var localVarPath = "/api/Associations/{id}/docnumber/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1841,11 +1841,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call remove a profile from association 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="docnumber"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="docnumber">Docnumber of the profile to remove</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task AssociationsRemoveAsync (int? id, int? docnumber)
         {
@@ -1854,11 +1854,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call remove a profile from association 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="docnumber"></param>
+        /// <param name="id">Id of the association</param>
+        /// <param name="docnumber">Docnumber of the profile to remove</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> AssociationsRemoveAsyncWithHttpInfo (int? id, int? docnumber)
         {
@@ -1869,7 +1869,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling AssociationsApi->AssociationsRemove");
 
-            var localVarPath = "/api/associations/{id}/docnumber/{docnumber}";
+            var localVarPath = "/api/Associations/{id}/docnumber/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1921,11 +1921,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call rename an existing association 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="name"></param>
+        /// <param name="id">Id of the association to rename</param>
+        /// <param name="name">New name</param>
         /// <returns></returns>
         public void AssociationsRename (int? id, string name)
         {
@@ -1933,11 +1933,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call rename an existing association 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="name"></param>
+        /// <param name="id">Id of the association to rename</param>
+        /// <param name="name">New name</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> AssociationsRenameWithHttpInfo (int? id, string name)
         {
@@ -1948,7 +1948,7 @@ namespace IO.Swagger.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling AssociationsApi->AssociationsRename");
 
-            var localVarPath = "/api/associations/rename/{id}/{name}";
+            var localVarPath = "/api/Associations/rename/{id}/{name}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2001,11 +2001,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call rename an existing association 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="name"></param>
+        /// <param name="id">Id of the association to rename</param>
+        /// <param name="name">New name</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task AssociationsRenameAsync (int? id, string name)
         {
@@ -2014,11 +2014,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call rename an existing association 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="name"></param>
+        /// <param name="id">Id of the association to rename</param>
+        /// <param name="name">New name</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> AssociationsRenameAsyncWithHttpInfo (int? id, string name)
         {
@@ -2029,7 +2029,7 @@ namespace IO.Swagger.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling AssociationsApi->AssociationsRename");
 
-            var localVarPath = "/api/associations/rename/{id}/{name}";
+            var localVarPath = "/api/Associations/rename/{id}/{name}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

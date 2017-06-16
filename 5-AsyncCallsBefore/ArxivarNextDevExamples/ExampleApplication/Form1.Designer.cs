@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.errorLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -43,12 +44,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.buttonGetDocTypes = new System.Windows.Forms.Button();
             this.buttonGetAoo = new System.Windows.Forms.Button();
             this.aooTable = new System.Windows.Forms.DataGridView();
-            this.errorLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.buttonGetDocTypes = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -73,6 +73,12 @@
             this.statusStrip1.Size = new System.Drawing.Size(1087, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // errorLabel
+            // 
+            this.errorLabel.ForeColor = System.Drawing.Color.Red;
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(0, 17);
             // 
             // toolStrip1
             // 
@@ -169,7 +175,7 @@
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.Size = new System.Drawing.Size(126, 20);
             this.passwordTxt.TabIndex = 3;
-            this.passwordTxt.Text = "123..";
+            this.passwordTxt.Text = "123";
             // 
             // userTxt
             // 
@@ -219,16 +225,6 @@
             this.tabPage1.Text = "Aoo";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1079, 508);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "DocumentTypes";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -246,6 +242,16 @@
             this.splitContainer2.Size = new System.Drawing.Size(1073, 502);
             this.splitContainer2.SplitterDistance = 201;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // buttonGetDocTypes
+            // 
+            this.buttonGetDocTypes.Location = new System.Drawing.Point(6, 42);
+            this.buttonGetDocTypes.Name = "buttonGetDocTypes";
+            this.buttonGetDocTypes.Size = new System.Drawing.Size(192, 23);
+            this.buttonGetDocTypes.TabIndex = 1;
+            this.buttonGetDocTypes.Text = "get DocumentTypes";
+            this.buttonGetDocTypes.UseVisualStyleBackColor = true;
+            this.buttonGetDocTypes.Click += new System.EventHandler(this.buttonGetDocTypes_Click);
             // 
             // buttonGetAoo
             // 
@@ -266,21 +272,15 @@
             this.aooTable.Size = new System.Drawing.Size(868, 502);
             this.aooTable.TabIndex = 0;
             // 
-            // errorLabel
+            // tabPage2
             // 
-            this.errorLabel.ForeColor = System.Drawing.Color.Red;
-            this.errorLabel.Name = "errorLabel";
-            this.errorLabel.Size = new System.Drawing.Size(0, 17);
-            // 
-            // buttonGetDocTypes
-            // 
-            this.buttonGetDocTypes.Location = new System.Drawing.Point(6, 42);
-            this.buttonGetDocTypes.Name = "buttonGetDocTypes";
-            this.buttonGetDocTypes.Size = new System.Drawing.Size(192, 23);
-            this.buttonGetDocTypes.TabIndex = 1;
-            this.buttonGetDocTypes.Text = "get DocumentTypes";
-            this.buttonGetDocTypes.UseVisualStyleBackColor = true;
-            this.buttonGetDocTypes.Click += new System.EventHandler(this.buttonGetDocTypes_Click);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1079, 508);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "DocumentTypes";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

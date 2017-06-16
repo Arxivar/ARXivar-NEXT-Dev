@@ -37,709 +37,621 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// This call add a revision for the attachment by a existent revision
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="revisionId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
+        /// <param name="revisionId">Existent revision id</param>
         /// <returns></returns>
         void AttachmentsAttachmentRevisionByRevision (int? attachmentId, int? revisionId);
 
         /// <summary>
-        /// 
+        /// This call add a revision for the attachment by a existent revision
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="revisionId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
+        /// <param name="revisionId">Existent revision id</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> AttachmentsAttachmentRevisionByRevisionWithHttpInfo (int? attachmentId, int? revisionId);
         /// <summary>
-        /// 
+        /// This call converts an attachment file to the profile file
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
         /// <returns></returns>
         void AttachmentsConvertoToPrincipalDocument (int? attachmentId);
 
         /// <summary>
-        /// 
+        /// This call converts an attachment file to the profile file
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> AttachmentsConvertoToPrincipalDocumentWithHttpInfo (int? attachmentId);
         /// <summary>
-        /// 
+        /// This call delete an attachment by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">id of the attachment</param>
         /// <returns></returns>
         void AttachmentsDelete (int? id);
 
         /// <summary>
-        /// 
+        /// This call delete an attachment by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">id of the attachment</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> AttachmentsDeleteWithHttpInfo (int? id);
         /// <summary>
-        /// 
+        /// This call deletes revision by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
+        /// <param name="revisionId">Id of the revision</param>
         /// <returns></returns>
         void AttachmentsDeleteRevision (int? revisionId);
 
         /// <summary>
-        /// 
+        /// This call deletes revision by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
+        /// <param name="revisionId">Id of the revision</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> AttachmentsDeleteRevisionWithHttpInfo (int? revisionId);
         /// <summary>
-        /// 
+        /// This call retrieve all the attachments for a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>List&lt;AttachmentDTO&gt;</returns>
         List<AttachmentDTO> AttachmentsGetByDocnumber (int? docnumber);
 
         /// <summary>
-        /// 
+        /// This call retrieve all the attachments for a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>ApiResponse of List&lt;AttachmentDTO&gt;</returns>
         ApiResponse<List<AttachmentDTO>> AttachmentsGetByDocnumberWithHttpInfo (int? docnumber);
         /// <summary>
-        /// 
+        /// This call return the datasource for external and internal attachement for a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <returns>AttachmentsGridDTO</returns>
-        AttachmentsGridDTO AttachmentsGetByDocnumberForGrid (int? docnumber);
+        /// <param name="docnumber">Docnumber of the profile</param>
+        /// <returns>AttachmentsDataSourceDTO</returns>
+        AttachmentsDataSourceDTO AttachmentsGetByDocnumberForGrid (int? docnumber);
 
         /// <summary>
-        /// 
+        /// This call return the datasource for external and internal attachement for a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <returns>ApiResponse of AttachmentsGridDTO</returns>
-        ApiResponse<AttachmentsGridDTO> AttachmentsGetByDocnumberForGridWithHttpInfo (int? docnumber);
+        /// <param name="docnumber">Docnumber of the profile</param>
+        /// <returns>ApiResponse of AttachmentsDataSourceDTO</returns>
+        ApiResponse<AttachmentsDataSourceDTO> AttachmentsGetByDocnumberForGridWithHttpInfo (int? docnumber);
         /// <summary>
-        /// 
+        /// This call returns the attachment by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the attachment</param>
         /// <returns>AttachmentDTO</returns>
         AttachmentDTO AttachmentsGetById (int? id);
 
         /// <summary>
-        /// 
+        /// This call returns the attachment by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the attachment</param>
         /// <returns>ApiResponse of AttachmentDTO</returns>
         ApiResponse<AttachmentDTO> AttachmentsGetByIdWithHttpInfo (int? id);
         /// <summary>
-        /// 
+        /// This call retrieve the list of the revisions of an attachment
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns>Object</returns>
-        Object AttachmentsGetForExternalAttachment (int? id);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> AttachmentsGetForExternalAttachmentWithHttpInfo (int? id);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="revisionId"></param>
-        /// <returns>Object</returns>
-        Object AttachmentsGetRevisionDocumentById (int? attachmentId, int? revisionId);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="revisionId"></param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> AttachmentsGetRevisionDocumentByIdWithHttpInfo (int? attachmentId, int? revisionId);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
         /// <returns>List&lt;AttachmentRevisionDTO&gt;</returns>
         List<AttachmentRevisionDTO> AttachmentsGetRevisionsByAttachmentId (int? attachmentId);
 
         /// <summary>
-        /// 
+        /// This call retrieve the list of the revisions of an attachment
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
         /// <returns>ApiResponse of List&lt;AttachmentRevisionDTO&gt;</returns>
         ApiResponse<List<AttachmentRevisionDTO>> AttachmentsGetRevisionsByAttachmentIdWithHttpInfo (int? attachmentId);
         /// <summary>
-        /// 
+        /// This call add a new external attachment for a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="bufferid"></param>
-        /// <param name="docnumber"></param>
-        /// <param name="comment"></param>
+        /// <param name="bufferid">Buffer id for the file to attach</param>
+        /// <param name="docnumber">Docnumber of the profile</param>
+        /// <param name="comment">Comment for the new attachment</param>
         /// <returns>AttachmentDTO</returns>
         AttachmentDTO AttachmentsInsertExternal (string bufferid, int? docnumber, string comment);
 
         /// <summary>
-        /// 
+        /// This call add a new external attachment for a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="bufferid"></param>
-        /// <param name="docnumber"></param>
-        /// <param name="comment"></param>
+        /// <param name="bufferid">Buffer id for the file to attach</param>
+        /// <param name="docnumber">Docnumber of the profile</param>
+        /// <param name="comment">Comment for the new attachment</param>
         /// <returns>ApiResponse of AttachmentDTO</returns>
         ApiResponse<AttachmentDTO> AttachmentsInsertExternalWithHttpInfo (string bufferid, int? docnumber, string comment);
         /// <summary>
-        /// 
+        /// This call add a new internal attachment for a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentDocnumber"></param>
-        /// <param name="docnumber"></param>
+        /// <param name="attachmentDocnumber">Docnumber of the attachment</param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>AttachmentDTO</returns>
         AttachmentDTO AttachmentsInsertInternal (int? attachmentDocnumber, int? docnumber);
 
         /// <summary>
-        /// 
+        /// This call add a new internal attachment for a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentDocnumber"></param>
-        /// <param name="docnumber"></param>
+        /// <param name="attachmentDocnumber">Docnumber of the attachment</param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>ApiResponse of AttachmentDTO</returns>
         ApiResponse<AttachmentDTO> AttachmentsInsertInternalWithHttpInfo (int? attachmentDocnumber, int? docnumber);
         /// <summary>
-        /// 
+        /// This call return the permissions for an attachment
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the attachment</param>
         /// <returns>PermissionsDTO</returns>
         PermissionsDTO AttachmentsPermissionsById (int? id);
 
         /// <summary>
-        /// 
+        /// This call return the permissions for an attachment
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the attachment</param>
         /// <returns>ApiResponse of PermissionsDTO</returns>
         ApiResponse<PermissionsDTO> AttachmentsPermissionsByIdWithHttpInfo (int? id);
         /// <summary>
-        /// 
+        /// This call update attachment file
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="bufferId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
+        /// <param name="bufferId">Bufferid of the file</param>
         /// <returns></returns>
         void AttachmentsPutAttachmentDocument (int? attachmentId, string bufferId);
 
         /// <summary>
-        /// 
+        /// This call update attachment file
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="bufferId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
+        /// <param name="bufferId">Bufferid of the file</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> AttachmentsPutAttachmentDocumentWithHttpInfo (int? attachmentId, string bufferId);
         /// <summary>
-        /// 
+        /// This call updates a attachment by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="attachment"></param>
+        /// <param name="id">Id of the attachment</param>
+        /// <param name="attachment">Dto for the update</param>
         /// <returns></returns>
         void AttachmentsUpdate (int? id, AttachmentDTO attachment);
 
         /// <summary>
-        /// 
+        /// This call updates a attachment by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="attachment"></param>
+        /// <param name="id">Id of the attachment</param>
+        /// <param name="attachment">Dto for the update</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> AttachmentsUpdateWithHttpInfo (int? id, AttachmentDTO attachment);
         /// <summary>
-        /// 
+        /// This call updates permission of an attachment
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="id">Id of the attachment</param>
+        /// <param name="permissions">Updated permissions</param>
         /// <returns></returns>
         void AttachmentsWritePermissionsById (int? id, PermissionsDTO permissions);
 
         /// <summary>
-        /// 
+        /// This call updates permission of an attachment
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="id">Id of the attachment</param>
+        /// <param name="permissions">Updated permissions</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> AttachmentsWritePermissionsByIdWithHttpInfo (int? id, PermissionsDTO permissions);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// This call add a revision for the attachment by a existent revision
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="revisionId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
+        /// <param name="revisionId">Existent revision id</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task AttachmentsAttachmentRevisionByRevisionAsync (int? attachmentId, int? revisionId);
 
         /// <summary>
-        /// 
+        /// This call add a revision for the attachment by a existent revision
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="revisionId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
+        /// <param name="revisionId">Existent revision id</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AttachmentsAttachmentRevisionByRevisionAsyncWithHttpInfo (int? attachmentId, int? revisionId);
         /// <summary>
-        /// 
+        /// This call converts an attachment file to the profile file
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task AttachmentsConvertoToPrincipalDocumentAsync (int? attachmentId);
 
         /// <summary>
-        /// 
+        /// This call converts an attachment file to the profile file
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AttachmentsConvertoToPrincipalDocumentAsyncWithHttpInfo (int? attachmentId);
         /// <summary>
-        /// 
+        /// This call delete an attachment by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">id of the attachment</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task AttachmentsDeleteAsync (int? id);
 
         /// <summary>
-        /// 
+        /// This call delete an attachment by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">id of the attachment</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AttachmentsDeleteAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// 
+        /// This call deletes revision by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
+        /// <param name="revisionId">Id of the revision</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task AttachmentsDeleteRevisionAsync (int? revisionId);
 
         /// <summary>
-        /// 
+        /// This call deletes revision by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
+        /// <param name="revisionId">Id of the revision</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AttachmentsDeleteRevisionAsyncWithHttpInfo (int? revisionId);
         /// <summary>
-        /// 
+        /// This call retrieve all the attachments for a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of List&lt;AttachmentDTO&gt;</returns>
         System.Threading.Tasks.Task<List<AttachmentDTO>> AttachmentsGetByDocnumberAsync (int? docnumber);
 
         /// <summary>
-        /// 
+        /// This call retrieve all the attachments for a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of ApiResponse (List&lt;AttachmentDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<AttachmentDTO>>> AttachmentsGetByDocnumberAsyncWithHttpInfo (int? docnumber);
         /// <summary>
-        /// 
+        /// This call return the datasource for external and internal attachement for a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <returns>Task of AttachmentsGridDTO</returns>
-        System.Threading.Tasks.Task<AttachmentsGridDTO> AttachmentsGetByDocnumberForGridAsync (int? docnumber);
+        /// <param name="docnumber">Docnumber of the profile</param>
+        /// <returns>Task of AttachmentsDataSourceDTO</returns>
+        System.Threading.Tasks.Task<AttachmentsDataSourceDTO> AttachmentsGetByDocnumberForGridAsync (int? docnumber);
 
         /// <summary>
-        /// 
+        /// This call return the datasource for external and internal attachement for a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <returns>Task of ApiResponse (AttachmentsGridDTO)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AttachmentsGridDTO>> AttachmentsGetByDocnumberForGridAsyncWithHttpInfo (int? docnumber);
+        /// <param name="docnumber">Docnumber of the profile</param>
+        /// <returns>Task of ApiResponse (AttachmentsDataSourceDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AttachmentsDataSourceDTO>> AttachmentsGetByDocnumberForGridAsyncWithHttpInfo (int? docnumber);
         /// <summary>
-        /// 
+        /// This call returns the attachment by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the attachment</param>
         /// <returns>Task of AttachmentDTO</returns>
         System.Threading.Tasks.Task<AttachmentDTO> AttachmentsGetByIdAsync (int? id);
 
         /// <summary>
-        /// 
+        /// This call returns the attachment by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the attachment</param>
         /// <returns>Task of ApiResponse (AttachmentDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<AttachmentDTO>> AttachmentsGetByIdAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// 
+        /// This call retrieve the list of the revisions of an attachment
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> AttachmentsGetForExternalAttachmentAsync (int? id);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AttachmentsGetForExternalAttachmentAsyncWithHttpInfo (int? id);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="revisionId"></param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> AttachmentsGetRevisionDocumentByIdAsync (int? attachmentId, int? revisionId);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="revisionId"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AttachmentsGetRevisionDocumentByIdAsyncWithHttpInfo (int? attachmentId, int? revisionId);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
         /// <returns>Task of List&lt;AttachmentRevisionDTO&gt;</returns>
         System.Threading.Tasks.Task<List<AttachmentRevisionDTO>> AttachmentsGetRevisionsByAttachmentIdAsync (int? attachmentId);
 
         /// <summary>
-        /// 
+        /// This call retrieve the list of the revisions of an attachment
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
         /// <returns>Task of ApiResponse (List&lt;AttachmentRevisionDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<AttachmentRevisionDTO>>> AttachmentsGetRevisionsByAttachmentIdAsyncWithHttpInfo (int? attachmentId);
         /// <summary>
-        /// 
+        /// This call add a new external attachment for a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="bufferid"></param>
-        /// <param name="docnumber"></param>
-        /// <param name="comment"></param>
+        /// <param name="bufferid">Buffer id for the file to attach</param>
+        /// <param name="docnumber">Docnumber of the profile</param>
+        /// <param name="comment">Comment for the new attachment</param>
         /// <returns>Task of AttachmentDTO</returns>
         System.Threading.Tasks.Task<AttachmentDTO> AttachmentsInsertExternalAsync (string bufferid, int? docnumber, string comment);
 
         /// <summary>
-        /// 
+        /// This call add a new external attachment for a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="bufferid"></param>
-        /// <param name="docnumber"></param>
-        /// <param name="comment"></param>
+        /// <param name="bufferid">Buffer id for the file to attach</param>
+        /// <param name="docnumber">Docnumber of the profile</param>
+        /// <param name="comment">Comment for the new attachment</param>
         /// <returns>Task of ApiResponse (AttachmentDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<AttachmentDTO>> AttachmentsInsertExternalAsyncWithHttpInfo (string bufferid, int? docnumber, string comment);
         /// <summary>
-        /// 
+        /// This call add a new internal attachment for a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentDocnumber"></param>
-        /// <param name="docnumber"></param>
+        /// <param name="attachmentDocnumber">Docnumber of the attachment</param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of AttachmentDTO</returns>
         System.Threading.Tasks.Task<AttachmentDTO> AttachmentsInsertInternalAsync (int? attachmentDocnumber, int? docnumber);
 
         /// <summary>
-        /// 
+        /// This call add a new internal attachment for a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentDocnumber"></param>
-        /// <param name="docnumber"></param>
+        /// <param name="attachmentDocnumber">Docnumber of the attachment</param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of ApiResponse (AttachmentDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<AttachmentDTO>> AttachmentsInsertInternalAsyncWithHttpInfo (int? attachmentDocnumber, int? docnumber);
         /// <summary>
-        /// 
+        /// This call return the permissions for an attachment
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the attachment</param>
         /// <returns>Task of PermissionsDTO</returns>
         System.Threading.Tasks.Task<PermissionsDTO> AttachmentsPermissionsByIdAsync (int? id);
 
         /// <summary>
-        /// 
+        /// This call return the permissions for an attachment
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the attachment</param>
         /// <returns>Task of ApiResponse (PermissionsDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<PermissionsDTO>> AttachmentsPermissionsByIdAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// 
+        /// This call update attachment file
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="bufferId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
+        /// <param name="bufferId">Bufferid of the file</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task AttachmentsPutAttachmentDocumentAsync (int? attachmentId, string bufferId);
 
         /// <summary>
-        /// 
+        /// This call update attachment file
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="bufferId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
+        /// <param name="bufferId">Bufferid of the file</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AttachmentsPutAttachmentDocumentAsyncWithHttpInfo (int? attachmentId, string bufferId);
         /// <summary>
-        /// 
+        /// This call updates a attachment by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="attachment"></param>
+        /// <param name="id">Id of the attachment</param>
+        /// <param name="attachment">Dto for the update</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task AttachmentsUpdateAsync (int? id, AttachmentDTO attachment);
 
         /// <summary>
-        /// 
+        /// This call updates a attachment by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="attachment"></param>
+        /// <param name="id">Id of the attachment</param>
+        /// <param name="attachment">Dto for the update</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AttachmentsUpdateAsyncWithHttpInfo (int? id, AttachmentDTO attachment);
         /// <summary>
-        /// 
+        /// This call updates permission of an attachment
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="id">Id of the attachment</param>
+        /// <param name="permissions">Updated permissions</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task AttachmentsWritePermissionsByIdAsync (int? id, PermissionsDTO permissions);
 
         /// <summary>
-        /// 
+        /// This call updates permission of an attachment
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="id">Id of the attachment</param>
+        /// <param name="permissions">Updated permissions</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AttachmentsWritePermissionsByIdAsyncWithHttpInfo (int? id, PermissionsDTO permissions);
         #endregion Asynchronous Operations
@@ -855,11 +767,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add a revision for the attachment by a existent revision 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="revisionId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
+        /// <param name="revisionId">Existent revision id</param>
         /// <returns></returns>
         public void AttachmentsAttachmentRevisionByRevision (int? attachmentId, int? revisionId)
         {
@@ -867,11 +779,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add a revision for the attachment by a existent revision 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="revisionId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
+        /// <param name="revisionId">Existent revision id</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> AttachmentsAttachmentRevisionByRevisionWithHttpInfo (int? attachmentId, int? revisionId)
         {
@@ -882,7 +794,7 @@ namespace IO.Swagger.Api
             if (revisionId == null)
                 throw new ApiException(400, "Missing required parameter 'revisionId' when calling AttachmentsApi->AttachmentsAttachmentRevisionByRevision");
 
-            var localVarPath = "/api/attachments/{attachmentId}/Revisions/{revisionId}";
+            var localVarPath = "/api/Attachments/{attachmentId}/Revisions/{revisionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -935,11 +847,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add a revision for the attachment by a existent revision 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="revisionId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
+        /// <param name="revisionId">Existent revision id</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task AttachmentsAttachmentRevisionByRevisionAsync (int? attachmentId, int? revisionId)
         {
@@ -948,11 +860,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add a revision for the attachment by a existent revision 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="revisionId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
+        /// <param name="revisionId">Existent revision id</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> AttachmentsAttachmentRevisionByRevisionAsyncWithHttpInfo (int? attachmentId, int? revisionId)
         {
@@ -963,7 +875,7 @@ namespace IO.Swagger.Api
             if (revisionId == null)
                 throw new ApiException(400, "Missing required parameter 'revisionId' when calling AttachmentsApi->AttachmentsAttachmentRevisionByRevision");
 
-            var localVarPath = "/api/attachments/{attachmentId}/Revisions/{revisionId}";
+            var localVarPath = "/api/Attachments/{attachmentId}/Revisions/{revisionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1015,10 +927,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call converts an attachment file to the profile file 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
         /// <returns></returns>
         public void AttachmentsConvertoToPrincipalDocument (int? attachmentId)
         {
@@ -1026,10 +938,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call converts an attachment file to the profile file 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> AttachmentsConvertoToPrincipalDocumentWithHttpInfo (int? attachmentId)
         {
@@ -1037,7 +949,7 @@ namespace IO.Swagger.Api
             if (attachmentId == null)
                 throw new ApiException(400, "Missing required parameter 'attachmentId' when calling AttachmentsApi->AttachmentsConvertoToPrincipalDocument");
 
-            var localVarPath = "/api/attachments/{attachmentId}/convertToPrincipal";
+            var localVarPath = "/api/Attachments/{attachmentId}/convertToPrincipal";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1089,10 +1001,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call converts an attachment file to the profile file 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task AttachmentsConvertoToPrincipalDocumentAsync (int? attachmentId)
         {
@@ -1101,10 +1013,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call converts an attachment file to the profile file 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> AttachmentsConvertoToPrincipalDocumentAsyncWithHttpInfo (int? attachmentId)
         {
@@ -1112,7 +1024,7 @@ namespace IO.Swagger.Api
             if (attachmentId == null)
                 throw new ApiException(400, "Missing required parameter 'attachmentId' when calling AttachmentsApi->AttachmentsConvertoToPrincipalDocument");
 
-            var localVarPath = "/api/attachments/{attachmentId}/convertToPrincipal";
+            var localVarPath = "/api/Attachments/{attachmentId}/convertToPrincipal";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1163,10 +1075,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call delete an attachment by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">id of the attachment</param>
         /// <returns></returns>
         public void AttachmentsDelete (int? id)
         {
@@ -1174,10 +1086,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call delete an attachment by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">id of the attachment</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> AttachmentsDeleteWithHttpInfo (int? id)
         {
@@ -1185,7 +1097,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling AttachmentsApi->AttachmentsDelete");
 
-            var localVarPath = "/api/attachments/{id}";
+            var localVarPath = "/api/Attachments/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1237,10 +1149,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call delete an attachment by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">id of the attachment</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task AttachmentsDeleteAsync (int? id)
         {
@@ -1249,10 +1161,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call delete an attachment by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">id of the attachment</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> AttachmentsDeleteAsyncWithHttpInfo (int? id)
         {
@@ -1260,7 +1172,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling AttachmentsApi->AttachmentsDelete");
 
-            var localVarPath = "/api/attachments/{id}";
+            var localVarPath = "/api/Attachments/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1311,10 +1223,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call deletes revision by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
+        /// <param name="revisionId">Id of the revision</param>
         /// <returns></returns>
         public void AttachmentsDeleteRevision (int? revisionId)
         {
@@ -1322,10 +1234,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call deletes revision by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
+        /// <param name="revisionId">Id of the revision</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> AttachmentsDeleteRevisionWithHttpInfo (int? revisionId)
         {
@@ -1333,7 +1245,7 @@ namespace IO.Swagger.Api
             if (revisionId == null)
                 throw new ApiException(400, "Missing required parameter 'revisionId' when calling AttachmentsApi->AttachmentsDeleteRevision");
 
-            var localVarPath = "/api/attachments/Revisions/{revisionId}";
+            var localVarPath = "/api/Attachments/Revisions/{revisionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1385,10 +1297,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call deletes revision by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
+        /// <param name="revisionId">Id of the revision</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task AttachmentsDeleteRevisionAsync (int? revisionId)
         {
@@ -1397,10 +1309,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call deletes revision by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
+        /// <param name="revisionId">Id of the revision</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> AttachmentsDeleteRevisionAsyncWithHttpInfo (int? revisionId)
         {
@@ -1408,7 +1320,7 @@ namespace IO.Swagger.Api
             if (revisionId == null)
                 throw new ApiException(400, "Missing required parameter 'revisionId' when calling AttachmentsApi->AttachmentsDeleteRevision");
 
-            var localVarPath = "/api/attachments/Revisions/{revisionId}";
+            var localVarPath = "/api/Attachments/Revisions/{revisionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1459,10 +1371,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call retrieve all the attachments for a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>List&lt;AttachmentDTO&gt;</returns>
         public List<AttachmentDTO> AttachmentsGetByDocnumber (int? docnumber)
         {
@@ -1471,10 +1383,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call retrieve all the attachments for a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>ApiResponse of List&lt;AttachmentDTO&gt;</returns>
         public ApiResponse< List<AttachmentDTO> > AttachmentsGetByDocnumberWithHttpInfo (int? docnumber)
         {
@@ -1482,7 +1394,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling AttachmentsApi->AttachmentsGetByDocnumber");
 
-            var localVarPath = "/api/attachments/docnumber/{docnumber}";
+            var localVarPath = "/api/Attachments/docnumber/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1538,10 +1450,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call retrieve all the attachments for a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of List&lt;AttachmentDTO&gt;</returns>
         public async System.Threading.Tasks.Task<List<AttachmentDTO>> AttachmentsGetByDocnumberAsync (int? docnumber)
         {
@@ -1551,10 +1463,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call retrieve all the attachments for a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of ApiResponse (List&lt;AttachmentDTO&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<AttachmentDTO>>> AttachmentsGetByDocnumberAsyncWithHttpInfo (int? docnumber)
         {
@@ -1562,7 +1474,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling AttachmentsApi->AttachmentsGetByDocnumber");
 
-            var localVarPath = "/api/attachments/docnumber/{docnumber}";
+            var localVarPath = "/api/Attachments/docnumber/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1617,30 +1529,30 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the datasource for external and internal attachement for a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <returns>AttachmentsGridDTO</returns>
-        public AttachmentsGridDTO AttachmentsGetByDocnumberForGrid (int? docnumber)
+        /// <param name="docnumber">Docnumber of the profile</param>
+        /// <returns>AttachmentsDataSourceDTO</returns>
+        public AttachmentsDataSourceDTO AttachmentsGetByDocnumberForGrid (int? docnumber)
         {
-             ApiResponse<AttachmentsGridDTO> localVarResponse = AttachmentsGetByDocnumberForGridWithHttpInfo(docnumber);
+             ApiResponse<AttachmentsDataSourceDTO> localVarResponse = AttachmentsGetByDocnumberForGridWithHttpInfo(docnumber);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        ///  
+        /// This call return the datasource for external and internal attachement for a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <returns>ApiResponse of AttachmentsGridDTO</returns>
-        public ApiResponse< AttachmentsGridDTO > AttachmentsGetByDocnumberForGridWithHttpInfo (int? docnumber)
+        /// <param name="docnumber">Docnumber of the profile</param>
+        /// <returns>ApiResponse of AttachmentsDataSourceDTO</returns>
+        public ApiResponse< AttachmentsDataSourceDTO > AttachmentsGetByDocnumberForGridWithHttpInfo (int? docnumber)
         {
             // verify the required parameter 'docnumber' is set
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling AttachmentsApi->AttachmentsGetByDocnumberForGrid");
 
-            var localVarPath = "/api/attachments/docnumber/{docnumber}/grid";
+            var localVarPath = "/api/Attachments/docnumber/{docnumber}/grid";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1689,38 +1601,38 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<AttachmentsGridDTO>(localVarStatusCode,
+            return new ApiResponse<AttachmentsDataSourceDTO>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AttachmentsGridDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AttachmentsGridDTO)));
+                (AttachmentsDataSourceDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AttachmentsDataSourceDTO)));
             
         }
 
         /// <summary>
-        ///  
+        /// This call return the datasource for external and internal attachement for a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <returns>Task of AttachmentsGridDTO</returns>
-        public async System.Threading.Tasks.Task<AttachmentsGridDTO> AttachmentsGetByDocnumberForGridAsync (int? docnumber)
+        /// <param name="docnumber">Docnumber of the profile</param>
+        /// <returns>Task of AttachmentsDataSourceDTO</returns>
+        public async System.Threading.Tasks.Task<AttachmentsDataSourceDTO> AttachmentsGetByDocnumberForGridAsync (int? docnumber)
         {
-             ApiResponse<AttachmentsGridDTO> localVarResponse = await AttachmentsGetByDocnumberForGridAsyncWithHttpInfo(docnumber);
+             ApiResponse<AttachmentsDataSourceDTO> localVarResponse = await AttachmentsGetByDocnumberForGridAsyncWithHttpInfo(docnumber);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        ///  
+        /// This call return the datasource for external and internal attachement for a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <returns>Task of ApiResponse (AttachmentsGridDTO)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AttachmentsGridDTO>> AttachmentsGetByDocnumberForGridAsyncWithHttpInfo (int? docnumber)
+        /// <param name="docnumber">Docnumber of the profile</param>
+        /// <returns>Task of ApiResponse (AttachmentsDataSourceDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AttachmentsDataSourceDTO>> AttachmentsGetByDocnumberForGridAsyncWithHttpInfo (int? docnumber)
         {
             // verify the required parameter 'docnumber' is set
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling AttachmentsApi->AttachmentsGetByDocnumberForGrid");
 
-            var localVarPath = "/api/attachments/docnumber/{docnumber}/grid";
+            var localVarPath = "/api/Attachments/docnumber/{docnumber}/grid";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1768,17 +1680,17 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<AttachmentsGridDTO>(localVarStatusCode,
+            return new ApiResponse<AttachmentsDataSourceDTO>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AttachmentsGridDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AttachmentsGridDTO)));
+                (AttachmentsDataSourceDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AttachmentsDataSourceDTO)));
             
         }
 
         /// <summary>
-        ///  
+        /// This call returns the attachment by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the attachment</param>
         /// <returns>AttachmentDTO</returns>
         public AttachmentDTO AttachmentsGetById (int? id)
         {
@@ -1787,10 +1699,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the attachment by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the attachment</param>
         /// <returns>ApiResponse of AttachmentDTO</returns>
         public ApiResponse< AttachmentDTO > AttachmentsGetByIdWithHttpInfo (int? id)
         {
@@ -1798,7 +1710,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling AttachmentsApi->AttachmentsGetById");
 
-            var localVarPath = "/api/attachments/{id}";
+            var localVarPath = "/api/Attachments/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1854,10 +1766,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the attachment by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the attachment</param>
         /// <returns>Task of AttachmentDTO</returns>
         public async System.Threading.Tasks.Task<AttachmentDTO> AttachmentsGetByIdAsync (int? id)
         {
@@ -1867,10 +1779,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the attachment by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the attachment</param>
         /// <returns>Task of ApiResponse (AttachmentDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AttachmentDTO>> AttachmentsGetByIdAsyncWithHttpInfo (int? id)
         {
@@ -1878,7 +1790,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling AttachmentsApi->AttachmentsGetById");
 
-            var localVarPath = "/api/attachments/{id}";
+            var localVarPath = "/api/Attachments/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1933,338 +1845,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call retrieve the list of the revisions of an attachment 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns>Object</returns>
-        public Object AttachmentsGetForExternalAttachment (int? id)
-        {
-             ApiResponse<Object> localVarResponse = AttachmentsGetForExternalAttachmentWithHttpInfo(id);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > AttachmentsGetForExternalAttachmentWithHttpInfo (int? id)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AttachmentsApi->AttachmentsGetForExternalAttachment");
-
-            var localVarPath = "/api/attachments/documents/{id}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("AttachmentsGetForExternalAttachment", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> AttachmentsGetForExternalAttachmentAsync (int? id)
-        {
-             ApiResponse<Object> localVarResponse = await AttachmentsGetForExternalAttachmentAsyncWithHttpInfo(id);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> AttachmentsGetForExternalAttachmentAsyncWithHttpInfo (int? id)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AttachmentsApi->AttachmentsGetForExternalAttachment");
-
-            var localVarPath = "/api/attachments/documents/{id}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("AttachmentsGetForExternalAttachment", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="revisionId"></param>
-        /// <returns>Object</returns>
-        public Object AttachmentsGetRevisionDocumentById (int? attachmentId, int? revisionId)
-        {
-             ApiResponse<Object> localVarResponse = AttachmentsGetRevisionDocumentByIdWithHttpInfo(attachmentId, revisionId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="revisionId"></param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > AttachmentsGetRevisionDocumentByIdWithHttpInfo (int? attachmentId, int? revisionId)
-        {
-            // verify the required parameter 'attachmentId' is set
-            if (attachmentId == null)
-                throw new ApiException(400, "Missing required parameter 'attachmentId' when calling AttachmentsApi->AttachmentsGetRevisionDocumentById");
-            // verify the required parameter 'revisionId' is set
-            if (revisionId == null)
-                throw new ApiException(400, "Missing required parameter 'revisionId' when calling AttachmentsApi->AttachmentsGetRevisionDocumentById");
-
-            var localVarPath = "/api/attachments/{attachmentId}/revisions/{revisionId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (attachmentId != null) localVarPathParams.Add("attachmentId", Configuration.ApiClient.ParameterToString(attachmentId)); // path parameter
-            if (revisionId != null) localVarPathParams.Add("revisionId", Configuration.ApiClient.ParameterToString(revisionId)); // path parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("AttachmentsGetRevisionDocumentById", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="revisionId"></param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> AttachmentsGetRevisionDocumentByIdAsync (int? attachmentId, int? revisionId)
-        {
-             ApiResponse<Object> localVarResponse = await AttachmentsGetRevisionDocumentByIdAsyncWithHttpInfo(attachmentId, revisionId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="revisionId"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> AttachmentsGetRevisionDocumentByIdAsyncWithHttpInfo (int? attachmentId, int? revisionId)
-        {
-            // verify the required parameter 'attachmentId' is set
-            if (attachmentId == null)
-                throw new ApiException(400, "Missing required parameter 'attachmentId' when calling AttachmentsApi->AttachmentsGetRevisionDocumentById");
-            // verify the required parameter 'revisionId' is set
-            if (revisionId == null)
-                throw new ApiException(400, "Missing required parameter 'revisionId' when calling AttachmentsApi->AttachmentsGetRevisionDocumentById");
-
-            var localVarPath = "/api/attachments/{attachmentId}/revisions/{revisionId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (attachmentId != null) localVarPathParams.Add("attachmentId", Configuration.ApiClient.ParameterToString(attachmentId)); // path parameter
-            if (revisionId != null) localVarPathParams.Add("revisionId", Configuration.ApiClient.ParameterToString(revisionId)); // path parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("AttachmentsGetRevisionDocumentById", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
         /// <returns>List&lt;AttachmentRevisionDTO&gt;</returns>
         public List<AttachmentRevisionDTO> AttachmentsGetRevisionsByAttachmentId (int? attachmentId)
         {
@@ -2273,10 +1857,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call retrieve the list of the revisions of an attachment 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
         /// <returns>ApiResponse of List&lt;AttachmentRevisionDTO&gt;</returns>
         public ApiResponse< List<AttachmentRevisionDTO> > AttachmentsGetRevisionsByAttachmentIdWithHttpInfo (int? attachmentId)
         {
@@ -2284,7 +1868,7 @@ namespace IO.Swagger.Api
             if (attachmentId == null)
                 throw new ApiException(400, "Missing required parameter 'attachmentId' when calling AttachmentsApi->AttachmentsGetRevisionsByAttachmentId");
 
-            var localVarPath = "/api/attachments/{attachmentId}/Revisions";
+            var localVarPath = "/api/Attachments/{attachmentId}/Revisions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2340,10 +1924,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call retrieve the list of the revisions of an attachment 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
         /// <returns>Task of List&lt;AttachmentRevisionDTO&gt;</returns>
         public async System.Threading.Tasks.Task<List<AttachmentRevisionDTO>> AttachmentsGetRevisionsByAttachmentIdAsync (int? attachmentId)
         {
@@ -2353,10 +1937,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call retrieve the list of the revisions of an attachment 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
         /// <returns>Task of ApiResponse (List&lt;AttachmentRevisionDTO&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<AttachmentRevisionDTO>>> AttachmentsGetRevisionsByAttachmentIdAsyncWithHttpInfo (int? attachmentId)
         {
@@ -2364,7 +1948,7 @@ namespace IO.Swagger.Api
             if (attachmentId == null)
                 throw new ApiException(400, "Missing required parameter 'attachmentId' when calling AttachmentsApi->AttachmentsGetRevisionsByAttachmentId");
 
-            var localVarPath = "/api/attachments/{attachmentId}/Revisions";
+            var localVarPath = "/api/Attachments/{attachmentId}/Revisions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2419,12 +2003,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add a new external attachment for a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="bufferid"></param>
-        /// <param name="docnumber"></param>
-        /// <param name="comment"></param>
+        /// <param name="bufferid">Buffer id for the file to attach</param>
+        /// <param name="docnumber">Docnumber of the profile</param>
+        /// <param name="comment">Comment for the new attachment</param>
         /// <returns>AttachmentDTO</returns>
         public AttachmentDTO AttachmentsInsertExternal (string bufferid, int? docnumber, string comment)
         {
@@ -2433,12 +2017,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add a new external attachment for a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="bufferid"></param>
-        /// <param name="docnumber"></param>
-        /// <param name="comment"></param>
+        /// <param name="bufferid">Buffer id for the file to attach</param>
+        /// <param name="docnumber">Docnumber of the profile</param>
+        /// <param name="comment">Comment for the new attachment</param>
         /// <returns>ApiResponse of AttachmentDTO</returns>
         public ApiResponse< AttachmentDTO > AttachmentsInsertExternalWithHttpInfo (string bufferid, int? docnumber, string comment)
         {
@@ -2452,7 +2036,7 @@ namespace IO.Swagger.Api
             if (comment == null)
                 throw new ApiException(400, "Missing required parameter 'comment' when calling AttachmentsApi->AttachmentsInsertExternal");
 
-            var localVarPath = "/api/attachments/InsertExternal/{bufferid}/{docnumber}";
+            var localVarPath = "/api/Attachments/InsertExternal/{bufferid}/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2522,12 +2106,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add a new external attachment for a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="bufferid"></param>
-        /// <param name="docnumber"></param>
-        /// <param name="comment"></param>
+        /// <param name="bufferid">Buffer id for the file to attach</param>
+        /// <param name="docnumber">Docnumber of the profile</param>
+        /// <param name="comment">Comment for the new attachment</param>
         /// <returns>Task of AttachmentDTO</returns>
         public async System.Threading.Tasks.Task<AttachmentDTO> AttachmentsInsertExternalAsync (string bufferid, int? docnumber, string comment)
         {
@@ -2537,12 +2121,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add a new external attachment for a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="bufferid"></param>
-        /// <param name="docnumber"></param>
-        /// <param name="comment"></param>
+        /// <param name="bufferid">Buffer id for the file to attach</param>
+        /// <param name="docnumber">Docnumber of the profile</param>
+        /// <param name="comment">Comment for the new attachment</param>
         /// <returns>Task of ApiResponse (AttachmentDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AttachmentDTO>> AttachmentsInsertExternalAsyncWithHttpInfo (string bufferid, int? docnumber, string comment)
         {
@@ -2556,7 +2140,7 @@ namespace IO.Swagger.Api
             if (comment == null)
                 throw new ApiException(400, "Missing required parameter 'comment' when calling AttachmentsApi->AttachmentsInsertExternal");
 
-            var localVarPath = "/api/attachments/InsertExternal/{bufferid}/{docnumber}";
+            var localVarPath = "/api/Attachments/InsertExternal/{bufferid}/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2625,11 +2209,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add a new internal attachment for a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentDocnumber"></param>
-        /// <param name="docnumber"></param>
+        /// <param name="attachmentDocnumber">Docnumber of the attachment</param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>AttachmentDTO</returns>
         public AttachmentDTO AttachmentsInsertInternal (int? attachmentDocnumber, int? docnumber)
         {
@@ -2638,11 +2222,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add a new internal attachment for a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentDocnumber"></param>
-        /// <param name="docnumber"></param>
+        /// <param name="attachmentDocnumber">Docnumber of the attachment</param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>ApiResponse of AttachmentDTO</returns>
         public ApiResponse< AttachmentDTO > AttachmentsInsertInternalWithHttpInfo (int? attachmentDocnumber, int? docnumber)
         {
@@ -2653,7 +2237,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling AttachmentsApi->AttachmentsInsertInternal");
 
-            var localVarPath = "/api/attachments/InsertInternal/{attachmentDocnumber}/{docnumber}";
+            var localVarPath = "/api/Attachments/InsertInternal/{attachmentDocnumber}/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2710,11 +2294,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add a new internal attachment for a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentDocnumber"></param>
-        /// <param name="docnumber"></param>
+        /// <param name="attachmentDocnumber">Docnumber of the attachment</param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of AttachmentDTO</returns>
         public async System.Threading.Tasks.Task<AttachmentDTO> AttachmentsInsertInternalAsync (int? attachmentDocnumber, int? docnumber)
         {
@@ -2724,11 +2308,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add a new internal attachment for a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentDocnumber"></param>
-        /// <param name="docnumber"></param>
+        /// <param name="attachmentDocnumber">Docnumber of the attachment</param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of ApiResponse (AttachmentDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AttachmentDTO>> AttachmentsInsertInternalAsyncWithHttpInfo (int? attachmentDocnumber, int? docnumber)
         {
@@ -2739,7 +2323,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling AttachmentsApi->AttachmentsInsertInternal");
 
-            var localVarPath = "/api/attachments/InsertInternal/{attachmentDocnumber}/{docnumber}";
+            var localVarPath = "/api/Attachments/InsertInternal/{attachmentDocnumber}/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2795,10 +2379,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the permissions for an attachment 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the attachment</param>
         /// <returns>PermissionsDTO</returns>
         public PermissionsDTO AttachmentsPermissionsById (int? id)
         {
@@ -2807,10 +2391,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the permissions for an attachment 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the attachment</param>
         /// <returns>ApiResponse of PermissionsDTO</returns>
         public ApiResponse< PermissionsDTO > AttachmentsPermissionsByIdWithHttpInfo (int? id)
         {
@@ -2818,7 +2402,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling AttachmentsApi->AttachmentsPermissionsById");
 
-            var localVarPath = "/api/attachments/{id}/Permissions";
+            var localVarPath = "/api/Attachments/{id}/Permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2874,10 +2458,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the permissions for an attachment 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the attachment</param>
         /// <returns>Task of PermissionsDTO</returns>
         public async System.Threading.Tasks.Task<PermissionsDTO> AttachmentsPermissionsByIdAsync (int? id)
         {
@@ -2887,10 +2471,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the permissions for an attachment 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the attachment</param>
         /// <returns>Task of ApiResponse (PermissionsDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PermissionsDTO>> AttachmentsPermissionsByIdAsyncWithHttpInfo (int? id)
         {
@@ -2898,7 +2482,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling AttachmentsApi->AttachmentsPermissionsById");
 
-            var localVarPath = "/api/attachments/{id}/Permissions";
+            var localVarPath = "/api/Attachments/{id}/Permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2953,11 +2537,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update attachment file 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="bufferId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
+        /// <param name="bufferId">Bufferid of the file</param>
         /// <returns></returns>
         public void AttachmentsPutAttachmentDocument (int? attachmentId, string bufferId)
         {
@@ -2965,11 +2549,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update attachment file 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="bufferId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
+        /// <param name="bufferId">Bufferid of the file</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> AttachmentsPutAttachmentDocumentWithHttpInfo (int? attachmentId, string bufferId)
         {
@@ -2980,7 +2564,7 @@ namespace IO.Swagger.Api
             if (bufferId == null)
                 throw new ApiException(400, "Missing required parameter 'bufferId' when calling AttachmentsApi->AttachmentsPutAttachmentDocument");
 
-            var localVarPath = "/api/attachments/{attachmentId}/Document/{bufferId}";
+            var localVarPath = "/api/Attachments/{attachmentId}/Document/{bufferId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3033,11 +2617,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update attachment file 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="bufferId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
+        /// <param name="bufferId">Bufferid of the file</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task AttachmentsPutAttachmentDocumentAsync (int? attachmentId, string bufferId)
         {
@@ -3046,11 +2630,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update attachment file 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="attachmentId"></param>
-        /// <param name="bufferId"></param>
+        /// <param name="attachmentId">Id of the attachment</param>
+        /// <param name="bufferId">Bufferid of the file</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> AttachmentsPutAttachmentDocumentAsyncWithHttpInfo (int? attachmentId, string bufferId)
         {
@@ -3061,7 +2645,7 @@ namespace IO.Swagger.Api
             if (bufferId == null)
                 throw new ApiException(400, "Missing required parameter 'bufferId' when calling AttachmentsApi->AttachmentsPutAttachmentDocument");
 
-            var localVarPath = "/api/attachments/{attachmentId}/Document/{bufferId}";
+            var localVarPath = "/api/Attachments/{attachmentId}/Document/{bufferId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3113,11 +2697,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call updates a attachment by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="attachment"></param>
+        /// <param name="id">Id of the attachment</param>
+        /// <param name="attachment">Dto for the update</param>
         /// <returns></returns>
         public void AttachmentsUpdate (int? id, AttachmentDTO attachment)
         {
@@ -3125,11 +2709,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call updates a attachment by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="attachment"></param>
+        /// <param name="id">Id of the attachment</param>
+        /// <param name="attachment">Dto for the update</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> AttachmentsUpdateWithHttpInfo (int? id, AttachmentDTO attachment)
         {
@@ -3140,7 +2724,7 @@ namespace IO.Swagger.Api
             if (attachment == null)
                 throw new ApiException(400, "Missing required parameter 'attachment' when calling AttachmentsApi->AttachmentsUpdate");
 
-            var localVarPath = "/api/attachments/{id}";
+            var localVarPath = "/api/Attachments/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3205,11 +2789,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call updates a attachment by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="attachment"></param>
+        /// <param name="id">Id of the attachment</param>
+        /// <param name="attachment">Dto for the update</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task AttachmentsUpdateAsync (int? id, AttachmentDTO attachment)
         {
@@ -3218,11 +2802,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call updates a attachment by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="attachment"></param>
+        /// <param name="id">Id of the attachment</param>
+        /// <param name="attachment">Dto for the update</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> AttachmentsUpdateAsyncWithHttpInfo (int? id, AttachmentDTO attachment)
         {
@@ -3233,7 +2817,7 @@ namespace IO.Swagger.Api
             if (attachment == null)
                 throw new ApiException(400, "Missing required parameter 'attachment' when calling AttachmentsApi->AttachmentsUpdate");
 
-            var localVarPath = "/api/attachments/{id}";
+            var localVarPath = "/api/Attachments/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3297,11 +2881,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call updates permission of an attachment 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="id">Id of the attachment</param>
+        /// <param name="permissions">Updated permissions</param>
         /// <returns></returns>
         public void AttachmentsWritePermissionsById (int? id, PermissionsDTO permissions)
         {
@@ -3309,11 +2893,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call updates permission of an attachment 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="id">Id of the attachment</param>
+        /// <param name="permissions">Updated permissions</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> AttachmentsWritePermissionsByIdWithHttpInfo (int? id, PermissionsDTO permissions)
         {
@@ -3324,7 +2908,7 @@ namespace IO.Swagger.Api
             if (permissions == null)
                 throw new ApiException(400, "Missing required parameter 'permissions' when calling AttachmentsApi->AttachmentsWritePermissionsById");
 
-            var localVarPath = "/api/attachments/{id}/Permissions";
+            var localVarPath = "/api/Attachments/{id}/Permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3389,11 +2973,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call updates permission of an attachment 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="id">Id of the attachment</param>
+        /// <param name="permissions">Updated permissions</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task AttachmentsWritePermissionsByIdAsync (int? id, PermissionsDTO permissions)
         {
@@ -3402,11 +2986,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call updates permission of an attachment 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="id">Id of the attachment</param>
+        /// <param name="permissions">Updated permissions</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> AttachmentsWritePermissionsByIdAsyncWithHttpInfo (int? id, PermissionsDTO permissions)
         {
@@ -3417,7 +3001,7 @@ namespace IO.Swagger.Api
             if (permissions == null)
                 throw new ApiException(400, "Missing required parameter 'permissions' when calling AttachmentsApi->AttachmentsWritePermissionsById");
 
-            var localVarPath = "/api/attachments/{id}/Permissions";
+            var localVarPath = "/api/Attachments/{id}/Permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

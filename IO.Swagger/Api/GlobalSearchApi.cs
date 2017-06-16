@@ -37,7 +37,7 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// This call return the result of a serch in ARXivar full index
         /// </summary>
         /// <remarks>
         /// 
@@ -48,7 +48,7 @@ namespace IO.Swagger.Api
         List<RowSearchResult> GlobalSearchGetFullIndexSearch (string searchFilter);
 
         /// <summary>
-        /// 
+        /// This call return the result of a serch in ARXivar full index
         /// </summary>
         /// <remarks>
         /// 
@@ -58,7 +58,7 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of List&lt;RowSearchResult&gt;</returns>
         ApiResponse<List<RowSearchResult>> GlobalSearchGetFullIndexSearchWithHttpInfo (string searchFilter);
         /// <summary>
-        /// 
+        /// This call return all elements match the given filter
         /// </summary>
         /// <remarks>
         /// 
@@ -69,7 +69,7 @@ namespace IO.Swagger.Api
         List<GenericItemDTO> GlobalSearchGlobalSearch (string searchFilter);
 
         /// <summary>
-        /// 
+        /// This call return all elements match the given filter
         /// </summary>
         /// <remarks>
         /// 
@@ -81,7 +81,7 @@ namespace IO.Swagger.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// This call return the result of a serch in ARXivar full index
         /// </summary>
         /// <remarks>
         /// 
@@ -92,7 +92,7 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<List<RowSearchResult>> GlobalSearchGetFullIndexSearchAsync (string searchFilter);
 
         /// <summary>
-        /// 
+        /// This call return the result of a serch in ARXivar full index
         /// </summary>
         /// <remarks>
         /// 
@@ -102,7 +102,7 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (List&lt;RowSearchResult&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<RowSearchResult>>> GlobalSearchGetFullIndexSearchAsyncWithHttpInfo (string searchFilter);
         /// <summary>
-        /// 
+        /// This call return all elements match the given filter
         /// </summary>
         /// <remarks>
         /// 
@@ -113,7 +113,7 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<List<GenericItemDTO>> GlobalSearchGlobalSearchAsync (string searchFilter);
 
         /// <summary>
-        /// 
+        /// This call return all elements match the given filter
         /// </summary>
         /// <remarks>
         /// 
@@ -235,7 +235,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the result of a serch in ARXivar full index 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchFilter"></param>
@@ -247,7 +247,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the result of a serch in ARXivar full index 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchFilter"></param>
@@ -258,7 +258,7 @@ namespace IO.Swagger.Api
             if (searchFilter == null)
                 throw new ApiException(400, "Missing required parameter 'searchFilter' when calling GlobalSearchApi->GlobalSearchGetFullIndexSearch");
 
-            var localVarPath = "/api/globalsearches/search/{searchFilter}";
+            var localVarPath = "/api/GlobalSearches/search/{searchFilter}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -314,7 +314,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the result of a serch in ARXivar full index 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchFilter"></param>
@@ -327,7 +327,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the result of a serch in ARXivar full index 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchFilter"></param>
@@ -338,7 +338,7 @@ namespace IO.Swagger.Api
             if (searchFilter == null)
                 throw new ApiException(400, "Missing required parameter 'searchFilter' when calling GlobalSearchApi->GlobalSearchGetFullIndexSearch");
 
-            var localVarPath = "/api/globalsearches/search/{searchFilter}";
+            var localVarPath = "/api/GlobalSearches/search/{searchFilter}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -393,7 +393,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return all elements match the given filter 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchFilter"></param>
@@ -405,7 +405,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return all elements match the given filter 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchFilter"></param>
@@ -416,7 +416,7 @@ namespace IO.Swagger.Api
             if (searchFilter == null)
                 throw new ApiException(400, "Missing required parameter 'searchFilter' when calling GlobalSearchApi->GlobalSearchGlobalSearch");
 
-            var localVarPath = "/api/globalsearches/{searchFilter}";
+            var localVarPath = "/api/GlobalSearches/{searchFilter}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -472,7 +472,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return all elements match the given filter 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchFilter"></param>
@@ -485,7 +485,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return all elements match the given filter 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchFilter"></param>
@@ -496,7 +496,7 @@ namespace IO.Swagger.Api
             if (searchFilter == null)
                 throw new ApiException(400, "Missing required parameter 'searchFilter' when calling GlobalSearchApi->GlobalSearchGlobalSearch");
 
-            var localVarPath = "/api/globalsearches/{searchFilter}";
+            var localVarPath = "/api/GlobalSearches/{searchFilter}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

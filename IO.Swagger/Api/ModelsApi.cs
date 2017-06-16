@@ -58,47 +58,47 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> ModelsDeleteWithHttpInfo (int? id);
         /// <summary>
-        /// 
+        /// This call return the template preview file for a model
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the model</param>
         /// <returns>Object</returns>
         Object ModelsGetForModelPreviewTemplate (int? id);
 
         /// <summary>
-        /// 
+        /// This call return the template preview file for a model
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the model</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> ModelsGetForModelPreviewTemplateWithHttpInfo (int? id);
         /// <summary>
-        /// 
+        /// This call retrieve the template file for a model
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="modelId">Id of the model</param>
         /// <returns>Object</returns>
-        Object ModelsGetForModelTemplate (int? id);
+        Object ModelsGetForModelTemplate (int? modelId);
 
         /// <summary>
-        /// 
+        /// This call retrieve the template file for a model
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="modelId">Id of the model</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ModelsGetForModelTemplateWithHttpInfo (int? id);
+        ApiResponse<Object> ModelsGetForModelTemplateWithHttpInfo (int? modelId);
         /// <summary>
         /// This call returns model
         /// </summary>
@@ -161,24 +161,24 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of PermissionsDTO</returns>
         ApiResponse<PermissionsDTO> ModelsGetPermissionWithHttpInfo (int? id);
         /// <summary>
-        /// 
+        /// This call return a profile schema for a model
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modelId"></param>
+        /// <param name="modelId">Id of the model</param>
         /// <returns>ModelProfileSchemaDTO</returns>
         ModelProfileSchemaDTO ModelsGetProfileSchemaByModelId (int? modelId);
 
         /// <summary>
-        /// 
+        /// This call return a profile schema for a model
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modelId"></param>
+        /// <param name="modelId">Id of the model</param>
         /// <returns>ApiResponse of ModelProfileSchemaDTO</returns>
         ApiResponse<ModelProfileSchemaDTO> ModelsGetProfileSchemaByModelIdWithHttpInfo (int? modelId);
         /// <summary>
@@ -295,47 +295,47 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ModelsDeleteAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// 
+        /// This call return the template preview file for a model
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the model</param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> ModelsGetForModelPreviewTemplateAsync (int? id);
 
         /// <summary>
-        /// 
+        /// This call return the template preview file for a model
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the model</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ModelsGetForModelPreviewTemplateAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// 
+        /// This call retrieve the template file for a model
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="modelId">Id of the model</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ModelsGetForModelTemplateAsync (int? id);
+        System.Threading.Tasks.Task<Object> ModelsGetForModelTemplateAsync (int? modelId);
 
         /// <summary>
-        /// 
+        /// This call retrieve the template file for a model
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="modelId">Id of the model</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ModelsGetForModelTemplateAsyncWithHttpInfo (int? id);
+        System.Threading.Tasks.Task<ApiResponse<Object>> ModelsGetForModelTemplateAsyncWithHttpInfo (int? modelId);
         /// <summary>
         /// This call returns model
         /// </summary>
@@ -398,24 +398,24 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (PermissionsDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<PermissionsDTO>> ModelsGetPermissionAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// 
+        /// This call return a profile schema for a model
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modelId"></param>
+        /// <param name="modelId">Id of the model</param>
         /// <returns>Task of ModelProfileSchemaDTO</returns>
         System.Threading.Tasks.Task<ModelProfileSchemaDTO> ModelsGetProfileSchemaByModelIdAsync (int? modelId);
 
         /// <summary>
-        /// 
+        /// This call return a profile schema for a model
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modelId"></param>
+        /// <param name="modelId">Id of the model</param>
         /// <returns>Task of ApiResponse (ModelProfileSchemaDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<ModelProfileSchemaDTO>> ModelsGetProfileSchemaByModelIdAsyncWithHttpInfo (int? modelId);
         /// <summary>
@@ -644,7 +644,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ModelsApi->ModelsDelete");
 
-            var localVarPath = "/api/models/{id}";
+            var localVarPath = "/api/Models/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -724,7 +724,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ModelsApi->ModelsDelete");
 
-            var localVarPath = "/api/models/{id}";
+            var localVarPath = "/api/Models/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -779,10 +779,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the template preview file for a model 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the model</param>
         /// <returns>Object</returns>
         public Object ModelsGetForModelPreviewTemplate (int? id)
         {
@@ -791,10 +791,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the template preview file for a model 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the model</param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > ModelsGetForModelPreviewTemplateWithHttpInfo (int? id)
         {
@@ -802,7 +802,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ModelsApi->ModelsGetForModelPreviewTemplate");
 
-            var localVarPath = "/api/models/previewTemplate/{id}";
+            var localVarPath = "/api/Models/previewTemplate/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -858,10 +858,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the template preview file for a model 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the model</param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> ModelsGetForModelPreviewTemplateAsync (int? id)
         {
@@ -871,10 +871,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the template preview file for a model 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the model</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> ModelsGetForModelPreviewTemplateAsyncWithHttpInfo (int? id)
         {
@@ -882,7 +882,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ModelsApi->ModelsGetForModelPreviewTemplate");
 
-            var localVarPath = "/api/models/previewTemplate/{id}";
+            var localVarPath = "/api/Models/previewTemplate/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -937,30 +937,30 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call retrieve the template file for a model 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="modelId">Id of the model</param>
         /// <returns>Object</returns>
-        public Object ModelsGetForModelTemplate (int? id)
+        public Object ModelsGetForModelTemplate (int? modelId)
         {
-             ApiResponse<Object> localVarResponse = ModelsGetForModelTemplateWithHttpInfo(id);
+             ApiResponse<Object> localVarResponse = ModelsGetForModelTemplateWithHttpInfo(modelId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        ///  
+        /// This call retrieve the template file for a model 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="modelId">Id of the model</param>
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ModelsGetForModelTemplateWithHttpInfo (int? id)
+        public ApiResponse< Object > ModelsGetForModelTemplateWithHttpInfo (int? modelId)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ModelsApi->ModelsGetForModelTemplate");
+            // verify the required parameter 'modelId' is set
+            if (modelId == null)
+                throw new ApiException(400, "Missing required parameter 'modelId' when calling ModelsApi->ModelsGetForModelTemplate");
 
-            var localVarPath = "/api/models/template/{id}";
+            var localVarPath = "/api/Models/template/{modelId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -987,7 +987,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (modelId != null) localVarPathParams.Add("modelId", Configuration.ApiClient.ParameterToString(modelId)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1016,31 +1016,31 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call retrieve the template file for a model 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="modelId">Id of the model</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ModelsGetForModelTemplateAsync (int? id)
+        public async System.Threading.Tasks.Task<Object> ModelsGetForModelTemplateAsync (int? modelId)
         {
-             ApiResponse<Object> localVarResponse = await ModelsGetForModelTemplateAsyncWithHttpInfo(id);
+             ApiResponse<Object> localVarResponse = await ModelsGetForModelTemplateAsyncWithHttpInfo(modelId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        ///  
+        /// This call retrieve the template file for a model 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="modelId">Id of the model</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ModelsGetForModelTemplateAsyncWithHttpInfo (int? id)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ModelsGetForModelTemplateAsyncWithHttpInfo (int? modelId)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ModelsApi->ModelsGetForModelTemplate");
+            // verify the required parameter 'modelId' is set
+            if (modelId == null)
+                throw new ApiException(400, "Missing required parameter 'modelId' when calling ModelsApi->ModelsGetForModelTemplate");
 
-            var localVarPath = "/api/models/template/{id}";
+            var localVarPath = "/api/Models/template/{modelId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1067,7 +1067,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (modelId != null) localVarPathParams.Add("modelId", Configuration.ApiClient.ParameterToString(modelId)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1118,7 +1118,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ModelsApi->ModelsGetModelById");
 
-            var localVarPath = "/api/models/{id}";
+            var localVarPath = "/api/Models/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1198,7 +1198,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ModelsApi->ModelsGetModelById");
 
-            var localVarPath = "/api/models/{id}";
+            var localVarPath = "/api/Models/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1271,7 +1271,7 @@ namespace IO.Swagger.Api
         public ApiResponse< List<ModelDTO> > ModelsGetModelsListWithHttpInfo ()
         {
 
-            var localVarPath = "/api/models";
+            var localVarPath = "/api/Models";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1345,7 +1345,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<ModelDTO>>> ModelsGetModelsListAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/models";
+            var localVarPath = "/api/Models";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1422,7 +1422,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ModelsApi->ModelsGetPermission");
 
-            var localVarPath = "/api/models/{id}/Permissions";
+            var localVarPath = "/api/Models/{id}/Permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1502,7 +1502,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ModelsApi->ModelsGetPermission");
 
-            var localVarPath = "/api/models/{id}/Permissions";
+            var localVarPath = "/api/Models/{id}/Permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1557,10 +1557,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return a profile schema for a model 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modelId"></param>
+        /// <param name="modelId">Id of the model</param>
         /// <returns>ModelProfileSchemaDTO</returns>
         public ModelProfileSchemaDTO ModelsGetProfileSchemaByModelId (int? modelId)
         {
@@ -1569,10 +1569,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return a profile schema for a model 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modelId"></param>
+        /// <param name="modelId">Id of the model</param>
         /// <returns>ApiResponse of ModelProfileSchemaDTO</returns>
         public ApiResponse< ModelProfileSchemaDTO > ModelsGetProfileSchemaByModelIdWithHttpInfo (int? modelId)
         {
@@ -1580,7 +1580,7 @@ namespace IO.Swagger.Api
             if (modelId == null)
                 throw new ApiException(400, "Missing required parameter 'modelId' when calling ModelsApi->ModelsGetProfileSchemaByModelId");
 
-            var localVarPath = "/api/models/{modelId}/profileSchema";
+            var localVarPath = "/api/Models/{modelId}/profileSchema";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1636,10 +1636,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return a profile schema for a model 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modelId"></param>
+        /// <param name="modelId">Id of the model</param>
         /// <returns>Task of ModelProfileSchemaDTO</returns>
         public async System.Threading.Tasks.Task<ModelProfileSchemaDTO> ModelsGetProfileSchemaByModelIdAsync (int? modelId)
         {
@@ -1649,10 +1649,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return a profile schema for a model 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modelId"></param>
+        /// <param name="modelId">Id of the model</param>
         /// <returns>Task of ApiResponse (ModelProfileSchemaDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ModelProfileSchemaDTO>> ModelsGetProfileSchemaByModelIdAsyncWithHttpInfo (int? modelId)
         {
@@ -1660,7 +1660,7 @@ namespace IO.Swagger.Api
             if (modelId == null)
                 throw new ApiException(400, "Missing required parameter 'modelId' when calling ModelsApi->ModelsGetProfileSchemaByModelId");
 
-            var localVarPath = "/api/models/{modelId}/profileSchema";
+            var localVarPath = "/api/Models/{modelId}/profileSchema";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1737,7 +1737,7 @@ namespace IO.Swagger.Api
             if (model == null)
                 throw new ApiException(400, "Missing required parameter 'model' when calling ModelsApi->ModelsInsertModel");
 
-            var localVarPath = "/api/models";
+            var localVarPath = "/api/Models";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1824,7 +1824,7 @@ namespace IO.Swagger.Api
             if (model == null)
                 throw new ApiException(400, "Missing required parameter 'model' when calling ModelsApi->ModelsInsertModel");
 
-            var localVarPath = "/api/models";
+            var localVarPath = "/api/Models";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1911,7 +1911,7 @@ namespace IO.Swagger.Api
             if (modelId == null)
                 throw new ApiException(400, "Missing required parameter 'modelId' when calling ModelsApi->ModelsPost");
 
-            var localVarPath = "/api/models/{modelId}/Profile";
+            var localVarPath = "/api/Models/{modelId}/Profile";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2000,7 +2000,7 @@ namespace IO.Swagger.Api
             if (modelId == null)
                 throw new ApiException(400, "Missing required parameter 'modelId' when calling ModelsApi->ModelsPost");
 
-            var localVarPath = "/api/models/{modelId}/Profile";
+            var localVarPath = "/api/Models/{modelId}/Profile";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2090,7 +2090,7 @@ namespace IO.Swagger.Api
             if (permissions == null)
                 throw new ApiException(400, "Missing required parameter 'permissions' when calling ModelsApi->ModelsSetPermission");
 
-            var localVarPath = "/api/models/{id}/Permissions";
+            var localVarPath = "/api/Models/{id}/Permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2183,7 +2183,7 @@ namespace IO.Swagger.Api
             if (permissions == null)
                 throw new ApiException(400, "Missing required parameter 'permissions' when calling ModelsApi->ModelsSetPermission");
 
-            var localVarPath = "/api/models/{id}/Permissions";
+            var localVarPath = "/api/Models/{id}/Permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2274,7 +2274,7 @@ namespace IO.Swagger.Api
             if (model == null)
                 throw new ApiException(400, "Missing required parameter 'model' when calling ModelsApi->ModelsUpdateModel");
 
-            var localVarPath = "/api/models/{id}";
+            var localVarPath = "/api/Models/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2367,7 +2367,7 @@ namespace IO.Swagger.Api
             if (model == null)
                 throw new ApiException(400, "Missing required parameter 'model' when calling ModelsApi->ModelsUpdateModel");
 
-            var localVarPath = "/api/models/{id}";
+            var localVarPath = "/api/Models/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

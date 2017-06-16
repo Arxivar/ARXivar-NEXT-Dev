@@ -34,32 +34,42 @@ using Newtonsoft.Json.Converters;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// TesseractHocr
+    /// Dynamic job operation multiple set request
     /// </summary>
     [DataContract]
-    public partial class TesseractHocr :  IEquatable<TesseractHocr>
+    public partial class DynamicJobMultipleSetRequestDTO :  IEquatable<DynamicJobMultipleSetRequestDTO>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TesseractHocr" /> class.
+        /// Initializes a new instance of the <see cref="DynamicJobMultipleSetRequestDTO" /> class.
         /// </summary>
-        /// <param name="Areas">Areas.</param>
-        /// <param name="Words">Words.</param>
-        public TesseractHocr(List<AreaDTO> Areas = null, List<AreaDTO> Words = null)
+        /// <param name="DynamicJobUserId">User id of dynamic job.</param>
+        /// <param name="TaskWorkIds">TaskWork id to set.</param>
+        /// <param name="Users">Values for dynamic job.</param>
+        public DynamicJobMultipleSetRequestDTO(int? DynamicJobUserId = null, List<int?> TaskWorkIds = null, List<UserCompleteDTO> Users = null)
         {
-            this.Areas = Areas;
-            this.Words = Words;
+            this.DynamicJobUserId = DynamicJobUserId;
+            this.TaskWorkIds = TaskWorkIds;
+            this.Users = Users;
         }
         
         /// <summary>
-        /// Gets or Sets Areas
+        /// User id of dynamic job
         /// </summary>
-        [DataMember(Name="areas", EmitDefaultValue=false)]
-        public List<AreaDTO> Areas { get; set; }
+        /// <value>User id of dynamic job</value>
+        [DataMember(Name="dynamicJobUserId", EmitDefaultValue=false)]
+        public int? DynamicJobUserId { get; set; }
         /// <summary>
-        /// Gets or Sets Words
+        /// TaskWork id to set
         /// </summary>
-        [DataMember(Name="words", EmitDefaultValue=false)]
-        public List<AreaDTO> Words { get; set; }
+        /// <value>TaskWork id to set</value>
+        [DataMember(Name="taskWorkIds", EmitDefaultValue=false)]
+        public List<int?> TaskWorkIds { get; set; }
+        /// <summary>
+        /// Values for dynamic job
+        /// </summary>
+        /// <value>Values for dynamic job</value>
+        [DataMember(Name="users", EmitDefaultValue=false)]
+        public List<UserCompleteDTO> Users { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -67,9 +77,10 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TesseractHocr {\n");
-            sb.Append("  Areas: ").Append(Areas).Append("\n");
-            sb.Append("  Words: ").Append(Words).Append("\n");
+            sb.Append("class DynamicJobMultipleSetRequestDTO {\n");
+            sb.Append("  DynamicJobUserId: ").Append(DynamicJobUserId).Append("\n");
+            sb.Append("  TaskWorkIds: ").Append(TaskWorkIds).Append("\n");
+            sb.Append("  Users: ").Append(Users).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,15 +102,15 @@ namespace IO.Swagger.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TesseractHocr);
+            return this.Equals(obj as DynamicJobMultipleSetRequestDTO);
         }
 
         /// <summary>
-        /// Returns true if TesseractHocr instances are equal
+        /// Returns true if DynamicJobMultipleSetRequestDTO instances are equal
         /// </summary>
-        /// <param name="other">Instance of TesseractHocr to be compared</param>
+        /// <param name="other">Instance of DynamicJobMultipleSetRequestDTO to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TesseractHocr other)
+        public bool Equals(DynamicJobMultipleSetRequestDTO other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -107,14 +118,19 @@ namespace IO.Swagger.Model
 
             return 
                 (
-                    this.Areas == other.Areas ||
-                    this.Areas != null &&
-                    this.Areas.SequenceEqual(other.Areas)
+                    this.DynamicJobUserId == other.DynamicJobUserId ||
+                    this.DynamicJobUserId != null &&
+                    this.DynamicJobUserId.Equals(other.DynamicJobUserId)
                 ) && 
                 (
-                    this.Words == other.Words ||
-                    this.Words != null &&
-                    this.Words.SequenceEqual(other.Words)
+                    this.TaskWorkIds == other.TaskWorkIds ||
+                    this.TaskWorkIds != null &&
+                    this.TaskWorkIds.SequenceEqual(other.TaskWorkIds)
+                ) && 
+                (
+                    this.Users == other.Users ||
+                    this.Users != null &&
+                    this.Users.SequenceEqual(other.Users)
                 );
         }
 
@@ -129,10 +145,12 @@ namespace IO.Swagger.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Areas != null)
-                    hash = hash * 59 + this.Areas.GetHashCode();
-                if (this.Words != null)
-                    hash = hash * 59 + this.Words.GetHashCode();
+                if (this.DynamicJobUserId != null)
+                    hash = hash * 59 + this.DynamicJobUserId.GetHashCode();
+                if (this.TaskWorkIds != null)
+                    hash = hash * 59 + this.TaskWorkIds.GetHashCode();
+                if (this.Users != null)
+                    hash = hash * 59 + this.Users.GetHashCode();
                 return hash;
             }
         }

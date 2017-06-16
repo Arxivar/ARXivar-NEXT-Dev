@@ -483,7 +483,7 @@ namespace IO.Swagger.Api
             if (layoutId == null)
                 throw new ApiException(400, "Missing required parameter 'layoutId' when calling LayoutApi->LayoutDelete");
 
-            var localVarPath = "/api/layout/{layoutId}";
+            var localVarPath = "/api/Layout/{layoutId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -558,7 +558,7 @@ namespace IO.Swagger.Api
             if (layoutId == null)
                 throw new ApiException(400, "Missing required parameter 'layoutId' when calling LayoutApi->LayoutDelete");
 
-            var localVarPath = "/api/layout/{layoutId}";
+            var localVarPath = "/api/Layout/{layoutId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -632,7 +632,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling LayoutApi->LayoutGetById");
 
-            var localVarPath = "/api/layout/{id}";
+            var localVarPath = "/api/Layout/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -712,7 +712,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling LayoutApi->LayoutGetById");
 
-            var localVarPath = "/api/layout/{id}";
+            var localVarPath = "/api/Layout/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -790,7 +790,7 @@ namespace IO.Swagger.Api
             if (type == null)
                 throw new ApiException(400, "Missing required parameter 'type' when calling LayoutApi->LayoutGetByType");
 
-            var localVarPath = "/api/layout/Type/{type}";
+            var localVarPath = "/api/Layout/Type/{type}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -870,7 +870,7 @@ namespace IO.Swagger.Api
             if (type == null)
                 throw new ApiException(400, "Missing required parameter 'type' when calling LayoutApi->LayoutGetByType");
 
-            var localVarPath = "/api/layout/Type/{type}";
+            var localVarPath = "/api/Layout/Type/{type}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -958,7 +958,7 @@ namespace IO.Swagger.Api
             if (layouttype == null)
                 throw new ApiException(400, "Missing required parameter 'layouttype' when calling LayoutApi->LayoutGetByUser");
 
-            var localVarPath = "/api/layout/User/{userId}/{usingtype}/{layouttype}";
+            var localVarPath = "/api/Layout/User/{userId}/{usingtype}/{layouttype}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1050,7 +1050,7 @@ namespace IO.Swagger.Api
             if (layouttype == null)
                 throw new ApiException(400, "Missing required parameter 'layouttype' when calling LayoutApi->LayoutGetByUser");
 
-            var localVarPath = "/api/layout/User/{userId}/{usingtype}/{layouttype}";
+            var localVarPath = "/api/Layout/User/{userId}/{usingtype}/{layouttype}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1130,7 +1130,7 @@ namespace IO.Swagger.Api
             if (layout == null)
                 throw new ApiException(400, "Missing required parameter 'layout' when calling LayoutApi->LayoutPost");
 
-            var localVarPath = "/api/layout";
+            var localVarPath = "/api/Layout";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1222,7 +1222,7 @@ namespace IO.Swagger.Api
             if (layout == null)
                 throw new ApiException(400, "Missing required parameter 'layout' when calling LayoutApi->LayoutPost");
 
-            var localVarPath = "/api/layout";
+            var localVarPath = "/api/Layout";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1316,7 +1316,7 @@ namespace IO.Swagger.Api
             if (layout == null)
                 throw new ApiException(400, "Missing required parameter 'layout' when calling LayoutApi->LayoutPut");
 
-            var localVarPath = "/api/layout/{id}";
+            var localVarPath = "/api/Layout/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1409,7 +1409,7 @@ namespace IO.Swagger.Api
             if (layout == null)
                 throw new ApiException(400, "Missing required parameter 'layout' when calling LayoutApi->LayoutPut");
 
-            var localVarPath = "/api/layout/{id}";
+            var localVarPath = "/api/Layout/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1500,7 +1500,7 @@ namespace IO.Swagger.Api
             if (order == null)
                 throw new ApiException(400, "Missing required parameter 'order' when calling LayoutApi->LayoutPutChangeOrder");
 
-            var localVarPath = "/api/layout/{layoutId}/{order}";
+            var localVarPath = "/api/Layout/{layoutId}/{order}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1581,7 +1581,7 @@ namespace IO.Swagger.Api
             if (order == null)
                 throw new ApiException(400, "Missing required parameter 'order' when calling LayoutApi->LayoutPutChangeOrder");
 
-            var localVarPath = "/api/layout/{layoutId}/{order}";
+            var localVarPath = "/api/Layout/{layoutId}/{order}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

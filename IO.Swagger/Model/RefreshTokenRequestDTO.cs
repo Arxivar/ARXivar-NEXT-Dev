@@ -34,53 +34,55 @@ using Newtonsoft.Json.Converters;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// AreaDTO
+    /// Refresh token request
     /// </summary>
     [DataContract]
-    public partial class AreaDTO :  IEquatable<AreaDTO>
+    public partial class RefreshTokenRequestDTO :  IEquatable<RefreshTokenRequestDTO>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AreaDTO" /> class.
+        /// Initializes a new instance of the <see cref="RefreshTokenRequestDTO" /> class.
         /// </summary>
-        /// <param name="X1">X1.</param>
-        /// <param name="Y1">Y1.</param>
-        /// <param name="W">W.</param>
-        /// <param name="H">H.</param>
-        /// <param name="Value">Value.</param>
-        public AreaDTO(double? X1 = null, double? Y1 = null, double? W = null, double? H = null, string Value = null)
+        [JsonConstructorAttribute]
+        protected RefreshTokenRequestDTO() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RefreshTokenRequestDTO" /> class.
+        /// </summary>
+        /// <param name="ClientId">Client id.</param>
+        /// <param name="ClientSecret">Client secret.</param>
+        /// <param name="RefreshToken">Refresh token to be refreshed (required).</param>
+        public RefreshTokenRequestDTO(string ClientId = null, string ClientSecret = null, string RefreshToken = null)
         {
-            this.X1 = X1;
-            this.Y1 = Y1;
-            this.W = W;
-            this.H = H;
-            this.Value = Value;
+            // to ensure "RefreshToken" is required (not null)
+            if (RefreshToken == null)
+            {
+                throw new InvalidDataException("RefreshToken is a required property for RefreshTokenRequestDTO and cannot be null");
+            }
+            else
+            {
+                this.RefreshToken = RefreshToken;
+            }
+            this.ClientId = ClientId;
+            this.ClientSecret = ClientSecret;
         }
         
         /// <summary>
-        /// Gets or Sets X1
+        /// Client id
         /// </summary>
-        [DataMember(Name="x1", EmitDefaultValue=false)]
-        public double? X1 { get; set; }
+        /// <value>Client id</value>
+        [DataMember(Name="clientId", EmitDefaultValue=false)]
+        public string ClientId { get; set; }
         /// <summary>
-        /// Gets or Sets Y1
+        /// Client secret
         /// </summary>
-        [DataMember(Name="y1", EmitDefaultValue=false)]
-        public double? Y1 { get; set; }
+        /// <value>Client secret</value>
+        [DataMember(Name="clientSecret", EmitDefaultValue=false)]
+        public string ClientSecret { get; set; }
         /// <summary>
-        /// Gets or Sets W
+        /// Refresh token to be refreshed
         /// </summary>
-        [DataMember(Name="w", EmitDefaultValue=false)]
-        public double? W { get; set; }
-        /// <summary>
-        /// Gets or Sets H
-        /// </summary>
-        [DataMember(Name="h", EmitDefaultValue=false)]
-        public double? H { get; set; }
-        /// <summary>
-        /// Gets or Sets Value
-        /// </summary>
-        [DataMember(Name="value", EmitDefaultValue=false)]
-        public string Value { get; set; }
+        /// <value>Refresh token to be refreshed</value>
+        [DataMember(Name="refreshToken", EmitDefaultValue=false)]
+        public string RefreshToken { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -88,12 +90,10 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class AreaDTO {\n");
-            sb.Append("  X1: ").Append(X1).Append("\n");
-            sb.Append("  Y1: ").Append(Y1).Append("\n");
-            sb.Append("  W: ").Append(W).Append("\n");
-            sb.Append("  H: ").Append(H).Append("\n");
-            sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("class RefreshTokenRequestDTO {\n");
+            sb.Append("  ClientId: ").Append(ClientId).Append("\n");
+            sb.Append("  ClientSecret: ").Append(ClientSecret).Append("\n");
+            sb.Append("  RefreshToken: ").Append(RefreshToken).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,15 +115,15 @@ namespace IO.Swagger.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as AreaDTO);
+            return this.Equals(obj as RefreshTokenRequestDTO);
         }
 
         /// <summary>
-        /// Returns true if AreaDTO instances are equal
+        /// Returns true if RefreshTokenRequestDTO instances are equal
         /// </summary>
-        /// <param name="other">Instance of AreaDTO to be compared</param>
+        /// <param name="other">Instance of RefreshTokenRequestDTO to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AreaDTO other)
+        public bool Equals(RefreshTokenRequestDTO other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -131,29 +131,19 @@ namespace IO.Swagger.Model
 
             return 
                 (
-                    this.X1 == other.X1 ||
-                    this.X1 != null &&
-                    this.X1.Equals(other.X1)
+                    this.ClientId == other.ClientId ||
+                    this.ClientId != null &&
+                    this.ClientId.Equals(other.ClientId)
                 ) && 
                 (
-                    this.Y1 == other.Y1 ||
-                    this.Y1 != null &&
-                    this.Y1.Equals(other.Y1)
+                    this.ClientSecret == other.ClientSecret ||
+                    this.ClientSecret != null &&
+                    this.ClientSecret.Equals(other.ClientSecret)
                 ) && 
                 (
-                    this.W == other.W ||
-                    this.W != null &&
-                    this.W.Equals(other.W)
-                ) && 
-                (
-                    this.H == other.H ||
-                    this.H != null &&
-                    this.H.Equals(other.H)
-                ) && 
-                (
-                    this.Value == other.Value ||
-                    this.Value != null &&
-                    this.Value.Equals(other.Value)
+                    this.RefreshToken == other.RefreshToken ||
+                    this.RefreshToken != null &&
+                    this.RefreshToken.Equals(other.RefreshToken)
                 );
         }
 
@@ -168,16 +158,12 @@ namespace IO.Swagger.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.X1 != null)
-                    hash = hash * 59 + this.X1.GetHashCode();
-                if (this.Y1 != null)
-                    hash = hash * 59 + this.Y1.GetHashCode();
-                if (this.W != null)
-                    hash = hash * 59 + this.W.GetHashCode();
-                if (this.H != null)
-                    hash = hash * 59 + this.H.GetHashCode();
-                if (this.Value != null)
-                    hash = hash * 59 + this.Value.GetHashCode();
+                if (this.ClientId != null)
+                    hash = hash * 59 + this.ClientId.GetHashCode();
+                if (this.ClientSecret != null)
+                    hash = hash * 59 + this.ClientSecret.GetHashCode();
+                if (this.RefreshToken != null)
+                    hash = hash * 59 + this.RefreshToken.GetHashCode();
                 return hash;
             }
         }

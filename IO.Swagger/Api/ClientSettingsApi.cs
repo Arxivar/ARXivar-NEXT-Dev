@@ -672,7 +672,7 @@ namespace IO.Swagger.Api
             if (pluginId == null)
                 throw new ApiException(400, "Missing required parameter 'pluginId' when calling ClientSettingsApi->ClientSettingsGetPluginSettings");
 
-            var localVarPath = "/api/settings/plugin/{pluginId}";
+            var localVarPath = "/api/Settings/plugin/{pluginId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -752,7 +752,7 @@ namespace IO.Swagger.Api
             if (pluginId == null)
                 throw new ApiException(400, "Missing required parameter 'pluginId' when calling ClientSettingsApi->ClientSettingsGetPluginSettings");
 
-            var localVarPath = "/api/settings/plugin/{pluginId}";
+            var localVarPath = "/api/Settings/plugin/{pluginId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -830,7 +830,7 @@ namespace IO.Swagger.Api
             if (pluginRequest == null)
                 throw new ApiException(400, "Missing required parameter 'pluginRequest' when calling ClientSettingsApi->ClientSettingsGetPluginUserSettings");
 
-            var localVarPath = "/api/settings/pluginForUser";
+            var localVarPath = "/api/Settings/pluginForUser";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -922,7 +922,7 @@ namespace IO.Swagger.Api
             if (pluginRequest == null)
                 throw new ApiException(400, "Missing required parameter 'pluginRequest' when calling ClientSettingsApi->ClientSettingsGetPluginUserSettings");
 
-            var localVarPath = "/api/settings/pluginForUser";
+            var localVarPath = "/api/Settings/pluginForUser";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1007,7 +1007,7 @@ namespace IO.Swagger.Api
         public ApiResponse< Object > ClientSettingsGetSettingsWithHttpInfo ()
         {
 
-            var localVarPath = "/api/settings/user";
+            var localVarPath = "/api/Settings/user";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1081,7 +1081,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<Object>> ClientSettingsGetSettingsAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/settings/user";
+            var localVarPath = "/api/Settings/user";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1153,7 +1153,7 @@ namespace IO.Swagger.Api
         public ApiResponse< Object > ClientSettingsGetSystemSettingsWithHttpInfo ()
         {
 
-            var localVarPath = "/api/settings";
+            var localVarPath = "/api/Settings";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1227,7 +1227,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<Object>> ClientSettingsGetSystemSettingsAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/settings";
+            var localVarPath = "/api/Settings";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1314,7 +1314,7 @@ namespace IO.Swagger.Api
             if (desktopId == null)
                 throw new ApiException(400, "Missing required parameter 'desktopId' when calling ClientSettingsApi->ClientSettingsGetWidgetSettings");
 
-            var localVarPath = "/api/settings/widget/{id}/{instanceId}/{desktopId}";
+            var localVarPath = "/api/Settings/widget/{id}/{instanceId}/{desktopId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1406,7 +1406,7 @@ namespace IO.Swagger.Api
             if (desktopId == null)
                 throw new ApiException(400, "Missing required parameter 'desktopId' when calling ClientSettingsApi->ClientSettingsGetWidgetSettings");
 
-            var localVarPath = "/api/settings/widget/{id}/{instanceId}/{desktopId}";
+            var localVarPath = "/api/Settings/widget/{id}/{instanceId}/{desktopId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1496,7 +1496,7 @@ namespace IO.Swagger.Api
             if (desktopId == null)
                 throw new ApiException(400, "Missing required parameter 'desktopId' when calling ClientSettingsApi->ClientSettingsGetWidgetUserSettings");
 
-            var localVarPath = "/api/settings/widgetForUser/{id}/{instanceId}/{desktopId}";
+            var localVarPath = "/api/Settings/widgetForUser/{id}/{instanceId}/{desktopId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1588,7 +1588,7 @@ namespace IO.Swagger.Api
             if (desktopId == null)
                 throw new ApiException(400, "Missing required parameter 'desktopId' when calling ClientSettingsApi->ClientSettingsGetWidgetUserSettings");
 
-            var localVarPath = "/api/settings/widgetForUser/{id}/{instanceId}/{desktopId}";
+            var localVarPath = "/api/Settings/widgetForUser/{id}/{instanceId}/{desktopId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1672,7 +1672,7 @@ namespace IO.Swagger.Api
             if (setting == null)
                 throw new ApiException(400, "Missing required parameter 'setting' when calling ClientSettingsApi->ClientSettingsUpdatePluginSetting");
 
-            var localVarPath = "/api/settings/plugin/{pluginId}";
+            var localVarPath = "/api/Settings/plugin/{pluginId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1765,7 +1765,7 @@ namespace IO.Swagger.Api
             if (setting == null)
                 throw new ApiException(400, "Missing required parameter 'setting' when calling ClientSettingsApi->ClientSettingsUpdatePluginSetting");
 
-            var localVarPath = "/api/settings/plugin/{pluginId}";
+            var localVarPath = "/api/Settings/plugin/{pluginId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1851,7 +1851,7 @@ namespace IO.Swagger.Api
             if (pluginRequest == null)
                 throw new ApiException(400, "Missing required parameter 'pluginRequest' when calling ClientSettingsApi->ClientSettingsUpdatePluginUserSetting");
 
-            var localVarPath = "/api/settings/pluginForUser";
+            var localVarPath = "/api/Settings/pluginForUser";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1938,7 +1938,7 @@ namespace IO.Swagger.Api
             if (pluginRequest == null)
                 throw new ApiException(400, "Missing required parameter 'pluginRequest' when calling ClientSettingsApi->ClientSettingsUpdatePluginUserSetting");
 
-            var localVarPath = "/api/settings/pluginForUser";
+            var localVarPath = "/api/Settings/pluginForUser";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2023,7 +2023,7 @@ namespace IO.Swagger.Api
             if (setting == null)
                 throw new ApiException(400, "Missing required parameter 'setting' when calling ClientSettingsApi->ClientSettingsUpdateUserSetting");
 
-            var localVarPath = "/api/settings/user";
+            var localVarPath = "/api/Settings/user";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2110,7 +2110,7 @@ namespace IO.Swagger.Api
             if (setting == null)
                 throw new ApiException(400, "Missing required parameter 'setting' when calling ClientSettingsApi->ClientSettingsUpdateUserSetting");
 
-            var localVarPath = "/api/settings/user";
+            var localVarPath = "/api/Settings/user";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2210,7 +2210,7 @@ namespace IO.Swagger.Api
             if (userSettings == null)
                 throw new ApiException(400, "Missing required parameter 'userSettings' when calling ClientSettingsApi->ClientSettingsUpdateWidgetSetting");
 
-            var localVarPath = "/api/settings/widget/{id}/{instanceId}/{desktopId}";
+            var localVarPath = "/api/Settings/widget/{id}/{instanceId}/{desktopId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2315,7 +2315,7 @@ namespace IO.Swagger.Api
             if (userSettings == null)
                 throw new ApiException(400, "Missing required parameter 'userSettings' when calling ClientSettingsApi->ClientSettingsUpdateWidgetSetting");
 
-            var localVarPath = "/api/settings/widget/{id}/{instanceId}/{desktopId}";
+            var localVarPath = "/api/Settings/widget/{id}/{instanceId}/{desktopId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2418,7 +2418,7 @@ namespace IO.Swagger.Api
             if (userSettings == null)
                 throw new ApiException(400, "Missing required parameter 'userSettings' when calling ClientSettingsApi->ClientSettingsUpdateWidgetUserSetting");
 
-            var localVarPath = "/api/settings/widgetForUser/{id}/{instanceId}/{desktopId}";
+            var localVarPath = "/api/Settings/widgetForUser/{id}/{instanceId}/{desktopId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2523,7 +2523,7 @@ namespace IO.Swagger.Api
             if (userSettings == null)
                 throw new ApiException(400, "Missing required parameter 'userSettings' when calling ClientSettingsApi->ClientSettingsUpdateWidgetUserSetting");
 
-            var localVarPath = "/api/settings/widgetForUser/{id}/{instanceId}/{desktopId}";
+            var localVarPath = "/api/Settings/widgetForUser/{id}/{instanceId}/{desktopId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

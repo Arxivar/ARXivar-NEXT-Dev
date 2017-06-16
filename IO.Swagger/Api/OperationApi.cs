@@ -215,7 +215,7 @@ namespace IO.Swagger.Api
             if (elementType == null)
                 throw new ApiException(400, "Missing required parameter 'elementType' when calling OperationApi->OperationGetByElementType");
 
-            var localVarPath = "/api/operation/Element/{elementType}";
+            var localVarPath = "/api/LayoutOperation/Element/{elementType}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -295,7 +295,7 @@ namespace IO.Swagger.Api
             if (elementType == null)
                 throw new ApiException(400, "Missing required parameter 'elementType' when calling OperationApi->OperationGetByElementType");
 
-            var localVarPath = "/api/operation/Element/{elementType}";
+            var localVarPath = "/api/LayoutOperation/Element/{elementType}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

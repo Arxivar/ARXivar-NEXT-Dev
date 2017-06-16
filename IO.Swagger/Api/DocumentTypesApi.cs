@@ -37,29 +37,6 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="collectionFlatten"></param>
-        /// <param name="item"> (optional)</param>
-        /// <returns></returns>
-        void DocumentTypesFindRecursive (List<string> collectionFlatten, DocumentTypeBaseTreeDTO item = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="collectionFlatten"></param>
-        /// <param name="item"> (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DocumentTypesFindRecursiveWithHttpInfo (List<string> collectionFlatten, DocumentTypeBaseTreeDTO item = null);
-        /// <summary>
         /// This call return the document types that the user can view
         /// </summary>
         /// <remarks>
@@ -130,29 +107,6 @@ namespace IO.Swagger.Api
         ApiResponse<DocumentTypeBaseTreeDTO> DocumentTypesGetTreeWithHttpInfo (string mode, string businessunitcode, bool? forProtocol);
         #endregion Synchronous Operations
         #region Asynchronous Operations
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="collectionFlatten"></param>
-        /// <param name="item"> (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DocumentTypesFindRecursiveAsync (List<string> collectionFlatten, DocumentTypeBaseTreeDTO item = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="collectionFlatten"></param>
-        /// <param name="item"> (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DocumentTypesFindRecursiveAsyncWithHttpInfo (List<string> collectionFlatten, DocumentTypeBaseTreeDTO item = null);
         /// <summary>
         /// This call return the document types that the user can view
         /// </summary>
@@ -335,174 +289,6 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="collectionFlatten"></param>
-        /// <param name="item"> (optional)</param>
-        /// <returns></returns>
-        public void DocumentTypesFindRecursive (List<string> collectionFlatten, DocumentTypeBaseTreeDTO item = null)
-        {
-             DocumentTypesFindRecursiveWithHttpInfo(collectionFlatten, item);
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="collectionFlatten"></param>
-        /// <param name="item"> (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DocumentTypesFindRecursiveWithHttpInfo (List<string> collectionFlatten, DocumentTypeBaseTreeDTO item = null)
-        {
-            // verify the required parameter 'collectionFlatten' is set
-            if (collectionFlatten == null)
-                throw new ApiException(400, "Missing required parameter 'collectionFlatten' when calling DocumentTypesApi->DocumentTypesFindRecursive");
-
-            var localVarPath = "/api/DocumentTypes";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (collectionFlatten != null) localVarQueryParams.Add("collectionFlatten", Configuration.ApiClient.ParameterToString(collectionFlatten)); // query parameter
-            if (item != null && item.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(item); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = item; // byte array
-            }
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("DocumentTypesFindRecursive", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="collectionFlatten"></param>
-        /// <param name="item"> (optional)</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DocumentTypesFindRecursiveAsync (List<string> collectionFlatten, DocumentTypeBaseTreeDTO item = null)
-        {
-             await DocumentTypesFindRecursiveAsyncWithHttpInfo(collectionFlatten, item);
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="collectionFlatten"></param>
-        /// <param name="item"> (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DocumentTypesFindRecursiveAsyncWithHttpInfo (List<string> collectionFlatten, DocumentTypeBaseTreeDTO item = null)
-        {
-            // verify the required parameter 'collectionFlatten' is set
-            if (collectionFlatten == null)
-                throw new ApiException(400, "Missing required parameter 'collectionFlatten' when calling DocumentTypesApi->DocumentTypesFindRecursive");
-
-            var localVarPath = "/api/DocumentTypes";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (collectionFlatten != null) localVarQueryParams.Add("collectionFlatten", Configuration.ApiClient.ParameterToString(collectionFlatten)); // query parameter
-            if (item != null && item.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(item); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = item; // byte array
-            }
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("DocumentTypesFindRecursive", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
         /// This call return the document types that the user can view 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
@@ -531,7 +317,7 @@ namespace IO.Swagger.Api
             if (businessunitcode == null)
                 throw new ApiException(400, "Missing required parameter 'businessunitcode' when calling DocumentTypesApi->DocumentTypesGet");
 
-            var localVarPath = "/api/documenttypes/{mode}/mode/{businessunitcode}";
+            var localVarPath = "/api/DocumentTypes/{mode}/mode/{businessunitcode}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -617,7 +403,7 @@ namespace IO.Swagger.Api
             if (businessunitcode == null)
                 throw new ApiException(400, "Missing required parameter 'businessunitcode' when calling DocumentTypesApi->DocumentTypesGet");
 
-            var localVarPath = "/api/documenttypes/{mode}/mode/{businessunitcode}";
+            var localVarPath = "/api/DocumentTypes/{mode}/mode/{businessunitcode}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -696,7 +482,7 @@ namespace IO.Swagger.Api
             if (documentTypeId == null)
                 throw new ApiException(400, "Missing required parameter 'documentTypeId' when calling DocumentTypesApi->DocumentTypesGetBySystemId");
 
-            var localVarPath = "/api/documenttypes/{documentTypeId}";
+            var localVarPath = "/api/DocumentTypes/{documentTypeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -776,7 +562,7 @@ namespace IO.Swagger.Api
             if (documentTypeId == null)
                 throw new ApiException(400, "Missing required parameter 'documentTypeId' when calling DocumentTypesApi->DocumentTypesGetBySystemId");
 
-            var localVarPath = "/api/documenttypes/{documentTypeId}";
+            var localVarPath = "/api/DocumentTypes/{documentTypeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -864,7 +650,7 @@ namespace IO.Swagger.Api
             if (forProtocol == null)
                 throw new ApiException(400, "Missing required parameter 'forProtocol' when calling DocumentTypesApi->DocumentTypesGetTree");
 
-            var localVarPath = "/api/documenttypes/GetTree/{mode}/{businessunitcode}/{forProtocol}";
+            var localVarPath = "/api/DocumentTypes/GetTree/{mode}/{businessunitcode}/{forProtocol}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -956,7 +742,7 @@ namespace IO.Swagger.Api
             if (forProtocol == null)
                 throw new ApiException(400, "Missing required parameter 'forProtocol' when calling DocumentTypesApi->DocumentTypesGetTree");
 
-            var localVarPath = "/api/documenttypes/GetTree/{mode}/{businessunitcode}/{forProtocol}";
+            var localVarPath = "/api/DocumentTypes/GetTree/{mode}/{businessunitcode}/{forProtocol}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

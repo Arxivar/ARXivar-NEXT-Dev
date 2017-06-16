@@ -42,52 +42,98 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AuthenticationTokenDTO" /> class.
         /// </summary>
-        /// <param name="AccessToken">AccessToken.</param>
-        /// <param name="RefreshToken">RefreshToken.</param>
-        /// <param name="TokenType">TokenType.</param>
-        /// <param name="ExiprationDate">ExiprationDate.</param>
-        /// <param name="IssueDate">IssueDate.</param>
-        /// <param name="MustChangePassword">MustChangePassword.</param>
-        public AuthenticationTokenDTO(string AccessToken = null, string RefreshToken = null, string TokenType = null, DateTime? ExiprationDate = null, DateTime? IssueDate = null, bool? MustChangePassword = null)
+        /// <param name="Error">Error code.</param>
+        /// <param name="ErrorDescription">Error desciption.</param>
+        /// <param name="ErrorUri">Error Uri.</param>
+        /// <param name="AccessToken">Access token string.</param>
+        /// <param name="TokenType">Token type (bearer).</param>
+        /// <param name="ExpiresIn">Token and refresh token expire in ExpiresIn seconds.</param>
+        /// <param name="RefreshToken">Refresh token string.</param>
+        /// <param name="Issued">Issue date of the token.</param>
+        /// <param name="Expires">Expiration date of the token.</param>
+        /// <param name="ArxclientId">Client id.</param>
+        /// <param name="ArxuserMustChangePassword">User must change password after this &#39;login&#39;.</param>
+        public AuthenticationTokenDTO(string Error = null, string ErrorDescription = null, string ErrorUri = null, string AccessToken = null, string TokenType = null, int? ExpiresIn = null, string RefreshToken = null, DateTime? Issued = null, DateTime? Expires = null, string ArxclientId = null, bool? ArxuserMustChangePassword = null)
         {
+            this.Error = Error;
+            this.ErrorDescription = ErrorDescription;
+            this.ErrorUri = ErrorUri;
             this.AccessToken = AccessToken;
-            this.RefreshToken = RefreshToken;
             this.TokenType = TokenType;
-            this.ExiprationDate = ExiprationDate;
-            this.IssueDate = IssueDate;
-            this.MustChangePassword = MustChangePassword;
+            this.ExpiresIn = ExpiresIn;
+            this.RefreshToken = RefreshToken;
+            this.Issued = Issued;
+            this.Expires = Expires;
+            this.ArxclientId = ArxclientId;
+            this.ArxuserMustChangePassword = ArxuserMustChangePassword;
         }
         
         /// <summary>
-        /// Gets or Sets AccessToken
+        /// Error code
         /// </summary>
-        [DataMember(Name="access_token", EmitDefaultValue=false)]
+        /// <value>Error code</value>
+        [DataMember(Name="error", EmitDefaultValue=false)]
+        public string Error { get; set; }
+        /// <summary>
+        /// Error desciption
+        /// </summary>
+        /// <value>Error desciption</value>
+        [DataMember(Name="errorDescription", EmitDefaultValue=false)]
+        public string ErrorDescription { get; set; }
+        /// <summary>
+        /// Error Uri
+        /// </summary>
+        /// <value>Error Uri</value>
+        [DataMember(Name="errorUri", EmitDefaultValue=false)]
+        public string ErrorUri { get; set; }
+        /// <summary>
+        /// Access token string
+        /// </summary>
+        /// <value>Access token string</value>
+        [DataMember(Name="accessToken", EmitDefaultValue=false)]
         public string AccessToken { get; set; }
         /// <summary>
-        /// Gets or Sets RefreshToken
+        /// Token type (bearer)
         /// </summary>
-        [DataMember(Name="refresh_Token", EmitDefaultValue=false)]
-        public string RefreshToken { get; set; }
-        /// <summary>
-        /// Gets or Sets TokenType
-        /// </summary>
+        /// <value>Token type (bearer)</value>
         [DataMember(Name="tokenType", EmitDefaultValue=false)]
         public string TokenType { get; set; }
         /// <summary>
-        /// Gets or Sets ExiprationDate
+        /// Token and refresh token expire in ExpiresIn seconds
         /// </summary>
-        [DataMember(Name="exiprationDate", EmitDefaultValue=false)]
-        public DateTime? ExiprationDate { get; set; }
+        /// <value>Token and refresh token expire in ExpiresIn seconds</value>
+        [DataMember(Name="expiresIn", EmitDefaultValue=false)]
+        public int? ExpiresIn { get; set; }
         /// <summary>
-        /// Gets or Sets IssueDate
+        /// Refresh token string
         /// </summary>
-        [DataMember(Name="issueDate", EmitDefaultValue=false)]
-        public DateTime? IssueDate { get; set; }
+        /// <value>Refresh token string</value>
+        [DataMember(Name="refreshToken", EmitDefaultValue=false)]
+        public string RefreshToken { get; set; }
         /// <summary>
-        /// Gets or Sets MustChangePassword
+        /// Issue date of the token
         /// </summary>
-        [DataMember(Name="mustChangePassword", EmitDefaultValue=false)]
-        public bool? MustChangePassword { get; set; }
+        /// <value>Issue date of the token</value>
+        [DataMember(Name="issued", EmitDefaultValue=false)]
+        public DateTime? Issued { get; set; }
+        /// <summary>
+        /// Expiration date of the token
+        /// </summary>
+        /// <value>Expiration date of the token</value>
+        [DataMember(Name="expires", EmitDefaultValue=false)]
+        public DateTime? Expires { get; set; }
+        /// <summary>
+        /// Client id
+        /// </summary>
+        /// <value>Client id</value>
+        [DataMember(Name="arxclientId", EmitDefaultValue=false)]
+        public string ArxclientId { get; set; }
+        /// <summary>
+        /// User must change password after this &#39;login&#39;
+        /// </summary>
+        /// <value>User must change password after this &#39;login&#39;</value>
+        [DataMember(Name="arxuserMustChangePassword", EmitDefaultValue=false)]
+        public bool? ArxuserMustChangePassword { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,12 +142,17 @@ namespace IO.Swagger.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AuthenticationTokenDTO {\n");
+            sb.Append("  Error: ").Append(Error).Append("\n");
+            sb.Append("  ErrorDescription: ").Append(ErrorDescription).Append("\n");
+            sb.Append("  ErrorUri: ").Append(ErrorUri).Append("\n");
             sb.Append("  AccessToken: ").Append(AccessToken).Append("\n");
-            sb.Append("  RefreshToken: ").Append(RefreshToken).Append("\n");
             sb.Append("  TokenType: ").Append(TokenType).Append("\n");
-            sb.Append("  ExiprationDate: ").Append(ExiprationDate).Append("\n");
-            sb.Append("  IssueDate: ").Append(IssueDate).Append("\n");
-            sb.Append("  MustChangePassword: ").Append(MustChangePassword).Append("\n");
+            sb.Append("  ExpiresIn: ").Append(ExpiresIn).Append("\n");
+            sb.Append("  RefreshToken: ").Append(RefreshToken).Append("\n");
+            sb.Append("  Issued: ").Append(Issued).Append("\n");
+            sb.Append("  Expires: ").Append(Expires).Append("\n");
+            sb.Append("  ArxclientId: ").Append(ArxclientId).Append("\n");
+            sb.Append("  ArxuserMustChangePassword: ").Append(ArxuserMustChangePassword).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -139,14 +190,24 @@ namespace IO.Swagger.Model
 
             return 
                 (
+                    this.Error == other.Error ||
+                    this.Error != null &&
+                    this.Error.Equals(other.Error)
+                ) && 
+                (
+                    this.ErrorDescription == other.ErrorDescription ||
+                    this.ErrorDescription != null &&
+                    this.ErrorDescription.Equals(other.ErrorDescription)
+                ) && 
+                (
+                    this.ErrorUri == other.ErrorUri ||
+                    this.ErrorUri != null &&
+                    this.ErrorUri.Equals(other.ErrorUri)
+                ) && 
+                (
                     this.AccessToken == other.AccessToken ||
                     this.AccessToken != null &&
                     this.AccessToken.Equals(other.AccessToken)
-                ) && 
-                (
-                    this.RefreshToken == other.RefreshToken ||
-                    this.RefreshToken != null &&
-                    this.RefreshToken.Equals(other.RefreshToken)
                 ) && 
                 (
                     this.TokenType == other.TokenType ||
@@ -154,19 +215,34 @@ namespace IO.Swagger.Model
                     this.TokenType.Equals(other.TokenType)
                 ) && 
                 (
-                    this.ExiprationDate == other.ExiprationDate ||
-                    this.ExiprationDate != null &&
-                    this.ExiprationDate.Equals(other.ExiprationDate)
+                    this.ExpiresIn == other.ExpiresIn ||
+                    this.ExpiresIn != null &&
+                    this.ExpiresIn.Equals(other.ExpiresIn)
                 ) && 
                 (
-                    this.IssueDate == other.IssueDate ||
-                    this.IssueDate != null &&
-                    this.IssueDate.Equals(other.IssueDate)
+                    this.RefreshToken == other.RefreshToken ||
+                    this.RefreshToken != null &&
+                    this.RefreshToken.Equals(other.RefreshToken)
                 ) && 
                 (
-                    this.MustChangePassword == other.MustChangePassword ||
-                    this.MustChangePassword != null &&
-                    this.MustChangePassword.Equals(other.MustChangePassword)
+                    this.Issued == other.Issued ||
+                    this.Issued != null &&
+                    this.Issued.Equals(other.Issued)
+                ) && 
+                (
+                    this.Expires == other.Expires ||
+                    this.Expires != null &&
+                    this.Expires.Equals(other.Expires)
+                ) && 
+                (
+                    this.ArxclientId == other.ArxclientId ||
+                    this.ArxclientId != null &&
+                    this.ArxclientId.Equals(other.ArxclientId)
+                ) && 
+                (
+                    this.ArxuserMustChangePassword == other.ArxuserMustChangePassword ||
+                    this.ArxuserMustChangePassword != null &&
+                    this.ArxuserMustChangePassword.Equals(other.ArxuserMustChangePassword)
                 );
         }
 
@@ -181,18 +257,28 @@ namespace IO.Swagger.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Error != null)
+                    hash = hash * 59 + this.Error.GetHashCode();
+                if (this.ErrorDescription != null)
+                    hash = hash * 59 + this.ErrorDescription.GetHashCode();
+                if (this.ErrorUri != null)
+                    hash = hash * 59 + this.ErrorUri.GetHashCode();
                 if (this.AccessToken != null)
                     hash = hash * 59 + this.AccessToken.GetHashCode();
-                if (this.RefreshToken != null)
-                    hash = hash * 59 + this.RefreshToken.GetHashCode();
                 if (this.TokenType != null)
                     hash = hash * 59 + this.TokenType.GetHashCode();
-                if (this.ExiprationDate != null)
-                    hash = hash * 59 + this.ExiprationDate.GetHashCode();
-                if (this.IssueDate != null)
-                    hash = hash * 59 + this.IssueDate.GetHashCode();
-                if (this.MustChangePassword != null)
-                    hash = hash * 59 + this.MustChangePassword.GetHashCode();
+                if (this.ExpiresIn != null)
+                    hash = hash * 59 + this.ExpiresIn.GetHashCode();
+                if (this.RefreshToken != null)
+                    hash = hash * 59 + this.RefreshToken.GetHashCode();
+                if (this.Issued != null)
+                    hash = hash * 59 + this.Issued.GetHashCode();
+                if (this.Expires != null)
+                    hash = hash * 59 + this.Expires.GetHashCode();
+                if (this.ArxclientId != null)
+                    hash = hash * 59 + this.ArxclientId.GetHashCode();
+                if (this.ArxuserMustChangePassword != null)
+                    hash = hash * 59 + this.ArxuserMustChangePassword.GetHashCode();
                 return hash;
             }
         }

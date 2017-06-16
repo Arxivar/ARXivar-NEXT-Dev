@@ -62,9 +62,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="argomento">Argument filter</param>
+        /// <param name="argument">Argument filter</param>
         /// <returns>List&lt;OptionsDTO&gt;</returns>
-        List<OptionsDTO> OptionsGetByArgomento (string argomento);
+        List<OptionsDTO> OptionsGetByArgomento (string argument);
 
         /// <summary>
         /// This call retrieve options by the given argument
@@ -73,9 +73,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="argomento">Argument filter</param>
+        /// <param name="argument">Argument filter</param>
         /// <returns>ApiResponse of List&lt;OptionsDTO&gt;</returns>
-        ApiResponse<List<OptionsDTO>> OptionsGetByArgomentoWithHttpInfo (string argomento);
+        ApiResponse<List<OptionsDTO>> OptionsGetByArgomentoWithHttpInfo (string argument);
         /// <summary>
         /// This call retrieve options by the given argument and given field
         /// </summary>
@@ -83,10 +83,10 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="argomento">Argument filter</param>
-        /// <param name="campo">Field filter</param>
+        /// <param name="argument">Argument filter</param>
+        /// <param name="field">Field filter</param>
         /// <returns>List&lt;OptionsDTO&gt;</returns>
-        List<OptionsDTO> OptionsGetByArgomentoCampo (string argomento, string campo);
+        List<OptionsDTO> OptionsGetByArgomentoCampo (string argument, string field);
 
         /// <summary>
         /// This call retrieve options by the given argument and given field
@@ -95,10 +95,10 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="argomento">Argument filter</param>
-        /// <param name="campo">Field filter</param>
+        /// <param name="argument">Argument filter</param>
+        /// <param name="field">Field filter</param>
         /// <returns>ApiResponse of List&lt;OptionsDTO&gt;</returns>
-        ApiResponse<List<OptionsDTO>> OptionsGetByArgomentoCampoWithHttpInfo (string argomento, string campo);
+        ApiResponse<List<OptionsDTO>> OptionsGetByArgomentoCampoWithHttpInfo (string argument, string field);
         /// <summary>
         /// This call returns the option for display Document Type by code or By Description
         /// </summary>
@@ -146,9 +146,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="argomento">Argument filter</param>
+        /// <param name="argument">Argument filter</param>
         /// <returns>Task of List&lt;OptionsDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<OptionsDTO>> OptionsGetByArgomentoAsync (string argomento);
+        System.Threading.Tasks.Task<List<OptionsDTO>> OptionsGetByArgomentoAsync (string argument);
 
         /// <summary>
         /// This call retrieve options by the given argument
@@ -157,9 +157,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="argomento">Argument filter</param>
+        /// <param name="argument">Argument filter</param>
         /// <returns>Task of ApiResponse (List&lt;OptionsDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<OptionsDTO>>> OptionsGetByArgomentoAsyncWithHttpInfo (string argomento);
+        System.Threading.Tasks.Task<ApiResponse<List<OptionsDTO>>> OptionsGetByArgomentoAsyncWithHttpInfo (string argument);
         /// <summary>
         /// This call retrieve options by the given argument and given field
         /// </summary>
@@ -167,10 +167,10 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="argomento">Argument filter</param>
-        /// <param name="campo">Field filter</param>
+        /// <param name="argument">Argument filter</param>
+        /// <param name="field">Field filter</param>
         /// <returns>Task of List&lt;OptionsDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<OptionsDTO>> OptionsGetByArgomentoCampoAsync (string argomento, string campo);
+        System.Threading.Tasks.Task<List<OptionsDTO>> OptionsGetByArgomentoCampoAsync (string argument, string field);
 
         /// <summary>
         /// This call retrieve options by the given argument and given field
@@ -179,10 +179,10 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="argomento">Argument filter</param>
-        /// <param name="campo">Field filter</param>
+        /// <param name="argument">Argument filter</param>
+        /// <param name="field">Field filter</param>
         /// <returns>Task of ApiResponse (List&lt;OptionsDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<OptionsDTO>>> OptionsGetByArgomentoCampoAsyncWithHttpInfo (string argomento, string campo);
+        System.Threading.Tasks.Task<ApiResponse<List<OptionsDTO>>> OptionsGetByArgomentoCampoAsyncWithHttpInfo (string argument, string field);
         /// <summary>
         /// This call returns the option for display Document Type by code or By Description
         /// </summary>
@@ -333,7 +333,7 @@ namespace IO.Swagger.Api
         public ApiResponse< UserOptionsDto > OptionsGetWithHttpInfo ()
         {
 
-            var localVarPath = "/api/options";
+            var localVarPath = "/api/Options";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -407,7 +407,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<UserOptionsDto>> OptionsGetAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/options";
+            var localVarPath = "/api/Options";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -464,11 +464,11 @@ namespace IO.Swagger.Api
         /// This call retrieve options by the given argument 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="argomento">Argument filter</param>
+        /// <param name="argument">Argument filter</param>
         /// <returns>List&lt;OptionsDTO&gt;</returns>
-        public List<OptionsDTO> OptionsGetByArgomento (string argomento)
+        public List<OptionsDTO> OptionsGetByArgomento (string argument)
         {
-             ApiResponse<List<OptionsDTO>> localVarResponse = OptionsGetByArgomentoWithHttpInfo(argomento);
+             ApiResponse<List<OptionsDTO>> localVarResponse = OptionsGetByArgomentoWithHttpInfo(argument);
              return localVarResponse.Data;
         }
 
@@ -476,15 +476,15 @@ namespace IO.Swagger.Api
         /// This call retrieve options by the given argument 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="argomento">Argument filter</param>
+        /// <param name="argument">Argument filter</param>
         /// <returns>ApiResponse of List&lt;OptionsDTO&gt;</returns>
-        public ApiResponse< List<OptionsDTO> > OptionsGetByArgomentoWithHttpInfo (string argomento)
+        public ApiResponse< List<OptionsDTO> > OptionsGetByArgomentoWithHttpInfo (string argument)
         {
-            // verify the required parameter 'argomento' is set
-            if (argomento == null)
-                throw new ApiException(400, "Missing required parameter 'argomento' when calling OptionsApi->OptionsGetByArgomento");
+            // verify the required parameter 'argument' is set
+            if (argument == null)
+                throw new ApiException(400, "Missing required parameter 'argument' when calling OptionsApi->OptionsGetByArgomento");
 
-            var localVarPath = "/api/options/topic/{argomento}";
+            var localVarPath = "/api/Options/topic/{argument}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -511,7 +511,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (argomento != null) localVarPathParams.Add("argomento", Configuration.ApiClient.ParameterToString(argomento)); // path parameter
+            if (argument != null) localVarPathParams.Add("argument", Configuration.ApiClient.ParameterToString(argument)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -543,11 +543,11 @@ namespace IO.Swagger.Api
         /// This call retrieve options by the given argument 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="argomento">Argument filter</param>
+        /// <param name="argument">Argument filter</param>
         /// <returns>Task of List&lt;OptionsDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<OptionsDTO>> OptionsGetByArgomentoAsync (string argomento)
+        public async System.Threading.Tasks.Task<List<OptionsDTO>> OptionsGetByArgomentoAsync (string argument)
         {
-             ApiResponse<List<OptionsDTO>> localVarResponse = await OptionsGetByArgomentoAsyncWithHttpInfo(argomento);
+             ApiResponse<List<OptionsDTO>> localVarResponse = await OptionsGetByArgomentoAsyncWithHttpInfo(argument);
              return localVarResponse.Data;
 
         }
@@ -556,15 +556,15 @@ namespace IO.Swagger.Api
         /// This call retrieve options by the given argument 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="argomento">Argument filter</param>
+        /// <param name="argument">Argument filter</param>
         /// <returns>Task of ApiResponse (List&lt;OptionsDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<OptionsDTO>>> OptionsGetByArgomentoAsyncWithHttpInfo (string argomento)
+        public async System.Threading.Tasks.Task<ApiResponse<List<OptionsDTO>>> OptionsGetByArgomentoAsyncWithHttpInfo (string argument)
         {
-            // verify the required parameter 'argomento' is set
-            if (argomento == null)
-                throw new ApiException(400, "Missing required parameter 'argomento' when calling OptionsApi->OptionsGetByArgomento");
+            // verify the required parameter 'argument' is set
+            if (argument == null)
+                throw new ApiException(400, "Missing required parameter 'argument' when calling OptionsApi->OptionsGetByArgomento");
 
-            var localVarPath = "/api/options/topic/{argomento}";
+            var localVarPath = "/api/Options/topic/{argument}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -591,7 +591,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (argomento != null) localVarPathParams.Add("argomento", Configuration.ApiClient.ParameterToString(argomento)); // path parameter
+            if (argument != null) localVarPathParams.Add("argument", Configuration.ApiClient.ParameterToString(argument)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -622,12 +622,12 @@ namespace IO.Swagger.Api
         /// This call retrieve options by the given argument and given field 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="argomento">Argument filter</param>
-        /// <param name="campo">Field filter</param>
+        /// <param name="argument">Argument filter</param>
+        /// <param name="field">Field filter</param>
         /// <returns>List&lt;OptionsDTO&gt;</returns>
-        public List<OptionsDTO> OptionsGetByArgomentoCampo (string argomento, string campo)
+        public List<OptionsDTO> OptionsGetByArgomentoCampo (string argument, string field)
         {
-             ApiResponse<List<OptionsDTO>> localVarResponse = OptionsGetByArgomentoCampoWithHttpInfo(argomento, campo);
+             ApiResponse<List<OptionsDTO>> localVarResponse = OptionsGetByArgomentoCampoWithHttpInfo(argument, field);
              return localVarResponse.Data;
         }
 
@@ -635,19 +635,19 @@ namespace IO.Swagger.Api
         /// This call retrieve options by the given argument and given field 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="argomento">Argument filter</param>
-        /// <param name="campo">Field filter</param>
+        /// <param name="argument">Argument filter</param>
+        /// <param name="field">Field filter</param>
         /// <returns>ApiResponse of List&lt;OptionsDTO&gt;</returns>
-        public ApiResponse< List<OptionsDTO> > OptionsGetByArgomentoCampoWithHttpInfo (string argomento, string campo)
+        public ApiResponse< List<OptionsDTO> > OptionsGetByArgomentoCampoWithHttpInfo (string argument, string field)
         {
-            // verify the required parameter 'argomento' is set
-            if (argomento == null)
-                throw new ApiException(400, "Missing required parameter 'argomento' when calling OptionsApi->OptionsGetByArgomentoCampo");
-            // verify the required parameter 'campo' is set
-            if (campo == null)
-                throw new ApiException(400, "Missing required parameter 'campo' when calling OptionsApi->OptionsGetByArgomentoCampo");
+            // verify the required parameter 'argument' is set
+            if (argument == null)
+                throw new ApiException(400, "Missing required parameter 'argument' when calling OptionsApi->OptionsGetByArgomentoCampo");
+            // verify the required parameter 'field' is set
+            if (field == null)
+                throw new ApiException(400, "Missing required parameter 'field' when calling OptionsApi->OptionsGetByArgomentoCampo");
 
-            var localVarPath = "/api/options/topicField/{argomento}/{campo}";
+            var localVarPath = "/api/Options/topicField/{argument}/{field}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -674,8 +674,8 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (argomento != null) localVarPathParams.Add("argomento", Configuration.ApiClient.ParameterToString(argomento)); // path parameter
-            if (campo != null) localVarPathParams.Add("campo", Configuration.ApiClient.ParameterToString(campo)); // path parameter
+            if (argument != null) localVarPathParams.Add("argument", Configuration.ApiClient.ParameterToString(argument)); // path parameter
+            if (field != null) localVarPathParams.Add("field", Configuration.ApiClient.ParameterToString(field)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -707,12 +707,12 @@ namespace IO.Swagger.Api
         /// This call retrieve options by the given argument and given field 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="argomento">Argument filter</param>
-        /// <param name="campo">Field filter</param>
+        /// <param name="argument">Argument filter</param>
+        /// <param name="field">Field filter</param>
         /// <returns>Task of List&lt;OptionsDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<OptionsDTO>> OptionsGetByArgomentoCampoAsync (string argomento, string campo)
+        public async System.Threading.Tasks.Task<List<OptionsDTO>> OptionsGetByArgomentoCampoAsync (string argument, string field)
         {
-             ApiResponse<List<OptionsDTO>> localVarResponse = await OptionsGetByArgomentoCampoAsyncWithHttpInfo(argomento, campo);
+             ApiResponse<List<OptionsDTO>> localVarResponse = await OptionsGetByArgomentoCampoAsyncWithHttpInfo(argument, field);
              return localVarResponse.Data;
 
         }
@@ -721,19 +721,19 @@ namespace IO.Swagger.Api
         /// This call retrieve options by the given argument and given field 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="argomento">Argument filter</param>
-        /// <param name="campo">Field filter</param>
+        /// <param name="argument">Argument filter</param>
+        /// <param name="field">Field filter</param>
         /// <returns>Task of ApiResponse (List&lt;OptionsDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<OptionsDTO>>> OptionsGetByArgomentoCampoAsyncWithHttpInfo (string argomento, string campo)
+        public async System.Threading.Tasks.Task<ApiResponse<List<OptionsDTO>>> OptionsGetByArgomentoCampoAsyncWithHttpInfo (string argument, string field)
         {
-            // verify the required parameter 'argomento' is set
-            if (argomento == null)
-                throw new ApiException(400, "Missing required parameter 'argomento' when calling OptionsApi->OptionsGetByArgomentoCampo");
-            // verify the required parameter 'campo' is set
-            if (campo == null)
-                throw new ApiException(400, "Missing required parameter 'campo' when calling OptionsApi->OptionsGetByArgomentoCampo");
+            // verify the required parameter 'argument' is set
+            if (argument == null)
+                throw new ApiException(400, "Missing required parameter 'argument' when calling OptionsApi->OptionsGetByArgomentoCampo");
+            // verify the required parameter 'field' is set
+            if (field == null)
+                throw new ApiException(400, "Missing required parameter 'field' when calling OptionsApi->OptionsGetByArgomentoCampo");
 
-            var localVarPath = "/api/options/topicField/{argomento}/{campo}";
+            var localVarPath = "/api/Options/topicField/{argument}/{field}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -760,8 +760,8 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (argomento != null) localVarPathParams.Add("argomento", Configuration.ApiClient.ParameterToString(argomento)); // path parameter
-            if (campo != null) localVarPathParams.Add("campo", Configuration.ApiClient.ParameterToString(campo)); // path parameter
+            if (argument != null) localVarPathParams.Add("argument", Configuration.ApiClient.ParameterToString(argument)); // path parameter
+            if (field != null) localVarPathParams.Add("field", Configuration.ApiClient.ParameterToString(field)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -807,7 +807,7 @@ namespace IO.Swagger.Api
         public ApiResponse< string > OptionsGetDocumentTypeViewModeWithHttpInfo ()
         {
 
-            var localVarPath = "/api/options/documenttypeviewmode";
+            var localVarPath = "/api/Options/documenttypeviewmode";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -881,7 +881,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<string>> OptionsGetDocumentTypeViewModeAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/options/documenttypeviewmode";
+            var localVarPath = "/api/Options/documenttypeviewmode";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

@@ -34,7 +34,7 @@ using Newtonsoft.Json.Converters;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// AssociationDTO
+    /// DTO for association item
     /// </summary>
     [DataContract]
     public partial class AssociationDTO :  IEquatable<AssociationDTO>
@@ -42,12 +42,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AssociationDTO" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="DocNumber">Identificativo del profilo principale..</param>
-        /// <param name="User">Identificativo dell&#39;utente che ha creato l&#39;associazione..</param>
-        /// <param name="Date">Data di creazione dell&#39;associazione..</param>
-        /// <param name="Description">Nome dell&#39;associazione..</param>
-        /// <param name="UserNameComplete">Nome completo dell&#39;autore.</param>
+        /// <param name="Id">Unique id for the association.</param>
+        /// <param name="DocNumber">Docnumber of the principal profile..</param>
+        /// <param name="User">Unique identifier for the association author..</param>
+        /// <param name="Date">Date of the association creation.</param>
+        /// <param name="Description">Name of the association..</param>
+        /// <param name="UserNameComplete">Complete name of the author.</param>
         public AssociationDTO(int? Id = null, int? DocNumber = null, int? User = null, DateTime? Date = null, string Description = null, string UserNameComplete = null)
         {
             this.Id = Id;
@@ -59,38 +59,39 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Unique id for the association
         /// </summary>
+        /// <value>Unique id for the association</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
         /// <summary>
-        /// Identificativo del profilo principale.
+        /// Docnumber of the principal profile.
         /// </summary>
-        /// <value>Identificativo del profilo principale.</value>
+        /// <value>Docnumber of the principal profile.</value>
         [DataMember(Name="docNumber", EmitDefaultValue=false)]
         public int? DocNumber { get; set; }
         /// <summary>
-        /// Identificativo dell&#39;utente che ha creato l&#39;associazione.
+        /// Unique identifier for the association author.
         /// </summary>
-        /// <value>Identificativo dell&#39;utente che ha creato l&#39;associazione.</value>
+        /// <value>Unique identifier for the association author.</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public int? User { get; set; }
         /// <summary>
-        /// Data di creazione dell&#39;associazione.
+        /// Date of the association creation
         /// </summary>
-        /// <value>Data di creazione dell&#39;associazione.</value>
+        /// <value>Date of the association creation</value>
         [DataMember(Name="date", EmitDefaultValue=false)]
         public DateTime? Date { get; set; }
         /// <summary>
-        /// Nome dell&#39;associazione.
+        /// Name of the association.
         /// </summary>
-        /// <value>Nome dell&#39;associazione.</value>
+        /// <value>Name of the association.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
         /// <summary>
-        /// Nome completo dell&#39;autore
+        /// Complete name of the author
         /// </summary>
-        /// <value>Nome completo dell&#39;autore</value>
+        /// <value>Complete name of the author</value>
         [DataMember(Name="userNameComplete", EmitDefaultValue=false)]
         public string UserNameComplete { get; set; }
         /// <summary>

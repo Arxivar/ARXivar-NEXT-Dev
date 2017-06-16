@@ -57,6 +57,27 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DocumentsCanWriteWithHttpInfo (int? docnumber);
         /// <summary>
+        /// This call return the file associated to a specified revision of a profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="revisionId">Id of the revision</param>
+        /// <returns>Object</returns>
+        Object DocumentsGetDocumentByRevisionId (int? revisionId);
+
+        /// <summary>
+        /// This call return the file associated to a specified revision of a profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="revisionId">Id of the revision</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DocumentsGetDocumentByRevisionIdWithHttpInfo (int? revisionId);
+        /// <summary>
         /// This call returns the file associated with the profile passed by argument
         /// </summary>
         /// <remarks>
@@ -77,6 +98,27 @@ namespace IO.Swagger.Api
         /// <param name="id">DocNumber of the profile for which you want to find the document and extract</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> DocumentsGetExtractP7MWithHttpInfo (int? id);
+        /// <summary>
+        /// This call retrieve a file for an external profile attachment
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>Object</returns>
+        Object DocumentsGetForExternalAttachment (int? id);
+
+        /// <summary>
+        /// This call retrieve a file for an external profile attachment
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DocumentsGetForExternalAttachmentWithHttpInfo (int? id);
         /// <summary>
         /// This call returns the file associated with the profile passed by argument
         /// </summary>
@@ -99,26 +141,70 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> DocumentsGetForProfileWithHttpInfo (int? id);
         /// <summary>
-        /// 
+        /// This call returns the file associated with the task attachment passed by argument
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cacheId"></param>
-        /// <param name="docNumber"></param>
+        /// <param name="id">Task attachment id of the file for which you want to find the document</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream DocumentsGetForTaskAttachement (int? id);
+
+        /// <summary>
+        /// This call returns the file associated with the task attachment passed by argument
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Task attachment id of the file for which you want to find the document</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> DocumentsGetForTaskAttachementWithHttpInfo (int? id);
+        /// <summary>
+        /// This call retrieve the attachemnt file by its revision
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attachmentId"></param>
+        /// <param name="revisionId"></param>
+        /// <returns>Object</returns>
+        Object DocumentsGetRevisionDocumentById (int? attachmentId, int? revisionId);
+
+        /// <summary>
+        /// This call retrieve the attachemnt file by its revision
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attachmentId"></param>
+        /// <param name="revisionId"></param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DocumentsGetRevisionDocumentByIdWithHttpInfo (int? attachmentId, int? revisionId);
+        /// <summary>
+        /// This call update a profile in Arxivar
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cacheId">Cache id</param>
+        /// <param name="docNumber">Docnumber of the profile to update</param>
         /// <returns></returns>
         void DocumentsSetDocument (string cacheId, int? docNumber);
 
         /// <summary>
-        /// 
+        /// This call update a profile in Arxivar
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cacheId"></param>
-        /// <param name="docNumber"></param>
+        /// <param name="cacheId">Cache id</param>
+        /// <param name="docNumber">Docnumber of the profile to update</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DocumentsSetDocumentWithHttpInfo (string cacheId, int? docNumber);
         #endregion Synchronous Operations
@@ -145,6 +231,27 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DocumentsCanWriteAsyncWithHttpInfo (int? docnumber);
         /// <summary>
+        /// This call return the file associated to a specified revision of a profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="revisionId">Id of the revision</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DocumentsGetDocumentByRevisionIdAsync (int? revisionId);
+
+        /// <summary>
+        /// This call return the file associated to a specified revision of a profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="revisionId">Id of the revision</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DocumentsGetDocumentByRevisionIdAsyncWithHttpInfo (int? revisionId);
+        /// <summary>
         /// This call returns the file associated with the profile passed by argument
         /// </summary>
         /// <remarks>
@@ -165,6 +272,27 @@ namespace IO.Swagger.Api
         /// <param name="id">DocNumber of the profile for which you want to find the document and extract</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DocumentsGetExtractP7MAsyncWithHttpInfo (int? id);
+        /// <summary>
+        /// This call retrieve a file for an external profile attachment
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DocumentsGetForExternalAttachmentAsync (int? id);
+
+        /// <summary>
+        /// This call retrieve a file for an external profile attachment
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DocumentsGetForExternalAttachmentAsyncWithHttpInfo (int? id);
         /// <summary>
         /// This call returns the file associated with the profile passed by argument
         /// </summary>
@@ -187,26 +315,70 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DocumentsGetForProfileAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// 
+        /// This call returns the file associated with the task attachment passed by argument
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cacheId"></param>
-        /// <param name="docNumber"></param>
+        /// <param name="id">Task attachment id of the file for which you want to find the document</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> DocumentsGetForTaskAttachementAsync (int? id);
+
+        /// <summary>
+        /// This call returns the file associated with the task attachment passed by argument
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Task attachment id of the file for which you want to find the document</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DocumentsGetForTaskAttachementAsyncWithHttpInfo (int? id);
+        /// <summary>
+        /// This call retrieve the attachemnt file by its revision
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attachmentId"></param>
+        /// <param name="revisionId"></param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DocumentsGetRevisionDocumentByIdAsync (int? attachmentId, int? revisionId);
+
+        /// <summary>
+        /// This call retrieve the attachemnt file by its revision
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attachmentId"></param>
+        /// <param name="revisionId"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DocumentsGetRevisionDocumentByIdAsyncWithHttpInfo (int? attachmentId, int? revisionId);
+        /// <summary>
+        /// This call update a profile in Arxivar
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cacheId">Cache id</param>
+        /// <param name="docNumber">Docnumber of the profile to update</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DocumentsSetDocumentAsync (string cacheId, int? docNumber);
 
         /// <summary>
-        /// 
+        /// This call update a profile in Arxivar
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cacheId"></param>
-        /// <param name="docNumber"></param>
+        /// <param name="cacheId">Cache id</param>
+        /// <param name="docNumber">Docnumber of the profile to update</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DocumentsSetDocumentAsyncWithHttpInfo (string cacheId, int? docNumber);
         #endregion Asynchronous Operations
@@ -344,7 +516,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling DocumentsApi->DocumentsCanWrite");
 
-            var localVarPath = "/api/documents/{docnumber}/canWrite";
+            var localVarPath = "/api/Documents/{docnumber}/canWrite";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -419,7 +591,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling DocumentsApi->DocumentsCanWrite");
 
-            var localVarPath = "/api/documents/{docnumber}/canWrite";
+            var localVarPath = "/api/Documents/{docnumber}/canWrite";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -470,6 +642,164 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
+        /// This call return the file associated to a specified revision of a profile 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="revisionId">Id of the revision</param>
+        /// <returns>Object</returns>
+        public Object DocumentsGetDocumentByRevisionId (int? revisionId)
+        {
+             ApiResponse<Object> localVarResponse = DocumentsGetDocumentByRevisionIdWithHttpInfo(revisionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call return the file associated to a specified revision of a profile 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="revisionId">Id of the revision</param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DocumentsGetDocumentByRevisionIdWithHttpInfo (int? revisionId)
+        {
+            // verify the required parameter 'revisionId' is set
+            if (revisionId == null)
+                throw new ApiException(400, "Missing required parameter 'revisionId' when calling DocumentsApi->DocumentsGetDocumentByRevisionId");
+
+            var localVarPath = "/api/Documents/byRevision/{revisionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (revisionId != null) localVarPathParams.Add("revisionId", Configuration.ApiClient.ParameterToString(revisionId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentsGetDocumentByRevisionId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        /// <summary>
+        /// This call return the file associated to a specified revision of a profile 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="revisionId">Id of the revision</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DocumentsGetDocumentByRevisionIdAsync (int? revisionId)
+        {
+             ApiResponse<Object> localVarResponse = await DocumentsGetDocumentByRevisionIdAsyncWithHttpInfo(revisionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call return the file associated to a specified revision of a profile 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="revisionId">Id of the revision</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DocumentsGetDocumentByRevisionIdAsyncWithHttpInfo (int? revisionId)
+        {
+            // verify the required parameter 'revisionId' is set
+            if (revisionId == null)
+                throw new ApiException(400, "Missing required parameter 'revisionId' when calling DocumentsApi->DocumentsGetDocumentByRevisionId");
+
+            var localVarPath = "/api/Documents/byRevision/{revisionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (revisionId != null) localVarPathParams.Add("revisionId", Configuration.ApiClient.ParameterToString(revisionId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentsGetDocumentByRevisionId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        /// <summary>
         /// This call returns the file associated with the profile passed by argument 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
@@ -493,7 +823,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling DocumentsApi->DocumentsGetExtractP7M");
 
-            var localVarPath = "/api/documents/{id}/extract";
+            var localVarPath = "/api/Documents/{id}/extract";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -573,7 +903,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling DocumentsApi->DocumentsGetExtractP7M");
 
-            var localVarPath = "/api/documents/{id}/extract";
+            var localVarPath = "/api/Documents/{id}/extract";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -628,6 +958,164 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
+        /// This call retrieve a file for an external profile attachment 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>Object</returns>
+        public Object DocumentsGetForExternalAttachment (int? id)
+        {
+             ApiResponse<Object> localVarResponse = DocumentsGetForExternalAttachmentWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call retrieve a file for an external profile attachment 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DocumentsGetForExternalAttachmentWithHttpInfo (int? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling DocumentsApi->DocumentsGetForExternalAttachment");
+
+            var localVarPath = "/api/Documents/profileAttachment/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentsGetForExternalAttachment", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        /// <summary>
+        /// This call retrieve a file for an external profile attachment 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DocumentsGetForExternalAttachmentAsync (int? id)
+        {
+             ApiResponse<Object> localVarResponse = await DocumentsGetForExternalAttachmentAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call retrieve a file for an external profile attachment 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DocumentsGetForExternalAttachmentAsyncWithHttpInfo (int? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling DocumentsApi->DocumentsGetForExternalAttachment");
+
+            var localVarPath = "/api/Documents/profileAttachment/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentsGetForExternalAttachment", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        /// <summary>
         /// This call returns the file associated with the profile passed by argument 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
@@ -651,7 +1139,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling DocumentsApi->DocumentsGetForProfile");
 
-            var localVarPath = "/api/documents/{id}";
+            var localVarPath = "/api/Documents/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -728,7 +1216,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling DocumentsApi->DocumentsGetForProfile");
 
-            var localVarPath = "/api/documents/{id}";
+            var localVarPath = "/api/Documents/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -780,11 +1268,333 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the file associated with the task attachment passed by argument 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cacheId"></param>
-        /// <param name="docNumber"></param>
+        /// <param name="id">Task attachment id of the file for which you want to find the document</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream DocumentsGetForTaskAttachement (int? id)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = DocumentsGetForTaskAttachementWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns the file associated with the task attachment passed by argument 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Task attachment id of the file for which you want to find the document</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > DocumentsGetForTaskAttachementWithHttpInfo (int? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling DocumentsApi->DocumentsGetForTaskAttachement");
+
+            var localVarPath = "/api/Documents/taskattachments/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentsGetForTaskAttachement", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+            
+        }
+
+        /// <summary>
+        /// This call returns the file associated with the task attachment passed by argument 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Task attachment id of the file for which you want to find the document</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> DocumentsGetForTaskAttachementAsync (int? id)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await DocumentsGetForTaskAttachementAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns the file associated with the task attachment passed by argument 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Task attachment id of the file for which you want to find the document</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DocumentsGetForTaskAttachementAsyncWithHttpInfo (int? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling DocumentsApi->DocumentsGetForTaskAttachement");
+
+            var localVarPath = "/api/Documents/taskattachments/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentsGetForTaskAttachement", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+            
+        }
+
+        /// <summary>
+        /// This call retrieve the attachemnt file by its revision 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attachmentId"></param>
+        /// <param name="revisionId"></param>
+        /// <returns>Object</returns>
+        public Object DocumentsGetRevisionDocumentById (int? attachmentId, int? revisionId)
+        {
+             ApiResponse<Object> localVarResponse = DocumentsGetRevisionDocumentByIdWithHttpInfo(attachmentId, revisionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call retrieve the attachemnt file by its revision 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attachmentId"></param>
+        /// <param name="revisionId"></param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DocumentsGetRevisionDocumentByIdWithHttpInfo (int? attachmentId, int? revisionId)
+        {
+            // verify the required parameter 'attachmentId' is set
+            if (attachmentId == null)
+                throw new ApiException(400, "Missing required parameter 'attachmentId' when calling DocumentsApi->DocumentsGetRevisionDocumentById");
+            // verify the required parameter 'revisionId' is set
+            if (revisionId == null)
+                throw new ApiException(400, "Missing required parameter 'revisionId' when calling DocumentsApi->DocumentsGetRevisionDocumentById");
+
+            var localVarPath = "/api/Documents/profileAttachment/{attachmentId}/revisions/{revisionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (attachmentId != null) localVarPathParams.Add("attachmentId", Configuration.ApiClient.ParameterToString(attachmentId)); // path parameter
+            if (revisionId != null) localVarPathParams.Add("revisionId", Configuration.ApiClient.ParameterToString(revisionId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentsGetRevisionDocumentById", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        /// <summary>
+        /// This call retrieve the attachemnt file by its revision 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attachmentId"></param>
+        /// <param name="revisionId"></param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DocumentsGetRevisionDocumentByIdAsync (int? attachmentId, int? revisionId)
+        {
+             ApiResponse<Object> localVarResponse = await DocumentsGetRevisionDocumentByIdAsyncWithHttpInfo(attachmentId, revisionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call retrieve the attachemnt file by its revision 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="attachmentId"></param>
+        /// <param name="revisionId"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DocumentsGetRevisionDocumentByIdAsyncWithHttpInfo (int? attachmentId, int? revisionId)
+        {
+            // verify the required parameter 'attachmentId' is set
+            if (attachmentId == null)
+                throw new ApiException(400, "Missing required parameter 'attachmentId' when calling DocumentsApi->DocumentsGetRevisionDocumentById");
+            // verify the required parameter 'revisionId' is set
+            if (revisionId == null)
+                throw new ApiException(400, "Missing required parameter 'revisionId' when calling DocumentsApi->DocumentsGetRevisionDocumentById");
+
+            var localVarPath = "/api/Documents/profileAttachment/{attachmentId}/revisions/{revisionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (attachmentId != null) localVarPathParams.Add("attachmentId", Configuration.ApiClient.ParameterToString(attachmentId)); // path parameter
+            if (revisionId != null) localVarPathParams.Add("revisionId", Configuration.ApiClient.ParameterToString(revisionId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentsGetRevisionDocumentById", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        /// <summary>
+        /// This call update a profile in Arxivar 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cacheId">Cache id</param>
+        /// <param name="docNumber">Docnumber of the profile to update</param>
         /// <returns></returns>
         public void DocumentsSetDocument (string cacheId, int? docNumber)
         {
@@ -792,11 +1602,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update a profile in Arxivar 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cacheId"></param>
-        /// <param name="docNumber"></param>
+        /// <param name="cacheId">Cache id</param>
+        /// <param name="docNumber">Docnumber of the profile to update</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DocumentsSetDocumentWithHttpInfo (string cacheId, int? docNumber)
         {
@@ -807,7 +1617,7 @@ namespace IO.Swagger.Api
             if (docNumber == null)
                 throw new ApiException(400, "Missing required parameter 'docNumber' when calling DocumentsApi->DocumentsSetDocument");
 
-            var localVarPath = "/api/documents/{docNumber}/{cacheId}";
+            var localVarPath = "/api/Documents/{docNumber}/{cacheId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -860,11 +1670,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update a profile in Arxivar 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cacheId"></param>
-        /// <param name="docNumber"></param>
+        /// <param name="cacheId">Cache id</param>
+        /// <param name="docNumber">Docnumber of the profile to update</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DocumentsSetDocumentAsync (string cacheId, int? docNumber)
         {
@@ -873,11 +1683,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update a profile in Arxivar 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cacheId"></param>
-        /// <param name="docNumber"></param>
+        /// <param name="cacheId">Cache id</param>
+        /// <param name="docNumber">Docnumber of the profile to update</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DocumentsSetDocumentAsyncWithHttpInfo (string cacheId, int? docNumber)
         {
@@ -888,7 +1698,7 @@ namespace IO.Swagger.Api
             if (docNumber == null)
                 throw new ApiException(400, "Missing required parameter 'docNumber' when calling DocumentsApi->DocumentsSetDocument");
 
-            var localVarPath = "/api/documents/{docNumber}/{cacheId}";
+            var localVarPath = "/api/Documents/{docNumber}/{cacheId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

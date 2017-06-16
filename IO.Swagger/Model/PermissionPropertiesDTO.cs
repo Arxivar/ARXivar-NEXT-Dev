@@ -42,8 +42,8 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PermissionPropertiesDTO" /> class.
         /// </summary>
-        /// <param name="Permission">Permission.</param>
-        /// <param name="Description">Description.</param>
+        /// <param name="Permission">Code of the permission.</param>
+        /// <param name="Description">Description of the permission.</param>
         public PermissionPropertiesDTO(int? Permission = null, string Description = null)
         {
             this.Permission = Permission;
@@ -51,13 +51,15 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets Permission
+        /// Code of the permission
         /// </summary>
+        /// <value>Code of the permission</value>
         [DataMember(Name="permission", EmitDefaultValue=false)]
         public int? Permission { get; set; }
         /// <summary>
-        /// Gets or Sets Description
+        /// Description of the permission
         /// </summary>
+        /// <value>Description of the permission</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
         /// <summary>

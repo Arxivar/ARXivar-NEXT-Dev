@@ -42,8 +42,8 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PermissionsDTO" /> class.
         /// </summary>
-        /// <param name="UsersPermissions">UsersPermissions.</param>
-        /// <param name="PermissionsProperties">PermissionsProperties.</param>
+        /// <param name="UsersPermissions">List of user permissions.</param>
+        /// <param name="PermissionsProperties">Possibile permission for the object.</param>
         public PermissionsDTO(List<UserPermissionDTO> UsersPermissions = null, List<PermissionPropertiesDTO> PermissionsProperties = null)
         {
             this.UsersPermissions = UsersPermissions;
@@ -51,13 +51,15 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets UsersPermissions
+        /// List of user permissions
         /// </summary>
+        /// <value>List of user permissions</value>
         [DataMember(Name="usersPermissions", EmitDefaultValue=false)]
         public List<UserPermissionDTO> UsersPermissions { get; set; }
         /// <summary>
-        /// Gets or Sets PermissionsProperties
+        /// Possibile permission for the object
         /// </summary>
+        /// <value>Possibile permission for the object</value>
         [DataMember(Name="permissionsProperties", EmitDefaultValue=false)]
         public List<PermissionPropertiesDTO> PermissionsProperties { get; set; }
         /// <summary>

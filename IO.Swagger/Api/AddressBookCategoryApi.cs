@@ -33,7 +33,7 @@ namespace IO.Swagger.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface ICatRubricheApi : IApiAccessor
+    public interface IAddressBookCategoryApi : IApiAccessor
     {
         #region Synchronous Operations
         /// <summary>
@@ -44,7 +44,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;AddressBookCategoryDTO&gt;</returns>
-        List<AddressBookCategoryDTO> CatRubricheGet ();
+        List<AddressBookCategoryDTO> AddressBookCategoryGet ();
 
         /// <summary>
         /// This call returns all categories of address book
@@ -54,7 +54,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;AddressBookCategoryDTO&gt;</returns>
-        ApiResponse<List<AddressBookCategoryDTO>> CatRubricheGetWithHttpInfo ();
+        ApiResponse<List<AddressBookCategoryDTO>> AddressBookCategoryGetWithHttpInfo ();
         /// <summary>
         /// This call save the user default address book categories
         /// </summary>
@@ -62,9 +62,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="catRubricaId">The id of the category of address book that you want to set as default</param>
+        /// <param name="addressBookCategoryId">The id of the category of address book that you want to set as default</param>
         /// <returns></returns>
-        void CatRubrichePutDefault (int? catRubricaId);
+        void AddressBookCategoryPutDefault (int? addressBookCategoryId);
 
         /// <summary>
         /// This call save the user default address book categories
@@ -73,9 +73,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="catRubricaId">The id of the category of address book that you want to set as default</param>
+        /// <param name="addressBookCategoryId">The id of the category of address book that you want to set as default</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CatRubrichePutDefaultWithHttpInfo (int? catRubricaId);
+        ApiResponse<Object> AddressBookCategoryPutDefaultWithHttpInfo (int? addressBookCategoryId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -86,7 +86,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;AddressBookCategoryDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<AddressBookCategoryDTO>> CatRubricheGetAsync ();
+        System.Threading.Tasks.Task<List<AddressBookCategoryDTO>> AddressBookCategoryGetAsync ();
 
         /// <summary>
         /// This call returns all categories of address book
@@ -96,7 +96,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;AddressBookCategoryDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<AddressBookCategoryDTO>>> CatRubricheGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<List<AddressBookCategoryDTO>>> AddressBookCategoryGetAsyncWithHttpInfo ();
         /// <summary>
         /// This call save the user default address book categories
         /// </summary>
@@ -104,9 +104,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="catRubricaId">The id of the category of address book that you want to set as default</param>
+        /// <param name="addressBookCategoryId">The id of the category of address book that you want to set as default</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CatRubrichePutDefaultAsync (int? catRubricaId);
+        System.Threading.Tasks.Task AddressBookCategoryPutDefaultAsync (int? addressBookCategoryId);
 
         /// <summary>
         /// This call save the user default address book categories
@@ -115,24 +115,24 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="catRubricaId">The id of the category of address book that you want to set as default</param>
+        /// <param name="addressBookCategoryId">The id of the category of address book that you want to set as default</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CatRubrichePutDefaultAsyncWithHttpInfo (int? catRubricaId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> AddressBookCategoryPutDefaultAsyncWithHttpInfo (int? addressBookCategoryId);
         #endregion Asynchronous Operations
     }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class CatRubricheApi : ICatRubricheApi
+    public partial class AddressBookCategoryApi : IAddressBookCategoryApi
     {
         private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CatRubricheApi"/> class.
+        /// Initializes a new instance of the <see cref="AddressBookCategoryApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public CatRubricheApi(String basePath)
+        public AddressBookCategoryApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
 
@@ -146,12 +146,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CatRubricheApi"/> class
+        /// Initializes a new instance of the <see cref="AddressBookCategoryApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public CatRubricheApi(Configuration configuration = null)
+        public AddressBookCategoryApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Configuration.Default;
@@ -235,9 +235,9 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;AddressBookCategoryDTO&gt;</returns>
-        public List<AddressBookCategoryDTO> CatRubricheGet ()
+        public List<AddressBookCategoryDTO> AddressBookCategoryGet ()
         {
-             ApiResponse<List<AddressBookCategoryDTO>> localVarResponse = CatRubricheGetWithHttpInfo();
+             ApiResponse<List<AddressBookCategoryDTO>> localVarResponse = AddressBookCategoryGetWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -246,10 +246,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;AddressBookCategoryDTO&gt;</returns>
-        public ApiResponse< List<AddressBookCategoryDTO> > CatRubricheGetWithHttpInfo ()
+        public ApiResponse< List<AddressBookCategoryDTO> > AddressBookCategoryGetWithHttpInfo ()
         {
 
-            var localVarPath = "/api/catrubriche";
+            var localVarPath = "/api/AddressBookCategory";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -293,7 +293,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("CatRubricheGet", localVarResponse);
+                Exception exception = ExceptionFactory("AddressBookCategoryGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -308,9 +308,9 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;AddressBookCategoryDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<AddressBookCategoryDTO>> CatRubricheGetAsync ()
+        public async System.Threading.Tasks.Task<List<AddressBookCategoryDTO>> AddressBookCategoryGetAsync ()
         {
-             ApiResponse<List<AddressBookCategoryDTO>> localVarResponse = await CatRubricheGetAsyncWithHttpInfo();
+             ApiResponse<List<AddressBookCategoryDTO>> localVarResponse = await AddressBookCategoryGetAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -320,10 +320,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;AddressBookCategoryDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<AddressBookCategoryDTO>>> CatRubricheGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<List<AddressBookCategoryDTO>>> AddressBookCategoryGetAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/catrubriche";
+            var localVarPath = "/api/AddressBookCategory";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -366,7 +366,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("CatRubricheGet", localVarResponse);
+                Exception exception = ExceptionFactory("AddressBookCategoryGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -380,26 +380,26 @@ namespace IO.Swagger.Api
         /// This call save the user default address book categories 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="catRubricaId">The id of the category of address book that you want to set as default</param>
+        /// <param name="addressBookCategoryId">The id of the category of address book that you want to set as default</param>
         /// <returns></returns>
-        public void CatRubrichePutDefault (int? catRubricaId)
+        public void AddressBookCategoryPutDefault (int? addressBookCategoryId)
         {
-             CatRubrichePutDefaultWithHttpInfo(catRubricaId);
+             AddressBookCategoryPutDefaultWithHttpInfo(addressBookCategoryId);
         }
 
         /// <summary>
         /// This call save the user default address book categories 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="catRubricaId">The id of the category of address book that you want to set as default</param>
+        /// <param name="addressBookCategoryId">The id of the category of address book that you want to set as default</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> CatRubrichePutDefaultWithHttpInfo (int? catRubricaId)
+        public ApiResponse<Object> AddressBookCategoryPutDefaultWithHttpInfo (int? addressBookCategoryId)
         {
-            // verify the required parameter 'catRubricaId' is set
-            if (catRubricaId == null)
-                throw new ApiException(400, "Missing required parameter 'catRubricaId' when calling CatRubricheApi->CatRubrichePutDefault");
+            // verify the required parameter 'addressBookCategoryId' is set
+            if (addressBookCategoryId == null)
+                throw new ApiException(400, "Missing required parameter 'addressBookCategoryId' when calling AddressBookCategoryApi->AddressBookCategoryPutDefault");
 
-            var localVarPath = "/api/catrubriche/{catRubricaId}/Deafult";
+            var localVarPath = "/api/AddressBookCategory/{addressBookCategoryId}/Default";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -422,7 +422,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (catRubricaId != null) localVarPathParams.Add("catRubricaId", Configuration.ApiClient.ParameterToString(catRubricaId)); // path parameter
+            if (addressBookCategoryId != null) localVarPathParams.Add("addressBookCategoryId", Configuration.ApiClient.ParameterToString(addressBookCategoryId)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -440,7 +440,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("CatRubrichePutDefault", localVarResponse);
+                Exception exception = ExceptionFactory("AddressBookCategoryPutDefault", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -454,11 +454,11 @@ namespace IO.Swagger.Api
         /// This call save the user default address book categories 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="catRubricaId">The id of the category of address book that you want to set as default</param>
+        /// <param name="addressBookCategoryId">The id of the category of address book that you want to set as default</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CatRubrichePutDefaultAsync (int? catRubricaId)
+        public async System.Threading.Tasks.Task AddressBookCategoryPutDefaultAsync (int? addressBookCategoryId)
         {
-             await CatRubrichePutDefaultAsyncWithHttpInfo(catRubricaId);
+             await AddressBookCategoryPutDefaultAsyncWithHttpInfo(addressBookCategoryId);
 
         }
 
@@ -466,15 +466,15 @@ namespace IO.Swagger.Api
         /// This call save the user default address book categories 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="catRubricaId">The id of the category of address book that you want to set as default</param>
+        /// <param name="addressBookCategoryId">The id of the category of address book that you want to set as default</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CatRubrichePutDefaultAsyncWithHttpInfo (int? catRubricaId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> AddressBookCategoryPutDefaultAsyncWithHttpInfo (int? addressBookCategoryId)
         {
-            // verify the required parameter 'catRubricaId' is set
-            if (catRubricaId == null)
-                throw new ApiException(400, "Missing required parameter 'catRubricaId' when calling CatRubricheApi->CatRubrichePutDefault");
+            // verify the required parameter 'addressBookCategoryId' is set
+            if (addressBookCategoryId == null)
+                throw new ApiException(400, "Missing required parameter 'addressBookCategoryId' when calling AddressBookCategoryApi->AddressBookCategoryPutDefault");
 
-            var localVarPath = "/api/catrubriche/{catRubricaId}/Deafult";
+            var localVarPath = "/api/AddressBookCategory/{addressBookCategoryId}/Default";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -497,7 +497,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (catRubricaId != null) localVarPathParams.Add("catRubricaId", Configuration.ApiClient.ParameterToString(catRubricaId)); // path parameter
+            if (addressBookCategoryId != null) localVarPathParams.Add("addressBookCategoryId", Configuration.ApiClient.ParameterToString(addressBookCategoryId)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -514,7 +514,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("CatRubrichePutDefault", localVarResponse);
+                Exception exception = ExceptionFactory("AddressBookCategoryPutDefault", localVarResponse);
                 if (exception != null) throw exception;
             }
 

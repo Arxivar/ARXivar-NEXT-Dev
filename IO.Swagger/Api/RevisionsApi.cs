@@ -37,181 +37,139 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// This call return a revision by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
+        /// <param name="revisionId">Id of the revision</param>
         /// <returns></returns>
         void RevisionsDelete (int? revisionId);
 
         /// <summary>
-        /// 
+        /// This call return a revision by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
+        /// <param name="revisionId">Id of the revision</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> RevisionsDeleteWithHttpInfo (int? revisionId);
         /// <summary>
-        /// 
+        /// This call returns all revisions of a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>List&lt;RevisionDTO&gt;</returns>
         List<RevisionDTO> RevisionsGetByDocnumber (int? docnumber);
 
         /// <summary>
-        /// 
+        /// This call returns all revisions of a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>ApiResponse of List&lt;RevisionDTO&gt;</returns>
         ApiResponse<List<RevisionDTO>> RevisionsGetByDocnumberWithHttpInfo (int? docnumber);
         /// <summary>
-        /// 
+        /// This call add a revision from an existent revision of a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
-        /// <returns>Object</returns>
-        Object RevisionsGetDocumentByRevisionId (int? revisionId);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> RevisionsGetDocumentByRevisionIdWithHttpInfo (int? revisionId);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
-        /// <param name="revision"></param>
-        /// <param name="option"></param>
+        /// <param name="docNumber">Docnumber of the profile</param>
+        /// <param name="revision">Revision to start</param>
+        /// <param name="option">Advanced options</param>
         /// <returns></returns>
         void RevisionsRevisionByRevision (int? docNumber, int? revision, int? option);
 
         /// <summary>
-        /// 
+        /// This call add a revision from an existent revision of a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
-        /// <param name="revision"></param>
-        /// <param name="option"></param>
+        /// <param name="docNumber">Docnumber of the profile</param>
+        /// <param name="revision">Revision to start</param>
+        /// <param name="option">Advanced options</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> RevisionsRevisionByRevisionWithHttpInfo (int? docNumber, int? revision, int? option);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// This call return a revision by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
+        /// <param name="revisionId">Id of the revision</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task RevisionsDeleteAsync (int? revisionId);
 
         /// <summary>
-        /// 
+        /// This call return a revision by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
+        /// <param name="revisionId">Id of the revision</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> RevisionsDeleteAsyncWithHttpInfo (int? revisionId);
         /// <summary>
-        /// 
+        /// This call returns all revisions of a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of List&lt;RevisionDTO&gt;</returns>
         System.Threading.Tasks.Task<List<RevisionDTO>> RevisionsGetByDocnumberAsync (int? docnumber);
 
         /// <summary>
-        /// 
+        /// This call returns all revisions of a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of ApiResponse (List&lt;RevisionDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<RevisionDTO>>> RevisionsGetByDocnumberAsyncWithHttpInfo (int? docnumber);
         /// <summary>
-        /// 
+        /// This call add a revision from an existent revision of a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> RevisionsGetDocumentByRevisionIdAsync (int? revisionId);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RevisionsGetDocumentByRevisionIdAsyncWithHttpInfo (int? revisionId);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
-        /// <param name="revision"></param>
-        /// <param name="option"></param>
+        /// <param name="docNumber">Docnumber of the profile</param>
+        /// <param name="revision">Revision to start</param>
+        /// <param name="option">Advanced options</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task RevisionsRevisionByRevisionAsync (int? docNumber, int? revision, int? option);
 
         /// <summary>
-        /// 
+        /// This call add a revision from an existent revision of a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
-        /// <param name="revision"></param>
-        /// <param name="option"></param>
+        /// <param name="docNumber">Docnumber of the profile</param>
+        /// <param name="revision">Revision to start</param>
+        /// <param name="option">Advanced options</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> RevisionsRevisionByRevisionAsyncWithHttpInfo (int? docNumber, int? revision, int? option);
         #endregion Asynchronous Operations
@@ -327,10 +285,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return a revision by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
+        /// <param name="revisionId">Id of the revision</param>
         /// <returns></returns>
         public void RevisionsDelete (int? revisionId)
         {
@@ -338,10 +296,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return a revision by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
+        /// <param name="revisionId">Id of the revision</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> RevisionsDeleteWithHttpInfo (int? revisionId)
         {
@@ -349,7 +307,7 @@ namespace IO.Swagger.Api
             if (revisionId == null)
                 throw new ApiException(400, "Missing required parameter 'revisionId' when calling RevisionsApi->RevisionsDelete");
 
-            var localVarPath = "/api/revisions/{revisionId}";
+            var localVarPath = "/api/Revisions/{revisionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -401,10 +359,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return a revision by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
+        /// <param name="revisionId">Id of the revision</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task RevisionsDeleteAsync (int? revisionId)
         {
@@ -413,10 +371,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return a revision by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
+        /// <param name="revisionId">Id of the revision</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> RevisionsDeleteAsyncWithHttpInfo (int? revisionId)
         {
@@ -424,7 +382,7 @@ namespace IO.Swagger.Api
             if (revisionId == null)
                 throw new ApiException(400, "Missing required parameter 'revisionId' when calling RevisionsApi->RevisionsDelete");
 
-            var localVarPath = "/api/revisions/{revisionId}";
+            var localVarPath = "/api/Revisions/{revisionId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -475,10 +433,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all revisions of a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>List&lt;RevisionDTO&gt;</returns>
         public List<RevisionDTO> RevisionsGetByDocnumber (int? docnumber)
         {
@@ -487,10 +445,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all revisions of a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>ApiResponse of List&lt;RevisionDTO&gt;</returns>
         public ApiResponse< List<RevisionDTO> > RevisionsGetByDocnumberWithHttpInfo (int? docnumber)
         {
@@ -498,7 +456,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling RevisionsApi->RevisionsGetByDocnumber");
 
-            var localVarPath = "/api/profiles/{docnumber}/revisions";
+            var localVarPath = "/api/Revisions/byDocnumber/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -554,10 +512,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all revisions of a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of List&lt;RevisionDTO&gt;</returns>
         public async System.Threading.Tasks.Task<List<RevisionDTO>> RevisionsGetByDocnumberAsync (int? docnumber)
         {
@@ -567,10 +525,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all revisions of a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of ApiResponse (List&lt;RevisionDTO&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<RevisionDTO>>> RevisionsGetByDocnumberAsyncWithHttpInfo (int? docnumber)
         {
@@ -578,7 +536,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling RevisionsApi->RevisionsGetByDocnumber");
 
-            var localVarPath = "/api/profiles/{docnumber}/revisions";
+            var localVarPath = "/api/Revisions/byDocnumber/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -633,170 +591,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add a revision from an existent revision of a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
-        /// <returns>Object</returns>
-        public Object RevisionsGetDocumentByRevisionId (int? revisionId)
-        {
-             ApiResponse<Object> localVarResponse = RevisionsGetDocumentByRevisionIdWithHttpInfo(revisionId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > RevisionsGetDocumentByRevisionIdWithHttpInfo (int? revisionId)
-        {
-            // verify the required parameter 'revisionId' is set
-            if (revisionId == null)
-                throw new ApiException(400, "Missing required parameter 'revisionId' when calling RevisionsApi->RevisionsGetDocumentByRevisionId");
-
-            var localVarPath = "/api/revisions/{revisionId}/documents";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (revisionId != null) localVarPathParams.Add("revisionId", Configuration.ApiClient.ParameterToString(revisionId)); // path parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("RevisionsGetDocumentByRevisionId", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> RevisionsGetDocumentByRevisionIdAsync (int? revisionId)
-        {
-             ApiResponse<Object> localVarResponse = await RevisionsGetDocumentByRevisionIdAsyncWithHttpInfo(revisionId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="revisionId"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> RevisionsGetDocumentByRevisionIdAsyncWithHttpInfo (int? revisionId)
-        {
-            // verify the required parameter 'revisionId' is set
-            if (revisionId == null)
-                throw new ApiException(400, "Missing required parameter 'revisionId' when calling RevisionsApi->RevisionsGetDocumentByRevisionId");
-
-            var localVarPath = "/api/revisions/{revisionId}/documents";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (revisionId != null) localVarPathParams.Add("revisionId", Configuration.ApiClient.ParameterToString(revisionId)); // path parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("RevisionsGetDocumentByRevisionId", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
-        /// <param name="revision"></param>
-        /// <param name="option"></param>
+        /// <param name="docNumber">Docnumber of the profile</param>
+        /// <param name="revision">Revision to start</param>
+        /// <param name="option">Advanced options</param>
         /// <returns></returns>
         public void RevisionsRevisionByRevision (int? docNumber, int? revision, int? option)
         {
@@ -804,12 +604,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add a revision from an existent revision of a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
-        /// <param name="revision"></param>
-        /// <param name="option"></param>
+        /// <param name="docNumber">Docnumber of the profile</param>
+        /// <param name="revision">Revision to start</param>
+        /// <param name="option">Advanced options</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> RevisionsRevisionByRevisionWithHttpInfo (int? docNumber, int? revision, int? option)
         {
@@ -823,7 +623,7 @@ namespace IO.Swagger.Api
             if (option == null)
                 throw new ApiException(400, "Missing required parameter 'option' when calling RevisionsApi->RevisionsRevisionByRevision");
 
-            var localVarPath = "/api/revisions/{docNumber}/{revision}/{option}";
+            var localVarPath = "/api/Revisions/{docNumber}/{revision}/{option}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -877,12 +677,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add a revision from an existent revision of a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
-        /// <param name="revision"></param>
-        /// <param name="option"></param>
+        /// <param name="docNumber">Docnumber of the profile</param>
+        /// <param name="revision">Revision to start</param>
+        /// <param name="option">Advanced options</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task RevisionsRevisionByRevisionAsync (int? docNumber, int? revision, int? option)
         {
@@ -891,12 +691,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add a revision from an existent revision of a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docNumber"></param>
-        /// <param name="revision"></param>
-        /// <param name="option"></param>
+        /// <param name="docNumber">Docnumber of the profile</param>
+        /// <param name="revision">Revision to start</param>
+        /// <param name="option">Advanced options</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> RevisionsRevisionByRevisionAsyncWithHttpInfo (int? docNumber, int? revision, int? option)
         {
@@ -910,7 +710,7 @@ namespace IO.Swagger.Api
             if (option == null)
                 throw new ApiException(400, "Missing required parameter 'option' when calling RevisionsApi->RevisionsRevisionByRevision");
 
-            var localVarPath = "/api/revisions/{docNumber}/{revision}/{option}";
+            var localVarPath = "/api/Revisions/{docNumber}/{revision}/{option}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

@@ -40,8 +40,9 @@ namespace IO.Swagger.Model
     public partial class RelationInsertItemDTO :  IEquatable<RelationInsertItemDTO>
     {
         /// <summary>
-        /// Gets or Sets RelationType
+        /// Type of the relation
         /// </summary>
+        /// <value>Type of the relation</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum RelationTypeEnum
         {
@@ -66,15 +67,16 @@ namespace IO.Swagger.Model
         }
 
         /// <summary>
-        /// Gets or Sets RelationType
+        /// Type of the relation
         /// </summary>
+        /// <value>Type of the relation</value>
         [DataMember(Name="relationType", EmitDefaultValue=false)]
         public RelationTypeEnum? RelationType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="RelationInsertItemDTO" /> class.
         /// </summary>
-        /// <param name="DocNumber">DocNumber.</param>
-        /// <param name="RelationType">RelationType.</param>
+        /// <param name="DocNumber">Docnumber of the profile to ass.</param>
+        /// <param name="RelationType">Type of the relation.</param>
         public RelationInsertItemDTO(int? DocNumber = null, RelationTypeEnum? RelationType = null)
         {
             this.DocNumber = DocNumber;
@@ -82,8 +84,9 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets DocNumber
+        /// Docnumber of the profile to ass
         /// </summary>
+        /// <value>Docnumber of the profile to ass</value>
         [DataMember(Name="docNumber", EmitDefaultValue=false)]
         public int? DocNumber { get; set; }
         /// <summary>

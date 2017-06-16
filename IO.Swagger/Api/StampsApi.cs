@@ -207,7 +207,7 @@ namespace IO.Swagger.Api
         public ApiResponse< List<StampDefinitionDTO> > StampsGetWithHttpInfo ()
         {
 
-            var localVarPath = "/api/stamps";
+            var localVarPath = "/api/Stamps";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -281,7 +281,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<StampDefinitionDTO>>> StampsGetAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/stamps";
+            var localVarPath = "/api/Stamps";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

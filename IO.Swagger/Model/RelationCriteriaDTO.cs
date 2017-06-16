@@ -40,8 +40,9 @@ namespace IO.Swagger.Model
     public partial class RelationCriteriaDTO :  IEquatable<RelationCriteriaDTO>
     {
         /// <summary>
-        /// Gets or Sets RelationExploringMethod
+        /// Relation tree exploring method
         /// </summary>
+        /// <value>Relation tree exploring method</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum RelationExploringMethodEnum
         {
@@ -66,16 +67,17 @@ namespace IO.Swagger.Model
         }
 
         /// <summary>
-        /// Gets or Sets RelationExploringMethod
+        /// Relation tree exploring method
         /// </summary>
+        /// <value>Relation tree exploring method</value>
         [DataMember(Name="relationExploringMethod", EmitDefaultValue=false)]
         public RelationExploringMethodEnum? RelationExploringMethod { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="RelationCriteriaDTO" /> class.
         /// </summary>
-        /// <param name="DocNumber">DocNumber.</param>
-        /// <param name="RelationExploringMethod">RelationExploringMethod.</param>
-        /// <param name="Select">Select.</param>
+        /// <param name="DocNumber">Docnumber of the profile.</param>
+        /// <param name="RelationExploringMethod">Relation tree exploring method.</param>
+        /// <param name="Select">Columns to show for the profiles contained.</param>
         public RelationCriteriaDTO(int? DocNumber = null, RelationExploringMethodEnum? RelationExploringMethod = null, SelectDTO Select = null)
         {
             this.DocNumber = DocNumber;
@@ -84,13 +86,15 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets DocNumber
+        /// Docnumber of the profile
         /// </summary>
+        /// <value>Docnumber of the profile</value>
         [DataMember(Name="docNumber", EmitDefaultValue=false)]
         public int? DocNumber { get; set; }
         /// <summary>
-        /// Gets or Sets Select
+        /// Columns to show for the profiles contained
         /// </summary>
+        /// <value>Columns to show for the profiles contained</value>
         [DataMember(Name="select", EmitDefaultValue=false)]
         public SelectDTO Select { get; set; }
         /// <summary>

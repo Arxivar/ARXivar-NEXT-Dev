@@ -37,7 +37,7 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// This call returns all the document states in ARXivar
         /// </summary>
         /// <remarks>
         /// 
@@ -47,7 +47,7 @@ namespace IO.Swagger.Api
         List<StateBaseDto> StatesGet ();
 
         /// <summary>
-        /// 
+        /// This call returns all the document states in ARXivar
         /// </summary>
         /// <remarks>
         /// 
@@ -79,7 +79,7 @@ namespace IO.Swagger.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// This call returns all the document states in ARXivar
         /// </summary>
         /// <remarks>
         /// 
@@ -89,7 +89,7 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<List<StateBaseDto>> StatesGetAsync ();
 
         /// <summary>
-        /// 
+        /// This call returns all the document states in ARXivar
         /// </summary>
         /// <remarks>
         /// 
@@ -231,7 +231,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all the document states in ARXivar 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;StateBaseDto&gt;</returns>
@@ -242,14 +242,14 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all the document states in ARXivar 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;StateBaseDto&gt;</returns>
         public ApiResponse< List<StateBaseDto> > StatesGetWithHttpInfo ()
         {
 
-            var localVarPath = "/api/states";
+            var localVarPath = "/api/States";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -304,7 +304,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all the document states in ARXivar 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;StateBaseDto&gt;</returns>
@@ -316,14 +316,14 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all the document states in ARXivar 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;StateBaseDto&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<StateBaseDto>>> StatesGetAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/states";
+            var localVarPath = "/api/States";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -400,7 +400,7 @@ namespace IO.Swagger.Api
             if (documentTypeId == null)
                 throw new ApiException(400, "Missing required parameter 'documentTypeId' when calling StatesApi->StatesGet_0");
 
-            var localVarPath = "/api/states/{documentTypeId}";
+            var localVarPath = "/api/States/{documentTypeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -480,7 +480,7 @@ namespace IO.Swagger.Api
             if (documentTypeId == null)
                 throw new ApiException(400, "Missing required parameter 'documentTypeId' when calling StatesApi->StatesGet_0");
 
-            var localVarPath = "/api/states/{documentTypeId}";
+            var localVarPath = "/api/States/{documentTypeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

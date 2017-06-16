@@ -56,27 +56,6 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of List&lt;UserCompleteDTO&gt;</returns>
         ApiResponse<List<UserCompleteDTO>> UsersGetWithHttpInfo ();
         /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <returns>List&lt;UserDTO&gt;</returns>
-        List<UserDTO> UsersGetById (int? userId);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <returns>ApiResponse of List&lt;UserDTO&gt;</returns>
-        ApiResponse<List<UserDTO>> UsersGetByIdWithHttpInfo (int? userId);
-        /// <summary>
         /// This call returns the informations of the connected user
         /// </summary>
         /// <remarks>
@@ -96,24 +75,24 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of UserInfoDTO</returns>
         ApiResponse<UserInfoDTO> UsersGetUserInfoWithHttpInfo ();
         /// <summary>
-        /// 
+        /// This call update the user languages
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="lang"></param>
+        /// <param name="lang">Lang to set</param>
         /// <returns></returns>
         void UsersSetLang (string lang);
 
         /// <summary>
-        /// 
+        /// This call update the user languages
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="lang"></param>
+        /// <param name="lang">Lang to set</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UsersSetLangWithHttpInfo (string lang);
         #endregion Synchronous Operations
@@ -138,27 +117,6 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (List&lt;UserCompleteDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UserCompleteDTO>>> UsersGetAsyncWithHttpInfo ();
         /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <returns>Task of List&lt;UserDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<UserDTO>> UsersGetByIdAsync (int? userId);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <returns>Task of ApiResponse (List&lt;UserDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UserDTO>>> UsersGetByIdAsyncWithHttpInfo (int? userId);
-        /// <summary>
         /// This call returns the informations of the connected user
         /// </summary>
         /// <remarks>
@@ -178,24 +136,24 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (UserInfoDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserInfoDTO>> UsersGetUserInfoAsyncWithHttpInfo ();
         /// <summary>
-        /// 
+        /// This call update the user languages
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="lang"></param>
+        /// <param name="lang">Lang to set</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task UsersSetLangAsync (string lang);
 
         /// <summary>
-        /// 
+        /// This call update the user languages
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="lang"></param>
+        /// <param name="lang">Lang to set</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UsersSetLangAsyncWithHttpInfo (string lang);
         #endregion Asynchronous Operations
@@ -457,164 +415,6 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <returns>List&lt;UserDTO&gt;</returns>
-        public List<UserDTO> UsersGetById (int? userId)
-        {
-             ApiResponse<List<UserDTO>> localVarResponse = UsersGetByIdWithHttpInfo(userId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <returns>ApiResponse of List&lt;UserDTO&gt;</returns>
-        public ApiResponse< List<UserDTO> > UsersGetByIdWithHttpInfo (int? userId)
-        {
-            // verify the required parameter 'userId' is set
-            if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersGetById");
-
-            var localVarPath = "/api/users/{userId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("UsersGetById", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<UserDTO>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<UserDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UserDTO>)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <returns>Task of List&lt;UserDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<UserDTO>> UsersGetByIdAsync (int? userId)
-        {
-             ApiResponse<List<UserDTO>> localVarResponse = await UsersGetByIdAsyncWithHttpInfo(userId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
-        /// <returns>Task of ApiResponse (List&lt;UserDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UserDTO>>> UsersGetByIdAsyncWithHttpInfo (int? userId)
-        {
-            // verify the required parameter 'userId' is set
-            if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->UsersGetById");
-
-            var localVarPath = "/api/users/{userId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("UsersGetById", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<UserDTO>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<UserDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UserDTO>)));
-            
-        }
-
-        /// <summary>
         /// This call returns the informations of the connected user 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
@@ -633,7 +433,7 @@ namespace IO.Swagger.Api
         public ApiResponse< UserInfoDTO > UsersGetUserInfoWithHttpInfo ()
         {
 
-            var localVarPath = "/api/users/UserInfo";
+            var localVarPath = "/api/Users/UserInfo";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -707,7 +507,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<UserInfoDTO>> UsersGetUserInfoAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/users/UserInfo";
+            var localVarPath = "/api/Users/UserInfo";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -761,10 +561,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update the user languages 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="lang"></param>
+        /// <param name="lang">Lang to set</param>
         /// <returns></returns>
         public void UsersSetLang (string lang)
         {
@@ -772,10 +572,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update the user languages 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="lang"></param>
+        /// <param name="lang">Lang to set</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> UsersSetLangWithHttpInfo (string lang)
         {
@@ -783,7 +583,7 @@ namespace IO.Swagger.Api
             if (lang == null)
                 throw new ApiException(400, "Missing required parameter 'lang' when calling UsersApi->UsersSetLang");
 
-            var localVarPath = "/api/users/lang/{lang}";
+            var localVarPath = "/api/Users/lang/{lang}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -835,10 +635,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update the user languages 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="lang"></param>
+        /// <param name="lang">Lang to set</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task UsersSetLangAsync (string lang)
         {
@@ -847,10 +647,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update the user languages 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="lang"></param>
+        /// <param name="lang">Lang to set</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UsersSetLangAsyncWithHttpInfo (string lang)
         {
@@ -858,7 +658,7 @@ namespace IO.Swagger.Api
             if (lang == null)
                 throw new ApiException(400, "Missing required parameter 'lang' when calling UsersApi->UsersSetLang");
 
-            var localVarPath = "/api/users/lang/{lang}";
+            var localVarPath = "/api/Users/lang/{lang}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

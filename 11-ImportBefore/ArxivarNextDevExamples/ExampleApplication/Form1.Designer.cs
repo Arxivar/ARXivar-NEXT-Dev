@@ -58,9 +58,9 @@
             this.datagridComplex = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.buttonDownloadDoc = new System.Windows.Forms.Button();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.searchGrid = new System.Windows.Forms.DataGridView();
-            this.buttonDownloadDoc = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -199,7 +199,7 @@
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.Size = new System.Drawing.Size(126, 20);
             this.passwordTxt.TabIndex = 3;
-            this.passwordTxt.Text = "123..";
+            this.passwordTxt.Text = "123";
             // 
             // userTxt
             // 
@@ -417,6 +417,16 @@
             this.splitContainer4.SplitterDistance = 186;
             this.splitContainer4.TabIndex = 0;
             // 
+            // buttonDownloadDoc
+            // 
+            this.buttonDownloadDoc.Location = new System.Drawing.Point(6, 42);
+            this.buttonDownloadDoc.Name = "buttonDownloadDoc";
+            this.buttonDownloadDoc.Size = new System.Drawing.Size(177, 23);
+            this.buttonDownloadDoc.TabIndex = 1;
+            this.buttonDownloadDoc.Text = "download document";
+            this.buttonDownloadDoc.UseVisualStyleBackColor = true;
+            this.buttonDownloadDoc.Click += new System.EventHandler(this.buttonDownloadDoc_Click);
+            // 
             // buttonSearch
             // 
             this.buttonSearch.Location = new System.Drawing.Point(6, 13);
@@ -435,16 +445,6 @@
             this.searchGrid.Name = "searchGrid";
             this.searchGrid.Size = new System.Drawing.Size(883, 502);
             this.searchGrid.TabIndex = 0;
-            // 
-            // buttonDownloadDoc
-            // 
-            this.buttonDownloadDoc.Location = new System.Drawing.Point(6, 42);
-            this.buttonDownloadDoc.Name = "buttonDownloadDoc";
-            this.buttonDownloadDoc.Size = new System.Drawing.Size(177, 23);
-            this.buttonDownloadDoc.TabIndex = 1;
-            this.buttonDownloadDoc.Text = "download document";
-            this.buttonDownloadDoc.UseVisualStyleBackColor = true;
-            this.buttonDownloadDoc.Click += new System.EventHandler(this.buttonDownloadDoc_Click);
             // 
             // Form1
             // 

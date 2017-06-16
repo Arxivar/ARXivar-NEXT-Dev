@@ -77,47 +77,47 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of List&lt;GroupModelDTO&gt;</returns>
         ApiResponse<List<GroupModelDTO>> GroupsModelsGetGroupsModelsWithHttpInfo ();
         /// <summary>
-        /// 
+        /// This call update a model group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="groupModelName"></param>
+        /// <param name="id">Id of the model group</param>
+        /// <param name="groupModelName">Name to update</param>
         /// <returns></returns>
         void GroupsModelsUpdateModel (int? id, string groupModelName);
 
         /// <summary>
-        /// 
+        /// This call update a model group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="groupModelName"></param>
+        /// <param name="id">Id of the model group</param>
+        /// <param name="groupModelName">Name to update</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GroupsModelsUpdateModelWithHttpInfo (int? id, string groupModelName);
         /// <summary>
-        /// 
+        /// This call add new models group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupModelDto"></param>
+        /// <param name="groupModelDto">Dto of the new group</param>
         /// <returns></returns>
         void GroupsModelsWriteGroupModel (GroupModelDTO groupModelDto);
 
         /// <summary>
-        /// 
+        /// This call add new models group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupModelDto"></param>
+        /// <param name="groupModelDto">Dto of the new group</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GroupsModelsWriteGroupModelWithHttpInfo (GroupModelDTO groupModelDto);
         #endregion Synchronous Operations
@@ -163,47 +163,47 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (List&lt;GroupModelDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<GroupModelDTO>>> GroupsModelsGetGroupsModelsAsyncWithHttpInfo ();
         /// <summary>
-        /// 
+        /// This call update a model group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="groupModelName"></param>
+        /// <param name="id">Id of the model group</param>
+        /// <param name="groupModelName">Name to update</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task GroupsModelsUpdateModelAsync (int? id, string groupModelName);
 
         /// <summary>
-        /// 
+        /// This call update a model group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="groupModelName"></param>
+        /// <param name="id">Id of the model group</param>
+        /// <param name="groupModelName">Name to update</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> GroupsModelsUpdateModelAsyncWithHttpInfo (int? id, string groupModelName);
         /// <summary>
-        /// 
+        /// This call add new models group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupModelDto"></param>
+        /// <param name="groupModelDto">Dto of the new group</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task GroupsModelsWriteGroupModelAsync (GroupModelDTO groupModelDto);
 
         /// <summary>
-        /// 
+        /// This call add new models group
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupModelDto"></param>
+        /// <param name="groupModelDto">Dto of the new group</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> GroupsModelsWriteGroupModelAsyncWithHttpInfo (GroupModelDTO groupModelDto);
         #endregion Asynchronous Operations
@@ -341,7 +341,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling GroupsModelsApi->GroupsModelsDeleteGroupModel");
 
-            var localVarPath = "/api/groupsmodels/{id}";
+            var localVarPath = "/api/ModelsGroups/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -416,7 +416,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling GroupsModelsApi->GroupsModelsDeleteGroupModel");
 
-            var localVarPath = "/api/groupsmodels/{id}";
+            var localVarPath = "/api/ModelsGroups/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -485,7 +485,7 @@ namespace IO.Swagger.Api
         public ApiResponse< List<GroupModelDTO> > GroupsModelsGetGroupsModelsWithHttpInfo ()
         {
 
-            var localVarPath = "/api/groupsmodels";
+            var localVarPath = "/api/ModelsGroups";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -559,7 +559,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<GroupModelDTO>>> GroupsModelsGetGroupsModelsAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/groupsmodels";
+            var localVarPath = "/api/ModelsGroups";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -613,11 +613,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update a model group 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="groupModelName"></param>
+        /// <param name="id">Id of the model group</param>
+        /// <param name="groupModelName">Name to update</param>
         /// <returns></returns>
         public void GroupsModelsUpdateModel (int? id, string groupModelName)
         {
@@ -625,11 +625,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update a model group 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="groupModelName"></param>
+        /// <param name="id">Id of the model group</param>
+        /// <param name="groupModelName">Name to update</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GroupsModelsUpdateModelWithHttpInfo (int? id, string groupModelName)
         {
@@ -640,7 +640,7 @@ namespace IO.Swagger.Api
             if (groupModelName == null)
                 throw new ApiException(400, "Missing required parameter 'groupModelName' when calling GroupsModelsApi->GroupsModelsUpdateModel");
 
-            var localVarPath = "/api/groupsmodels/{id}";
+            var localVarPath = "/api/ModelsGroups/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -705,11 +705,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update a model group 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="groupModelName"></param>
+        /// <param name="id">Id of the model group</param>
+        /// <param name="groupModelName">Name to update</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task GroupsModelsUpdateModelAsync (int? id, string groupModelName)
         {
@@ -718,11 +718,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update a model group 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="groupModelName"></param>
+        /// <param name="id">Id of the model group</param>
+        /// <param name="groupModelName">Name to update</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> GroupsModelsUpdateModelAsyncWithHttpInfo (int? id, string groupModelName)
         {
@@ -733,7 +733,7 @@ namespace IO.Swagger.Api
             if (groupModelName == null)
                 throw new ApiException(400, "Missing required parameter 'groupModelName' when calling GroupsModelsApi->GroupsModelsUpdateModel");
 
-            var localVarPath = "/api/groupsmodels/{id}";
+            var localVarPath = "/api/ModelsGroups/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -797,10 +797,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add new models group 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupModelDto"></param>
+        /// <param name="groupModelDto">Dto of the new group</param>
         /// <returns></returns>
         public void GroupsModelsWriteGroupModel (GroupModelDTO groupModelDto)
         {
@@ -808,10 +808,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add new models group 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupModelDto"></param>
+        /// <param name="groupModelDto">Dto of the new group</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GroupsModelsWriteGroupModelWithHttpInfo (GroupModelDTO groupModelDto)
         {
@@ -819,7 +819,7 @@ namespace IO.Swagger.Api
             if (groupModelDto == null)
                 throw new ApiException(400, "Missing required parameter 'groupModelDto' when calling GroupsModelsApi->GroupsModelsWriteGroupModel");
 
-            var localVarPath = "/api/groupsmodels";
+            var localVarPath = "/api/ModelsGroups";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -883,10 +883,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add new models group 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupModelDto"></param>
+        /// <param name="groupModelDto">Dto of the new group</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task GroupsModelsWriteGroupModelAsync (GroupModelDTO groupModelDto)
         {
@@ -895,10 +895,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add new models group 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupModelDto"></param>
+        /// <param name="groupModelDto">Dto of the new group</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> GroupsModelsWriteGroupModelAsyncWithHttpInfo (GroupModelDTO groupModelDto)
         {
@@ -906,7 +906,7 @@ namespace IO.Swagger.Api
             if (groupModelDto == null)
                 throw new ApiException(400, "Missing required parameter 'groupModelDto' when calling GroupsModelsApi->GroupsModelsWriteGroupModel");
 
-            var localVarPath = "/api/groupsmodels";
+            var localVarPath = "/api/ModelsGroups";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

@@ -34,30 +34,32 @@ using Newtonsoft.Json.Converters;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// KeyValuePairStringIEnumerableString
+    /// WorkFlowEventDTO
     /// </summary>
     [DataContract]
-    public partial class KeyValuePairStringIEnumerableString :  IEquatable<KeyValuePairStringIEnumerableString>
+    public partial class WorkFlowEventDTO :  IEquatable<WorkFlowEventDTO>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="KeyValuePairStringIEnumerableString" /> class.
+        /// Initializes a new instance of the <see cref="WorkFlowEventDTO" /> class.
         /// </summary>
-        /// <param name="Value">Value.</param>
-        public KeyValuePairStringIEnumerableString(List<string> Value = null)
+        /// <param name="WorkFlowName">WorkFlowName.</param>
+        /// <param name="EventId">EventId.</param>
+        public WorkFlowEventDTO(string WorkFlowName = null, int? EventId = null)
         {
-            this.Value = Value;
+            this.WorkFlowName = WorkFlowName;
+            this.EventId = EventId;
         }
         
         /// <summary>
-        /// Gets or Sets Key
+        /// Gets or Sets WorkFlowName
         /// </summary>
-        [DataMember(Name="key", EmitDefaultValue=false)]
-        public string Key { get; private set; }
+        [DataMember(Name="workFlowName", EmitDefaultValue=false)]
+        public string WorkFlowName { get; set; }
         /// <summary>
-        /// Gets or Sets Value
+        /// Gets or Sets EventId
         /// </summary>
-        [DataMember(Name="value", EmitDefaultValue=false)]
-        public List<string> Value { get; set; }
+        [DataMember(Name="eventId", EmitDefaultValue=false)]
+        public int? EventId { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -65,9 +67,9 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class KeyValuePairStringIEnumerableString {\n");
-            sb.Append("  Key: ").Append(Key).Append("\n");
-            sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("class WorkFlowEventDTO {\n");
+            sb.Append("  WorkFlowName: ").Append(WorkFlowName).Append("\n");
+            sb.Append("  EventId: ").Append(EventId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -89,15 +91,15 @@ namespace IO.Swagger.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as KeyValuePairStringIEnumerableString);
+            return this.Equals(obj as WorkFlowEventDTO);
         }
 
         /// <summary>
-        /// Returns true if KeyValuePairStringIEnumerableString instances are equal
+        /// Returns true if WorkFlowEventDTO instances are equal
         /// </summary>
-        /// <param name="other">Instance of KeyValuePairStringIEnumerableString to be compared</param>
+        /// <param name="other">Instance of WorkFlowEventDTO to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(KeyValuePairStringIEnumerableString other)
+        public bool Equals(WorkFlowEventDTO other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -105,14 +107,14 @@ namespace IO.Swagger.Model
 
             return 
                 (
-                    this.Key == other.Key ||
-                    this.Key != null &&
-                    this.Key.Equals(other.Key)
+                    this.WorkFlowName == other.WorkFlowName ||
+                    this.WorkFlowName != null &&
+                    this.WorkFlowName.Equals(other.WorkFlowName)
                 ) && 
                 (
-                    this.Value == other.Value ||
-                    this.Value != null &&
-                    this.Value.SequenceEqual(other.Value)
+                    this.EventId == other.EventId ||
+                    this.EventId != null &&
+                    this.EventId.Equals(other.EventId)
                 );
         }
 
@@ -127,10 +129,10 @@ namespace IO.Swagger.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Key != null)
-                    hash = hash * 59 + this.Key.GetHashCode();
-                if (this.Value != null)
-                    hash = hash * 59 + this.Value.GetHashCode();
+                if (this.WorkFlowName != null)
+                    hash = hash * 59 + this.WorkFlowName.GetHashCode();
+                if (this.EventId != null)
+                    hash = hash * 59 + this.EventId.GetHashCode();
                 return hash;
             }
         }

@@ -40,9 +40,9 @@ namespace IO.Swagger.Model
     public partial class AttachmentDTO :  IEquatable<AttachmentDTO>
     {
         /// <summary>
-        /// Dispositivo di salvataggio del file.
+        /// Storage Device type for the attachment compressed file
         /// </summary>
-        /// <value>Dispositivo di salvataggio del file.</value>
+        /// <value>Storage Device type for the attachment compressed file</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DeviceEnum
         {
@@ -61,9 +61,9 @@ namespace IO.Swagger.Model
         }
 
         /// <summary>
-        /// Tipologia di blocco dell'allegato.
+        /// Lock type for the attachment.
         /// </summary>
-        /// <value>Tipologia di blocco dell'allegato.</value>
+        /// <value>Lock type for the attachment.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum BlockEnum
         {
@@ -88,9 +88,9 @@ namespace IO.Swagger.Model
         }
 
         /// <summary>
-        /// Livello di accesso dell'allegato.
+        /// Attachment access level.
         /// </summary>
-        /// <value>Livello di accesso dell'allegato.</value>
+        /// <value>Attachment access level.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum AccessEnum
         {
@@ -127,9 +127,9 @@ namespace IO.Swagger.Model
         }
 
         /// <summary>
-        /// Tipologia di salvataggio.
+        /// Save type.
         /// </summary>
-        /// <value>Tipologia di salvataggio.</value>
+        /// <value>Save type.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum SaveTypeEnum
         {
@@ -148,9 +148,9 @@ namespace IO.Swagger.Model
         }
 
         /// <summary>
-        /// Tipologia di allegato
+        /// Attachment type
         /// </summary>
-        /// <value>Tipologia di allegato</value>
+        /// <value>Attachment type</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum KindEnum
         {
@@ -169,8 +169,9 @@ namespace IO.Swagger.Model
         }
 
         /// <summary>
-        /// Gets or Sets CompressionMode
+        /// Type of the compression
         /// </summary>
+        /// <value>Type of the compression</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum CompressionModeEnum
         {
@@ -201,71 +202,70 @@ namespace IO.Swagger.Model
         }
 
         /// <summary>
-        /// Dispositivo di salvataggio del file.
+        /// Storage Device type for the attachment compressed file
         /// </summary>
-        /// <value>Dispositivo di salvataggio del file.</value>
+        /// <value>Storage Device type for the attachment compressed file</value>
         [DataMember(Name="device", EmitDefaultValue=false)]
         public DeviceEnum? Device { get; set; }
         /// <summary>
-        /// Tipologia di blocco dell'allegato.
+        /// Lock type for the attachment.
         /// </summary>
-        /// <value>Tipologia di blocco dell'allegato.</value>
+        /// <value>Lock type for the attachment.</value>
         [DataMember(Name="block", EmitDefaultValue=false)]
         public BlockEnum? Block { get; set; }
         /// <summary>
-        /// Livello di accesso dell'allegato.
+        /// Attachment access level.
         /// </summary>
-        /// <value>Livello di accesso dell'allegato.</value>
+        /// <value>Attachment access level.</value>
         [DataMember(Name="access", EmitDefaultValue=false)]
         public AccessEnum? Access { get; set; }
         /// <summary>
-        /// Tipologia di salvataggio.
+        /// Save type.
         /// </summary>
-        /// <value>Tipologia di salvataggio.</value>
+        /// <value>Save type.</value>
         [DataMember(Name="saveType", EmitDefaultValue=false)]
         public SaveTypeEnum? SaveType { get; set; }
         /// <summary>
-        /// Tipologia di allegato
+        /// Attachment type
         /// </summary>
-        /// <value>Tipologia di allegato</value>
+        /// <value>Attachment type</value>
         [DataMember(Name="kind", EmitDefaultValue=false)]
         public KindEnum? Kind { get; set; }
         /// <summary>
-        /// Gets or Sets CompressionMode
+        /// Type of the compression
         /// </summary>
+        /// <value>Type of the compression</value>
         [DataMember(Name="compressionMode", EmitDefaultValue=false)]
         public CompressionModeEnum? CompressionMode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="AttachmentDTO" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Docnumber">Identificativo del profilo documentale..</param>
-        /// <param name="Revision">Identificativo della revisione del profilo documentale..</param>
-        /// <param name="Filename">Nome del file compresso..</param>
-        /// <param name="Filepath">Percorso di salvataggio del file..</param>
-        /// <param name="Originalname">Nome originale del file..</param>
-        /// <param name="Device">Dispositivo di salvataggio del file..</param>
-        /// <param name="Cdlabel">Etichetta, nel caso il file si presenta su CD..</param>
-        /// <param name="Comment">Descrizione dell’allegato..</param>
-        /// <param name="Importdate">Data d&#39;importazione dell&#39;allegato..</param>
-        /// <param name="User">Identificatore dell&#39;utente che ha importato l&#39;allegato..</param>
-        /// <param name="UserCompleteName">UserCompleteName.</param>
-        /// <param name="Block">Tipologia di blocco dell&#39;allegato..</param>
-        /// <param name="Zippassword">Codice di password del file criptato..</param>
-        /// <param name="Compliantcopy">Verifica che l&#39;allegato sostituisca il profilo documentale nel caso di visualizzazione via Web..</param>
-        /// <param name="Cstring">Stringa di connessione criptata di salvataggio del file..</param>
-        /// <param name="Footprint">Impronta del file..</param>
-        /// <param name="Checksend">Verifica se l&#39;allegato dovrà essere inviato insieme al documento principale, nel caso di spedizione..</param>
-        /// <param name="Aosflag">Verifica se l&#39;allegato dovrà essere conservato in modalità sostitutiva con il profilo documentale..</param>
-        /// <param name="Access">Livello di accesso dell&#39;allegato..</param>
-        /// <param name="SaveType">Tipologia di salvataggio..</param>
-        /// <param name="Filesize">Dimensione del file di riferimento..</param>
-        /// <param name="Kind">Tipologia di allegato.</param>
-        /// <param name="AttachedDocnumber">Profilo del documento allegato.</param>
-        /// <param name="IxCheck">Verifica se l&#39;allegato dovrà essere inviato a IX insieme al documento principale, nel caso di spedizione..</param>
-        /// <param name="AttachmentRevision">Indica la revisione dell&#39;allegato.</param>
-        /// <param name="CompressionMode">CompressionMode.</param>
-        public AttachmentDTO(int? Id = null, int? Docnumber = null, int? Revision = null, string Filename = null, string Filepath = null, string Originalname = null, DeviceEnum? Device = null, string Cdlabel = null, string Comment = null, DateTime? Importdate = null, int? User = null, string UserCompleteName = null, BlockEnum? Block = null, string Zippassword = null, bool? Compliantcopy = null, string Cstring = null, string Footprint = null, bool? Checksend = null, bool? Aosflag = null, AccessEnum? Access = null, SaveTypeEnum? SaveType = null, long? Filesize = null, KindEnum? Kind = null, int? AttachedDocnumber = null, bool? IxCheck = null, int? AttachmentRevision = null, CompressionModeEnum? CompressionMode = null)
+        /// <param name="Id">Unique identifier of the attachments.</param>
+        /// <param name="Docnumber">Unique docnumber of the profile..</param>
+        /// <param name="Revision">Revision number for the profile..</param>
+        /// <param name="Filename">Name for the zip file..</param>
+        /// <param name="Filepath">Path of compressed file..</param>
+        /// <param name="Originalname">Name of the file..</param>
+        /// <param name="Device">Storage Device type for the attachment compressed file.</param>
+        /// <param name="Cdlabel">Label of the CD (if CD is the storage device type of this attachment)..</param>
+        /// <param name="Comment">Attachments description..</param>
+        /// <param name="Importdate">Date of the attachment creation..</param>
+        /// <param name="User">UserId of the author..</param>
+        /// <param name="UserCompleteName">Complete name of the author..</param>
+        /// <param name="Block">Lock type for the attachment..</param>
+        /// <param name="Compliantcopy">Indicates if this attachment replace profile for web visualization..</param>
+        /// <param name="Footprint">Hash for the file..</param>
+        /// <param name="Checksend">Occurs if the attachment must be submitted with the main document in the case of shipment..</param>
+        /// <param name="Aosflag">Occurs if the attachment must be kept in the replacement mode with the document profile..</param>
+        /// <param name="Access">Attachment access level..</param>
+        /// <param name="SaveType">Save type..</param>
+        /// <param name="Filesize">File size in bytes..</param>
+        /// <param name="Kind">Attachment type.</param>
+        /// <param name="AttachedDocnumber">Profile of this attachment.</param>
+        /// <param name="IxCheck">Occurs if the attachment must be sent to IX along with the main document in the case of shipment..</param>
+        /// <param name="AttachmentRevision">Indicates the revision of attachment.</param>
+        /// <param name="CompressionMode">Type of the compression.</param>
+        public AttachmentDTO(int? Id = null, int? Docnumber = null, int? Revision = null, string Filename = null, string Filepath = null, string Originalname = null, DeviceEnum? Device = null, string Cdlabel = null, string Comment = null, DateTime? Importdate = null, int? User = null, string UserCompleteName = null, BlockEnum? Block = null, bool? Compliantcopy = null, string Footprint = null, bool? Checksend = null, bool? Aosflag = null, AccessEnum? Access = null, SaveTypeEnum? SaveType = null, long? Filesize = null, KindEnum? Kind = null, int? AttachedDocnumber = null, bool? IxCheck = null, int? AttachmentRevision = null, CompressionModeEnum? CompressionMode = null)
         {
             this.Id = Id;
             this.Docnumber = Docnumber;
@@ -280,9 +280,7 @@ namespace IO.Swagger.Model
             this.User = User;
             this.UserCompleteName = UserCompleteName;
             this.Block = Block;
-            this.Zippassword = Zippassword;
             this.Compliantcopy = Compliantcopy;
-            this.Cstring = Cstring;
             this.Footprint = Footprint;
             this.Checksend = Checksend;
             this.Aosflag = Aosflag;
@@ -297,127 +295,117 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Unique identifier of the attachments
         /// </summary>
+        /// <value>Unique identifier of the attachments</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
         /// <summary>
-        /// Identificativo del profilo documentale.
+        /// Unique docnumber of the profile.
         /// </summary>
-        /// <value>Identificativo del profilo documentale.</value>
+        /// <value>Unique docnumber of the profile.</value>
         [DataMember(Name="docnumber", EmitDefaultValue=false)]
         public int? Docnumber { get; set; }
         /// <summary>
-        /// Identificativo della revisione del profilo documentale.
+        /// Revision number for the profile.
         /// </summary>
-        /// <value>Identificativo della revisione del profilo documentale.</value>
+        /// <value>Revision number for the profile.</value>
         [DataMember(Name="revision", EmitDefaultValue=false)]
         public int? Revision { get; set; }
         /// <summary>
-        /// Nome del file compresso.
+        /// Name for the zip file.
         /// </summary>
-        /// <value>Nome del file compresso.</value>
+        /// <value>Name for the zip file.</value>
         [DataMember(Name="filename", EmitDefaultValue=false)]
         public string Filename { get; set; }
         /// <summary>
-        /// Percorso di salvataggio del file.
+        /// Path of compressed file.
         /// </summary>
-        /// <value>Percorso di salvataggio del file.</value>
+        /// <value>Path of compressed file.</value>
         [DataMember(Name="filepath", EmitDefaultValue=false)]
         public string Filepath { get; set; }
         /// <summary>
-        /// Nome originale del file.
+        /// Name of the file.
         /// </summary>
-        /// <value>Nome originale del file.</value>
+        /// <value>Name of the file.</value>
         [DataMember(Name="originalname", EmitDefaultValue=false)]
         public string Originalname { get; set; }
         /// <summary>
-        /// Etichetta, nel caso il file si presenta su CD.
+        /// Label of the CD (if CD is the storage device type of this attachment).
         /// </summary>
-        /// <value>Etichetta, nel caso il file si presenta su CD.</value>
+        /// <value>Label of the CD (if CD is the storage device type of this attachment).</value>
         [DataMember(Name="cdlabel", EmitDefaultValue=false)]
         public string Cdlabel { get; set; }
         /// <summary>
-        /// Descrizione dell’allegato.
+        /// Attachments description.
         /// </summary>
-        /// <value>Descrizione dell’allegato.</value>
+        /// <value>Attachments description.</value>
         [DataMember(Name="comment", EmitDefaultValue=false)]
         public string Comment { get; set; }
         /// <summary>
-        /// Data d&#39;importazione dell&#39;allegato.
+        /// Date of the attachment creation.
         /// </summary>
-        /// <value>Data d&#39;importazione dell&#39;allegato.</value>
+        /// <value>Date of the attachment creation.</value>
         [DataMember(Name="importdate", EmitDefaultValue=false)]
         public DateTime? Importdate { get; set; }
         /// <summary>
-        /// Identificatore dell&#39;utente che ha importato l&#39;allegato.
+        /// UserId of the author.
         /// </summary>
-        /// <value>Identificatore dell&#39;utente che ha importato l&#39;allegato.</value>
+        /// <value>UserId of the author.</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public int? User { get; set; }
         /// <summary>
-        /// Gets or Sets UserCompleteName
+        /// Complete name of the author.
         /// </summary>
+        /// <value>Complete name of the author.</value>
         [DataMember(Name="userCompleteName", EmitDefaultValue=false)]
         public string UserCompleteName { get; set; }
         /// <summary>
-        /// Codice di password del file criptato.
+        /// Indicates if this attachment replace profile for web visualization.
         /// </summary>
-        /// <value>Codice di password del file criptato.</value>
-        [DataMember(Name="zippassword", EmitDefaultValue=false)]
-        public string Zippassword { get; set; }
-        /// <summary>
-        /// Verifica che l&#39;allegato sostituisca il profilo documentale nel caso di visualizzazione via Web.
-        /// </summary>
-        /// <value>Verifica che l&#39;allegato sostituisca il profilo documentale nel caso di visualizzazione via Web.</value>
+        /// <value>Indicates if this attachment replace profile for web visualization.</value>
         [DataMember(Name="compliantcopy", EmitDefaultValue=false)]
         public bool? Compliantcopy { get; set; }
         /// <summary>
-        /// Stringa di connessione criptata di salvataggio del file.
+        /// Hash for the file.
         /// </summary>
-        /// <value>Stringa di connessione criptata di salvataggio del file.</value>
-        [DataMember(Name="cstring", EmitDefaultValue=false)]
-        public string Cstring { get; set; }
-        /// <summary>
-        /// Impronta del file.
-        /// </summary>
-        /// <value>Impronta del file.</value>
+        /// <value>Hash for the file.</value>
         [DataMember(Name="footprint", EmitDefaultValue=false)]
         public string Footprint { get; set; }
         /// <summary>
-        /// Verifica se l&#39;allegato dovrà essere inviato insieme al documento principale, nel caso di spedizione.
+        /// Occurs if the attachment must be submitted with the main document in the case of shipment.
         /// </summary>
-        /// <value>Verifica se l&#39;allegato dovrà essere inviato insieme al documento principale, nel caso di spedizione.</value>
+        /// <value>Occurs if the attachment must be submitted with the main document in the case of shipment.</value>
         [DataMember(Name="checksend", EmitDefaultValue=false)]
         public bool? Checksend { get; set; }
         /// <summary>
-        /// Verifica se l&#39;allegato dovrà essere conservato in modalità sostitutiva con il profilo documentale.
+        /// Occurs if the attachment must be kept in the replacement mode with the document profile.
         /// </summary>
-        /// <value>Verifica se l&#39;allegato dovrà essere conservato in modalità sostitutiva con il profilo documentale.</value>
+        /// <value>Occurs if the attachment must be kept in the replacement mode with the document profile.</value>
         [DataMember(Name="aosflag", EmitDefaultValue=false)]
         public bool? Aosflag { get; set; }
         /// <summary>
-        /// Dimensione del file di riferimento.
+        /// File size in bytes.
         /// </summary>
-        /// <value>Dimensione del file di riferimento.</value>
+        /// <value>File size in bytes.</value>
         [DataMember(Name="filesize", EmitDefaultValue=false)]
         public long? Filesize { get; set; }
         /// <summary>
-        /// Profilo del documento allegato
+        /// Profile of this attachment
         /// </summary>
-        /// <value>Profilo del documento allegato</value>
+        /// <value>Profile of this attachment</value>
         [DataMember(Name="attachedDocnumber", EmitDefaultValue=false)]
         public int? AttachedDocnumber { get; set; }
         /// <summary>
-        /// Verifica se l&#39;allegato dovrà essere inviato a IX insieme al documento principale, nel caso di spedizione.
+        /// Occurs if the attachment must be sent to IX along with the main document in the case of shipment.
         /// </summary>
-        /// <value>Verifica se l&#39;allegato dovrà essere inviato a IX insieme al documento principale, nel caso di spedizione.</value>
+        /// <value>Occurs if the attachment must be sent to IX along with the main document in the case of shipment.</value>
         [DataMember(Name="ixCheck", EmitDefaultValue=false)]
         public bool? IxCheck { get; set; }
         /// <summary>
-        /// Indica la revisione dell&#39;allegato
+        /// Indicates the revision of attachment
         /// </summary>
-        /// <value>Indica la revisione dell&#39;allegato</value>
+        /// <value>Indicates the revision of attachment</value>
         [DataMember(Name="attachmentRevision", EmitDefaultValue=false)]
         public int? AttachmentRevision { get; set; }
         /// <summary>
@@ -441,9 +429,7 @@ namespace IO.Swagger.Model
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  UserCompleteName: ").Append(UserCompleteName).Append("\n");
             sb.Append("  Block: ").Append(Block).Append("\n");
-            sb.Append("  Zippassword: ").Append(Zippassword).Append("\n");
             sb.Append("  Compliantcopy: ").Append(Compliantcopy).Append("\n");
-            sb.Append("  Cstring: ").Append(Cstring).Append("\n");
             sb.Append("  Footprint: ").Append(Footprint).Append("\n");
             sb.Append("  Checksend: ").Append(Checksend).Append("\n");
             sb.Append("  Aosflag: ").Append(Aosflag).Append("\n");
@@ -557,19 +543,9 @@ namespace IO.Swagger.Model
                     this.Block.Equals(other.Block)
                 ) && 
                 (
-                    this.Zippassword == other.Zippassword ||
-                    this.Zippassword != null &&
-                    this.Zippassword.Equals(other.Zippassword)
-                ) && 
-                (
                     this.Compliantcopy == other.Compliantcopy ||
                     this.Compliantcopy != null &&
                     this.Compliantcopy.Equals(other.Compliantcopy)
-                ) && 
-                (
-                    this.Cstring == other.Cstring ||
-                    this.Cstring != null &&
-                    this.Cstring.Equals(other.Cstring)
                 ) && 
                 (
                     this.Footprint == other.Footprint ||
@@ -665,12 +641,8 @@ namespace IO.Swagger.Model
                     hash = hash * 59 + this.UserCompleteName.GetHashCode();
                 if (this.Block != null)
                     hash = hash * 59 + this.Block.GetHashCode();
-                if (this.Zippassword != null)
-                    hash = hash * 59 + this.Zippassword.GetHashCode();
                 if (this.Compliantcopy != null)
                     hash = hash * 59 + this.Compliantcopy.GetHashCode();
-                if (this.Cstring != null)
-                    hash = hash * 59 + this.Cstring.GetHashCode();
                 if (this.Footprint != null)
                     hash = hash * 59 + this.Footprint.GetHashCode();
                 if (this.Checksend != null)

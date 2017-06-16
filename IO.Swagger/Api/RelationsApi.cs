@@ -37,177 +37,177 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// This call delete a criteria by from and to profiles
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="fromId"></param>
-        /// <param name="toId"></param>
+        /// <param name="fromDocnumber">Docnumber of the \&quot;from\&quot; profile</param>
+        /// <param name="toDocnumber">Docnumber of the \&quot;to\&quot; profile</param>
         /// <returns></returns>
-        void RelationsDeleteByDocNumberFromDocNumberTo (int? fromId, int? toId);
+        void RelationsDeleteByDocNumberFromDocNumberTo (int? fromDocnumber, int? toDocnumber);
 
         /// <summary>
-        /// 
+        /// This call delete a criteria by from and to profiles
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="fromId"></param>
-        /// <param name="toId"></param>
+        /// <param name="fromDocnumber">Docnumber of the \&quot;from\&quot; profile</param>
+        /// <param name="toDocnumber">Docnumber of the \&quot;to\&quot; profile</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> RelationsDeleteByDocNumberFromDocNumberToWithHttpInfo (int? fromId, int? toId);
+        ApiResponse<Object> RelationsDeleteByDocNumberFromDocNumberToWithHttpInfo (int? fromDocnumber, int? toDocnumber);
         /// <summary>
-        /// 
+        /// This call return a relation by docnumber and relation eploring method
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="criteria"></param>
+        /// <param name="criteria">Relation search criteria</param>
         /// <returns>RelationExploredDTO</returns>
         RelationExploredDTO RelationsGetById (RelationCriteriaDTO criteria);
 
         /// <summary>
-        /// 
+        /// This call return a relation by docnumber and relation eploring method
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="criteria"></param>
+        /// <param name="criteria">Relation search criteria</param>
         /// <returns>ApiResponse of RelationExploredDTO</returns>
         ApiResponse<RelationExploredDTO> RelationsGetByIdWithHttpInfo (RelationCriteriaDTO criteria);
         /// <summary>
-        /// 
+        /// This call add a new Relation
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="insertDto"></param>
+        /// <param name="relationInsertDto">Relation insert dto</param>
         /// <returns></returns>
-        void RelationsInsertNewRelation (RelationInsertDTO insertDto);
+        void RelationsInsertNewRelation (RelationInsertDTO relationInsertDto);
 
         /// <summary>
-        /// 
+        /// This call add a new Relation
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="insertDto"></param>
+        /// <param name="relationInsertDto">Relation insert dto</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> RelationsInsertNewRelationWithHttpInfo (RelationInsertDTO insertDto);
+        ApiResponse<Object> RelationsInsertNewRelationWithHttpInfo (RelationInsertDTO relationInsertDto);
         /// <summary>
-        /// 
+        /// This call enqueue the reload and the reprocess of the relation of a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns></returns>
         void RelationsRecalculateRelation (int? docnumber);
 
         /// <summary>
-        /// 
+        /// This call enqueue the reload and the reprocess of the relation of a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> RelationsRecalculateRelationWithHttpInfo (int? docnumber);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// This call delete a criteria by from and to profiles
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="fromId"></param>
-        /// <param name="toId"></param>
+        /// <param name="fromDocnumber">Docnumber of the \&quot;from\&quot; profile</param>
+        /// <param name="toDocnumber">Docnumber of the \&quot;to\&quot; profile</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task RelationsDeleteByDocNumberFromDocNumberToAsync (int? fromId, int? toId);
+        System.Threading.Tasks.Task RelationsDeleteByDocNumberFromDocNumberToAsync (int? fromDocnumber, int? toDocnumber);
 
         /// <summary>
-        /// 
+        /// This call delete a criteria by from and to profiles
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="fromId"></param>
-        /// <param name="toId"></param>
+        /// <param name="fromDocnumber">Docnumber of the \&quot;from\&quot; profile</param>
+        /// <param name="toDocnumber">Docnumber of the \&quot;to\&quot; profile</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RelationsDeleteByDocNumberFromDocNumberToAsyncWithHttpInfo (int? fromId, int? toId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> RelationsDeleteByDocNumberFromDocNumberToAsyncWithHttpInfo (int? fromDocnumber, int? toDocnumber);
         /// <summary>
-        /// 
+        /// This call return a relation by docnumber and relation eploring method
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="criteria"></param>
+        /// <param name="criteria">Relation search criteria</param>
         /// <returns>Task of RelationExploredDTO</returns>
         System.Threading.Tasks.Task<RelationExploredDTO> RelationsGetByIdAsync (RelationCriteriaDTO criteria);
 
         /// <summary>
-        /// 
+        /// This call return a relation by docnumber and relation eploring method
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="criteria"></param>
+        /// <param name="criteria">Relation search criteria</param>
         /// <returns>Task of ApiResponse (RelationExploredDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<RelationExploredDTO>> RelationsGetByIdAsyncWithHttpInfo (RelationCriteriaDTO criteria);
         /// <summary>
-        /// 
+        /// This call add a new Relation
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="insertDto"></param>
+        /// <param name="relationInsertDto">Relation insert dto</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task RelationsInsertNewRelationAsync (RelationInsertDTO insertDto);
+        System.Threading.Tasks.Task RelationsInsertNewRelationAsync (RelationInsertDTO relationInsertDto);
 
         /// <summary>
-        /// 
+        /// This call add a new Relation
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="insertDto"></param>
+        /// <param name="relationInsertDto">Relation insert dto</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RelationsInsertNewRelationAsyncWithHttpInfo (RelationInsertDTO insertDto);
+        System.Threading.Tasks.Task<ApiResponse<Object>> RelationsInsertNewRelationAsyncWithHttpInfo (RelationInsertDTO relationInsertDto);
         /// <summary>
-        /// 
+        /// This call enqueue the reload and the reprocess of the relation of a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task RelationsRecalculateRelationAsync (int? docnumber);
 
         /// <summary>
-        /// 
+        /// This call enqueue the reload and the reprocess of the relation of a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> RelationsRecalculateRelationAsyncWithHttpInfo (int? docnumber);
         #endregion Asynchronous Operations
@@ -323,34 +323,34 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call delete a criteria by from and to profiles 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="fromId"></param>
-        /// <param name="toId"></param>
+        /// <param name="fromDocnumber">Docnumber of the \&quot;from\&quot; profile</param>
+        /// <param name="toDocnumber">Docnumber of the \&quot;to\&quot; profile</param>
         /// <returns></returns>
-        public void RelationsDeleteByDocNumberFromDocNumberTo (int? fromId, int? toId)
+        public void RelationsDeleteByDocNumberFromDocNumberTo (int? fromDocnumber, int? toDocnumber)
         {
-             RelationsDeleteByDocNumberFromDocNumberToWithHttpInfo(fromId, toId);
+             RelationsDeleteByDocNumberFromDocNumberToWithHttpInfo(fromDocnumber, toDocnumber);
         }
 
         /// <summary>
-        ///  
+        /// This call delete a criteria by from and to profiles 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="fromId"></param>
-        /// <param name="toId"></param>
+        /// <param name="fromDocnumber">Docnumber of the \&quot;from\&quot; profile</param>
+        /// <param name="toDocnumber">Docnumber of the \&quot;to\&quot; profile</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> RelationsDeleteByDocNumberFromDocNumberToWithHttpInfo (int? fromId, int? toId)
+        public ApiResponse<Object> RelationsDeleteByDocNumberFromDocNumberToWithHttpInfo (int? fromDocnumber, int? toDocnumber)
         {
-            // verify the required parameter 'fromId' is set
-            if (fromId == null)
-                throw new ApiException(400, "Missing required parameter 'fromId' when calling RelationsApi->RelationsDeleteByDocNumberFromDocNumberTo");
-            // verify the required parameter 'toId' is set
-            if (toId == null)
-                throw new ApiException(400, "Missing required parameter 'toId' when calling RelationsApi->RelationsDeleteByDocNumberFromDocNumberTo");
+            // verify the required parameter 'fromDocnumber' is set
+            if (fromDocnumber == null)
+                throw new ApiException(400, "Missing required parameter 'fromDocnumber' when calling RelationsApi->RelationsDeleteByDocNumberFromDocNumberTo");
+            // verify the required parameter 'toDocnumber' is set
+            if (toDocnumber == null)
+                throw new ApiException(400, "Missing required parameter 'toDocnumber' when calling RelationsApi->RelationsDeleteByDocNumberFromDocNumberTo");
 
-            var localVarPath = "/api/relations/{fromId}/{toId}";
+            var localVarPath = "/api/Relations/{fromDocnumber}/{toDocnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -373,8 +373,8 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (fromId != null) localVarPathParams.Add("fromId", Configuration.ApiClient.ParameterToString(fromId)); // path parameter
-            if (toId != null) localVarPathParams.Add("toId", Configuration.ApiClient.ParameterToString(toId)); // path parameter
+            if (fromDocnumber != null) localVarPathParams.Add("fromDocnumber", Configuration.ApiClient.ParameterToString(fromDocnumber)); // path parameter
+            if (toDocnumber != null) localVarPathParams.Add("toDocnumber", Configuration.ApiClient.ParameterToString(toDocnumber)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -403,35 +403,35 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call delete a criteria by from and to profiles 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="fromId"></param>
-        /// <param name="toId"></param>
+        /// <param name="fromDocnumber">Docnumber of the \&quot;from\&quot; profile</param>
+        /// <param name="toDocnumber">Docnumber of the \&quot;to\&quot; profile</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task RelationsDeleteByDocNumberFromDocNumberToAsync (int? fromId, int? toId)
+        public async System.Threading.Tasks.Task RelationsDeleteByDocNumberFromDocNumberToAsync (int? fromDocnumber, int? toDocnumber)
         {
-             await RelationsDeleteByDocNumberFromDocNumberToAsyncWithHttpInfo(fromId, toId);
+             await RelationsDeleteByDocNumberFromDocNumberToAsyncWithHttpInfo(fromDocnumber, toDocnumber);
 
         }
 
         /// <summary>
-        ///  
+        /// This call delete a criteria by from and to profiles 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="fromId"></param>
-        /// <param name="toId"></param>
+        /// <param name="fromDocnumber">Docnumber of the \&quot;from\&quot; profile</param>
+        /// <param name="toDocnumber">Docnumber of the \&quot;to\&quot; profile</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> RelationsDeleteByDocNumberFromDocNumberToAsyncWithHttpInfo (int? fromId, int? toId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> RelationsDeleteByDocNumberFromDocNumberToAsyncWithHttpInfo (int? fromDocnumber, int? toDocnumber)
         {
-            // verify the required parameter 'fromId' is set
-            if (fromId == null)
-                throw new ApiException(400, "Missing required parameter 'fromId' when calling RelationsApi->RelationsDeleteByDocNumberFromDocNumberTo");
-            // verify the required parameter 'toId' is set
-            if (toId == null)
-                throw new ApiException(400, "Missing required parameter 'toId' when calling RelationsApi->RelationsDeleteByDocNumberFromDocNumberTo");
+            // verify the required parameter 'fromDocnumber' is set
+            if (fromDocnumber == null)
+                throw new ApiException(400, "Missing required parameter 'fromDocnumber' when calling RelationsApi->RelationsDeleteByDocNumberFromDocNumberTo");
+            // verify the required parameter 'toDocnumber' is set
+            if (toDocnumber == null)
+                throw new ApiException(400, "Missing required parameter 'toDocnumber' when calling RelationsApi->RelationsDeleteByDocNumberFromDocNumberTo");
 
-            var localVarPath = "/api/relations/{fromId}/{toId}";
+            var localVarPath = "/api/Relations/{fromDocnumber}/{toDocnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -454,8 +454,8 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (fromId != null) localVarPathParams.Add("fromId", Configuration.ApiClient.ParameterToString(fromId)); // path parameter
-            if (toId != null) localVarPathParams.Add("toId", Configuration.ApiClient.ParameterToString(toId)); // path parameter
+            if (fromDocnumber != null) localVarPathParams.Add("fromDocnumber", Configuration.ApiClient.ParameterToString(fromDocnumber)); // path parameter
+            if (toDocnumber != null) localVarPathParams.Add("toDocnumber", Configuration.ApiClient.ParameterToString(toDocnumber)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -483,10 +483,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return a relation by docnumber and relation eploring method 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="criteria"></param>
+        /// <param name="criteria">Relation search criteria</param>
         /// <returns>RelationExploredDTO</returns>
         public RelationExploredDTO RelationsGetById (RelationCriteriaDTO criteria)
         {
@@ -495,10 +495,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return a relation by docnumber and relation eploring method 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="criteria"></param>
+        /// <param name="criteria">Relation search criteria</param>
         /// <returns>ApiResponse of RelationExploredDTO</returns>
         public ApiResponse< RelationExploredDTO > RelationsGetByIdWithHttpInfo (RelationCriteriaDTO criteria)
         {
@@ -574,10 +574,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return a relation by docnumber and relation eploring method 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="criteria"></param>
+        /// <param name="criteria">Relation search criteria</param>
         /// <returns>Task of RelationExploredDTO</returns>
         public async System.Threading.Tasks.Task<RelationExploredDTO> RelationsGetByIdAsync (RelationCriteriaDTO criteria)
         {
@@ -587,10 +587,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return a relation by docnumber and relation eploring method 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="criteria"></param>
+        /// <param name="criteria">Relation search criteria</param>
         /// <returns>Task of ApiResponse (RelationExploredDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RelationExploredDTO>> RelationsGetByIdAsyncWithHttpInfo (RelationCriteriaDTO criteria)
         {
@@ -665,29 +665,29 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add a new Relation 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="insertDto"></param>
+        /// <param name="relationInsertDto">Relation insert dto</param>
         /// <returns></returns>
-        public void RelationsInsertNewRelation (RelationInsertDTO insertDto)
+        public void RelationsInsertNewRelation (RelationInsertDTO relationInsertDto)
         {
-             RelationsInsertNewRelationWithHttpInfo(insertDto);
+             RelationsInsertNewRelationWithHttpInfo(relationInsertDto);
         }
 
         /// <summary>
-        ///  
+        /// This call add a new Relation 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="insertDto"></param>
+        /// <param name="relationInsertDto">Relation insert dto</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> RelationsInsertNewRelationWithHttpInfo (RelationInsertDTO insertDto)
+        public ApiResponse<Object> RelationsInsertNewRelationWithHttpInfo (RelationInsertDTO relationInsertDto)
         {
-            // verify the required parameter 'insertDto' is set
-            if (insertDto == null)
-                throw new ApiException(400, "Missing required parameter 'insertDto' when calling RelationsApi->RelationsInsertNewRelation");
+            // verify the required parameter 'relationInsertDto' is set
+            if (relationInsertDto == null)
+                throw new ApiException(400, "Missing required parameter 'relationInsertDto' when calling RelationsApi->RelationsInsertNewRelation");
 
-            var localVarPath = "/api/relations/Insert";
+            var localVarPath = "/api/Relations/Insert";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -715,13 +715,13 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (insertDto != null && insertDto.GetType() != typeof(byte[]))
+            if (relationInsertDto != null && relationInsertDto.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(insertDto); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(relationInsertDto); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = insertDto; // byte array
+                localVarPostBody = relationInsertDto; // byte array
             }
 
             // authentication (Authorization) required
@@ -751,30 +751,30 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add a new Relation 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="insertDto"></param>
+        /// <param name="relationInsertDto">Relation insert dto</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task RelationsInsertNewRelationAsync (RelationInsertDTO insertDto)
+        public async System.Threading.Tasks.Task RelationsInsertNewRelationAsync (RelationInsertDTO relationInsertDto)
         {
-             await RelationsInsertNewRelationAsyncWithHttpInfo(insertDto);
+             await RelationsInsertNewRelationAsyncWithHttpInfo(relationInsertDto);
 
         }
 
         /// <summary>
-        ///  
+        /// This call add a new Relation 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="insertDto"></param>
+        /// <param name="relationInsertDto">Relation insert dto</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> RelationsInsertNewRelationAsyncWithHttpInfo (RelationInsertDTO insertDto)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> RelationsInsertNewRelationAsyncWithHttpInfo (RelationInsertDTO relationInsertDto)
         {
-            // verify the required parameter 'insertDto' is set
-            if (insertDto == null)
-                throw new ApiException(400, "Missing required parameter 'insertDto' when calling RelationsApi->RelationsInsertNewRelation");
+            // verify the required parameter 'relationInsertDto' is set
+            if (relationInsertDto == null)
+                throw new ApiException(400, "Missing required parameter 'relationInsertDto' when calling RelationsApi->RelationsInsertNewRelation");
 
-            var localVarPath = "/api/relations/Insert";
+            var localVarPath = "/api/Relations/Insert";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -802,13 +802,13 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (insertDto != null && insertDto.GetType() != typeof(byte[]))
+            if (relationInsertDto != null && relationInsertDto.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(insertDto); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(relationInsertDto); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = insertDto; // byte array
+                localVarPostBody = relationInsertDto; // byte array
             }
 
             // authentication (Authorization) required
@@ -837,10 +837,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call enqueue the reload and the reprocess of the relation of a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns></returns>
         public void RelationsRecalculateRelation (int? docnumber)
         {
@@ -848,10 +848,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call enqueue the reload and the reprocess of the relation of a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> RelationsRecalculateRelationWithHttpInfo (int? docnumber)
         {
@@ -859,7 +859,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling RelationsApi->RelationsRecalculateRelation");
 
-            var localVarPath = "/api/relations/{docnumber}";
+            var localVarPath = "/api/Relations/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -911,10 +911,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call enqueue the reload and the reprocess of the relation of a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task RelationsRecalculateRelationAsync (int? docnumber)
         {
@@ -923,10 +923,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call enqueue the reload and the reprocess of the relation of a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> RelationsRecalculateRelationAsyncWithHttpInfo (int? docnumber)
         {
@@ -934,7 +934,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling RelationsApi->RelationsRecalculateRelation");
 
-            var localVarPath = "/api/relations/{docnumber}";
+            var localVarPath = "/api/Relations/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

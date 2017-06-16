@@ -371,7 +371,8 @@ namespace IO.Swagger.Model
         /// <param name="WorkFlowName">Name of the workflow.</param>
         /// <param name="WorkFlowDescription">Description of the workflow.</param>
         /// <param name="WorkFlowDetails">Details of the workflow.</param>
-        public TaskWorkDTO(int? Id = null, int? ProcessId = null, int? WorkflowId = null, bool? Notes = null, bool? Attachments = null, int? Docnumber = null, int? Revision = null, DateTime? StartDate = null, string TaskName = null, string TaskDescription = null, int? User = null, DateTime? EndDate = null, StateEnum? State = null, DateTime? ExpireDate = null, PrincipalProfileSecurityEnum? PrincipalProfileSecurity = null, int? NodeId = null, UserEnumSelectionEnum? UserEnumSelection = null, bool? NewProfileInput = null, bool? ProfileEdit = null, bool? FolderInsert = null, PriorityEnum? Priority = null, int? ModelId = null, TaskTypeEnum? TaskType = null, int? ExecutionMode = null, bool? MailNotification = null, DateTime? AutomaticTaskFeedDate = null, bool? PasswordRequired = null, bool? NewMemo = null, bool? Readed = null, bool? AsyncCommand = null, bool? EditCopy = null, bool? TakingChargeRequired = null, DateTime? TaskDeadlineDate = null, DateTime? TaskActivationDate = null, string ProfessionalRoleSelectionDescription = null, string ProcessVariablesSetDescription = null, int? OrganizationChartId = null, int? DelegationId = null, DateTime? OpenedTaskDate = null, string ExitState = null, string GroupTaskId = null, int? OrganizationChartOriginalUserId = null, int? OriginalUserId = null, string ExternalTaskTypeId = null, bool? ManageMaster = null, int? WaitUserExecutionMode = null, bool? ManageInstruction = null, string HtmlDescriptionEnabled = null, string DynamicMansionDescription = null, int? PartsVisibility = null, string DefaultExitState = null, ReassignModeEnum? ReassignMode = null, AutoAssignModeEnum? AutoAssignMode = null, int? NameTranslationId = null, int? DescriptionTranslationId = null, int? ProfessionalRolesDescriptionTranslationId = null, int? VariablesDescriptionTranslationId = null, int? HtmlDescriptionTranslationId = null, int? DynamicMansionDescriptionTranslationId = null, bool? GroupIcon = null, List<UserDTO> Executers = null, bool? AttachmentsVisible = null, bool? DetailsVisible = null, bool? ProfilesVisible = null, bool? NotesVisible = null, bool? HistoryVisible = null, bool? InstructionVisible = null, bool? ShowProcessVisible = null, bool? VariablesVisible = null, bool? ExitStateComboVisible = null, bool? OperationsVisible = null, string WorkFlowName = null, string WorkFlowDescription = null, string WorkFlowDetails = null)
+        /// <param name="WorkFlowColor">The color of the workflow.</param>
+        public TaskWorkDTO(int? Id = null, int? ProcessId = null, int? WorkflowId = null, bool? Notes = null, bool? Attachments = null, int? Docnumber = null, int? Revision = null, DateTime? StartDate = null, string TaskName = null, string TaskDescription = null, int? User = null, DateTime? EndDate = null, StateEnum? State = null, DateTime? ExpireDate = null, PrincipalProfileSecurityEnum? PrincipalProfileSecurity = null, int? NodeId = null, UserEnumSelectionEnum? UserEnumSelection = null, bool? NewProfileInput = null, bool? ProfileEdit = null, bool? FolderInsert = null, PriorityEnum? Priority = null, int? ModelId = null, TaskTypeEnum? TaskType = null, int? ExecutionMode = null, bool? MailNotification = null, DateTime? AutomaticTaskFeedDate = null, bool? PasswordRequired = null, bool? NewMemo = null, bool? Readed = null, bool? AsyncCommand = null, bool? EditCopy = null, bool? TakingChargeRequired = null, DateTime? TaskDeadlineDate = null, DateTime? TaskActivationDate = null, string ProfessionalRoleSelectionDescription = null, string ProcessVariablesSetDescription = null, int? OrganizationChartId = null, int? DelegationId = null, DateTime? OpenedTaskDate = null, string ExitState = null, string GroupTaskId = null, int? OrganizationChartOriginalUserId = null, int? OriginalUserId = null, string ExternalTaskTypeId = null, bool? ManageMaster = null, int? WaitUserExecutionMode = null, bool? ManageInstruction = null, string HtmlDescriptionEnabled = null, string DynamicMansionDescription = null, int? PartsVisibility = null, string DefaultExitState = null, ReassignModeEnum? ReassignMode = null, AutoAssignModeEnum? AutoAssignMode = null, int? NameTranslationId = null, int? DescriptionTranslationId = null, int? ProfessionalRolesDescriptionTranslationId = null, int? VariablesDescriptionTranslationId = null, int? HtmlDescriptionTranslationId = null, int? DynamicMansionDescriptionTranslationId = null, bool? GroupIcon = null, List<UserCompleteDTO> Executers = null, bool? AttachmentsVisible = null, bool? DetailsVisible = null, bool? ProfilesVisible = null, bool? NotesVisible = null, bool? HistoryVisible = null, bool? InstructionVisible = null, bool? ShowProcessVisible = null, bool? VariablesVisible = null, bool? ExitStateComboVisible = null, bool? OperationsVisible = null, string WorkFlowName = null, string WorkFlowDescription = null, string WorkFlowDetails = null, int? WorkFlowColor = null)
         {
             this.Id = Id;
             this.ProcessId = ProcessId;
@@ -447,6 +448,7 @@ namespace IO.Swagger.Model
             this.WorkFlowName = WorkFlowName;
             this.WorkFlowDescription = WorkFlowDescription;
             this.WorkFlowDetails = WorkFlowDetails;
+            this.WorkFlowColor = WorkFlowColor;
         }
         
         /// <summary>
@@ -772,7 +774,7 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <value>Executers of the task</value>
         [DataMember(Name="executers", EmitDefaultValue=false)]
-        public List<UserDTO> Executers { get; set; }
+        public List<UserCompleteDTO> Executers { get; set; }
         /// <summary>
         /// Attachments part visibility
         /// </summary>
@@ -851,6 +853,12 @@ namespace IO.Swagger.Model
         /// <value>Details of the workflow</value>
         [DataMember(Name="workFlowDetails", EmitDefaultValue=false)]
         public string WorkFlowDetails { get; set; }
+        /// <summary>
+        /// The color of the workflow
+        /// </summary>
+        /// <value>The color of the workflow</value>
+        [DataMember(Name="workFlowColor", EmitDefaultValue=false)]
+        public int? WorkFlowColor { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -933,6 +941,7 @@ namespace IO.Swagger.Model
             sb.Append("  WorkFlowName: ").Append(WorkFlowName).Append("\n");
             sb.Append("  WorkFlowDescription: ").Append(WorkFlowDescription).Append("\n");
             sb.Append("  WorkFlowDetails: ").Append(WorkFlowDetails).Append("\n");
+            sb.Append("  WorkFlowColor: ").Append(WorkFlowColor).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1338,6 +1347,11 @@ namespace IO.Swagger.Model
                     this.WorkFlowDetails == other.WorkFlowDetails ||
                     this.WorkFlowDetails != null &&
                     this.WorkFlowDetails.Equals(other.WorkFlowDetails)
+                ) && 
+                (
+                    this.WorkFlowColor == other.WorkFlowColor ||
+                    this.WorkFlowColor != null &&
+                    this.WorkFlowColor.Equals(other.WorkFlowColor)
                 );
         }
 
@@ -1500,6 +1514,8 @@ namespace IO.Swagger.Model
                     hash = hash * 59 + this.WorkFlowDescription.GetHashCode();
                 if (this.WorkFlowDetails != null)
                     hash = hash * 59 + this.WorkFlowDetails.GetHashCode();
+                if (this.WorkFlowColor != null)
+                    hash = hash * 59 + this.WorkFlowColor.GetHashCode();
                 return hash;
             }
         }

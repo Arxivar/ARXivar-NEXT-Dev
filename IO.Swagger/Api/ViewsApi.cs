@@ -337,7 +337,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ViewsApi->ViewsDeleteView");
 
-            var localVarPath = "/api/views/{id}";
+            var localVarPath = "/api/Views/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -412,7 +412,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ViewsApi->ViewsDeleteView");
 
-            var localVarPath = "/api/views/{id}";
+            var localVarPath = "/api/Views/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -483,7 +483,7 @@ namespace IO.Swagger.Api
         public ApiResponse< List<RowSearchResult> > ViewsGetResultWithHttpInfo (ViewDTO view = null)
         {
 
-            var localVarPath = "/api/views";
+            var localVarPath = "/api/Views";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -567,7 +567,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<RowSearchResult>>> ViewsGetResultAsyncWithHttpInfo (ViewDTO view = null)
         {
 
-            var localVarPath = "/api/views";
+            var localVarPath = "/api/Views";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -652,7 +652,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ViewsApi->ViewsGetView");
 
-            var localVarPath = "/api/views/{id}";
+            var localVarPath = "/api/Views/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -732,7 +732,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ViewsApi->ViewsGetView");
 
-            var localVarPath = "/api/views/{id}";
+            var localVarPath = "/api/Views/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -805,7 +805,7 @@ namespace IO.Swagger.Api
         public ApiResponse< List<ViewDTO> > ViewsGetViewsWithHttpInfo ()
         {
 
-            var localVarPath = "/api/views";
+            var localVarPath = "/api/Views";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -879,7 +879,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<ViewDTO>>> ViewsGetViewsAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/views";
+            var localVarPath = "/api/Views";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

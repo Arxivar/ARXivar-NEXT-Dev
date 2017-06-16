@@ -206,7 +206,7 @@ namespace IO.Swagger.Api
         public ApiResponse< Object > CacheInsertWithHttpInfo ()
         {
 
-            var localVarPath = "/api/cache/insert";
+            var localVarPath = "/api/Cache/insert";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -280,7 +280,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<Object>> CacheInsertAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/cache/insert";
+            var localVarPath = "/api/Cache/insert";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

@@ -34,32 +34,39 @@ using Newtonsoft.Json.Converters;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// SearchApiDTO
+    /// TaskWorkRequestDTO
     /// </summary>
     [DataContract]
-    public partial class SearchApiDTO :  IEquatable<SearchApiDTO>
+    public partial class TaskWorkRequestDTO :  IEquatable<TaskWorkRequestDTO>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SearchApiDTO" /> class.
+        /// Initializes a new instance of the <see cref="TaskWorkRequestDTO" /> class.
         /// </summary>
-        /// <param name="Fields">Fields.</param>
-        /// <param name="MaxItems">MaxItems.</param>
-        public SearchApiDTO(List<FieldForSearchDTO> Fields = null, int? MaxItems = null)
+        /// <param name="Select">Select.</param>
+        /// <param name="WorkFlowIds">WorkFlowIds.</param>
+        /// <param name="TaskWorkIds">TaskWorkIds.</param>
+        public TaskWorkRequestDTO(SelectDTO Select = null, List<int?> WorkFlowIds = null, List<int?> TaskWorkIds = null)
         {
-            this.Fields = Fields;
-            this.MaxItems = MaxItems;
+            this.Select = Select;
+            this.WorkFlowIds = WorkFlowIds;
+            this.TaskWorkIds = TaskWorkIds;
         }
         
         /// <summary>
-        /// Gets or Sets Fields
+        /// Gets or Sets Select
         /// </summary>
-        [DataMember(Name="fields", EmitDefaultValue=false)]
-        public List<FieldForSearchDTO> Fields { get; set; }
+        [DataMember(Name="select", EmitDefaultValue=false)]
+        public SelectDTO Select { get; set; }
         /// <summary>
-        /// Gets or Sets MaxItems
+        /// Gets or Sets WorkFlowIds
         /// </summary>
-        [DataMember(Name="maxItems", EmitDefaultValue=false)]
-        public int? MaxItems { get; set; }
+        [DataMember(Name="workFlowIds", EmitDefaultValue=false)]
+        public List<int?> WorkFlowIds { get; set; }
+        /// <summary>
+        /// Gets or Sets TaskWorkIds
+        /// </summary>
+        [DataMember(Name="taskWorkIds", EmitDefaultValue=false)]
+        public List<int?> TaskWorkIds { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -67,9 +74,10 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class SearchApiDTO {\n");
-            sb.Append("  Fields: ").Append(Fields).Append("\n");
-            sb.Append("  MaxItems: ").Append(MaxItems).Append("\n");
+            sb.Append("class TaskWorkRequestDTO {\n");
+            sb.Append("  Select: ").Append(Select).Append("\n");
+            sb.Append("  WorkFlowIds: ").Append(WorkFlowIds).Append("\n");
+            sb.Append("  TaskWorkIds: ").Append(TaskWorkIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,15 +99,15 @@ namespace IO.Swagger.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SearchApiDTO);
+            return this.Equals(obj as TaskWorkRequestDTO);
         }
 
         /// <summary>
-        /// Returns true if SearchApiDTO instances are equal
+        /// Returns true if TaskWorkRequestDTO instances are equal
         /// </summary>
-        /// <param name="other">Instance of SearchApiDTO to be compared</param>
+        /// <param name="other">Instance of TaskWorkRequestDTO to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SearchApiDTO other)
+        public bool Equals(TaskWorkRequestDTO other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -107,14 +115,19 @@ namespace IO.Swagger.Model
 
             return 
                 (
-                    this.Fields == other.Fields ||
-                    this.Fields != null &&
-                    this.Fields.SequenceEqual(other.Fields)
+                    this.Select == other.Select ||
+                    this.Select != null &&
+                    this.Select.Equals(other.Select)
                 ) && 
                 (
-                    this.MaxItems == other.MaxItems ||
-                    this.MaxItems != null &&
-                    this.MaxItems.Equals(other.MaxItems)
+                    this.WorkFlowIds == other.WorkFlowIds ||
+                    this.WorkFlowIds != null &&
+                    this.WorkFlowIds.SequenceEqual(other.WorkFlowIds)
+                ) && 
+                (
+                    this.TaskWorkIds == other.TaskWorkIds ||
+                    this.TaskWorkIds != null &&
+                    this.TaskWorkIds.SequenceEqual(other.TaskWorkIds)
                 );
         }
 
@@ -129,10 +142,12 @@ namespace IO.Swagger.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Fields != null)
-                    hash = hash * 59 + this.Fields.GetHashCode();
-                if (this.MaxItems != null)
-                    hash = hash * 59 + this.MaxItems.GetHashCode();
+                if (this.Select != null)
+                    hash = hash * 59 + this.Select.GetHashCode();
+                if (this.WorkFlowIds != null)
+                    hash = hash * 59 + this.WorkFlowIds.GetHashCode();
+                if (this.TaskWorkIds != null)
+                    hash = hash * 59 + this.TaskWorkIds.GetHashCode();
                 return hash;
             }
         }

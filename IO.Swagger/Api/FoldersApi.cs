@@ -1053,7 +1053,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling FoldersApi->FoldersAutoinsertInFolderByDocnumber");
 
-            var localVarPath = "/api/folders/{docnumber}/autoinsert";
+            var localVarPath = "/api/Folders/{docnumber}/autoinsert";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1128,7 +1128,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling FoldersApi->FoldersAutoinsertInFolderByDocnumber");
 
-            var localVarPath = "/api/folders/{docnumber}/autoinsert";
+            var localVarPath = "/api/Folders/{docnumber}/autoinsert";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1201,7 +1201,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling FoldersApi->FoldersDelete");
 
-            var localVarPath = "/api/folders/{id}";
+            var localVarPath = "/api/Folders/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1276,7 +1276,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling FoldersApi->FoldersDelete");
 
-            var localVarPath = "/api/folders/{id}";
+            var localVarPath = "/api/Folders/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1349,7 +1349,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling FoldersApi->FoldersDeleteArxDriveConfiguration");
 
-            var localVarPath = "/api/folders/arxdriveinfo/{id}";
+            var localVarPath = "/api/Folders/arxdriveinfo/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1424,7 +1424,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling FoldersApi->FoldersDeleteArxDriveConfiguration");
 
-            var localVarPath = "/api/folders/arxdriveinfo/{id}";
+            var localVarPath = "/api/Folders/arxdriveinfo/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1498,7 +1498,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling FoldersApi->FoldersFindByDocnumber");
 
-            var localVarPath = "/api/folders/docnumber/{docnumber}";
+            var localVarPath = "/api/Folders/docnumber/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1578,7 +1578,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling FoldersApi->FoldersFindByDocnumber");
 
-            var localVarPath = "/api/folders/docnumber/{docnumber}";
+            var localVarPath = "/api/Folders/docnumber/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1656,7 +1656,7 @@ namespace IO.Swagger.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling FoldersApi->FoldersFindByName");
 
-            var localVarPath = "/api/folders/find/{name}";
+            var localVarPath = "/api/Folders/find/{name}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1736,7 +1736,7 @@ namespace IO.Swagger.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling FoldersApi->FoldersFindByName");
 
-            var localVarPath = "/api/folders/find/{name}";
+            var localVarPath = "/api/Folders/find/{name}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1819,7 +1819,7 @@ namespace IO.Swagger.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling FoldersApi->FoldersFindInFolderByName");
 
-            var localVarPath = "/api/folders/{id}/name/{name}";
+            var localVarPath = "/api/Folders/{id}/name/{name}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1905,7 +1905,7 @@ namespace IO.Swagger.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling FoldersApi->FoldersFindInFolderByName");
 
-            var localVarPath = "/api/folders/{id}/name/{name}";
+            var localVarPath = "/api/Folders/{id}/name/{name}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1984,7 +1984,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling FoldersApi->FoldersGetArchiveInfo");
 
-            var localVarPath = "/api/folders/{id}/archiveinfo";
+            var localVarPath = "/api/Folders/{id}/archiveinfo";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2064,7 +2064,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling FoldersApi->FoldersGetArchiveInfo");
 
-            var localVarPath = "/api/folders/{id}/archiveinfo";
+            var localVarPath = "/api/Folders/{id}/archiveinfo";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2142,7 +2142,7 @@ namespace IO.Swagger.Api
             if (folderid == null)
                 throw new ApiException(400, "Missing required parameter 'folderid' when calling FoldersApi->FoldersGetArxDriveConfiguration");
 
-            var localVarPath = "/api/folders/{folderid}/arxdriveinfo";
+            var localVarPath = "/api/Folders/{folderid}/arxdriveinfo";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2222,7 +2222,7 @@ namespace IO.Swagger.Api
             if (folderid == null)
                 throw new ApiException(400, "Missing required parameter 'folderid' when calling FoldersApi->FoldersGetArxDriveConfiguration");
 
-            var localVarPath = "/api/folders/{folderid}/arxdriveinfo";
+            var localVarPath = "/api/Folders/{folderid}/arxdriveinfo";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2300,7 +2300,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling FoldersApi->FoldersGetById");
 
-            var localVarPath = "/api/folders/{id}";
+            var localVarPath = "/api/Folders/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2380,7 +2380,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling FoldersApi->FoldersGetById");
 
-            var localVarPath = "/api/folders/{id}";
+            var localVarPath = "/api/Folders/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2458,7 +2458,7 @@ namespace IO.Swagger.Api
             if (parentId == null)
                 throw new ApiException(400, "Missing required parameter 'parentId' when calling FoldersApi->FoldersGetByParentId");
 
-            var localVarPath = "/api/folders/parent/{parentId}";
+            var localVarPath = "/api/Folders/parent/{parentId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2538,7 +2538,7 @@ namespace IO.Swagger.Api
             if (parentId == null)
                 throw new ApiException(400, "Missing required parameter 'parentId' when calling FoldersApi->FoldersGetByParentId");
 
-            var localVarPath = "/api/folders/parent/{parentId}";
+            var localVarPath = "/api/Folders/parent/{parentId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2621,7 +2621,7 @@ namespace IO.Swagger.Api
             if (select == null)
                 throw new ApiException(400, "Missing required parameter 'select' when calling FoldersApi->FoldersGetDocumentsById");
 
-            var localVarPath = "/api/folders/{id}/documents";
+            var localVarPath = "/api/Folders/{id}/documents";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2719,7 +2719,7 @@ namespace IO.Swagger.Api
             if (select == null)
                 throw new ApiException(400, "Missing required parameter 'select' when calling FoldersApi->FoldersGetDocumentsById");
 
-            var localVarPath = "/api/folders/{id}/documents";
+            var localVarPath = "/api/Folders/{id}/documents";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2810,7 +2810,7 @@ namespace IO.Swagger.Api
             if (folderid == null)
                 throw new ApiException(400, "Missing required parameter 'folderid' when calling FoldersApi->FoldersGetFolderPermission");
 
-            var localVarPath = "/api/folders/{folderid}/permissions";
+            var localVarPath = "/api/Folders/{folderid}/permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2890,7 +2890,7 @@ namespace IO.Swagger.Api
             if (folderid == null)
                 throw new ApiException(400, "Missing required parameter 'folderid' when calling FoldersApi->FoldersGetFolderPermission");
 
-            var localVarPath = "/api/folders/{folderid}/permissions";
+            var localVarPath = "/api/Folders/{folderid}/permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2972,7 +2972,7 @@ namespace IO.Swagger.Api
             if (docnumbers == null)
                 throw new ApiException(400, "Missing required parameter 'docnumbers' when calling FoldersApi->FoldersInsertDocnumbers");
 
-            var localVarPath = "/api/folders/{id}/add";
+            var localVarPath = "/api/Folders/{id}/add";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3065,7 +3065,7 @@ namespace IO.Swagger.Api
             if (docnumbers == null)
                 throw new ApiException(400, "Missing required parameter 'docnumbers' when calling FoldersApi->FoldersInsertDocnumbers");
 
-            var localVarPath = "/api/folders/{id}/add";
+            var localVarPath = "/api/Folders/{id}/add";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3156,7 +3156,7 @@ namespace IO.Swagger.Api
             if (parentid == null)
                 throw new ApiException(400, "Missing required parameter 'parentid' when calling FoldersApi->FoldersMove");
 
-            var localVarPath = "/api/folders/move/{id}/{parentid}";
+            var localVarPath = "/api/Folders/move/{id}/{parentid}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3237,7 +3237,7 @@ namespace IO.Swagger.Api
             if (parentid == null)
                 throw new ApiException(400, "Missing required parameter 'parentid' when calling FoldersApi->FoldersMove");
 
-            var localVarPath = "/api/folders/move/{id}/{parentid}";
+            var localVarPath = "/api/Folders/move/{id}/{parentid}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3317,7 +3317,7 @@ namespace IO.Swagger.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling FoldersApi->FoldersNew");
 
-            var localVarPath = "/api/folders/{parentId}";
+            var localVarPath = "/api/Folders/{parentId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3415,7 +3415,7 @@ namespace IO.Swagger.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling FoldersApi->FoldersNew");
 
-            var localVarPath = "/api/folders/{parentId}";
+            var localVarPath = "/api/Folders/{parentId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3510,7 +3510,7 @@ namespace IO.Swagger.Api
             if (docnumbers == null)
                 throw new ApiException(400, "Missing required parameter 'docnumbers' when calling FoldersApi->FoldersRemoveDocumentsInFolder");
 
-            var localVarPath = "/api/folders/{id}/documents/delete";
+            var localVarPath = "/api/Folders/{id}/documents/delete";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3603,7 +3603,7 @@ namespace IO.Swagger.Api
             if (docnumbers == null)
                 throw new ApiException(400, "Missing required parameter 'docnumbers' when calling FoldersApi->FoldersRemoveDocumentsInFolder");
 
-            var localVarPath = "/api/folders/{id}/documents/delete";
+            var localVarPath = "/api/Folders/{id}/documents/delete";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3694,7 +3694,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling FoldersApi->FoldersRename");
 
-            var localVarPath = "/api/folders/rename/{id}/{name}";
+            var localVarPath = "/api/Folders/rename/{id}/{name}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3775,7 +3775,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling FoldersApi->FoldersRename");
 
-            var localVarPath = "/api/folders/rename/{id}/{name}";
+            var localVarPath = "/api/Folders/rename/{id}/{name}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3854,7 +3854,7 @@ namespace IO.Swagger.Api
             if (archiveInfo == null)
                 throw new ApiException(400, "Missing required parameter 'archiveInfo' when calling FoldersApi->FoldersSetArchiveInfo");
 
-            var localVarPath = "/api/folders/{id}/archiveinfo";
+            var localVarPath = "/api/Folders/{id}/archiveinfo";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3947,7 +3947,7 @@ namespace IO.Swagger.Api
             if (archiveInfo == null)
                 throw new ApiException(400, "Missing required parameter 'archiveInfo' when calling FoldersApi->FoldersSetArchiveInfo");
 
-            var localVarPath = "/api/folders/{id}/archiveinfo";
+            var localVarPath = "/api/Folders/{id}/archiveinfo";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4038,7 +4038,7 @@ namespace IO.Swagger.Api
             if (arxDriveFolderModeInfo == null)
                 throw new ApiException(400, "Missing required parameter 'arxDriveFolderModeInfo' when calling FoldersApi->FoldersSetArxDriveConfiguration");
 
-            var localVarPath = "/api/folders/{folderid}/arxdriveinfo";
+            var localVarPath = "/api/Folders/{folderid}/arxdriveinfo";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4131,7 +4131,7 @@ namespace IO.Swagger.Api
             if (arxDriveFolderModeInfo == null)
                 throw new ApiException(400, "Missing required parameter 'arxDriveFolderModeInfo' when calling FoldersApi->FoldersSetArxDriveConfiguration");
 
-            var localVarPath = "/api/folders/{folderid}/arxdriveinfo";
+            var localVarPath = "/api/Folders/{folderid}/arxdriveinfo";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4222,7 +4222,7 @@ namespace IO.Swagger.Api
             if (permissions == null)
                 throw new ApiException(400, "Missing required parameter 'permissions' when calling FoldersApi->FoldersSetFolderPermission");
 
-            var localVarPath = "/api/folders/{folderid}/permissions";
+            var localVarPath = "/api/Folders/{folderid}/permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4315,7 +4315,7 @@ namespace IO.Swagger.Api
             if (permissions == null)
                 throw new ApiException(400, "Missing required parameter 'permissions' when calling FoldersApi->FoldersSetFolderPermission");
 
-            var localVarPath = "/api/folders/{folderid}/permissions";
+            var localVarPath = "/api/Folders/{folderid}/permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

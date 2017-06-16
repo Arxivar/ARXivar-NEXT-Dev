@@ -34,25 +34,32 @@ using Newtonsoft.Json.Converters;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// StreamContent
+    /// AttachmentsDataSourceDTO
     /// </summary>
     [DataContract]
-    public partial class StreamContent :  IEquatable<StreamContent>
+    public partial class AttachmentsDataSourceDTO :  IEquatable<AttachmentsDataSourceDTO>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="StreamContent" /> class.
+        /// Initializes a new instance of the <see cref="AttachmentsDataSourceDTO" /> class.
         /// </summary>
-        /// <param name="Headers">Headers.</param>
-        public StreamContent(List<KeyValuePairStringIEnumerableString> Headers = null)
+        /// <param name="ExternalAttachments">ExternalAttachments.</param>
+        /// <param name="InternalAttachments">InternalAttachments.</param>
+        public AttachmentsDataSourceDTO(List<RowSearchResult> ExternalAttachments = null, List<RowSearchResult> InternalAttachments = null)
         {
-            this.Headers = Headers;
+            this.ExternalAttachments = ExternalAttachments;
+            this.InternalAttachments = InternalAttachments;
         }
         
         /// <summary>
-        /// Gets or Sets Headers
+        /// Gets or Sets ExternalAttachments
         /// </summary>
-        [DataMember(Name="headers", EmitDefaultValue=false)]
-        public List<KeyValuePairStringIEnumerableString> Headers { get; set; }
+        [DataMember(Name="externalAttachments", EmitDefaultValue=false)]
+        public List<RowSearchResult> ExternalAttachments { get; set; }
+        /// <summary>
+        /// Gets or Sets InternalAttachments
+        /// </summary>
+        [DataMember(Name="internalAttachments", EmitDefaultValue=false)]
+        public List<RowSearchResult> InternalAttachments { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,8 +67,9 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class StreamContent {\n");
-            sb.Append("  Headers: ").Append(Headers).Append("\n");
+            sb.Append("class AttachmentsDataSourceDTO {\n");
+            sb.Append("  ExternalAttachments: ").Append(ExternalAttachments).Append("\n");
+            sb.Append("  InternalAttachments: ").Append(InternalAttachments).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -83,15 +91,15 @@ namespace IO.Swagger.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as StreamContent);
+            return this.Equals(obj as AttachmentsDataSourceDTO);
         }
 
         /// <summary>
-        /// Returns true if StreamContent instances are equal
+        /// Returns true if AttachmentsDataSourceDTO instances are equal
         /// </summary>
-        /// <param name="other">Instance of StreamContent to be compared</param>
+        /// <param name="other">Instance of AttachmentsDataSourceDTO to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(StreamContent other)
+        public bool Equals(AttachmentsDataSourceDTO other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -99,9 +107,14 @@ namespace IO.Swagger.Model
 
             return 
                 (
-                    this.Headers == other.Headers ||
-                    this.Headers != null &&
-                    this.Headers.SequenceEqual(other.Headers)
+                    this.ExternalAttachments == other.ExternalAttachments ||
+                    this.ExternalAttachments != null &&
+                    this.ExternalAttachments.SequenceEqual(other.ExternalAttachments)
+                ) && 
+                (
+                    this.InternalAttachments == other.InternalAttachments ||
+                    this.InternalAttachments != null &&
+                    this.InternalAttachments.SequenceEqual(other.InternalAttachments)
                 );
         }
 
@@ -116,8 +129,10 @@ namespace IO.Swagger.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Headers != null)
-                    hash = hash * 59 + this.Headers.GetHashCode();
+                if (this.ExternalAttachments != null)
+                    hash = hash * 59 + this.ExternalAttachments.GetHashCode();
+                if (this.InternalAttachments != null)
+                    hash = hash * 59 + this.InternalAttachments.GetHashCode();
                 return hash;
             }
         }

@@ -1307,7 +1307,7 @@ namespace IO.Swagger.Api
             if (profilesInsertRequest == null)
                 throw new ApiException(400, "Missing required parameter 'profilesInsertRequest' when calling BindersApi->BindersAddProfilesToBinder");
 
-            var localVarPath = "/api/binders/addprofiles";
+            var localVarPath = "/api/Binders/addprofiles";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1394,7 +1394,7 @@ namespace IO.Swagger.Api
             if (profilesInsertRequest == null)
                 throw new ApiException(400, "Missing required parameter 'profilesInsertRequest' when calling BindersApi->BindersAddProfilesToBinder");
 
-            var localVarPath = "/api/binders/addprofiles";
+            var localVarPath = "/api/Binders/addprofiles";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1479,7 +1479,7 @@ namespace IO.Swagger.Api
             if (request == null)
                 throw new ApiException(400, "Missing required parameter 'request' when calling BindersApi->BindersBinderComboValues");
 
-            var localVarPath = "/api/binders/combofieldvalues";
+            var localVarPath = "/api/Binders/combofieldvalues";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1566,7 +1566,7 @@ namespace IO.Swagger.Api
             if (request == null)
                 throw new ApiException(400, "Missing required parameter 'request' when calling BindersApi->BindersBinderComboValues");
 
-            var localVarPath = "/api/binders/combofieldvalues";
+            var localVarPath = "/api/Binders/combofieldvalues";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1652,7 +1652,7 @@ namespace IO.Swagger.Api
             if (request == null)
                 throw new ApiException(400, "Missing required parameter 'request' when calling BindersApi->BindersBinderCustomFields");
 
-            var localVarPath = "/api/binders/customfieldsbytype";
+            var localVarPath = "/api/Binders/customfieldsbytype";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1744,7 +1744,7 @@ namespace IO.Swagger.Api
             if (request == null)
                 throw new ApiException(400, "Missing required parameter 'request' when calling BindersApi->BindersBinderCustomFields");
 
-            var localVarPath = "/api/binders/customfieldsbytype";
+            var localVarPath = "/api/Binders/customfieldsbytype";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1833,7 +1833,7 @@ namespace IO.Swagger.Api
             if (binderTypeId == null)
                 throw new ApiException(400, "Missing required parameter 'binderTypeId' when calling BindersApi->BindersDeleteBinderType");
 
-            var localVarPath = "/api/binders/type/{binderTypeId}";
+            var localVarPath = "/api/Binders/type/{binderTypeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1908,7 +1908,7 @@ namespace IO.Swagger.Api
             if (binderTypeId == null)
                 throw new ApiException(400, "Missing required parameter 'binderTypeId' when calling BindersApi->BindersDeleteBinderType");
 
-            var localVarPath = "/api/binders/type/{binderTypeId}";
+            var localVarPath = "/api/Binders/type/{binderTypeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1981,7 +1981,7 @@ namespace IO.Swagger.Api
             if (binderId == null)
                 throw new ApiException(400, "Missing required parameter 'binderId' when calling BindersApi->BindersDeleteById");
 
-            var localVarPath = "/api/binders/{binderId}";
+            var localVarPath = "/api/Binders/{binderId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2056,7 +2056,7 @@ namespace IO.Swagger.Api
             if (binderId == null)
                 throw new ApiException(400, "Missing required parameter 'binderId' when calling BindersApi->BindersDeleteById");
 
-            var localVarPath = "/api/binders/{binderId}";
+            var localVarPath = "/api/Binders/{binderId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2130,7 +2130,7 @@ namespace IO.Swagger.Api
             if (comboFieldId == null)
                 throw new ApiException(400, "Missing required parameter 'comboFieldId' when calling BindersApi->BindersGetBinderComboValues");
 
-            var localVarPath = "/api/binders/combofieldvalues/{comboFieldId}";
+            var localVarPath = "/api/Binders/combofieldvalues/{comboFieldId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2210,7 +2210,7 @@ namespace IO.Swagger.Api
             if (comboFieldId == null)
                 throw new ApiException(400, "Missing required parameter 'comboFieldId' when calling BindersApi->BindersGetBinderComboValues");
 
-            var localVarPath = "/api/binders/combofieldvalues/{comboFieldId}";
+            var localVarPath = "/api/Binders/combofieldvalues/{comboFieldId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2288,7 +2288,7 @@ namespace IO.Swagger.Api
             if (binderType == null)
                 throw new ApiException(400, "Missing required parameter 'binderType' when calling BindersApi->BindersGetBinderCustomFields");
 
-            var localVarPath = "/api/binders/customfieldsbytype/{binderType}";
+            var localVarPath = "/api/Binders/customfieldsbytype/{binderType}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2368,7 +2368,7 @@ namespace IO.Swagger.Api
             if (binderType == null)
                 throw new ApiException(400, "Missing required parameter 'binderType' when calling BindersApi->BindersGetBinderCustomFields");
 
-            var localVarPath = "/api/binders/customfieldsbytype/{binderType}";
+            var localVarPath = "/api/Binders/customfieldsbytype/{binderType}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2446,7 +2446,7 @@ namespace IO.Swagger.Api
             if (binderId == null)
                 throw new ApiException(400, "Missing required parameter 'binderId' when calling BindersApi->BindersGetBinderPermission");
 
-            var localVarPath = "/api/binders/binderpermission/{binderId}";
+            var localVarPath = "/api/Binders/binderpermission/{binderId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2526,7 +2526,7 @@ namespace IO.Swagger.Api
             if (binderId == null)
                 throw new ApiException(400, "Missing required parameter 'binderId' when calling BindersApi->BindersGetBinderPermission");
 
-            var localVarPath = "/api/binders/binderpermission/{binderId}";
+            var localVarPath = "/api/Binders/binderpermission/{binderId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2599,7 +2599,7 @@ namespace IO.Swagger.Api
         public ApiResponse< List<BinderStateDto> > BindersGetBinderStateForVisualizationWithHttpInfo ()
         {
 
-            var localVarPath = "/api/binders/visualizationstates";
+            var localVarPath = "/api/Binders/visualizationstates";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2673,7 +2673,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<BinderStateDto>>> BindersGetBinderStateForVisualizationAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/binders/visualizationstates";
+            var localVarPath = "/api/Binders/visualizationstates";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2745,7 +2745,7 @@ namespace IO.Swagger.Api
         public ApiResponse< List<BinderStateDto> > BindersGetBinderStatesWithHttpInfo ()
         {
 
-            var localVarPath = "/api/binders/states";
+            var localVarPath = "/api/Binders/states";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2819,7 +2819,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<BinderStateDto>>> BindersGetBinderStatesAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/binders/states";
+            var localVarPath = "/api/Binders/states";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2896,7 +2896,7 @@ namespace IO.Swagger.Api
             if (binderTypeId == null)
                 throw new ApiException(400, "Missing required parameter 'binderTypeId' when calling BindersApi->BindersGetBinderTypeById");
 
-            var localVarPath = "/api/binders/type/{binderTypeId}";
+            var localVarPath = "/api/Binders/type/{binderTypeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2976,7 +2976,7 @@ namespace IO.Swagger.Api
             if (binderTypeId == null)
                 throw new ApiException(400, "Missing required parameter 'binderTypeId' when calling BindersApi->BindersGetBinderTypeById");
 
-            var localVarPath = "/api/binders/type/{binderTypeId}";
+            var localVarPath = "/api/Binders/type/{binderTypeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3054,7 +3054,7 @@ namespace IO.Swagger.Api
             if (binderTypeId == null)
                 throw new ApiException(400, "Missing required parameter 'binderTypeId' when calling BindersApi->BindersGetBinderTypePermission");
 
-            var localVarPath = "/api/binders/bindertypepermission/{binderTypeId}";
+            var localVarPath = "/api/Binders/bindertypepermission/{binderTypeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3134,7 +3134,7 @@ namespace IO.Swagger.Api
             if (binderTypeId == null)
                 throw new ApiException(400, "Missing required parameter 'binderTypeId' when calling BindersApi->BindersGetBinderTypePermission");
 
-            var localVarPath = "/api/binders/bindertypepermission/{binderTypeId}";
+            var localVarPath = "/api/Binders/bindertypepermission/{binderTypeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3212,7 +3212,7 @@ namespace IO.Swagger.Api
             if (binderType == null)
                 throw new ApiException(400, "Missing required parameter 'binderType' when calling BindersApi->BindersGetBindersFieldsByType");
 
-            var localVarPath = "/api/binders/binderfields/{binderType}";
+            var localVarPath = "/api/Binders/binderfields/{binderType}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3292,7 +3292,7 @@ namespace IO.Swagger.Api
             if (binderType == null)
                 throw new ApiException(400, "Missing required parameter 'binderType' when calling BindersApi->BindersGetBindersFieldsByType");
 
-            var localVarPath = "/api/binders/binderfields/{binderType}";
+            var localVarPath = "/api/Binders/binderfields/{binderType}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3370,7 +3370,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling BindersApi->BindersGetById");
 
-            var localVarPath = "/api/binders/{id}";
+            var localVarPath = "/api/Binders/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3450,7 +3450,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling BindersApi->BindersGetById");
 
-            var localVarPath = "/api/binders/{id}";
+            var localVarPath = "/api/Binders/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3528,7 +3528,7 @@ namespace IO.Swagger.Api
             if (ids == null)
                 throw new ApiException(400, "Missing required parameter 'ids' when calling BindersApi->BindersGetByIds");
 
-            var localVarPath = "/api/binders/getByIds";
+            var localVarPath = "/api/Binders/getByIds";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3620,7 +3620,7 @@ namespace IO.Swagger.Api
             if (ids == null)
                 throw new ApiException(400, "Missing required parameter 'ids' when calling BindersApi->BindersGetByIds");
 
-            var localVarPath = "/api/binders/getByIds";
+            var localVarPath = "/api/Binders/getByIds";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3710,7 +3710,7 @@ namespace IO.Swagger.Api
             if (numero == null)
                 throw new ApiException(400, "Missing required parameter 'numero' when calling BindersApi->BindersGetByNumero");
 
-            var localVarPath = "/api/binders/number/{numero}";
+            var localVarPath = "/api/Binders/number/{numero}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3790,7 +3790,7 @@ namespace IO.Swagger.Api
             if (numero == null)
                 throw new ApiException(400, "Missing required parameter 'numero' when calling BindersApi->BindersGetByNumero");
 
-            var localVarPath = "/api/binders/number/{numero}";
+            var localVarPath = "/api/Binders/number/{numero}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3873,7 +3873,7 @@ namespace IO.Swagger.Api
             if (state == null)
                 throw new ApiException(400, "Missing required parameter 'state' when calling BindersApi->BindersGetByTypeAndState");
 
-            var localVarPath = "/api/binders/{type}/{state}";
+            var localVarPath = "/api/Binders/{type}/{state}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3959,7 +3959,7 @@ namespace IO.Swagger.Api
             if (state == null)
                 throw new ApiException(400, "Missing required parameter 'state' when calling BindersApi->BindersGetByTypeAndState");
 
-            var localVarPath = "/api/binders/{type}/{state}";
+            var localVarPath = "/api/Binders/{type}/{state}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4033,7 +4033,7 @@ namespace IO.Swagger.Api
         public ApiResponse< List<BinderTypeDTO> > BindersGetTypesOfPraticheWithHttpInfo ()
         {
 
-            var localVarPath = "/api/binders/Type";
+            var localVarPath = "/api/Binders/Type";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4107,7 +4107,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<BinderTypeDTO>>> BindersGetTypesOfPraticheAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/binders/Type";
+            var localVarPath = "/api/Binders/Type";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4179,7 +4179,7 @@ namespace IO.Swagger.Api
         public ApiResponse< BinderUserDefaultTypeAndStateDto > BindersGetUserDefaultTypeAndStateSelectionWithHttpInfo ()
         {
 
-            var localVarPath = "/api/binders/defaulttypeandstate";
+            var localVarPath = "/api/Binders/defaulttypeandstate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4253,7 +4253,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<BinderUserDefaultTypeAndStateDto>> BindersGetUserDefaultTypeAndStateSelectionAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/binders/defaulttypeandstate";
+            var localVarPath = "/api/Binders/defaulttypeandstate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4327,7 +4327,7 @@ namespace IO.Swagger.Api
         public ApiResponse< BinderDTO > BindersInsertNewBinderWithHttpInfo (BinderDTO binder = null)
         {
 
-            var localVarPath = "/api/binders";
+            var localVarPath = "/api/Binders";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4411,7 +4411,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<BinderDTO>> BindersInsertNewBinderAsyncWithHttpInfo (BinderDTO binder = null)
         {
 
-            var localVarPath = "/api/binders";
+            var localVarPath = "/api/Binders";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4493,7 +4493,7 @@ namespace IO.Swagger.Api
         public ApiResponse< BinderTypeDTO > BindersInsertNewBinderTypeWithHttpInfo (BinderTypeDTO bindertype = null)
         {
 
-            var localVarPath = "/api/binders/type";
+            var localVarPath = "/api/Binders/type";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4577,7 +4577,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<BinderTypeDTO>> BindersInsertNewBinderTypeAsyncWithHttpInfo (BinderTypeDTO bindertype = null)
         {
 
-            var localVarPath = "/api/binders/type";
+            var localVarPath = "/api/Binders/type";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4661,7 +4661,7 @@ namespace IO.Swagger.Api
             if (profilesRemoveRequest == null)
                 throw new ApiException(400, "Missing required parameter 'profilesRemoveRequest' when calling BindersApi->BindersRemoveProfilesFromBinder");
 
-            var localVarPath = "/api/binders/removeprofiles";
+            var localVarPath = "/api/Binders/removeprofiles";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4748,7 +4748,7 @@ namespace IO.Swagger.Api
             if (profilesRemoveRequest == null)
                 throw new ApiException(400, "Missing required parameter 'profilesRemoveRequest' when calling BindersApi->BindersRemoveProfilesFromBinder");
 
-            var localVarPath = "/api/binders/removeprofiles";
+            var localVarPath = "/api/Binders/removeprofiles";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4838,7 +4838,7 @@ namespace IO.Swagger.Api
             if (binderId == null)
                 throw new ApiException(400, "Missing required parameter 'binderId' when calling BindersApi->BindersSetBinderPermission");
 
-            var localVarPath = "/api/binders/binderpermission/{binderId}";
+            var localVarPath = "/api/Binders/binderpermission/{binderId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4931,7 +4931,7 @@ namespace IO.Swagger.Api
             if (binderId == null)
                 throw new ApiException(400, "Missing required parameter 'binderId' when calling BindersApi->BindersSetBinderPermission");
 
-            var localVarPath = "/api/binders/binderpermission/{binderId}";
+            var localVarPath = "/api/Binders/binderpermission/{binderId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5022,7 +5022,7 @@ namespace IO.Swagger.Api
             if (binderTypeId == null)
                 throw new ApiException(400, "Missing required parameter 'binderTypeId' when calling BindersApi->BindersSetBinderTypePermission");
 
-            var localVarPath = "/api/binders/bindertypepermission/{binderTypeId}";
+            var localVarPath = "/api/Binders/bindertypepermission/{binderTypeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5115,7 +5115,7 @@ namespace IO.Swagger.Api
             if (binderTypeId == null)
                 throw new ApiException(400, "Missing required parameter 'binderTypeId' when calling BindersApi->BindersSetBinderTypePermission");
 
-            var localVarPath = "/api/binders/bindertypepermission/{binderTypeId}";
+            var localVarPath = "/api/Binders/bindertypepermission/{binderTypeId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5201,7 +5201,7 @@ namespace IO.Swagger.Api
             if (defaultoption == null)
                 throw new ApiException(400, "Missing required parameter 'defaultoption' when calling BindersApi->BindersSetUserDefaultTypeAndStateSelection");
 
-            var localVarPath = "/api/binders/defaulttypeandstate";
+            var localVarPath = "/api/Binders/defaulttypeandstate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5288,7 +5288,7 @@ namespace IO.Swagger.Api
             if (defaultoption == null)
                 throw new ApiException(400, "Missing required parameter 'defaultoption' when calling BindersApi->BindersSetUserDefaultTypeAndStateSelection");
 
-            var localVarPath = "/api/binders/defaulttypeandstate";
+            var localVarPath = "/api/Binders/defaulttypeandstate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5376,7 +5376,7 @@ namespace IO.Swagger.Api
             if (binderId == null)
                 throw new ApiException(400, "Missing required parameter 'binderId' when calling BindersApi->BindersUpdateBinderById");
 
-            var localVarPath = "/api/binders/{binderId}";
+            var localVarPath = "/api/Binders/{binderId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5466,7 +5466,7 @@ namespace IO.Swagger.Api
             if (binderId == null)
                 throw new ApiException(400, "Missing required parameter 'binderId' when calling BindersApi->BindersUpdateBinderById");
 
-            var localVarPath = "/api/binders/{binderId}";
+            var localVarPath = "/api/Binders/{binderId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5549,7 +5549,7 @@ namespace IO.Swagger.Api
         public ApiResponse< BinderTypeDTO > BindersUpdateBinderTypeByIdWithHttpInfo (BinderTypeDTO bindertype = null)
         {
 
-            var localVarPath = "/api/binders/type";
+            var localVarPath = "/api/Binders/type";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -5633,7 +5633,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<BinderTypeDTO>> BindersUpdateBinderTypeByIdAsyncWithHttpInfo (BinderTypeDTO bindertype = null)
         {
 
-            var localVarPath = "/api/binders/type";
+            var localVarPath = "/api/Binders/type";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

@@ -33,9 +33,72 @@ namespace IO.Swagger.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface ITaskworkApi : IApiAccessor
+    public interface ITaskWorkApi : IApiAccessor
     {
         #region Synchronous Operations
+        /// <summary>
+        /// This call returns if is possible to close task work list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskworkids">Ids of the task works</param>
+        /// <returns>List&lt;CloseEligibleResult&gt;</returns>
+        List<CloseEligibleResult> TaskWorkCanFinalizeTaskByIds (List<int?> taskworkids);
+
+        /// <summary>
+        /// This call returns if is possible to close task work list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskworkids">Ids of the task works</param>
+        /// <returns>ApiResponse of List&lt;CloseEligibleResult&gt;</returns>
+        ApiResponse<List<CloseEligibleResult>> TaskWorkCanFinalizeTaskByIdsWithHttpInfo (List<int?> taskworkids);
+        /// <summary>
+        /// This call returns if is possible to close task work list by exit code and password
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="closeRequest">Closing request dto</param>
+        /// <returns>List&lt;CloseEligibleResult&gt;</returns>
+        List<CloseEligibleResult> TaskWorkCanFinalizeTaskByIdsAndExitCodeAndPassword (TaskWorkCloseRequest closeRequest);
+
+        /// <summary>
+        /// This call returns if is possible to close task work list by exit code and password
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="closeRequest">Closing request dto</param>
+        /// <returns>ApiResponse of List&lt;CloseEligibleResult&gt;</returns>
+        ApiResponse<List<CloseEligibleResult>> TaskWorkCanFinalizeTaskByIdsAndExitCodeAndPasswordWithHttpInfo (TaskWorkCloseRequest closeRequest);
+        /// <summary>
+        /// This call close a task work list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="closeRequest">Closing request dto</param>
+        /// <returns></returns>
+        void TaskWorkFinalizeTaskByIdsAndExitCodeAndPassword (TaskWorkCloseRequest closeRequest);
+
+        /// <summary>
+        /// This call close a task work list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="closeRequest">Closing request dto</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> TaskWorkFinalizeTaskByIdsAndExitCodeAndPasswordWithHttpInfo (TaskWorkCloseRequest closeRequest);
         /// <summary>
         /// This call provide default select for tasklist search
         /// </summary>
@@ -44,7 +107,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>SelectDTO</returns>
-        SelectDTO TaskworkGetDefaultSelect ();
+        SelectDTO TaskWorkGetDefaultSelect ();
 
         /// <summary>
         /// This call provide default select for tasklist search
@@ -54,51 +117,120 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of SelectDTO</returns>
-        ApiResponse<SelectDTO> TaskworkGetDefaultSelectWithHttpInfo ();
+        ApiResponse<SelectDTO> TaskWorkGetDefaultSelectWithHttpInfo ();
         /// <summary>
-        /// This call execute a task search and return taskwork active for the user
+        /// This call get the task documents
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="select">The select object that defines column</param>
+        /// <param name="processId">Id of the process</param>
+        /// <param name="select"></param>
         /// <returns>List&lt;RowSearchResult&gt;</returns>
-        List<RowSearchResult> TaskworkGetTasks (SelectDTO select);
+        List<RowSearchResult> TaskWorkGetDocumentsByProcessId (int? processId, SelectDTO select);
 
         /// <summary>
-        /// This call execute a task search and return taskwork active for the user
+        /// This call get the task documents
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="select">The select object that defines column</param>
+        /// <param name="processId">Id of the process</param>
+        /// <param name="select"></param>
         /// <returns>ApiResponse of List&lt;RowSearchResult&gt;</returns>
-        ApiResponse<List<RowSearchResult>> TaskworkGetTasksWithHttpInfo (SelectDTO select);
+        ApiResponse<List<RowSearchResult>> TaskWorkGetDocumentsByProcessIdWithHttpInfo (int? processId, SelectDTO select);
         /// <summary>
-        /// This call set the task priority
+        /// This call returns all possible exit code for taskWorks list
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskIds"></param>
-        /// <param name="priority"></param>
-        /// <returns>int?</returns>
-        int? TaskworkSetTaskPriority (List<int?> taskIds, int? priority);
+        /// <param name="taskWorkIds">Ids of the task works</param>
+        /// <returns>List&lt;TaskExitCodeDTO&gt;</returns>
+        List<TaskExitCodeDTO> TaskWorkGetExitCodesByTaskWorkIds (List<int?> taskWorkIds);
 
         /// <summary>
-        /// This call set the task priority
+        /// This call returns all possible exit code for taskWorks list
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskIds"></param>
-        /// <param name="priority"></param>
-        /// <returns>ApiResponse of int?</returns>
-        ApiResponse<int?> TaskworkSetTaskPriorityWithHttpInfo (List<int?> taskIds, int? priority);
+        /// <param name="taskWorkIds">Ids of the task works</param>
+        /// <returns>ApiResponse of List&lt;TaskExitCodeDTO&gt;</returns>
+        ApiResponse<List<TaskExitCodeDTO>> TaskWorkGetExitCodesByTaskWorkIdsWithHttpInfo (List<int?> taskWorkIds);
+        /// <summary>
+        /// This call return a profile schema for a mask insert document taskWork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>MaskProfileSchemaDTO</returns>
+        MaskProfileSchemaDTO TaskWorkGetProfileSchemaForTaskWorkMaskDocumentOperation (int? taskWorkId, string taskWorkDocumentOperationId);
+
+        /// <summary>
+        /// This call return a profile schema for a mask insert document taskWork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>ApiResponse of MaskProfileSchemaDTO</returns>
+        ApiResponse<MaskProfileSchemaDTO> TaskWorkGetProfileSchemaForTaskWorkMaskDocumentOperationWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId);
+        /// <summary>
+        /// This call return a profile schema for a model insert document taskWork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>ModelProfileSchemaDTO</returns>
+        ModelProfileSchemaDTO TaskWorkGetProfileSchemaForTaskWorkModelDocumentOperation (int? taskWorkId, string taskWorkDocumentOperationId);
+
+        /// <summary>
+        /// This call return a profile schema for a model insert document taskWork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>ApiResponse of ModelProfileSchemaDTO</returns>
+        ApiResponse<ModelProfileSchemaDTO> TaskWorkGetProfileSchemaForTaskWorkModelDocumentOperationWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId);
+        /// <summary>
+        /// This call return a profile schema for a standard insert document taskWork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>MaskProfileSchemaDTO</returns>
+        MaskProfileSchemaDTO TaskWorkGetProfileSchemaForTaskWorkStandardDocumentOperation (int? taskWorkId, string taskWorkDocumentOperationId);
+
+        /// <summary>
+        /// This call return a profile schema for a standard insert document taskWork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>ApiResponse of MaskProfileSchemaDTO</returns>
+        ApiResponse<MaskProfileSchemaDTO> TaskWorkGetProfileSchemaForTaskWorkStandardDocumentOperationWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId);
         /// <summary>
         /// This call get the task
         /// </summary>
@@ -106,9 +238,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskWorkId"></param>
         /// <returns>TaskWorkDTO</returns>
-        TaskWorkDTO TaskworkSetTaskPriority_0 (int? taskId);
+        TaskWorkDTO TaskWorkGetTaskWorkById (int? taskWorkId);
 
         /// <summary>
         /// This call get the task
@@ -117,9 +249,153 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskWorkId"></param>
         /// <returns>ApiResponse of TaskWorkDTO</returns>
-        ApiResponse<TaskWorkDTO> TaskworkSetTaskPriority_0WithHttpInfo (int? taskId);
+        ApiResponse<TaskWorkDTO> TaskWorkGetTaskWorkByIdWithHttpInfo (int? taskWorkId);
+        /// <summary>
+        /// This call execute a task search and return taskwork active for the user and the given workflows ids (with all revisions)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">The request object that defines select parte and workflows ids, if workflows ids is null or empty returns all taskWork for the user</param>
+        /// <returns>List&lt;RowSearchResult&gt;</returns>
+        List<RowSearchResult> TaskWorkGetTasks (TaskWorkRequestDTO request);
+
+        /// <summary>
+        /// This call execute a task search and return taskwork active for the user and the given workflows ids (with all revisions)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">The request object that defines select parte and workflows ids, if workflows ids is null or empty returns all taskWork for the user</param>
+        /// <returns>ApiResponse of List&lt;RowSearchResult&gt;</returns>
+        ApiResponse<List<RowSearchResult>> TaskWorkGetTasksWithHttpInfo (TaskWorkRequestDTO request);
+        /// <summary>
+        /// This call add a profile to process for a selection document taskwork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="docnumber">Docnumber of the profile to add</param>
+        /// <returns></returns>
+        void TaskWorkSetProfileForTaskWorkBySelectionDocumentOperation (int? taskWorkId, string taskWorkDocumentOperationId, int? docnumber);
+
+        /// <summary>
+        /// This call add a profile to process for a selection document taskwork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="docnumber">Docnumber of the profile to add</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> TaskWorkSetProfileForTaskWorkBySelectionDocumentOperationWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId, int? docnumber);
+        /// <summary>
+        /// This call profiles a new document for a mask insert document taskwork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>ProfileResultDTO</returns>
+        ProfileResultDTO TaskWorkSetProfileForTaskWorkMaskDocumentOperation (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null);
+
+        /// <summary>
+        /// This call profiles a new document for a mask insert document taskwork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>ApiResponse of ProfileResultDTO</returns>
+        ApiResponse<ProfileResultDTO> TaskWorkSetProfileForTaskWorkMaskDocumentOperationWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null);
+        /// <summary>
+        /// This call profiles a new document for a model insert document taskwork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>ProfileResultDTO</returns>
+        ProfileResultDTO TaskWorkSetProfileForTaskWorkModelDocumentOperation (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null);
+
+        /// <summary>
+        /// This call profiles a new document for a model insert document taskwork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>ApiResponse of ProfileResultDTO</returns>
+        ApiResponse<ProfileResultDTO> TaskWorkSetProfileForTaskWorkModelDocumentOperationWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null);
+        /// <summary>
+        /// This call profiles a new document for a standard insert document taskwork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>ProfileResultDTO</returns>
+        ProfileResultDTO TaskWorkSetProfileForTaskWorkStandardDocumentOperation (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null);
+
+        /// <summary>
+        /// This call profiles a new document for a standard insert document taskwork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>ApiResponse of ProfileResultDTO</returns>
+        ApiResponse<ProfileResultDTO> TaskWorkSetProfileForTaskWorkStandardDocumentOperationWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null);
+        /// <summary>
+        /// This call set the task priority
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskIds"></param>
+        /// <param name="priority"></param>
+        /// <returns>int?</returns>
+        int? TaskWorkSetTaskPriority (List<int?> taskIds, int? priority);
+
+        /// <summary>
+        /// This call set the task priority
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskIds"></param>
+        /// <param name="priority"></param>
+        /// <returns>ApiResponse of int?</returns>
+        ApiResponse<int?> TaskWorkSetTaskPriorityWithHttpInfo (List<int?> taskIds, int? priority);
         /// <summary>
         /// This call set the task as read
         /// </summary>
@@ -129,7 +405,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskid"></param>
         /// <returns>int?</returns>
-        int? TaskworkSetTaskRead (List<int?> taskid);
+        int? TaskWorkSetTaskRead (List<int?> taskid);
 
         /// <summary>
         /// This call set the task as read
@@ -140,7 +416,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskid"></param>
         /// <returns>ApiResponse of int?</returns>
-        ApiResponse<int?> TaskworkSetTaskReadWithHttpInfo (List<int?> taskid);
+        ApiResponse<int?> TaskWorkSetTaskReadWithHttpInfo (List<int?> taskid);
         /// <summary>
         /// This call set the task as unread
         /// </summary>
@@ -150,7 +426,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskIds"></param>
         /// <returns>int?</returns>
-        int? TaskworkSetTaskUnRead (List<int?> taskIds);
+        int? TaskWorkSetTaskUnRead (List<int?> taskIds);
 
         /// <summary>
         /// This call set the task as unread
@@ -161,9 +437,93 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskIds"></param>
         /// <returns>ApiResponse of int?</returns>
-        ApiResponse<int?> TaskworkSetTaskUnReadWithHttpInfo (List<int?> taskIds);
+        ApiResponse<int?> TaskWorkSetTaskUnReadWithHttpInfo (List<int?> taskIds);
+        /// <summary>
+        /// This call take charge of a TaskWork
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <returns></returns>
+        void TaskWorkTaskWorkTakeCharge (int? taskWorkId);
+
+        /// <summary>
+        /// This call take charge of a TaskWork
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> TaskWorkTaskWorkTakeChargeWithHttpInfo (int? taskWorkId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// This call returns if is possible to close task work list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskworkids">Ids of the task works</param>
+        /// <returns>Task of List&lt;CloseEligibleResult&gt;</returns>
+        System.Threading.Tasks.Task<List<CloseEligibleResult>> TaskWorkCanFinalizeTaskByIdsAsync (List<int?> taskworkids);
+
+        /// <summary>
+        /// This call returns if is possible to close task work list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskworkids">Ids of the task works</param>
+        /// <returns>Task of ApiResponse (List&lt;CloseEligibleResult&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CloseEligibleResult>>> TaskWorkCanFinalizeTaskByIdsAsyncWithHttpInfo (List<int?> taskworkids);
+        /// <summary>
+        /// This call returns if is possible to close task work list by exit code and password
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="closeRequest">Closing request dto</param>
+        /// <returns>Task of List&lt;CloseEligibleResult&gt;</returns>
+        System.Threading.Tasks.Task<List<CloseEligibleResult>> TaskWorkCanFinalizeTaskByIdsAndExitCodeAndPasswordAsync (TaskWorkCloseRequest closeRequest);
+
+        /// <summary>
+        /// This call returns if is possible to close task work list by exit code and password
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="closeRequest">Closing request dto</param>
+        /// <returns>Task of ApiResponse (List&lt;CloseEligibleResult&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CloseEligibleResult>>> TaskWorkCanFinalizeTaskByIdsAndExitCodeAndPasswordAsyncWithHttpInfo (TaskWorkCloseRequest closeRequest);
+        /// <summary>
+        /// This call close a task work list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="closeRequest">Closing request dto</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task TaskWorkFinalizeTaskByIdsAndExitCodeAndPasswordAsync (TaskWorkCloseRequest closeRequest);
+
+        /// <summary>
+        /// This call close a task work list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="closeRequest">Closing request dto</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> TaskWorkFinalizeTaskByIdsAndExitCodeAndPasswordAsyncWithHttpInfo (TaskWorkCloseRequest closeRequest);
         /// <summary>
         /// This call provide default select for tasklist search
         /// </summary>
@@ -172,7 +532,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of SelectDTO</returns>
-        System.Threading.Tasks.Task<SelectDTO> TaskworkGetDefaultSelectAsync ();
+        System.Threading.Tasks.Task<SelectDTO> TaskWorkGetDefaultSelectAsync ();
 
         /// <summary>
         /// This call provide default select for tasklist search
@@ -182,51 +542,120 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (SelectDTO)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SelectDTO>> TaskworkGetDefaultSelectAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<SelectDTO>> TaskWorkGetDefaultSelectAsyncWithHttpInfo ();
         /// <summary>
-        /// This call execute a task search and return taskwork active for the user
+        /// This call get the task documents
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="select">The select object that defines column</param>
+        /// <param name="processId">Id of the process</param>
+        /// <param name="select"></param>
         /// <returns>Task of List&lt;RowSearchResult&gt;</returns>
-        System.Threading.Tasks.Task<List<RowSearchResult>> TaskworkGetTasksAsync (SelectDTO select);
+        System.Threading.Tasks.Task<List<RowSearchResult>> TaskWorkGetDocumentsByProcessIdAsync (int? processId, SelectDTO select);
 
         /// <summary>
-        /// This call execute a task search and return taskwork active for the user
+        /// This call get the task documents
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="select">The select object that defines column</param>
+        /// <param name="processId">Id of the process</param>
+        /// <param name="select"></param>
         /// <returns>Task of ApiResponse (List&lt;RowSearchResult&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<RowSearchResult>>> TaskworkGetTasksAsyncWithHttpInfo (SelectDTO select);
+        System.Threading.Tasks.Task<ApiResponse<List<RowSearchResult>>> TaskWorkGetDocumentsByProcessIdAsyncWithHttpInfo (int? processId, SelectDTO select);
         /// <summary>
-        /// This call set the task priority
+        /// This call returns all possible exit code for taskWorks list
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskIds"></param>
-        /// <param name="priority"></param>
-        /// <returns>Task of int?</returns>
-        System.Threading.Tasks.Task<int?> TaskworkSetTaskPriorityAsync (List<int?> taskIds, int? priority);
+        /// <param name="taskWorkIds">Ids of the task works</param>
+        /// <returns>Task of List&lt;TaskExitCodeDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<TaskExitCodeDTO>> TaskWorkGetExitCodesByTaskWorkIdsAsync (List<int?> taskWorkIds);
 
         /// <summary>
-        /// This call set the task priority
+        /// This call returns all possible exit code for taskWorks list
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskIds"></param>
-        /// <param name="priority"></param>
-        /// <returns>Task of ApiResponse (int?)</returns>
-        System.Threading.Tasks.Task<ApiResponse<int?>> TaskworkSetTaskPriorityAsyncWithHttpInfo (List<int?> taskIds, int? priority);
+        /// <param name="taskWorkIds">Ids of the task works</param>
+        /// <returns>Task of ApiResponse (List&lt;TaskExitCodeDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<TaskExitCodeDTO>>> TaskWorkGetExitCodesByTaskWorkIdsAsyncWithHttpInfo (List<int?> taskWorkIds);
+        /// <summary>
+        /// This call return a profile schema for a mask insert document taskWork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>Task of MaskProfileSchemaDTO</returns>
+        System.Threading.Tasks.Task<MaskProfileSchemaDTO> TaskWorkGetProfileSchemaForTaskWorkMaskDocumentOperationAsync (int? taskWorkId, string taskWorkDocumentOperationId);
+
+        /// <summary>
+        /// This call return a profile schema for a mask insert document taskWork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>Task of ApiResponse (MaskProfileSchemaDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MaskProfileSchemaDTO>> TaskWorkGetProfileSchemaForTaskWorkMaskDocumentOperationAsyncWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId);
+        /// <summary>
+        /// This call return a profile schema for a model insert document taskWork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>Task of ModelProfileSchemaDTO</returns>
+        System.Threading.Tasks.Task<ModelProfileSchemaDTO> TaskWorkGetProfileSchemaForTaskWorkModelDocumentOperationAsync (int? taskWorkId, string taskWorkDocumentOperationId);
+
+        /// <summary>
+        /// This call return a profile schema for a model insert document taskWork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>Task of ApiResponse (ModelProfileSchemaDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ModelProfileSchemaDTO>> TaskWorkGetProfileSchemaForTaskWorkModelDocumentOperationAsyncWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId);
+        /// <summary>
+        /// This call return a profile schema for a standard insert document taskWork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>Task of MaskProfileSchemaDTO</returns>
+        System.Threading.Tasks.Task<MaskProfileSchemaDTO> TaskWorkGetProfileSchemaForTaskWorkStandardDocumentOperationAsync (int? taskWorkId, string taskWorkDocumentOperationId);
+
+        /// <summary>
+        /// This call return a profile schema for a standard insert document taskWork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>Task of ApiResponse (MaskProfileSchemaDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MaskProfileSchemaDTO>> TaskWorkGetProfileSchemaForTaskWorkStandardDocumentOperationAsyncWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId);
         /// <summary>
         /// This call get the task
         /// </summary>
@@ -234,9 +663,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskWorkId"></param>
         /// <returns>Task of TaskWorkDTO</returns>
-        System.Threading.Tasks.Task<TaskWorkDTO> TaskworkSetTaskPriority_0Async (int? taskId);
+        System.Threading.Tasks.Task<TaskWorkDTO> TaskWorkGetTaskWorkByIdAsync (int? taskWorkId);
 
         /// <summary>
         /// This call get the task
@@ -245,9 +674,153 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskWorkId"></param>
         /// <returns>Task of ApiResponse (TaskWorkDTO)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TaskWorkDTO>> TaskworkSetTaskPriority_0AsyncWithHttpInfo (int? taskId);
+        System.Threading.Tasks.Task<ApiResponse<TaskWorkDTO>> TaskWorkGetTaskWorkByIdAsyncWithHttpInfo (int? taskWorkId);
+        /// <summary>
+        /// This call execute a task search and return taskwork active for the user and the given workflows ids (with all revisions)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">The request object that defines select parte and workflows ids, if workflows ids is null or empty returns all taskWork for the user</param>
+        /// <returns>Task of List&lt;RowSearchResult&gt;</returns>
+        System.Threading.Tasks.Task<List<RowSearchResult>> TaskWorkGetTasksAsync (TaskWorkRequestDTO request);
+
+        /// <summary>
+        /// This call execute a task search and return taskwork active for the user and the given workflows ids (with all revisions)
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">The request object that defines select parte and workflows ids, if workflows ids is null or empty returns all taskWork for the user</param>
+        /// <returns>Task of ApiResponse (List&lt;RowSearchResult&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<RowSearchResult>>> TaskWorkGetTasksAsyncWithHttpInfo (TaskWorkRequestDTO request);
+        /// <summary>
+        /// This call add a profile to process for a selection document taskwork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="docnumber">Docnumber of the profile to add</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task TaskWorkSetProfileForTaskWorkBySelectionDocumentOperationAsync (int? taskWorkId, string taskWorkDocumentOperationId, int? docnumber);
+
+        /// <summary>
+        /// This call add a profile to process for a selection document taskwork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="docnumber">Docnumber of the profile to add</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> TaskWorkSetProfileForTaskWorkBySelectionDocumentOperationAsyncWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId, int? docnumber);
+        /// <summary>
+        /// This call profiles a new document for a mask insert document taskwork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>Task of ProfileResultDTO</returns>
+        System.Threading.Tasks.Task<ProfileResultDTO> TaskWorkSetProfileForTaskWorkMaskDocumentOperationAsync (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null);
+
+        /// <summary>
+        /// This call profiles a new document for a mask insert document taskwork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>Task of ApiResponse (ProfileResultDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ProfileResultDTO>> TaskWorkSetProfileForTaskWorkMaskDocumentOperationAsyncWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null);
+        /// <summary>
+        /// This call profiles a new document for a model insert document taskwork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>Task of ProfileResultDTO</returns>
+        System.Threading.Tasks.Task<ProfileResultDTO> TaskWorkSetProfileForTaskWorkModelDocumentOperationAsync (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null);
+
+        /// <summary>
+        /// This call profiles a new document for a model insert document taskwork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>Task of ApiResponse (ProfileResultDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ProfileResultDTO>> TaskWorkSetProfileForTaskWorkModelDocumentOperationAsyncWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null);
+        /// <summary>
+        /// This call profiles a new document for a standard insert document taskwork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>Task of ProfileResultDTO</returns>
+        System.Threading.Tasks.Task<ProfileResultDTO> TaskWorkSetProfileForTaskWorkStandardDocumentOperationAsync (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null);
+
+        /// <summary>
+        /// This call profiles a new document for a standard insert document taskwork operation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>Task of ApiResponse (ProfileResultDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ProfileResultDTO>> TaskWorkSetProfileForTaskWorkStandardDocumentOperationAsyncWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null);
+        /// <summary>
+        /// This call set the task priority
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskIds"></param>
+        /// <param name="priority"></param>
+        /// <returns>Task of int?</returns>
+        System.Threading.Tasks.Task<int?> TaskWorkSetTaskPriorityAsync (List<int?> taskIds, int? priority);
+
+        /// <summary>
+        /// This call set the task priority
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskIds"></param>
+        /// <param name="priority"></param>
+        /// <returns>Task of ApiResponse (int?)</returns>
+        System.Threading.Tasks.Task<ApiResponse<int?>> TaskWorkSetTaskPriorityAsyncWithHttpInfo (List<int?> taskIds, int? priority);
         /// <summary>
         /// This call set the task as read
         /// </summary>
@@ -257,7 +830,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskid"></param>
         /// <returns>Task of int?</returns>
-        System.Threading.Tasks.Task<int?> TaskworkSetTaskReadAsync (List<int?> taskid);
+        System.Threading.Tasks.Task<int?> TaskWorkSetTaskReadAsync (List<int?> taskid);
 
         /// <summary>
         /// This call set the task as read
@@ -268,7 +841,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskid"></param>
         /// <returns>Task of ApiResponse (int?)</returns>
-        System.Threading.Tasks.Task<ApiResponse<int?>> TaskworkSetTaskReadAsyncWithHttpInfo (List<int?> taskid);
+        System.Threading.Tasks.Task<ApiResponse<int?>> TaskWorkSetTaskReadAsyncWithHttpInfo (List<int?> taskid);
         /// <summary>
         /// This call set the task as unread
         /// </summary>
@@ -278,7 +851,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskIds"></param>
         /// <returns>Task of int?</returns>
-        System.Threading.Tasks.Task<int?> TaskworkSetTaskUnReadAsync (List<int?> taskIds);
+        System.Threading.Tasks.Task<int?> TaskWorkSetTaskUnReadAsync (List<int?> taskIds);
 
         /// <summary>
         /// This call set the task as unread
@@ -289,22 +862,43 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskIds"></param>
         /// <returns>Task of ApiResponse (int?)</returns>
-        System.Threading.Tasks.Task<ApiResponse<int?>> TaskworkSetTaskUnReadAsyncWithHttpInfo (List<int?> taskIds);
+        System.Threading.Tasks.Task<ApiResponse<int?>> TaskWorkSetTaskUnReadAsyncWithHttpInfo (List<int?> taskIds);
+        /// <summary>
+        /// This call take charge of a TaskWork
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task TaskWorkTaskWorkTakeChargeAsync (int? taskWorkId);
+
+        /// <summary>
+        /// This call take charge of a TaskWork
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> TaskWorkTaskWorkTakeChargeAsyncWithHttpInfo (int? taskWorkId);
         #endregion Asynchronous Operations
     }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class TaskworkApi : ITaskworkApi
+    public partial class TaskWorkApi : ITaskWorkApi
     {
         private IO.Swagger.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TaskworkApi"/> class.
+        /// Initializes a new instance of the <see cref="TaskWorkApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public TaskworkApi(String basePath)
+        public TaskWorkApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
 
@@ -318,12 +912,12 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TaskworkApi"/> class
+        /// Initializes a new instance of the <see cref="TaskWorkApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public TaskworkApi(Configuration configuration = null)
+        public TaskWorkApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Configuration.Default;
@@ -403,13 +997,549 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
+        /// This call returns if is possible to close task work list 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskworkids">Ids of the task works</param>
+        /// <returns>List&lt;CloseEligibleResult&gt;</returns>
+        public List<CloseEligibleResult> TaskWorkCanFinalizeTaskByIds (List<int?> taskworkids)
+        {
+             ApiResponse<List<CloseEligibleResult>> localVarResponse = TaskWorkCanFinalizeTaskByIdsWithHttpInfo(taskworkids);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns if is possible to close task work list 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskworkids">Ids of the task works</param>
+        /// <returns>ApiResponse of List&lt;CloseEligibleResult&gt;</returns>
+        public ApiResponse< List<CloseEligibleResult> > TaskWorkCanFinalizeTaskByIdsWithHttpInfo (List<int?> taskworkids)
+        {
+            // verify the required parameter 'taskworkids' is set
+            if (taskworkids == null)
+                throw new ApiException(400, "Missing required parameter 'taskworkids' when calling TaskWorkApi->TaskWorkCanFinalizeTaskByIds");
+
+            var localVarPath = "/api/TaskWork/canfinalize";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (taskworkids != null && taskworkids.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(taskworkids); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = taskworkids; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkCanFinalizeTaskByIds", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CloseEligibleResult>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<CloseEligibleResult>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CloseEligibleResult>)));
+            
+        }
+
+        /// <summary>
+        /// This call returns if is possible to close task work list 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskworkids">Ids of the task works</param>
+        /// <returns>Task of List&lt;CloseEligibleResult&gt;</returns>
+        public async System.Threading.Tasks.Task<List<CloseEligibleResult>> TaskWorkCanFinalizeTaskByIdsAsync (List<int?> taskworkids)
+        {
+             ApiResponse<List<CloseEligibleResult>> localVarResponse = await TaskWorkCanFinalizeTaskByIdsAsyncWithHttpInfo(taskworkids);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns if is possible to close task work list 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskworkids">Ids of the task works</param>
+        /// <returns>Task of ApiResponse (List&lt;CloseEligibleResult&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CloseEligibleResult>>> TaskWorkCanFinalizeTaskByIdsAsyncWithHttpInfo (List<int?> taskworkids)
+        {
+            // verify the required parameter 'taskworkids' is set
+            if (taskworkids == null)
+                throw new ApiException(400, "Missing required parameter 'taskworkids' when calling TaskWorkApi->TaskWorkCanFinalizeTaskByIds");
+
+            var localVarPath = "/api/TaskWork/canfinalize";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (taskworkids != null && taskworkids.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(taskworkids); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = taskworkids; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkCanFinalizeTaskByIds", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CloseEligibleResult>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<CloseEligibleResult>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CloseEligibleResult>)));
+            
+        }
+
+        /// <summary>
+        /// This call returns if is possible to close task work list by exit code and password 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="closeRequest">Closing request dto</param>
+        /// <returns>List&lt;CloseEligibleResult&gt;</returns>
+        public List<CloseEligibleResult> TaskWorkCanFinalizeTaskByIdsAndExitCodeAndPassword (TaskWorkCloseRequest closeRequest)
+        {
+             ApiResponse<List<CloseEligibleResult>> localVarResponse = TaskWorkCanFinalizeTaskByIdsAndExitCodeAndPasswordWithHttpInfo(closeRequest);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns if is possible to close task work list by exit code and password 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="closeRequest">Closing request dto</param>
+        /// <returns>ApiResponse of List&lt;CloseEligibleResult&gt;</returns>
+        public ApiResponse< List<CloseEligibleResult> > TaskWorkCanFinalizeTaskByIdsAndExitCodeAndPasswordWithHttpInfo (TaskWorkCloseRequest closeRequest)
+        {
+            // verify the required parameter 'closeRequest' is set
+            if (closeRequest == null)
+                throw new ApiException(400, "Missing required parameter 'closeRequest' when calling TaskWorkApi->TaskWorkCanFinalizeTaskByIdsAndExitCodeAndPassword");
+
+            var localVarPath = "/api/TaskWork/canfinalizebyexitcodeandpassword";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (closeRequest != null && closeRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(closeRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = closeRequest; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkCanFinalizeTaskByIdsAndExitCodeAndPassword", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CloseEligibleResult>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<CloseEligibleResult>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CloseEligibleResult>)));
+            
+        }
+
+        /// <summary>
+        /// This call returns if is possible to close task work list by exit code and password 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="closeRequest">Closing request dto</param>
+        /// <returns>Task of List&lt;CloseEligibleResult&gt;</returns>
+        public async System.Threading.Tasks.Task<List<CloseEligibleResult>> TaskWorkCanFinalizeTaskByIdsAndExitCodeAndPasswordAsync (TaskWorkCloseRequest closeRequest)
+        {
+             ApiResponse<List<CloseEligibleResult>> localVarResponse = await TaskWorkCanFinalizeTaskByIdsAndExitCodeAndPasswordAsyncWithHttpInfo(closeRequest);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns if is possible to close task work list by exit code and password 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="closeRequest">Closing request dto</param>
+        /// <returns>Task of ApiResponse (List&lt;CloseEligibleResult&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CloseEligibleResult>>> TaskWorkCanFinalizeTaskByIdsAndExitCodeAndPasswordAsyncWithHttpInfo (TaskWorkCloseRequest closeRequest)
+        {
+            // verify the required parameter 'closeRequest' is set
+            if (closeRequest == null)
+                throw new ApiException(400, "Missing required parameter 'closeRequest' when calling TaskWorkApi->TaskWorkCanFinalizeTaskByIdsAndExitCodeAndPassword");
+
+            var localVarPath = "/api/TaskWork/canfinalizebyexitcodeandpassword";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (closeRequest != null && closeRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(closeRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = closeRequest; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkCanFinalizeTaskByIdsAndExitCodeAndPassword", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<CloseEligibleResult>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<CloseEligibleResult>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CloseEligibleResult>)));
+            
+        }
+
+        /// <summary>
+        /// This call close a task work list 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="closeRequest">Closing request dto</param>
+        /// <returns></returns>
+        public void TaskWorkFinalizeTaskByIdsAndExitCodeAndPassword (TaskWorkCloseRequest closeRequest)
+        {
+             TaskWorkFinalizeTaskByIdsAndExitCodeAndPasswordWithHttpInfo(closeRequest);
+        }
+
+        /// <summary>
+        /// This call close a task work list 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="closeRequest">Closing request dto</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> TaskWorkFinalizeTaskByIdsAndExitCodeAndPasswordWithHttpInfo (TaskWorkCloseRequest closeRequest)
+        {
+            // verify the required parameter 'closeRequest' is set
+            if (closeRequest == null)
+                throw new ApiException(400, "Missing required parameter 'closeRequest' when calling TaskWorkApi->TaskWorkFinalizeTaskByIdsAndExitCodeAndPassword");
+
+            var localVarPath = "/api/TaskWork/finalize";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (closeRequest != null && closeRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(closeRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = closeRequest; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkFinalizeTaskByIdsAndExitCodeAndPassword", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// This call close a task work list 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="closeRequest">Closing request dto</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task TaskWorkFinalizeTaskByIdsAndExitCodeAndPasswordAsync (TaskWorkCloseRequest closeRequest)
+        {
+             await TaskWorkFinalizeTaskByIdsAndExitCodeAndPasswordAsyncWithHttpInfo(closeRequest);
+
+        }
+
+        /// <summary>
+        /// This call close a task work list 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="closeRequest">Closing request dto</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> TaskWorkFinalizeTaskByIdsAndExitCodeAndPasswordAsyncWithHttpInfo (TaskWorkCloseRequest closeRequest)
+        {
+            // verify the required parameter 'closeRequest' is set
+            if (closeRequest == null)
+                throw new ApiException(400, "Missing required parameter 'closeRequest' when calling TaskWorkApi->TaskWorkFinalizeTaskByIdsAndExitCodeAndPassword");
+
+            var localVarPath = "/api/TaskWork/finalize";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (closeRequest != null && closeRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(closeRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = closeRequest; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkFinalizeTaskByIdsAndExitCodeAndPassword", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
         /// This call provide default select for tasklist search 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>SelectDTO</returns>
-        public SelectDTO TaskworkGetDefaultSelect ()
+        public SelectDTO TaskWorkGetDefaultSelect ()
         {
-             ApiResponse<SelectDTO> localVarResponse = TaskworkGetDefaultSelectWithHttpInfo();
+             ApiResponse<SelectDTO> localVarResponse = TaskWorkGetDefaultSelectWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -418,10 +1548,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of SelectDTO</returns>
-        public ApiResponse< SelectDTO > TaskworkGetDefaultSelectWithHttpInfo ()
+        public ApiResponse< SelectDTO > TaskWorkGetDefaultSelectWithHttpInfo ()
         {
 
-            var localVarPath = "/api/taskwork/defaultselect";
+            var localVarPath = "/api/TaskWork/defaultselect";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -465,7 +1595,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TaskworkGetDefaultSelect", localVarResponse);
+                Exception exception = ExceptionFactory("TaskWorkGetDefaultSelect", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -480,9 +1610,9 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of SelectDTO</returns>
-        public async System.Threading.Tasks.Task<SelectDTO> TaskworkGetDefaultSelectAsync ()
+        public async System.Threading.Tasks.Task<SelectDTO> TaskWorkGetDefaultSelectAsync ()
         {
-             ApiResponse<SelectDTO> localVarResponse = await TaskworkGetDefaultSelectAsyncWithHttpInfo();
+             ApiResponse<SelectDTO> localVarResponse = await TaskWorkGetDefaultSelectAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -492,10 +1622,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (SelectDTO)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SelectDTO>> TaskworkGetDefaultSelectAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<SelectDTO>> TaskWorkGetDefaultSelectAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/taskwork/defaultselect";
+            var localVarPath = "/api/TaskWork/defaultselect";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -538,7 +1668,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TaskworkGetDefaultSelect", localVarResponse);
+                Exception exception = ExceptionFactory("TaskWorkGetDefaultSelect", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -549,30 +1679,35 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call execute a task search and return taskwork active for the user 
+        /// This call get the task documents 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="select">The select object that defines column</param>
+        /// <param name="processId">Id of the process</param>
+        /// <param name="select"></param>
         /// <returns>List&lt;RowSearchResult&gt;</returns>
-        public List<RowSearchResult> TaskworkGetTasks (SelectDTO select)
+        public List<RowSearchResult> TaskWorkGetDocumentsByProcessId (int? processId, SelectDTO select)
         {
-             ApiResponse<List<RowSearchResult>> localVarResponse = TaskworkGetTasksWithHttpInfo(select);
+             ApiResponse<List<RowSearchResult>> localVarResponse = TaskWorkGetDocumentsByProcessIdWithHttpInfo(processId, select);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// This call execute a task search and return taskwork active for the user 
+        /// This call get the task documents 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="select">The select object that defines column</param>
+        /// <param name="processId">Id of the process</param>
+        /// <param name="select"></param>
         /// <returns>ApiResponse of List&lt;RowSearchResult&gt;</returns>
-        public ApiResponse< List<RowSearchResult> > TaskworkGetTasksWithHttpInfo (SelectDTO select)
+        public ApiResponse< List<RowSearchResult> > TaskWorkGetDocumentsByProcessIdWithHttpInfo (int? processId, SelectDTO select)
         {
+            // verify the required parameter 'processId' is set
+            if (processId == null)
+                throw new ApiException(400, "Missing required parameter 'processId' when calling TaskWorkApi->TaskWorkGetDocumentsByProcessId");
             // verify the required parameter 'select' is set
             if (select == null)
-                throw new ApiException(400, "Missing required parameter 'select' when calling TaskworkApi->TaskworkGetTasks");
+                throw new ApiException(400, "Missing required parameter 'select' when calling TaskWorkApi->TaskWorkGetDocumentsByProcessId");
 
-            var localVarPath = "/api/taskwork";
+            var localVarPath = "/api/TaskWork/documents/{processId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -604,6 +1739,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            if (processId != null) localVarPathParams.Add("processId", Configuration.ApiClient.ParameterToString(processId)); // path parameter
             if (select != null && select.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(select); // http body (model) parameter
@@ -629,7 +1765,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TaskworkGetTasks", localVarResponse);
+                Exception exception = ExceptionFactory("TaskWorkGetDocumentsByProcessId", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -640,31 +1776,36 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call execute a task search and return taskwork active for the user 
+        /// This call get the task documents 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="select">The select object that defines column</param>
+        /// <param name="processId">Id of the process</param>
+        /// <param name="select"></param>
         /// <returns>Task of List&lt;RowSearchResult&gt;</returns>
-        public async System.Threading.Tasks.Task<List<RowSearchResult>> TaskworkGetTasksAsync (SelectDTO select)
+        public async System.Threading.Tasks.Task<List<RowSearchResult>> TaskWorkGetDocumentsByProcessIdAsync (int? processId, SelectDTO select)
         {
-             ApiResponse<List<RowSearchResult>> localVarResponse = await TaskworkGetTasksAsyncWithHttpInfo(select);
+             ApiResponse<List<RowSearchResult>> localVarResponse = await TaskWorkGetDocumentsByProcessIdAsyncWithHttpInfo(processId, select);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// This call execute a task search and return taskwork active for the user 
+        /// This call get the task documents 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="select">The select object that defines column</param>
+        /// <param name="processId">Id of the process</param>
+        /// <param name="select"></param>
         /// <returns>Task of ApiResponse (List&lt;RowSearchResult&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<RowSearchResult>>> TaskworkGetTasksAsyncWithHttpInfo (SelectDTO select)
+        public async System.Threading.Tasks.Task<ApiResponse<List<RowSearchResult>>> TaskWorkGetDocumentsByProcessIdAsyncWithHttpInfo (int? processId, SelectDTO select)
         {
+            // verify the required parameter 'processId' is set
+            if (processId == null)
+                throw new ApiException(400, "Missing required parameter 'processId' when calling TaskWorkApi->TaskWorkGetDocumentsByProcessId");
             // verify the required parameter 'select' is set
             if (select == null)
-                throw new ApiException(400, "Missing required parameter 'select' when calling TaskworkApi->TaskworkGetTasks");
+                throw new ApiException(400, "Missing required parameter 'select' when calling TaskWorkApi->TaskWorkGetDocumentsByProcessId");
 
-            var localVarPath = "/api/taskwork";
+            var localVarPath = "/api/TaskWork/documents/{processId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -696,6 +1837,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            if (processId != null) localVarPathParams.Add("processId", Configuration.ApiClient.ParameterToString(processId)); // path parameter
             if (select != null && select.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(select); // http body (model) parameter
@@ -720,7 +1862,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TaskworkGetTasks", localVarResponse);
+                Exception exception = ExceptionFactory("TaskWorkGetDocumentsByProcessId", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -731,35 +1873,30 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call set the task priority 
+        /// This call returns all possible exit code for taskWorks list 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskIds"></param>
-        /// <param name="priority"></param>
-        /// <returns>int?</returns>
-        public int? TaskworkSetTaskPriority (List<int?> taskIds, int? priority)
+        /// <param name="taskWorkIds">Ids of the task works</param>
+        /// <returns>List&lt;TaskExitCodeDTO&gt;</returns>
+        public List<TaskExitCodeDTO> TaskWorkGetExitCodesByTaskWorkIds (List<int?> taskWorkIds)
         {
-             ApiResponse<int?> localVarResponse = TaskworkSetTaskPriorityWithHttpInfo(taskIds, priority);
+             ApiResponse<List<TaskExitCodeDTO>> localVarResponse = TaskWorkGetExitCodesByTaskWorkIdsWithHttpInfo(taskWorkIds);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// This call set the task priority 
+        /// This call returns all possible exit code for taskWorks list 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskIds"></param>
-        /// <param name="priority"></param>
-        /// <returns>ApiResponse of int?</returns>
-        public ApiResponse< int? > TaskworkSetTaskPriorityWithHttpInfo (List<int?> taskIds, int? priority)
+        /// <param name="taskWorkIds">Ids of the task works</param>
+        /// <returns>ApiResponse of List&lt;TaskExitCodeDTO&gt;</returns>
+        public ApiResponse< List<TaskExitCodeDTO> > TaskWorkGetExitCodesByTaskWorkIdsWithHttpInfo (List<int?> taskWorkIds)
         {
-            // verify the required parameter 'taskIds' is set
-            if (taskIds == null)
-                throw new ApiException(400, "Missing required parameter 'taskIds' when calling TaskworkApi->TaskworkSetTaskPriority");
-            // verify the required parameter 'priority' is set
-            if (priority == null)
-                throw new ApiException(400, "Missing required parameter 'priority' when calling TaskworkApi->TaskworkSetTaskPriority");
+            // verify the required parameter 'taskWorkIds' is set
+            if (taskWorkIds == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkIds' when calling TaskWorkApi->TaskWorkGetExitCodesByTaskWorkIds");
 
-            var localVarPath = "/api/taskwork/priority/{priority}";
+            var localVarPath = "/api/TaskWork/exitcodes";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -791,14 +1928,13 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (priority != null) localVarPathParams.Add("priority", Configuration.ApiClient.ParameterToString(priority)); // path parameter
-            if (taskIds != null && taskIds.GetType() != typeof(byte[]))
+            if (taskWorkIds != null && taskWorkIds.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(taskIds); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(taskWorkIds); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = taskIds; // byte array
+                localVarPostBody = taskWorkIds; // byte array
             }
 
             // authentication (Authorization) required
@@ -810,54 +1946,49 @@ namespace IO.Swagger.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TaskworkSetTaskPriority", localVarResponse);
+                Exception exception = ExceptionFactory("TaskWorkGetExitCodesByTaskWorkIds", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<int?>(localVarStatusCode,
+            return new ApiResponse<List<TaskExitCodeDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (int?) Configuration.ApiClient.Deserialize(localVarResponse, typeof(int?)));
+                (List<TaskExitCodeDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TaskExitCodeDTO>)));
             
         }
 
         /// <summary>
-        /// This call set the task priority 
+        /// This call returns all possible exit code for taskWorks list 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskIds"></param>
-        /// <param name="priority"></param>
-        /// <returns>Task of int?</returns>
-        public async System.Threading.Tasks.Task<int?> TaskworkSetTaskPriorityAsync (List<int?> taskIds, int? priority)
+        /// <param name="taskWorkIds">Ids of the task works</param>
+        /// <returns>Task of List&lt;TaskExitCodeDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<TaskExitCodeDTO>> TaskWorkGetExitCodesByTaskWorkIdsAsync (List<int?> taskWorkIds)
         {
-             ApiResponse<int?> localVarResponse = await TaskworkSetTaskPriorityAsyncWithHttpInfo(taskIds, priority);
+             ApiResponse<List<TaskExitCodeDTO>> localVarResponse = await TaskWorkGetExitCodesByTaskWorkIdsAsyncWithHttpInfo(taskWorkIds);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// This call set the task priority 
+        /// This call returns all possible exit code for taskWorks list 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskIds"></param>
-        /// <param name="priority"></param>
-        /// <returns>Task of ApiResponse (int?)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<int?>> TaskworkSetTaskPriorityAsyncWithHttpInfo (List<int?> taskIds, int? priority)
+        /// <param name="taskWorkIds">Ids of the task works</param>
+        /// <returns>Task of ApiResponse (List&lt;TaskExitCodeDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<TaskExitCodeDTO>>> TaskWorkGetExitCodesByTaskWorkIdsAsyncWithHttpInfo (List<int?> taskWorkIds)
         {
-            // verify the required parameter 'taskIds' is set
-            if (taskIds == null)
-                throw new ApiException(400, "Missing required parameter 'taskIds' when calling TaskworkApi->TaskworkSetTaskPriority");
-            // verify the required parameter 'priority' is set
-            if (priority == null)
-                throw new ApiException(400, "Missing required parameter 'priority' when calling TaskworkApi->TaskworkSetTaskPriority");
+            // verify the required parameter 'taskWorkIds' is set
+            if (taskWorkIds == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkIds' when calling TaskWorkApi->TaskWorkGetExitCodesByTaskWorkIds");
 
-            var localVarPath = "/api/taskwork/priority/{priority}";
+            var localVarPath = "/api/TaskWork/exitcodes";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -889,14 +2020,13 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (priority != null) localVarPathParams.Add("priority", Configuration.ApiClient.ParameterToString(priority)); // path parameter
-            if (taskIds != null && taskIds.GetType() != typeof(byte[]))
+            if (taskWorkIds != null && taskWorkIds.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(taskIds); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(taskWorkIds); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = taskIds; // byte array
+                localVarPostBody = taskWorkIds; // byte array
             }
 
             // authentication (Authorization) required
@@ -907,20 +2037,530 @@ namespace IO.Swagger.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TaskworkSetTaskPriority", localVarResponse);
+                Exception exception = ExceptionFactory("TaskWorkGetExitCodesByTaskWorkIds", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<int?>(localVarStatusCode,
+            return new ApiResponse<List<TaskExitCodeDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (int?) Configuration.ApiClient.Deserialize(localVarResponse, typeof(int?)));
+                (List<TaskExitCodeDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TaskExitCodeDTO>)));
+            
+        }
+
+        /// <summary>
+        /// This call return a profile schema for a mask insert document taskWork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>MaskProfileSchemaDTO</returns>
+        public MaskProfileSchemaDTO TaskWorkGetProfileSchemaForTaskWorkMaskDocumentOperation (int? taskWorkId, string taskWorkDocumentOperationId)
+        {
+             ApiResponse<MaskProfileSchemaDTO> localVarResponse = TaskWorkGetProfileSchemaForTaskWorkMaskDocumentOperationWithHttpInfo(taskWorkId, taskWorkDocumentOperationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call return a profile schema for a mask insert document taskWork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>ApiResponse of MaskProfileSchemaDTO</returns>
+        public ApiResponse< MaskProfileSchemaDTO > TaskWorkGetProfileSchemaForTaskWorkMaskDocumentOperationWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId)
+        {
+            // verify the required parameter 'taskWorkId' is set
+            if (taskWorkId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkId' when calling TaskWorkApi->TaskWorkGetProfileSchemaForTaskWorkMaskDocumentOperation");
+            // verify the required parameter 'taskWorkDocumentOperationId' is set
+            if (taskWorkDocumentOperationId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkDocumentOperationId' when calling TaskWorkApi->TaskWorkGetProfileSchemaForTaskWorkMaskDocumentOperation");
+
+            var localVarPath = "/api/TaskWork/{taskWorkId}/documentsoperations/{taskWorkDocumentOperationId}/maskprofileSchema";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (taskWorkId != null) localVarPathParams.Add("taskWorkId", Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
+            if (taskWorkDocumentOperationId != null) localVarPathParams.Add("taskWorkDocumentOperationId", Configuration.ApiClient.ParameterToString(taskWorkDocumentOperationId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkGetProfileSchemaForTaskWorkMaskDocumentOperation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MaskProfileSchemaDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MaskProfileSchemaDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MaskProfileSchemaDTO)));
+            
+        }
+
+        /// <summary>
+        /// This call return a profile schema for a mask insert document taskWork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>Task of MaskProfileSchemaDTO</returns>
+        public async System.Threading.Tasks.Task<MaskProfileSchemaDTO> TaskWorkGetProfileSchemaForTaskWorkMaskDocumentOperationAsync (int? taskWorkId, string taskWorkDocumentOperationId)
+        {
+             ApiResponse<MaskProfileSchemaDTO> localVarResponse = await TaskWorkGetProfileSchemaForTaskWorkMaskDocumentOperationAsyncWithHttpInfo(taskWorkId, taskWorkDocumentOperationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call return a profile schema for a mask insert document taskWork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>Task of ApiResponse (MaskProfileSchemaDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MaskProfileSchemaDTO>> TaskWorkGetProfileSchemaForTaskWorkMaskDocumentOperationAsyncWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId)
+        {
+            // verify the required parameter 'taskWorkId' is set
+            if (taskWorkId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkId' when calling TaskWorkApi->TaskWorkGetProfileSchemaForTaskWorkMaskDocumentOperation");
+            // verify the required parameter 'taskWorkDocumentOperationId' is set
+            if (taskWorkDocumentOperationId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkDocumentOperationId' when calling TaskWorkApi->TaskWorkGetProfileSchemaForTaskWorkMaskDocumentOperation");
+
+            var localVarPath = "/api/TaskWork/{taskWorkId}/documentsoperations/{taskWorkDocumentOperationId}/maskprofileSchema";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (taskWorkId != null) localVarPathParams.Add("taskWorkId", Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
+            if (taskWorkDocumentOperationId != null) localVarPathParams.Add("taskWorkDocumentOperationId", Configuration.ApiClient.ParameterToString(taskWorkDocumentOperationId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkGetProfileSchemaForTaskWorkMaskDocumentOperation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MaskProfileSchemaDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MaskProfileSchemaDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MaskProfileSchemaDTO)));
+            
+        }
+
+        /// <summary>
+        /// This call return a profile schema for a model insert document taskWork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>ModelProfileSchemaDTO</returns>
+        public ModelProfileSchemaDTO TaskWorkGetProfileSchemaForTaskWorkModelDocumentOperation (int? taskWorkId, string taskWorkDocumentOperationId)
+        {
+             ApiResponse<ModelProfileSchemaDTO> localVarResponse = TaskWorkGetProfileSchemaForTaskWorkModelDocumentOperationWithHttpInfo(taskWorkId, taskWorkDocumentOperationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call return a profile schema for a model insert document taskWork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>ApiResponse of ModelProfileSchemaDTO</returns>
+        public ApiResponse< ModelProfileSchemaDTO > TaskWorkGetProfileSchemaForTaskWorkModelDocumentOperationWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId)
+        {
+            // verify the required parameter 'taskWorkId' is set
+            if (taskWorkId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkId' when calling TaskWorkApi->TaskWorkGetProfileSchemaForTaskWorkModelDocumentOperation");
+            // verify the required parameter 'taskWorkDocumentOperationId' is set
+            if (taskWorkDocumentOperationId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkDocumentOperationId' when calling TaskWorkApi->TaskWorkGetProfileSchemaForTaskWorkModelDocumentOperation");
+
+            var localVarPath = "/api/TaskWork/{taskWorkId}/documentsoperations/{taskWorkDocumentOperationId}/modelprofileSchema";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (taskWorkId != null) localVarPathParams.Add("taskWorkId", Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
+            if (taskWorkDocumentOperationId != null) localVarPathParams.Add("taskWorkDocumentOperationId", Configuration.ApiClient.ParameterToString(taskWorkDocumentOperationId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkGetProfileSchemaForTaskWorkModelDocumentOperation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ModelProfileSchemaDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ModelProfileSchemaDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ModelProfileSchemaDTO)));
+            
+        }
+
+        /// <summary>
+        /// This call return a profile schema for a model insert document taskWork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>Task of ModelProfileSchemaDTO</returns>
+        public async System.Threading.Tasks.Task<ModelProfileSchemaDTO> TaskWorkGetProfileSchemaForTaskWorkModelDocumentOperationAsync (int? taskWorkId, string taskWorkDocumentOperationId)
+        {
+             ApiResponse<ModelProfileSchemaDTO> localVarResponse = await TaskWorkGetProfileSchemaForTaskWorkModelDocumentOperationAsyncWithHttpInfo(taskWorkId, taskWorkDocumentOperationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call return a profile schema for a model insert document taskWork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>Task of ApiResponse (ModelProfileSchemaDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ModelProfileSchemaDTO>> TaskWorkGetProfileSchemaForTaskWorkModelDocumentOperationAsyncWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId)
+        {
+            // verify the required parameter 'taskWorkId' is set
+            if (taskWorkId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkId' when calling TaskWorkApi->TaskWorkGetProfileSchemaForTaskWorkModelDocumentOperation");
+            // verify the required parameter 'taskWorkDocumentOperationId' is set
+            if (taskWorkDocumentOperationId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkDocumentOperationId' when calling TaskWorkApi->TaskWorkGetProfileSchemaForTaskWorkModelDocumentOperation");
+
+            var localVarPath = "/api/TaskWork/{taskWorkId}/documentsoperations/{taskWorkDocumentOperationId}/modelprofileSchema";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (taskWorkId != null) localVarPathParams.Add("taskWorkId", Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
+            if (taskWorkDocumentOperationId != null) localVarPathParams.Add("taskWorkDocumentOperationId", Configuration.ApiClient.ParameterToString(taskWorkDocumentOperationId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkGetProfileSchemaForTaskWorkModelDocumentOperation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ModelProfileSchemaDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ModelProfileSchemaDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ModelProfileSchemaDTO)));
+            
+        }
+
+        /// <summary>
+        /// This call return a profile schema for a standard insert document taskWork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>MaskProfileSchemaDTO</returns>
+        public MaskProfileSchemaDTO TaskWorkGetProfileSchemaForTaskWorkStandardDocumentOperation (int? taskWorkId, string taskWorkDocumentOperationId)
+        {
+             ApiResponse<MaskProfileSchemaDTO> localVarResponse = TaskWorkGetProfileSchemaForTaskWorkStandardDocumentOperationWithHttpInfo(taskWorkId, taskWorkDocumentOperationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call return a profile schema for a standard insert document taskWork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>ApiResponse of MaskProfileSchemaDTO</returns>
+        public ApiResponse< MaskProfileSchemaDTO > TaskWorkGetProfileSchemaForTaskWorkStandardDocumentOperationWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId)
+        {
+            // verify the required parameter 'taskWorkId' is set
+            if (taskWorkId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkId' when calling TaskWorkApi->TaskWorkGetProfileSchemaForTaskWorkStandardDocumentOperation");
+            // verify the required parameter 'taskWorkDocumentOperationId' is set
+            if (taskWorkDocumentOperationId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkDocumentOperationId' when calling TaskWorkApi->TaskWorkGetProfileSchemaForTaskWorkStandardDocumentOperation");
+
+            var localVarPath = "/api/TaskWork/{taskWorkId}/documentsoperations/{taskWorkDocumentOperationId}/standardprofileSchema";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (taskWorkId != null) localVarPathParams.Add("taskWorkId", Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
+            if (taskWorkDocumentOperationId != null) localVarPathParams.Add("taskWorkDocumentOperationId", Configuration.ApiClient.ParameterToString(taskWorkDocumentOperationId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkGetProfileSchemaForTaskWorkStandardDocumentOperation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MaskProfileSchemaDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MaskProfileSchemaDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MaskProfileSchemaDTO)));
+            
+        }
+
+        /// <summary>
+        /// This call return a profile schema for a standard insert document taskWork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>Task of MaskProfileSchemaDTO</returns>
+        public async System.Threading.Tasks.Task<MaskProfileSchemaDTO> TaskWorkGetProfileSchemaForTaskWorkStandardDocumentOperationAsync (int? taskWorkId, string taskWorkDocumentOperationId)
+        {
+             ApiResponse<MaskProfileSchemaDTO> localVarResponse = await TaskWorkGetProfileSchemaForTaskWorkStandardDocumentOperationAsyncWithHttpInfo(taskWorkId, taskWorkDocumentOperationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call return a profile schema for a standard insert document taskWork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <returns>Task of ApiResponse (MaskProfileSchemaDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MaskProfileSchemaDTO>> TaskWorkGetProfileSchemaForTaskWorkStandardDocumentOperationAsyncWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId)
+        {
+            // verify the required parameter 'taskWorkId' is set
+            if (taskWorkId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkId' when calling TaskWorkApi->TaskWorkGetProfileSchemaForTaskWorkStandardDocumentOperation");
+            // verify the required parameter 'taskWorkDocumentOperationId' is set
+            if (taskWorkDocumentOperationId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkDocumentOperationId' when calling TaskWorkApi->TaskWorkGetProfileSchemaForTaskWorkStandardDocumentOperation");
+
+            var localVarPath = "/api/TaskWork/{taskWorkId}/documentsoperations/{taskWorkDocumentOperationId}/standardprofileSchema";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (taskWorkId != null) localVarPathParams.Add("taskWorkId", Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
+            if (taskWorkDocumentOperationId != null) localVarPathParams.Add("taskWorkDocumentOperationId", Configuration.ApiClient.ParameterToString(taskWorkDocumentOperationId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkGetProfileSchemaForTaskWorkStandardDocumentOperation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MaskProfileSchemaDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MaskProfileSchemaDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MaskProfileSchemaDTO)));
             
         }
 
@@ -928,11 +2568,11 @@ namespace IO.Swagger.Api
         /// This call get the task 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskWorkId"></param>
         /// <returns>TaskWorkDTO</returns>
-        public TaskWorkDTO TaskworkSetTaskPriority_0 (int? taskId)
+        public TaskWorkDTO TaskWorkGetTaskWorkById (int? taskWorkId)
         {
-             ApiResponse<TaskWorkDTO> localVarResponse = TaskworkSetTaskPriority_0WithHttpInfo(taskId);
+             ApiResponse<TaskWorkDTO> localVarResponse = TaskWorkGetTaskWorkByIdWithHttpInfo(taskWorkId);
              return localVarResponse.Data;
         }
 
@@ -940,15 +2580,15 @@ namespace IO.Swagger.Api
         /// This call get the task 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskWorkId"></param>
         /// <returns>ApiResponse of TaskWorkDTO</returns>
-        public ApiResponse< TaskWorkDTO > TaskworkSetTaskPriority_0WithHttpInfo (int? taskId)
+        public ApiResponse< TaskWorkDTO > TaskWorkGetTaskWorkByIdWithHttpInfo (int? taskWorkId)
         {
-            // verify the required parameter 'taskId' is set
-            if (taskId == null)
-                throw new ApiException(400, "Missing required parameter 'taskId' when calling TaskworkApi->TaskworkSetTaskPriority_0");
+            // verify the required parameter 'taskWorkId' is set
+            if (taskWorkId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkId' when calling TaskWorkApi->TaskWorkGetTaskWorkById");
 
-            var localVarPath = "/api/taskwork/{taskId}";
+            var localVarPath = "/api/TaskWork/{taskWorkId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -975,7 +2615,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (taskId != null) localVarPathParams.Add("taskId", Configuration.ApiClient.ParameterToString(taskId)); // path parameter
+            if (taskWorkId != null) localVarPathParams.Add("taskWorkId", Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -993,7 +2633,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TaskworkSetTaskPriority_0", localVarResponse);
+                Exception exception = ExceptionFactory("TaskWorkGetTaskWorkById", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1007,11 +2647,11 @@ namespace IO.Swagger.Api
         /// This call get the task 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskWorkId"></param>
         /// <returns>Task of TaskWorkDTO</returns>
-        public async System.Threading.Tasks.Task<TaskWorkDTO> TaskworkSetTaskPriority_0Async (int? taskId)
+        public async System.Threading.Tasks.Task<TaskWorkDTO> TaskWorkGetTaskWorkByIdAsync (int? taskWorkId)
         {
-             ApiResponse<TaskWorkDTO> localVarResponse = await TaskworkSetTaskPriority_0AsyncWithHttpInfo(taskId);
+             ApiResponse<TaskWorkDTO> localVarResponse = await TaskWorkGetTaskWorkByIdAsyncWithHttpInfo(taskWorkId);
              return localVarResponse.Data;
 
         }
@@ -1020,15 +2660,15 @@ namespace IO.Swagger.Api
         /// This call get the task 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskWorkId"></param>
         /// <returns>Task of ApiResponse (TaskWorkDTO)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TaskWorkDTO>> TaskworkSetTaskPriority_0AsyncWithHttpInfo (int? taskId)
+        public async System.Threading.Tasks.Task<ApiResponse<TaskWorkDTO>> TaskWorkGetTaskWorkByIdAsyncWithHttpInfo (int? taskWorkId)
         {
-            // verify the required parameter 'taskId' is set
-            if (taskId == null)
-                throw new ApiException(400, "Missing required parameter 'taskId' when calling TaskworkApi->TaskworkSetTaskPriority_0");
+            // verify the required parameter 'taskWorkId' is set
+            if (taskWorkId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkId' when calling TaskWorkApi->TaskWorkGetTaskWorkById");
 
-            var localVarPath = "/api/taskwork/{taskId}";
+            var localVarPath = "/api/TaskWork/{taskWorkId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1055,7 +2695,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (taskId != null) localVarPathParams.Add("taskId", Configuration.ApiClient.ParameterToString(taskId)); // path parameter
+            if (taskWorkId != null) localVarPathParams.Add("taskWorkId", Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1072,7 +2712,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TaskworkSetTaskPriority_0", localVarResponse);
+                Exception exception = ExceptionFactory("TaskWorkGetTaskWorkById", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1083,14 +2723,1132 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
+        /// This call execute a task search and return taskwork active for the user and the given workflows ids (with all revisions) 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">The request object that defines select parte and workflows ids, if workflows ids is null or empty returns all taskWork for the user</param>
+        /// <returns>List&lt;RowSearchResult&gt;</returns>
+        public List<RowSearchResult> TaskWorkGetTasks (TaskWorkRequestDTO request)
+        {
+             ApiResponse<List<RowSearchResult>> localVarResponse = TaskWorkGetTasksWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call execute a task search and return taskwork active for the user and the given workflows ids (with all revisions) 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">The request object that defines select parte and workflows ids, if workflows ids is null or empty returns all taskWork for the user</param>
+        /// <returns>ApiResponse of List&lt;RowSearchResult&gt;</returns>
+        public ApiResponse< List<RowSearchResult> > TaskWorkGetTasksWithHttpInfo (TaskWorkRequestDTO request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling TaskWorkApi->TaskWorkGetTasks");
+
+            var localVarPath = "/api/TaskWork";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkGetTasks", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<RowSearchResult>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<RowSearchResult>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RowSearchResult>)));
+            
+        }
+
+        /// <summary>
+        /// This call execute a task search and return taskwork active for the user and the given workflows ids (with all revisions) 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">The request object that defines select parte and workflows ids, if workflows ids is null or empty returns all taskWork for the user</param>
+        /// <returns>Task of List&lt;RowSearchResult&gt;</returns>
+        public async System.Threading.Tasks.Task<List<RowSearchResult>> TaskWorkGetTasksAsync (TaskWorkRequestDTO request)
+        {
+             ApiResponse<List<RowSearchResult>> localVarResponse = await TaskWorkGetTasksAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call execute a task search and return taskwork active for the user and the given workflows ids (with all revisions) 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">The request object that defines select parte and workflows ids, if workflows ids is null or empty returns all taskWork for the user</param>
+        /// <returns>Task of ApiResponse (List&lt;RowSearchResult&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<RowSearchResult>>> TaskWorkGetTasksAsyncWithHttpInfo (TaskWorkRequestDTO request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling TaskWorkApi->TaskWorkGetTasks");
+
+            var localVarPath = "/api/TaskWork";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkGetTasks", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<RowSearchResult>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<RowSearchResult>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RowSearchResult>)));
+            
+        }
+
+        /// <summary>
+        /// This call add a profile to process for a selection document taskwork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="docnumber">Docnumber of the profile to add</param>
+        /// <returns></returns>
+        public void TaskWorkSetProfileForTaskWorkBySelectionDocumentOperation (int? taskWorkId, string taskWorkDocumentOperationId, int? docnumber)
+        {
+             TaskWorkSetProfileForTaskWorkBySelectionDocumentOperationWithHttpInfo(taskWorkId, taskWorkDocumentOperationId, docnumber);
+        }
+
+        /// <summary>
+        /// This call add a profile to process for a selection document taskwork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="docnumber">Docnumber of the profile to add</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> TaskWorkSetProfileForTaskWorkBySelectionDocumentOperationWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId, int? docnumber)
+        {
+            // verify the required parameter 'taskWorkId' is set
+            if (taskWorkId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkId' when calling TaskWorkApi->TaskWorkSetProfileForTaskWorkBySelectionDocumentOperation");
+            // verify the required parameter 'taskWorkDocumentOperationId' is set
+            if (taskWorkDocumentOperationId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkDocumentOperationId' when calling TaskWorkApi->TaskWorkSetProfileForTaskWorkBySelectionDocumentOperation");
+            // verify the required parameter 'docnumber' is set
+            if (docnumber == null)
+                throw new ApiException(400, "Missing required parameter 'docnumber' when calling TaskWorkApi->TaskWorkSetProfileForTaskWorkBySelectionDocumentOperation");
+
+            var localVarPath = "/api/TaskWork/{taskWorkId}/documentsoperations/{taskWorkDocumentOperationId}/byselection/{docnumber}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (taskWorkId != null) localVarPathParams.Add("taskWorkId", Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
+            if (taskWorkDocumentOperationId != null) localVarPathParams.Add("taskWorkDocumentOperationId", Configuration.ApiClient.ParameterToString(taskWorkDocumentOperationId)); // path parameter
+            if (docnumber != null) localVarPathParams.Add("docnumber", Configuration.ApiClient.ParameterToString(docnumber)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkSetProfileForTaskWorkBySelectionDocumentOperation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// This call add a profile to process for a selection document taskwork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="docnumber">Docnumber of the profile to add</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task TaskWorkSetProfileForTaskWorkBySelectionDocumentOperationAsync (int? taskWorkId, string taskWorkDocumentOperationId, int? docnumber)
+        {
+             await TaskWorkSetProfileForTaskWorkBySelectionDocumentOperationAsyncWithHttpInfo(taskWorkId, taskWorkDocumentOperationId, docnumber);
+
+        }
+
+        /// <summary>
+        /// This call add a profile to process for a selection document taskwork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="docnumber">Docnumber of the profile to add</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> TaskWorkSetProfileForTaskWorkBySelectionDocumentOperationAsyncWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId, int? docnumber)
+        {
+            // verify the required parameter 'taskWorkId' is set
+            if (taskWorkId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkId' when calling TaskWorkApi->TaskWorkSetProfileForTaskWorkBySelectionDocumentOperation");
+            // verify the required parameter 'taskWorkDocumentOperationId' is set
+            if (taskWorkDocumentOperationId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkDocumentOperationId' when calling TaskWorkApi->TaskWorkSetProfileForTaskWorkBySelectionDocumentOperation");
+            // verify the required parameter 'docnumber' is set
+            if (docnumber == null)
+                throw new ApiException(400, "Missing required parameter 'docnumber' when calling TaskWorkApi->TaskWorkSetProfileForTaskWorkBySelectionDocumentOperation");
+
+            var localVarPath = "/api/TaskWork/{taskWorkId}/documentsoperations/{taskWorkDocumentOperationId}/byselection/{docnumber}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (taskWorkId != null) localVarPathParams.Add("taskWorkId", Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
+            if (taskWorkDocumentOperationId != null) localVarPathParams.Add("taskWorkDocumentOperationId", Configuration.ApiClient.ParameterToString(taskWorkDocumentOperationId)); // path parameter
+            if (docnumber != null) localVarPathParams.Add("docnumber", Configuration.ApiClient.ParameterToString(docnumber)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkSetProfileForTaskWorkBySelectionDocumentOperation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// This call profiles a new document for a mask insert document taskwork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>ProfileResultDTO</returns>
+        public ProfileResultDTO TaskWorkSetProfileForTaskWorkMaskDocumentOperation (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null)
+        {
+             ApiResponse<ProfileResultDTO> localVarResponse = TaskWorkSetProfileForTaskWorkMaskDocumentOperationWithHttpInfo(taskWorkId, taskWorkDocumentOperationId, profile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call profiles a new document for a mask insert document taskwork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>ApiResponse of ProfileResultDTO</returns>
+        public ApiResponse< ProfileResultDTO > TaskWorkSetProfileForTaskWorkMaskDocumentOperationWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null)
+        {
+            // verify the required parameter 'taskWorkId' is set
+            if (taskWorkId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkId' when calling TaskWorkApi->TaskWorkSetProfileForTaskWorkMaskDocumentOperation");
+            // verify the required parameter 'taskWorkDocumentOperationId' is set
+            if (taskWorkDocumentOperationId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkDocumentOperationId' when calling TaskWorkApi->TaskWorkSetProfileForTaskWorkMaskDocumentOperation");
+
+            var localVarPath = "/api/TaskWork/{taskWorkId}/documentsoperations/{taskWorkDocumentOperationId}/bymask";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (taskWorkId != null) localVarPathParams.Add("taskWorkId", Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
+            if (taskWorkDocumentOperationId != null) localVarPathParams.Add("taskWorkDocumentOperationId", Configuration.ApiClient.ParameterToString(taskWorkDocumentOperationId)); // path parameter
+            if (profile != null && profile.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(profile); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = profile; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkSetProfileForTaskWorkMaskDocumentOperation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ProfileResultDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ProfileResultDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProfileResultDTO)));
+            
+        }
+
+        /// <summary>
+        /// This call profiles a new document for a mask insert document taskwork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>Task of ProfileResultDTO</returns>
+        public async System.Threading.Tasks.Task<ProfileResultDTO> TaskWorkSetProfileForTaskWorkMaskDocumentOperationAsync (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null)
+        {
+             ApiResponse<ProfileResultDTO> localVarResponse = await TaskWorkSetProfileForTaskWorkMaskDocumentOperationAsyncWithHttpInfo(taskWorkId, taskWorkDocumentOperationId, profile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call profiles a new document for a mask insert document taskwork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>Task of ApiResponse (ProfileResultDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ProfileResultDTO>> TaskWorkSetProfileForTaskWorkMaskDocumentOperationAsyncWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null)
+        {
+            // verify the required parameter 'taskWorkId' is set
+            if (taskWorkId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkId' when calling TaskWorkApi->TaskWorkSetProfileForTaskWorkMaskDocumentOperation");
+            // verify the required parameter 'taskWorkDocumentOperationId' is set
+            if (taskWorkDocumentOperationId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkDocumentOperationId' when calling TaskWorkApi->TaskWorkSetProfileForTaskWorkMaskDocumentOperation");
+
+            var localVarPath = "/api/TaskWork/{taskWorkId}/documentsoperations/{taskWorkDocumentOperationId}/bymask";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (taskWorkId != null) localVarPathParams.Add("taskWorkId", Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
+            if (taskWorkDocumentOperationId != null) localVarPathParams.Add("taskWorkDocumentOperationId", Configuration.ApiClient.ParameterToString(taskWorkDocumentOperationId)); // path parameter
+            if (profile != null && profile.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(profile); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = profile; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkSetProfileForTaskWorkMaskDocumentOperation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ProfileResultDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ProfileResultDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProfileResultDTO)));
+            
+        }
+
+        /// <summary>
+        /// This call profiles a new document for a model insert document taskwork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>ProfileResultDTO</returns>
+        public ProfileResultDTO TaskWorkSetProfileForTaskWorkModelDocumentOperation (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null)
+        {
+             ApiResponse<ProfileResultDTO> localVarResponse = TaskWorkSetProfileForTaskWorkModelDocumentOperationWithHttpInfo(taskWorkId, taskWorkDocumentOperationId, profile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call profiles a new document for a model insert document taskwork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>ApiResponse of ProfileResultDTO</returns>
+        public ApiResponse< ProfileResultDTO > TaskWorkSetProfileForTaskWorkModelDocumentOperationWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null)
+        {
+            // verify the required parameter 'taskWorkId' is set
+            if (taskWorkId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkId' when calling TaskWorkApi->TaskWorkSetProfileForTaskWorkModelDocumentOperation");
+            // verify the required parameter 'taskWorkDocumentOperationId' is set
+            if (taskWorkDocumentOperationId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkDocumentOperationId' when calling TaskWorkApi->TaskWorkSetProfileForTaskWorkModelDocumentOperation");
+
+            var localVarPath = "/api/TaskWork/{taskWorkId}/documentsoperations/{taskWorkDocumentOperationId}/bymodel";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (taskWorkId != null) localVarPathParams.Add("taskWorkId", Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
+            if (taskWorkDocumentOperationId != null) localVarPathParams.Add("taskWorkDocumentOperationId", Configuration.ApiClient.ParameterToString(taskWorkDocumentOperationId)); // path parameter
+            if (profile != null && profile.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(profile); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = profile; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkSetProfileForTaskWorkModelDocumentOperation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ProfileResultDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ProfileResultDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProfileResultDTO)));
+            
+        }
+
+        /// <summary>
+        /// This call profiles a new document for a model insert document taskwork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>Task of ProfileResultDTO</returns>
+        public async System.Threading.Tasks.Task<ProfileResultDTO> TaskWorkSetProfileForTaskWorkModelDocumentOperationAsync (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null)
+        {
+             ApiResponse<ProfileResultDTO> localVarResponse = await TaskWorkSetProfileForTaskWorkModelDocumentOperationAsyncWithHttpInfo(taskWorkId, taskWorkDocumentOperationId, profile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call profiles a new document for a model insert document taskwork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>Task of ApiResponse (ProfileResultDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ProfileResultDTO>> TaskWorkSetProfileForTaskWorkModelDocumentOperationAsyncWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null)
+        {
+            // verify the required parameter 'taskWorkId' is set
+            if (taskWorkId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkId' when calling TaskWorkApi->TaskWorkSetProfileForTaskWorkModelDocumentOperation");
+            // verify the required parameter 'taskWorkDocumentOperationId' is set
+            if (taskWorkDocumentOperationId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkDocumentOperationId' when calling TaskWorkApi->TaskWorkSetProfileForTaskWorkModelDocumentOperation");
+
+            var localVarPath = "/api/TaskWork/{taskWorkId}/documentsoperations/{taskWorkDocumentOperationId}/bymodel";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (taskWorkId != null) localVarPathParams.Add("taskWorkId", Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
+            if (taskWorkDocumentOperationId != null) localVarPathParams.Add("taskWorkDocumentOperationId", Configuration.ApiClient.ParameterToString(taskWorkDocumentOperationId)); // path parameter
+            if (profile != null && profile.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(profile); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = profile; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkSetProfileForTaskWorkModelDocumentOperation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ProfileResultDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ProfileResultDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProfileResultDTO)));
+            
+        }
+
+        /// <summary>
+        /// This call profiles a new document for a standard insert document taskwork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>ProfileResultDTO</returns>
+        public ProfileResultDTO TaskWorkSetProfileForTaskWorkStandardDocumentOperation (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null)
+        {
+             ApiResponse<ProfileResultDTO> localVarResponse = TaskWorkSetProfileForTaskWorkStandardDocumentOperationWithHttpInfo(taskWorkId, taskWorkDocumentOperationId, profile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call profiles a new document for a standard insert document taskwork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>ApiResponse of ProfileResultDTO</returns>
+        public ApiResponse< ProfileResultDTO > TaskWorkSetProfileForTaskWorkStandardDocumentOperationWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null)
+        {
+            // verify the required parameter 'taskWorkId' is set
+            if (taskWorkId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkId' when calling TaskWorkApi->TaskWorkSetProfileForTaskWorkStandardDocumentOperation");
+            // verify the required parameter 'taskWorkDocumentOperationId' is set
+            if (taskWorkDocumentOperationId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkDocumentOperationId' when calling TaskWorkApi->TaskWorkSetProfileForTaskWorkStandardDocumentOperation");
+
+            var localVarPath = "/api/TaskWork/{taskWorkId}/documentsoperations/{taskWorkDocumentOperationId}/bystandard";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (taskWorkId != null) localVarPathParams.Add("taskWorkId", Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
+            if (taskWorkDocumentOperationId != null) localVarPathParams.Add("taskWorkDocumentOperationId", Configuration.ApiClient.ParameterToString(taskWorkDocumentOperationId)); // path parameter
+            if (profile != null && profile.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(profile); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = profile; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkSetProfileForTaskWorkStandardDocumentOperation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ProfileResultDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ProfileResultDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProfileResultDTO)));
+            
+        }
+
+        /// <summary>
+        /// This call profiles a new document for a standard insert document taskwork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>Task of ProfileResultDTO</returns>
+        public async System.Threading.Tasks.Task<ProfileResultDTO> TaskWorkSetProfileForTaskWorkStandardDocumentOperationAsync (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null)
+        {
+             ApiResponse<ProfileResultDTO> localVarResponse = await TaskWorkSetProfileForTaskWorkStandardDocumentOperationAsyncWithHttpInfo(taskWorkId, taskWorkDocumentOperationId, profile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call profiles a new document for a standard insert document taskwork operation 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>Task of ApiResponse (ProfileResultDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ProfileResultDTO>> TaskWorkSetProfileForTaskWorkStandardDocumentOperationAsyncWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId, ProfileDTO profile = null)
+        {
+            // verify the required parameter 'taskWorkId' is set
+            if (taskWorkId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkId' when calling TaskWorkApi->TaskWorkSetProfileForTaskWorkStandardDocumentOperation");
+            // verify the required parameter 'taskWorkDocumentOperationId' is set
+            if (taskWorkDocumentOperationId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkDocumentOperationId' when calling TaskWorkApi->TaskWorkSetProfileForTaskWorkStandardDocumentOperation");
+
+            var localVarPath = "/api/TaskWork/{taskWorkId}/documentsoperations/{taskWorkDocumentOperationId}/bystandard";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (taskWorkId != null) localVarPathParams.Add("taskWorkId", Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
+            if (taskWorkDocumentOperationId != null) localVarPathParams.Add("taskWorkDocumentOperationId", Configuration.ApiClient.ParameterToString(taskWorkDocumentOperationId)); // path parameter
+            if (profile != null && profile.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(profile); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = profile; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkSetProfileForTaskWorkStandardDocumentOperation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ProfileResultDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ProfileResultDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProfileResultDTO)));
+            
+        }
+
+        /// <summary>
+        /// This call set the task priority 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskIds"></param>
+        /// <param name="priority"></param>
+        /// <returns>int?</returns>
+        public int? TaskWorkSetTaskPriority (List<int?> taskIds, int? priority)
+        {
+             ApiResponse<int?> localVarResponse = TaskWorkSetTaskPriorityWithHttpInfo(taskIds, priority);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call set the task priority 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskIds"></param>
+        /// <param name="priority"></param>
+        /// <returns>ApiResponse of int?</returns>
+        public ApiResponse< int? > TaskWorkSetTaskPriorityWithHttpInfo (List<int?> taskIds, int? priority)
+        {
+            // verify the required parameter 'taskIds' is set
+            if (taskIds == null)
+                throw new ApiException(400, "Missing required parameter 'taskIds' when calling TaskWorkApi->TaskWorkSetTaskPriority");
+            // verify the required parameter 'priority' is set
+            if (priority == null)
+                throw new ApiException(400, "Missing required parameter 'priority' when calling TaskWorkApi->TaskWorkSetTaskPriority");
+
+            var localVarPath = "/api/TaskWork/priority/{priority}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (priority != null) localVarPathParams.Add("priority", Configuration.ApiClient.ParameterToString(priority)); // path parameter
+            if (taskIds != null && taskIds.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(taskIds); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = taskIds; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkSetTaskPriority", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<int?>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (int?) Configuration.ApiClient.Deserialize(localVarResponse, typeof(int?)));
+            
+        }
+
+        /// <summary>
+        /// This call set the task priority 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskIds"></param>
+        /// <param name="priority"></param>
+        /// <returns>Task of int?</returns>
+        public async System.Threading.Tasks.Task<int?> TaskWorkSetTaskPriorityAsync (List<int?> taskIds, int? priority)
+        {
+             ApiResponse<int?> localVarResponse = await TaskWorkSetTaskPriorityAsyncWithHttpInfo(taskIds, priority);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call set the task priority 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskIds"></param>
+        /// <param name="priority"></param>
+        /// <returns>Task of ApiResponse (int?)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<int?>> TaskWorkSetTaskPriorityAsyncWithHttpInfo (List<int?> taskIds, int? priority)
+        {
+            // verify the required parameter 'taskIds' is set
+            if (taskIds == null)
+                throw new ApiException(400, "Missing required parameter 'taskIds' when calling TaskWorkApi->TaskWorkSetTaskPriority");
+            // verify the required parameter 'priority' is set
+            if (priority == null)
+                throw new ApiException(400, "Missing required parameter 'priority' when calling TaskWorkApi->TaskWorkSetTaskPriority");
+
+            var localVarPath = "/api/TaskWork/priority/{priority}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (priority != null) localVarPathParams.Add("priority", Configuration.ApiClient.ParameterToString(priority)); // path parameter
+            if (taskIds != null && taskIds.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(taskIds); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = taskIds; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkSetTaskPriority", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<int?>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (int?) Configuration.ApiClient.Deserialize(localVarResponse, typeof(int?)));
+            
+        }
+
+        /// <summary>
         /// This call set the task as read 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskid"></param>
         /// <returns>int?</returns>
-        public int? TaskworkSetTaskRead (List<int?> taskid)
+        public int? TaskWorkSetTaskRead (List<int?> taskid)
         {
-             ApiResponse<int?> localVarResponse = TaskworkSetTaskReadWithHttpInfo(taskid);
+             ApiResponse<int?> localVarResponse = TaskWorkSetTaskReadWithHttpInfo(taskid);
              return localVarResponse.Data;
         }
 
@@ -1100,13 +3858,13 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskid"></param>
         /// <returns>ApiResponse of int?</returns>
-        public ApiResponse< int? > TaskworkSetTaskReadWithHttpInfo (List<int?> taskid)
+        public ApiResponse< int? > TaskWorkSetTaskReadWithHttpInfo (List<int?> taskid)
         {
             // verify the required parameter 'taskid' is set
             if (taskid == null)
-                throw new ApiException(400, "Missing required parameter 'taskid' when calling TaskworkApi->TaskworkSetTaskRead");
+                throw new ApiException(400, "Missing required parameter 'taskid' when calling TaskWorkApi->TaskWorkSetTaskRead");
 
-            var localVarPath = "/api/taskwork/read";
+            var localVarPath = "/api/TaskWork/read";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1163,7 +3921,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TaskworkSetTaskRead", localVarResponse);
+                Exception exception = ExceptionFactory("TaskWorkSetTaskRead", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1179,9 +3937,9 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskid"></param>
         /// <returns>Task of int?</returns>
-        public async System.Threading.Tasks.Task<int?> TaskworkSetTaskReadAsync (List<int?> taskid)
+        public async System.Threading.Tasks.Task<int?> TaskWorkSetTaskReadAsync (List<int?> taskid)
         {
-             ApiResponse<int?> localVarResponse = await TaskworkSetTaskReadAsyncWithHttpInfo(taskid);
+             ApiResponse<int?> localVarResponse = await TaskWorkSetTaskReadAsyncWithHttpInfo(taskid);
              return localVarResponse.Data;
 
         }
@@ -1192,13 +3950,13 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskid"></param>
         /// <returns>Task of ApiResponse (int?)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<int?>> TaskworkSetTaskReadAsyncWithHttpInfo (List<int?> taskid)
+        public async System.Threading.Tasks.Task<ApiResponse<int?>> TaskWorkSetTaskReadAsyncWithHttpInfo (List<int?> taskid)
         {
             // verify the required parameter 'taskid' is set
             if (taskid == null)
-                throw new ApiException(400, "Missing required parameter 'taskid' when calling TaskworkApi->TaskworkSetTaskRead");
+                throw new ApiException(400, "Missing required parameter 'taskid' when calling TaskWorkApi->TaskWorkSetTaskRead");
 
-            var localVarPath = "/api/taskwork/read";
+            var localVarPath = "/api/TaskWork/read";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1254,7 +4012,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TaskworkSetTaskRead", localVarResponse);
+                Exception exception = ExceptionFactory("TaskWorkSetTaskRead", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1270,9 +4028,9 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskIds"></param>
         /// <returns>int?</returns>
-        public int? TaskworkSetTaskUnRead (List<int?> taskIds)
+        public int? TaskWorkSetTaskUnRead (List<int?> taskIds)
         {
-             ApiResponse<int?> localVarResponse = TaskworkSetTaskUnReadWithHttpInfo(taskIds);
+             ApiResponse<int?> localVarResponse = TaskWorkSetTaskUnReadWithHttpInfo(taskIds);
              return localVarResponse.Data;
         }
 
@@ -1282,13 +4040,13 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskIds"></param>
         /// <returns>ApiResponse of int?</returns>
-        public ApiResponse< int? > TaskworkSetTaskUnReadWithHttpInfo (List<int?> taskIds)
+        public ApiResponse< int? > TaskWorkSetTaskUnReadWithHttpInfo (List<int?> taskIds)
         {
             // verify the required parameter 'taskIds' is set
             if (taskIds == null)
-                throw new ApiException(400, "Missing required parameter 'taskIds' when calling TaskworkApi->TaskworkSetTaskUnRead");
+                throw new ApiException(400, "Missing required parameter 'taskIds' when calling TaskWorkApi->TaskWorkSetTaskUnRead");
 
-            var localVarPath = "/api/taskwork/unread";
+            var localVarPath = "/api/TaskWork/unread";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1345,7 +4103,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TaskworkSetTaskUnRead", localVarResponse);
+                Exception exception = ExceptionFactory("TaskWorkSetTaskUnRead", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1361,9 +4119,9 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskIds"></param>
         /// <returns>Task of int?</returns>
-        public async System.Threading.Tasks.Task<int?> TaskworkSetTaskUnReadAsync (List<int?> taskIds)
+        public async System.Threading.Tasks.Task<int?> TaskWorkSetTaskUnReadAsync (List<int?> taskIds)
         {
-             ApiResponse<int?> localVarResponse = await TaskworkSetTaskUnReadAsyncWithHttpInfo(taskIds);
+             ApiResponse<int?> localVarResponse = await TaskWorkSetTaskUnReadAsyncWithHttpInfo(taskIds);
              return localVarResponse.Data;
 
         }
@@ -1374,13 +4132,13 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskIds"></param>
         /// <returns>Task of ApiResponse (int?)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<int?>> TaskworkSetTaskUnReadAsyncWithHttpInfo (List<int?> taskIds)
+        public async System.Threading.Tasks.Task<ApiResponse<int?>> TaskWorkSetTaskUnReadAsyncWithHttpInfo (List<int?> taskIds)
         {
             // verify the required parameter 'taskIds' is set
             if (taskIds == null)
-                throw new ApiException(400, "Missing required parameter 'taskIds' when calling TaskworkApi->TaskworkSetTaskUnRead");
+                throw new ApiException(400, "Missing required parameter 'taskIds' when calling TaskWorkApi->TaskWorkSetTaskUnRead");
 
-            var localVarPath = "/api/taskwork/unread";
+            var localVarPath = "/api/TaskWork/unread";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1436,7 +4194,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TaskworkSetTaskUnRead", localVarResponse);
+                Exception exception = ExceptionFactory("TaskWorkSetTaskUnRead", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1444,6 +4202,154 @@ namespace IO.Swagger.Api
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (int?) Configuration.ApiClient.Deserialize(localVarResponse, typeof(int?)));
             
+        }
+
+        /// <summary>
+        /// This call take charge of a TaskWork 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <returns></returns>
+        public void TaskWorkTaskWorkTakeCharge (int? taskWorkId)
+        {
+             TaskWorkTaskWorkTakeChargeWithHttpInfo(taskWorkId);
+        }
+
+        /// <summary>
+        /// This call take charge of a TaskWork 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> TaskWorkTaskWorkTakeChargeWithHttpInfo (int? taskWorkId)
+        {
+            // verify the required parameter 'taskWorkId' is set
+            if (taskWorkId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkId' when calling TaskWorkApi->TaskWorkTaskWorkTakeCharge");
+
+            var localVarPath = "/api/TaskWork/{taskWorkId}/TakeCharge";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (taskWorkId != null) localVarPathParams.Add("taskWorkId", Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkTaskWorkTakeCharge", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// This call take charge of a TaskWork 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task TaskWorkTaskWorkTakeChargeAsync (int? taskWorkId)
+        {
+             await TaskWorkTaskWorkTakeChargeAsyncWithHttpInfo(taskWorkId);
+
+        }
+
+        /// <summary>
+        /// This call take charge of a TaskWork 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskWorkId">Id of the taskwork</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> TaskWorkTaskWorkTakeChargeAsyncWithHttpInfo (int? taskWorkId)
+        {
+            // verify the required parameter 'taskWorkId' is set
+            if (taskWorkId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkId' when calling TaskWorkApi->TaskWorkTaskWorkTakeCharge");
+
+            var localVarPath = "/api/TaskWork/{taskWorkId}/TakeCharge";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (taskWorkId != null) localVarPathParams.Add("taskWorkId", Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TaskWorkTaskWorkTakeCharge", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
     }

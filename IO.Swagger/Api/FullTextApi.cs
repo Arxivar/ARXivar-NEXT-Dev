@@ -308,7 +308,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling FullTextApi->FullTextGetByDocnumber");
 
-            var localVarPath = "/api/fulltext/{docnumber}";
+            var localVarPath = "/api/FullText/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -388,7 +388,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling FullTextApi->FullTextGetByDocnumber");
 
-            var localVarPath = "/api/fulltext/{docnumber}";
+            var localVarPath = "/api/FullText/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -470,7 +470,7 @@ namespace IO.Swagger.Api
             if (text == null)
                 throw new ApiException(400, "Missing required parameter 'text' when calling FullTextApi->FullTextInsertByDocnumber");
 
-            var localVarPath = "/api/fulltext/{docnumber}";
+            var localVarPath = "/api/FullText/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -563,7 +563,7 @@ namespace IO.Swagger.Api
             if (text == null)
                 throw new ApiException(400, "Missing required parameter 'text' when calling FullTextApi->FullTextInsertByDocnumber");
 
-            var localVarPath = "/api/fulltext/{docnumber}";
+            var localVarPath = "/api/FullText/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -654,7 +654,7 @@ namespace IO.Swagger.Api
             if (text == null)
                 throw new ApiException(400, "Missing required parameter 'text' when calling FullTextApi->FullTextUpdateByDocnumber");
 
-            var localVarPath = "/api/fulltext/{docnumber}";
+            var localVarPath = "/api/FullText/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -747,7 +747,7 @@ namespace IO.Swagger.Api
             if (text == null)
                 throw new ApiException(400, "Missing required parameter 'text' when calling FullTextApi->FullTextUpdateByDocnumber");
 
-            var localVarPath = "/api/fulltext/{docnumber}";
+            var localVarPath = "/api/FullText/{docnumber}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

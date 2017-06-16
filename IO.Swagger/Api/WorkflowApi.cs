@@ -37,6 +37,27 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// This call returns all avaible events for manual start a workflow on a list of profiles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumbers">List of docnumbers</param>
+        /// <returns>List&lt;WorkFlowEventDTO&gt;</returns>
+        List<WorkFlowEventDTO> WorkflowGetEventsForManualStarts (List<int?> docnumbers);
+
+        /// <summary>
+        /// This call returns all avaible events for manual start a workflow on a list of profiles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumbers">List of docnumbers</param>
+        /// <returns>ApiResponse of List&lt;WorkFlowEventDTO&gt;</returns>
+        ApiResponse<List<WorkFlowEventDTO>> WorkflowGetEventsForManualStartsWithHttpInfo (List<int?> docnumbers);
+        /// <summary>
         /// This method retruns all externalids in tasks
         /// </summary>
         /// <remarks>
@@ -74,8 +95,52 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;WorkflowDTO&gt;</returns>
         ApiResponse<List<WorkflowDTO>> WorkflowGetWorkflowsWithHttpInfo ();
+        /// <summary>
+        /// Start a new instance of workflow on a document
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber to apply workflow</param>
+        /// <param name="workFlowEventId">Event Id</param>
+        /// <returns></returns>
+        void WorkflowWorkflowManualStart (int? docnumber, int? workFlowEventId);
+
+        /// <summary>
+        /// Start a new instance of workflow on a document
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber to apply workflow</param>
+        /// <param name="workFlowEventId">Event Id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> WorkflowWorkflowManualStartWithHttpInfo (int? docnumber, int? workFlowEventId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// This call returns all avaible events for manual start a workflow on a list of profiles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumbers">List of docnumbers</param>
+        /// <returns>Task of List&lt;WorkFlowEventDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<WorkFlowEventDTO>> WorkflowGetEventsForManualStartsAsync (List<int?> docnumbers);
+
+        /// <summary>
+        /// This call returns all avaible events for manual start a workflow on a list of profiles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumbers">List of docnumbers</param>
+        /// <returns>Task of ApiResponse (List&lt;WorkFlowEventDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<WorkFlowEventDTO>>> WorkflowGetEventsForManualStartsAsyncWithHttpInfo (List<int?> docnumbers);
         /// <summary>
         /// This method retruns all externalids in tasks
         /// </summary>
@@ -114,6 +179,29 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;WorkflowDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<WorkflowDTO>>> WorkflowGetWorkflowsAsyncWithHttpInfo ();
+        /// <summary>
+        /// Start a new instance of workflow on a document
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber to apply workflow</param>
+        /// <param name="workFlowEventId">Event Id</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task WorkflowWorkflowManualStartAsync (int? docnumber, int? workFlowEventId);
+
+        /// <summary>
+        /// Start a new instance of workflow on a document
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber to apply workflow</param>
+        /// <param name="workFlowEventId">Event Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> WorkflowWorkflowManualStartAsyncWithHttpInfo (int? docnumber, int? workFlowEventId);
         #endregion Asynchronous Operations
     }
 
@@ -227,6 +315,188 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
+        /// This call returns all avaible events for manual start a workflow on a list of profiles 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumbers">List of docnumbers</param>
+        /// <returns>List&lt;WorkFlowEventDTO&gt;</returns>
+        public List<WorkFlowEventDTO> WorkflowGetEventsForManualStarts (List<int?> docnumbers)
+        {
+             ApiResponse<List<WorkFlowEventDTO>> localVarResponse = WorkflowGetEventsForManualStartsWithHttpInfo(docnumbers);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns all avaible events for manual start a workflow on a list of profiles 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumbers">List of docnumbers</param>
+        /// <returns>ApiResponse of List&lt;WorkFlowEventDTO&gt;</returns>
+        public ApiResponse< List<WorkFlowEventDTO> > WorkflowGetEventsForManualStartsWithHttpInfo (List<int?> docnumbers)
+        {
+            // verify the required parameter 'docnumbers' is set
+            if (docnumbers == null)
+                throw new ApiException(400, "Missing required parameter 'docnumbers' when calling WorkflowApi->WorkflowGetEventsForManualStarts");
+
+            var localVarPath = "/api/Workflow/events";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (docnumbers != null && docnumbers.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(docnumbers); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = docnumbers; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("WorkflowGetEventsForManualStarts", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<WorkFlowEventDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<WorkFlowEventDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WorkFlowEventDTO>)));
+            
+        }
+
+        /// <summary>
+        /// This call returns all avaible events for manual start a workflow on a list of profiles 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumbers">List of docnumbers</param>
+        /// <returns>Task of List&lt;WorkFlowEventDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<WorkFlowEventDTO>> WorkflowGetEventsForManualStartsAsync (List<int?> docnumbers)
+        {
+             ApiResponse<List<WorkFlowEventDTO>> localVarResponse = await WorkflowGetEventsForManualStartsAsyncWithHttpInfo(docnumbers);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns all avaible events for manual start a workflow on a list of profiles 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumbers">List of docnumbers</param>
+        /// <returns>Task of ApiResponse (List&lt;WorkFlowEventDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<WorkFlowEventDTO>>> WorkflowGetEventsForManualStartsAsyncWithHttpInfo (List<int?> docnumbers)
+        {
+            // verify the required parameter 'docnumbers' is set
+            if (docnumbers == null)
+                throw new ApiException(400, "Missing required parameter 'docnumbers' when calling WorkflowApi->WorkflowGetEventsForManualStarts");
+
+            var localVarPath = "/api/Workflow/events";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (docnumbers != null && docnumbers.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(docnumbers); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = docnumbers; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("WorkflowGetEventsForManualStarts", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<WorkFlowEventDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<WorkFlowEventDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WorkFlowEventDTO>)));
+            
+        }
+
+        /// <summary>
         /// This method retruns all externalids in tasks 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
@@ -245,7 +515,7 @@ namespace IO.Swagger.Api
         public ApiResponse< List<string> > WorkflowGetTasksExternalIdsWithHttpInfo ()
         {
 
-            var localVarPath = "/api/workflow/externalids";
+            var localVarPath = "/api/Workflow/externalids";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -319,7 +589,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<string>>> WorkflowGetTasksExternalIdsAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/workflow/externalids";
+            var localVarPath = "/api/Workflow/externalids";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -391,7 +661,7 @@ namespace IO.Swagger.Api
         public ApiResponse< List<WorkflowDTO> > WorkflowGetWorkflowsWithHttpInfo ()
         {
 
-            var localVarPath = "/api/workflow";
+            var localVarPath = "/api/Workflow";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -465,7 +735,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<WorkflowDTO>>> WorkflowGetWorkflowsAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/workflow";
+            var localVarPath = "/api/Workflow";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -516,6 +786,166 @@ namespace IO.Swagger.Api
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (List<WorkflowDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WorkflowDTO>)));
             
+        }
+
+        /// <summary>
+        /// Start a new instance of workflow on a document 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber to apply workflow</param>
+        /// <param name="workFlowEventId">Event Id</param>
+        /// <returns></returns>
+        public void WorkflowWorkflowManualStart (int? docnumber, int? workFlowEventId)
+        {
+             WorkflowWorkflowManualStartWithHttpInfo(docnumber, workFlowEventId);
+        }
+
+        /// <summary>
+        /// Start a new instance of workflow on a document 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber to apply workflow</param>
+        /// <param name="workFlowEventId">Event Id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> WorkflowWorkflowManualStartWithHttpInfo (int? docnumber, int? workFlowEventId)
+        {
+            // verify the required parameter 'docnumber' is set
+            if (docnumber == null)
+                throw new ApiException(400, "Missing required parameter 'docnumber' when calling WorkflowApi->WorkflowWorkflowManualStart");
+            // verify the required parameter 'workFlowEventId' is set
+            if (workFlowEventId == null)
+                throw new ApiException(400, "Missing required parameter 'workFlowEventId' when calling WorkflowApi->WorkflowWorkflowManualStart");
+
+            var localVarPath = "/api/Workflow/start/{docnumber}/{workFlowEventId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (docnumber != null) localVarPathParams.Add("docnumber", Configuration.ApiClient.ParameterToString(docnumber)); // path parameter
+            if (workFlowEventId != null) localVarPathParams.Add("workFlowEventId", Configuration.ApiClient.ParameterToString(workFlowEventId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("WorkflowWorkflowManualStart", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Start a new instance of workflow on a document 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber to apply workflow</param>
+        /// <param name="workFlowEventId">Event Id</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task WorkflowWorkflowManualStartAsync (int? docnumber, int? workFlowEventId)
+        {
+             await WorkflowWorkflowManualStartAsyncWithHttpInfo(docnumber, workFlowEventId);
+
+        }
+
+        /// <summary>
+        /// Start a new instance of workflow on a document 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber to apply workflow</param>
+        /// <param name="workFlowEventId">Event Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> WorkflowWorkflowManualStartAsyncWithHttpInfo (int? docnumber, int? workFlowEventId)
+        {
+            // verify the required parameter 'docnumber' is set
+            if (docnumber == null)
+                throw new ApiException(400, "Missing required parameter 'docnumber' when calling WorkflowApi->WorkflowWorkflowManualStart");
+            // verify the required parameter 'workFlowEventId' is set
+            if (workFlowEventId == null)
+                throw new ApiException(400, "Missing required parameter 'workFlowEventId' when calling WorkflowApi->WorkflowWorkflowManualStart");
+
+            var localVarPath = "/api/Workflow/start/{docnumber}/{workFlowEventId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (docnumber != null) localVarPathParams.Add("docnumber", Configuration.ApiClient.ParameterToString(docnumber)); // path parameter
+            if (workFlowEventId != null) localVarPathParams.Add("workFlowEventId", Configuration.ApiClient.ParameterToString(workFlowEventId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("WorkflowWorkflowManualStart", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
     }

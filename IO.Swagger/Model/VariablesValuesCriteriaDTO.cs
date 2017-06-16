@@ -34,32 +34,32 @@ using Newtonsoft.Json.Converters;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// AttachmentsGridDTO
+    /// VariablesValuesCriteriaDTO
     /// </summary>
     [DataContract]
-    public partial class AttachmentsGridDTO :  IEquatable<AttachmentsGridDTO>
+    public partial class VariablesValuesCriteriaDTO :  IEquatable<VariablesValuesCriteriaDTO>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AttachmentsGridDTO" /> class.
+        /// Initializes a new instance of the <see cref="VariablesValuesCriteriaDTO" /> class.
         /// </summary>
-        /// <param name="ExternalAttachments">ExternalAttachments.</param>
-        /// <param name="InternalAttachments">InternalAttachments.</param>
-        public AttachmentsGridDTO(List<RowSearchResult> ExternalAttachments = null, List<RowSearchResult> InternalAttachments = null)
+        /// <param name="ProcessVariablesFields">ProcessVariablesFields.</param>
+        /// <param name="VariableFilters">VariableFilters.</param>
+        public VariablesValuesCriteriaDTO(ProcessVariablesFieldsDTO ProcessVariablesFields = null, VariableFiltersDTO VariableFilters = null)
         {
-            this.ExternalAttachments = ExternalAttachments;
-            this.InternalAttachments = InternalAttachments;
+            this.ProcessVariablesFields = ProcessVariablesFields;
+            this.VariableFilters = VariableFilters;
         }
         
         /// <summary>
-        /// Gets or Sets ExternalAttachments
+        /// Gets or Sets ProcessVariablesFields
         /// </summary>
-        [DataMember(Name="externalAttachments", EmitDefaultValue=false)]
-        public List<RowSearchResult> ExternalAttachments { get; set; }
+        [DataMember(Name="processVariablesFields", EmitDefaultValue=false)]
+        public ProcessVariablesFieldsDTO ProcessVariablesFields { get; set; }
         /// <summary>
-        /// Gets or Sets InternalAttachments
+        /// Gets or Sets VariableFilters
         /// </summary>
-        [DataMember(Name="internalAttachments", EmitDefaultValue=false)]
-        public List<RowSearchResult> InternalAttachments { get; set; }
+        [DataMember(Name="variableFilters", EmitDefaultValue=false)]
+        public VariableFiltersDTO VariableFilters { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -67,9 +67,9 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class AttachmentsGridDTO {\n");
-            sb.Append("  ExternalAttachments: ").Append(ExternalAttachments).Append("\n");
-            sb.Append("  InternalAttachments: ").Append(InternalAttachments).Append("\n");
+            sb.Append("class VariablesValuesCriteriaDTO {\n");
+            sb.Append("  ProcessVariablesFields: ").Append(ProcessVariablesFields).Append("\n");
+            sb.Append("  VariableFilters: ").Append(VariableFilters).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,15 +91,15 @@ namespace IO.Swagger.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as AttachmentsGridDTO);
+            return this.Equals(obj as VariablesValuesCriteriaDTO);
         }
 
         /// <summary>
-        /// Returns true if AttachmentsGridDTO instances are equal
+        /// Returns true if VariablesValuesCriteriaDTO instances are equal
         /// </summary>
-        /// <param name="other">Instance of AttachmentsGridDTO to be compared</param>
+        /// <param name="other">Instance of VariablesValuesCriteriaDTO to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AttachmentsGridDTO other)
+        public bool Equals(VariablesValuesCriteriaDTO other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -107,14 +107,14 @@ namespace IO.Swagger.Model
 
             return 
                 (
-                    this.ExternalAttachments == other.ExternalAttachments ||
-                    this.ExternalAttachments != null &&
-                    this.ExternalAttachments.SequenceEqual(other.ExternalAttachments)
+                    this.ProcessVariablesFields == other.ProcessVariablesFields ||
+                    this.ProcessVariablesFields != null &&
+                    this.ProcessVariablesFields.Equals(other.ProcessVariablesFields)
                 ) && 
                 (
-                    this.InternalAttachments == other.InternalAttachments ||
-                    this.InternalAttachments != null &&
-                    this.InternalAttachments.SequenceEqual(other.InternalAttachments)
+                    this.VariableFilters == other.VariableFilters ||
+                    this.VariableFilters != null &&
+                    this.VariableFilters.Equals(other.VariableFilters)
                 );
         }
 
@@ -129,10 +129,10 @@ namespace IO.Swagger.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.ExternalAttachments != null)
-                    hash = hash * 59 + this.ExternalAttachments.GetHashCode();
-                if (this.InternalAttachments != null)
-                    hash = hash * 59 + this.InternalAttachments.GetHashCode();
+                if (this.ProcessVariablesFields != null)
+                    hash = hash * 59 + this.ProcessVariablesFields.GetHashCode();
+                if (this.VariableFilters != null)
+                    hash = hash * 59 + this.VariableFilters.GetHashCode();
                 return hash;
             }
         }

@@ -37,135 +37,135 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// This call returns the total page number of a profile preview file
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>int?</returns>
         int? PreviewsGetPageNumberByDocnumber (int? docnumber);
 
         /// <summary>
-        /// 
+        /// This call returns the total page number of a profile preview file
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>ApiResponse of int?</returns>
         ApiResponse<int?> PreviewsGetPageNumberByDocnumberWithHttpInfo (int? docnumber);
         /// <summary>
-        /// 
+        /// This call returns the file of a preview file page
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <param name="pageindex"></param>
+        /// <param name="docnumber">docnumber of the profile</param>
+        /// <param name="pageindex">page number</param>
         /// <returns>Object</returns>
         Object PreviewsGetPreviewByPageNumberAndDocnumber (int? docnumber, int? pageindex);
 
         /// <summary>
-        /// 
+        /// This call returns the file of a preview file page
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <param name="pageindex"></param>
+        /// <param name="docnumber">docnumber of the profile</param>
+        /// <param name="pageindex">page number</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> PreviewsGetPreviewByPageNumberAndDocnumberWithHttpInfo (int? docnumber, int? pageindex);
         /// <summary>
-        /// 
+        /// This call return the preview of a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of profile</param>
         /// <returns>ProfilePreviewDTO</returns>
         ProfilePreviewDTO PreviewsGetProfilePreviewByDocnumber (int? docnumber);
 
         /// <summary>
-        /// 
+        /// This call return the preview of a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of profile</param>
         /// <returns>ApiResponse of ProfilePreviewDTO</returns>
         ApiResponse<ProfilePreviewDTO> PreviewsGetProfilePreviewByDocnumberWithHttpInfo (int? docnumber);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// This call returns the total page number of a profile preview file
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of int?</returns>
         System.Threading.Tasks.Task<int?> PreviewsGetPageNumberByDocnumberAsync (int? docnumber);
 
         /// <summary>
-        /// 
+        /// This call returns the total page number of a profile preview file
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of ApiResponse (int?)</returns>
         System.Threading.Tasks.Task<ApiResponse<int?>> PreviewsGetPageNumberByDocnumberAsyncWithHttpInfo (int? docnumber);
         /// <summary>
-        /// 
+        /// This call returns the file of a preview file page
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <param name="pageindex"></param>
+        /// <param name="docnumber">docnumber of the profile</param>
+        /// <param name="pageindex">page number</param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> PreviewsGetPreviewByPageNumberAndDocnumberAsync (int? docnumber, int? pageindex);
 
         /// <summary>
-        /// 
+        /// This call returns the file of a preview file page
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <param name="pageindex"></param>
+        /// <param name="docnumber">docnumber of the profile</param>
+        /// <param name="pageindex">page number</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PreviewsGetPreviewByPageNumberAndDocnumberAsyncWithHttpInfo (int? docnumber, int? pageindex);
         /// <summary>
-        /// 
+        /// This call return the preview of a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of profile</param>
         /// <returns>Task of ProfilePreviewDTO</returns>
         System.Threading.Tasks.Task<ProfilePreviewDTO> PreviewsGetProfilePreviewByDocnumberAsync (int? docnumber);
 
         /// <summary>
-        /// 
+        /// This call return the preview of a profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of profile</param>
         /// <returns>Task of ApiResponse (ProfilePreviewDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<ProfilePreviewDTO>> PreviewsGetProfilePreviewByDocnumberAsyncWithHttpInfo (int? docnumber);
         #endregion Asynchronous Operations
@@ -281,10 +281,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the total page number of a profile preview file 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>int?</returns>
         public int? PreviewsGetPageNumberByDocnumber (int? docnumber)
         {
@@ -293,10 +293,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the total page number of a profile preview file 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>ApiResponse of int?</returns>
         public ApiResponse< int? > PreviewsGetPageNumberByDocnumberWithHttpInfo (int? docnumber)
         {
@@ -304,7 +304,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling PreviewsApi->PreviewsGetPageNumberByDocnumber");
 
-            var localVarPath = "/api/previews/{docnumber}/totalpages";
+            var localVarPath = "/api/Previews/{docnumber}/totalpages";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -360,10 +360,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the total page number of a profile preview file 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of int?</returns>
         public async System.Threading.Tasks.Task<int?> PreviewsGetPageNumberByDocnumberAsync (int? docnumber)
         {
@@ -373,10 +373,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the total page number of a profile preview file 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of the profile</param>
         /// <returns>Task of ApiResponse (int?)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<int?>> PreviewsGetPageNumberByDocnumberAsyncWithHttpInfo (int? docnumber)
         {
@@ -384,7 +384,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling PreviewsApi->PreviewsGetPageNumberByDocnumber");
 
-            var localVarPath = "/api/previews/{docnumber}/totalpages";
+            var localVarPath = "/api/Previews/{docnumber}/totalpages";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -439,11 +439,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the file of a preview file page 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <param name="pageindex"></param>
+        /// <param name="docnumber">docnumber of the profile</param>
+        /// <param name="pageindex">page number</param>
         /// <returns>Object</returns>
         public Object PreviewsGetPreviewByPageNumberAndDocnumber (int? docnumber, int? pageindex)
         {
@@ -452,11 +452,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the file of a preview file page 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <param name="pageindex"></param>
+        /// <param name="docnumber">docnumber of the profile</param>
+        /// <param name="pageindex">page number</param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > PreviewsGetPreviewByPageNumberAndDocnumberWithHttpInfo (int? docnumber, int? pageindex)
         {
@@ -467,7 +467,7 @@ namespace IO.Swagger.Api
             if (pageindex == null)
                 throw new ApiException(400, "Missing required parameter 'pageindex' when calling PreviewsApi->PreviewsGetPreviewByPageNumberAndDocnumber");
 
-            var localVarPath = "/api/previews/{docnumber}/page/{pageindex}";
+            var localVarPath = "/api/Previews/{docnumber}/page/{pageindex}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -524,11 +524,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the file of a preview file page 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <param name="pageindex"></param>
+        /// <param name="docnumber">docnumber of the profile</param>
+        /// <param name="pageindex">page number</param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> PreviewsGetPreviewByPageNumberAndDocnumberAsync (int? docnumber, int? pageindex)
         {
@@ -538,11 +538,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the file of a preview file page 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
-        /// <param name="pageindex"></param>
+        /// <param name="docnumber">docnumber of the profile</param>
+        /// <param name="pageindex">page number</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PreviewsGetPreviewByPageNumberAndDocnumberAsyncWithHttpInfo (int? docnumber, int? pageindex)
         {
@@ -553,7 +553,7 @@ namespace IO.Swagger.Api
             if (pageindex == null)
                 throw new ApiException(400, "Missing required parameter 'pageindex' when calling PreviewsApi->PreviewsGetPreviewByPageNumberAndDocnumber");
 
-            var localVarPath = "/api/previews/{docnumber}/page/{pageindex}";
+            var localVarPath = "/api/Previews/{docnumber}/page/{pageindex}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -609,10 +609,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the preview of a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of profile</param>
         /// <returns>ProfilePreviewDTO</returns>
         public ProfilePreviewDTO PreviewsGetProfilePreviewByDocnumber (int? docnumber)
         {
@@ -621,10 +621,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the preview of a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of profile</param>
         /// <returns>ApiResponse of ProfilePreviewDTO</returns>
         public ApiResponse< ProfilePreviewDTO > PreviewsGetProfilePreviewByDocnumberWithHttpInfo (int? docnumber)
         {
@@ -632,7 +632,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling PreviewsApi->PreviewsGetProfilePreviewByDocnumber");
 
-            var localVarPath = "/api/previews/{docnumber}/profile";
+            var localVarPath = "/api/Previews/{docnumber}/profile";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -688,10 +688,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the preview of a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of profile</param>
         /// <returns>Task of ProfilePreviewDTO</returns>
         public async System.Threading.Tasks.Task<ProfilePreviewDTO> PreviewsGetProfilePreviewByDocnumberAsync (int? docnumber)
         {
@@ -701,10 +701,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the preview of a profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumber"></param>
+        /// <param name="docnumber">Docnumber of profile</param>
         /// <returns>Task of ApiResponse (ProfilePreviewDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ProfilePreviewDTO>> PreviewsGetProfilePreviewByDocnumberAsyncWithHttpInfo (int? docnumber)
         {
@@ -712,7 +712,7 @@ namespace IO.Swagger.Api
             if (docnumber == null)
                 throw new ApiException(400, "Missing required parameter 'docnumber' when calling PreviewsApi->PreviewsGetProfilePreviewByDocnumber");
 
-            var localVarPath = "/api/previews/{docnumber}/profile";
+            var localVarPath = "/api/Previews/{docnumber}/profile";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

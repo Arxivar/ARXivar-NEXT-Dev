@@ -207,7 +207,7 @@ namespace IO.Swagger.Api
         public ApiResponse< List<PeriodDTO> > PeriodsGetPeriodsWithHttpInfo ()
         {
 
-            var localVarPath = "/api/periods";
+            var localVarPath = "/api/Periods";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -281,7 +281,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<PeriodDTO>>> PeriodsGetPeriodsAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/periods";
+            var localVarPath = "/api/Periods";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

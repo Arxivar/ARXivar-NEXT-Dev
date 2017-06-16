@@ -42,8 +42,8 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BinderStateDto" /> class.
         /// </summary>
-        /// <param name="StateCode">StateCode.</param>
-        /// <param name="StateDescription">StateDescription.</param>
+        /// <param name="StateCode">Code of the state.</param>
+        /// <param name="StateDescription">Description of the state.</param>
         public BinderStateDto(int? StateCode = null, string StateDescription = null)
         {
             this.StateCode = StateCode;
@@ -51,13 +51,15 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets StateCode
+        /// Code of the state
         /// </summary>
+        /// <value>Code of the state</value>
         [DataMember(Name="stateCode", EmitDefaultValue=false)]
         public int? StateCode { get; set; }
         /// <summary>
-        /// Gets or Sets StateDescription
+        /// Description of the state
         /// </summary>
+        /// <value>Description of the state</value>
         [DataMember(Name="stateDescription", EmitDefaultValue=false)]
         public string StateDescription { get; set; }
         /// <summary>

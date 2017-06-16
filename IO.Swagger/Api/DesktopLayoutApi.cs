@@ -383,7 +383,7 @@ namespace IO.Swagger.Api
             if (layoutId == null)
                 throw new ApiException(400, "Missing required parameter 'layoutId' when calling DesktopLayoutApi->DesktopLayoutDelete");
 
-            var localVarPath = "/api/desktoplayout/{layoutId}";
+            var localVarPath = "/api/DesktopLayout/{layoutId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -458,7 +458,7 @@ namespace IO.Swagger.Api
             if (layoutId == null)
                 throw new ApiException(400, "Missing required parameter 'layoutId' when calling DesktopLayoutApi->DesktopLayoutDelete");
 
-            var localVarPath = "/api/desktoplayout/{layoutId}";
+            var localVarPath = "/api/DesktopLayout/{layoutId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -527,7 +527,7 @@ namespace IO.Swagger.Api
         public ApiResponse< List<LayoutDesktopDTO> > DesktopLayoutGetWithHttpInfo ()
         {
 
-            var localVarPath = "/api/desktoplayout";
+            var localVarPath = "/api/DesktopLayout";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -601,7 +601,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<List<LayoutDesktopDTO>>> DesktopLayoutGetAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/desktoplayout";
+            var localVarPath = "/api/DesktopLayout";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -678,7 +678,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling DesktopLayoutApi->DesktopLayoutGetById");
 
-            var localVarPath = "/api/desktoplayout/{id}";
+            var localVarPath = "/api/DesktopLayout/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -758,7 +758,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling DesktopLayoutApi->DesktopLayoutGetById");
 
-            var localVarPath = "/api/desktoplayout/{id}";
+            var localVarPath = "/api/DesktopLayout/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -836,7 +836,7 @@ namespace IO.Swagger.Api
             if (layout == null)
                 throw new ApiException(400, "Missing required parameter 'layout' when calling DesktopLayoutApi->DesktopLayoutPost");
 
-            var localVarPath = "/api/desktoplayout";
+            var localVarPath = "/api/DesktopLayout";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -928,7 +928,7 @@ namespace IO.Swagger.Api
             if (layout == null)
                 throw new ApiException(400, "Missing required parameter 'layout' when calling DesktopLayoutApi->DesktopLayoutPost");
 
-            var localVarPath = "/api/desktoplayout";
+            var localVarPath = "/api/DesktopLayout";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1022,7 +1022,7 @@ namespace IO.Swagger.Api
             if (layout == null)
                 throw new ApiException(400, "Missing required parameter 'layout' when calling DesktopLayoutApi->DesktopLayoutPut");
 
-            var localVarPath = "/api/desktoplayout/{id}";
+            var localVarPath = "/api/DesktopLayout/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1115,7 +1115,7 @@ namespace IO.Swagger.Api
             if (layout == null)
                 throw new ApiException(400, "Missing required parameter 'layout' when calling DesktopLayoutApi->DesktopLayoutPut");
 
-            var localVarPath = "/api/desktoplayout/{id}";
+            var localVarPath = "/api/DesktopLayout/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

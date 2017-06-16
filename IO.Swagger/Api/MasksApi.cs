@@ -37,26 +37,26 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// This call clone a mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="cloneOptions"></param>
+        /// <param name="id">Id of the mask</param>
+        /// <param name="cloneOptions">Cloning options</param>
         /// <returns></returns>
         void MasksCloneMask (string id, MaskCloneOptionsDto cloneOptions);
 
         /// <summary>
-        /// 
+        /// This call clone a mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="cloneOptions"></param>
+        /// <param name="id">Id of the mask</param>
+        /// <param name="cloneOptions">Cloning options</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> MasksCloneMaskWithHttpInfo (string id, MaskCloneOptionsDto cloneOptions);
         /// <summary>
@@ -81,91 +81,91 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> MasksDeleteWithHttpInfo (string id);
         /// <summary>
-        /// 
+        /// This call returns a mask by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the mask</param>
         /// <returns>MaskDTO</returns>
         MaskDTO MasksGetById (string id);
 
         /// <summary>
-        /// 
+        /// This call returns a mask by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the mask</param>
         /// <returns>ApiResponse of MaskDTO</returns>
         ApiResponse<MaskDTO> MasksGetByIdWithHttpInfo (string id);
         /// <summary>
-        /// 
+        /// This call returns all possibile Document Types for a mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
-        /// <param name="aoo"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
         /// <returns>List&lt;DocumentTypeBaseDTO&gt;</returns>
-        List<DocumentTypeBaseDTO> MasksGetDocumentTypesByMaskId (string maskId, string aoo);
+        List<DocumentTypeBaseDTO> MasksGetDocumentTypesByMaskId (string maskId, string businessUnitCode);
 
         /// <summary>
-        /// 
+        /// This call returns all possibile Document Types for a mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
-        /// <param name="aoo"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
         /// <returns>ApiResponse of List&lt;DocumentTypeBaseDTO&gt;</returns>
-        ApiResponse<List<DocumentTypeBaseDTO>> MasksGetDocumentTypesByMaskIdWithHttpInfo (string maskId, string aoo);
+        ApiResponse<List<DocumentTypeBaseDTO>> MasksGetDocumentTypesByMaskIdWithHttpInfo (string maskId, string businessUnitCode);
         /// <summary>
-        /// 
+        /// This call returns all possibile Document Types for a mask (tree format)
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
-        /// <param name="aoo"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
         /// <returns>DocumentTypeBaseTreeDTO</returns>
-        DocumentTypeBaseTreeDTO MasksGetDocumentTypesTreeByMaskId (string maskId, string aoo);
+        DocumentTypeBaseTreeDTO MasksGetDocumentTypesTreeByMaskId (string maskId, string businessUnitCode);
 
         /// <summary>
-        /// 
+        /// This call returns all possibile Document Types for a mask (tree format)
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
-        /// <param name="aoo"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
         /// <returns>ApiResponse of DocumentTypeBaseTreeDTO</returns>
-        ApiResponse<DocumentTypeBaseTreeDTO> MasksGetDocumentTypesTreeByMaskIdWithHttpInfo (string maskId, string aoo);
+        ApiResponse<DocumentTypeBaseTreeDTO> MasksGetDocumentTypesTreeByMaskIdWithHttpInfo (string maskId, string businessUnitCode);
         /// <summary>
-        /// 
+        /// This call return possibile fields by Document Types
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemid"></param>
+        /// <param name="systemid">System id of the Document Type</param>
         /// <returns>List&lt;MaskDetailDTO&gt;</returns>
         List<MaskDetailDTO> MasksGetFieldsByClasse (int? systemid);
 
         /// <summary>
-        /// 
+        /// This call return possibile fields by Document Types
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemid"></param>
+        /// <param name="systemid">System id of the Document Type</param>
         /// <returns>ApiResponse of List&lt;MaskDetailDTO&gt;</returns>
         ApiResponse<List<MaskDetailDTO>> MasksGetFieldsByClasseWithHttpInfo (int? systemid);
         /// <summary>
@@ -188,49 +188,72 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of List&lt;MaskDTO&gt;</returns>
         ApiResponse<List<MaskDTO>> MasksGetListWithHttpInfo ();
         /// <summary>
-        /// 
+        /// This call returns the permissions for a mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="maskId">Id of the mask</param>
         /// <returns>PermissionsDTO</returns>
-        PermissionsDTO MasksGetPermission (string id);
+        PermissionsDTO MasksGetPermission (string maskId);
 
         /// <summary>
-        /// 
+        /// This call returns the permissions for a mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="maskId">Id of the mask</param>
         /// <returns>ApiResponse of PermissionsDTO</returns>
-        ApiResponse<PermissionsDTO> MasksGetPermissionWithHttpInfo (string id);
+        ApiResponse<PermissionsDTO> MasksGetPermissionWithHttpInfo (string maskId);
         /// <summary>
-        /// 
+        /// This calls return the profile schema for a mask associated to a class additional field
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
+        /// <param name="additionalFieldName">Class additional name</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>MaskProfileSchemaDTO</returns>
+        MaskProfileSchemaDTO MasksGetProfileForClasseBox (string additionalFieldName, ProfileDTO profile = null);
+
+        /// <summary>
+        /// This calls return the profile schema for a mask associated to a class additional field
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="additionalFieldName">Class additional name</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>ApiResponse of MaskProfileSchemaDTO</returns>
+        ApiResponse<MaskProfileSchemaDTO> MasksGetProfileForClasseBoxWithHttpInfo (string additionalFieldName, ProfileDTO profile = null);
+        /// <summary>
+        /// This call returns the profile schema by a mask id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId">Id of the mask</param>
         /// <returns>MaskProfileSchemaDTO</returns>
         MaskProfileSchemaDTO MasksGetProfileSchemaByMaskId (string maskId);
 
         /// <summary>
-        /// 
+        /// This call returns the profile schema by a mask id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
+        /// <param name="maskId">Id of the mask</param>
         /// <returns>ApiResponse of MaskProfileSchemaDTO</returns>
         ApiResponse<MaskProfileSchemaDTO> MasksGetProfileSchemaByMaskIdWithHttpInfo (string maskId);
         /// <summary>
-        /// 
+        /// This call returns the root mask
         /// </summary>
         /// <remarks>
         /// 
@@ -240,7 +263,7 @@ namespace IO.Swagger.Api
         MaskDTO MasksGetRoot ();
 
         /// <summary>
-        /// 
+        /// This call returns the root mask
         /// </summary>
         /// <remarks>
         /// 
@@ -249,24 +272,24 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of MaskDTO</returns>
         ApiResponse<MaskDTO> MasksGetRootWithHttpInfo ();
         /// <summary>
-        /// 
+        /// This call creates a new mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="mask"></param>
+        /// <param name="mask">DTO of the new mask</param>
         /// <returns></returns>
         void MasksInserMask (MaskDTO mask);
 
         /// <summary>
-        /// 
+        /// This call creates a new mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="mask"></param>
+        /// <param name="mask">DTO of the new mask</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> MasksInserMaskWithHttpInfo (MaskDTO mask);
         /// <summary>
@@ -293,74 +316,74 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> MasksPostWithHttpInfo (string maskId, ProfileDTO profile = null);
         /// <summary>
-        /// 
+        /// This call updates the permissions for a mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns></returns>
-        void MasksSetPermission (string id, PermissionsDTO permissions);
+        void MasksSetPermission (string maskId, PermissionsDTO permissions);
 
         /// <summary>
-        /// 
+        /// This call updates the permissions for a mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> MasksSetPermissionWithHttpInfo (string id, PermissionsDTO permissions);
+        ApiResponse<Object> MasksSetPermissionWithHttpInfo (string maskId, PermissionsDTO permissions);
         /// <summary>
-        /// 
+        /// This call update a mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="mask"></param>
+        /// <param name="id">Id of the mask</param>
+        /// <param name="mask">DTO of the mask to update</param>
         /// <returns>MaskDTO</returns>
         MaskDTO MasksUpdateMask (string id, MaskDTO mask);
 
         /// <summary>
-        /// 
+        /// This call update a mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="mask"></param>
+        /// <param name="id">Id of the mask</param>
+        /// <param name="mask">DTO of the mask to update</param>
         /// <returns>ApiResponse of MaskDTO</returns>
         ApiResponse<MaskDTO> MasksUpdateMaskWithHttpInfo (string id, MaskDTO mask);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// This call clone a mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="cloneOptions"></param>
+        /// <param name="id">Id of the mask</param>
+        /// <param name="cloneOptions">Cloning options</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task MasksCloneMaskAsync (string id, MaskCloneOptionsDto cloneOptions);
 
         /// <summary>
-        /// 
+        /// This call clone a mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="cloneOptions"></param>
+        /// <param name="id">Id of the mask</param>
+        /// <param name="cloneOptions">Cloning options</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> MasksCloneMaskAsyncWithHttpInfo (string id, MaskCloneOptionsDto cloneOptions);
         /// <summary>
@@ -385,91 +408,91 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> MasksDeleteAsyncWithHttpInfo (string id);
         /// <summary>
-        /// 
+        /// This call returns a mask by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the mask</param>
         /// <returns>Task of MaskDTO</returns>
         System.Threading.Tasks.Task<MaskDTO> MasksGetByIdAsync (string id);
 
         /// <summary>
-        /// 
+        /// This call returns a mask by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the mask</param>
         /// <returns>Task of ApiResponse (MaskDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<MaskDTO>> MasksGetByIdAsyncWithHttpInfo (string id);
         /// <summary>
-        /// 
+        /// This call returns all possibile Document Types for a mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
-        /// <param name="aoo"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
         /// <returns>Task of List&lt;DocumentTypeBaseDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<DocumentTypeBaseDTO>> MasksGetDocumentTypesByMaskIdAsync (string maskId, string aoo);
+        System.Threading.Tasks.Task<List<DocumentTypeBaseDTO>> MasksGetDocumentTypesByMaskIdAsync (string maskId, string businessUnitCode);
 
         /// <summary>
-        /// 
+        /// This call returns all possibile Document Types for a mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
-        /// <param name="aoo"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
         /// <returns>Task of ApiResponse (List&lt;DocumentTypeBaseDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<DocumentTypeBaseDTO>>> MasksGetDocumentTypesByMaskIdAsyncWithHttpInfo (string maskId, string aoo);
+        System.Threading.Tasks.Task<ApiResponse<List<DocumentTypeBaseDTO>>> MasksGetDocumentTypesByMaskIdAsyncWithHttpInfo (string maskId, string businessUnitCode);
         /// <summary>
-        /// 
+        /// This call returns all possibile Document Types for a mask (tree format)
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
-        /// <param name="aoo"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
         /// <returns>Task of DocumentTypeBaseTreeDTO</returns>
-        System.Threading.Tasks.Task<DocumentTypeBaseTreeDTO> MasksGetDocumentTypesTreeByMaskIdAsync (string maskId, string aoo);
+        System.Threading.Tasks.Task<DocumentTypeBaseTreeDTO> MasksGetDocumentTypesTreeByMaskIdAsync (string maskId, string businessUnitCode);
 
         /// <summary>
-        /// 
+        /// This call returns all possibile Document Types for a mask (tree format)
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
-        /// <param name="aoo"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
         /// <returns>Task of ApiResponse (DocumentTypeBaseTreeDTO)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentTypeBaseTreeDTO>> MasksGetDocumentTypesTreeByMaskIdAsyncWithHttpInfo (string maskId, string aoo);
+        System.Threading.Tasks.Task<ApiResponse<DocumentTypeBaseTreeDTO>> MasksGetDocumentTypesTreeByMaskIdAsyncWithHttpInfo (string maskId, string businessUnitCode);
         /// <summary>
-        /// 
+        /// This call return possibile fields by Document Types
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemid"></param>
+        /// <param name="systemid">System id of the Document Type</param>
         /// <returns>Task of List&lt;MaskDetailDTO&gt;</returns>
         System.Threading.Tasks.Task<List<MaskDetailDTO>> MasksGetFieldsByClasseAsync (int? systemid);
 
         /// <summary>
-        /// 
+        /// This call return possibile fields by Document Types
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemid"></param>
+        /// <param name="systemid">System id of the Document Type</param>
         /// <returns>Task of ApiResponse (List&lt;MaskDetailDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<MaskDetailDTO>>> MasksGetFieldsByClasseAsyncWithHttpInfo (int? systemid);
         /// <summary>
@@ -492,49 +515,72 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (List&lt;MaskDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<MaskDTO>>> MasksGetListAsyncWithHttpInfo ();
         /// <summary>
-        /// 
+        /// This call returns the permissions for a mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="maskId">Id of the mask</param>
         /// <returns>Task of PermissionsDTO</returns>
-        System.Threading.Tasks.Task<PermissionsDTO> MasksGetPermissionAsync (string id);
+        System.Threading.Tasks.Task<PermissionsDTO> MasksGetPermissionAsync (string maskId);
 
         /// <summary>
-        /// 
+        /// This call returns the permissions for a mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="maskId">Id of the mask</param>
         /// <returns>Task of ApiResponse (PermissionsDTO)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PermissionsDTO>> MasksGetPermissionAsyncWithHttpInfo (string id);
+        System.Threading.Tasks.Task<ApiResponse<PermissionsDTO>> MasksGetPermissionAsyncWithHttpInfo (string maskId);
         /// <summary>
-        /// 
+        /// This calls return the profile schema for a mask associated to a class additional field
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
+        /// <param name="additionalFieldName">Class additional name</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>Task of MaskProfileSchemaDTO</returns>
+        System.Threading.Tasks.Task<MaskProfileSchemaDTO> MasksGetProfileForClasseBoxAsync (string additionalFieldName, ProfileDTO profile = null);
+
+        /// <summary>
+        /// This calls return the profile schema for a mask associated to a class additional field
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="additionalFieldName">Class additional name</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>Task of ApiResponse (MaskProfileSchemaDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MaskProfileSchemaDTO>> MasksGetProfileForClasseBoxAsyncWithHttpInfo (string additionalFieldName, ProfileDTO profile = null);
+        /// <summary>
+        /// This call returns the profile schema by a mask id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId">Id of the mask</param>
         /// <returns>Task of MaskProfileSchemaDTO</returns>
         System.Threading.Tasks.Task<MaskProfileSchemaDTO> MasksGetProfileSchemaByMaskIdAsync (string maskId);
 
         /// <summary>
-        /// 
+        /// This call returns the profile schema by a mask id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
+        /// <param name="maskId">Id of the mask</param>
         /// <returns>Task of ApiResponse (MaskProfileSchemaDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<MaskProfileSchemaDTO>> MasksGetProfileSchemaByMaskIdAsyncWithHttpInfo (string maskId);
         /// <summary>
-        /// 
+        /// This call returns the root mask
         /// </summary>
         /// <remarks>
         /// 
@@ -544,7 +590,7 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<MaskDTO> MasksGetRootAsync ();
 
         /// <summary>
-        /// 
+        /// This call returns the root mask
         /// </summary>
         /// <remarks>
         /// 
@@ -553,24 +599,24 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (MaskDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<MaskDTO>> MasksGetRootAsyncWithHttpInfo ();
         /// <summary>
-        /// 
+        /// This call creates a new mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="mask"></param>
+        /// <param name="mask">DTO of the new mask</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task MasksInserMaskAsync (MaskDTO mask);
 
         /// <summary>
-        /// 
+        /// This call creates a new mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="mask"></param>
+        /// <param name="mask">DTO of the new mask</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> MasksInserMaskAsyncWithHttpInfo (MaskDTO mask);
         /// <summary>
@@ -597,49 +643,49 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> MasksPostAsyncWithHttpInfo (string maskId, ProfileDTO profile = null);
         /// <summary>
-        /// 
+        /// This call updates the permissions for a mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task MasksSetPermissionAsync (string id, PermissionsDTO permissions);
+        System.Threading.Tasks.Task MasksSetPermissionAsync (string maskId, PermissionsDTO permissions);
 
         /// <summary>
-        /// 
+        /// This call updates the permissions for a mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> MasksSetPermissionAsyncWithHttpInfo (string id, PermissionsDTO permissions);
+        System.Threading.Tasks.Task<ApiResponse<Object>> MasksSetPermissionAsyncWithHttpInfo (string maskId, PermissionsDTO permissions);
         /// <summary>
-        /// 
+        /// This call update a mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="mask"></param>
+        /// <param name="id">Id of the mask</param>
+        /// <param name="mask">DTO of the mask to update</param>
         /// <returns>Task of MaskDTO</returns>
         System.Threading.Tasks.Task<MaskDTO> MasksUpdateMaskAsync (string id, MaskDTO mask);
 
         /// <summary>
-        /// 
+        /// This call update a mask
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="mask"></param>
+        /// <param name="id">Id of the mask</param>
+        /// <param name="mask">DTO of the mask to update</param>
         /// <returns>Task of ApiResponse (MaskDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<MaskDTO>> MasksUpdateMaskAsyncWithHttpInfo (string id, MaskDTO mask);
         #endregion Asynchronous Operations
@@ -755,11 +801,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call clone a mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="cloneOptions"></param>
+        /// <param name="id">Id of the mask</param>
+        /// <param name="cloneOptions">Cloning options</param>
         /// <returns></returns>
         public void MasksCloneMask (string id, MaskCloneOptionsDto cloneOptions)
         {
@@ -767,11 +813,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call clone a mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="cloneOptions"></param>
+        /// <param name="id">Id of the mask</param>
+        /// <param name="cloneOptions">Cloning options</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> MasksCloneMaskWithHttpInfo (string id, MaskCloneOptionsDto cloneOptions)
         {
@@ -782,7 +828,7 @@ namespace IO.Swagger.Api
             if (cloneOptions == null)
                 throw new ApiException(400, "Missing required parameter 'cloneOptions' when calling MasksApi->MasksCloneMask");
 
-            var localVarPath = "/api/masks/{id}/Clone";
+            var localVarPath = "/api/Masks/{id}/Clone";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -847,11 +893,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call clone a mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="cloneOptions"></param>
+        /// <param name="id">Id of the mask</param>
+        /// <param name="cloneOptions">Cloning options</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task MasksCloneMaskAsync (string id, MaskCloneOptionsDto cloneOptions)
         {
@@ -860,11 +906,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call clone a mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="cloneOptions"></param>
+        /// <param name="id">Id of the mask</param>
+        /// <param name="cloneOptions">Cloning options</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> MasksCloneMaskAsyncWithHttpInfo (string id, MaskCloneOptionsDto cloneOptions)
         {
@@ -875,7 +921,7 @@ namespace IO.Swagger.Api
             if (cloneOptions == null)
                 throw new ApiException(400, "Missing required parameter 'cloneOptions' when calling MasksApi->MasksCloneMask");
 
-            var localVarPath = "/api/masks/{id}/Clone";
+            var localVarPath = "/api/Masks/{id}/Clone";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -962,7 +1008,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling MasksApi->MasksDelete");
 
-            var localVarPath = "/api/masks/{id}";
+            var localVarPath = "/api/Masks/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1042,7 +1088,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling MasksApi->MasksDelete");
 
-            var localVarPath = "/api/masks/{id}";
+            var localVarPath = "/api/Masks/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1097,10 +1143,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a mask by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the mask</param>
         /// <returns>MaskDTO</returns>
         public MaskDTO MasksGetById (string id)
         {
@@ -1109,10 +1155,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a mask by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the mask</param>
         /// <returns>ApiResponse of MaskDTO</returns>
         public ApiResponse< MaskDTO > MasksGetByIdWithHttpInfo (string id)
         {
@@ -1120,7 +1166,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling MasksApi->MasksGetById");
 
-            var localVarPath = "/api/masks/{id}";
+            var localVarPath = "/api/Masks/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1176,10 +1222,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a mask by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the mask</param>
         /// <returns>Task of MaskDTO</returns>
         public async System.Threading.Tasks.Task<MaskDTO> MasksGetByIdAsync (string id)
         {
@@ -1189,10 +1235,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a mask by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="id">Id of the mask</param>
         /// <returns>Task of ApiResponse (MaskDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<MaskDTO>> MasksGetByIdAsyncWithHttpInfo (string id)
         {
@@ -1200,7 +1246,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling MasksApi->MasksGetById");
 
-            var localVarPath = "/api/masks/{id}";
+            var localVarPath = "/api/Masks/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1255,35 +1301,35 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all possibile Document Types for a mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
-        /// <param name="aoo"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
         /// <returns>List&lt;DocumentTypeBaseDTO&gt;</returns>
-        public List<DocumentTypeBaseDTO> MasksGetDocumentTypesByMaskId (string maskId, string aoo)
+        public List<DocumentTypeBaseDTO> MasksGetDocumentTypesByMaskId (string maskId, string businessUnitCode)
         {
-             ApiResponse<List<DocumentTypeBaseDTO>> localVarResponse = MasksGetDocumentTypesByMaskIdWithHttpInfo(maskId, aoo);
+             ApiResponse<List<DocumentTypeBaseDTO>> localVarResponse = MasksGetDocumentTypesByMaskIdWithHttpInfo(maskId, businessUnitCode);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        ///  
+        /// This call returns all possibile Document Types for a mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
-        /// <param name="aoo"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
         /// <returns>ApiResponse of List&lt;DocumentTypeBaseDTO&gt;</returns>
-        public ApiResponse< List<DocumentTypeBaseDTO> > MasksGetDocumentTypesByMaskIdWithHttpInfo (string maskId, string aoo)
+        public ApiResponse< List<DocumentTypeBaseDTO> > MasksGetDocumentTypesByMaskIdWithHttpInfo (string maskId, string businessUnitCode)
         {
             // verify the required parameter 'maskId' is set
             if (maskId == null)
                 throw new ApiException(400, "Missing required parameter 'maskId' when calling MasksApi->MasksGetDocumentTypesByMaskId");
-            // verify the required parameter 'aoo' is set
-            if (aoo == null)
-                throw new ApiException(400, "Missing required parameter 'aoo' when calling MasksApi->MasksGetDocumentTypesByMaskId");
+            // verify the required parameter 'businessUnitCode' is set
+            if (businessUnitCode == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitCode' when calling MasksApi->MasksGetDocumentTypesByMaskId");
 
-            var localVarPath = "/api/masks/{maskId}/DocumentTypes/{aoo}";
+            var localVarPath = "/api/Masks/{maskId}/DocumentTypes/{businessUnitCode}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1311,7 +1357,7 @@ namespace IO.Swagger.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (maskId != null) localVarPathParams.Add("maskId", Configuration.ApiClient.ParameterToString(maskId)); // path parameter
-            if (aoo != null) localVarPathParams.Add("aoo", Configuration.ApiClient.ParameterToString(aoo)); // path parameter
+            if (businessUnitCode != null) localVarPathParams.Add("businessUnitCode", Configuration.ApiClient.ParameterToString(businessUnitCode)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1340,36 +1386,36 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all possibile Document Types for a mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
-        /// <param name="aoo"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
         /// <returns>Task of List&lt;DocumentTypeBaseDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<DocumentTypeBaseDTO>> MasksGetDocumentTypesByMaskIdAsync (string maskId, string aoo)
+        public async System.Threading.Tasks.Task<List<DocumentTypeBaseDTO>> MasksGetDocumentTypesByMaskIdAsync (string maskId, string businessUnitCode)
         {
-             ApiResponse<List<DocumentTypeBaseDTO>> localVarResponse = await MasksGetDocumentTypesByMaskIdAsyncWithHttpInfo(maskId, aoo);
+             ApiResponse<List<DocumentTypeBaseDTO>> localVarResponse = await MasksGetDocumentTypesByMaskIdAsyncWithHttpInfo(maskId, businessUnitCode);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        ///  
+        /// This call returns all possibile Document Types for a mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
-        /// <param name="aoo"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
         /// <returns>Task of ApiResponse (List&lt;DocumentTypeBaseDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<DocumentTypeBaseDTO>>> MasksGetDocumentTypesByMaskIdAsyncWithHttpInfo (string maskId, string aoo)
+        public async System.Threading.Tasks.Task<ApiResponse<List<DocumentTypeBaseDTO>>> MasksGetDocumentTypesByMaskIdAsyncWithHttpInfo (string maskId, string businessUnitCode)
         {
             // verify the required parameter 'maskId' is set
             if (maskId == null)
                 throw new ApiException(400, "Missing required parameter 'maskId' when calling MasksApi->MasksGetDocumentTypesByMaskId");
-            // verify the required parameter 'aoo' is set
-            if (aoo == null)
-                throw new ApiException(400, "Missing required parameter 'aoo' when calling MasksApi->MasksGetDocumentTypesByMaskId");
+            // verify the required parameter 'businessUnitCode' is set
+            if (businessUnitCode == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitCode' when calling MasksApi->MasksGetDocumentTypesByMaskId");
 
-            var localVarPath = "/api/masks/{maskId}/DocumentTypes/{aoo}";
+            var localVarPath = "/api/Masks/{maskId}/DocumentTypes/{businessUnitCode}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1397,7 +1443,7 @@ namespace IO.Swagger.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (maskId != null) localVarPathParams.Add("maskId", Configuration.ApiClient.ParameterToString(maskId)); // path parameter
-            if (aoo != null) localVarPathParams.Add("aoo", Configuration.ApiClient.ParameterToString(aoo)); // path parameter
+            if (businessUnitCode != null) localVarPathParams.Add("businessUnitCode", Configuration.ApiClient.ParameterToString(businessUnitCode)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1425,35 +1471,35 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all possibile Document Types for a mask (tree format) 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
-        /// <param name="aoo"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
         /// <returns>DocumentTypeBaseTreeDTO</returns>
-        public DocumentTypeBaseTreeDTO MasksGetDocumentTypesTreeByMaskId (string maskId, string aoo)
+        public DocumentTypeBaseTreeDTO MasksGetDocumentTypesTreeByMaskId (string maskId, string businessUnitCode)
         {
-             ApiResponse<DocumentTypeBaseTreeDTO> localVarResponse = MasksGetDocumentTypesTreeByMaskIdWithHttpInfo(maskId, aoo);
+             ApiResponse<DocumentTypeBaseTreeDTO> localVarResponse = MasksGetDocumentTypesTreeByMaskIdWithHttpInfo(maskId, businessUnitCode);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        ///  
+        /// This call returns all possibile Document Types for a mask (tree format) 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
-        /// <param name="aoo"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
         /// <returns>ApiResponse of DocumentTypeBaseTreeDTO</returns>
-        public ApiResponse< DocumentTypeBaseTreeDTO > MasksGetDocumentTypesTreeByMaskIdWithHttpInfo (string maskId, string aoo)
+        public ApiResponse< DocumentTypeBaseTreeDTO > MasksGetDocumentTypesTreeByMaskIdWithHttpInfo (string maskId, string businessUnitCode)
         {
             // verify the required parameter 'maskId' is set
             if (maskId == null)
                 throw new ApiException(400, "Missing required parameter 'maskId' when calling MasksApi->MasksGetDocumentTypesTreeByMaskId");
-            // verify the required parameter 'aoo' is set
-            if (aoo == null)
-                throw new ApiException(400, "Missing required parameter 'aoo' when calling MasksApi->MasksGetDocumentTypesTreeByMaskId");
+            // verify the required parameter 'businessUnitCode' is set
+            if (businessUnitCode == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitCode' when calling MasksApi->MasksGetDocumentTypesTreeByMaskId");
 
-            var localVarPath = "/api/masks/{maskId}/DocumentTypesTree/{aoo}";
+            var localVarPath = "/api/Masks/{maskId}/DocumentTypesTree/{businessUnitCode}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1481,7 +1527,7 @@ namespace IO.Swagger.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (maskId != null) localVarPathParams.Add("maskId", Configuration.ApiClient.ParameterToString(maskId)); // path parameter
-            if (aoo != null) localVarPathParams.Add("aoo", Configuration.ApiClient.ParameterToString(aoo)); // path parameter
+            if (businessUnitCode != null) localVarPathParams.Add("businessUnitCode", Configuration.ApiClient.ParameterToString(businessUnitCode)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1510,36 +1556,36 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all possibile Document Types for a mask (tree format) 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
-        /// <param name="aoo"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
         /// <returns>Task of DocumentTypeBaseTreeDTO</returns>
-        public async System.Threading.Tasks.Task<DocumentTypeBaseTreeDTO> MasksGetDocumentTypesTreeByMaskIdAsync (string maskId, string aoo)
+        public async System.Threading.Tasks.Task<DocumentTypeBaseTreeDTO> MasksGetDocumentTypesTreeByMaskIdAsync (string maskId, string businessUnitCode)
         {
-             ApiResponse<DocumentTypeBaseTreeDTO> localVarResponse = await MasksGetDocumentTypesTreeByMaskIdAsyncWithHttpInfo(maskId, aoo);
+             ApiResponse<DocumentTypeBaseTreeDTO> localVarResponse = await MasksGetDocumentTypesTreeByMaskIdAsyncWithHttpInfo(maskId, businessUnitCode);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        ///  
+        /// This call returns all possibile Document Types for a mask (tree format) 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
-        /// <param name="aoo"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
         /// <returns>Task of ApiResponse (DocumentTypeBaseTreeDTO)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentTypeBaseTreeDTO>> MasksGetDocumentTypesTreeByMaskIdAsyncWithHttpInfo (string maskId, string aoo)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentTypeBaseTreeDTO>> MasksGetDocumentTypesTreeByMaskIdAsyncWithHttpInfo (string maskId, string businessUnitCode)
         {
             // verify the required parameter 'maskId' is set
             if (maskId == null)
                 throw new ApiException(400, "Missing required parameter 'maskId' when calling MasksApi->MasksGetDocumentTypesTreeByMaskId");
-            // verify the required parameter 'aoo' is set
-            if (aoo == null)
-                throw new ApiException(400, "Missing required parameter 'aoo' when calling MasksApi->MasksGetDocumentTypesTreeByMaskId");
+            // verify the required parameter 'businessUnitCode' is set
+            if (businessUnitCode == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitCode' when calling MasksApi->MasksGetDocumentTypesTreeByMaskId");
 
-            var localVarPath = "/api/masks/{maskId}/DocumentTypesTree/{aoo}";
+            var localVarPath = "/api/Masks/{maskId}/DocumentTypesTree/{businessUnitCode}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1567,7 +1613,7 @@ namespace IO.Swagger.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (maskId != null) localVarPathParams.Add("maskId", Configuration.ApiClient.ParameterToString(maskId)); // path parameter
-            if (aoo != null) localVarPathParams.Add("aoo", Configuration.ApiClient.ParameterToString(aoo)); // path parameter
+            if (businessUnitCode != null) localVarPathParams.Add("businessUnitCode", Configuration.ApiClient.ParameterToString(businessUnitCode)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1595,10 +1641,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return possibile fields by Document Types 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemid"></param>
+        /// <param name="systemid">System id of the Document Type</param>
         /// <returns>List&lt;MaskDetailDTO&gt;</returns>
         public List<MaskDetailDTO> MasksGetFieldsByClasse (int? systemid)
         {
@@ -1607,10 +1653,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return possibile fields by Document Types 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemid"></param>
+        /// <param name="systemid">System id of the Document Type</param>
         /// <returns>ApiResponse of List&lt;MaskDetailDTO&gt;</returns>
         public ApiResponse< List<MaskDetailDTO> > MasksGetFieldsByClasseWithHttpInfo (int? systemid)
         {
@@ -1618,7 +1664,7 @@ namespace IO.Swagger.Api
             if (systemid == null)
                 throw new ApiException(400, "Missing required parameter 'systemid' when calling MasksApi->MasksGetFieldsByClasse");
 
-            var localVarPath = "/api/masks/fieldsbydocumenttype/{systemid}";
+            var localVarPath = "/api/Masks/fieldsbydocumenttype/{systemid}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1674,10 +1720,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return possibile fields by Document Types 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemid"></param>
+        /// <param name="systemid">System id of the Document Type</param>
         /// <returns>Task of List&lt;MaskDetailDTO&gt;</returns>
         public async System.Threading.Tasks.Task<List<MaskDetailDTO>> MasksGetFieldsByClasseAsync (int? systemid)
         {
@@ -1687,10 +1733,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return possibile fields by Document Types 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="systemid"></param>
+        /// <param name="systemid">System id of the Document Type</param>
         /// <returns>Task of ApiResponse (List&lt;MaskDetailDTO&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<MaskDetailDTO>>> MasksGetFieldsByClasseAsyncWithHttpInfo (int? systemid)
         {
@@ -1698,7 +1744,7 @@ namespace IO.Swagger.Api
             if (systemid == null)
                 throw new ApiException(400, "Missing required parameter 'systemid' when calling MasksApi->MasksGetFieldsByClasse");
 
-            var localVarPath = "/api/masks/fieldsbydocumenttype/{systemid}";
+            var localVarPath = "/api/Masks/fieldsbydocumenttype/{systemid}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1899,30 +1945,30 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the permissions for a mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="maskId">Id of the mask</param>
         /// <returns>PermissionsDTO</returns>
-        public PermissionsDTO MasksGetPermission (string id)
+        public PermissionsDTO MasksGetPermission (string maskId)
         {
-             ApiResponse<PermissionsDTO> localVarResponse = MasksGetPermissionWithHttpInfo(id);
+             ApiResponse<PermissionsDTO> localVarResponse = MasksGetPermissionWithHttpInfo(maskId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        ///  
+        /// This call returns the permissions for a mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="maskId">Id of the mask</param>
         /// <returns>ApiResponse of PermissionsDTO</returns>
-        public ApiResponse< PermissionsDTO > MasksGetPermissionWithHttpInfo (string id)
+        public ApiResponse< PermissionsDTO > MasksGetPermissionWithHttpInfo (string maskId)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling MasksApi->MasksGetPermission");
+            // verify the required parameter 'maskId' is set
+            if (maskId == null)
+                throw new ApiException(400, "Missing required parameter 'maskId' when calling MasksApi->MasksGetPermission");
 
-            var localVarPath = "/api/masks/{id}/Permissions";
+            var localVarPath = "/api/Masks/{maskId}/Permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1949,7 +1995,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (maskId != null) localVarPathParams.Add("maskId", Configuration.ApiClient.ParameterToString(maskId)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1978,31 +2024,31 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the permissions for a mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="maskId">Id of the mask</param>
         /// <returns>Task of PermissionsDTO</returns>
-        public async System.Threading.Tasks.Task<PermissionsDTO> MasksGetPermissionAsync (string id)
+        public async System.Threading.Tasks.Task<PermissionsDTO> MasksGetPermissionAsync (string maskId)
         {
-             ApiResponse<PermissionsDTO> localVarResponse = await MasksGetPermissionAsyncWithHttpInfo(id);
+             ApiResponse<PermissionsDTO> localVarResponse = await MasksGetPermissionAsyncWithHttpInfo(maskId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        ///  
+        /// This call returns the permissions for a mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="maskId">Id of the mask</param>
         /// <returns>Task of ApiResponse (PermissionsDTO)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PermissionsDTO>> MasksGetPermissionAsyncWithHttpInfo (string id)
+        public async System.Threading.Tasks.Task<ApiResponse<PermissionsDTO>> MasksGetPermissionAsyncWithHttpInfo (string maskId)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling MasksApi->MasksGetPermission");
+            // verify the required parameter 'maskId' is set
+            if (maskId == null)
+                throw new ApiException(400, "Missing required parameter 'maskId' when calling MasksApi->MasksGetPermission");
 
-            var localVarPath = "/api/masks/{id}/Permissions";
+            var localVarPath = "/api/Masks/{maskId}/Permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2029,7 +2075,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (maskId != null) localVarPathParams.Add("maskId", Configuration.ApiClient.ParameterToString(maskId)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -2057,10 +2103,188 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This calls return the profile schema for a mask associated to a class additional field 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
+        /// <param name="additionalFieldName">Class additional name</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>MaskProfileSchemaDTO</returns>
+        public MaskProfileSchemaDTO MasksGetProfileForClasseBox (string additionalFieldName, ProfileDTO profile = null)
+        {
+             ApiResponse<MaskProfileSchemaDTO> localVarResponse = MasksGetProfileForClasseBoxWithHttpInfo(additionalFieldName, profile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This calls return the profile schema for a mask associated to a class additional field 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="additionalFieldName">Class additional name</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>ApiResponse of MaskProfileSchemaDTO</returns>
+        public ApiResponse< MaskProfileSchemaDTO > MasksGetProfileForClasseBoxWithHttpInfo (string additionalFieldName, ProfileDTO profile = null)
+        {
+            // verify the required parameter 'additionalFieldName' is set
+            if (additionalFieldName == null)
+                throw new ApiException(400, "Missing required parameter 'additionalFieldName' when calling MasksApi->MasksGetProfileForClasseBox");
+
+            var localVarPath = "/api/Masks/byclassadditionalfield/{additionalFieldName}/profileSchema";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (additionalFieldName != null) localVarPathParams.Add("additionalFieldName", Configuration.ApiClient.ParameterToString(additionalFieldName)); // path parameter
+            if (profile != null && profile.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(profile); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = profile; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MasksGetProfileForClasseBox", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MaskProfileSchemaDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MaskProfileSchemaDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MaskProfileSchemaDTO)));
+            
+        }
+
+        /// <summary>
+        /// This calls return the profile schema for a mask associated to a class additional field 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="additionalFieldName">Class additional name</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>Task of MaskProfileSchemaDTO</returns>
+        public async System.Threading.Tasks.Task<MaskProfileSchemaDTO> MasksGetProfileForClasseBoxAsync (string additionalFieldName, ProfileDTO profile = null)
+        {
+             ApiResponse<MaskProfileSchemaDTO> localVarResponse = await MasksGetProfileForClasseBoxAsyncWithHttpInfo(additionalFieldName, profile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This calls return the profile schema for a mask associated to a class additional field 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="additionalFieldName">Class additional name</param>
+        /// <param name="profile"> (optional)</param>
+        /// <returns>Task of ApiResponse (MaskProfileSchemaDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MaskProfileSchemaDTO>> MasksGetProfileForClasseBoxAsyncWithHttpInfo (string additionalFieldName, ProfileDTO profile = null)
+        {
+            // verify the required parameter 'additionalFieldName' is set
+            if (additionalFieldName == null)
+                throw new ApiException(400, "Missing required parameter 'additionalFieldName' when calling MasksApi->MasksGetProfileForClasseBox");
+
+            var localVarPath = "/api/Masks/byclassadditionalfield/{additionalFieldName}/profileSchema";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (additionalFieldName != null) localVarPathParams.Add("additionalFieldName", Configuration.ApiClient.ParameterToString(additionalFieldName)); // path parameter
+            if (profile != null && profile.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(profile); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = profile; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MasksGetProfileForClasseBox", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MaskProfileSchemaDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MaskProfileSchemaDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MaskProfileSchemaDTO)));
+            
+        }
+
+        /// <summary>
+        /// This call returns the profile schema by a mask id 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId">Id of the mask</param>
         /// <returns>MaskProfileSchemaDTO</returns>
         public MaskProfileSchemaDTO MasksGetProfileSchemaByMaskId (string maskId)
         {
@@ -2069,10 +2293,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the profile schema by a mask id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
+        /// <param name="maskId">Id of the mask</param>
         /// <returns>ApiResponse of MaskProfileSchemaDTO</returns>
         public ApiResponse< MaskProfileSchemaDTO > MasksGetProfileSchemaByMaskIdWithHttpInfo (string maskId)
         {
@@ -2080,7 +2304,7 @@ namespace IO.Swagger.Api
             if (maskId == null)
                 throw new ApiException(400, "Missing required parameter 'maskId' when calling MasksApi->MasksGetProfileSchemaByMaskId");
 
-            var localVarPath = "/api/masks/{maskId}/profileSchema";
+            var localVarPath = "/api/Masks/{maskId}/profileSchema";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2136,10 +2360,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the profile schema by a mask id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
+        /// <param name="maskId">Id of the mask</param>
         /// <returns>Task of MaskProfileSchemaDTO</returns>
         public async System.Threading.Tasks.Task<MaskProfileSchemaDTO> MasksGetProfileSchemaByMaskIdAsync (string maskId)
         {
@@ -2149,10 +2373,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the profile schema by a mask id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="maskId"></param>
+        /// <param name="maskId">Id of the mask</param>
         /// <returns>Task of ApiResponse (MaskProfileSchemaDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<MaskProfileSchemaDTO>> MasksGetProfileSchemaByMaskIdAsyncWithHttpInfo (string maskId)
         {
@@ -2160,7 +2384,7 @@ namespace IO.Swagger.Api
             if (maskId == null)
                 throw new ApiException(400, "Missing required parameter 'maskId' when calling MasksApi->MasksGetProfileSchemaByMaskId");
 
-            var localVarPath = "/api/masks/{maskId}/profileSchema";
+            var localVarPath = "/api/Masks/{maskId}/profileSchema";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2215,7 +2439,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the root mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>MaskDTO</returns>
@@ -2226,14 +2450,14 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the root mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of MaskDTO</returns>
         public ApiResponse< MaskDTO > MasksGetRootWithHttpInfo ()
         {
 
-            var localVarPath = "/api/masks/root";
+            var localVarPath = "/api/Masks/root";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2288,7 +2512,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the root mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of MaskDTO</returns>
@@ -2300,14 +2524,14 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the root mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (MaskDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<MaskDTO>> MasksGetRootAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/masks/root";
+            var localVarPath = "/api/Masks/root";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2361,10 +2585,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call creates a new mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="mask"></param>
+        /// <param name="mask">DTO of the new mask</param>
         /// <returns></returns>
         public void MasksInserMask (MaskDTO mask)
         {
@@ -2372,10 +2596,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call creates a new mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="mask"></param>
+        /// <param name="mask">DTO of the new mask</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> MasksInserMaskWithHttpInfo (MaskDTO mask)
         {
@@ -2447,10 +2671,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call creates a new mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="mask"></param>
+        /// <param name="mask">DTO of the new mask</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task MasksInserMaskAsync (MaskDTO mask)
         {
@@ -2459,10 +2683,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call creates a new mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="mask"></param>
+        /// <param name="mask">DTO of the new mask</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> MasksInserMaskAsyncWithHttpInfo (MaskDTO mask)
         {
@@ -2557,7 +2781,7 @@ namespace IO.Swagger.Api
             if (maskId == null)
                 throw new ApiException(400, "Missing required parameter 'maskId' when calling MasksApi->MasksPost");
 
-            var localVarPath = "/api/masks/{maskId}/Profile";
+            var localVarPath = "/api/Masks/{maskId}/Profile";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2646,7 +2870,7 @@ namespace IO.Swagger.Api
             if (maskId == null)
                 throw new ApiException(400, "Missing required parameter 'maskId' when calling MasksApi->MasksPost");
 
-            var localVarPath = "/api/masks/{maskId}/Profile";
+            var localVarPath = "/api/Masks/{maskId}/Profile";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2709,34 +2933,34 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call updates the permissions for a mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns></returns>
-        public void MasksSetPermission (string id, PermissionsDTO permissions)
+        public void MasksSetPermission (string maskId, PermissionsDTO permissions)
         {
-             MasksSetPermissionWithHttpInfo(id, permissions);
+             MasksSetPermissionWithHttpInfo(maskId, permissions);
         }
 
         /// <summary>
-        ///  
+        /// This call updates the permissions for a mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> MasksSetPermissionWithHttpInfo (string id, PermissionsDTO permissions)
+        public ApiResponse<Object> MasksSetPermissionWithHttpInfo (string maskId, PermissionsDTO permissions)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling MasksApi->MasksSetPermission");
+            // verify the required parameter 'maskId' is set
+            if (maskId == null)
+                throw new ApiException(400, "Missing required parameter 'maskId' when calling MasksApi->MasksSetPermission");
             // verify the required parameter 'permissions' is set
             if (permissions == null)
                 throw new ApiException(400, "Missing required parameter 'permissions' when calling MasksApi->MasksSetPermission");
 
-            var localVarPath = "/api/masks/{id}/Permissions";
+            var localVarPath = "/api/Masks/{maskId}/Permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2764,7 +2988,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (maskId != null) localVarPathParams.Add("maskId", Configuration.ApiClient.ParameterToString(maskId)); // path parameter
             if (permissions != null && permissions.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(permissions); // http body (model) parameter
@@ -2801,35 +3025,35 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call updates the permissions for a mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task MasksSetPermissionAsync (string id, PermissionsDTO permissions)
+        public async System.Threading.Tasks.Task MasksSetPermissionAsync (string maskId, PermissionsDTO permissions)
         {
-             await MasksSetPermissionAsyncWithHttpInfo(id, permissions);
+             await MasksSetPermissionAsyncWithHttpInfo(maskId, permissions);
 
         }
 
         /// <summary>
-        ///  
+        /// This call updates the permissions for a mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="maskId">Id of the mask</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> MasksSetPermissionAsyncWithHttpInfo (string id, PermissionsDTO permissions)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> MasksSetPermissionAsyncWithHttpInfo (string maskId, PermissionsDTO permissions)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling MasksApi->MasksSetPermission");
+            // verify the required parameter 'maskId' is set
+            if (maskId == null)
+                throw new ApiException(400, "Missing required parameter 'maskId' when calling MasksApi->MasksSetPermission");
             // verify the required parameter 'permissions' is set
             if (permissions == null)
                 throw new ApiException(400, "Missing required parameter 'permissions' when calling MasksApi->MasksSetPermission");
 
-            var localVarPath = "/api/masks/{id}/Permissions";
+            var localVarPath = "/api/Masks/{maskId}/Permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2857,7 +3081,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (maskId != null) localVarPathParams.Add("maskId", Configuration.ApiClient.ParameterToString(maskId)); // path parameter
             if (permissions != null && permissions.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(permissions); // http body (model) parameter
@@ -2893,11 +3117,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update a mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="mask"></param>
+        /// <param name="id">Id of the mask</param>
+        /// <param name="mask">DTO of the mask to update</param>
         /// <returns>MaskDTO</returns>
         public MaskDTO MasksUpdateMask (string id, MaskDTO mask)
         {
@@ -2906,11 +3130,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update a mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="mask"></param>
+        /// <param name="id">Id of the mask</param>
+        /// <param name="mask">DTO of the mask to update</param>
         /// <returns>ApiResponse of MaskDTO</returns>
         public ApiResponse< MaskDTO > MasksUpdateMaskWithHttpInfo (string id, MaskDTO mask)
         {
@@ -2921,7 +3145,7 @@ namespace IO.Swagger.Api
             if (mask == null)
                 throw new ApiException(400, "Missing required parameter 'mask' when calling MasksApi->MasksUpdateMask");
 
-            var localVarPath = "/api/masks/{id}";
+            var localVarPath = "/api/Masks/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2990,11 +3214,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update a mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="mask"></param>
+        /// <param name="id">Id of the mask</param>
+        /// <param name="mask">DTO of the mask to update</param>
         /// <returns>Task of MaskDTO</returns>
         public async System.Threading.Tasks.Task<MaskDTO> MasksUpdateMaskAsync (string id, MaskDTO mask)
         {
@@ -3004,11 +3228,11 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update a mask 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="mask"></param>
+        /// <param name="id">Id of the mask</param>
+        /// <param name="mask">DTO of the mask to update</param>
         /// <returns>Task of ApiResponse (MaskDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<MaskDTO>> MasksUpdateMaskAsyncWithHttpInfo (string id, MaskDTO mask)
         {
@@ -3019,7 +3243,7 @@ namespace IO.Swagger.Api
             if (mask == null)
                 throw new ApiException(400, "Missing required parameter 'mask' when calling MasksApi->MasksUpdateMask");
 
-            var localVarPath = "/api/masks/{id}";
+            var localVarPath = "/api/Masks/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);

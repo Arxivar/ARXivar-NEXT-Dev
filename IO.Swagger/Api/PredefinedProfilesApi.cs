@@ -37,51 +37,51 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// This call clone a predefined profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="name"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile to clone</param>
+        /// <param name="name">Name of the cloned predefined profile</param>
         /// <returns></returns>
-        void PredefinedProfilesClonePredefinedProfile (int? id, string name);
+        void PredefinedProfilesClonePredefinedProfile (int? predefinedProfileId, string name);
 
         /// <summary>
-        /// 
+        /// This call clone a predefined profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="name"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile to clone</param>
+        /// <param name="name">Name of the cloned predefined profile</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PredefinedProfilesClonePredefinedProfileWithHttpInfo (int? id, string name);
+        ApiResponse<Object> PredefinedProfilesClonePredefinedProfileWithHttpInfo (int? predefinedProfileId, string name);
         /// <summary>
-        /// 
+        /// This call delete a predefined profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns></returns>
-        void PredefinedProfilesDeletePredefinedProfile (int? id);
+        void PredefinedProfilesDeletePredefinedProfile (int? predefinedProfileId);
 
         /// <summary>
-        /// 
+        /// This call delete a predefined profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PredefinedProfilesDeletePredefinedProfileWithHttpInfo (int? id);
+        ApiResponse<Object> PredefinedProfilesDeletePredefinedProfileWithHttpInfo (int? predefinedProfileId);
         /// <summary>
-        /// 
+        /// This call returns all the predefined profiles in ARXivar
         /// </summary>
         /// <remarks>
         /// 
@@ -91,7 +91,7 @@ namespace IO.Swagger.Api
         List<PredefinedProfileDTO> PredefinedProfilesGet ();
 
         /// <summary>
-        /// 
+        /// This call returns all the predefined profiles in ARXivar
         /// </summary>
         /// <remarks>
         /// 
@@ -100,28 +100,28 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of List&lt;PredefinedProfileDTO&gt;</returns>
         ApiResponse<List<PredefinedProfileDTO>> PredefinedProfilesGetWithHttpInfo ();
         /// <summary>
-        /// 
+        /// This call returns a predefined profile by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns>PredefinedProfileDTO</returns>
-        PredefinedProfileDTO PredefinedProfilesGetById (int? id);
+        PredefinedProfileDTO PredefinedProfilesGetById (int? predefinedProfileId);
 
         /// <summary>
-        /// 
+        /// This call returns a predefined profile by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns>ApiResponse of PredefinedProfileDTO</returns>
-        ApiResponse<PredefinedProfileDTO> PredefinedProfilesGetByIdWithHttpInfo (int? id);
+        ApiResponse<PredefinedProfileDTO> PredefinedProfilesGetByIdWithHttpInfo (int? predefinedProfileId);
         /// <summary>
-        /// 
+        /// This call get a new predefined profile template
         /// </summary>
         /// <remarks>
         /// 
@@ -131,7 +131,7 @@ namespace IO.Swagger.Api
         PredefinedProfileDTO PredefinedProfilesGetNew ();
 
         /// <summary>
-        /// 
+        /// This call get a new predefined profile template
         /// </summary>
         /// <remarks>
         /// 
@@ -140,97 +140,97 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of PredefinedProfileDTO</returns>
         ApiResponse<PredefinedProfileDTO> PredefinedProfilesGetNewWithHttpInfo ();
         /// <summary>
-        /// 
+        /// This call return the profile schema by a predefined profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="predefinedProfileId"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <param name="profile"> (optional)</param>
         /// <returns>PredefinedProfileSchemaDTO</returns>
         PredefinedProfileSchemaDTO PredefinedProfilesGetProfileSchemaByPredefinedProfileId (int? predefinedProfileId, ProfileDTO profile = null);
 
         /// <summary>
-        /// 
+        /// This call return the profile schema by a predefined profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="predefinedProfileId"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <param name="profile"> (optional)</param>
         /// <returns>ApiResponse of PredefinedProfileSchemaDTO</returns>
         ApiResponse<PredefinedProfileSchemaDTO> PredefinedProfilesGetProfileSchemaByPredefinedProfileIdWithHttpInfo (int? predefinedProfileId, ProfileDTO profile = null);
         /// <summary>
-        /// 
+        /// This call returns the permissions for a predefiend profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns>PermissionsDTO</returns>
-        PermissionsDTO PredefinedProfilesPermissionsById (int? id);
+        PermissionsDTO PredefinedProfilesPermissionsById (int? predefinedProfileId);
 
         /// <summary>
-        /// 
+        /// This call returns the permissions for a predefiend profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns>ApiResponse of PermissionsDTO</returns>
-        ApiResponse<PermissionsDTO> PredefinedProfilesPermissionsByIdWithHttpInfo (int? id);
+        ApiResponse<PermissionsDTO> PredefinedProfilesPermissionsByIdWithHttpInfo (int? predefinedProfileId);
         /// <summary>
-        /// 
+        /// This call update a predefined profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <param name="predefinedprofiledto"> (optional)</param>
         /// <returns></returns>
-        void PredefinedProfilesUpdatePredefinedProfile (int? id, PredefinedProfileDTO predefinedprofiledto = null);
+        void PredefinedProfilesUpdatePredefinedProfile (int? predefinedProfileId, PredefinedProfileDTO predefinedprofiledto = null);
 
         /// <summary>
-        /// 
+        /// This call update a predefined profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <param name="predefinedprofiledto"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PredefinedProfilesUpdatePredefinedProfileWithHttpInfo (int? id, PredefinedProfileDTO predefinedprofiledto = null);
+        ApiResponse<Object> PredefinedProfilesUpdatePredefinedProfileWithHttpInfo (int? predefinedProfileId, PredefinedProfileDTO predefinedprofiledto = null);
         /// <summary>
-        /// 
+        /// This call update permissions for a predefined profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns></returns>
-        void PredefinedProfilesWritePermissionsById (int? id, PermissionsDTO permissions);
+        void PredefinedProfilesWritePermissionsById (int? predefinedProfileId, PermissionsDTO permissions);
 
         /// <summary>
-        /// 
+        /// This call update permissions for a predefined profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PredefinedProfilesWritePermissionsByIdWithHttpInfo (int? id, PermissionsDTO permissions);
+        ApiResponse<Object> PredefinedProfilesWritePermissionsByIdWithHttpInfo (int? predefinedProfileId, PermissionsDTO permissions);
         /// <summary>
-        /// 
+        /// This call create a predefined profile
         /// </summary>
         /// <remarks>
         /// 
@@ -241,7 +241,7 @@ namespace IO.Swagger.Api
         void PredefinedProfilesWritePredefinedProfile (PredefinedProfileDTO predefinedprofiledto = null);
 
         /// <summary>
-        /// 
+        /// This call create a predefined profile
         /// </summary>
         /// <remarks>
         /// 
@@ -253,51 +253,51 @@ namespace IO.Swagger.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// This call clone a predefined profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="name"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile to clone</param>
+        /// <param name="name">Name of the cloned predefined profile</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PredefinedProfilesClonePredefinedProfileAsync (int? id, string name);
+        System.Threading.Tasks.Task PredefinedProfilesClonePredefinedProfileAsync (int? predefinedProfileId, string name);
 
         /// <summary>
-        /// 
+        /// This call clone a predefined profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="name"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile to clone</param>
+        /// <param name="name">Name of the cloned predefined profile</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PredefinedProfilesClonePredefinedProfileAsyncWithHttpInfo (int? id, string name);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PredefinedProfilesClonePredefinedProfileAsyncWithHttpInfo (int? predefinedProfileId, string name);
         /// <summary>
-        /// 
+        /// This call delete a predefined profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PredefinedProfilesDeletePredefinedProfileAsync (int? id);
+        System.Threading.Tasks.Task PredefinedProfilesDeletePredefinedProfileAsync (int? predefinedProfileId);
 
         /// <summary>
-        /// 
+        /// This call delete a predefined profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PredefinedProfilesDeletePredefinedProfileAsyncWithHttpInfo (int? id);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PredefinedProfilesDeletePredefinedProfileAsyncWithHttpInfo (int? predefinedProfileId);
         /// <summary>
-        /// 
+        /// This call returns all the predefined profiles in ARXivar
         /// </summary>
         /// <remarks>
         /// 
@@ -307,7 +307,7 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<List<PredefinedProfileDTO>> PredefinedProfilesGetAsync ();
 
         /// <summary>
-        /// 
+        /// This call returns all the predefined profiles in ARXivar
         /// </summary>
         /// <remarks>
         /// 
@@ -316,28 +316,28 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (List&lt;PredefinedProfileDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<PredefinedProfileDTO>>> PredefinedProfilesGetAsyncWithHttpInfo ();
         /// <summary>
-        /// 
+        /// This call returns a predefined profile by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns>Task of PredefinedProfileDTO</returns>
-        System.Threading.Tasks.Task<PredefinedProfileDTO> PredefinedProfilesGetByIdAsync (int? id);
+        System.Threading.Tasks.Task<PredefinedProfileDTO> PredefinedProfilesGetByIdAsync (int? predefinedProfileId);
 
         /// <summary>
-        /// 
+        /// This call returns a predefined profile by its id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns>Task of ApiResponse (PredefinedProfileDTO)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PredefinedProfileDTO>> PredefinedProfilesGetByIdAsyncWithHttpInfo (int? id);
+        System.Threading.Tasks.Task<ApiResponse<PredefinedProfileDTO>> PredefinedProfilesGetByIdAsyncWithHttpInfo (int? predefinedProfileId);
         /// <summary>
-        /// 
+        /// This call get a new predefined profile template
         /// </summary>
         /// <remarks>
         /// 
@@ -347,7 +347,7 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<PredefinedProfileDTO> PredefinedProfilesGetNewAsync ();
 
         /// <summary>
-        /// 
+        /// This call get a new predefined profile template
         /// </summary>
         /// <remarks>
         /// 
@@ -356,97 +356,97 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (PredefinedProfileDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<PredefinedProfileDTO>> PredefinedProfilesGetNewAsyncWithHttpInfo ();
         /// <summary>
-        /// 
+        /// This call return the profile schema by a predefined profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="predefinedProfileId"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <param name="profile"> (optional)</param>
         /// <returns>Task of PredefinedProfileSchemaDTO</returns>
         System.Threading.Tasks.Task<PredefinedProfileSchemaDTO> PredefinedProfilesGetProfileSchemaByPredefinedProfileIdAsync (int? predefinedProfileId, ProfileDTO profile = null);
 
         /// <summary>
-        /// 
+        /// This call return the profile schema by a predefined profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="predefinedProfileId"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <param name="profile"> (optional)</param>
         /// <returns>Task of ApiResponse (PredefinedProfileSchemaDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<PredefinedProfileSchemaDTO>> PredefinedProfilesGetProfileSchemaByPredefinedProfileIdAsyncWithHttpInfo (int? predefinedProfileId, ProfileDTO profile = null);
         /// <summary>
-        /// 
+        /// This call returns the permissions for a predefiend profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns>Task of PermissionsDTO</returns>
-        System.Threading.Tasks.Task<PermissionsDTO> PredefinedProfilesPermissionsByIdAsync (int? id);
+        System.Threading.Tasks.Task<PermissionsDTO> PredefinedProfilesPermissionsByIdAsync (int? predefinedProfileId);
 
         /// <summary>
-        /// 
+        /// This call returns the permissions for a predefiend profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns>Task of ApiResponse (PermissionsDTO)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PermissionsDTO>> PredefinedProfilesPermissionsByIdAsyncWithHttpInfo (int? id);
+        System.Threading.Tasks.Task<ApiResponse<PermissionsDTO>> PredefinedProfilesPermissionsByIdAsyncWithHttpInfo (int? predefinedProfileId);
         /// <summary>
-        /// 
+        /// This call update a predefined profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <param name="predefinedprofiledto"> (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PredefinedProfilesUpdatePredefinedProfileAsync (int? id, PredefinedProfileDTO predefinedprofiledto = null);
+        System.Threading.Tasks.Task PredefinedProfilesUpdatePredefinedProfileAsync (int? predefinedProfileId, PredefinedProfileDTO predefinedprofiledto = null);
 
         /// <summary>
-        /// 
+        /// This call update a predefined profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <param name="predefinedprofiledto"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PredefinedProfilesUpdatePredefinedProfileAsyncWithHttpInfo (int? id, PredefinedProfileDTO predefinedprofiledto = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PredefinedProfilesUpdatePredefinedProfileAsyncWithHttpInfo (int? predefinedProfileId, PredefinedProfileDTO predefinedprofiledto = null);
         /// <summary>
-        /// 
+        /// This call update permissions for a predefined profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PredefinedProfilesWritePermissionsByIdAsync (int? id, PermissionsDTO permissions);
+        System.Threading.Tasks.Task PredefinedProfilesWritePermissionsByIdAsync (int? predefinedProfileId, PermissionsDTO permissions);
 
         /// <summary>
-        /// 
+        /// This call update permissions for a predefined profile
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PredefinedProfilesWritePermissionsByIdAsyncWithHttpInfo (int? id, PermissionsDTO permissions);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PredefinedProfilesWritePermissionsByIdAsyncWithHttpInfo (int? predefinedProfileId, PermissionsDTO permissions);
         /// <summary>
-        /// 
+        /// This call create a predefined profile
         /// </summary>
         /// <remarks>
         /// 
@@ -457,7 +457,7 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task PredefinedProfilesWritePredefinedProfileAsync (PredefinedProfileDTO predefinedprofiledto = null);
 
         /// <summary>
-        /// 
+        /// This call create a predefined profile
         /// </summary>
         /// <remarks>
         /// 
@@ -579,34 +579,34 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call clone a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="name"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile to clone</param>
+        /// <param name="name">Name of the cloned predefined profile</param>
         /// <returns></returns>
-        public void PredefinedProfilesClonePredefinedProfile (int? id, string name)
+        public void PredefinedProfilesClonePredefinedProfile (int? predefinedProfileId, string name)
         {
-             PredefinedProfilesClonePredefinedProfileWithHttpInfo(id, name);
+             PredefinedProfilesClonePredefinedProfileWithHttpInfo(predefinedProfileId, name);
         }
 
         /// <summary>
-        ///  
+        /// This call clone a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="name"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile to clone</param>
+        /// <param name="name">Name of the cloned predefined profile</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PredefinedProfilesClonePredefinedProfileWithHttpInfo (int? id, string name)
+        public ApiResponse<Object> PredefinedProfilesClonePredefinedProfileWithHttpInfo (int? predefinedProfileId, string name)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling PredefinedProfilesApi->PredefinedProfilesClonePredefinedProfile");
+            // verify the required parameter 'predefinedProfileId' is set
+            if (predefinedProfileId == null)
+                throw new ApiException(400, "Missing required parameter 'predefinedProfileId' when calling PredefinedProfilesApi->PredefinedProfilesClonePredefinedProfile");
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling PredefinedProfilesApi->PredefinedProfilesClonePredefinedProfile");
 
-            var localVarPath = "/api/predefinedProfiles/{id}/Clone/{name}";
+            var localVarPath = "/api/PredefinedProfiles/{predefinedProfileId}/Clone/{name}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -629,7 +629,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (predefinedProfileId != null) localVarPathParams.Add("predefinedProfileId", Configuration.ApiClient.ParameterToString(predefinedProfileId)); // path parameter
             if (name != null) localVarPathParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // path parameter
 
             // authentication (Authorization) required
@@ -659,35 +659,35 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call clone a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="name"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile to clone</param>
+        /// <param name="name">Name of the cloned predefined profile</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PredefinedProfilesClonePredefinedProfileAsync (int? id, string name)
+        public async System.Threading.Tasks.Task PredefinedProfilesClonePredefinedProfileAsync (int? predefinedProfileId, string name)
         {
-             await PredefinedProfilesClonePredefinedProfileAsyncWithHttpInfo(id, name);
+             await PredefinedProfilesClonePredefinedProfileAsyncWithHttpInfo(predefinedProfileId, name);
 
         }
 
         /// <summary>
-        ///  
+        /// This call clone a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="name"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile to clone</param>
+        /// <param name="name">Name of the cloned predefined profile</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PredefinedProfilesClonePredefinedProfileAsyncWithHttpInfo (int? id, string name)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PredefinedProfilesClonePredefinedProfileAsyncWithHttpInfo (int? predefinedProfileId, string name)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling PredefinedProfilesApi->PredefinedProfilesClonePredefinedProfile");
+            // verify the required parameter 'predefinedProfileId' is set
+            if (predefinedProfileId == null)
+                throw new ApiException(400, "Missing required parameter 'predefinedProfileId' when calling PredefinedProfilesApi->PredefinedProfilesClonePredefinedProfile");
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling PredefinedProfilesApi->PredefinedProfilesClonePredefinedProfile");
 
-            var localVarPath = "/api/predefinedProfiles/{id}/Clone/{name}";
+            var localVarPath = "/api/PredefinedProfiles/{predefinedProfileId}/Clone/{name}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -710,7 +710,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (predefinedProfileId != null) localVarPathParams.Add("predefinedProfileId", Configuration.ApiClient.ParameterToString(predefinedProfileId)); // path parameter
             if (name != null) localVarPathParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // path parameter
 
             // authentication (Authorization) required
@@ -739,29 +739,29 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call delete a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns></returns>
-        public void PredefinedProfilesDeletePredefinedProfile (int? id)
+        public void PredefinedProfilesDeletePredefinedProfile (int? predefinedProfileId)
         {
-             PredefinedProfilesDeletePredefinedProfileWithHttpInfo(id);
+             PredefinedProfilesDeletePredefinedProfileWithHttpInfo(predefinedProfileId);
         }
 
         /// <summary>
-        ///  
+        /// This call delete a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PredefinedProfilesDeletePredefinedProfileWithHttpInfo (int? id)
+        public ApiResponse<Object> PredefinedProfilesDeletePredefinedProfileWithHttpInfo (int? predefinedProfileId)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling PredefinedProfilesApi->PredefinedProfilesDeletePredefinedProfile");
+            // verify the required parameter 'predefinedProfileId' is set
+            if (predefinedProfileId == null)
+                throw new ApiException(400, "Missing required parameter 'predefinedProfileId' when calling PredefinedProfilesApi->PredefinedProfilesDeletePredefinedProfile");
 
-            var localVarPath = "/api/predefinedProfiles/{id}";
+            var localVarPath = "/api/PredefinedProfiles/{predefinedProfileId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -784,7 +784,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (predefinedProfileId != null) localVarPathParams.Add("predefinedProfileId", Configuration.ApiClient.ParameterToString(predefinedProfileId)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -813,30 +813,30 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call delete a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PredefinedProfilesDeletePredefinedProfileAsync (int? id)
+        public async System.Threading.Tasks.Task PredefinedProfilesDeletePredefinedProfileAsync (int? predefinedProfileId)
         {
-             await PredefinedProfilesDeletePredefinedProfileAsyncWithHttpInfo(id);
+             await PredefinedProfilesDeletePredefinedProfileAsyncWithHttpInfo(predefinedProfileId);
 
         }
 
         /// <summary>
-        ///  
+        /// This call delete a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PredefinedProfilesDeletePredefinedProfileAsyncWithHttpInfo (int? id)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PredefinedProfilesDeletePredefinedProfileAsyncWithHttpInfo (int? predefinedProfileId)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling PredefinedProfilesApi->PredefinedProfilesDeletePredefinedProfile");
+            // verify the required parameter 'predefinedProfileId' is set
+            if (predefinedProfileId == null)
+                throw new ApiException(400, "Missing required parameter 'predefinedProfileId' when calling PredefinedProfilesApi->PredefinedProfilesDeletePredefinedProfile");
 
-            var localVarPath = "/api/predefinedProfiles/{id}";
+            var localVarPath = "/api/PredefinedProfiles/{predefinedProfileId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -859,7 +859,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (predefinedProfileId != null) localVarPathParams.Add("predefinedProfileId", Configuration.ApiClient.ParameterToString(predefinedProfileId)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -887,7 +887,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all the predefined profiles in ARXivar 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;PredefinedProfileDTO&gt;</returns>
@@ -898,7 +898,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all the predefined profiles in ARXivar 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;PredefinedProfileDTO&gt;</returns>
@@ -960,7 +960,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all the predefined profiles in ARXivar 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;PredefinedProfileDTO&gt;</returns>
@@ -972,7 +972,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns all the predefined profiles in ARXivar 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;PredefinedProfileDTO&gt;)</returns>
@@ -1033,30 +1033,30 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a predefined profile by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns>PredefinedProfileDTO</returns>
-        public PredefinedProfileDTO PredefinedProfilesGetById (int? id)
+        public PredefinedProfileDTO PredefinedProfilesGetById (int? predefinedProfileId)
         {
-             ApiResponse<PredefinedProfileDTO> localVarResponse = PredefinedProfilesGetByIdWithHttpInfo(id);
+             ApiResponse<PredefinedProfileDTO> localVarResponse = PredefinedProfilesGetByIdWithHttpInfo(predefinedProfileId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        ///  
+        /// This call returns a predefined profile by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns>ApiResponse of PredefinedProfileDTO</returns>
-        public ApiResponse< PredefinedProfileDTO > PredefinedProfilesGetByIdWithHttpInfo (int? id)
+        public ApiResponse< PredefinedProfileDTO > PredefinedProfilesGetByIdWithHttpInfo (int? predefinedProfileId)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling PredefinedProfilesApi->PredefinedProfilesGetById");
+            // verify the required parameter 'predefinedProfileId' is set
+            if (predefinedProfileId == null)
+                throw new ApiException(400, "Missing required parameter 'predefinedProfileId' when calling PredefinedProfilesApi->PredefinedProfilesGetById");
 
-            var localVarPath = "/api/predefinedProfiles/{id}";
+            var localVarPath = "/api/PredefinedProfiles/{predefinedProfileId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1083,7 +1083,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (predefinedProfileId != null) localVarPathParams.Add("predefinedProfileId", Configuration.ApiClient.ParameterToString(predefinedProfileId)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1112,31 +1112,31 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns a predefined profile by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns>Task of PredefinedProfileDTO</returns>
-        public async System.Threading.Tasks.Task<PredefinedProfileDTO> PredefinedProfilesGetByIdAsync (int? id)
+        public async System.Threading.Tasks.Task<PredefinedProfileDTO> PredefinedProfilesGetByIdAsync (int? predefinedProfileId)
         {
-             ApiResponse<PredefinedProfileDTO> localVarResponse = await PredefinedProfilesGetByIdAsyncWithHttpInfo(id);
+             ApiResponse<PredefinedProfileDTO> localVarResponse = await PredefinedProfilesGetByIdAsyncWithHttpInfo(predefinedProfileId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        ///  
+        /// This call returns a predefined profile by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns>Task of ApiResponse (PredefinedProfileDTO)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PredefinedProfileDTO>> PredefinedProfilesGetByIdAsyncWithHttpInfo (int? id)
+        public async System.Threading.Tasks.Task<ApiResponse<PredefinedProfileDTO>> PredefinedProfilesGetByIdAsyncWithHttpInfo (int? predefinedProfileId)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling PredefinedProfilesApi->PredefinedProfilesGetById");
+            // verify the required parameter 'predefinedProfileId' is set
+            if (predefinedProfileId == null)
+                throw new ApiException(400, "Missing required parameter 'predefinedProfileId' when calling PredefinedProfilesApi->PredefinedProfilesGetById");
 
-            var localVarPath = "/api/predefinedProfiles/{id}";
+            var localVarPath = "/api/PredefinedProfiles/{predefinedProfileId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1163,7 +1163,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (predefinedProfileId != null) localVarPathParams.Add("predefinedProfileId", Configuration.ApiClient.ParameterToString(predefinedProfileId)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1191,7 +1191,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call get a new predefined profile template 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>PredefinedProfileDTO</returns>
@@ -1202,14 +1202,14 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call get a new predefined profile template 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of PredefinedProfileDTO</returns>
         public ApiResponse< PredefinedProfileDTO > PredefinedProfilesGetNewWithHttpInfo ()
         {
 
-            var localVarPath = "/api/predefinedProfiles/new";
+            var localVarPath = "/api/PredefinedProfiles/new";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1264,7 +1264,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call get a new predefined profile template 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of PredefinedProfileDTO</returns>
@@ -1276,14 +1276,14 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call get a new predefined profile template 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (PredefinedProfileDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PredefinedProfileDTO>> PredefinedProfilesGetNewAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/predefinedProfiles/new";
+            var localVarPath = "/api/PredefinedProfiles/new";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1337,10 +1337,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the profile schema by a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="predefinedProfileId"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <param name="profile"> (optional)</param>
         /// <returns>PredefinedProfileSchemaDTO</returns>
         public PredefinedProfileSchemaDTO PredefinedProfilesGetProfileSchemaByPredefinedProfileId (int? predefinedProfileId, ProfileDTO profile = null)
@@ -1350,10 +1350,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the profile schema by a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="predefinedProfileId"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <param name="profile"> (optional)</param>
         /// <returns>ApiResponse of PredefinedProfileSchemaDTO</returns>
         public ApiResponse< PredefinedProfileSchemaDTO > PredefinedProfilesGetProfileSchemaByPredefinedProfileIdWithHttpInfo (int? predefinedProfileId, ProfileDTO profile = null)
@@ -1362,7 +1362,7 @@ namespace IO.Swagger.Api
             if (predefinedProfileId == null)
                 throw new ApiException(400, "Missing required parameter 'predefinedProfileId' when calling PredefinedProfilesApi->PredefinedProfilesGetProfileSchemaByPredefinedProfileId");
 
-            var localVarPath = "/api/predefinedProfiles/{predefinedProfileId}/profileSchema";
+            var localVarPath = "/api/PredefinedProfiles/{predefinedProfileId}/profileSchema";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1426,10 +1426,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the profile schema by a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="predefinedProfileId"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <param name="profile"> (optional)</param>
         /// <returns>Task of PredefinedProfileSchemaDTO</returns>
         public async System.Threading.Tasks.Task<PredefinedProfileSchemaDTO> PredefinedProfilesGetProfileSchemaByPredefinedProfileIdAsync (int? predefinedProfileId, ProfileDTO profile = null)
@@ -1440,10 +1440,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call return the profile schema by a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="predefinedProfileId"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <param name="profile"> (optional)</param>
         /// <returns>Task of ApiResponse (PredefinedProfileSchemaDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PredefinedProfileSchemaDTO>> PredefinedProfilesGetProfileSchemaByPredefinedProfileIdAsyncWithHttpInfo (int? predefinedProfileId, ProfileDTO profile = null)
@@ -1452,7 +1452,7 @@ namespace IO.Swagger.Api
             if (predefinedProfileId == null)
                 throw new ApiException(400, "Missing required parameter 'predefinedProfileId' when calling PredefinedProfilesApi->PredefinedProfilesGetProfileSchemaByPredefinedProfileId");
 
-            var localVarPath = "/api/predefinedProfiles/{predefinedProfileId}/profileSchema";
+            var localVarPath = "/api/PredefinedProfiles/{predefinedProfileId}/profileSchema";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1515,30 +1515,30 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the permissions for a predefiend profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns>PermissionsDTO</returns>
-        public PermissionsDTO PredefinedProfilesPermissionsById (int? id)
+        public PermissionsDTO PredefinedProfilesPermissionsById (int? predefinedProfileId)
         {
-             ApiResponse<PermissionsDTO> localVarResponse = PredefinedProfilesPermissionsByIdWithHttpInfo(id);
+             ApiResponse<PermissionsDTO> localVarResponse = PredefinedProfilesPermissionsByIdWithHttpInfo(predefinedProfileId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        ///  
+        /// This call returns the permissions for a predefiend profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns>ApiResponse of PermissionsDTO</returns>
-        public ApiResponse< PermissionsDTO > PredefinedProfilesPermissionsByIdWithHttpInfo (int? id)
+        public ApiResponse< PermissionsDTO > PredefinedProfilesPermissionsByIdWithHttpInfo (int? predefinedProfileId)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling PredefinedProfilesApi->PredefinedProfilesPermissionsById");
+            // verify the required parameter 'predefinedProfileId' is set
+            if (predefinedProfileId == null)
+                throw new ApiException(400, "Missing required parameter 'predefinedProfileId' when calling PredefinedProfilesApi->PredefinedProfilesPermissionsById");
 
-            var localVarPath = "/api/predefinedProfiles/{id}/Permissions";
+            var localVarPath = "/api/PredefinedProfiles/{predefinedProfileId}/Permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1565,7 +1565,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (predefinedProfileId != null) localVarPathParams.Add("predefinedProfileId", Configuration.ApiClient.ParameterToString(predefinedProfileId)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1594,31 +1594,31 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the permissions for a predefiend profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns>Task of PermissionsDTO</returns>
-        public async System.Threading.Tasks.Task<PermissionsDTO> PredefinedProfilesPermissionsByIdAsync (int? id)
+        public async System.Threading.Tasks.Task<PermissionsDTO> PredefinedProfilesPermissionsByIdAsync (int? predefinedProfileId)
         {
-             ApiResponse<PermissionsDTO> localVarResponse = await PredefinedProfilesPermissionsByIdAsyncWithHttpInfo(id);
+             ApiResponse<PermissionsDTO> localVarResponse = await PredefinedProfilesPermissionsByIdAsyncWithHttpInfo(predefinedProfileId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        ///  
+        /// This call returns the permissions for a predefiend profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <returns>Task of ApiResponse (PermissionsDTO)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PermissionsDTO>> PredefinedProfilesPermissionsByIdAsyncWithHttpInfo (int? id)
+        public async System.Threading.Tasks.Task<ApiResponse<PermissionsDTO>> PredefinedProfilesPermissionsByIdAsyncWithHttpInfo (int? predefinedProfileId)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling PredefinedProfilesApi->PredefinedProfilesPermissionsById");
+            // verify the required parameter 'predefinedProfileId' is set
+            if (predefinedProfileId == null)
+                throw new ApiException(400, "Missing required parameter 'predefinedProfileId' when calling PredefinedProfilesApi->PredefinedProfilesPermissionsById");
 
-            var localVarPath = "/api/predefinedProfiles/{id}/Permissions";
+            var localVarPath = "/api/PredefinedProfiles/{predefinedProfileId}/Permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1645,7 +1645,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (predefinedProfileId != null) localVarPathParams.Add("predefinedProfileId", Configuration.ApiClient.ParameterToString(predefinedProfileId)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1673,31 +1673,31 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <param name="predefinedprofiledto"> (optional)</param>
         /// <returns></returns>
-        public void PredefinedProfilesUpdatePredefinedProfile (int? id, PredefinedProfileDTO predefinedprofiledto = null)
+        public void PredefinedProfilesUpdatePredefinedProfile (int? predefinedProfileId, PredefinedProfileDTO predefinedprofiledto = null)
         {
-             PredefinedProfilesUpdatePredefinedProfileWithHttpInfo(id, predefinedprofiledto);
+             PredefinedProfilesUpdatePredefinedProfileWithHttpInfo(predefinedProfileId, predefinedprofiledto);
         }
 
         /// <summary>
-        ///  
+        /// This call update a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <param name="predefinedprofiledto"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PredefinedProfilesUpdatePredefinedProfileWithHttpInfo (int? id, PredefinedProfileDTO predefinedprofiledto = null)
+        public ApiResponse<Object> PredefinedProfilesUpdatePredefinedProfileWithHttpInfo (int? predefinedProfileId, PredefinedProfileDTO predefinedprofiledto = null)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling PredefinedProfilesApi->PredefinedProfilesUpdatePredefinedProfile");
+            // verify the required parameter 'predefinedProfileId' is set
+            if (predefinedProfileId == null)
+                throw new ApiException(400, "Missing required parameter 'predefinedProfileId' when calling PredefinedProfilesApi->PredefinedProfilesUpdatePredefinedProfile");
 
-            var localVarPath = "/api/predefinedProfiles/{id}";
+            var localVarPath = "/api/PredefinedProfiles/{predefinedProfileId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1720,7 +1720,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (predefinedProfileId != null) localVarPathParams.Add("predefinedProfileId", Configuration.ApiClient.ParameterToString(predefinedProfileId)); // path parameter
             if (predefinedprofiledto != null && predefinedprofiledto.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(predefinedprofiledto); // http body (model) parameter
@@ -1757,32 +1757,32 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <param name="predefinedprofiledto"> (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PredefinedProfilesUpdatePredefinedProfileAsync (int? id, PredefinedProfileDTO predefinedprofiledto = null)
+        public async System.Threading.Tasks.Task PredefinedProfilesUpdatePredefinedProfileAsync (int? predefinedProfileId, PredefinedProfileDTO predefinedprofiledto = null)
         {
-             await PredefinedProfilesUpdatePredefinedProfileAsyncWithHttpInfo(id, predefinedprofiledto);
+             await PredefinedProfilesUpdatePredefinedProfileAsyncWithHttpInfo(predefinedProfileId, predefinedprofiledto);
 
         }
 
         /// <summary>
-        ///  
+        /// This call update a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
         /// <param name="predefinedprofiledto"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PredefinedProfilesUpdatePredefinedProfileAsyncWithHttpInfo (int? id, PredefinedProfileDTO predefinedprofiledto = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PredefinedProfilesUpdatePredefinedProfileAsyncWithHttpInfo (int? predefinedProfileId, PredefinedProfileDTO predefinedprofiledto = null)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling PredefinedProfilesApi->PredefinedProfilesUpdatePredefinedProfile");
+            // verify the required parameter 'predefinedProfileId' is set
+            if (predefinedProfileId == null)
+                throw new ApiException(400, "Missing required parameter 'predefinedProfileId' when calling PredefinedProfilesApi->PredefinedProfilesUpdatePredefinedProfile");
 
-            var localVarPath = "/api/predefinedProfiles/{id}";
+            var localVarPath = "/api/PredefinedProfiles/{predefinedProfileId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1805,7 +1805,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (predefinedProfileId != null) localVarPathParams.Add("predefinedProfileId", Configuration.ApiClient.ParameterToString(predefinedProfileId)); // path parameter
             if (predefinedprofiledto != null && predefinedprofiledto.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(predefinedprofiledto); // http body (model) parameter
@@ -1841,34 +1841,34 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update permissions for a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns></returns>
-        public void PredefinedProfilesWritePermissionsById (int? id, PermissionsDTO permissions)
+        public void PredefinedProfilesWritePermissionsById (int? predefinedProfileId, PermissionsDTO permissions)
         {
-             PredefinedProfilesWritePermissionsByIdWithHttpInfo(id, permissions);
+             PredefinedProfilesWritePermissionsByIdWithHttpInfo(predefinedProfileId, permissions);
         }
 
         /// <summary>
-        ///  
+        /// This call update permissions for a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PredefinedProfilesWritePermissionsByIdWithHttpInfo (int? id, PermissionsDTO permissions)
+        public ApiResponse<Object> PredefinedProfilesWritePermissionsByIdWithHttpInfo (int? predefinedProfileId, PermissionsDTO permissions)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling PredefinedProfilesApi->PredefinedProfilesWritePermissionsById");
+            // verify the required parameter 'predefinedProfileId' is set
+            if (predefinedProfileId == null)
+                throw new ApiException(400, "Missing required parameter 'predefinedProfileId' when calling PredefinedProfilesApi->PredefinedProfilesWritePermissionsById");
             // verify the required parameter 'permissions' is set
             if (permissions == null)
                 throw new ApiException(400, "Missing required parameter 'permissions' when calling PredefinedProfilesApi->PredefinedProfilesWritePermissionsById");
 
-            var localVarPath = "/api/predefinedProfiles/{id}/Permissions";
+            var localVarPath = "/api/PredefinedProfiles/{predefinedProfileId}/Permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1896,7 +1896,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (predefinedProfileId != null) localVarPathParams.Add("predefinedProfileId", Configuration.ApiClient.ParameterToString(predefinedProfileId)); // path parameter
             if (permissions != null && permissions.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(permissions); // http body (model) parameter
@@ -1933,35 +1933,35 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call update permissions for a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PredefinedProfilesWritePermissionsByIdAsync (int? id, PermissionsDTO permissions)
+        public async System.Threading.Tasks.Task PredefinedProfilesWritePermissionsByIdAsync (int? predefinedProfileId, PermissionsDTO permissions)
         {
-             await PredefinedProfilesWritePermissionsByIdAsyncWithHttpInfo(id, permissions);
+             await PredefinedProfilesWritePermissionsByIdAsyncWithHttpInfo(predefinedProfileId, permissions);
 
         }
 
         /// <summary>
-        ///  
+        /// This call update permissions for a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="permissions"></param>
+        /// <param name="predefinedProfileId">Id of the predefined profile</param>
+        /// <param name="permissions">Permissions to update</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PredefinedProfilesWritePermissionsByIdAsyncWithHttpInfo (int? id, PermissionsDTO permissions)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PredefinedProfilesWritePermissionsByIdAsyncWithHttpInfo (int? predefinedProfileId, PermissionsDTO permissions)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling PredefinedProfilesApi->PredefinedProfilesWritePermissionsById");
+            // verify the required parameter 'predefinedProfileId' is set
+            if (predefinedProfileId == null)
+                throw new ApiException(400, "Missing required parameter 'predefinedProfileId' when calling PredefinedProfilesApi->PredefinedProfilesWritePermissionsById");
             // verify the required parameter 'permissions' is set
             if (permissions == null)
                 throw new ApiException(400, "Missing required parameter 'permissions' when calling PredefinedProfilesApi->PredefinedProfilesWritePermissionsById");
 
-            var localVarPath = "/api/predefinedProfiles/{id}/Permissions";
+            var localVarPath = "/api/PredefinedProfiles/{predefinedProfileId}/Permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1989,7 +1989,7 @@ namespace IO.Swagger.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (predefinedProfileId != null) localVarPathParams.Add("predefinedProfileId", Configuration.ApiClient.ParameterToString(predefinedProfileId)); // path parameter
             if (permissions != null && permissions.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(permissions); // http body (model) parameter
@@ -2025,7 +2025,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call create a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predefinedprofiledto"> (optional)</param>
@@ -2036,7 +2036,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call create a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predefinedprofiledto"> (optional)</param>
@@ -2103,7 +2103,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call create a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predefinedprofiledto"> (optional)</param>
@@ -2115,7 +2115,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call create a predefined profile 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predefinedprofiledto"> (optional)</param>

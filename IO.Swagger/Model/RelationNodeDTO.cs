@@ -42,12 +42,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RelationNodeDTO" /> class.
         /// </summary>
-        /// <param name="DocNumber">DocNumber.</param>
-        /// <param name="DocumentType">DocumentType.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="IsGroup">IsGroup.</param>
-        /// <param name="AccessDenied">AccessDenied.</param>
-        /// <param name="Childs">Childs.</param>
+        /// <param name="DocNumber">Docnumber of profile.</param>
+        /// <param name="DocumentType">Document type system id.</param>
+        /// <param name="Description">Description of this node.</param>
+        /// <param name="IsGroup">Id group.</param>
+        /// <param name="AccessDenied">Access denied for the user.</param>
+        /// <param name="Childs">Child nodes.</param>
         public RelationNodeDTO(int? DocNumber = null, int? DocumentType = null, string Description = null, bool? IsGroup = null, bool? AccessDenied = null, List<RelationNodeDTO> Childs = null)
         {
             this.DocNumber = DocNumber;
@@ -59,33 +59,39 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets DocNumber
+        /// Docnumber of profile
         /// </summary>
+        /// <value>Docnumber of profile</value>
         [DataMember(Name="docNumber", EmitDefaultValue=false)]
         public int? DocNumber { get; set; }
         /// <summary>
-        /// Gets or Sets DocumentType
+        /// Document type system id
         /// </summary>
+        /// <value>Document type system id</value>
         [DataMember(Name="documentType", EmitDefaultValue=false)]
         public int? DocumentType { get; set; }
         /// <summary>
-        /// Gets or Sets Description
+        /// Description of this node
         /// </summary>
+        /// <value>Description of this node</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
         /// <summary>
-        /// Gets or Sets IsGroup
+        /// Id group
         /// </summary>
+        /// <value>Id group</value>
         [DataMember(Name="isGroup", EmitDefaultValue=false)]
         public bool? IsGroup { get; set; }
         /// <summary>
-        /// Gets or Sets AccessDenied
+        /// Access denied for the user
         /// </summary>
+        /// <value>Access denied for the user</value>
         [DataMember(Name="accessDenied", EmitDefaultValue=false)]
         public bool? AccessDenied { get; set; }
         /// <summary>
-        /// Gets or Sets Childs
+        /// Child nodes
         /// </summary>
+        /// <value>Child nodes</value>
         [DataMember(Name="childs", EmitDefaultValue=false)]
         public List<RelationNodeDTO> Childs { get; set; }
         /// <summary>
