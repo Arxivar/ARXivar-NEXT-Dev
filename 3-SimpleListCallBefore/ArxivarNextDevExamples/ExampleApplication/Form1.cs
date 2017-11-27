@@ -55,7 +55,7 @@ namespace ExampleApplication
                 //Inizialize Authentication api (Authentication api not require authentication token)
                 var authApi = new IO.Swagger.Api.AuthenticationApi("http://arxnextgr:81/");
                 //Try to obtain a new token with the refresh token provided durin login procedure
-                var resultToken = authApi.AuthenticationRefresh(new RefreshTokenRequestDTO(null, null, _refreshToken));
+                var resultToken = authApi.AuthenticationRefresh(new RefreshTokenRequestDTO("ArxivarNextDev", "F4E38542DA0047E1", _refreshToken));
                 _authToken = resultToken.AccessToken;
                 _refreshToken = resultToken.RefreshToken;
                 tokenLabel.Text = "Token presente";
