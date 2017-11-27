@@ -5,7 +5,7 @@
 
 ## Installation
 
-* To use these examples you need VisualStudio 2015 ( .NET Framework 4.5 ).
+* To use these examples you need VisualStudio 2015 or later (or any IDE that support .NET Framework 4.5).
 
 ## Compile and run
 
