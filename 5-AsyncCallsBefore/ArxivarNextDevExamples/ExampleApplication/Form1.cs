@@ -29,22 +29,27 @@ namespace ExampleApplication
             get
             {
                 //Build a configuration object with the Token provided during login procedure or refresh token procedure
-                return new Configuration(new ApiClient("http://NEXTYEAR2017/ARXivarNextWebApi/"))
+                return new Configuration()
                 {
-                    ApiKey = new Dictionary<string, string>() { { "Authorization", _authToken } },
+                    BasePath = _apiUrl,
+                    ApiKey = new Dictionary<string, string>() { { "Authorization", _authToken} },
                     ApiKeyPrefix = new Dictionary<string, string>() { { "Authorization", "Bearer" } }
                 };
             }
         }
+        private string _appId = "ArxivarNextDev";
+        private string _secret = "985A3F40496742A7";
+        private string _apiUrl = "http://NEXTYEAR2017/ARXivarNextWebApi/";
+        
 
         private void LoginClick(object sender, EventArgs e)
         {
             try
             {
                 //Inizialize Authentication api (Authentication api not require authentication token)
-                var authApi = new IO.Swagger.Api.AuthenticationApi("http://NEXTYEAR2017/ARXivarNextWebApi/");
+                var authApi = new IO.Swagger.Api.AuthenticationApi(_apiUrl);
                 //Login to obtain a valid token (and a refresh token)
-                var resultToken = authApi.AuthenticationGetToken(new AuthenticationTokenRequestDTO(userTxt.Text, passwordTxt.Text, "ArxivarNextDev", "F4E38542DA0047E1"));
+                var resultToken = authApi.AuthenticationGetToken(new AuthenticationTokenRequestDTO(userTxt.Text, passwordTxt.Text, _appId, _secret));
 
                 _authToken = resultToken.AccessToken;
                 _refreshToken = resultToken.RefreshToken;
@@ -69,9 +74,9 @@ namespace ExampleApplication
             try
             {
                 //Inizialize Authentication api (Authentication api not require authentication token)
-                var authApi = new IO.Swagger.Api.AuthenticationApi("http://NEXTYEAR2017/ARXivarNextWebApi/");
+                var authApi = new IO.Swagger.Api.AuthenticationApi(_apiUrl);
                 //Try to obtain a new token with the refresh token provided durin login procedure
-                var resultToken = authApi.AuthenticationRefresh(new RefreshTokenRequestDTO("ArxivarNextDev", "F4E38542DA0047E1", _refreshToken));
+                var resultToken = authApi.AuthenticationRefresh(new RefreshTokenRequestDTO(_appId, _secret, _refreshToken));
                 _authToken = resultToken.AccessToken;
                 _refreshToken = resultToken.RefreshToken;
                 tokenLabel.Text = "Token presente";
@@ -90,7 +95,7 @@ namespace ExampleApplication
             }
         }
 
-
+        
         private void buttonGetAoo_Click(object sender, EventArgs e)
         {
             try
@@ -105,7 +110,7 @@ namespace ExampleApplication
             catch (Exception exception)
             {
                 errorLabel.Text = exception.Message;
-            }
+            }   
         }
 
         private void buttonGetDocTypes_Click(object sender, EventArgs e)
@@ -114,16 +119,16 @@ namespace ExampleApplication
             {
                 if (aooTable.SelectedRows != null && aooTable.SelectedRows.Count > 0)
                 {
-                    var aooCode = ((BusinessUnitDTO)aooTable.SelectedRows[0].DataBoundItem).Code;
+                    var aooCode = ((BusinessUnitDTO) aooTable.SelectedRows[0].DataBoundItem).Code;
                     //Inizialize DocumentTypes Api
                     var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
                     //Get DocumentTypes list
 
-                    var docTypes = docTypesApi.DocumentTypesGet("search", aooCode);
+                    var docTypes = docTypesApi.DocumentTypesGet(1, aooCode);
                     //Bind to the grid
                     aooTable.DataSource = docTypes;
                 }
-
+                
             }
             catch (Exception exception)
             {

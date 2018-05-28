@@ -18,6 +18,10 @@ namespace ExampleApplication
             InitializeComponent();
         }
 
+        private string _appId = "ArxivarNextDev";
+        private string _secret = "985A3F40496742A7";
+        private string _apiUrl = "http://NEXTYEAR2017/ARXivarNextWebApi/";
+
         private string _authToken;
         private string _refreshToken;
 
@@ -26,9 +30,9 @@ namespace ExampleApplication
             try
             {
                 //Inizialize Authentication api (Authentication api not require authentication token)
-                var authApi = new IO.Swagger.Api.AuthenticationApi("http://NEXTYEAR2017/ARXivarNextWebApi/");
+                var authApi = new IO.Swagger.Api.AuthenticationApi(_apiUrl);
                 //Login to obtain a valid token (and a refresh token)
-                var resultToken = authApi.AuthenticationGetToken(new AuthenticationTokenRequestDTO(userTxt.Text, passwordTxt.Text, "ArxivarNextDev", "F4E38542DA0047E1"));
+                var resultToken = authApi.AuthenticationGetToken(new AuthenticationTokenRequestDTO(userTxt.Text, passwordTxt.Text, _appId, _secret));
 
                 _authToken = resultToken.AccessToken;
                 _refreshToken = resultToken.RefreshToken;
@@ -53,9 +57,9 @@ namespace ExampleApplication
             try
             {
                 //Inizialize Authentication api (Authentication api not require authentication token)
-                var authApi = new IO.Swagger.Api.AuthenticationApi("http://arxnextgr:81/");
+                var authApi = new IO.Swagger.Api.AuthenticationApi(_apiUrl);
                 //Try to obtain a new token with the refresh token provided durin login procedure
-                var resultToken = authApi.AuthenticationRefresh(new RefreshTokenRequestDTO("ArxivarNextDev", "F4E38542DA0047E1", _refreshToken));
+                var resultToken = authApi.AuthenticationRefresh(new RefreshTokenRequestDTO(_appId, _secret, _refreshToken));
                 _authToken = resultToken.AccessToken;
                 _refreshToken = resultToken.RefreshToken;
                 tokenLabel.Text = "Token presente";

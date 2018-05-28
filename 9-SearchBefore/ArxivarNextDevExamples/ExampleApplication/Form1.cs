@@ -31,22 +31,27 @@ namespace ExampleApplication
             get
             {
                 //Build a configuration object with the Token provided during login procedure or refresh token procedure
-                return new Configuration(new ApiClient("http://NEXTYEAR2017/ARXivarNextWebApi/"))
+                return new Configuration()
                 {
-                    ApiKey = new Dictionary<string, string>() { { "Authorization", _authToken } },
+                    BasePath = _apiUrl,
+                    ApiKey = new Dictionary<string, string>() { { "Authorization", _authToken} },
                     ApiKeyPrefix = new Dictionary<string, string>() { { "Authorization", "Bearer" } }
                 };
             }
         }
+        private string _appId = "ArxivarNextDev";
+        private string _secret = "985A3F40496742A7";
+        private string _apiUrl = "http://NEXTYEAR2017/ARXivarNextWebApi/";
+        
 
         private void LoginClick(object sender, EventArgs e)
         {
             try
             {
                 //Inizialize Authentication api (Authentication api not require authentication token)
-                var authApi = new IO.Swagger.Api.AuthenticationApi("http://NEXTYEAR2017/ARXivarNextWebApi/");
+                var authApi = new IO.Swagger.Api.AuthenticationApi(_apiUrl);
                 //Login to obtain a valid token (and a refresh token)
-                var resultToken = authApi.AuthenticationGetToken(new AuthenticationTokenRequestDTO(userTxt.Text, passwordTxt.Text, "ArxivarNextDev", "F4E38542DA0047E1"));
+                var resultToken = authApi.AuthenticationGetToken(new AuthenticationTokenRequestDTO(userTxt.Text, passwordTxt.Text, _appId, _secret));
 
                 _authToken = resultToken.AccessToken;
                 _refreshToken = resultToken.RefreshToken;
@@ -71,9 +76,9 @@ namespace ExampleApplication
             try
             {
                 //Inizialize Authentication api (Authentication api not require authentication token)
-                var authApi = new IO.Swagger.Api.AuthenticationApi("http://NEXTYEAR2017/ARXivarNextWebApi/");
+                var authApi = new IO.Swagger.Api.AuthenticationApi(_apiUrl);
                 //Try to obtain a new token with the refresh token provided durin login procedure
-                var resultToken = authApi.AuthenticationRefresh(new RefreshTokenRequestDTO("ArxivarNextDev", "F4E38542DA0047E1", _refreshToken));
+                var resultToken = authApi.AuthenticationRefresh(new RefreshTokenRequestDTO(_appId, _secret, _refreshToken));
                 _authToken = resultToken.AccessToken;
                 _refreshToken = resultToken.RefreshToken;
                 tokenLabel.Text = "Token presente";
@@ -92,7 +97,7 @@ namespace ExampleApplication
             }
         }
 
-
+        
         private void buttonGetAoo_Click(object sender, EventArgs e)
         {
             try
@@ -107,7 +112,7 @@ namespace ExampleApplication
             catch (Exception exception)
             {
                 errorLabel.Text = exception.Message;
-            }
+            }   
         }
 
         private void buttonGetDocTypes_Click(object sender, EventArgs e)
@@ -116,16 +121,16 @@ namespace ExampleApplication
             {
                 if (aooTable.SelectedRows != null && aooTable.SelectedRows.Count > 0)
                 {
-                    var aooCode = ((BusinessUnitDTO)aooTable.SelectedRows[0].DataBoundItem).Code;
+                    var aooCode = ((BusinessUnitDTO) aooTable.SelectedRows[0].DataBoundItem).Code;
                     //Inizialize DocumentTypes Api
                     var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
                     //Get DocumentTypes list
 
-                    var docTypes = docTypesApi.DocumentTypesGet("search", aooCode);
+                    var docTypes = docTypesApi.DocumentTypesGet(1, aooCode);
                     //Bind to the grid
                     aooTable.DataSource = docTypes;
                 }
-
+                
             }
             catch (Exception exception)
             {
@@ -156,8 +161,8 @@ namespace ExampleApplication
             List<DocumentTypeBaseDTO> doctypes = null;
             for (int i = 0; i < 100; i++)
             {
-                var aoos = await aooApi.BusinessUnitsGetAsync(2, "Ricerca", "");
-                doctypes = await docTypesApi.DocumentTypesGetAsync("search", aoos.First().Code);
+                var aoos = await aooApi.BusinessUnitsGetAsync(2, 1, "");
+                doctypes = await docTypesApi.DocumentTypesGetAsync(1, aoos.First().Code);
             }
 
             aooTable.Invoke((MethodInvoker)delegate ()
@@ -190,7 +195,7 @@ namespace ExampleApplication
                 var maskApi = new IO.Swagger.Api.MasksApi(Configuration);
                 if (datagridComplex.SelectedRows != null && datagridComplex.SelectedRows.Count > 0)
                 {
-                    var mascheraSelezionata = (MaskDTO)datagridComplex.SelectedRows[0].DataBoundItem;
+                    var mascheraSelezionata = (MaskDTO) datagridComplex.SelectedRows[0].DataBoundItem;
                     var mascheraDettaglio = maskApi.MasksGetById(mascheraSelezionata.Id);
                     MessageBox.Show(string.Format("La maschera {0} contiene {1} dettagli", mascheraDettaglio.MaskName, mascheraDettaglio.MaskDetails.Count));
                 }
@@ -223,7 +228,7 @@ namespace ExampleApplication
                 var predefinedProfileApi = new IO.Swagger.Api.PredefinedProfilesApi(Configuration);
                 if (datagridComplex.SelectedRows != null && datagridComplex.SelectedRows.Count > 0)
                 {
-                    var predefinedProfileSelected = (PredefinedProfileDTO)datagridComplex.SelectedRows[0].DataBoundItem;
+                    var predefinedProfileSelected = (PredefinedProfileDTO) datagridComplex.SelectedRows[0].DataBoundItem;
                     var predefinedProfileDetail = predefinedProfileApi.PredefinedProfilesGetById(predefinedProfileSelected.Id);
                     MessageBox.Show(string.Format("Il profilo predefinito {0} contiene {1} dettagli", predefinedProfileDetail.Name, predefinedProfileDetail.Fields.Count));
                 }
