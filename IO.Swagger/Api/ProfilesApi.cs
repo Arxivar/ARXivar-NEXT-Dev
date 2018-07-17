@@ -97,9 +97,9 @@ namespace IO.Swagger.Api
         /// <param name="tipoUno">Document Type Identifier of first level</param>
         /// <param name="tipoDue">DocumentType Identifier of second level</param>
         /// <param name="tipoTre">DocumentType Identifier of third level</param>
-        /// <param name="aoo">Business unit code</param>
+        /// <param name="aoo">Business unit code (optional)</param>
         /// <returns>List&lt;FieldBaseDTO&gt;</returns>
-        List<FieldBaseDTO> ProfilesGetAdditionalByClasse (int? tipoUno, int? tipoDue, int? tipoTre, string aoo);
+        List<FieldBaseDTO> ProfilesGetAdditionalByClasse (int? tipoUno, int? tipoDue, int? tipoTre, string aoo = null);
 
         /// <summary>
         /// This call returns the list of the additional field for archiving by the given business unit and document class (including groups)
@@ -111,9 +111,78 @@ namespace IO.Swagger.Api
         /// <param name="tipoUno">Document Type Identifier of first level</param>
         /// <param name="tipoDue">DocumentType Identifier of second level</param>
         /// <param name="tipoTre">DocumentType Identifier of third level</param>
+        /// <param name="aoo">Business unit code (optional)</param>
+        /// <returns>ApiResponse of List&lt;FieldBaseDTO&gt;</returns>
+        ApiResponse<List<FieldBaseDTO>> ProfilesGetAdditionalByClasseWithHttpInfo (int? tipoUno, int? tipoDue, int? tipoTre, string aoo = null);
+        /// <summary>
+        /// This call returns the list of the additional field for archiving by the given business unit and document class (including groups)
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use /api/Profiles/Additional/{tipoUno}/{tipoDue}/{tipoTre}?aoo&#x3D;{aoo}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tipoUno">Document Type Identifier of first level</param>
+        /// <param name="tipoDue">DocumentType Identifier of second level</param>
+        /// <param name="tipoTre">DocumentType Identifier of third level</param>
+        /// <param name="aoo">Business unit code</param>
+        /// <returns>List&lt;FieldBaseDTO&gt;</returns>
+        List<FieldBaseDTO> ProfilesGetAdditionalByClasseOld (int? tipoUno, int? tipoDue, int? tipoTre, string aoo);
+
+        /// <summary>
+        /// This call returns the list of the additional field for archiving by the given business unit and document class (including groups)
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use /api/Profiles/Additional/{tipoUno}/{tipoDue}/{tipoTre}?aoo&#x3D;{aoo}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tipoUno">Document Type Identifier of first level</param>
+        /// <param name="tipoDue">DocumentType Identifier of second level</param>
+        /// <param name="tipoTre">DocumentType Identifier of third level</param>
         /// <param name="aoo">Business unit code</param>
         /// <returns>ApiResponse of List&lt;FieldBaseDTO&gt;</returns>
-        ApiResponse<List<FieldBaseDTO>> ProfilesGetAdditionalByClasseWithHttpInfo (int? tipoUno, int? tipoDue, int? tipoTre, string aoo);
+        ApiResponse<List<FieldBaseDTO>> ProfilesGetAdditionalByClasseOldWithHttpInfo (int? tipoUno, int? tipoDue, int? tipoTre, string aoo);
+        /// <summary>
+        /// This call allows the retrieval of the default profile for archiving by given document type
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documenttypecode">Document type code</param>
+        /// <returns>MaskProfileSchemaDTO</returns>
+        MaskProfileSchemaDTO ProfilesGetByDocumentType (GetByDocumentTypeRequestDTO documenttypecode);
+
+        /// <summary>
+        /// This call allows the retrieval of the default profile for archiving by given document type
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documenttypecode">Document type code</param>
+        /// <returns>ApiResponse of MaskProfileSchemaDTO</returns>
+        ApiResponse<MaskProfileSchemaDTO> ProfilesGetByDocumentTypeWithHttpInfo (GetByDocumentTypeRequestDTO documenttypecode);
+        /// <summary>
+        /// This call returns the mask schema of documents by idErp
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iderp">Document external Identifier</param>
+        /// <returns>List&lt;MaskProfileSchemaDTO&gt;</returns>
+        List<MaskProfileSchemaDTO> ProfilesGetByIdErp (string iderp);
+
+        /// <summary>
+        /// This call returns the mask schema of documents by idErp
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iderp">Document external Identifier</param>
+        /// <returns>ApiResponse of List&lt;MaskProfileSchemaDTO&gt;</returns>
+        ApiResponse<List<MaskProfileSchemaDTO>> ProfilesGetByIdErpWithHttpInfo (string iderp);
         /// <summary>
         /// This call returns the list of filter avaible for a specific additional field
         /// </summary>
@@ -487,9 +556,9 @@ namespace IO.Swagger.Api
         /// <param name="tipoUno">Document Type Identifier of first level</param>
         /// <param name="tipoDue">DocumentType Identifier of second level</param>
         /// <param name="tipoTre">DocumentType Identifier of third level</param>
-        /// <param name="aoo">Business unit code</param>
+        /// <param name="aoo">Business unit code (optional)</param>
         /// <returns>Task of List&lt;FieldBaseDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<FieldBaseDTO>> ProfilesGetAdditionalByClasseAsync (int? tipoUno, int? tipoDue, int? tipoTre, string aoo);
+        System.Threading.Tasks.Task<List<FieldBaseDTO>> ProfilesGetAdditionalByClasseAsync (int? tipoUno, int? tipoDue, int? tipoTre, string aoo = null);
 
         /// <summary>
         /// This call returns the list of the additional field for archiving by the given business unit and document class (including groups)
@@ -501,9 +570,78 @@ namespace IO.Swagger.Api
         /// <param name="tipoUno">Document Type Identifier of first level</param>
         /// <param name="tipoDue">DocumentType Identifier of second level</param>
         /// <param name="tipoTre">DocumentType Identifier of third level</param>
+        /// <param name="aoo">Business unit code (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;FieldBaseDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<FieldBaseDTO>>> ProfilesGetAdditionalByClasseAsyncWithHttpInfo (int? tipoUno, int? tipoDue, int? tipoTre, string aoo = null);
+        /// <summary>
+        /// This call returns the list of the additional field for archiving by the given business unit and document class (including groups)
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use /api/Profiles/Additional/{tipoUno}/{tipoDue}/{tipoTre}?aoo&#x3D;{aoo}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tipoUno">Document Type Identifier of first level</param>
+        /// <param name="tipoDue">DocumentType Identifier of second level</param>
+        /// <param name="tipoTre">DocumentType Identifier of third level</param>
+        /// <param name="aoo">Business unit code</param>
+        /// <returns>Task of List&lt;FieldBaseDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<FieldBaseDTO>> ProfilesGetAdditionalByClasseOldAsync (int? tipoUno, int? tipoDue, int? tipoTre, string aoo);
+
+        /// <summary>
+        /// This call returns the list of the additional field for archiving by the given business unit and document class (including groups)
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use /api/Profiles/Additional/{tipoUno}/{tipoDue}/{tipoTre}?aoo&#x3D;{aoo}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tipoUno">Document Type Identifier of first level</param>
+        /// <param name="tipoDue">DocumentType Identifier of second level</param>
+        /// <param name="tipoTre">DocumentType Identifier of third level</param>
         /// <param name="aoo">Business unit code</param>
         /// <returns>Task of ApiResponse (List&lt;FieldBaseDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<FieldBaseDTO>>> ProfilesGetAdditionalByClasseAsyncWithHttpInfo (int? tipoUno, int? tipoDue, int? tipoTre, string aoo);
+        System.Threading.Tasks.Task<ApiResponse<List<FieldBaseDTO>>> ProfilesGetAdditionalByClasseOldAsyncWithHttpInfo (int? tipoUno, int? tipoDue, int? tipoTre, string aoo);
+        /// <summary>
+        /// This call allows the retrieval of the default profile for archiving by given document type
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documenttypecode">Document type code</param>
+        /// <returns>Task of MaskProfileSchemaDTO</returns>
+        System.Threading.Tasks.Task<MaskProfileSchemaDTO> ProfilesGetByDocumentTypeAsync (GetByDocumentTypeRequestDTO documenttypecode);
+
+        /// <summary>
+        /// This call allows the retrieval of the default profile for archiving by given document type
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documenttypecode">Document type code</param>
+        /// <returns>Task of ApiResponse (MaskProfileSchemaDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MaskProfileSchemaDTO>> ProfilesGetByDocumentTypeAsyncWithHttpInfo (GetByDocumentTypeRequestDTO documenttypecode);
+        /// <summary>
+        /// This call returns the mask schema of documents by idErp
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iderp">Document external Identifier</param>
+        /// <returns>Task of List&lt;MaskProfileSchemaDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<MaskProfileSchemaDTO>> ProfilesGetByIdErpAsync (string iderp);
+
+        /// <summary>
+        /// This call returns the mask schema of documents by idErp
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iderp">Document external Identifier</param>
+        /// <returns>Task of ApiResponse (List&lt;MaskProfileSchemaDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<MaskProfileSchemaDTO>>> ProfilesGetByIdErpAsyncWithHttpInfo (string iderp);
         /// <summary>
         /// This call returns the list of filter avaible for a specific additional field
         /// </summary>
@@ -1336,9 +1474,9 @@ namespace IO.Swagger.Api
         /// <param name="tipoUno">Document Type Identifier of first level</param>
         /// <param name="tipoDue">DocumentType Identifier of second level</param>
         /// <param name="tipoTre">DocumentType Identifier of third level</param>
-        /// <param name="aoo">Business unit code</param>
+        /// <param name="aoo">Business unit code (optional)</param>
         /// <returns>List&lt;FieldBaseDTO&gt;</returns>
-        public List<FieldBaseDTO> ProfilesGetAdditionalByClasse (int? tipoUno, int? tipoDue, int? tipoTre, string aoo)
+        public List<FieldBaseDTO> ProfilesGetAdditionalByClasse (int? tipoUno, int? tipoDue, int? tipoTre, string aoo = null)
         {
              ApiResponse<List<FieldBaseDTO>> localVarResponse = ProfilesGetAdditionalByClasseWithHttpInfo(tipoUno, tipoDue, tipoTre, aoo);
              return localVarResponse.Data;
@@ -1351,9 +1489,9 @@ namespace IO.Swagger.Api
         /// <param name="tipoUno">Document Type Identifier of first level</param>
         /// <param name="tipoDue">DocumentType Identifier of second level</param>
         /// <param name="tipoTre">DocumentType Identifier of third level</param>
-        /// <param name="aoo">Business unit code</param>
+        /// <param name="aoo">Business unit code (optional)</param>
         /// <returns>ApiResponse of List&lt;FieldBaseDTO&gt;</returns>
-        public ApiResponse< List<FieldBaseDTO> > ProfilesGetAdditionalByClasseWithHttpInfo (int? tipoUno, int? tipoDue, int? tipoTre, string aoo)
+        public ApiResponse< List<FieldBaseDTO> > ProfilesGetAdditionalByClasseWithHttpInfo (int? tipoUno, int? tipoDue, int? tipoTre, string aoo = null)
         {
             // verify the required parameter 'tipoUno' is set
             if (tipoUno == null)
@@ -1364,9 +1502,188 @@ namespace IO.Swagger.Api
             // verify the required parameter 'tipoTre' is set
             if (tipoTre == null)
                 throw new ApiException(400, "Missing required parameter 'tipoTre' when calling ProfilesApi->ProfilesGetAdditionalByClasse");
+
+            var localVarPath = "/api/Profiles/Additional/{tipoUno}/{tipoDue}/{tipoTre}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (tipoUno != null) localVarPathParams.Add("tipoUno", Configuration.ApiClient.ParameterToString(tipoUno)); // path parameter
+            if (tipoDue != null) localVarPathParams.Add("tipoDue", Configuration.ApiClient.ParameterToString(tipoDue)); // path parameter
+            if (tipoTre != null) localVarPathParams.Add("tipoTre", Configuration.ApiClient.ParameterToString(tipoTre)); // path parameter
+            if (aoo != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "aoo", aoo)); // query parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ProfilesGetAdditionalByClasse", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<FieldBaseDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<FieldBaseDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<FieldBaseDTO>)));
+        }
+
+        /// <summary>
+        /// This call returns the list of the additional field for archiving by the given business unit and document class (including groups) 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tipoUno">Document Type Identifier of first level</param>
+        /// <param name="tipoDue">DocumentType Identifier of second level</param>
+        /// <param name="tipoTre">DocumentType Identifier of third level</param>
+        /// <param name="aoo">Business unit code (optional)</param>
+        /// <returns>Task of List&lt;FieldBaseDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<FieldBaseDTO>> ProfilesGetAdditionalByClasseAsync (int? tipoUno, int? tipoDue, int? tipoTre, string aoo = null)
+        {
+             ApiResponse<List<FieldBaseDTO>> localVarResponse = await ProfilesGetAdditionalByClasseAsyncWithHttpInfo(tipoUno, tipoDue, tipoTre, aoo);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns the list of the additional field for archiving by the given business unit and document class (including groups) 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tipoUno">Document Type Identifier of first level</param>
+        /// <param name="tipoDue">DocumentType Identifier of second level</param>
+        /// <param name="tipoTre">DocumentType Identifier of third level</param>
+        /// <param name="aoo">Business unit code (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;FieldBaseDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<FieldBaseDTO>>> ProfilesGetAdditionalByClasseAsyncWithHttpInfo (int? tipoUno, int? tipoDue, int? tipoTre, string aoo = null)
+        {
+            // verify the required parameter 'tipoUno' is set
+            if (tipoUno == null)
+                throw new ApiException(400, "Missing required parameter 'tipoUno' when calling ProfilesApi->ProfilesGetAdditionalByClasse");
+            // verify the required parameter 'tipoDue' is set
+            if (tipoDue == null)
+                throw new ApiException(400, "Missing required parameter 'tipoDue' when calling ProfilesApi->ProfilesGetAdditionalByClasse");
+            // verify the required parameter 'tipoTre' is set
+            if (tipoTre == null)
+                throw new ApiException(400, "Missing required parameter 'tipoTre' when calling ProfilesApi->ProfilesGetAdditionalByClasse");
+
+            var localVarPath = "/api/Profiles/Additional/{tipoUno}/{tipoDue}/{tipoTre}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (tipoUno != null) localVarPathParams.Add("tipoUno", Configuration.ApiClient.ParameterToString(tipoUno)); // path parameter
+            if (tipoDue != null) localVarPathParams.Add("tipoDue", Configuration.ApiClient.ParameterToString(tipoDue)); // path parameter
+            if (tipoTre != null) localVarPathParams.Add("tipoTre", Configuration.ApiClient.ParameterToString(tipoTre)); // path parameter
+            if (aoo != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "aoo", aoo)); // query parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ProfilesGetAdditionalByClasse", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<FieldBaseDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<FieldBaseDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<FieldBaseDTO>)));
+        }
+
+        /// <summary>
+        /// This call returns the list of the additional field for archiving by the given business unit and document class (including groups) This method is deprecated. Use /api/Profiles/Additional/{tipoUno}/{tipoDue}/{tipoTre}?aoo&#x3D;{aoo}
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tipoUno">Document Type Identifier of first level</param>
+        /// <param name="tipoDue">DocumentType Identifier of second level</param>
+        /// <param name="tipoTre">DocumentType Identifier of third level</param>
+        /// <param name="aoo">Business unit code</param>
+        /// <returns>List&lt;FieldBaseDTO&gt;</returns>
+        public List<FieldBaseDTO> ProfilesGetAdditionalByClasseOld (int? tipoUno, int? tipoDue, int? tipoTre, string aoo)
+        {
+             ApiResponse<List<FieldBaseDTO>> localVarResponse = ProfilesGetAdditionalByClasseOldWithHttpInfo(tipoUno, tipoDue, tipoTre, aoo);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns the list of the additional field for archiving by the given business unit and document class (including groups) This method is deprecated. Use /api/Profiles/Additional/{tipoUno}/{tipoDue}/{tipoTre}?aoo&#x3D;{aoo}
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tipoUno">Document Type Identifier of first level</param>
+        /// <param name="tipoDue">DocumentType Identifier of second level</param>
+        /// <param name="tipoTre">DocumentType Identifier of third level</param>
+        /// <param name="aoo">Business unit code</param>
+        /// <returns>ApiResponse of List&lt;FieldBaseDTO&gt;</returns>
+        public ApiResponse< List<FieldBaseDTO> > ProfilesGetAdditionalByClasseOldWithHttpInfo (int? tipoUno, int? tipoDue, int? tipoTre, string aoo)
+        {
+            // verify the required parameter 'tipoUno' is set
+            if (tipoUno == null)
+                throw new ApiException(400, "Missing required parameter 'tipoUno' when calling ProfilesApi->ProfilesGetAdditionalByClasseOld");
+            // verify the required parameter 'tipoDue' is set
+            if (tipoDue == null)
+                throw new ApiException(400, "Missing required parameter 'tipoDue' when calling ProfilesApi->ProfilesGetAdditionalByClasseOld");
+            // verify the required parameter 'tipoTre' is set
+            if (tipoTre == null)
+                throw new ApiException(400, "Missing required parameter 'tipoTre' when calling ProfilesApi->ProfilesGetAdditionalByClasseOld");
             // verify the required parameter 'aoo' is set
             if (aoo == null)
-                throw new ApiException(400, "Missing required parameter 'aoo' when calling ProfilesApi->ProfilesGetAdditionalByClasse");
+                throw new ApiException(400, "Missing required parameter 'aoo' when calling ProfilesApi->ProfilesGetAdditionalByClasseOld");
 
             var localVarPath = "/api/Profiles/Additional/{tipoUno}/{tipoDue}/{tipoTre}/{aoo}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1412,7 +1729,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ProfilesGetAdditionalByClasse", localVarResponse);
+                Exception exception = ExceptionFactory("ProfilesGetAdditionalByClasseOld", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1422,7 +1739,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call returns the list of the additional field for archiving by the given business unit and document class (including groups) 
+        /// This call returns the list of the additional field for archiving by the given business unit and document class (including groups) This method is deprecated. Use /api/Profiles/Additional/{tipoUno}/{tipoDue}/{tipoTre}?aoo&#x3D;{aoo}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tipoUno">Document Type Identifier of first level</param>
@@ -1430,15 +1747,15 @@ namespace IO.Swagger.Api
         /// <param name="tipoTre">DocumentType Identifier of third level</param>
         /// <param name="aoo">Business unit code</param>
         /// <returns>Task of List&lt;FieldBaseDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<FieldBaseDTO>> ProfilesGetAdditionalByClasseAsync (int? tipoUno, int? tipoDue, int? tipoTre, string aoo)
+        public async System.Threading.Tasks.Task<List<FieldBaseDTO>> ProfilesGetAdditionalByClasseOldAsync (int? tipoUno, int? tipoDue, int? tipoTre, string aoo)
         {
-             ApiResponse<List<FieldBaseDTO>> localVarResponse = await ProfilesGetAdditionalByClasseAsyncWithHttpInfo(tipoUno, tipoDue, tipoTre, aoo);
+             ApiResponse<List<FieldBaseDTO>> localVarResponse = await ProfilesGetAdditionalByClasseOldAsyncWithHttpInfo(tipoUno, tipoDue, tipoTre, aoo);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// This call returns the list of the additional field for archiving by the given business unit and document class (including groups) 
+        /// This call returns the list of the additional field for archiving by the given business unit and document class (including groups) This method is deprecated. Use /api/Profiles/Additional/{tipoUno}/{tipoDue}/{tipoTre}?aoo&#x3D;{aoo}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tipoUno">Document Type Identifier of first level</param>
@@ -1446,20 +1763,20 @@ namespace IO.Swagger.Api
         /// <param name="tipoTre">DocumentType Identifier of third level</param>
         /// <param name="aoo">Business unit code</param>
         /// <returns>Task of ApiResponse (List&lt;FieldBaseDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<FieldBaseDTO>>> ProfilesGetAdditionalByClasseAsyncWithHttpInfo (int? tipoUno, int? tipoDue, int? tipoTre, string aoo)
+        public async System.Threading.Tasks.Task<ApiResponse<List<FieldBaseDTO>>> ProfilesGetAdditionalByClasseOldAsyncWithHttpInfo (int? tipoUno, int? tipoDue, int? tipoTre, string aoo)
         {
             // verify the required parameter 'tipoUno' is set
             if (tipoUno == null)
-                throw new ApiException(400, "Missing required parameter 'tipoUno' when calling ProfilesApi->ProfilesGetAdditionalByClasse");
+                throw new ApiException(400, "Missing required parameter 'tipoUno' when calling ProfilesApi->ProfilesGetAdditionalByClasseOld");
             // verify the required parameter 'tipoDue' is set
             if (tipoDue == null)
-                throw new ApiException(400, "Missing required parameter 'tipoDue' when calling ProfilesApi->ProfilesGetAdditionalByClasse");
+                throw new ApiException(400, "Missing required parameter 'tipoDue' when calling ProfilesApi->ProfilesGetAdditionalByClasseOld");
             // verify the required parameter 'tipoTre' is set
             if (tipoTre == null)
-                throw new ApiException(400, "Missing required parameter 'tipoTre' when calling ProfilesApi->ProfilesGetAdditionalByClasse");
+                throw new ApiException(400, "Missing required parameter 'tipoTre' when calling ProfilesApi->ProfilesGetAdditionalByClasseOld");
             // verify the required parameter 'aoo' is set
             if (aoo == null)
-                throw new ApiException(400, "Missing required parameter 'aoo' when calling ProfilesApi->ProfilesGetAdditionalByClasse");
+                throw new ApiException(400, "Missing required parameter 'aoo' when calling ProfilesApi->ProfilesGetAdditionalByClasseOld");
 
             var localVarPath = "/api/Profiles/Additional/{tipoUno}/{tipoDue}/{tipoTre}/{aoo}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1505,13 +1822,335 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ProfilesGetAdditionalByClasse", localVarResponse);
+                Exception exception = ExceptionFactory("ProfilesGetAdditionalByClasseOld", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<List<FieldBaseDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (List<FieldBaseDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<FieldBaseDTO>)));
+        }
+
+        /// <summary>
+        /// This call allows the retrieval of the default profile for archiving by given document type 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documenttypecode">Document type code</param>
+        /// <returns>MaskProfileSchemaDTO</returns>
+        public MaskProfileSchemaDTO ProfilesGetByDocumentType (GetByDocumentTypeRequestDTO documenttypecode)
+        {
+             ApiResponse<MaskProfileSchemaDTO> localVarResponse = ProfilesGetByDocumentTypeWithHttpInfo(documenttypecode);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call allows the retrieval of the default profile for archiving by given document type 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documenttypecode">Document type code</param>
+        /// <returns>ApiResponse of MaskProfileSchemaDTO</returns>
+        public ApiResponse< MaskProfileSchemaDTO > ProfilesGetByDocumentTypeWithHttpInfo (GetByDocumentTypeRequestDTO documenttypecode)
+        {
+            // verify the required parameter 'documenttypecode' is set
+            if (documenttypecode == null)
+                throw new ApiException(400, "Missing required parameter 'documenttypecode' when calling ProfilesApi->ProfilesGetByDocumentType");
+
+            var localVarPath = "/api/Profiles/bydocumenttype";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (documenttypecode != null && documenttypecode.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(documenttypecode); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = documenttypecode; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ProfilesGetByDocumentType", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MaskProfileSchemaDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MaskProfileSchemaDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MaskProfileSchemaDTO)));
+        }
+
+        /// <summary>
+        /// This call allows the retrieval of the default profile for archiving by given document type 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documenttypecode">Document type code</param>
+        /// <returns>Task of MaskProfileSchemaDTO</returns>
+        public async System.Threading.Tasks.Task<MaskProfileSchemaDTO> ProfilesGetByDocumentTypeAsync (GetByDocumentTypeRequestDTO documenttypecode)
+        {
+             ApiResponse<MaskProfileSchemaDTO> localVarResponse = await ProfilesGetByDocumentTypeAsyncWithHttpInfo(documenttypecode);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call allows the retrieval of the default profile for archiving by given document type 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documenttypecode">Document type code</param>
+        /// <returns>Task of ApiResponse (MaskProfileSchemaDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MaskProfileSchemaDTO>> ProfilesGetByDocumentTypeAsyncWithHttpInfo (GetByDocumentTypeRequestDTO documenttypecode)
+        {
+            // verify the required parameter 'documenttypecode' is set
+            if (documenttypecode == null)
+                throw new ApiException(400, "Missing required parameter 'documenttypecode' when calling ProfilesApi->ProfilesGetByDocumentType");
+
+            var localVarPath = "/api/Profiles/bydocumenttype";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (documenttypecode != null && documenttypecode.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(documenttypecode); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = documenttypecode; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ProfilesGetByDocumentType", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MaskProfileSchemaDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MaskProfileSchemaDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MaskProfileSchemaDTO)));
+        }
+
+        /// <summary>
+        /// This call returns the mask schema of documents by idErp 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iderp">Document external Identifier</param>
+        /// <returns>List&lt;MaskProfileSchemaDTO&gt;</returns>
+        public List<MaskProfileSchemaDTO> ProfilesGetByIdErp (string iderp)
+        {
+             ApiResponse<List<MaskProfileSchemaDTO>> localVarResponse = ProfilesGetByIdErpWithHttpInfo(iderp);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns the mask schema of documents by idErp 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iderp">Document external Identifier</param>
+        /// <returns>ApiResponse of List&lt;MaskProfileSchemaDTO&gt;</returns>
+        public ApiResponse< List<MaskProfileSchemaDTO> > ProfilesGetByIdErpWithHttpInfo (string iderp)
+        {
+            // verify the required parameter 'iderp' is set
+            if (iderp == null)
+                throw new ApiException(400, "Missing required parameter 'iderp' when calling ProfilesApi->ProfilesGetByIdErp");
+
+            var localVarPath = "/api/Profiles/detail/byIdErp/{iderp}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (iderp != null) localVarPathParams.Add("iderp", Configuration.ApiClient.ParameterToString(iderp)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ProfilesGetByIdErp", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<MaskProfileSchemaDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<MaskProfileSchemaDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<MaskProfileSchemaDTO>)));
+        }
+
+        /// <summary>
+        /// This call returns the mask schema of documents by idErp 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iderp">Document external Identifier</param>
+        /// <returns>Task of List&lt;MaskProfileSchemaDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<MaskProfileSchemaDTO>> ProfilesGetByIdErpAsync (string iderp)
+        {
+             ApiResponse<List<MaskProfileSchemaDTO>> localVarResponse = await ProfilesGetByIdErpAsyncWithHttpInfo(iderp);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns the mask schema of documents by idErp 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="iderp">Document external Identifier</param>
+        /// <returns>Task of ApiResponse (List&lt;MaskProfileSchemaDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<MaskProfileSchemaDTO>>> ProfilesGetByIdErpAsyncWithHttpInfo (string iderp)
+        {
+            // verify the required parameter 'iderp' is set
+            if (iderp == null)
+                throw new ApiException(400, "Missing required parameter 'iderp' when calling ProfilesApi->ProfilesGetByIdErp");
+
+            var localVarPath = "/api/Profiles/detail/byIdErp/{iderp}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (iderp != null) localVarPathParams.Add("iderp", Configuration.ApiClient.ParameterToString(iderp)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ProfilesGetByIdErp", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<MaskProfileSchemaDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<MaskProfileSchemaDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<MaskProfileSchemaDTO>)));
         }
 
         /// <summary>

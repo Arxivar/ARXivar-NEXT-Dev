@@ -97,9 +97,9 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maskId">Identifier of the mask</param>
-        /// <param name="businessUnitCode">Business Unit Code</param>
+        /// <param name="businessUnitCode">Business Unit Code (optional)</param>
         /// <returns>List&lt;DocumentTypeBaseDTO&gt;</returns>
-        List<DocumentTypeBaseDTO> MasksGetDocumentTypesByMaskId (string maskId, string businessUnitCode);
+        List<DocumentTypeBaseDTO> MasksGetDocumentTypesByMaskId (string maskId, string businessUnitCode = null);
 
         /// <summary>
         /// This call returns all possibile Document Types for a mask
@@ -109,9 +109,32 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maskId">Identifier of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code (optional)</param>
+        /// <returns>ApiResponse of List&lt;DocumentTypeBaseDTO&gt;</returns>
+        ApiResponse<List<DocumentTypeBaseDTO>> MasksGetDocumentTypesByMaskIdWithHttpInfo (string maskId, string businessUnitCode = null);
+        /// <summary>
+        /// This call returns all possibile Document Types for a mask
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use api/Masks/{maskId}/DocumentTypes?businessunitcode&#x3D;{businessunitcode}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId">Identifier of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
+        /// <returns>List&lt;DocumentTypeBaseDTO&gt;</returns>
+        List<DocumentTypeBaseDTO> MasksGetDocumentTypesByMaskIdOld (string maskId, string businessUnitCode);
+
+        /// <summary>
+        /// This call returns all possibile Document Types for a mask
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use api/Masks/{maskId}/DocumentTypes?businessunitcode&#x3D;{businessunitcode}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId">Identifier of the mask</param>
         /// <param name="businessUnitCode">Business Unit Code</param>
         /// <returns>ApiResponse of List&lt;DocumentTypeBaseDTO&gt;</returns>
-        ApiResponse<List<DocumentTypeBaseDTO>> MasksGetDocumentTypesByMaskIdWithHttpInfo (string maskId, string businessUnitCode);
+        ApiResponse<List<DocumentTypeBaseDTO>> MasksGetDocumentTypesByMaskIdOldWithHttpInfo (string maskId, string businessUnitCode);
         /// <summary>
         /// This call returns all possibile Document Types for a mask (tree format)
         /// </summary>
@@ -120,9 +143,9 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maskId">Identifier of the mask</param>
-        /// <param name="businessUnitCode">Business Unit Code</param>
+        /// <param name="businessUnitCode">Business Unit Code (optional)</param>
         /// <returns>DocumentTypeBaseTreeDTO</returns>
-        DocumentTypeBaseTreeDTO MasksGetDocumentTypesTreeByMaskId (string maskId, string businessUnitCode);
+        DocumentTypeBaseTreeDTO MasksGetDocumentTypesTreeByMaskId (string maskId, string businessUnitCode = null);
 
         /// <summary>
         /// This call returns all possibile Document Types for a mask (tree format)
@@ -132,9 +155,32 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maskId">Identifier of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code (optional)</param>
+        /// <returns>ApiResponse of DocumentTypeBaseTreeDTO</returns>
+        ApiResponse<DocumentTypeBaseTreeDTO> MasksGetDocumentTypesTreeByMaskIdWithHttpInfo (string maskId, string businessUnitCode = null);
+        /// <summary>
+        /// This call returns all possibile Document Types for a mask (tree format)
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use api/Masks/{maskId}/DocumentTypesTree?businessunitcode&#x3D;{businessunitcode}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId">Identifier of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
+        /// <returns>DocumentTypeBaseTreeDTO</returns>
+        DocumentTypeBaseTreeDTO MasksGetDocumentTypesTreeByMaskIdOld (string maskId, string businessUnitCode);
+
+        /// <summary>
+        /// This call returns all possibile Document Types for a mask (tree format)
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use api/Masks/{maskId}/DocumentTypesTree?businessunitcode&#x3D;{businessunitcode}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId">Identifier of the mask</param>
         /// <param name="businessUnitCode">Business Unit Code</param>
         /// <returns>ApiResponse of DocumentTypeBaseTreeDTO</returns>
-        ApiResponse<DocumentTypeBaseTreeDTO> MasksGetDocumentTypesTreeByMaskIdWithHttpInfo (string maskId, string businessUnitCode);
+        ApiResponse<DocumentTypeBaseTreeDTO> MasksGetDocumentTypesTreeByMaskIdOldWithHttpInfo (string maskId, string businessUnitCode);
         /// <summary>
         /// This call returns possibile fields by a Document Type
         /// </summary>
@@ -424,9 +470,9 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maskId">Identifier of the mask</param>
-        /// <param name="businessUnitCode">Business Unit Code</param>
+        /// <param name="businessUnitCode">Business Unit Code (optional)</param>
         /// <returns>Task of List&lt;DocumentTypeBaseDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<DocumentTypeBaseDTO>> MasksGetDocumentTypesByMaskIdAsync (string maskId, string businessUnitCode);
+        System.Threading.Tasks.Task<List<DocumentTypeBaseDTO>> MasksGetDocumentTypesByMaskIdAsync (string maskId, string businessUnitCode = null);
 
         /// <summary>
         /// This call returns all possibile Document Types for a mask
@@ -436,9 +482,32 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maskId">Identifier of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;DocumentTypeBaseDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<DocumentTypeBaseDTO>>> MasksGetDocumentTypesByMaskIdAsyncWithHttpInfo (string maskId, string businessUnitCode = null);
+        /// <summary>
+        /// This call returns all possibile Document Types for a mask
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use api/Masks/{maskId}/DocumentTypes?businessunitcode&#x3D;{businessunitcode}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId">Identifier of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
+        /// <returns>Task of List&lt;DocumentTypeBaseDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<DocumentTypeBaseDTO>> MasksGetDocumentTypesByMaskIdOldAsync (string maskId, string businessUnitCode);
+
+        /// <summary>
+        /// This call returns all possibile Document Types for a mask
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use api/Masks/{maskId}/DocumentTypes?businessunitcode&#x3D;{businessunitcode}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId">Identifier of the mask</param>
         /// <param name="businessUnitCode">Business Unit Code</param>
         /// <returns>Task of ApiResponse (List&lt;DocumentTypeBaseDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<DocumentTypeBaseDTO>>> MasksGetDocumentTypesByMaskIdAsyncWithHttpInfo (string maskId, string businessUnitCode);
+        System.Threading.Tasks.Task<ApiResponse<List<DocumentTypeBaseDTO>>> MasksGetDocumentTypesByMaskIdOldAsyncWithHttpInfo (string maskId, string businessUnitCode);
         /// <summary>
         /// This call returns all possibile Document Types for a mask (tree format)
         /// </summary>
@@ -447,9 +516,9 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maskId">Identifier of the mask</param>
-        /// <param name="businessUnitCode">Business Unit Code</param>
+        /// <param name="businessUnitCode">Business Unit Code (optional)</param>
         /// <returns>Task of DocumentTypeBaseTreeDTO</returns>
-        System.Threading.Tasks.Task<DocumentTypeBaseTreeDTO> MasksGetDocumentTypesTreeByMaskIdAsync (string maskId, string businessUnitCode);
+        System.Threading.Tasks.Task<DocumentTypeBaseTreeDTO> MasksGetDocumentTypesTreeByMaskIdAsync (string maskId, string businessUnitCode = null);
 
         /// <summary>
         /// This call returns all possibile Document Types for a mask (tree format)
@@ -459,9 +528,32 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maskId">Identifier of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code (optional)</param>
+        /// <returns>Task of ApiResponse (DocumentTypeBaseTreeDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DocumentTypeBaseTreeDTO>> MasksGetDocumentTypesTreeByMaskIdAsyncWithHttpInfo (string maskId, string businessUnitCode = null);
+        /// <summary>
+        /// This call returns all possibile Document Types for a mask (tree format)
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use api/Masks/{maskId}/DocumentTypesTree?businessunitcode&#x3D;{businessunitcode}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId">Identifier of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
+        /// <returns>Task of DocumentTypeBaseTreeDTO</returns>
+        System.Threading.Tasks.Task<DocumentTypeBaseTreeDTO> MasksGetDocumentTypesTreeByMaskIdOldAsync (string maskId, string businessUnitCode);
+
+        /// <summary>
+        /// This call returns all possibile Document Types for a mask (tree format)
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use api/Masks/{maskId}/DocumentTypesTree?businessunitcode&#x3D;{businessunitcode}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId">Identifier of the mask</param>
         /// <param name="businessUnitCode">Business Unit Code</param>
         /// <returns>Task of ApiResponse (DocumentTypeBaseTreeDTO)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentTypeBaseTreeDTO>> MasksGetDocumentTypesTreeByMaskIdAsyncWithHttpInfo (string maskId, string businessUnitCode);
+        System.Threading.Tasks.Task<ApiResponse<DocumentTypeBaseTreeDTO>> MasksGetDocumentTypesTreeByMaskIdOldAsyncWithHttpInfo (string maskId, string businessUnitCode);
         /// <summary>
         /// This call returns possibile fields by a Document Type
         /// </summary>
@@ -1254,9 +1346,9 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maskId">Identifier of the mask</param>
-        /// <param name="businessUnitCode">Business Unit Code</param>
+        /// <param name="businessUnitCode">Business Unit Code (optional)</param>
         /// <returns>List&lt;DocumentTypeBaseDTO&gt;</returns>
-        public List<DocumentTypeBaseDTO> MasksGetDocumentTypesByMaskId (string maskId, string businessUnitCode)
+        public List<DocumentTypeBaseDTO> MasksGetDocumentTypesByMaskId (string maskId, string businessUnitCode = null)
         {
              ApiResponse<List<DocumentTypeBaseDTO>> localVarResponse = MasksGetDocumentTypesByMaskIdWithHttpInfo(maskId, businessUnitCode);
              return localVarResponse.Data;
@@ -1267,16 +1359,171 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maskId">Identifier of the mask</param>
-        /// <param name="businessUnitCode">Business Unit Code</param>
+        /// <param name="businessUnitCode">Business Unit Code (optional)</param>
         /// <returns>ApiResponse of List&lt;DocumentTypeBaseDTO&gt;</returns>
-        public ApiResponse< List<DocumentTypeBaseDTO> > MasksGetDocumentTypesByMaskIdWithHttpInfo (string maskId, string businessUnitCode)
+        public ApiResponse< List<DocumentTypeBaseDTO> > MasksGetDocumentTypesByMaskIdWithHttpInfo (string maskId, string businessUnitCode = null)
         {
             // verify the required parameter 'maskId' is set
             if (maskId == null)
                 throw new ApiException(400, "Missing required parameter 'maskId' when calling MasksApi->MasksGetDocumentTypesByMaskId");
+
+            var localVarPath = "/api/Masks/{maskId}/DocumentTypes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (maskId != null) localVarPathParams.Add("maskId", Configuration.ApiClient.ParameterToString(maskId)); // path parameter
+            if (businessUnitCode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "businessUnitCode", businessUnitCode)); // query parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MasksGetDocumentTypesByMaskId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DocumentTypeBaseDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<DocumentTypeBaseDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DocumentTypeBaseDTO>)));
+        }
+
+        /// <summary>
+        /// This call returns all possibile Document Types for a mask 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId">Identifier of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code (optional)</param>
+        /// <returns>Task of List&lt;DocumentTypeBaseDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<DocumentTypeBaseDTO>> MasksGetDocumentTypesByMaskIdAsync (string maskId, string businessUnitCode = null)
+        {
+             ApiResponse<List<DocumentTypeBaseDTO>> localVarResponse = await MasksGetDocumentTypesByMaskIdAsyncWithHttpInfo(maskId, businessUnitCode);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns all possibile Document Types for a mask 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId">Identifier of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;DocumentTypeBaseDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<DocumentTypeBaseDTO>>> MasksGetDocumentTypesByMaskIdAsyncWithHttpInfo (string maskId, string businessUnitCode = null)
+        {
+            // verify the required parameter 'maskId' is set
+            if (maskId == null)
+                throw new ApiException(400, "Missing required parameter 'maskId' when calling MasksApi->MasksGetDocumentTypesByMaskId");
+
+            var localVarPath = "/api/Masks/{maskId}/DocumentTypes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (maskId != null) localVarPathParams.Add("maskId", Configuration.ApiClient.ParameterToString(maskId)); // path parameter
+            if (businessUnitCode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "businessUnitCode", businessUnitCode)); // query parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MasksGetDocumentTypesByMaskId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DocumentTypeBaseDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<DocumentTypeBaseDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DocumentTypeBaseDTO>)));
+        }
+
+        /// <summary>
+        /// This call returns all possibile Document Types for a mask This method is deprecated. Use api/Masks/{maskId}/DocumentTypes?businessunitcode&#x3D;{businessunitcode}
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId">Identifier of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
+        /// <returns>List&lt;DocumentTypeBaseDTO&gt;</returns>
+        public List<DocumentTypeBaseDTO> MasksGetDocumentTypesByMaskIdOld (string maskId, string businessUnitCode)
+        {
+             ApiResponse<List<DocumentTypeBaseDTO>> localVarResponse = MasksGetDocumentTypesByMaskIdOldWithHttpInfo(maskId, businessUnitCode);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns all possibile Document Types for a mask This method is deprecated. Use api/Masks/{maskId}/DocumentTypes?businessunitcode&#x3D;{businessunitcode}
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId">Identifier of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
+        /// <returns>ApiResponse of List&lt;DocumentTypeBaseDTO&gt;</returns>
+        public ApiResponse< List<DocumentTypeBaseDTO> > MasksGetDocumentTypesByMaskIdOldWithHttpInfo (string maskId, string businessUnitCode)
+        {
+            // verify the required parameter 'maskId' is set
+            if (maskId == null)
+                throw new ApiException(400, "Missing required parameter 'maskId' when calling MasksApi->MasksGetDocumentTypesByMaskIdOld");
             // verify the required parameter 'businessUnitCode' is set
             if (businessUnitCode == null)
-                throw new ApiException(400, "Missing required parameter 'businessUnitCode' when calling MasksApi->MasksGetDocumentTypesByMaskId");
+                throw new ApiException(400, "Missing required parameter 'businessUnitCode' when calling MasksApi->MasksGetDocumentTypesByMaskIdOld");
 
             var localVarPath = "/api/Masks/{maskId}/DocumentTypes/{businessUnitCode}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1320,7 +1567,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("MasksGetDocumentTypesByMaskId", localVarResponse);
+                Exception exception = ExceptionFactory("MasksGetDocumentTypesByMaskIdOld", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1330,34 +1577,34 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call returns all possibile Document Types for a mask 
+        /// This call returns all possibile Document Types for a mask This method is deprecated. Use api/Masks/{maskId}/DocumentTypes?businessunitcode&#x3D;{businessunitcode}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maskId">Identifier of the mask</param>
         /// <param name="businessUnitCode">Business Unit Code</param>
         /// <returns>Task of List&lt;DocumentTypeBaseDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<DocumentTypeBaseDTO>> MasksGetDocumentTypesByMaskIdAsync (string maskId, string businessUnitCode)
+        public async System.Threading.Tasks.Task<List<DocumentTypeBaseDTO>> MasksGetDocumentTypesByMaskIdOldAsync (string maskId, string businessUnitCode)
         {
-             ApiResponse<List<DocumentTypeBaseDTO>> localVarResponse = await MasksGetDocumentTypesByMaskIdAsyncWithHttpInfo(maskId, businessUnitCode);
+             ApiResponse<List<DocumentTypeBaseDTO>> localVarResponse = await MasksGetDocumentTypesByMaskIdOldAsyncWithHttpInfo(maskId, businessUnitCode);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// This call returns all possibile Document Types for a mask 
+        /// This call returns all possibile Document Types for a mask This method is deprecated. Use api/Masks/{maskId}/DocumentTypes?businessunitcode&#x3D;{businessunitcode}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maskId">Identifier of the mask</param>
         /// <param name="businessUnitCode">Business Unit Code</param>
         /// <returns>Task of ApiResponse (List&lt;DocumentTypeBaseDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<DocumentTypeBaseDTO>>> MasksGetDocumentTypesByMaskIdAsyncWithHttpInfo (string maskId, string businessUnitCode)
+        public async System.Threading.Tasks.Task<ApiResponse<List<DocumentTypeBaseDTO>>> MasksGetDocumentTypesByMaskIdOldAsyncWithHttpInfo (string maskId, string businessUnitCode)
         {
             // verify the required parameter 'maskId' is set
             if (maskId == null)
-                throw new ApiException(400, "Missing required parameter 'maskId' when calling MasksApi->MasksGetDocumentTypesByMaskId");
+                throw new ApiException(400, "Missing required parameter 'maskId' when calling MasksApi->MasksGetDocumentTypesByMaskIdOld");
             // verify the required parameter 'businessUnitCode' is set
             if (businessUnitCode == null)
-                throw new ApiException(400, "Missing required parameter 'businessUnitCode' when calling MasksApi->MasksGetDocumentTypesByMaskId");
+                throw new ApiException(400, "Missing required parameter 'businessUnitCode' when calling MasksApi->MasksGetDocumentTypesByMaskIdOld");
 
             var localVarPath = "/api/Masks/{maskId}/DocumentTypes/{businessUnitCode}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1401,7 +1648,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("MasksGetDocumentTypesByMaskId", localVarResponse);
+                Exception exception = ExceptionFactory("MasksGetDocumentTypesByMaskIdOld", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1415,9 +1662,9 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maskId">Identifier of the mask</param>
-        /// <param name="businessUnitCode">Business Unit Code</param>
+        /// <param name="businessUnitCode">Business Unit Code (optional)</param>
         /// <returns>DocumentTypeBaseTreeDTO</returns>
-        public DocumentTypeBaseTreeDTO MasksGetDocumentTypesTreeByMaskId (string maskId, string businessUnitCode)
+        public DocumentTypeBaseTreeDTO MasksGetDocumentTypesTreeByMaskId (string maskId, string businessUnitCode = null)
         {
              ApiResponse<DocumentTypeBaseTreeDTO> localVarResponse = MasksGetDocumentTypesTreeByMaskIdWithHttpInfo(maskId, businessUnitCode);
              return localVarResponse.Data;
@@ -1428,18 +1675,15 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maskId">Identifier of the mask</param>
-        /// <param name="businessUnitCode">Business Unit Code</param>
+        /// <param name="businessUnitCode">Business Unit Code (optional)</param>
         /// <returns>ApiResponse of DocumentTypeBaseTreeDTO</returns>
-        public ApiResponse< DocumentTypeBaseTreeDTO > MasksGetDocumentTypesTreeByMaskIdWithHttpInfo (string maskId, string businessUnitCode)
+        public ApiResponse< DocumentTypeBaseTreeDTO > MasksGetDocumentTypesTreeByMaskIdWithHttpInfo (string maskId, string businessUnitCode = null)
         {
             // verify the required parameter 'maskId' is set
             if (maskId == null)
                 throw new ApiException(400, "Missing required parameter 'maskId' when calling MasksApi->MasksGetDocumentTypesTreeByMaskId");
-            // verify the required parameter 'businessUnitCode' is set
-            if (businessUnitCode == null)
-                throw new ApiException(400, "Missing required parameter 'businessUnitCode' when calling MasksApi->MasksGetDocumentTypesTreeByMaskId");
 
-            var localVarPath = "/api/Masks/{maskId}/DocumentTypesTree/{businessUnitCode}";
+            var localVarPath = "/api/Masks/{maskId}/DocumentTypesTree";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1464,7 +1708,7 @@ namespace IO.Swagger.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (maskId != null) localVarPathParams.Add("maskId", Configuration.ApiClient.ParameterToString(maskId)); // path parameter
-            if (businessUnitCode != null) localVarPathParams.Add("businessUnitCode", Configuration.ApiClient.ParameterToString(businessUnitCode)); // path parameter
+            if (businessUnitCode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "businessUnitCode", businessUnitCode)); // query parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1495,9 +1739,9 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maskId">Identifier of the mask</param>
-        /// <param name="businessUnitCode">Business Unit Code</param>
+        /// <param name="businessUnitCode">Business Unit Code (optional)</param>
         /// <returns>Task of DocumentTypeBaseTreeDTO</returns>
-        public async System.Threading.Tasks.Task<DocumentTypeBaseTreeDTO> MasksGetDocumentTypesTreeByMaskIdAsync (string maskId, string businessUnitCode)
+        public async System.Threading.Tasks.Task<DocumentTypeBaseTreeDTO> MasksGetDocumentTypesTreeByMaskIdAsync (string maskId, string businessUnitCode = null)
         {
              ApiResponse<DocumentTypeBaseTreeDTO> localVarResponse = await MasksGetDocumentTypesTreeByMaskIdAsyncWithHttpInfo(maskId, businessUnitCode);
              return localVarResponse.Data;
@@ -1509,16 +1753,174 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maskId">Identifier of the mask</param>
-        /// <param name="businessUnitCode">Business Unit Code</param>
+        /// <param name="businessUnitCode">Business Unit Code (optional)</param>
         /// <returns>Task of ApiResponse (DocumentTypeBaseTreeDTO)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentTypeBaseTreeDTO>> MasksGetDocumentTypesTreeByMaskIdAsyncWithHttpInfo (string maskId, string businessUnitCode)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentTypeBaseTreeDTO>> MasksGetDocumentTypesTreeByMaskIdAsyncWithHttpInfo (string maskId, string businessUnitCode = null)
         {
             // verify the required parameter 'maskId' is set
             if (maskId == null)
                 throw new ApiException(400, "Missing required parameter 'maskId' when calling MasksApi->MasksGetDocumentTypesTreeByMaskId");
+
+            var localVarPath = "/api/Masks/{maskId}/DocumentTypesTree";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (maskId != null) localVarPathParams.Add("maskId", Configuration.ApiClient.ParameterToString(maskId)); // path parameter
+            if (businessUnitCode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "businessUnitCode", businessUnitCode)); // query parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MasksGetDocumentTypesTreeByMaskId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentTypeBaseTreeDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentTypeBaseTreeDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentTypeBaseTreeDTO)));
+        }
+
+        /// <summary>
+        /// This call returns all possibile Document Types for a mask (tree format) This method is deprecated. Use api/Masks/{maskId}/DocumentTypesTree?businessunitcode&#x3D;{businessunitcode}
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId">Identifier of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
+        /// <returns>DocumentTypeBaseTreeDTO</returns>
+        public DocumentTypeBaseTreeDTO MasksGetDocumentTypesTreeByMaskIdOld (string maskId, string businessUnitCode)
+        {
+             ApiResponse<DocumentTypeBaseTreeDTO> localVarResponse = MasksGetDocumentTypesTreeByMaskIdOldWithHttpInfo(maskId, businessUnitCode);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns all possibile Document Types for a mask (tree format) This method is deprecated. Use api/Masks/{maskId}/DocumentTypesTree?businessunitcode&#x3D;{businessunitcode}
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId">Identifier of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
+        /// <returns>ApiResponse of DocumentTypeBaseTreeDTO</returns>
+        public ApiResponse< DocumentTypeBaseTreeDTO > MasksGetDocumentTypesTreeByMaskIdOldWithHttpInfo (string maskId, string businessUnitCode)
+        {
+            // verify the required parameter 'maskId' is set
+            if (maskId == null)
+                throw new ApiException(400, "Missing required parameter 'maskId' when calling MasksApi->MasksGetDocumentTypesTreeByMaskIdOld");
             // verify the required parameter 'businessUnitCode' is set
             if (businessUnitCode == null)
-                throw new ApiException(400, "Missing required parameter 'businessUnitCode' when calling MasksApi->MasksGetDocumentTypesTreeByMaskId");
+                throw new ApiException(400, "Missing required parameter 'businessUnitCode' when calling MasksApi->MasksGetDocumentTypesTreeByMaskIdOld");
+
+            var localVarPath = "/api/Masks/{maskId}/DocumentTypesTree/{businessUnitCode}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (maskId != null) localVarPathParams.Add("maskId", Configuration.ApiClient.ParameterToString(maskId)); // path parameter
+            if (businessUnitCode != null) localVarPathParams.Add("businessUnitCode", Configuration.ApiClient.ParameterToString(businessUnitCode)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MasksGetDocumentTypesTreeByMaskIdOld", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentTypeBaseTreeDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentTypeBaseTreeDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentTypeBaseTreeDTO)));
+        }
+
+        /// <summary>
+        /// This call returns all possibile Document Types for a mask (tree format) This method is deprecated. Use api/Masks/{maskId}/DocumentTypesTree?businessunitcode&#x3D;{businessunitcode}
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId">Identifier of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
+        /// <returns>Task of DocumentTypeBaseTreeDTO</returns>
+        public async System.Threading.Tasks.Task<DocumentTypeBaseTreeDTO> MasksGetDocumentTypesTreeByMaskIdOldAsync (string maskId, string businessUnitCode)
+        {
+             ApiResponse<DocumentTypeBaseTreeDTO> localVarResponse = await MasksGetDocumentTypesTreeByMaskIdOldAsyncWithHttpInfo(maskId, businessUnitCode);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns all possibile Document Types for a mask (tree format) This method is deprecated. Use api/Masks/{maskId}/DocumentTypesTree?businessunitcode&#x3D;{businessunitcode}
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId">Identifier of the mask</param>
+        /// <param name="businessUnitCode">Business Unit Code</param>
+        /// <returns>Task of ApiResponse (DocumentTypeBaseTreeDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentTypeBaseTreeDTO>> MasksGetDocumentTypesTreeByMaskIdOldAsyncWithHttpInfo (string maskId, string businessUnitCode)
+        {
+            // verify the required parameter 'maskId' is set
+            if (maskId == null)
+                throw new ApiException(400, "Missing required parameter 'maskId' when calling MasksApi->MasksGetDocumentTypesTreeByMaskIdOld");
+            // verify the required parameter 'businessUnitCode' is set
+            if (businessUnitCode == null)
+                throw new ApiException(400, "Missing required parameter 'businessUnitCode' when calling MasksApi->MasksGetDocumentTypesTreeByMaskIdOld");
 
             var localVarPath = "/api/Masks/{maskId}/DocumentTypesTree/{businessUnitCode}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1562,7 +1964,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("MasksGetDocumentTypesTreeByMaskId", localVarResponse);
+                Exception exception = ExceptionFactory("MasksGetDocumentTypesTreeByMaskIdOld", localVarResponse);
                 if (exception != null) throw exception;
             }
 

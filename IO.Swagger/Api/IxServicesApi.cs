@@ -1799,7 +1799,7 @@ namespace IO.Swagger.Api
             if (businessUnitCode == null)
                 throw new ApiException(400, "Missing required parameter 'businessUnitCode' when calling IxServicesApi->IxServicesGetByAoo");
 
-            var localVarPath = "/api/IxServices/{businessUnitCode}";
+            var localVarPath = "/api/IxServices";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1823,7 +1823,7 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (businessUnitCode != null) localVarPathParams.Add("businessUnitCode", Configuration.ApiClient.ParameterToString(businessUnitCode)); // path parameter
+            if (businessUnitCode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "businessUnitCode", businessUnitCode)); // query parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1874,7 +1874,7 @@ namespace IO.Swagger.Api
             if (businessUnitCode == null)
                 throw new ApiException(400, "Missing required parameter 'businessUnitCode' when calling IxServicesApi->IxServicesGetByAoo");
 
-            var localVarPath = "/api/IxServices/{businessUnitCode}";
+            var localVarPath = "/api/IxServices";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1898,7 +1898,7 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (businessUnitCode != null) localVarPathParams.Add("businessUnitCode", Configuration.ApiClient.ParameterToString(businessUnitCode)); // path parameter
+            if (businessUnitCode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "businessUnitCode", businessUnitCode)); // query parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))

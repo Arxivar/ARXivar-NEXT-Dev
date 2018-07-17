@@ -42,7 +42,7 @@ namespace IO.Swagger.Model
         /// <param name="_Operator">Possible values:  0: Non_Impostato  1: Minore  2: Minore_Uguale  3: Uguale  4: Maggiore_Uguale  5: Maggiore  6: Diverso  7: Compreso  8: Nullo  9: Non_Nullo  10: Nullo_o_Zero  11: Non_Nullo_e_Non_Zero  12: Escluso .</param>
         /// <param name="Valore1">The value of this field.</param>
         /// <param name="Valore2">The second value for this field (used only for some operator).</param>
-        public FieldBaseForSearchDoubleDto(int? Decimals = default(int?), int? _Operator = default(int?), double? Valore1 = default(double?), double? Valore2 = default(double?), int? GroupId = default(int?), int? FieldType = default(int?), int? AdditionalFieldType = default(int?), int? DefaultOperator = default(int?), string TableName = default(string), int? BinderFieldId = default(int?), string Multiple = default(string), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), Dictionary<string, string> Associations = default(Dictionary<string, string>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(GroupId, FieldType, AdditionalFieldType, DefaultOperator, TableName, BinderFieldId, Multiple, Name, ExternalId, Description, Order, DataSource, Required, Formula, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
+        public FieldBaseForSearchDoubleDto(int? Decimals = default(int?), int? _Operator = default(int?), double? Valore1 = default(double?), double? Valore2 = default(double?), int? GroupId = default(int?), int? FieldType = default(int?), int? AdditionalFieldType = default(int?), int? DefaultOperator = default(int?), string TableName = default(string), int? BinderFieldId = default(int?), string Multiple = default(string), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), string ClassName = "FieldBaseForSearchDoubleDto", bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), Dictionary<string, string> Associations = default(Dictionary<string, string>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(GroupId, FieldType, AdditionalFieldType, DefaultOperator, TableName, BinderFieldId, Multiple, Name, ExternalId, Description, Order, DataSource, Required, Formula, ClassName, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
         {
             this.Decimals = Decimals;
             this._Operator = _Operator;
@@ -62,13 +62,6 @@ namespace IO.Swagger.Model
         /// <value>Possible values:  0: Non_Impostato  1: Minore  2: Minore_Uguale  3: Uguale  4: Maggiore_Uguale  5: Maggiore  6: Diverso  7: Compreso  8: Nullo  9: Non_Nullo  10: Nullo_o_Zero  11: Non_Nullo_e_Non_Zero  12: Escluso </value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public int? _Operator { get; set; }
-
-        /// <summary>
-        /// Name of class
-        /// </summary>
-        /// <value>Name of class</value>
-        [DataMember(Name="className", EmitDefaultValue=false)]
-        public string ClassName { get; private set; }
 
         /// <summary>
         /// The value of this field
@@ -95,7 +88,6 @@ namespace IO.Swagger.Model
             sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  Decimals: ").Append(Decimals).Append("\n");
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
-            sb.Append("  ClassName: ").Append(ClassName).Append("\n");
             sb.Append("  Valore1: ").Append(Valore1).Append("\n");
             sb.Append("  Valore2: ").Append(Valore2).Append("\n");
             sb.Append("}\n");
@@ -143,11 +135,6 @@ namespace IO.Swagger.Model
                     this._Operator.Equals(input._Operator))
                 ) && base.Equals(input) && 
                 (
-                    this.ClassName == input.ClassName ||
-                    (this.ClassName != null &&
-                    this.ClassName.Equals(input.ClassName))
-                ) && base.Equals(input) && 
-                (
                     this.Valore1 == input.Valore1 ||
                     (this.Valore1 != null &&
                     this.Valore1.Equals(input.Valore1))
@@ -172,8 +159,6 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.Decimals.GetHashCode();
                 if (this._Operator != null)
                     hashCode = hashCode * 59 + this._Operator.GetHashCode();
-                if (this.ClassName != null)
-                    hashCode = hashCode * 59 + this.ClassName.GetHashCode();
                 if (this.Valore1 != null)
                     hashCode = hashCode * 59 + this.Valore1.GetHashCode();
                 if (this.Valore2 != null)

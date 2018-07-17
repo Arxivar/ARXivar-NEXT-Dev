@@ -32,9 +32,9 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
-        /// <param name="businessunitcode">Business Unit (optional)</param>
+        /// <param name="businessUnitCode">Business Unit (optional) (optional)</param>
         /// <returns>List&lt;DocumentTypeBaseDTO&gt;</returns>
-        List<DocumentTypeBaseDTO> DocumentTypesGet (int? mode, string businessunitcode);
+        List<DocumentTypeBaseDTO> DocumentTypesGet (int? mode, string businessUnitCode = null);
 
         /// <summary>
         /// This call returns the document types that the user can access
@@ -44,9 +44,9 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
-        /// <param name="businessunitcode">Business Unit (optional)</param>
+        /// <param name="businessUnitCode">Business Unit (optional) (optional)</param>
         /// <returns>ApiResponse of List&lt;DocumentTypeBaseDTO&gt;</returns>
-        ApiResponse<List<DocumentTypeBaseDTO>> DocumentTypesGetWithHttpInfo (int? mode, string businessunitcode);
+        ApiResponse<List<DocumentTypeBaseDTO>> DocumentTypesGetWithHttpInfo (int? mode, string businessUnitCode = null);
         /// <summary>
         /// This call returns a specific document type
         /// </summary>
@@ -69,6 +69,29 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of DocumentTypeBaseDTO</returns>
         ApiResponse<DocumentTypeBaseDTO> DocumentTypesGetBySystemIdWithHttpInfo (int? documentTypeId);
         /// <summary>
+        /// This call returns the document types that the user can access
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use /api/DocumentTypes/{mode}/mode?businessunitcode&#x3D;{businessunitcode}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
+        /// <param name="businessunitcode">Business Unit (optional)</param>
+        /// <returns>List&lt;DocumentTypeBaseDTO&gt;</returns>
+        List<DocumentTypeBaseDTO> DocumentTypesGetOld (int? mode, string businessunitcode);
+
+        /// <summary>
+        /// This call returns the document types that the user can access
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use /api/DocumentTypes/{mode}/mode?businessunitcode&#x3D;{businessunitcode}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
+        /// <param name="businessunitcode">Business Unit (optional)</param>
+        /// <returns>ApiResponse of List&lt;DocumentTypeBaseDTO&gt;</returns>
+        ApiResponse<List<DocumentTypeBaseDTO>> DocumentTypesGetOldWithHttpInfo (int? mode, string businessunitcode);
+        /// <summary>
         /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship
         /// </summary>
         /// <remarks>
@@ -76,10 +99,9 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
-        /// <param name="businessunitcode">Business Unit (optional)</param>
-        /// <param name="forProtocol">If the type is of Protocol (PA) (default false)</param>
+        /// <param name="businessunitcode">Business Unit (optional) (optional)</param>
         /// <returns>DocumentTypeBaseTreeDTO</returns>
-        DocumentTypeBaseTreeDTO DocumentTypesGetTree (int? mode, string businessunitcode, bool? forProtocol);
+        DocumentTypeBaseTreeDTO DocumentTypesGetTree (int? mode, string businessunitcode = null);
 
         /// <summary>
         /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship
@@ -89,10 +111,34 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
+        /// <param name="businessunitcode">Business Unit (optional) (optional)</param>
+        /// <returns>ApiResponse of DocumentTypeBaseTreeDTO</returns>
+        ApiResponse<DocumentTypeBaseTreeDTO> DocumentTypesGetTreeWithHttpInfo (int? mode, string businessunitcode = null);
+        /// <summary>
+        /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use /api/DocumentTypes/GetTree/{mode}?businessunitcode&#x3D;{businessunitcode}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
+        /// <param name="businessunitcode">Business Unit (optional)</param>
+        /// <param name="forProtocol">If the type is of Protocol (PA) (default false)</param>
+        /// <returns>DocumentTypeBaseTreeDTO</returns>
+        DocumentTypeBaseTreeDTO DocumentTypesGetTreeOld (int? mode, string businessunitcode, bool? forProtocol);
+
+        /// <summary>
+        /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use /api/DocumentTypes/GetTree/{mode}?businessunitcode&#x3D;{businessunitcode}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
         /// <param name="businessunitcode">Business Unit (optional)</param>
         /// <param name="forProtocol">If the type is of Protocol (PA) (default false)</param>
         /// <returns>ApiResponse of DocumentTypeBaseTreeDTO</returns>
-        ApiResponse<DocumentTypeBaseTreeDTO> DocumentTypesGetTreeWithHttpInfo (int? mode, string businessunitcode, bool? forProtocol);
+        ApiResponse<DocumentTypeBaseTreeDTO> DocumentTypesGetTreeOldWithHttpInfo (int? mode, string businessunitcode, bool? forProtocol);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -103,9 +149,9 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
-        /// <param name="businessunitcode">Business Unit (optional)</param>
+        /// <param name="businessUnitCode">Business Unit (optional) (optional)</param>
         /// <returns>Task of List&lt;DocumentTypeBaseDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<DocumentTypeBaseDTO>> DocumentTypesGetAsync (int? mode, string businessunitcode);
+        System.Threading.Tasks.Task<List<DocumentTypeBaseDTO>> DocumentTypesGetAsync (int? mode, string businessUnitCode = null);
 
         /// <summary>
         /// This call returns the document types that the user can access
@@ -115,9 +161,9 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
-        /// <param name="businessunitcode">Business Unit (optional)</param>
+        /// <param name="businessUnitCode">Business Unit (optional) (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;DocumentTypeBaseDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<DocumentTypeBaseDTO>>> DocumentTypesGetAsyncWithHttpInfo (int? mode, string businessunitcode);
+        System.Threading.Tasks.Task<ApiResponse<List<DocumentTypeBaseDTO>>> DocumentTypesGetAsyncWithHttpInfo (int? mode, string businessUnitCode = null);
         /// <summary>
         /// This call returns a specific document type
         /// </summary>
@@ -140,6 +186,29 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (DocumentTypeBaseDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocumentTypeBaseDTO>> DocumentTypesGetBySystemIdAsyncWithHttpInfo (int? documentTypeId);
         /// <summary>
+        /// This call returns the document types that the user can access
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use /api/DocumentTypes/{mode}/mode?businessunitcode&#x3D;{businessunitcode}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
+        /// <param name="businessunitcode">Business Unit (optional)</param>
+        /// <returns>Task of List&lt;DocumentTypeBaseDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<DocumentTypeBaseDTO>> DocumentTypesGetOldAsync (int? mode, string businessunitcode);
+
+        /// <summary>
+        /// This call returns the document types that the user can access
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use /api/DocumentTypes/{mode}/mode?businessunitcode&#x3D;{businessunitcode}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
+        /// <param name="businessunitcode">Business Unit (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;DocumentTypeBaseDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<DocumentTypeBaseDTO>>> DocumentTypesGetOldAsyncWithHttpInfo (int? mode, string businessunitcode);
+        /// <summary>
         /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship
         /// </summary>
         /// <remarks>
@@ -147,10 +216,9 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
-        /// <param name="businessunitcode">Business Unit (optional)</param>
-        /// <param name="forProtocol">If the type is of Protocol (PA) (default false)</param>
+        /// <param name="businessunitcode">Business Unit (optional) (optional)</param>
         /// <returns>Task of DocumentTypeBaseTreeDTO</returns>
-        System.Threading.Tasks.Task<DocumentTypeBaseTreeDTO> DocumentTypesGetTreeAsync (int? mode, string businessunitcode, bool? forProtocol);
+        System.Threading.Tasks.Task<DocumentTypeBaseTreeDTO> DocumentTypesGetTreeAsync (int? mode, string businessunitcode = null);
 
         /// <summary>
         /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship
@@ -160,10 +228,34 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
+        /// <param name="businessunitcode">Business Unit (optional) (optional)</param>
+        /// <returns>Task of ApiResponse (DocumentTypeBaseTreeDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DocumentTypeBaseTreeDTO>> DocumentTypesGetTreeAsyncWithHttpInfo (int? mode, string businessunitcode = null);
+        /// <summary>
+        /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use /api/DocumentTypes/GetTree/{mode}?businessunitcode&#x3D;{businessunitcode}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
+        /// <param name="businessunitcode">Business Unit (optional)</param>
+        /// <param name="forProtocol">If the type is of Protocol (PA) (default false)</param>
+        /// <returns>Task of DocumentTypeBaseTreeDTO</returns>
+        System.Threading.Tasks.Task<DocumentTypeBaseTreeDTO> DocumentTypesGetTreeOldAsync (int? mode, string businessunitcode, bool? forProtocol);
+
+        /// <summary>
+        /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use /api/DocumentTypes/GetTree/{mode}?businessunitcode&#x3D;{businessunitcode}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
         /// <param name="businessunitcode">Business Unit (optional)</param>
         /// <param name="forProtocol">If the type is of Protocol (PA) (default false)</param>
         /// <returns>Task of ApiResponse (DocumentTypeBaseTreeDTO)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentTypeBaseTreeDTO>> DocumentTypesGetTreeAsyncWithHttpInfo (int? mode, string businessunitcode, bool? forProtocol);
+        System.Threading.Tasks.Task<ApiResponse<DocumentTypeBaseTreeDTO>> DocumentTypesGetTreeOldAsyncWithHttpInfo (int? mode, string businessunitcode, bool? forProtocol);
         #endregion Asynchronous Operations
     }
 
@@ -269,11 +361,11 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
-        /// <param name="businessunitcode">Business Unit (optional)</param>
+        /// <param name="businessUnitCode">Business Unit (optional) (optional)</param>
         /// <returns>List&lt;DocumentTypeBaseDTO&gt;</returns>
-        public List<DocumentTypeBaseDTO> DocumentTypesGet (int? mode, string businessunitcode)
+        public List<DocumentTypeBaseDTO> DocumentTypesGet (int? mode, string businessUnitCode = null)
         {
-             ApiResponse<List<DocumentTypeBaseDTO>> localVarResponse = DocumentTypesGetWithHttpInfo(mode, businessunitcode);
+             ApiResponse<List<DocumentTypeBaseDTO>> localVarResponse = DocumentTypesGetWithHttpInfo(mode, businessUnitCode);
              return localVarResponse.Data;
         }
 
@@ -282,18 +374,15 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
-        /// <param name="businessunitcode">Business Unit (optional)</param>
+        /// <param name="businessUnitCode">Business Unit (optional) (optional)</param>
         /// <returns>ApiResponse of List&lt;DocumentTypeBaseDTO&gt;</returns>
-        public ApiResponse< List<DocumentTypeBaseDTO> > DocumentTypesGetWithHttpInfo (int? mode, string businessunitcode)
+        public ApiResponse< List<DocumentTypeBaseDTO> > DocumentTypesGetWithHttpInfo (int? mode, string businessUnitCode = null)
         {
             // verify the required parameter 'mode' is set
             if (mode == null)
                 throw new ApiException(400, "Missing required parameter 'mode' when calling DocumentTypesApi->DocumentTypesGet");
-            // verify the required parameter 'businessunitcode' is set
-            if (businessunitcode == null)
-                throw new ApiException(400, "Missing required parameter 'businessunitcode' when calling DocumentTypesApi->DocumentTypesGet");
 
-            var localVarPath = "/api/DocumentTypes/{mode}/mode/{businessunitcode}";
+            var localVarPath = "/api/DocumentTypes/{mode}/mode";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -318,7 +407,7 @@ namespace IO.Swagger.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (mode != null) localVarPathParams.Add("mode", Configuration.ApiClient.ParameterToString(mode)); // path parameter
-            if (businessunitcode != null) localVarPathParams.Add("businessunitcode", Configuration.ApiClient.ParameterToString(businessunitcode)); // path parameter
+            if (businessUnitCode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "businessUnitCode", businessUnitCode)); // query parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -349,11 +438,11 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
-        /// <param name="businessunitcode">Business Unit (optional)</param>
+        /// <param name="businessUnitCode">Business Unit (optional) (optional)</param>
         /// <returns>Task of List&lt;DocumentTypeBaseDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<DocumentTypeBaseDTO>> DocumentTypesGetAsync (int? mode, string businessunitcode)
+        public async System.Threading.Tasks.Task<List<DocumentTypeBaseDTO>> DocumentTypesGetAsync (int? mode, string businessUnitCode = null)
         {
-             ApiResponse<List<DocumentTypeBaseDTO>> localVarResponse = await DocumentTypesGetAsyncWithHttpInfo(mode, businessunitcode);
+             ApiResponse<List<DocumentTypeBaseDTO>> localVarResponse = await DocumentTypesGetAsyncWithHttpInfo(mode, businessUnitCode);
              return localVarResponse.Data;
 
         }
@@ -363,18 +452,15 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
-        /// <param name="businessunitcode">Business Unit (optional)</param>
+        /// <param name="businessUnitCode">Business Unit (optional) (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;DocumentTypeBaseDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<DocumentTypeBaseDTO>>> DocumentTypesGetAsyncWithHttpInfo (int? mode, string businessunitcode)
+        public async System.Threading.Tasks.Task<ApiResponse<List<DocumentTypeBaseDTO>>> DocumentTypesGetAsyncWithHttpInfo (int? mode, string businessUnitCode = null)
         {
             // verify the required parameter 'mode' is set
             if (mode == null)
                 throw new ApiException(400, "Missing required parameter 'mode' when calling DocumentTypesApi->DocumentTypesGet");
-            // verify the required parameter 'businessunitcode' is set
-            if (businessunitcode == null)
-                throw new ApiException(400, "Missing required parameter 'businessunitcode' when calling DocumentTypesApi->DocumentTypesGet");
 
-            var localVarPath = "/api/DocumentTypes/{mode}/mode/{businessunitcode}";
+            var localVarPath = "/api/DocumentTypes/{mode}/mode";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -399,7 +485,7 @@ namespace IO.Swagger.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (mode != null) localVarPathParams.Add("mode", Configuration.ApiClient.ParameterToString(mode)); // path parameter
-            if (businessunitcode != null) localVarPathParams.Add("businessunitcode", Configuration.ApiClient.ParameterToString(businessunitcode)); // path parameter
+            if (businessUnitCode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "businessUnitCode", businessUnitCode)); // query parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -575,16 +661,176 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship 
+        /// This call returns the document types that the user can access This method is deprecated. Use /api/DocumentTypes/{mode}/mode?businessunitcode&#x3D;{businessunitcode}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
         /// <param name="businessunitcode">Business Unit (optional)</param>
-        /// <param name="forProtocol">If the type is of Protocol (PA) (default false)</param>
-        /// <returns>DocumentTypeBaseTreeDTO</returns>
-        public DocumentTypeBaseTreeDTO DocumentTypesGetTree (int? mode, string businessunitcode, bool? forProtocol)
+        /// <returns>List&lt;DocumentTypeBaseDTO&gt;</returns>
+        public List<DocumentTypeBaseDTO> DocumentTypesGetOld (int? mode, string businessunitcode)
         {
-             ApiResponse<DocumentTypeBaseTreeDTO> localVarResponse = DocumentTypesGetTreeWithHttpInfo(mode, businessunitcode, forProtocol);
+             ApiResponse<List<DocumentTypeBaseDTO>> localVarResponse = DocumentTypesGetOldWithHttpInfo(mode, businessunitcode);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns the document types that the user can access This method is deprecated. Use /api/DocumentTypes/{mode}/mode?businessunitcode&#x3D;{businessunitcode}
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
+        /// <param name="businessunitcode">Business Unit (optional)</param>
+        /// <returns>ApiResponse of List&lt;DocumentTypeBaseDTO&gt;</returns>
+        public ApiResponse< List<DocumentTypeBaseDTO> > DocumentTypesGetOldWithHttpInfo (int? mode, string businessunitcode)
+        {
+            // verify the required parameter 'mode' is set
+            if (mode == null)
+                throw new ApiException(400, "Missing required parameter 'mode' when calling DocumentTypesApi->DocumentTypesGetOld");
+            // verify the required parameter 'businessunitcode' is set
+            if (businessunitcode == null)
+                throw new ApiException(400, "Missing required parameter 'businessunitcode' when calling DocumentTypesApi->DocumentTypesGetOld");
+
+            var localVarPath = "/api/DocumentTypes/{mode}/mode/{businessunitcode}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (mode != null) localVarPathParams.Add("mode", Configuration.ApiClient.ParameterToString(mode)); // path parameter
+            if (businessunitcode != null) localVarPathParams.Add("businessunitcode", Configuration.ApiClient.ParameterToString(businessunitcode)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentTypesGetOld", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DocumentTypeBaseDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<DocumentTypeBaseDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DocumentTypeBaseDTO>)));
+        }
+
+        /// <summary>
+        /// This call returns the document types that the user can access This method is deprecated. Use /api/DocumentTypes/{mode}/mode?businessunitcode&#x3D;{businessunitcode}
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
+        /// <param name="businessunitcode">Business Unit (optional)</param>
+        /// <returns>Task of List&lt;DocumentTypeBaseDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<DocumentTypeBaseDTO>> DocumentTypesGetOldAsync (int? mode, string businessunitcode)
+        {
+             ApiResponse<List<DocumentTypeBaseDTO>> localVarResponse = await DocumentTypesGetOldAsyncWithHttpInfo(mode, businessunitcode);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns the document types that the user can access This method is deprecated. Use /api/DocumentTypes/{mode}/mode?businessunitcode&#x3D;{businessunitcode}
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
+        /// <param name="businessunitcode">Business Unit (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;DocumentTypeBaseDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<DocumentTypeBaseDTO>>> DocumentTypesGetOldAsyncWithHttpInfo (int? mode, string businessunitcode)
+        {
+            // verify the required parameter 'mode' is set
+            if (mode == null)
+                throw new ApiException(400, "Missing required parameter 'mode' when calling DocumentTypesApi->DocumentTypesGetOld");
+            // verify the required parameter 'businessunitcode' is set
+            if (businessunitcode == null)
+                throw new ApiException(400, "Missing required parameter 'businessunitcode' when calling DocumentTypesApi->DocumentTypesGetOld");
+
+            var localVarPath = "/api/DocumentTypes/{mode}/mode/{businessunitcode}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (mode != null) localVarPathParams.Add("mode", Configuration.ApiClient.ParameterToString(mode)); // path parameter
+            if (businessunitcode != null) localVarPathParams.Add("businessunitcode", Configuration.ApiClient.ParameterToString(businessunitcode)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentTypesGetOld", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DocumentTypeBaseDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<DocumentTypeBaseDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DocumentTypeBaseDTO>)));
+        }
+
+        /// <summary>
+        /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
+        /// <param name="businessunitcode">Business Unit (optional) (optional)</param>
+        /// <returns>DocumentTypeBaseTreeDTO</returns>
+        public DocumentTypeBaseTreeDTO DocumentTypesGetTree (int? mode, string businessunitcode = null)
+        {
+             ApiResponse<DocumentTypeBaseTreeDTO> localVarResponse = DocumentTypesGetTreeWithHttpInfo(mode, businessunitcode);
              return localVarResponse.Data;
         }
 
@@ -593,20 +839,176 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
-        /// <param name="businessunitcode">Business Unit (optional)</param>
-        /// <param name="forProtocol">If the type is of Protocol (PA) (default false)</param>
+        /// <param name="businessunitcode">Business Unit (optional) (optional)</param>
         /// <returns>ApiResponse of DocumentTypeBaseTreeDTO</returns>
-        public ApiResponse< DocumentTypeBaseTreeDTO > DocumentTypesGetTreeWithHttpInfo (int? mode, string businessunitcode, bool? forProtocol)
+        public ApiResponse< DocumentTypeBaseTreeDTO > DocumentTypesGetTreeWithHttpInfo (int? mode, string businessunitcode = null)
         {
             // verify the required parameter 'mode' is set
             if (mode == null)
                 throw new ApiException(400, "Missing required parameter 'mode' when calling DocumentTypesApi->DocumentTypesGetTree");
+
+            var localVarPath = "/api/DocumentTypes/GetTree/{mode}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (mode != null) localVarPathParams.Add("mode", Configuration.ApiClient.ParameterToString(mode)); // path parameter
+            if (businessunitcode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "businessunitcode", businessunitcode)); // query parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentTypesGetTree", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentTypeBaseTreeDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentTypeBaseTreeDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentTypeBaseTreeDTO)));
+        }
+
+        /// <summary>
+        /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
+        /// <param name="businessunitcode">Business Unit (optional) (optional)</param>
+        /// <returns>Task of DocumentTypeBaseTreeDTO</returns>
+        public async System.Threading.Tasks.Task<DocumentTypeBaseTreeDTO> DocumentTypesGetTreeAsync (int? mode, string businessunitcode = null)
+        {
+             ApiResponse<DocumentTypeBaseTreeDTO> localVarResponse = await DocumentTypesGetTreeAsyncWithHttpInfo(mode, businessunitcode);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
+        /// <param name="businessunitcode">Business Unit (optional) (optional)</param>
+        /// <returns>Task of ApiResponse (DocumentTypeBaseTreeDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentTypeBaseTreeDTO>> DocumentTypesGetTreeAsyncWithHttpInfo (int? mode, string businessunitcode = null)
+        {
+            // verify the required parameter 'mode' is set
+            if (mode == null)
+                throw new ApiException(400, "Missing required parameter 'mode' when calling DocumentTypesApi->DocumentTypesGetTree");
+
+            var localVarPath = "/api/DocumentTypes/GetTree/{mode}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (mode != null) localVarPathParams.Add("mode", Configuration.ApiClient.ParameterToString(mode)); // path parameter
+            if (businessunitcode != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "businessunitcode", businessunitcode)); // query parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentTypesGetTree", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentTypeBaseTreeDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentTypeBaseTreeDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentTypeBaseTreeDTO)));
+        }
+
+        /// <summary>
+        /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship This method is deprecated. Use /api/DocumentTypes/GetTree/{mode}?businessunitcode&#x3D;{businessunitcode}
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
+        /// <param name="businessunitcode">Business Unit (optional)</param>
+        /// <param name="forProtocol">If the type is of Protocol (PA) (default false)</param>
+        /// <returns>DocumentTypeBaseTreeDTO</returns>
+        public DocumentTypeBaseTreeDTO DocumentTypesGetTreeOld (int? mode, string businessunitcode, bool? forProtocol)
+        {
+             ApiResponse<DocumentTypeBaseTreeDTO> localVarResponse = DocumentTypesGetTreeOldWithHttpInfo(mode, businessunitcode, forProtocol);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship This method is deprecated. Use /api/DocumentTypes/GetTree/{mode}?businessunitcode&#x3D;{businessunitcode}
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
+        /// <param name="businessunitcode">Business Unit (optional)</param>
+        /// <param name="forProtocol">If the type is of Protocol (PA) (default false)</param>
+        /// <returns>ApiResponse of DocumentTypeBaseTreeDTO</returns>
+        public ApiResponse< DocumentTypeBaseTreeDTO > DocumentTypesGetTreeOldWithHttpInfo (int? mode, string businessunitcode, bool? forProtocol)
+        {
+            // verify the required parameter 'mode' is set
+            if (mode == null)
+                throw new ApiException(400, "Missing required parameter 'mode' when calling DocumentTypesApi->DocumentTypesGetTreeOld");
             // verify the required parameter 'businessunitcode' is set
             if (businessunitcode == null)
-                throw new ApiException(400, "Missing required parameter 'businessunitcode' when calling DocumentTypesApi->DocumentTypesGetTree");
+                throw new ApiException(400, "Missing required parameter 'businessunitcode' when calling DocumentTypesApi->DocumentTypesGetTreeOld");
             // verify the required parameter 'forProtocol' is set
             if (forProtocol == null)
-                throw new ApiException(400, "Missing required parameter 'forProtocol' when calling DocumentTypesApi->DocumentTypesGetTree");
+                throw new ApiException(400, "Missing required parameter 'forProtocol' when calling DocumentTypesApi->DocumentTypesGetTreeOld");
 
             var localVarPath = "/api/DocumentTypes/GetTree/{mode}/{businessunitcode}/{forProtocol}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -651,7 +1053,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DocumentTypesGetTree", localVarResponse);
+                Exception exception = ExceptionFactory("DocumentTypesGetTreeOld", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -661,39 +1063,39 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship 
+        /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship This method is deprecated. Use /api/DocumentTypes/GetTree/{mode}?businessunitcode&#x3D;{businessunitcode}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
         /// <param name="businessunitcode">Business Unit (optional)</param>
         /// <param name="forProtocol">If the type is of Protocol (PA) (default false)</param>
         /// <returns>Task of DocumentTypeBaseTreeDTO</returns>
-        public async System.Threading.Tasks.Task<DocumentTypeBaseTreeDTO> DocumentTypesGetTreeAsync (int? mode, string businessunitcode, bool? forProtocol)
+        public async System.Threading.Tasks.Task<DocumentTypeBaseTreeDTO> DocumentTypesGetTreeOldAsync (int? mode, string businessunitcode, bool? forProtocol)
         {
-             ApiResponse<DocumentTypeBaseTreeDTO> localVarResponse = await DocumentTypesGetTreeAsyncWithHttpInfo(mode, businessunitcode, forProtocol);
+             ApiResponse<DocumentTypeBaseTreeDTO> localVarResponse = await DocumentTypesGetTreeOldAsyncWithHttpInfo(mode, businessunitcode, forProtocol);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship 
+        /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship This method is deprecated. Use /api/DocumentTypes/GetTree/{mode}?businessunitcode&#x3D;{businessunitcode}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
         /// <param name="businessunitcode">Business Unit (optional)</param>
         /// <param name="forProtocol">If the type is of Protocol (PA) (default false)</param>
         /// <returns>Task of ApiResponse (DocumentTypeBaseTreeDTO)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentTypeBaseTreeDTO>> DocumentTypesGetTreeAsyncWithHttpInfo (int? mode, string businessunitcode, bool? forProtocol)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentTypeBaseTreeDTO>> DocumentTypesGetTreeOldAsyncWithHttpInfo (int? mode, string businessunitcode, bool? forProtocol)
         {
             // verify the required parameter 'mode' is set
             if (mode == null)
-                throw new ApiException(400, "Missing required parameter 'mode' when calling DocumentTypesApi->DocumentTypesGetTree");
+                throw new ApiException(400, "Missing required parameter 'mode' when calling DocumentTypesApi->DocumentTypesGetTreeOld");
             // verify the required parameter 'businessunitcode' is set
             if (businessunitcode == null)
-                throw new ApiException(400, "Missing required parameter 'businessunitcode' when calling DocumentTypesApi->DocumentTypesGetTree");
+                throw new ApiException(400, "Missing required parameter 'businessunitcode' when calling DocumentTypesApi->DocumentTypesGetTreeOld");
             // verify the required parameter 'forProtocol' is set
             if (forProtocol == null)
-                throw new ApiException(400, "Missing required parameter 'forProtocol' when calling DocumentTypesApi->DocumentTypesGetTree");
+                throw new ApiException(400, "Missing required parameter 'forProtocol' when calling DocumentTypesApi->DocumentTypesGetTreeOld");
 
             var localVarPath = "/api/DocumentTypes/GetTree/{mode}/{businessunitcode}/{forProtocol}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -738,7 +1140,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DocumentTypesGetTree", localVarResponse);
+                Exception exception = ExceptionFactory("DocumentTypesGetTreeOld", localVarResponse);
                 if (exception != null) throw exception;
             }
 

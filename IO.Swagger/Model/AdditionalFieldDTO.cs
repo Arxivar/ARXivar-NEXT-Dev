@@ -42,7 +42,7 @@ namespace IO.Swagger.Model
         /// <param name="GroupId">Group Identifier.</param>
         /// <param name="BinderFieldId">Binder Field Identifier.</param>
         /// <param name="TaskWorkVariableId">Variable Identifier in taskword context.</param>
-        public AdditionalFieldDTO(int? AdditionalFieldType = default(int?), int? GroupId = default(int?), int? BinderFieldId = default(int?), int? TaskWorkVariableId = default(int?), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> Associations = default(List<AssocitationFieldItem>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(Name, ExternalId, Description, Order, DataSource, Required, Formula, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
+        public AdditionalFieldDTO(int? AdditionalFieldType = default(int?), int? GroupId = default(int?), int? BinderFieldId = default(int?), int? TaskWorkVariableId = default(int?), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), string ClassName = "AdditionalFieldDTO", bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> Associations = default(List<AssocitationFieldItem>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(Name, ExternalId, Description, Order, DataSource, Required, Formula, ClassName, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
         {
             this.AdditionalFieldType = AdditionalFieldType;
             this.GroupId = GroupId;
@@ -79,13 +79,6 @@ namespace IO.Swagger.Model
         public int? TaskWorkVariableId { get; set; }
 
         /// <summary>
-        /// Name of class
-        /// </summary>
-        /// <value>Name of class</value>
-        [DataMember(Name="className", EmitDefaultValue=false)]
-        public string ClassName { get; private set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -98,7 +91,6 @@ namespace IO.Swagger.Model
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
             sb.Append("  BinderFieldId: ").Append(BinderFieldId).Append("\n");
             sb.Append("  TaskWorkVariableId: ").Append(TaskWorkVariableId).Append("\n");
-            sb.Append("  ClassName: ").Append(ClassName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -152,11 +144,6 @@ namespace IO.Swagger.Model
                     this.TaskWorkVariableId == input.TaskWorkVariableId ||
                     (this.TaskWorkVariableId != null &&
                     this.TaskWorkVariableId.Equals(input.TaskWorkVariableId))
-                ) && base.Equals(input) && 
-                (
-                    this.ClassName == input.ClassName ||
-                    (this.ClassName != null &&
-                    this.ClassName.Equals(input.ClassName))
                 );
         }
 
@@ -177,8 +164,6 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.BinderFieldId.GetHashCode();
                 if (this.TaskWorkVariableId != null)
                     hashCode = hashCode * 59 + this.TaskWorkVariableId.GetHashCode();
-                if (this.ClassName != null)
-                    hashCode = hashCode * 59 + this.ClassName.GetHashCode();
                 return hashCode;
             }
         }

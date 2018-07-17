@@ -82,6 +82,7 @@ namespace IO.Swagger.Model
         /// <param name="DataSource">DataSource identifier.</param>
         /// <param name="Required">Required.</param>
         /// <param name="Formula">Formula.</param>
+        /// <param name="ClassName">Name of class (required).</param>
         /// <param name="Locked">Locked in read-only.</param>
         /// <param name="ComboGruppiId">Data Group Identifier.</param>
         /// <param name="DependencyFields">List of dependent fields.</param>
@@ -89,8 +90,17 @@ namespace IO.Swagger.Model
         /// <param name="IsAdditional">Field type additional.</param>
         /// <param name="Visible">Visible.</param>
         /// <param name="PredefinedProfileFormula">Formula in the context of predefined profile.</param>
-        public FieldBaseDTO(string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> Associations = default(List<AssocitationFieldItem>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string))
+        public FieldBaseDTO(string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), string ClassName = default(string), bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> Associations = default(List<AssocitationFieldItem>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string))
         {
+            // to ensure "ClassName" is required (not null)
+            if (ClassName == null)
+            {
+                throw new InvalidDataException("ClassName is a required property for FieldBaseDTO and cannot be null");
+            }
+            else
+            {
+                this.ClassName = ClassName;
+            }
             this.Name = Name;
             this.ExternalId = ExternalId;
             this.Description = Description;
@@ -161,7 +171,7 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <value>Name of class</value>
         [DataMember(Name="className", EmitDefaultValue=false)]
-        public string ClassName { get; private set; }
+        public string ClassName { get; set; }
 
         /// <summary>
         /// Locked in read-only

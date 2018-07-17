@@ -33,23 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BusinessUnitSearchCriteria" /> class.
         /// </summary>
-        /// <param name="UserId">User Identifier.</param>
         /// <param name="Mode">Possible values:  0: Search  1: Archive  2: ArchivePa .</param>
         /// <param name="OrderBy">Order.</param>
-        public BusinessUnitSearchCriteria(int? UserId = default(int?), int? Mode = default(int?), string OrderBy = default(string))
+        public BusinessUnitSearchCriteria(int? Mode = default(int?), string OrderBy = default(string))
         {
-            this.UserId = UserId;
             this.Mode = Mode;
             this.OrderBy = OrderBy;
         }
         
-        /// <summary>
-        /// User Identifier
-        /// </summary>
-        /// <value>User Identifier</value>
-        [DataMember(Name="userId", EmitDefaultValue=false)]
-        public int? UserId { get; set; }
-
         /// <summary>
         /// Possible values:  0: Search  1: Archive  2: ArchivePa 
         /// </summary>
@@ -72,7 +63,6 @@ namespace IO.Swagger.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BusinessUnitSearchCriteria {\n");
-            sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  Mode: ").Append(Mode).Append("\n");
             sb.Append("  OrderBy: ").Append(OrderBy).Append("\n");
             sb.Append("}\n");
@@ -110,11 +100,6 @@ namespace IO.Swagger.Model
 
             return 
                 (
-                    this.UserId == input.UserId ||
-                    (this.UserId != null &&
-                    this.UserId.Equals(input.UserId))
-                ) && 
-                (
                     this.Mode == input.Mode ||
                     (this.Mode != null &&
                     this.Mode.Equals(input.Mode))
@@ -135,8 +120,6 @@ namespace IO.Swagger.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.UserId != null)
-                    hashCode = hashCode * 59 + this.UserId.GetHashCode();
                 if (this.Mode != null)
                     hashCode = hashCode * 59 + this.Mode.GetHashCode();
                 if (this.OrderBy != null)

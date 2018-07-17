@@ -405,9 +405,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numero">The number filter</param>
+        /// <param name="number">The number filter</param>
         /// <returns>List&lt;BinderDTO&gt;</returns>
-        List<BinderDTO> BindersGetByNumero (string numero);
+        List<BinderDTO> BindersGetByNumero (string number);
 
         /// <summary>
         /// This call search a binder by the given number
@@ -416,9 +416,30 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="number">The number filter</param>
+        /// <returns>ApiResponse of List&lt;BinderDTO&gt;</returns>
+        ApiResponse<List<BinderDTO>> BindersGetByNumeroWithHttpInfo (string number);
+        /// <summary>
+        /// This call search a binder by the given number
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use api/Binders?number&#x3D;{number}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="numero">The number filter</param>
+        /// <returns>List&lt;BinderDTO&gt;</returns>
+        List<BinderDTO> BindersGetByNumeroOld (string numero);
+
+        /// <summary>
+        /// This call search a binder by the given number
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use api/Binders?number&#x3D;{number}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numero">The number filter</param>
         /// <returns>ApiResponse of List&lt;BinderDTO&gt;</returns>
-        ApiResponse<List<BinderDTO>> BindersGetByNumeroWithHttpInfo (string numero);
+        ApiResponse<List<BinderDTO>> BindersGetByNumeroOldWithHttpInfo (string numero);
         /// <summary>
         /// This call retrieve binders of the given type and state
         /// </summary>
@@ -1037,9 +1058,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numero">The number filter</param>
+        /// <param name="number">The number filter</param>
         /// <returns>Task of List&lt;BinderDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<BinderDTO>> BindersGetByNumeroAsync (string numero);
+        System.Threading.Tasks.Task<List<BinderDTO>> BindersGetByNumeroAsync (string number);
 
         /// <summary>
         /// This call search a binder by the given number
@@ -1048,9 +1069,30 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="number">The number filter</param>
+        /// <returns>Task of ApiResponse (List&lt;BinderDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<BinderDTO>>> BindersGetByNumeroAsyncWithHttpInfo (string number);
+        /// <summary>
+        /// This call search a binder by the given number
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use api/Binders?number&#x3D;{number}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="numero">The number filter</param>
+        /// <returns>Task of List&lt;BinderDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<BinderDTO>> BindersGetByNumeroOldAsync (string numero);
+
+        /// <summary>
+        /// This call search a binder by the given number
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use api/Binders?number&#x3D;{number}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numero">The number filter</param>
         /// <returns>Task of ApiResponse (List&lt;BinderDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<BinderDTO>>> BindersGetByNumeroAsyncWithHttpInfo (string numero);
+        System.Threading.Tasks.Task<ApiResponse<List<BinderDTO>>> BindersGetByNumeroOldAsyncWithHttpInfo (string numero);
         /// <summary>
         /// This call retrieve binders of the given type and state
         /// </summary>
@@ -4118,11 +4160,11 @@ namespace IO.Swagger.Api
         /// This call search a binder by the given number 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="numero">The number filter</param>
+        /// <param name="number">The number filter</param>
         /// <returns>List&lt;BinderDTO&gt;</returns>
-        public List<BinderDTO> BindersGetByNumero (string numero)
+        public List<BinderDTO> BindersGetByNumero (string number)
         {
-             ApiResponse<List<BinderDTO>> localVarResponse = BindersGetByNumeroWithHttpInfo(numero);
+             ApiResponse<List<BinderDTO>> localVarResponse = BindersGetByNumeroWithHttpInfo(number);
              return localVarResponse.Data;
         }
 
@@ -4130,13 +4172,162 @@ namespace IO.Swagger.Api
         /// This call search a binder by the given number 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="number">The number filter</param>
+        /// <returns>ApiResponse of List&lt;BinderDTO&gt;</returns>
+        public ApiResponse< List<BinderDTO> > BindersGetByNumeroWithHttpInfo (string number)
+        {
+            // verify the required parameter 'number' is set
+            if (number == null)
+                throw new ApiException(400, "Missing required parameter 'number' when calling BindersApi->BindersGetByNumero");
+
+            var localVarPath = "/api/Binders";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (number != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "number", number)); // query parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("BindersGetByNumero", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<BinderDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<BinderDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<BinderDTO>)));
+        }
+
+        /// <summary>
+        /// This call search a binder by the given number 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="number">The number filter</param>
+        /// <returns>Task of List&lt;BinderDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<BinderDTO>> BindersGetByNumeroAsync (string number)
+        {
+             ApiResponse<List<BinderDTO>> localVarResponse = await BindersGetByNumeroAsyncWithHttpInfo(number);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call search a binder by the given number 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="number">The number filter</param>
+        /// <returns>Task of ApiResponse (List&lt;BinderDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<BinderDTO>>> BindersGetByNumeroAsyncWithHttpInfo (string number)
+        {
+            // verify the required parameter 'number' is set
+            if (number == null)
+                throw new ApiException(400, "Missing required parameter 'number' when calling BindersApi->BindersGetByNumero");
+
+            var localVarPath = "/api/Binders";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (number != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "number", number)); // query parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("BindersGetByNumero", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<BinderDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<BinderDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<BinderDTO>)));
+        }
+
+        /// <summary>
+        /// This call search a binder by the given number This method is deprecated. Use api/Binders?number&#x3D;{number}
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="numero">The number filter</param>
+        /// <returns>List&lt;BinderDTO&gt;</returns>
+        public List<BinderDTO> BindersGetByNumeroOld (string numero)
+        {
+             ApiResponse<List<BinderDTO>> localVarResponse = BindersGetByNumeroOldWithHttpInfo(numero);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call search a binder by the given number This method is deprecated. Use api/Binders?number&#x3D;{number}
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numero">The number filter</param>
         /// <returns>ApiResponse of List&lt;BinderDTO&gt;</returns>
-        public ApiResponse< List<BinderDTO> > BindersGetByNumeroWithHttpInfo (string numero)
+        public ApiResponse< List<BinderDTO> > BindersGetByNumeroOldWithHttpInfo (string numero)
         {
             // verify the required parameter 'numero' is set
             if (numero == null)
-                throw new ApiException(400, "Missing required parameter 'numero' when calling BindersApi->BindersGetByNumero");
+                throw new ApiException(400, "Missing required parameter 'numero' when calling BindersApi->BindersGetByNumeroOld");
 
             var localVarPath = "/api/Binders/number/{numero}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4179,7 +4370,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("BindersGetByNumero", localVarResponse);
+                Exception exception = ExceptionFactory("BindersGetByNumeroOld", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -4189,29 +4380,29 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call search a binder by the given number 
+        /// This call search a binder by the given number This method is deprecated. Use api/Binders?number&#x3D;{number}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numero">The number filter</param>
         /// <returns>Task of List&lt;BinderDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<BinderDTO>> BindersGetByNumeroAsync (string numero)
+        public async System.Threading.Tasks.Task<List<BinderDTO>> BindersGetByNumeroOldAsync (string numero)
         {
-             ApiResponse<List<BinderDTO>> localVarResponse = await BindersGetByNumeroAsyncWithHttpInfo(numero);
+             ApiResponse<List<BinderDTO>> localVarResponse = await BindersGetByNumeroOldAsyncWithHttpInfo(numero);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// This call search a binder by the given number 
+        /// This call search a binder by the given number This method is deprecated. Use api/Binders?number&#x3D;{number}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="numero">The number filter</param>
         /// <returns>Task of ApiResponse (List&lt;BinderDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<BinderDTO>>> BindersGetByNumeroAsyncWithHttpInfo (string numero)
+        public async System.Threading.Tasks.Task<ApiResponse<List<BinderDTO>>> BindersGetByNumeroOldAsyncWithHttpInfo (string numero)
         {
             // verify the required parameter 'numero' is set
             if (numero == null)
-                throw new ApiException(400, "Missing required parameter 'numero' when calling BindersApi->BindersGetByNumero");
+                throw new ApiException(400, "Missing required parameter 'numero' when calling BindersApi->BindersGetByNumeroOld");
 
             var localVarPath = "/api/Binders/number/{numero}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4254,7 +4445,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("BindersGetByNumero", localVarResponse);
+                Exception exception = ExceptionFactory("BindersGetByNumeroOld", localVarResponse);
                 if (exception != null) throw exception;
             }
 

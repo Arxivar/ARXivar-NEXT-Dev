@@ -18,9 +18,9 @@ namespace ExampleApplication
             InitializeComponent();
         }
 
-        private string _appId = "ArxivarNextDev";
-        private string _secret = "985A3F40496742A7";
-        private string _apiUrl = "http://NEXTYEAR2017/ARXivarNextWebApi/";
+        private string _appId = Settings.ExampleSettings.AppName;
+        private string _secret = Settings.ExampleSettings.AppSecret;
+        private string _apiUrl = Settings.ExampleSettings.ApiBaseUrl;
 
         private string _authToken;
         private string _refreshToken;

@@ -130,6 +130,27 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of List&lt;FolderDTO&gt;</returns>
         ApiResponse<List<FolderDTO>> FoldersFindByNameWithHttpInfo (string name);
         /// <summary>
+        /// This method allows to find folders by their name
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use /api/Folders/find?name&#x3D;{name}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name to search</param>
+        /// <returns>List&lt;FolderDTO&gt;</returns>
+        List<FolderDTO> FoldersFindByNameOld (string name);
+
+        /// <summary>
+        /// This method allows to find folders by their name
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use /api/Folders/find?name&#x3D;{name}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name to search</param>
+        /// <returns>ApiResponse of List&lt;FolderDTO&gt;</returns>
+        ApiResponse<List<FolderDTO>> FoldersFindByNameOldWithHttpInfo (string name);
+        /// <summary>
         /// This method allows to find folders by their parent and name
         /// </summary>
         /// <remarks>
@@ -180,9 +201,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <returns>ArxDriveFolderModeInfo</returns>
-        ArxDriveFolderModeInfo FoldersGetArxDriveConfiguration (int? folderid);
+        ArxDriveFolderModeInfo FoldersGetArxDriveConfiguration (int? id);
 
         /// <summary>
         /// This method returns the ArxDrive configuration for the folder
@@ -191,9 +212,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <returns>ApiResponse of ArxDriveFolderModeInfo</returns>
-        ApiResponse<ArxDriveFolderModeInfo> FoldersGetArxDriveConfigurationWithHttpInfo (int? folderid);
+        ApiResponse<ArxDriveFolderModeInfo> FoldersGetArxDriveConfigurationWithHttpInfo (int? id);
         /// <summary>
         /// This method return the folders contained in specified folder
         /// </summary>
@@ -266,9 +287,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <returns>FolderPermissionsDTO</returns>
-        FolderPermissionsDTO FoldersGetFolderPermission (int? folderid);
+        FolderPermissionsDTO FoldersGetFolderPermission (int? id);
 
         /// <summary>
         /// This method returns the permissions for the folder
@@ -277,9 +298,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <returns>ApiResponse of FolderPermissionsDTO</returns>
-        ApiResponse<FolderPermissionsDTO> FoldersGetFolderPermissionWithHttpInfo (int? folderid);
+        ApiResponse<FolderPermissionsDTO> FoldersGetFolderPermissionWithHttpInfo (int? id);
         /// <summary>
         /// This method allow to insert docnumbers in a folder
         /// </summary>
@@ -330,7 +351,7 @@ namespace IO.Swagger.Api
         /// This method allow to create a new folder in the parent folder specified
         /// </summary>
         /// <remarks>
-        /// 
+        /// This method is deprecated. Use /api/Folders/{parentId}/new?name&#x3D;{name}
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentId">The identifier of the parent folder</param>
@@ -342,13 +363,36 @@ namespace IO.Swagger.Api
         /// This method allow to create a new folder in the parent folder specified
         /// </summary>
         /// <remarks>
-        /// 
+        /// This method is deprecated. Use /api/Folders/{parentId}/new?name&#x3D;{name}
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentId">The identifier of the parent folder</param>
         /// <param name="name">The name of new folder</param>
         /// <returns>ApiResponse of FolderDTO</returns>
         ApiResponse<FolderDTO> FoldersNewWithHttpInfo (int? parentId, string name);
+        /// <summary>
+        /// This method allow to create a new folder in the parent folder specified
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="parentId">The identifier of the parent folder</param>
+        /// <param name="name">The name of new folder</param>
+        /// <returns>FolderDTO</returns>
+        FolderDTO FoldersNewFolder (int? parentId, string name);
+
+        /// <summary>
+        /// This method allow to create a new folder in the parent folder specified
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="parentId">The identifier of the parent folder</param>
+        /// <param name="name">The name of new folder</param>
+        /// <returns>ApiResponse of FolderDTO</returns>
+        ApiResponse<FolderDTO> FoldersNewFolderWithHttpInfo (int? parentId, string name);
         /// <summary>
         /// This method allows to remove some docnumber from a folder
         /// </summary>
@@ -396,6 +440,29 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> FoldersRenameWithHttpInfo (string name, int? id);
         /// <summary>
+        /// This method allows to rename a folder
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use /api/Folders/rename/{id}?name&#x3D;{name}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The new name of folder</param>
+        /// <param name="id">The identifier of folder to rename</param>
+        /// <returns></returns>
+        void FoldersRenameOld (string name, int? id);
+
+        /// <summary>
+        /// This method allows to rename a folder
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use /api/Folders/rename/{id}?name&#x3D;{name}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The new name of folder</param>
+        /// <param name="id">The identifier of folder to rename</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> FoldersRenameOldWithHttpInfo (string name, int? id);
+        /// <summary>
         /// This method allows to set the profile information for a folder
         /// </summary>
         /// <remarks>
@@ -425,10 +492,10 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <param name="arxDriveFolderModeInfo">ArxDrive folder information</param>
         /// <returns></returns>
-        void FoldersSetArxDriveConfiguration (int? folderid, ArxDriveFolderModeInfo arxDriveFolderModeInfo);
+        void FoldersSetArxDriveConfiguration (int? id, ArxDriveFolderModeInfo arxDriveFolderModeInfo);
 
         /// <summary>
         /// This method sets the ArxDrive configuration for the folder
@@ -437,10 +504,10 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <param name="arxDriveFolderModeInfo">ArxDrive folder information</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> FoldersSetArxDriveConfigurationWithHttpInfo (int? folderid, ArxDriveFolderModeInfo arxDriveFolderModeInfo);
+        ApiResponse<Object> FoldersSetArxDriveConfigurationWithHttpInfo (int? id, ArxDriveFolderModeInfo arxDriveFolderModeInfo);
         /// <summary>
         /// This method sets the permissions for the folder
         /// </summary>
@@ -448,10 +515,10 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <param name="permissions">The folder permissions</param>
         /// <returns></returns>
-        void FoldersSetFolderPermission (int? folderid, FolderPermissionsDTO permissions);
+        void FoldersSetFolderPermission (int? id, FolderPermissionsDTO permissions);
 
         /// <summary>
         /// This method sets the permissions for the folder
@@ -460,10 +527,10 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <param name="permissions">The folder permissions</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> FoldersSetFolderPermissionWithHttpInfo (int? folderid, FolderPermissionsDTO permissions);
+        ApiResponse<Object> FoldersSetFolderPermissionWithHttpInfo (int? id, FolderPermissionsDTO permissions);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -572,6 +639,27 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (List&lt;FolderDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<FolderDTO>>> FoldersFindByNameAsyncWithHttpInfo (string name);
         /// <summary>
+        /// This method allows to find folders by their name
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use /api/Folders/find?name&#x3D;{name}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name to search</param>
+        /// <returns>Task of List&lt;FolderDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<FolderDTO>> FoldersFindByNameOldAsync (string name);
+
+        /// <summary>
+        /// This method allows to find folders by their name
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use /api/Folders/find?name&#x3D;{name}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name to search</param>
+        /// <returns>Task of ApiResponse (List&lt;FolderDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<FolderDTO>>> FoldersFindByNameOldAsyncWithHttpInfo (string name);
+        /// <summary>
         /// This method allows to find folders by their parent and name
         /// </summary>
         /// <remarks>
@@ -622,9 +710,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <returns>Task of ArxDriveFolderModeInfo</returns>
-        System.Threading.Tasks.Task<ArxDriveFolderModeInfo> FoldersGetArxDriveConfigurationAsync (int? folderid);
+        System.Threading.Tasks.Task<ArxDriveFolderModeInfo> FoldersGetArxDriveConfigurationAsync (int? id);
 
         /// <summary>
         /// This method returns the ArxDrive configuration for the folder
@@ -633,9 +721,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <returns>Task of ApiResponse (ArxDriveFolderModeInfo)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ArxDriveFolderModeInfo>> FoldersGetArxDriveConfigurationAsyncWithHttpInfo (int? folderid);
+        System.Threading.Tasks.Task<ApiResponse<ArxDriveFolderModeInfo>> FoldersGetArxDriveConfigurationAsyncWithHttpInfo (int? id);
         /// <summary>
         /// This method return the folders contained in specified folder
         /// </summary>
@@ -708,9 +796,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <returns>Task of FolderPermissionsDTO</returns>
-        System.Threading.Tasks.Task<FolderPermissionsDTO> FoldersGetFolderPermissionAsync (int? folderid);
+        System.Threading.Tasks.Task<FolderPermissionsDTO> FoldersGetFolderPermissionAsync (int? id);
 
         /// <summary>
         /// This method returns the permissions for the folder
@@ -719,9 +807,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <returns>Task of ApiResponse (FolderPermissionsDTO)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FolderPermissionsDTO>> FoldersGetFolderPermissionAsyncWithHttpInfo (int? folderid);
+        System.Threading.Tasks.Task<ApiResponse<FolderPermissionsDTO>> FoldersGetFolderPermissionAsyncWithHttpInfo (int? id);
         /// <summary>
         /// This method allow to insert docnumbers in a folder
         /// </summary>
@@ -772,7 +860,7 @@ namespace IO.Swagger.Api
         /// This method allow to create a new folder in the parent folder specified
         /// </summary>
         /// <remarks>
-        /// 
+        /// This method is deprecated. Use /api/Folders/{parentId}/new?name&#x3D;{name}
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentId">The identifier of the parent folder</param>
@@ -784,13 +872,36 @@ namespace IO.Swagger.Api
         /// This method allow to create a new folder in the parent folder specified
         /// </summary>
         /// <remarks>
-        /// 
+        /// This method is deprecated. Use /api/Folders/{parentId}/new?name&#x3D;{name}
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentId">The identifier of the parent folder</param>
         /// <param name="name">The name of new folder</param>
         /// <returns>Task of ApiResponse (FolderDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<FolderDTO>> FoldersNewAsyncWithHttpInfo (int? parentId, string name);
+        /// <summary>
+        /// This method allow to create a new folder in the parent folder specified
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="parentId">The identifier of the parent folder</param>
+        /// <param name="name">The name of new folder</param>
+        /// <returns>Task of FolderDTO</returns>
+        System.Threading.Tasks.Task<FolderDTO> FoldersNewFolderAsync (int? parentId, string name);
+
+        /// <summary>
+        /// This method allow to create a new folder in the parent folder specified
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="parentId">The identifier of the parent folder</param>
+        /// <param name="name">The name of new folder</param>
+        /// <returns>Task of ApiResponse (FolderDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FolderDTO>> FoldersNewFolderAsyncWithHttpInfo (int? parentId, string name);
         /// <summary>
         /// This method allows to remove some docnumber from a folder
         /// </summary>
@@ -838,6 +949,29 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> FoldersRenameAsyncWithHttpInfo (string name, int? id);
         /// <summary>
+        /// This method allows to rename a folder
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use /api/Folders/rename/{id}?name&#x3D;{name}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The new name of folder</param>
+        /// <param name="id">The identifier of folder to rename</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task FoldersRenameOldAsync (string name, int? id);
+
+        /// <summary>
+        /// This method allows to rename a folder
+        /// </summary>
+        /// <remarks>
+        /// This method is deprecated. Use /api/Folders/rename/{id}?name&#x3D;{name}
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The new name of folder</param>
+        /// <param name="id">The identifier of folder to rename</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> FoldersRenameOldAsyncWithHttpInfo (string name, int? id);
+        /// <summary>
         /// This method allows to set the profile information for a folder
         /// </summary>
         /// <remarks>
@@ -867,10 +1001,10 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <param name="arxDriveFolderModeInfo">ArxDrive folder information</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task FoldersSetArxDriveConfigurationAsync (int? folderid, ArxDriveFolderModeInfo arxDriveFolderModeInfo);
+        System.Threading.Tasks.Task FoldersSetArxDriveConfigurationAsync (int? id, ArxDriveFolderModeInfo arxDriveFolderModeInfo);
 
         /// <summary>
         /// This method sets the ArxDrive configuration for the folder
@@ -879,10 +1013,10 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <param name="arxDriveFolderModeInfo">ArxDrive folder information</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> FoldersSetArxDriveConfigurationAsyncWithHttpInfo (int? folderid, ArxDriveFolderModeInfo arxDriveFolderModeInfo);
+        System.Threading.Tasks.Task<ApiResponse<Object>> FoldersSetArxDriveConfigurationAsyncWithHttpInfo (int? id, ArxDriveFolderModeInfo arxDriveFolderModeInfo);
         /// <summary>
         /// This method sets the permissions for the folder
         /// </summary>
@@ -890,10 +1024,10 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <param name="permissions">The folder permissions</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task FoldersSetFolderPermissionAsync (int? folderid, FolderPermissionsDTO permissions);
+        System.Threading.Tasks.Task FoldersSetFolderPermissionAsync (int? id, FolderPermissionsDTO permissions);
 
         /// <summary>
         /// This method sets the permissions for the folder
@@ -902,10 +1036,10 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <param name="permissions">The folder permissions</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> FoldersSetFolderPermissionAsyncWithHttpInfo (int? folderid, FolderPermissionsDTO permissions);
+        System.Threading.Tasks.Task<ApiResponse<Object>> FoldersSetFolderPermissionAsyncWithHttpInfo (int? id, FolderPermissionsDTO permissions);
         #endregion Asynchronous Operations
     }
 
@@ -1596,7 +1730,7 @@ namespace IO.Swagger.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling FoldersApi->FoldersFindByName");
 
-            var localVarPath = "/api/Folders/find/{name}";
+            var localVarPath = "/api/Folders/find";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1620,7 +1754,7 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (name != null) localVarPathParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // path parameter
+            if (name != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "name", name)); // query parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1671,6 +1805,155 @@ namespace IO.Swagger.Api
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling FoldersApi->FoldersFindByName");
 
+            var localVarPath = "/api/Folders/find";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "name", name)); // query parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FoldersFindByName", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<FolderDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<FolderDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<FolderDTO>)));
+        }
+
+        /// <summary>
+        /// This method allows to find folders by their name This method is deprecated. Use /api/Folders/find?name&#x3D;{name}
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name to search</param>
+        /// <returns>List&lt;FolderDTO&gt;</returns>
+        public List<FolderDTO> FoldersFindByNameOld (string name)
+        {
+             ApiResponse<List<FolderDTO>> localVarResponse = FoldersFindByNameOldWithHttpInfo(name);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This method allows to find folders by their name This method is deprecated. Use /api/Folders/find?name&#x3D;{name}
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name to search</param>
+        /// <returns>ApiResponse of List&lt;FolderDTO&gt;</returns>
+        public ApiResponse< List<FolderDTO> > FoldersFindByNameOldWithHttpInfo (string name)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling FoldersApi->FoldersFindByNameOld");
+
+            var localVarPath = "/api/Folders/find/{name}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FoldersFindByNameOld", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<FolderDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<FolderDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<FolderDTO>)));
+        }
+
+        /// <summary>
+        /// This method allows to find folders by their name This method is deprecated. Use /api/Folders/find?name&#x3D;{name}
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name to search</param>
+        /// <returns>Task of List&lt;FolderDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<FolderDTO>> FoldersFindByNameOldAsync (string name)
+        {
+             ApiResponse<List<FolderDTO>> localVarResponse = await FoldersFindByNameOldAsyncWithHttpInfo(name);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This method allows to find folders by their name This method is deprecated. Use /api/Folders/find?name&#x3D;{name}
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name to search</param>
+        /// <returns>Task of ApiResponse (List&lt;FolderDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<FolderDTO>>> FoldersFindByNameOldAsyncWithHttpInfo (string name)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling FoldersApi->FoldersFindByNameOld");
+
             var localVarPath = "/api/Folders/find/{name}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
@@ -1712,7 +1995,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("FoldersFindByName", localVarResponse);
+                Exception exception = ExceptionFactory("FoldersFindByNameOld", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2035,11 +2318,11 @@ namespace IO.Swagger.Api
         /// This method returns the ArxDrive configuration for the folder 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <returns>ArxDriveFolderModeInfo</returns>
-        public ArxDriveFolderModeInfo FoldersGetArxDriveConfiguration (int? folderid)
+        public ArxDriveFolderModeInfo FoldersGetArxDriveConfiguration (int? id)
         {
-             ApiResponse<ArxDriveFolderModeInfo> localVarResponse = FoldersGetArxDriveConfigurationWithHttpInfo(folderid);
+             ApiResponse<ArxDriveFolderModeInfo> localVarResponse = FoldersGetArxDriveConfigurationWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -2047,15 +2330,15 @@ namespace IO.Swagger.Api
         /// This method returns the ArxDrive configuration for the folder 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <returns>ApiResponse of ArxDriveFolderModeInfo</returns>
-        public ApiResponse< ArxDriveFolderModeInfo > FoldersGetArxDriveConfigurationWithHttpInfo (int? folderid)
+        public ApiResponse< ArxDriveFolderModeInfo > FoldersGetArxDriveConfigurationWithHttpInfo (int? id)
         {
-            // verify the required parameter 'folderid' is set
-            if (folderid == null)
-                throw new ApiException(400, "Missing required parameter 'folderid' when calling FoldersApi->FoldersGetArxDriveConfiguration");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling FoldersApi->FoldersGetArxDriveConfiguration");
 
-            var localVarPath = "/api/Folders/{folderid}/arxdriveinfo";
+            var localVarPath = "/api/Folders/{id}/arxdriveinfo";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2079,7 +2362,7 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (folderid != null) localVarPathParams.Add("folderid", Configuration.ApiClient.ParameterToString(folderid)); // path parameter
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -2109,11 +2392,11 @@ namespace IO.Swagger.Api
         /// This method returns the ArxDrive configuration for the folder 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <returns>Task of ArxDriveFolderModeInfo</returns>
-        public async System.Threading.Tasks.Task<ArxDriveFolderModeInfo> FoldersGetArxDriveConfigurationAsync (int? folderid)
+        public async System.Threading.Tasks.Task<ArxDriveFolderModeInfo> FoldersGetArxDriveConfigurationAsync (int? id)
         {
-             ApiResponse<ArxDriveFolderModeInfo> localVarResponse = await FoldersGetArxDriveConfigurationAsyncWithHttpInfo(folderid);
+             ApiResponse<ArxDriveFolderModeInfo> localVarResponse = await FoldersGetArxDriveConfigurationAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -2122,15 +2405,15 @@ namespace IO.Swagger.Api
         /// This method returns the ArxDrive configuration for the folder 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <returns>Task of ApiResponse (ArxDriveFolderModeInfo)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ArxDriveFolderModeInfo>> FoldersGetArxDriveConfigurationAsyncWithHttpInfo (int? folderid)
+        public async System.Threading.Tasks.Task<ApiResponse<ArxDriveFolderModeInfo>> FoldersGetArxDriveConfigurationAsyncWithHttpInfo (int? id)
         {
-            // verify the required parameter 'folderid' is set
-            if (folderid == null)
-                throw new ApiException(400, "Missing required parameter 'folderid' when calling FoldersApi->FoldersGetArxDriveConfiguration");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling FoldersApi->FoldersGetArxDriveConfiguration");
 
-            var localVarPath = "/api/Folders/{folderid}/arxdriveinfo";
+            var localVarPath = "/api/Folders/{id}/arxdriveinfo";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2154,7 +2437,7 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (folderid != null) localVarPathParams.Add("folderid", Configuration.ApiClient.ParameterToString(folderid)); // path parameter
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -2667,11 +2950,11 @@ namespace IO.Swagger.Api
         /// This method returns the permissions for the folder 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <returns>FolderPermissionsDTO</returns>
-        public FolderPermissionsDTO FoldersGetFolderPermission (int? folderid)
+        public FolderPermissionsDTO FoldersGetFolderPermission (int? id)
         {
-             ApiResponse<FolderPermissionsDTO> localVarResponse = FoldersGetFolderPermissionWithHttpInfo(folderid);
+             ApiResponse<FolderPermissionsDTO> localVarResponse = FoldersGetFolderPermissionWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -2679,15 +2962,15 @@ namespace IO.Swagger.Api
         /// This method returns the permissions for the folder 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <returns>ApiResponse of FolderPermissionsDTO</returns>
-        public ApiResponse< FolderPermissionsDTO > FoldersGetFolderPermissionWithHttpInfo (int? folderid)
+        public ApiResponse< FolderPermissionsDTO > FoldersGetFolderPermissionWithHttpInfo (int? id)
         {
-            // verify the required parameter 'folderid' is set
-            if (folderid == null)
-                throw new ApiException(400, "Missing required parameter 'folderid' when calling FoldersApi->FoldersGetFolderPermission");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling FoldersApi->FoldersGetFolderPermission");
 
-            var localVarPath = "/api/Folders/{folderid}/permissions";
+            var localVarPath = "/api/Folders/{id}/permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2711,7 +2994,7 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (folderid != null) localVarPathParams.Add("folderid", Configuration.ApiClient.ParameterToString(folderid)); // path parameter
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -2741,11 +3024,11 @@ namespace IO.Swagger.Api
         /// This method returns the permissions for the folder 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <returns>Task of FolderPermissionsDTO</returns>
-        public async System.Threading.Tasks.Task<FolderPermissionsDTO> FoldersGetFolderPermissionAsync (int? folderid)
+        public async System.Threading.Tasks.Task<FolderPermissionsDTO> FoldersGetFolderPermissionAsync (int? id)
         {
-             ApiResponse<FolderPermissionsDTO> localVarResponse = await FoldersGetFolderPermissionAsyncWithHttpInfo(folderid);
+             ApiResponse<FolderPermissionsDTO> localVarResponse = await FoldersGetFolderPermissionAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -2754,15 +3037,15 @@ namespace IO.Swagger.Api
         /// This method returns the permissions for the folder 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <returns>Task of ApiResponse (FolderPermissionsDTO)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FolderPermissionsDTO>> FoldersGetFolderPermissionAsyncWithHttpInfo (int? folderid)
+        public async System.Threading.Tasks.Task<ApiResponse<FolderPermissionsDTO>> FoldersGetFolderPermissionAsyncWithHttpInfo (int? id)
         {
-            // verify the required parameter 'folderid' is set
-            if (folderid == null)
-                throw new ApiException(400, "Missing required parameter 'folderid' when calling FoldersApi->FoldersGetFolderPermission");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling FoldersApi->FoldersGetFolderPermission");
 
-            var localVarPath = "/api/Folders/{folderid}/permissions";
+            var localVarPath = "/api/Folders/{id}/permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2786,7 +3069,7 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (folderid != null) localVarPathParams.Add("folderid", Configuration.ApiClient.ParameterToString(folderid)); // path parameter
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -3139,7 +3422,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This method allow to create a new folder in the parent folder specified 
+        /// This method allow to create a new folder in the parent folder specified This method is deprecated. Use /api/Folders/{parentId}/new?name&#x3D;{name}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentId">The identifier of the parent folder</param>
@@ -3152,7 +3435,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This method allow to create a new folder in the parent folder specified 
+        /// This method allow to create a new folder in the parent folder specified This method is deprecated. Use /api/Folders/{parentId}/new?name&#x3D;{name}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentId">The identifier of the parent folder</param>
@@ -3231,7 +3514,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This method allow to create a new folder in the parent folder specified 
+        /// This method allow to create a new folder in the parent folder specified This method is deprecated. Use /api/Folders/{parentId}/new?name&#x3D;{name}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentId">The identifier of the parent folder</param>
@@ -3245,7 +3528,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This method allow to create a new folder in the parent folder specified 
+        /// This method allow to create a new folder in the parent folder specified This method is deprecated. Use /api/Folders/{parentId}/new?name&#x3D;{name}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="parentId">The identifier of the parent folder</param>
@@ -3315,6 +3598,167 @@ namespace IO.Swagger.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("FoldersNew", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FolderDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FolderDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FolderDTO)));
+        }
+
+        /// <summary>
+        /// This method allow to create a new folder in the parent folder specified 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="parentId">The identifier of the parent folder</param>
+        /// <param name="name">The name of new folder</param>
+        /// <returns>FolderDTO</returns>
+        public FolderDTO FoldersNewFolder (int? parentId, string name)
+        {
+             ApiResponse<FolderDTO> localVarResponse = FoldersNewFolderWithHttpInfo(parentId, name);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This method allow to create a new folder in the parent folder specified 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="parentId">The identifier of the parent folder</param>
+        /// <param name="name">The name of new folder</param>
+        /// <returns>ApiResponse of FolderDTO</returns>
+        public ApiResponse< FolderDTO > FoldersNewFolderWithHttpInfo (int? parentId, string name)
+        {
+            // verify the required parameter 'parentId' is set
+            if (parentId == null)
+                throw new ApiException(400, "Missing required parameter 'parentId' when calling FoldersApi->FoldersNewFolder");
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling FoldersApi->FoldersNewFolder");
+
+            var localVarPath = "/api/Folders/{parentId}/new";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (parentId != null) localVarPathParams.Add("parentId", Configuration.ApiClient.ParameterToString(parentId)); // path parameter
+            if (name != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "name", name)); // query parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FoldersNewFolder", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FolderDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FolderDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FolderDTO)));
+        }
+
+        /// <summary>
+        /// This method allow to create a new folder in the parent folder specified 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="parentId">The identifier of the parent folder</param>
+        /// <param name="name">The name of new folder</param>
+        /// <returns>Task of FolderDTO</returns>
+        public async System.Threading.Tasks.Task<FolderDTO> FoldersNewFolderAsync (int? parentId, string name)
+        {
+             ApiResponse<FolderDTO> localVarResponse = await FoldersNewFolderAsyncWithHttpInfo(parentId, name);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This method allow to create a new folder in the parent folder specified 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="parentId">The identifier of the parent folder</param>
+        /// <param name="name">The name of new folder</param>
+        /// <returns>Task of ApiResponse (FolderDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FolderDTO>> FoldersNewFolderAsyncWithHttpInfo (int? parentId, string name)
+        {
+            // verify the required parameter 'parentId' is set
+            if (parentId == null)
+                throw new ApiException(400, "Missing required parameter 'parentId' when calling FoldersApi->FoldersNewFolder");
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling FoldersApi->FoldersNewFolder");
+
+            var localVarPath = "/api/Folders/{parentId}/new";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (parentId != null) localVarPathParams.Add("parentId", Configuration.ApiClient.ParameterToString(parentId)); // path parameter
+            if (name != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "name", name)); // query parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FoldersNewFolder", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -3526,7 +3970,7 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling FoldersApi->FoldersRename");
 
-            var localVarPath = "/api/Folders/rename/{id}/{name}";
+            var localVarPath = "/api/Folders/rename/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3546,8 +3990,8 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (name != null) localVarPathParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // path parameter
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (name != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "name", name)); // query parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -3602,6 +4046,157 @@ namespace IO.Swagger.Api
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling FoldersApi->FoldersRename");
 
+            var localVarPath = "/api/Folders/rename/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (name != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "name", name)); // query parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FoldersRename", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// This method allows to rename a folder This method is deprecated. Use /api/Folders/rename/{id}?name&#x3D;{name}
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The new name of folder</param>
+        /// <param name="id">The identifier of folder to rename</param>
+        /// <returns></returns>
+        public void FoldersRenameOld (string name, int? id)
+        {
+             FoldersRenameOldWithHttpInfo(name, id);
+        }
+
+        /// <summary>
+        /// This method allows to rename a folder This method is deprecated. Use /api/Folders/rename/{id}?name&#x3D;{name}
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The new name of folder</param>
+        /// <param name="id">The identifier of folder to rename</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> FoldersRenameOldWithHttpInfo (string name, int? id)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling FoldersApi->FoldersRenameOld");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling FoldersApi->FoldersRenameOld");
+
+            var localVarPath = "/api/Folders/rename/{id}/{name}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // path parameter
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FoldersRenameOld", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// This method allows to rename a folder This method is deprecated. Use /api/Folders/rename/{id}?name&#x3D;{name}
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The new name of folder</param>
+        /// <param name="id">The identifier of folder to rename</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task FoldersRenameOldAsync (string name, int? id)
+        {
+             await FoldersRenameOldAsyncWithHttpInfo(name, id);
+
+        }
+
+        /// <summary>
+        /// This method allows to rename a folder This method is deprecated. Use /api/Folders/rename/{id}?name&#x3D;{name}
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The new name of folder</param>
+        /// <param name="id">The identifier of folder to rename</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> FoldersRenameOldAsyncWithHttpInfo (string name, int? id)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling FoldersApi->FoldersRenameOld");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling FoldersApi->FoldersRenameOld");
+
             var localVarPath = "/api/Folders/rename/{id}/{name}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
@@ -3640,7 +4235,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("FoldersRename", localVarResponse);
+                Exception exception = ExceptionFactory("FoldersRenameOld", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -3828,31 +4423,31 @@ namespace IO.Swagger.Api
         /// This method sets the ArxDrive configuration for the folder 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <param name="arxDriveFolderModeInfo">ArxDrive folder information</param>
         /// <returns></returns>
-        public void FoldersSetArxDriveConfiguration (int? folderid, ArxDriveFolderModeInfo arxDriveFolderModeInfo)
+        public void FoldersSetArxDriveConfiguration (int? id, ArxDriveFolderModeInfo arxDriveFolderModeInfo)
         {
-             FoldersSetArxDriveConfigurationWithHttpInfo(folderid, arxDriveFolderModeInfo);
+             FoldersSetArxDriveConfigurationWithHttpInfo(id, arxDriveFolderModeInfo);
         }
 
         /// <summary>
         /// This method sets the ArxDrive configuration for the folder 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <param name="arxDriveFolderModeInfo">ArxDrive folder information</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> FoldersSetArxDriveConfigurationWithHttpInfo (int? folderid, ArxDriveFolderModeInfo arxDriveFolderModeInfo)
+        public ApiResponse<Object> FoldersSetArxDriveConfigurationWithHttpInfo (int? id, ArxDriveFolderModeInfo arxDriveFolderModeInfo)
         {
-            // verify the required parameter 'folderid' is set
-            if (folderid == null)
-                throw new ApiException(400, "Missing required parameter 'folderid' when calling FoldersApi->FoldersSetArxDriveConfiguration");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling FoldersApi->FoldersSetArxDriveConfiguration");
             // verify the required parameter 'arxDriveFolderModeInfo' is set
             if (arxDriveFolderModeInfo == null)
                 throw new ApiException(400, "Missing required parameter 'arxDriveFolderModeInfo' when calling FoldersApi->FoldersSetArxDriveConfiguration");
 
-            var localVarPath = "/api/Folders/{folderid}/arxdriveinfo";
+            var localVarPath = "/api/Folders/{id}/arxdriveinfo";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3877,7 +4472,7 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (folderid != null) localVarPathParams.Add("folderid", Configuration.ApiClient.ParameterToString(folderid)); // path parameter
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (arxDriveFolderModeInfo != null && arxDriveFolderModeInfo.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(arxDriveFolderModeInfo); // http body (model) parameter
@@ -3915,12 +4510,12 @@ namespace IO.Swagger.Api
         /// This method sets the ArxDrive configuration for the folder 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <param name="arxDriveFolderModeInfo">ArxDrive folder information</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task FoldersSetArxDriveConfigurationAsync (int? folderid, ArxDriveFolderModeInfo arxDriveFolderModeInfo)
+        public async System.Threading.Tasks.Task FoldersSetArxDriveConfigurationAsync (int? id, ArxDriveFolderModeInfo arxDriveFolderModeInfo)
         {
-             await FoldersSetArxDriveConfigurationAsyncWithHttpInfo(folderid, arxDriveFolderModeInfo);
+             await FoldersSetArxDriveConfigurationAsyncWithHttpInfo(id, arxDriveFolderModeInfo);
 
         }
 
@@ -3928,19 +4523,19 @@ namespace IO.Swagger.Api
         /// This method sets the ArxDrive configuration for the folder 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <param name="arxDriveFolderModeInfo">ArxDrive folder information</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> FoldersSetArxDriveConfigurationAsyncWithHttpInfo (int? folderid, ArxDriveFolderModeInfo arxDriveFolderModeInfo)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> FoldersSetArxDriveConfigurationAsyncWithHttpInfo (int? id, ArxDriveFolderModeInfo arxDriveFolderModeInfo)
         {
-            // verify the required parameter 'folderid' is set
-            if (folderid == null)
-                throw new ApiException(400, "Missing required parameter 'folderid' when calling FoldersApi->FoldersSetArxDriveConfiguration");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling FoldersApi->FoldersSetArxDriveConfiguration");
             // verify the required parameter 'arxDriveFolderModeInfo' is set
             if (arxDriveFolderModeInfo == null)
                 throw new ApiException(400, "Missing required parameter 'arxDriveFolderModeInfo' when calling FoldersApi->FoldersSetArxDriveConfiguration");
 
-            var localVarPath = "/api/Folders/{folderid}/arxdriveinfo";
+            var localVarPath = "/api/Folders/{id}/arxdriveinfo";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -3965,7 +4560,7 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (folderid != null) localVarPathParams.Add("folderid", Configuration.ApiClient.ParameterToString(folderid)); // path parameter
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (arxDriveFolderModeInfo != null && arxDriveFolderModeInfo.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(arxDriveFolderModeInfo); // http body (model) parameter
@@ -4003,31 +4598,31 @@ namespace IO.Swagger.Api
         /// This method sets the permissions for the folder 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <param name="permissions">The folder permissions</param>
         /// <returns></returns>
-        public void FoldersSetFolderPermission (int? folderid, FolderPermissionsDTO permissions)
+        public void FoldersSetFolderPermission (int? id, FolderPermissionsDTO permissions)
         {
-             FoldersSetFolderPermissionWithHttpInfo(folderid, permissions);
+             FoldersSetFolderPermissionWithHttpInfo(id, permissions);
         }
 
         /// <summary>
         /// This method sets the permissions for the folder 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <param name="permissions">The folder permissions</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> FoldersSetFolderPermissionWithHttpInfo (int? folderid, FolderPermissionsDTO permissions)
+        public ApiResponse<Object> FoldersSetFolderPermissionWithHttpInfo (int? id, FolderPermissionsDTO permissions)
         {
-            // verify the required parameter 'folderid' is set
-            if (folderid == null)
-                throw new ApiException(400, "Missing required parameter 'folderid' when calling FoldersApi->FoldersSetFolderPermission");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling FoldersApi->FoldersSetFolderPermission");
             // verify the required parameter 'permissions' is set
             if (permissions == null)
                 throw new ApiException(400, "Missing required parameter 'permissions' when calling FoldersApi->FoldersSetFolderPermission");
 
-            var localVarPath = "/api/Folders/{folderid}/permissions";
+            var localVarPath = "/api/Folders/{id}/permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4052,7 +4647,7 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (folderid != null) localVarPathParams.Add("folderid", Configuration.ApiClient.ParameterToString(folderid)); // path parameter
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (permissions != null && permissions.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(permissions); // http body (model) parameter
@@ -4090,12 +4685,12 @@ namespace IO.Swagger.Api
         /// This method sets the permissions for the folder 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <param name="permissions">The folder permissions</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task FoldersSetFolderPermissionAsync (int? folderid, FolderPermissionsDTO permissions)
+        public async System.Threading.Tasks.Task FoldersSetFolderPermissionAsync (int? id, FolderPermissionsDTO permissions)
         {
-             await FoldersSetFolderPermissionAsyncWithHttpInfo(folderid, permissions);
+             await FoldersSetFolderPermissionAsyncWithHttpInfo(id, permissions);
 
         }
 
@@ -4103,19 +4698,19 @@ namespace IO.Swagger.Api
         /// This method sets the permissions for the folder 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="folderid">The identifier of the folder</param>
+        /// <param name="id">The identifier of the folder</param>
         /// <param name="permissions">The folder permissions</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> FoldersSetFolderPermissionAsyncWithHttpInfo (int? folderid, FolderPermissionsDTO permissions)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> FoldersSetFolderPermissionAsyncWithHttpInfo (int? id, FolderPermissionsDTO permissions)
         {
-            // verify the required parameter 'folderid' is set
-            if (folderid == null)
-                throw new ApiException(400, "Missing required parameter 'folderid' when calling FoldersApi->FoldersSetFolderPermission");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling FoldersApi->FoldersSetFolderPermission");
             // verify the required parameter 'permissions' is set
             if (permissions == null)
                 throw new ApiException(400, "Missing required parameter 'permissions' when calling FoldersApi->FoldersSetFolderPermission");
 
-            var localVarPath = "/api/Folders/{folderid}/permissions";
+            var localVarPath = "/api/Folders/{id}/permissions";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -4140,7 +4735,7 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (folderid != null) localVarPathParams.Add("folderid", Configuration.ApiClient.ParameterToString(folderid)); // path parameter
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (permissions != null && permissions.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(permissions); // http body (model) parameter

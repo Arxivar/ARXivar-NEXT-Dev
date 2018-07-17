@@ -47,7 +47,7 @@ namespace IO.Swagger.Model
         /// <param name="GroupId">Group Identifier.</param>
         /// <param name="BinderFieldId">Binder Field Identifier.</param>
         /// <param name="TaskWorkVariableId">Variable Identifier in taskword context.</param>
-        public AdditionalFieldComboDTO(bool? LimitToList = default(bool?), string DisplayValue = default(string), string Value = default(string), int? NumMaxChar = default(int?), int? NumRows = default(int?), int? AdditionalFieldType = default(int?), int? GroupId = default(int?), int? BinderFieldId = default(int?), int? TaskWorkVariableId = default(int?), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> Associations = default(List<AssocitationFieldItem>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(Name, ExternalId, Description, Order, DataSource, Required, Formula, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
+        public AdditionalFieldComboDTO(bool? LimitToList = default(bool?), string DisplayValue = default(string), string Value = default(string), int? NumMaxChar = default(int?), int? NumRows = default(int?), int? AdditionalFieldType = default(int?), int? GroupId = default(int?), int? BinderFieldId = default(int?), int? TaskWorkVariableId = default(int?), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), string ClassName = "AdditionalFieldComboDTO", bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> Associations = default(List<AssocitationFieldItem>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(Name, ExternalId, Description, Order, DataSource, Required, Formula, ClassName, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
         {
             this.LimitToList = LimitToList;
             this.DisplayValue = DisplayValue;
@@ -66,13 +66,6 @@ namespace IO.Swagger.Model
         /// <value>Possible values ​​limited to the list</value>
         [DataMember(Name="limitToList", EmitDefaultValue=false)]
         public bool? LimitToList { get; set; }
-
-        /// <summary>
-        /// Name of class
-        /// </summary>
-        /// <value>Name of class</value>
-        [DataMember(Name="className", EmitDefaultValue=false)]
-        public string ClassName { get; private set; }
 
         /// <summary>
         /// Value to display
@@ -140,7 +133,6 @@ namespace IO.Swagger.Model
             sb.Append("class AdditionalFieldComboDTO {\n");
             sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  LimitToList: ").Append(LimitToList).Append("\n");
-            sb.Append("  ClassName: ").Append(ClassName).Append("\n");
             sb.Append("  DisplayValue: ").Append(DisplayValue).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  NumMaxChar: ").Append(NumMaxChar).Append("\n");
@@ -187,11 +179,6 @@ namespace IO.Swagger.Model
                     this.LimitToList == input.LimitToList ||
                     (this.LimitToList != null &&
                     this.LimitToList.Equals(input.LimitToList))
-                ) && base.Equals(input) && 
-                (
-                    this.ClassName == input.ClassName ||
-                    (this.ClassName != null &&
-                    this.ClassName.Equals(input.ClassName))
                 ) && base.Equals(input) && 
                 (
                     this.DisplayValue == input.DisplayValue ||
@@ -246,8 +233,6 @@ namespace IO.Swagger.Model
                 int hashCode = base.GetHashCode();
                 if (this.LimitToList != null)
                     hashCode = hashCode * 59 + this.LimitToList.GetHashCode();
-                if (this.ClassName != null)
-                    hashCode = hashCode * 59 + this.ClassName.GetHashCode();
                 if (this.DisplayValue != null)
                     hashCode = hashCode * 59 + this.DisplayValue.GetHashCode();
                 if (this.Value != null)

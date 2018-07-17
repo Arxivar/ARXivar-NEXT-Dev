@@ -42,7 +42,7 @@ namespace IO.Swagger.Model
         /// <param name="And">Search by and.</param>
         /// <param name="Valore1">The value of this field.</param>
         /// <param name="Valore2">The second value for this field (used only for some operator).</param>
-        public FieldBaseForSearchListDto(int? _Operator = default(int?), bool? And = default(bool?), List<string> Valore1 = default(List<string>), List<string> Valore2 = default(List<string>), int? GroupId = default(int?), int? FieldType = default(int?), int? AdditionalFieldType = default(int?), int? DefaultOperator = default(int?), string TableName = default(string), int? BinderFieldId = default(int?), string Multiple = default(string), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), Dictionary<string, string> Associations = default(Dictionary<string, string>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(GroupId, FieldType, AdditionalFieldType, DefaultOperator, TableName, BinderFieldId, Multiple, Name, ExternalId, Description, Order, DataSource, Required, Formula, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
+        public FieldBaseForSearchListDto(int? _Operator = default(int?), bool? And = default(bool?), List<string> Valore1 = default(List<string>), List<string> Valore2 = default(List<string>), int? GroupId = default(int?), int? FieldType = default(int?), int? AdditionalFieldType = default(int?), int? DefaultOperator = default(int?), string TableName = default(string), int? BinderFieldId = default(int?), string Multiple = default(string), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), string ClassName = "FieldBaseForSearchListDto", bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), Dictionary<string, string> Associations = default(Dictionary<string, string>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(GroupId, FieldType, AdditionalFieldType, DefaultOperator, TableName, BinderFieldId, Multiple, Name, ExternalId, Description, Order, DataSource, Required, Formula, ClassName, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
         {
             this._Operator = _Operator;
             this.And = And;
@@ -63,13 +63,6 @@ namespace IO.Swagger.Model
         /// <value>Search by and</value>
         [DataMember(Name="and", EmitDefaultValue=false)]
         public bool? And { get; set; }
-
-        /// <summary>
-        /// Name of class
-        /// </summary>
-        /// <value>Name of class</value>
-        [DataMember(Name="className", EmitDefaultValue=false)]
-        public string ClassName { get; private set; }
 
         /// <summary>
         /// The value of this field
@@ -96,7 +89,6 @@ namespace IO.Swagger.Model
             sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
             sb.Append("  And: ").Append(And).Append("\n");
-            sb.Append("  ClassName: ").Append(ClassName).Append("\n");
             sb.Append("  Valore1: ").Append(Valore1).Append("\n");
             sb.Append("  Valore2: ").Append(Valore2).Append("\n");
             sb.Append("}\n");
@@ -144,11 +136,6 @@ namespace IO.Swagger.Model
                     this.And.Equals(input.And))
                 ) && base.Equals(input) && 
                 (
-                    this.ClassName == input.ClassName ||
-                    (this.ClassName != null &&
-                    this.ClassName.Equals(input.ClassName))
-                ) && base.Equals(input) && 
-                (
                     this.Valore1 == input.Valore1 ||
                     this.Valore1 != null &&
                     this.Valore1.SequenceEqual(input.Valore1)
@@ -173,8 +160,6 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this._Operator.GetHashCode();
                 if (this.And != null)
                     hashCode = hashCode * 59 + this.And.GetHashCode();
-                if (this.ClassName != null)
-                    hashCode = hashCode * 59 + this.ClassName.GetHashCode();
                 if (this.Valore1 != null)
                     hashCode = hashCode * 59 + this.Valore1.GetHashCode();
                 if (this.Valore2 != null)

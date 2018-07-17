@@ -37,6 +37,7 @@ namespace IO.Swagger.Model
         /// <param name="ModelDescription">Description.</param>
         /// <param name="Options">Options.</param>
         /// <param name="Behaviour">Behaviour.</param>
+        /// <param name="OpenModelAfterProfilation">Open file after profiling..</param>
         /// <param name="EditModelAfterProfilation">Editing file after profiling..</param>
         /// <param name="MaskId">Mask Identifier.</param>
         /// <param name="Id">Identifier.</param>
@@ -49,12 +50,13 @@ namespace IO.Swagger.Model
         /// <param name="PaNotes">Public Amministration Notes.</param>
         /// <param name="AuthorityData">Authority Data.</param>
         /// <param name="GeneratePaProtocol">Defines if a protocol has been generated.</param>
-        public ModelProfileSchemaDTO(int? ModelId = default(int?), string ModelDescription = default(string), ProfileMaskOptionsDTO Options = default(ProfileMaskOptionsDTO), ProfileMaskBehaviourDTO Behaviour = default(ProfileMaskBehaviourDTO), bool? EditModelAfterProfilation = default(bool?), string MaskId = default(string), int? Id = default(int?), FileDTO Document = default(FileDTO), List<FieldBaseDTO> Fields = default(List<FieldBaseDTO>), List<PostProfilationActionDTO> PostProfilationActions = default(List<PostProfilationActionDTO>), int? ConstrainRoleBehaviour = default(int?), List<string> Attachments = default(List<string>), List<NoteDTO> Notes = default(List<NoteDTO>), List<string> PaNotes = default(List<string>), AuthorityDataDTO AuthorityData = default(AuthorityDataDTO), bool? GeneratePaProtocol = default(bool?))
+        public ModelProfileSchemaDTO(int? ModelId = default(int?), string ModelDescription = default(string), ProfileMaskOptionsDTO Options = default(ProfileMaskOptionsDTO), ProfileMaskBehaviourDTO Behaviour = default(ProfileMaskBehaviourDTO), bool? OpenModelAfterProfilation = default(bool?), bool? EditModelAfterProfilation = default(bool?), string MaskId = default(string), int? Id = default(int?), FileDTO Document = default(FileDTO), List<FieldBaseDTO> Fields = default(List<FieldBaseDTO>), List<PostProfilationActionDTO> PostProfilationActions = default(List<PostProfilationActionDTO>), int? ConstrainRoleBehaviour = default(int?), List<string> Attachments = default(List<string>), List<NoteDTO> Notes = default(List<NoteDTO>), List<string> PaNotes = default(List<string>), AuthorityDataDTO AuthorityData = default(AuthorityDataDTO), bool? GeneratePaProtocol = default(bool?))
         {
             this.ModelId = ModelId;
             this.ModelDescription = ModelDescription;
             this.Options = Options;
             this.Behaviour = Behaviour;
+            this.OpenModelAfterProfilation = OpenModelAfterProfilation;
             this.EditModelAfterProfilation = EditModelAfterProfilation;
             this.MaskId = MaskId;
             this.Id = Id;
@@ -96,6 +98,13 @@ namespace IO.Swagger.Model
         /// <value>Behaviour</value>
         [DataMember(Name="behaviour", EmitDefaultValue=false)]
         public ProfileMaskBehaviourDTO Behaviour { get; set; }
+
+        /// <summary>
+        /// Open file after profiling.
+        /// </summary>
+        /// <value>Open file after profiling.</value>
+        [DataMember(Name="openModelAfterProfilation", EmitDefaultValue=false)]
+        public bool? OpenModelAfterProfilation { get; set; }
 
         /// <summary>
         /// Editing file after profiling.
@@ -193,6 +202,7 @@ namespace IO.Swagger.Model
             sb.Append("  ModelDescription: ").Append(ModelDescription).Append("\n");
             sb.Append("  Options: ").Append(Options).Append("\n");
             sb.Append("  Behaviour: ").Append(Behaviour).Append("\n");
+            sb.Append("  OpenModelAfterProfilation: ").Append(OpenModelAfterProfilation).Append("\n");
             sb.Append("  EditModelAfterProfilation: ").Append(EditModelAfterProfilation).Append("\n");
             sb.Append("  MaskId: ").Append(MaskId).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
@@ -258,6 +268,11 @@ namespace IO.Swagger.Model
                     this.Behaviour == input.Behaviour ||
                     (this.Behaviour != null &&
                     this.Behaviour.Equals(input.Behaviour))
+                ) && 
+                (
+                    this.OpenModelAfterProfilation == input.OpenModelAfterProfilation ||
+                    (this.OpenModelAfterProfilation != null &&
+                    this.OpenModelAfterProfilation.Equals(input.OpenModelAfterProfilation))
                 ) && 
                 (
                     this.EditModelAfterProfilation == input.EditModelAfterProfilation ||
@@ -338,6 +353,8 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.Options.GetHashCode();
                 if (this.Behaviour != null)
                     hashCode = hashCode * 59 + this.Behaviour.GetHashCode();
+                if (this.OpenModelAfterProfilation != null)
+                    hashCode = hashCode * 59 + this.OpenModelAfterProfilation.GetHashCode();
                 if (this.EditModelAfterProfilation != null)
                     hashCode = hashCode * 59 + this.EditModelAfterProfilation.GetHashCode();
                 if (this.MaskId != null)

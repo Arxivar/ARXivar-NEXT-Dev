@@ -72,9 +72,9 @@ namespace IO.Swagger.Api
         /// <param name="tipoUno">Document type identifier of first level</param>
         /// <param name="tipoDue">Document type identifier of second level</param>
         /// <param name="tipoTre">Document type identifier of third level</param>
-        /// <param name="aoo">Business unit code</param>
+        /// <param name="aoo">Business unit code (optional)</param>
         /// <returns>List&lt;FieldBaseForSearchDTO&gt;</returns>
-        List<FieldBaseForSearchDTO> SearchesV2GetAdditionalByClasse (int? tipoUno, int? tipoDue, int? tipoTre, string aoo);
+        List<FieldBaseForSearchDTO> SearchesV2GetAdditionalByClasse (int? tipoUno, int? tipoDue, int? tipoTre, string aoo = null);
 
         /// <summary>
         /// This call returns the additional fields for search by the given document class and business unit
@@ -86,9 +86,9 @@ namespace IO.Swagger.Api
         /// <param name="tipoUno">Document type identifier of first level</param>
         /// <param name="tipoDue">Document type identifier of second level</param>
         /// <param name="tipoTre">Document type identifier of third level</param>
-        /// <param name="aoo">Business unit code</param>
+        /// <param name="aoo">Business unit code (optional)</param>
         /// <returns>ApiResponse of List&lt;FieldBaseForSearchDTO&gt;</returns>
-        ApiResponse<List<FieldBaseForSearchDTO>> SearchesV2GetAdditionalByClasseWithHttpInfo (int? tipoUno, int? tipoDue, int? tipoTre, string aoo);
+        ApiResponse<List<FieldBaseForSearchDTO>> SearchesV2GetAdditionalByClasseWithHttpInfo (int? tipoUno, int? tipoDue, int? tipoTre, string aoo = null);
         /// <summary>
         /// This call returns an empty search according to the Arxivar system settings
         /// </summary>
@@ -454,9 +454,9 @@ namespace IO.Swagger.Api
         /// <param name="tipoUno">Document type identifier of first level</param>
         /// <param name="tipoDue">Document type identifier of second level</param>
         /// <param name="tipoTre">Document type identifier of third level</param>
-        /// <param name="aoo">Business unit code</param>
+        /// <param name="aoo">Business unit code (optional)</param>
         /// <returns>Task of List&lt;FieldBaseForSearchDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<FieldBaseForSearchDTO>> SearchesV2GetAdditionalByClasseAsync (int? tipoUno, int? tipoDue, int? tipoTre, string aoo);
+        System.Threading.Tasks.Task<List<FieldBaseForSearchDTO>> SearchesV2GetAdditionalByClasseAsync (int? tipoUno, int? tipoDue, int? tipoTre, string aoo = null);
 
         /// <summary>
         /// This call returns the additional fields for search by the given document class and business unit
@@ -468,9 +468,9 @@ namespace IO.Swagger.Api
         /// <param name="tipoUno">Document type identifier of first level</param>
         /// <param name="tipoDue">Document type identifier of second level</param>
         /// <param name="tipoTre">Document type identifier of third level</param>
-        /// <param name="aoo">Business unit code</param>
+        /// <param name="aoo">Business unit code (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;FieldBaseForSearchDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<FieldBaseForSearchDTO>>> SearchesV2GetAdditionalByClasseAsyncWithHttpInfo (int? tipoUno, int? tipoDue, int? tipoTre, string aoo);
+        System.Threading.Tasks.Task<ApiResponse<List<FieldBaseForSearchDTO>>> SearchesV2GetAdditionalByClasseAsyncWithHttpInfo (int? tipoUno, int? tipoDue, int? tipoTre, string aoo = null);
         /// <summary>
         /// This call returns an empty search according to the Arxivar system settings
         /// </summary>
@@ -1157,9 +1157,9 @@ namespace IO.Swagger.Api
         /// <param name="tipoUno">Document type identifier of first level</param>
         /// <param name="tipoDue">Document type identifier of second level</param>
         /// <param name="tipoTre">Document type identifier of third level</param>
-        /// <param name="aoo">Business unit code</param>
+        /// <param name="aoo">Business unit code (optional)</param>
         /// <returns>List&lt;FieldBaseForSearchDTO&gt;</returns>
-        public List<FieldBaseForSearchDTO> SearchesV2GetAdditionalByClasse (int? tipoUno, int? tipoDue, int? tipoTre, string aoo)
+        public List<FieldBaseForSearchDTO> SearchesV2GetAdditionalByClasse (int? tipoUno, int? tipoDue, int? tipoTre, string aoo = null)
         {
              ApiResponse<List<FieldBaseForSearchDTO>> localVarResponse = SearchesV2GetAdditionalByClasseWithHttpInfo(tipoUno, tipoDue, tipoTre, aoo);
              return localVarResponse.Data;
@@ -1172,9 +1172,9 @@ namespace IO.Swagger.Api
         /// <param name="tipoUno">Document type identifier of first level</param>
         /// <param name="tipoDue">Document type identifier of second level</param>
         /// <param name="tipoTre">Document type identifier of third level</param>
-        /// <param name="aoo">Business unit code</param>
+        /// <param name="aoo">Business unit code (optional)</param>
         /// <returns>ApiResponse of List&lt;FieldBaseForSearchDTO&gt;</returns>
-        public ApiResponse< List<FieldBaseForSearchDTO> > SearchesV2GetAdditionalByClasseWithHttpInfo (int? tipoUno, int? tipoDue, int? tipoTre, string aoo)
+        public ApiResponse< List<FieldBaseForSearchDTO> > SearchesV2GetAdditionalByClasseWithHttpInfo (int? tipoUno, int? tipoDue, int? tipoTre, string aoo = null)
         {
             // verify the required parameter 'tipoUno' is set
             if (tipoUno == null)
@@ -1185,11 +1185,8 @@ namespace IO.Swagger.Api
             // verify the required parameter 'tipoTre' is set
             if (tipoTre == null)
                 throw new ApiException(400, "Missing required parameter 'tipoTre' when calling SearchesV2Api->SearchesV2GetAdditionalByClasse");
-            // verify the required parameter 'aoo' is set
-            if (aoo == null)
-                throw new ApiException(400, "Missing required parameter 'aoo' when calling SearchesV2Api->SearchesV2GetAdditionalByClasse");
 
-            var localVarPath = "/api/v2/searches/Additional/{tipoUno}/{tipoDue}/{tipoTre}/{aoo}";
+            var localVarPath = "/api/v2/searches/Additional/{tipoUno}/{tipoDue}/{tipoTre}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1216,7 +1213,7 @@ namespace IO.Swagger.Api
             if (tipoUno != null) localVarPathParams.Add("tipoUno", Configuration.ApiClient.ParameterToString(tipoUno)); // path parameter
             if (tipoDue != null) localVarPathParams.Add("tipoDue", Configuration.ApiClient.ParameterToString(tipoDue)); // path parameter
             if (tipoTre != null) localVarPathParams.Add("tipoTre", Configuration.ApiClient.ParameterToString(tipoTre)); // path parameter
-            if (aoo != null) localVarPathParams.Add("aoo", Configuration.ApiClient.ParameterToString(aoo)); // path parameter
+            if (aoo != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "aoo", aoo)); // query parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1249,9 +1246,9 @@ namespace IO.Swagger.Api
         /// <param name="tipoUno">Document type identifier of first level</param>
         /// <param name="tipoDue">Document type identifier of second level</param>
         /// <param name="tipoTre">Document type identifier of third level</param>
-        /// <param name="aoo">Business unit code</param>
+        /// <param name="aoo">Business unit code (optional)</param>
         /// <returns>Task of List&lt;FieldBaseForSearchDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<FieldBaseForSearchDTO>> SearchesV2GetAdditionalByClasseAsync (int? tipoUno, int? tipoDue, int? tipoTre, string aoo)
+        public async System.Threading.Tasks.Task<List<FieldBaseForSearchDTO>> SearchesV2GetAdditionalByClasseAsync (int? tipoUno, int? tipoDue, int? tipoTre, string aoo = null)
         {
              ApiResponse<List<FieldBaseForSearchDTO>> localVarResponse = await SearchesV2GetAdditionalByClasseAsyncWithHttpInfo(tipoUno, tipoDue, tipoTre, aoo);
              return localVarResponse.Data;
@@ -1265,9 +1262,9 @@ namespace IO.Swagger.Api
         /// <param name="tipoUno">Document type identifier of first level</param>
         /// <param name="tipoDue">Document type identifier of second level</param>
         /// <param name="tipoTre">Document type identifier of third level</param>
-        /// <param name="aoo">Business unit code</param>
+        /// <param name="aoo">Business unit code (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;FieldBaseForSearchDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<FieldBaseForSearchDTO>>> SearchesV2GetAdditionalByClasseAsyncWithHttpInfo (int? tipoUno, int? tipoDue, int? tipoTre, string aoo)
+        public async System.Threading.Tasks.Task<ApiResponse<List<FieldBaseForSearchDTO>>> SearchesV2GetAdditionalByClasseAsyncWithHttpInfo (int? tipoUno, int? tipoDue, int? tipoTre, string aoo = null)
         {
             // verify the required parameter 'tipoUno' is set
             if (tipoUno == null)
@@ -1278,11 +1275,8 @@ namespace IO.Swagger.Api
             // verify the required parameter 'tipoTre' is set
             if (tipoTre == null)
                 throw new ApiException(400, "Missing required parameter 'tipoTre' when calling SearchesV2Api->SearchesV2GetAdditionalByClasse");
-            // verify the required parameter 'aoo' is set
-            if (aoo == null)
-                throw new ApiException(400, "Missing required parameter 'aoo' when calling SearchesV2Api->SearchesV2GetAdditionalByClasse");
 
-            var localVarPath = "/api/v2/searches/Additional/{tipoUno}/{tipoDue}/{tipoTre}/{aoo}";
+            var localVarPath = "/api/v2/searches/Additional/{tipoUno}/{tipoDue}/{tipoTre}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1309,7 +1303,7 @@ namespace IO.Swagger.Api
             if (tipoUno != null) localVarPathParams.Add("tipoUno", Configuration.ApiClient.ParameterToString(tipoUno)); // path parameter
             if (tipoDue != null) localVarPathParams.Add("tipoDue", Configuration.ApiClient.ParameterToString(tipoDue)); // path parameter
             if (tipoTre != null) localVarPathParams.Add("tipoTre", Configuration.ApiClient.ParameterToString(tipoTre)); // path parameter
-            if (aoo != null) localVarPathParams.Add("aoo", Configuration.ApiClient.ParameterToString(aoo)); // path parameter
+            if (aoo != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "aoo", aoo)); // query parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))

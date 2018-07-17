@@ -40,7 +40,7 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <param name="Value">Value.</param>
         /// <param name="DisplayValue">DisplayValue.</param>
-        public DocumentTypeFieldDTO(int? Value = default(int?), string DisplayValue = default(string), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> Associations = default(List<AssocitationFieldItem>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(Name, ExternalId, Description, Order, DataSource, Required, Formula, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
+        public DocumentTypeFieldDTO(int? Value = default(int?), string DisplayValue = default(string), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), string ClassName = "DocumentTypeFieldDTO", bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> Associations = default(List<AssocitationFieldItem>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(Name, ExternalId, Description, Order, DataSource, Required, Formula, ClassName, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
         {
             this.Value = Value;
             this.DisplayValue = DisplayValue;
@@ -59,13 +59,6 @@ namespace IO.Swagger.Model
         public string DisplayValue { get; set; }
 
         /// <summary>
-        /// Name of class
-        /// </summary>
-        /// <value>Name of class</value>
-        [DataMember(Name="className", EmitDefaultValue=false)]
-        public string ClassName { get; private set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -76,7 +69,6 @@ namespace IO.Swagger.Model
             sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  DisplayValue: ").Append(DisplayValue).Append("\n");
-            sb.Append("  ClassName: ").Append(ClassName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -120,11 +112,6 @@ namespace IO.Swagger.Model
                     this.DisplayValue == input.DisplayValue ||
                     (this.DisplayValue != null &&
                     this.DisplayValue.Equals(input.DisplayValue))
-                ) && base.Equals(input) && 
-                (
-                    this.ClassName == input.ClassName ||
-                    (this.ClassName != null &&
-                    this.ClassName.Equals(input.ClassName))
                 );
         }
 
@@ -141,8 +128,6 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.Value.GetHashCode();
                 if (this.DisplayValue != null)
                     hashCode = hashCode * 59 + this.DisplayValue.GetHashCode();
-                if (this.ClassName != null)
-                    hashCode = hashCode * 59 + this.ClassName.GetHashCode();
                 return hashCode;
             }
         }

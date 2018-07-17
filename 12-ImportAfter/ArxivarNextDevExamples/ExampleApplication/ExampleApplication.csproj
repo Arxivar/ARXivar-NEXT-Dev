@@ -85,6 +85,10 @@
       <Project>{c9dccbc7-5483-46f8-a94b-6b3c551069b1}</Project>
       <Name>IO.Swagger</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Settings\Settings.csproj">
+      <Project>{595a9496-fb05-4e08-b983-78cf5b034bc9}</Project>
+      <Name>Settings</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

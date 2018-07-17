@@ -37,6 +37,7 @@ namespace IO.Swagger.Model
         /// <param name="PredefinedProfileId">Predefined Profile Identifier.</param>
         /// <param name="Options">Options.</param>
         /// <param name="Behaviour">Behaviour.</param>
+        /// <param name="MaskType">Possible values:  0: Nothing  1: Barcode  2: Archiviazione .</param>
         /// <param name="Id">Identifier.</param>
         /// <param name="Document">File data.</param>
         /// <param name="Fields">Fields.</param>
@@ -47,12 +48,13 @@ namespace IO.Swagger.Model
         /// <param name="PaNotes">Public Amministration Notes.</param>
         /// <param name="AuthorityData">Authority Data.</param>
         /// <param name="GeneratePaProtocol">Defines if a protocol has been generated.</param>
-        public MaskProfileSchemaDTO(string MaskId = default(string), int? PredefinedProfileId = default(int?), ProfileMaskOptionsDTO Options = default(ProfileMaskOptionsDTO), ProfileMaskBehaviourDTO Behaviour = default(ProfileMaskBehaviourDTO), int? Id = default(int?), FileDTO Document = default(FileDTO), List<FieldBaseDTO> Fields = default(List<FieldBaseDTO>), List<PostProfilationActionDTO> PostProfilationActions = default(List<PostProfilationActionDTO>), int? ConstrainRoleBehaviour = default(int?), List<string> Attachments = default(List<string>), List<NoteDTO> Notes = default(List<NoteDTO>), List<string> PaNotes = default(List<string>), AuthorityDataDTO AuthorityData = default(AuthorityDataDTO), bool? GeneratePaProtocol = default(bool?))
+        public MaskProfileSchemaDTO(string MaskId = default(string), int? PredefinedProfileId = default(int?), ProfileMaskOptionsDTO Options = default(ProfileMaskOptionsDTO), ProfileMaskBehaviourDTO Behaviour = default(ProfileMaskBehaviourDTO), int? MaskType = default(int?), int? Id = default(int?), FileDTO Document = default(FileDTO), List<FieldBaseDTO> Fields = default(List<FieldBaseDTO>), List<PostProfilationActionDTO> PostProfilationActions = default(List<PostProfilationActionDTO>), int? ConstrainRoleBehaviour = default(int?), List<string> Attachments = default(List<string>), List<NoteDTO> Notes = default(List<NoteDTO>), List<string> PaNotes = default(List<string>), AuthorityDataDTO AuthorityData = default(AuthorityDataDTO), bool? GeneratePaProtocol = default(bool?))
         {
             this.MaskId = MaskId;
             this.PredefinedProfileId = PredefinedProfileId;
             this.Options = Options;
             this.Behaviour = Behaviour;
+            this.MaskType = MaskType;
             this.Id = Id;
             this.Document = Document;
             this.Fields = Fields;
@@ -92,6 +94,13 @@ namespace IO.Swagger.Model
         /// <value>Behaviour</value>
         [DataMember(Name="behaviour", EmitDefaultValue=false)]
         public ProfileMaskBehaviourDTO Behaviour { get; set; }
+
+        /// <summary>
+        /// Possible values:  0: Nothing  1: Barcode  2: Archiviazione 
+        /// </summary>
+        /// <value>Possible values:  0: Nothing  1: Barcode  2: Archiviazione </value>
+        [DataMember(Name="maskType", EmitDefaultValue=false)]
+        public int? MaskType { get; set; }
 
         /// <summary>
         /// Identifier
@@ -175,6 +184,7 @@ namespace IO.Swagger.Model
             sb.Append("  PredefinedProfileId: ").Append(PredefinedProfileId).Append("\n");
             sb.Append("  Options: ").Append(Options).Append("\n");
             sb.Append("  Behaviour: ").Append(Behaviour).Append("\n");
+            sb.Append("  MaskType: ").Append(MaskType).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Document: ").Append(Document).Append("\n");
             sb.Append("  Fields: ").Append(Fields).Append("\n");
@@ -238,6 +248,11 @@ namespace IO.Swagger.Model
                     this.Behaviour == input.Behaviour ||
                     (this.Behaviour != null &&
                     this.Behaviour.Equals(input.Behaviour))
+                ) && 
+                (
+                    this.MaskType == input.MaskType ||
+                    (this.MaskType != null &&
+                    this.MaskType.Equals(input.MaskType))
                 ) && 
                 (
                     this.Id == input.Id ||
@@ -308,6 +323,8 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.Options.GetHashCode();
                 if (this.Behaviour != null)
                     hashCode = hashCode * 59 + this.Behaviour.GetHashCode();
+                if (this.MaskType != null)
+                    hashCode = hashCode * 59 + this.MaskType.GetHashCode();
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.Document != null)

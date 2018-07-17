@@ -197,9 +197,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model">Model data to insert</param>
+        /// <param name="model"> (optional)</param>
         /// <returns></returns>
-        void ModelsInsertModel (ModelConfigurationDTO model);
+        void ModelsInsertModel (ModelConfigurationDTO model = null);
 
         /// <summary>
         /// This call inserts a model
@@ -208,9 +208,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model">Model data to insert</param>
+        /// <param name="model"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ModelsInsertModelWithHttpInfo (ModelConfigurationDTO model);
+        ApiResponse<Object> ModelsInsertModelWithHttpInfo (ModelConfigurationDTO model = null);
         /// <summary>
         /// This call executes a new profiling by model
         /// </summary>
@@ -265,9 +265,9 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Model Identifier</param>
-        /// <param name="model">Model data to update</param>
+        /// <param name="model"> (optional)</param>
         /// <returns></returns>
-        void ModelsUpdateModel (int? id, ModelConfigurationDTO model);
+        void ModelsUpdateModel (int? id, ModelConfigurationDTO model = null);
 
         /// <summary>
         /// This call updates a model
@@ -277,9 +277,9 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Model Identifier</param>
-        /// <param name="model">Model data to update</param>
+        /// <param name="model"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ModelsUpdateModelWithHttpInfo (int? id, ModelConfigurationDTO model);
+        ApiResponse<Object> ModelsUpdateModelWithHttpInfo (int? id, ModelConfigurationDTO model = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -455,9 +455,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model">Model data to insert</param>
+        /// <param name="model"> (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ModelsInsertModelAsync (ModelConfigurationDTO model);
+        System.Threading.Tasks.Task ModelsInsertModelAsync (ModelConfigurationDTO model = null);
 
         /// <summary>
         /// This call inserts a model
@@ -466,9 +466,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model">Model data to insert</param>
+        /// <param name="model"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ModelsInsertModelAsyncWithHttpInfo (ModelConfigurationDTO model);
+        System.Threading.Tasks.Task<ApiResponse<Object>> ModelsInsertModelAsyncWithHttpInfo (ModelConfigurationDTO model = null);
         /// <summary>
         /// This call executes a new profiling by model
         /// </summary>
@@ -523,9 +523,9 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Model Identifier</param>
-        /// <param name="model">Model data to update</param>
+        /// <param name="model"> (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ModelsUpdateModelAsync (int? id, ModelConfigurationDTO model);
+        System.Threading.Tasks.Task ModelsUpdateModelAsync (int? id, ModelConfigurationDTO model = null);
 
         /// <summary>
         /// This call updates a model
@@ -535,9 +535,9 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Model Identifier</param>
-        /// <param name="model">Model data to update</param>
+        /// <param name="model"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ModelsUpdateModelAsyncWithHttpInfo (int? id, ModelConfigurationDTO model);
+        System.Threading.Tasks.Task<ApiResponse<Object>> ModelsUpdateModelAsyncWithHttpInfo (int? id, ModelConfigurationDTO model = null);
         #endregion Asynchronous Operations
     }
 
@@ -1812,9 +1812,9 @@ namespace IO.Swagger.Api
         /// This call inserts a model 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model">Model data to insert</param>
+        /// <param name="model"> (optional)</param>
         /// <returns></returns>
-        public void ModelsInsertModel (ModelConfigurationDTO model)
+        public void ModelsInsertModel (ModelConfigurationDTO model = null)
         {
              ModelsInsertModelWithHttpInfo(model);
         }
@@ -1823,13 +1823,10 @@ namespace IO.Swagger.Api
         /// This call inserts a model 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model">Model data to insert</param>
+        /// <param name="model"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ModelsInsertModelWithHttpInfo (ModelConfigurationDTO model)
+        public ApiResponse<Object> ModelsInsertModelWithHttpInfo (ModelConfigurationDTO model = null)
         {
-            // verify the required parameter 'model' is set
-            if (model == null)
-                throw new ApiException(400, "Missing required parameter 'model' when calling ModelsApi->ModelsInsertModel");
 
             var localVarPath = "/api/Models";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1841,11 +1838,6 @@ namespace IO.Swagger.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1893,9 +1885,9 @@ namespace IO.Swagger.Api
         /// This call inserts a model 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model">Model data to insert</param>
+        /// <param name="model"> (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ModelsInsertModelAsync (ModelConfigurationDTO model)
+        public async System.Threading.Tasks.Task ModelsInsertModelAsync (ModelConfigurationDTO model = null)
         {
              await ModelsInsertModelAsyncWithHttpInfo(model);
 
@@ -1905,13 +1897,10 @@ namespace IO.Swagger.Api
         /// This call inserts a model 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model">Model data to insert</param>
+        /// <param name="model"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ModelsInsertModelAsyncWithHttpInfo (ModelConfigurationDTO model)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ModelsInsertModelAsyncWithHttpInfo (ModelConfigurationDTO model = null)
         {
-            // verify the required parameter 'model' is set
-            if (model == null)
-                throw new ApiException(400, "Missing required parameter 'model' when calling ModelsApi->ModelsInsertModel");
 
             var localVarPath = "/api/Models";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1923,11 +1912,6 @@ namespace IO.Swagger.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -2320,9 +2304,9 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Model Identifier</param>
-        /// <param name="model">Model data to update</param>
+        /// <param name="model"> (optional)</param>
         /// <returns></returns>
-        public void ModelsUpdateModel (int? id, ModelConfigurationDTO model)
+        public void ModelsUpdateModel (int? id, ModelConfigurationDTO model = null)
         {
              ModelsUpdateModelWithHttpInfo(id, model);
         }
@@ -2332,16 +2316,13 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Model Identifier</param>
-        /// <param name="model">Model data to update</param>
+        /// <param name="model"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ModelsUpdateModelWithHttpInfo (int? id, ModelConfigurationDTO model)
+        public ApiResponse<Object> ModelsUpdateModelWithHttpInfo (int? id, ModelConfigurationDTO model = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ModelsApi->ModelsUpdateModel");
-            // verify the required parameter 'model' is set
-            if (model == null)
-                throw new ApiException(400, "Missing required parameter 'model' when calling ModelsApi->ModelsUpdateModel");
 
             var localVarPath = "/api/Models/{id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2353,11 +2334,6 @@ namespace IO.Swagger.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -2407,9 +2383,9 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Model Identifier</param>
-        /// <param name="model">Model data to update</param>
+        /// <param name="model"> (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ModelsUpdateModelAsync (int? id, ModelConfigurationDTO model)
+        public async System.Threading.Tasks.Task ModelsUpdateModelAsync (int? id, ModelConfigurationDTO model = null)
         {
              await ModelsUpdateModelAsyncWithHttpInfo(id, model);
 
@@ -2420,16 +2396,13 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Model Identifier</param>
-        /// <param name="model">Model data to update</param>
+        /// <param name="model"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ModelsUpdateModelAsyncWithHttpInfo (int? id, ModelConfigurationDTO model)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ModelsUpdateModelAsyncWithHttpInfo (int? id, ModelConfigurationDTO model = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ModelsApi->ModelsUpdateModel");
-            // verify the required parameter 'model' is set
-            if (model == null)
-                throw new ApiException(400, "Missing required parameter 'model' when calling ModelsApi->ModelsUpdateModel");
 
             var localVarPath = "/api/Models/{id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2441,11 +2414,6 @@ namespace IO.Swagger.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 

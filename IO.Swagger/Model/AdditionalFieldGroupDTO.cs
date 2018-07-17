@@ -45,7 +45,7 @@ namespace IO.Swagger.Model
         /// <param name="GroupId">Group Identifier.</param>
         /// <param name="BinderFieldId">Binder Field Identifier.</param>
         /// <param name="TaskWorkVariableId">Variable Identifier in taskword context.</param>
-        public AdditionalFieldGroupDTO(string Value = default(string), int? NumMaxChar = default(int?), int? Key = default(int?), int? AdditionalFieldType = default(int?), int? GroupId = default(int?), int? BinderFieldId = default(int?), int? TaskWorkVariableId = default(int?), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> Associations = default(List<AssocitationFieldItem>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(Name, ExternalId, Description, Order, DataSource, Required, Formula, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
+        public AdditionalFieldGroupDTO(string Value = default(string), int? NumMaxChar = default(int?), int? Key = default(int?), int? AdditionalFieldType = default(int?), int? GroupId = default(int?), int? BinderFieldId = default(int?), int? TaskWorkVariableId = default(int?), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), string ClassName = "AdditionalFieldGroupDTO", bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> Associations = default(List<AssocitationFieldItem>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(Name, ExternalId, Description, Order, DataSource, Required, Formula, ClassName, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
         {
             this.Value = Value;
             this.NumMaxChar = NumMaxChar;
@@ -76,13 +76,6 @@ namespace IO.Swagger.Model
         /// <value>Key</value>
         [DataMember(Name="key", EmitDefaultValue=false)]
         public int? Key { get; set; }
-
-        /// <summary>
-        /// Name of class
-        /// </summary>
-        /// <value>Name of class</value>
-        [DataMember(Name="className", EmitDefaultValue=false)]
-        public string ClassName { get; private set; }
 
         /// <summary>
         /// Possible values:  0: Textbox  1: Databox  2: Numeric  3: Combobox  4: TableBox  5: Checkbox  6: MultiValue  7: ClasseBox  8: Group  9: RubricaBox  10: TextArea 
@@ -124,7 +117,6 @@ namespace IO.Swagger.Model
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  NumMaxChar: ").Append(NumMaxChar).Append("\n");
             sb.Append("  Key: ").Append(Key).Append("\n");
-            sb.Append("  ClassName: ").Append(ClassName).Append("\n");
             sb.Append("  AdditionalFieldType: ").Append(AdditionalFieldType).Append("\n");
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
             sb.Append("  BinderFieldId: ").Append(BinderFieldId).Append("\n");
@@ -179,11 +171,6 @@ namespace IO.Swagger.Model
                     this.Key.Equals(input.Key))
                 ) && base.Equals(input) && 
                 (
-                    this.ClassName == input.ClassName ||
-                    (this.ClassName != null &&
-                    this.ClassName.Equals(input.ClassName))
-                ) && base.Equals(input) && 
-                (
                     this.AdditionalFieldType == input.AdditionalFieldType ||
                     (this.AdditionalFieldType != null &&
                     this.AdditionalFieldType.Equals(input.AdditionalFieldType))
@@ -220,8 +207,6 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.NumMaxChar.GetHashCode();
                 if (this.Key != null)
                     hashCode = hashCode * 59 + this.Key.GetHashCode();
-                if (this.ClassName != null)
-                    hashCode = hashCode * 59 + this.ClassName.GetHashCode();
                 if (this.AdditionalFieldType != null)
                     hashCode = hashCode * 59 + this.AdditionalFieldType.GetHashCode();
                 if (this.GroupId != null)

@@ -35,10 +35,16 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="Filename">Filename.</param>
-        public BufferSimpleElement(string Id = default(string), string Filename = default(string))
+        /// <param name="CreationDate">CreationDate.</param>
+        /// <param name="MonitoredFolderId">MonitoredFolderId.</param>
+        /// <param name="MonitoredFolderPath">MonitoredFolderPath.</param>
+        public BufferSimpleElement(string Id = default(string), string Filename = default(string), DateTime? CreationDate = default(DateTime?), string MonitoredFolderId = default(string), string MonitoredFolderPath = default(string))
         {
             this.Id = Id;
             this.Filename = Filename;
+            this.CreationDate = CreationDate;
+            this.MonitoredFolderId = MonitoredFolderId;
+            this.MonitoredFolderPath = MonitoredFolderPath;
         }
         
         /// <summary>
@@ -54,6 +60,24 @@ namespace IO.Swagger.Model
         public string Filename { get; set; }
 
         /// <summary>
+        /// Gets or Sets CreationDate
+        /// </summary>
+        [DataMember(Name="creationDate", EmitDefaultValue=false)]
+        public DateTime? CreationDate { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MonitoredFolderId
+        /// </summary>
+        [DataMember(Name="monitoredFolderId", EmitDefaultValue=false)]
+        public string MonitoredFolderId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MonitoredFolderPath
+        /// </summary>
+        [DataMember(Name="monitoredFolderPath", EmitDefaultValue=false)]
+        public string MonitoredFolderPath { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -63,6 +87,9 @@ namespace IO.Swagger.Model
             sb.Append("class BufferSimpleElement {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Filename: ").Append(Filename).Append("\n");
+            sb.Append("  CreationDate: ").Append(CreationDate).Append("\n");
+            sb.Append("  MonitoredFolderId: ").Append(MonitoredFolderId).Append("\n");
+            sb.Append("  MonitoredFolderPath: ").Append(MonitoredFolderPath).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -106,6 +133,21 @@ namespace IO.Swagger.Model
                     this.Filename == input.Filename ||
                     (this.Filename != null &&
                     this.Filename.Equals(input.Filename))
+                ) && 
+                (
+                    this.CreationDate == input.CreationDate ||
+                    (this.CreationDate != null &&
+                    this.CreationDate.Equals(input.CreationDate))
+                ) && 
+                (
+                    this.MonitoredFolderId == input.MonitoredFolderId ||
+                    (this.MonitoredFolderId != null &&
+                    this.MonitoredFolderId.Equals(input.MonitoredFolderId))
+                ) && 
+                (
+                    this.MonitoredFolderPath == input.MonitoredFolderPath ||
+                    (this.MonitoredFolderPath != null &&
+                    this.MonitoredFolderPath.Equals(input.MonitoredFolderPath))
                 );
         }
 
@@ -122,6 +164,12 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.Filename != null)
                     hashCode = hashCode * 59 + this.Filename.GetHashCode();
+                if (this.CreationDate != null)
+                    hashCode = hashCode * 59 + this.CreationDate.GetHashCode();
+                if (this.MonitoredFolderId != null)
+                    hashCode = hashCode * 59 + this.MonitoredFolderId.GetHashCode();
+                if (this.MonitoredFolderPath != null)
+                    hashCode = hashCode * 59 + this.MonitoredFolderPath.GetHashCode();
                 return hashCode;
             }
         }
