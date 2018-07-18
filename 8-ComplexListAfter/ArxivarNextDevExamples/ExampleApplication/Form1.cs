@@ -161,7 +161,7 @@ namespace ExampleApplication
             List<DocumentTypeBaseDTO> doctypes = null;
             for (int i = 0; i < 100; i++)
             {
-                var aoos = await aooApi.BusinessUnitsGetAsync(2, 1, "");
+                var aoos = await aooApi.BusinessUnitsGetAsync(0, "");
                 doctypes = await docTypesApi.DocumentTypesGetAsync(1, aoos.First().Code);
             }
 
