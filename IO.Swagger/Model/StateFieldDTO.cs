@@ -25,7 +25,7 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// StateFieldDTO
+    /// State of document
     /// </summary>
     [DataContract]
     public partial class StateFieldDTO : FieldBaseDTO,  IEquatable<StateFieldDTO>, IValidatableObject
@@ -38,8 +38,8 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StateFieldDTO" /> class.
         /// </summary>
-        /// <param name="DisplayValue">DisplayValue.</param>
-        /// <param name="Value">Value.</param>
+        /// <param name="DisplayValue">State description.</param>
+        /// <param name="Value">State value.</param>
         public StateFieldDTO(string DisplayValue = default(string), string Value = default(string), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), string ClassName = "StateFieldDTO", bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> Associations = default(List<AssocitationFieldItem>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(Name, ExternalId, Description, Order, DataSource, Required, Formula, ClassName, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
         {
             this.DisplayValue = DisplayValue;
@@ -47,14 +47,16 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets DisplayValue
+        /// State description
         /// </summary>
+        /// <value>State description</value>
         [DataMember(Name="displayValue", EmitDefaultValue=false)]
         public string DisplayValue { get; set; }
 
         /// <summary>
-        /// Gets or Sets Value
+        /// State value
         /// </summary>
+        /// <value>State value</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
 

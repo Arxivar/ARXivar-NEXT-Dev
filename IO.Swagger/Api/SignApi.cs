@@ -46,29 +46,6 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> SignDeleteSignCertWithHttpInfo (int? id);
         /// <summary>
-        /// This call returns a digital signed info of a document
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docId">Document Identifier</param>
-        /// <param name="tableType">Possible values:  0: Attachment  2: TaskWorkAttachment  14: Profile  74: ProcessDoc </param>
-        /// <returns>DigitalSignInfoDTO</returns>
-        DigitalSignInfoDTO SignGetDigitalSignInfo (int? docId, int? tableType);
-
-        /// <summary>
-        /// This call returns a digital signed info of a document
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docId">Document Identifier</param>
-        /// <param name="tableType">Possible values:  0: Attachment  2: TaskWorkAttachment  14: Profile  74: ProcessDoc </param>
-        /// <returns>ApiResponse of DigitalSignInfoDTO</returns>
-        ApiResponse<DigitalSignInfoDTO> SignGetDigitalSignInfoWithHttpInfo (int? docId, int? tableType);
-        /// <summary>
         /// This call returns the related certificates of a given Sign certificate (es: Telecom Remote Provider)
         /// </summary>
         /// <remarks>
@@ -169,6 +146,27 @@ namespace IO.Swagger.Api
         /// <param name="signCertId">Identifier of certificate</param>
         /// <returns>ApiResponse of SignCertUseGetDTO</returns>
         ApiResponse<SignCertUseGetDTO> SignGetSignCertUseListWithHttpInfo (int? signCertId);
+        /// <summary>
+        /// This call returns a digital signed info of a document
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifyInfoRequestDto"></param>
+        /// <returns>VerifyInfoDTO</returns>
+        VerifyInfoDTO SignGetVerifyInfo (VerifyInfoRequestDTO verifyInfoRequestDto);
+
+        /// <summary>
+        /// This call returns a digital signed info of a document
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifyInfoRequestDto"></param>
+        /// <returns>ApiResponse of VerifyInfoDTO</returns>
+        ApiResponse<VerifyInfoDTO> SignGetVerifyInfoWithHttpInfo (VerifyInfoRequestDTO verifyInfoRequestDto);
         /// <summary>
         /// This call inserts a signature certificate
         /// </summary>
@@ -325,29 +323,6 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> SignDeleteSignCertAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// This call returns a digital signed info of a document
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docId">Document Identifier</param>
-        /// <param name="tableType">Possible values:  0: Attachment  2: TaskWorkAttachment  14: Profile  74: ProcessDoc </param>
-        /// <returns>Task of DigitalSignInfoDTO</returns>
-        System.Threading.Tasks.Task<DigitalSignInfoDTO> SignGetDigitalSignInfoAsync (int? docId, int? tableType);
-
-        /// <summary>
-        /// This call returns a digital signed info of a document
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docId">Document Identifier</param>
-        /// <param name="tableType">Possible values:  0: Attachment  2: TaskWorkAttachment  14: Profile  74: ProcessDoc </param>
-        /// <returns>Task of ApiResponse (DigitalSignInfoDTO)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DigitalSignInfoDTO>> SignGetDigitalSignInfoAsyncWithHttpInfo (int? docId, int? tableType);
-        /// <summary>
         /// This call returns the related certificates of a given Sign certificate (es: Telecom Remote Provider)
         /// </summary>
         /// <remarks>
@@ -448,6 +423,27 @@ namespace IO.Swagger.Api
         /// <param name="signCertId">Identifier of certificate</param>
         /// <returns>Task of ApiResponse (SignCertUseGetDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<SignCertUseGetDTO>> SignGetSignCertUseListAsyncWithHttpInfo (int? signCertId);
+        /// <summary>
+        /// This call returns a digital signed info of a document
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifyInfoRequestDto"></param>
+        /// <returns>Task of VerifyInfoDTO</returns>
+        System.Threading.Tasks.Task<VerifyInfoDTO> SignGetVerifyInfoAsync (VerifyInfoRequestDTO verifyInfoRequestDto);
+
+        /// <summary>
+        /// This call returns a digital signed info of a document
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifyInfoRequestDto"></param>
+        /// <returns>Task of ApiResponse (VerifyInfoDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<VerifyInfoDTO>> SignGetVerifyInfoAsyncWithHttpInfo (VerifyInfoRequestDTO verifyInfoRequestDto);
         /// <summary>
         /// This call inserts a signature certificate
         /// </summary>
@@ -817,167 +813,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
-        }
-
-        /// <summary>
-        /// This call returns a digital signed info of a document 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docId">Document Identifier</param>
-        /// <param name="tableType">Possible values:  0: Attachment  2: TaskWorkAttachment  14: Profile  74: ProcessDoc </param>
-        /// <returns>DigitalSignInfoDTO</returns>
-        public DigitalSignInfoDTO SignGetDigitalSignInfo (int? docId, int? tableType)
-        {
-             ApiResponse<DigitalSignInfoDTO> localVarResponse = SignGetDigitalSignInfoWithHttpInfo(docId, tableType);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// This call returns a digital signed info of a document 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docId">Document Identifier</param>
-        /// <param name="tableType">Possible values:  0: Attachment  2: TaskWorkAttachment  14: Profile  74: ProcessDoc </param>
-        /// <returns>ApiResponse of DigitalSignInfoDTO</returns>
-        public ApiResponse< DigitalSignInfoDTO > SignGetDigitalSignInfoWithHttpInfo (int? docId, int? tableType)
-        {
-            // verify the required parameter 'docId' is set
-            if (docId == null)
-                throw new ApiException(400, "Missing required parameter 'docId' when calling SignApi->SignGetDigitalSignInfo");
-            // verify the required parameter 'tableType' is set
-            if (tableType == null)
-                throw new ApiException(400, "Missing required parameter 'tableType' when calling SignApi->SignGetDigitalSignInfo");
-
-            var localVarPath = "/api/Sign/DigitalSignInfo";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (docId != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "docId", docId)); // query parameter
-            if (tableType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "tableType", tableType)); // query parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("SignGetDigitalSignInfo", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<DigitalSignInfoDTO>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DigitalSignInfoDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DigitalSignInfoDTO)));
-        }
-
-        /// <summary>
-        /// This call returns a digital signed info of a document 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docId">Document Identifier</param>
-        /// <param name="tableType">Possible values:  0: Attachment  2: TaskWorkAttachment  14: Profile  74: ProcessDoc </param>
-        /// <returns>Task of DigitalSignInfoDTO</returns>
-        public async System.Threading.Tasks.Task<DigitalSignInfoDTO> SignGetDigitalSignInfoAsync (int? docId, int? tableType)
-        {
-             ApiResponse<DigitalSignInfoDTO> localVarResponse = await SignGetDigitalSignInfoAsyncWithHttpInfo(docId, tableType);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// This call returns a digital signed info of a document 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docId">Document Identifier</param>
-        /// <param name="tableType">Possible values:  0: Attachment  2: TaskWorkAttachment  14: Profile  74: ProcessDoc </param>
-        /// <returns>Task of ApiResponse (DigitalSignInfoDTO)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DigitalSignInfoDTO>> SignGetDigitalSignInfoAsyncWithHttpInfo (int? docId, int? tableType)
-        {
-            // verify the required parameter 'docId' is set
-            if (docId == null)
-                throw new ApiException(400, "Missing required parameter 'docId' when calling SignApi->SignGetDigitalSignInfo");
-            // verify the required parameter 'tableType' is set
-            if (tableType == null)
-                throw new ApiException(400, "Missing required parameter 'tableType' when calling SignApi->SignGetDigitalSignInfo");
-
-            var localVarPath = "/api/Sign/DigitalSignInfo";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (docId != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "docId", docId)); // query parameter
-            if (tableType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "tableType", tableType)); // query parameter
-
-            // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("SignGetDigitalSignInfo", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<DigitalSignInfoDTO>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DigitalSignInfoDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DigitalSignInfoDTO)));
         }
 
         /// <summary>
@@ -1699,6 +1534,179 @@ namespace IO.Swagger.Api
             return new ApiResponse<SignCertUseGetDTO>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (SignCertUseGetDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SignCertUseGetDTO)));
+        }
+
+        /// <summary>
+        /// This call returns a digital signed info of a document 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifyInfoRequestDto"></param>
+        /// <returns>VerifyInfoDTO</returns>
+        public VerifyInfoDTO SignGetVerifyInfo (VerifyInfoRequestDTO verifyInfoRequestDto)
+        {
+             ApiResponse<VerifyInfoDTO> localVarResponse = SignGetVerifyInfoWithHttpInfo(verifyInfoRequestDto);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns a digital signed info of a document 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifyInfoRequestDto"></param>
+        /// <returns>ApiResponse of VerifyInfoDTO</returns>
+        public ApiResponse< VerifyInfoDTO > SignGetVerifyInfoWithHttpInfo (VerifyInfoRequestDTO verifyInfoRequestDto)
+        {
+            // verify the required parameter 'verifyInfoRequestDto' is set
+            if (verifyInfoRequestDto == null)
+                throw new ApiException(400, "Missing required parameter 'verifyInfoRequestDto' when calling SignApi->SignGetVerifyInfo");
+
+            var localVarPath = "/api/Sign/GetVerifyInfo";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (verifyInfoRequestDto != null && verifyInfoRequestDto.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(verifyInfoRequestDto); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = verifyInfoRequestDto; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SignGetVerifyInfo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<VerifyInfoDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (VerifyInfoDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VerifyInfoDTO)));
+        }
+
+        /// <summary>
+        /// This call returns a digital signed info of a document 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifyInfoRequestDto"></param>
+        /// <returns>Task of VerifyInfoDTO</returns>
+        public async System.Threading.Tasks.Task<VerifyInfoDTO> SignGetVerifyInfoAsync (VerifyInfoRequestDTO verifyInfoRequestDto)
+        {
+             ApiResponse<VerifyInfoDTO> localVarResponse = await SignGetVerifyInfoAsyncWithHttpInfo(verifyInfoRequestDto);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns a digital signed info of a document 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="verifyInfoRequestDto"></param>
+        /// <returns>Task of ApiResponse (VerifyInfoDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<VerifyInfoDTO>> SignGetVerifyInfoAsyncWithHttpInfo (VerifyInfoRequestDTO verifyInfoRequestDto)
+        {
+            // verify the required parameter 'verifyInfoRequestDto' is set
+            if (verifyInfoRequestDto == null)
+                throw new ApiException(400, "Missing required parameter 'verifyInfoRequestDto' when calling SignApi->SignGetVerifyInfo");
+
+            var localVarPath = "/api/Sign/GetVerifyInfo";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (verifyInfoRequestDto != null && verifyInfoRequestDto.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(verifyInfoRequestDto); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = verifyInfoRequestDto; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SignGetVerifyInfo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<VerifyInfoDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (VerifyInfoDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VerifyInfoDTO)));
         }
 
         /// <summary>

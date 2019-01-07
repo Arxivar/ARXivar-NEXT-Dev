@@ -25,7 +25,7 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// DocumentTypeFieldDTO
+    /// Document type class
     /// </summary>
     [DataContract]
     public partial class DocumentTypeFieldDTO : FieldBaseDTO,  IEquatable<DocumentTypeFieldDTO>, IValidatableObject
@@ -38,8 +38,8 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentTypeFieldDTO" /> class.
         /// </summary>
-        /// <param name="Value">Value.</param>
-        /// <param name="DisplayValue">DisplayValue.</param>
+        /// <param name="Value">Document type id.</param>
+        /// <param name="DisplayValue">Document type display value.</param>
         public DocumentTypeFieldDTO(int? Value = default(int?), string DisplayValue = default(string), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), string ClassName = "DocumentTypeFieldDTO", bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> Associations = default(List<AssocitationFieldItem>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(Name, ExternalId, Description, Order, DataSource, Required, Formula, ClassName, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
         {
             this.Value = Value;
@@ -47,14 +47,16 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets Value
+        /// Document type id
         /// </summary>
+        /// <value>Document type id</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public int? Value { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayValue
+        /// Document type display value
         /// </summary>
+        /// <value>Document type display value</value>
         [DataMember(Name="displayValue", EmitDefaultValue=false)]
         public string DisplayValue { get; set; }
 

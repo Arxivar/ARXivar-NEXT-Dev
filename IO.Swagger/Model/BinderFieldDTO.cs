@@ -25,7 +25,7 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// BinderFieldDTO
+    /// Class of binder
     /// </summary>
     [DataContract]
     public partial class BinderFieldDTO : FieldBaseDTO,  IEquatable<BinderFieldDTO>, IValidatableObject
@@ -38,15 +38,16 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BinderFieldDTO" /> class.
         /// </summary>
-        /// <param name="Value">Value.</param>
+        /// <param name="Value">Bionder value list.</param>
         public BinderFieldDTO(List<BinderBaseDTO> Value = default(List<BinderBaseDTO>), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), string ClassName = "BinderFieldDTO", bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> Associations = default(List<AssocitationFieldItem>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(Name, ExternalId, Description, Order, DataSource, Required, Formula, ClassName, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
         {
             this.Value = Value;
         }
         
         /// <summary>
-        /// Gets or Sets Value
+        /// Bionder value list
         /// </summary>
+        /// <value>Bionder value list</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public List<BinderBaseDTO> Value { get; set; }
 

@@ -180,7 +180,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId"></param>
+        /// <param name="jobId">Job Identifier</param>
         /// <returns>bool?</returns>
         bool? QueueDeleteJob (string jobId);
 
@@ -191,7 +191,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId"></param>
+        /// <param name="jobId">Job Identifier</param>
         /// <returns>ApiResponse of bool?</returns>
         ApiResponse<bool?> QueueDeleteJobWithHttpInfo (string jobId);
         /// <summary>
@@ -629,7 +629,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId"></param>
+        /// <param name="jobId">Job Identifier</param>
         /// <returns>Task of bool?</returns>
         System.Threading.Tasks.Task<bool?> QueueDeleteJobAsync (string jobId);
 
@@ -640,7 +640,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId"></param>
+        /// <param name="jobId">Job Identifier</param>
         /// <returns>Task of ApiResponse (bool?)</returns>
         System.Threading.Tasks.Task<ApiResponse<bool?>> QueueDeleteJobAsyncWithHttpInfo (string jobId);
         /// <summary>
@@ -2151,7 +2151,7 @@ namespace IO.Swagger.Api
         /// This call checks if to delete a queue job 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId"></param>
+        /// <param name="jobId">Job Identifier</param>
         /// <returns>bool?</returns>
         public bool? QueueDeleteJob (string jobId)
         {
@@ -2163,7 +2163,7 @@ namespace IO.Swagger.Api
         /// This call checks if to delete a queue job 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId"></param>
+        /// <param name="jobId">Job Identifier</param>
         /// <returns>ApiResponse of bool?</returns>
         public ApiResponse< bool? > QueueDeleteJobWithHttpInfo (string jobId)
         {
@@ -2225,7 +2225,7 @@ namespace IO.Swagger.Api
         /// This call checks if to delete a queue job 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId"></param>
+        /// <param name="jobId">Job Identifier</param>
         /// <returns>Task of bool?</returns>
         public async System.Threading.Tasks.Task<bool?> QueueDeleteJobAsync (string jobId)
         {
@@ -2238,7 +2238,7 @@ namespace IO.Swagger.Api
         /// This call checks if to delete a queue job 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId"></param>
+        /// <param name="jobId">Job Identifier</param>
         /// <returns>Task of ApiResponse (bool?)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<bool?>> QueueDeleteJobAsyncWithHttpInfo (string jobId)
         {

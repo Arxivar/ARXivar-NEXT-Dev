@@ -25,7 +25,7 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// FileDTO
+    /// Class file dto
     /// </summary>
     [DataContract]
     public partial class FileDTO :  IEquatable<FileDTO>, IValidatableObject
@@ -33,8 +33,8 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FileDTO" /> class.
         /// </summary>
-        /// <param name="FileNames">FileNames.</param>
-        /// <param name="BufferIds">BufferIds.</param>
+        /// <param name="FileNames">Filename list.</param>
+        /// <param name="BufferIds">Buffer id list.</param>
         public FileDTO(List<string> FileNames = default(List<string>), List<string> BufferIds = default(List<string>))
         {
             this.FileNames = FileNames;
@@ -42,14 +42,16 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets FileNames
+        /// Filename list
         /// </summary>
+        /// <value>Filename list</value>
         [DataMember(Name="fileNames", EmitDefaultValue=false)]
         public List<string> FileNames { get; set; }
 
         /// <summary>
-        /// Gets or Sets BufferIds
+        /// Buffer id list
         /// </summary>
+        /// <value>Buffer id list</value>
         [DataMember(Name="bufferIds", EmitDefaultValue=false)]
         public List<string> BufferIds { get; set; }
 

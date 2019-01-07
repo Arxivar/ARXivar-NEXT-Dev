@@ -42,8 +42,9 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets Argument
+        /// Argument
         /// </summary>
+        /// <value>Argument</value>
         [DataMember(Name="argument", EmitDefaultValue=false)]
         public string Argument { get; set; }
 

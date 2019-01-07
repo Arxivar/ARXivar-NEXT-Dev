@@ -14,6 +14,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using IO.Swagger.Client;
+using IO.Swagger.Model;
 
 namespace IO.Swagger.Api
 {
@@ -30,9 +31,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userName">UserName for the language</param>
+        /// <param name="langDto">Dto that contains the username for the language</param>
         /// <returns>string</returns>
-        string UsersLangGet (string userName);
+        string UsersLangGet (UserLangDto langDto);
 
         /// <summary>
         /// This call retrieves the default language for a user by the given username
@@ -41,9 +42,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userName">UserName for the language</param>
+        /// <param name="langDto">Dto that contains the username for the language</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> UsersLangGetWithHttpInfo (string userName);
+        ApiResponse<string> UsersLangGetWithHttpInfo (UserLangDto langDto);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -53,9 +54,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userName">UserName for the language</param>
+        /// <param name="langDto">Dto that contains the username for the language</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> UsersLangGetAsync (string userName);
+        System.Threading.Tasks.Task<string> UsersLangGetAsync (UserLangDto langDto);
 
         /// <summary>
         /// This call retrieves the default language for a user by the given username
@@ -64,9 +65,9 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userName">UserName for the language</param>
+        /// <param name="langDto">Dto that contains the username for the language</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> UsersLangGetAsyncWithHttpInfo (string userName);
+        System.Threading.Tasks.Task<ApiResponse<string>> UsersLangGetAsyncWithHttpInfo (UserLangDto langDto);
         #endregion Asynchronous Operations
     }
 
@@ -171,11 +172,11 @@ namespace IO.Swagger.Api
         /// This call retrieves the default language for a user by the given username 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userName">UserName for the language</param>
+        /// <param name="langDto">Dto that contains the username for the language</param>
         /// <returns>string</returns>
-        public string UsersLangGet (string userName)
+        public string UsersLangGet (UserLangDto langDto)
         {
-             ApiResponse<string> localVarResponse = UsersLangGetWithHttpInfo(userName);
+             ApiResponse<string> localVarResponse = UsersLangGetWithHttpInfo(langDto);
              return localVarResponse.Data;
         }
 
@@ -183,15 +184,15 @@ namespace IO.Swagger.Api
         /// This call retrieves the default language for a user by the given username 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userName">UserName for the language</param>
+        /// <param name="langDto">Dto that contains the username for the language</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > UsersLangGetWithHttpInfo (string userName)
+        public ApiResponse< string > UsersLangGetWithHttpInfo (UserLangDto langDto)
         {
-            // verify the required parameter 'userName' is set
-            if (userName == null)
-                throw new ApiException(400, "Missing required parameter 'userName' when calling UsersLangApi->UsersLangGet");
+            // verify the required parameter 'langDto' is set
+            if (langDto == null)
+                throw new ApiException(400, "Missing required parameter 'langDto' when calling UsersLangApi->UsersLangGet");
 
-            var localVarPath = "/api/UsersLang/{userName}";
+            var localVarPath = "/api/UsersLang";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -201,6 +202,11 @@ namespace IO.Swagger.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -215,7 +221,14 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (userName != null) localVarPathParams.Add("userName", Configuration.ApiClient.ParameterToString(userName)); // path parameter
+            if (langDto != null && langDto.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(langDto); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = langDto; // byte array
+            }
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -225,7 +238,7 @@ namespace IO.Swagger.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -245,11 +258,11 @@ namespace IO.Swagger.Api
         /// This call retrieves the default language for a user by the given username 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userName">UserName for the language</param>
+        /// <param name="langDto">Dto that contains the username for the language</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> UsersLangGetAsync (string userName)
+        public async System.Threading.Tasks.Task<string> UsersLangGetAsync (UserLangDto langDto)
         {
-             ApiResponse<string> localVarResponse = await UsersLangGetAsyncWithHttpInfo(userName);
+             ApiResponse<string> localVarResponse = await UsersLangGetAsyncWithHttpInfo(langDto);
              return localVarResponse.Data;
 
         }
@@ -258,15 +271,15 @@ namespace IO.Swagger.Api
         /// This call retrieves the default language for a user by the given username 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userName">UserName for the language</param>
+        /// <param name="langDto">Dto that contains the username for the language</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> UsersLangGetAsyncWithHttpInfo (string userName)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> UsersLangGetAsyncWithHttpInfo (UserLangDto langDto)
         {
-            // verify the required parameter 'userName' is set
-            if (userName == null)
-                throw new ApiException(400, "Missing required parameter 'userName' when calling UsersLangApi->UsersLangGet");
+            // verify the required parameter 'langDto' is set
+            if (langDto == null)
+                throw new ApiException(400, "Missing required parameter 'langDto' when calling UsersLangApi->UsersLangGet");
 
-            var localVarPath = "/api/UsersLang/{userName}";
+            var localVarPath = "/api/UsersLang";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -276,6 +289,11 @@ namespace IO.Swagger.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -290,7 +308,14 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (userName != null) localVarPathParams.Add("userName", Configuration.ApiClient.ParameterToString(userName)); // path parameter
+            if (langDto != null && langDto.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(langDto); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = langDto; // byte array
+            }
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -300,7 +325,7 @@ namespace IO.Swagger.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;

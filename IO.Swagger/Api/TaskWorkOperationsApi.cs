@@ -96,7 +96,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskExitCode"></param>
+        /// <param name="taskExitCode">exit code for close action</param>
         /// <returns>List&lt;TaskWorkDynamicJobOperationDTO&gt;</returns>
         List<TaskWorkDynamicJobOperationDTO> TaskWorkOperationsGetDynamicJobOperationsByExitCodeAndTaskWorkIds (TaskExitCodeDTO taskExitCode);
 
@@ -107,7 +107,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskExitCode"></param>
+        /// <param name="taskExitCode">exit code for close action</param>
         /// <returns>ApiResponse of List&lt;TaskWorkDynamicJobOperationDTO&gt;</returns>
         ApiResponse<List<TaskWorkDynamicJobOperationDTO>> TaskWorkOperationsGetDynamicJobOperationsByExitCodeAndTaskWorkIdsWithHttpInfo (TaskExitCodeDTO taskExitCode);
         /// <summary>
@@ -186,7 +186,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskExitCode"></param>
+        /// <param name="taskExitCode">exit code for close action</param>
         /// <returns>List&lt;ProfessionalRoleOperationDTO&gt;</returns>
         List<ProfessionalRoleOperationDTO> TaskWorkOperationsGetProfessionalRoleOperationsByExitCodeAndTaskWorkIds (TaskExitCodeDTO taskExitCode);
 
@@ -197,7 +197,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskExitCode"></param>
+        /// <param name="taskExitCode">exit code for close action</param>
         /// <returns>ApiResponse of List&lt;ProfessionalRoleOperationDTO&gt;</returns>
         ApiResponse<List<ProfessionalRoleOperationDTO>> TaskWorkOperationsGetProfessionalRoleOperationsByExitCodeAndTaskWorkIdsWithHttpInfo (TaskExitCodeDTO taskExitCode);
         /// <summary>
@@ -504,7 +504,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskExitCode"></param>
+        /// <param name="taskExitCode">exit code for close action</param>
         /// <returns>Task of List&lt;TaskWorkDynamicJobOperationDTO&gt;</returns>
         System.Threading.Tasks.Task<List<TaskWorkDynamicJobOperationDTO>> TaskWorkOperationsGetDynamicJobOperationsByExitCodeAndTaskWorkIdsAsync (TaskExitCodeDTO taskExitCode);
 
@@ -515,7 +515,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskExitCode"></param>
+        /// <param name="taskExitCode">exit code for close action</param>
         /// <returns>Task of ApiResponse (List&lt;TaskWorkDynamicJobOperationDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<TaskWorkDynamicJobOperationDTO>>> TaskWorkOperationsGetDynamicJobOperationsByExitCodeAndTaskWorkIdsAsyncWithHttpInfo (TaskExitCodeDTO taskExitCode);
         /// <summary>
@@ -594,7 +594,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskExitCode"></param>
+        /// <param name="taskExitCode">exit code for close action</param>
         /// <returns>Task of List&lt;ProfessionalRoleOperationDTO&gt;</returns>
         System.Threading.Tasks.Task<List<ProfessionalRoleOperationDTO>> TaskWorkOperationsGetProfessionalRoleOperationsByExitCodeAndTaskWorkIdsAsync (TaskExitCodeDTO taskExitCode);
 
@@ -605,7 +605,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskExitCode"></param>
+        /// <param name="taskExitCode">exit code for close action</param>
         /// <returns>Task of ApiResponse (List&lt;ProfessionalRoleOperationDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<ProfessionalRoleOperationDTO>>> TaskWorkOperationsGetProfessionalRoleOperationsByExitCodeAndTaskWorkIdsAsyncWithHttpInfo (TaskExitCodeDTO taskExitCode);
         /// <summary>
@@ -1415,7 +1415,7 @@ namespace IO.Swagger.Api
         /// This call returns the dynamic job operation to execute for a taskwork list close action by an exit code 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskExitCode"></param>
+        /// <param name="taskExitCode">exit code for close action</param>
         /// <returns>List&lt;TaskWorkDynamicJobOperationDTO&gt;</returns>
         public List<TaskWorkDynamicJobOperationDTO> TaskWorkOperationsGetDynamicJobOperationsByExitCodeAndTaskWorkIds (TaskExitCodeDTO taskExitCode)
         {
@@ -1427,7 +1427,7 @@ namespace IO.Swagger.Api
         /// This call returns the dynamic job operation to execute for a taskwork list close action by an exit code 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskExitCode"></param>
+        /// <param name="taskExitCode">exit code for close action</param>
         /// <returns>ApiResponse of List&lt;TaskWorkDynamicJobOperationDTO&gt;</returns>
         public ApiResponse< List<TaskWorkDynamicJobOperationDTO> > TaskWorkOperationsGetDynamicJobOperationsByExitCodeAndTaskWorkIdsWithHttpInfo (TaskExitCodeDTO taskExitCode)
         {
@@ -1501,7 +1501,7 @@ namespace IO.Swagger.Api
         /// This call returns the dynamic job operation to execute for a taskwork list close action by an exit code 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskExitCode"></param>
+        /// <param name="taskExitCode">exit code for close action</param>
         /// <returns>Task of List&lt;TaskWorkDynamicJobOperationDTO&gt;</returns>
         public async System.Threading.Tasks.Task<List<TaskWorkDynamicJobOperationDTO>> TaskWorkOperationsGetDynamicJobOperationsByExitCodeAndTaskWorkIdsAsync (TaskExitCodeDTO taskExitCode)
         {
@@ -1514,7 +1514,7 @@ namespace IO.Swagger.Api
         /// This call returns the dynamic job operation to execute for a taskwork list close action by an exit code 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskExitCode"></param>
+        /// <param name="taskExitCode">exit code for close action</param>
         /// <returns>Task of ApiResponse (List&lt;TaskWorkDynamicJobOperationDTO&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<TaskWorkDynamicJobOperationDTO>>> TaskWorkOperationsGetDynamicJobOperationsByExitCodeAndTaskWorkIdsAsyncWithHttpInfo (TaskExitCodeDTO taskExitCode)
         {
@@ -2143,7 +2143,7 @@ namespace IO.Swagger.Api
         /// This call returns the professional role operation to execute for a taskwork list close action by an exit code 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskExitCode"></param>
+        /// <param name="taskExitCode">exit code for close action</param>
         /// <returns>List&lt;ProfessionalRoleOperationDTO&gt;</returns>
         public List<ProfessionalRoleOperationDTO> TaskWorkOperationsGetProfessionalRoleOperationsByExitCodeAndTaskWorkIds (TaskExitCodeDTO taskExitCode)
         {
@@ -2155,7 +2155,7 @@ namespace IO.Swagger.Api
         /// This call returns the professional role operation to execute for a taskwork list close action by an exit code 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskExitCode"></param>
+        /// <param name="taskExitCode">exit code for close action</param>
         /// <returns>ApiResponse of List&lt;ProfessionalRoleOperationDTO&gt;</returns>
         public ApiResponse< List<ProfessionalRoleOperationDTO> > TaskWorkOperationsGetProfessionalRoleOperationsByExitCodeAndTaskWorkIdsWithHttpInfo (TaskExitCodeDTO taskExitCode)
         {
@@ -2229,7 +2229,7 @@ namespace IO.Swagger.Api
         /// This call returns the professional role operation to execute for a taskwork list close action by an exit code 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskExitCode"></param>
+        /// <param name="taskExitCode">exit code for close action</param>
         /// <returns>Task of List&lt;ProfessionalRoleOperationDTO&gt;</returns>
         public async System.Threading.Tasks.Task<List<ProfessionalRoleOperationDTO>> TaskWorkOperationsGetProfessionalRoleOperationsByExitCodeAndTaskWorkIdsAsync (TaskExitCodeDTO taskExitCode)
         {
@@ -2242,7 +2242,7 @@ namespace IO.Swagger.Api
         /// This call returns the professional role operation to execute for a taskwork list close action by an exit code 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskExitCode"></param>
+        /// <param name="taskExitCode">exit code for close action</param>
         /// <returns>Task of ApiResponse (List&lt;ProfessionalRoleOperationDTO&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<ProfessionalRoleOperationDTO>>> TaskWorkOperationsGetProfessionalRoleOperationsByExitCodeAndTaskWorkIdsAsyncWithHttpInfo (TaskExitCodeDTO taskExitCode)
         {

@@ -25,7 +25,7 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// DocumentDateExpiredFieldDTO
+    /// Class of document expire date
     /// </summary>
     [DataContract]
     public partial class DocumentDateExpiredFieldDTO : FieldBaseDTO,  IEquatable<DocumentDateExpiredFieldDTO>, IValidatableObject
@@ -38,15 +38,16 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentDateExpiredFieldDTO" /> class.
         /// </summary>
-        /// <param name="Value">Value.</param>
+        /// <param name="Value">Expire datetime.</param>
         public DocumentDateExpiredFieldDTO(DateTime? Value = default(DateTime?), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), string ClassName = "DocumentDateExpiredFieldDTO", bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> Associations = default(List<AssocitationFieldItem>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(Name, ExternalId, Description, Order, DataSource, Required, Formula, ClassName, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
         {
             this.Value = Value;
         }
         
         /// <summary>
-        /// Gets or Sets Value
+        /// Expire datetime
         /// </summary>
+        /// <value>Expire datetime</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public DateTime? Value { get; set; }
 

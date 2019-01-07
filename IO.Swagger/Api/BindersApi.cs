@@ -94,7 +94,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customFieldId"></param>
+        /// <param name="customFieldId">customFieldId</param>
         /// <param name="request">The update custom fields request object</param>
         /// <returns></returns>
         void BindersBinderCustomFieldsTranslations_0 (int? customFieldId, UpdateFieldTranslationRequest request);
@@ -106,7 +106,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customFieldId"></param>
+        /// <param name="customFieldId">customFieldId</param>
         /// <param name="request">The update custom fields request object</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> BindersBinderCustomFieldsTranslations_0WithHttpInfo (int? customFieldId, UpdateFieldTranslationRequest request);
@@ -747,7 +747,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customFieldId"></param>
+        /// <param name="customFieldId">customFieldId</param>
         /// <param name="request">The update custom fields request object</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task BindersBinderCustomFieldsTranslations_0Async (int? customFieldId, UpdateFieldTranslationRequest request);
@@ -759,7 +759,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customFieldId"></param>
+        /// <param name="customFieldId">customFieldId</param>
         /// <param name="request">The update custom fields request object</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> BindersBinderCustomFieldsTranslations_0AsyncWithHttpInfo (int? customFieldId, UpdateFieldTranslationRequest request);
@@ -1931,7 +1931,7 @@ namespace IO.Swagger.Api
         /// This call updates translation custom field for a binder type 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customFieldId"></param>
+        /// <param name="customFieldId">customFieldId</param>
         /// <param name="request">The update custom fields request object</param>
         /// <returns></returns>
         public void BindersBinderCustomFieldsTranslations_0 (int? customFieldId, UpdateFieldTranslationRequest request)
@@ -1943,7 +1943,7 @@ namespace IO.Swagger.Api
         /// This call updates translation custom field for a binder type 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customFieldId"></param>
+        /// <param name="customFieldId">customFieldId</param>
         /// <param name="request">The update custom fields request object</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> BindersBinderCustomFieldsTranslations_0WithHttpInfo (int? customFieldId, UpdateFieldTranslationRequest request)
@@ -2018,7 +2018,7 @@ namespace IO.Swagger.Api
         /// This call updates translation custom field for a binder type 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customFieldId"></param>
+        /// <param name="customFieldId">customFieldId</param>
         /// <param name="request">The update custom fields request object</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task BindersBinderCustomFieldsTranslations_0Async (int? customFieldId, UpdateFieldTranslationRequest request)
@@ -2031,7 +2031,7 @@ namespace IO.Swagger.Api
         /// This call updates translation custom field for a binder type 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customFieldId"></param>
+        /// <param name="customFieldId">customFieldId</param>
         /// <param name="request">The update custom fields request object</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> BindersBinderCustomFieldsTranslations_0AsyncWithHttpInfo (int? customFieldId, UpdateFieldTranslationRequest request)

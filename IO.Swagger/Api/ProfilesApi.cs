@@ -481,6 +481,27 @@ namespace IO.Swagger.Api
         /// <param name="docNumber">Document Identifier</param>
         /// <returns>ApiResponse of bool?</returns>
         ApiResponse<bool?> ProfilesUnLockProfileWithHttpInfo (int? docNumber);
+        /// <summary>
+        /// This call returns the result of a validation given the array of fields of profile and their value
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fieldcriteria"> (optional)</param>
+        /// <returns>ValidationFieldResultDTO</returns>
+        ValidationFieldResultDTO ProfilesValidateForArchive (FieldValidationCalculateArchiveCriteriaDto fieldcriteria = null);
+
+        /// <summary>
+        /// This call returns the result of a validation given the array of fields of profile and their value
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fieldcriteria"> (optional)</param>
+        /// <returns>ApiResponse of ValidationFieldResultDTO</returns>
+        ApiResponse<ValidationFieldResultDTO> ProfilesValidateForArchiveWithHttpInfo (FieldValidationCalculateArchiveCriteriaDto fieldcriteria = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -940,6 +961,27 @@ namespace IO.Swagger.Api
         /// <param name="docNumber">Document Identifier</param>
         /// <returns>Task of ApiResponse (bool?)</returns>
         System.Threading.Tasks.Task<ApiResponse<bool?>> ProfilesUnLockProfileAsyncWithHttpInfo (int? docNumber);
+        /// <summary>
+        /// This call returns the result of a validation given the array of fields of profile and their value
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fieldcriteria"> (optional)</param>
+        /// <returns>Task of ValidationFieldResultDTO</returns>
+        System.Threading.Tasks.Task<ValidationFieldResultDTO> ProfilesValidateForArchiveAsync (FieldValidationCalculateArchiveCriteriaDto fieldcriteria = null);
+
+        /// <summary>
+        /// This call returns the result of a validation given the array of fields of profile and their value
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fieldcriteria"> (optional)</param>
+        /// <returns>Task of ApiResponse (ValidationFieldResultDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ValidationFieldResultDTO>> ProfilesValidateForArchiveAsyncWithHttpInfo (FieldValidationCalculateArchiveCriteriaDto fieldcriteria = null);
         #endregion Asynchronous Operations
     }
 
@@ -4299,6 +4341,163 @@ namespace IO.Swagger.Api
             return new ApiResponse<bool?>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (bool?) Configuration.ApiClient.Deserialize(localVarResponse, typeof(bool?)));
+        }
+
+        /// <summary>
+        /// This call returns the result of a validation given the array of fields of profile and their value 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fieldcriteria"> (optional)</param>
+        /// <returns>ValidationFieldResultDTO</returns>
+        public ValidationFieldResultDTO ProfilesValidateForArchive (FieldValidationCalculateArchiveCriteriaDto fieldcriteria = null)
+        {
+             ApiResponse<ValidationFieldResultDTO> localVarResponse = ProfilesValidateForArchiveWithHttpInfo(fieldcriteria);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns the result of a validation given the array of fields of profile and their value 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fieldcriteria"> (optional)</param>
+        /// <returns>ApiResponse of ValidationFieldResultDTO</returns>
+        public ApiResponse< ValidationFieldResultDTO > ProfilesValidateForArchiveWithHttpInfo (FieldValidationCalculateArchiveCriteriaDto fieldcriteria = null)
+        {
+
+            var localVarPath = "/api/Profiles/Validation";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (fieldcriteria != null && fieldcriteria.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(fieldcriteria); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = fieldcriteria; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ProfilesValidateForArchive", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ValidationFieldResultDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ValidationFieldResultDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidationFieldResultDTO)));
+        }
+
+        /// <summary>
+        /// This call returns the result of a validation given the array of fields of profile and their value 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fieldcriteria"> (optional)</param>
+        /// <returns>Task of ValidationFieldResultDTO</returns>
+        public async System.Threading.Tasks.Task<ValidationFieldResultDTO> ProfilesValidateForArchiveAsync (FieldValidationCalculateArchiveCriteriaDto fieldcriteria = null)
+        {
+             ApiResponse<ValidationFieldResultDTO> localVarResponse = await ProfilesValidateForArchiveAsyncWithHttpInfo(fieldcriteria);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns the result of a validation given the array of fields of profile and their value 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fieldcriteria"> (optional)</param>
+        /// <returns>Task of ApiResponse (ValidationFieldResultDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ValidationFieldResultDTO>> ProfilesValidateForArchiveAsyncWithHttpInfo (FieldValidationCalculateArchiveCriteriaDto fieldcriteria = null)
+        {
+
+            var localVarPath = "/api/Profiles/Validation";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (fieldcriteria != null && fieldcriteria.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(fieldcriteria); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = fieldcriteria; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ProfilesValidateForArchive", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ValidationFieldResultDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ValidationFieldResultDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidationFieldResultDTO)));
         }
 
     }

@@ -44,6 +44,46 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of List&lt;UserCompleteDTO&gt;</returns>
         ApiResponse<List<UserCompleteDTO>> UsersGetWithHttpInfo ();
         /// <summary>
+        /// This call returns all user groups defined in Arxivar
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List&lt;UserGroupDTO&gt;</returns>
+        List<UserGroupDTO> UsersGetGroups ();
+
+        /// <summary>
+        /// This call returns all user groups defined in Arxivar
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List&lt;UserGroupDTO&gt;</returns>
+        ApiResponse<List<UserGroupDTO>> UsersGetGroupsWithHttpInfo ();
+        /// <summary>
+        /// This call returns all user in a specific group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId"></param>
+        /// <returns>List&lt;UserCompleteDTO&gt;</returns>
+        List<UserCompleteDTO> UsersGetUserByGroup (int? groupId);
+
+        /// <summary>
+        /// This call returns all user in a specific group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId"></param>
+        /// <returns>ApiResponse of List&lt;UserCompleteDTO&gt;</returns>
+        ApiResponse<List<UserCompleteDTO>> UsersGetUserByGroupWithHttpInfo (int? groupId);
+        /// <summary>
         /// This call returns the informations of the connected user
         /// </summary>
         /// <remarks>
@@ -104,6 +144,46 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;UserCompleteDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UserCompleteDTO>>> UsersGetAsyncWithHttpInfo ();
+        /// <summary>
+        /// This call returns all user groups defined in Arxivar
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of List&lt;UserGroupDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<UserGroupDTO>> UsersGetGroupsAsync ();
+
+        /// <summary>
+        /// This call returns all user groups defined in Arxivar
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (List&lt;UserGroupDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UserGroupDTO>>> UsersGetGroupsAsyncWithHttpInfo ();
+        /// <summary>
+        /// This call returns all user in a specific group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId"></param>
+        /// <returns>Task of List&lt;UserCompleteDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<UserCompleteDTO>> UsersGetUserByGroupAsync (int? groupId);
+
+        /// <summary>
+        /// This call returns all user in a specific group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId"></param>
+        /// <returns>Task of ApiResponse (List&lt;UserCompleteDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UserCompleteDTO>>> UsersGetUserByGroupAsyncWithHttpInfo (int? groupId);
         /// <summary>
         /// This call returns the informations of the connected user
         /// </summary>
@@ -373,6 +453,292 @@ namespace IO.Swagger.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("UsersGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UserCompleteDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<UserCompleteDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UserCompleteDTO>)));
+        }
+
+        /// <summary>
+        /// This call returns all user groups defined in Arxivar 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List&lt;UserGroupDTO&gt;</returns>
+        public List<UserGroupDTO> UsersGetGroups ()
+        {
+             ApiResponse<List<UserGroupDTO>> localVarResponse = UsersGetGroupsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns all user groups defined in Arxivar 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List&lt;UserGroupDTO&gt;</returns>
+        public ApiResponse< List<UserGroupDTO> > UsersGetGroupsWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/Users/Groups";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsersGetGroups", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UserGroupDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<UserGroupDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UserGroupDTO>)));
+        }
+
+        /// <summary>
+        /// This call returns all user groups defined in Arxivar 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of List&lt;UserGroupDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UserGroupDTO>> UsersGetGroupsAsync ()
+        {
+             ApiResponse<List<UserGroupDTO>> localVarResponse = await UsersGetGroupsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns all user groups defined in Arxivar 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (List&lt;UserGroupDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UserGroupDTO>>> UsersGetGroupsAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/Users/Groups";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsersGetGroups", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UserGroupDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<UserGroupDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UserGroupDTO>)));
+        }
+
+        /// <summary>
+        /// This call returns all user in a specific group 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId"></param>
+        /// <returns>List&lt;UserCompleteDTO&gt;</returns>
+        public List<UserCompleteDTO> UsersGetUserByGroup (int? groupId)
+        {
+             ApiResponse<List<UserCompleteDTO>> localVarResponse = UsersGetUserByGroupWithHttpInfo(groupId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns all user in a specific group 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId"></param>
+        /// <returns>ApiResponse of List&lt;UserCompleteDTO&gt;</returns>
+        public ApiResponse< List<UserCompleteDTO> > UsersGetUserByGroupWithHttpInfo (int? groupId)
+        {
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling UsersApi->UsersGetUserByGroup");
+
+            var localVarPath = "/api/Users/ByGroupId/{groupId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsersGetUserByGroup", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UserCompleteDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<UserCompleteDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UserCompleteDTO>)));
+        }
+
+        /// <summary>
+        /// This call returns all user in a specific group 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId"></param>
+        /// <returns>Task of List&lt;UserCompleteDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UserCompleteDTO>> UsersGetUserByGroupAsync (int? groupId)
+        {
+             ApiResponse<List<UserCompleteDTO>> localVarResponse = await UsersGetUserByGroupAsyncWithHttpInfo(groupId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns all user in a specific group 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="groupId"></param>
+        /// <returns>Task of ApiResponse (List&lt;UserCompleteDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UserCompleteDTO>>> UsersGetUserByGroupAsyncWithHttpInfo (int? groupId)
+        {
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling UsersApi->UsersGetUserByGroup");
+
+            var localVarPath = "/api/Users/ByGroupId/{groupId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsersGetUserByGroup", localVarResponse);
                 if (exception != null) throw exception;
             }
 

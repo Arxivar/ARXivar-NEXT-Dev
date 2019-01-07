@@ -25,43 +25,41 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// Class of digital sign information
+    /// CertificatePolicyInfoDTO
     /// </summary>
     [DataContract]
-    public partial class DigitalSignInfoDTO :  IEquatable<DigitalSignInfoDTO>, IValidatableObject
+    public partial class CertificatePolicyInfoDTO :  IEquatable<CertificatePolicyInfoDTO>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="DigitalSignInfoDTO" /> class.
+        /// Initializes a new instance of the <see cref="CertificatePolicyInfoDTO" /> class.
         /// </summary>
-        /// <param name="FileName">File Name.</param>
-        /// <param name="SignInfoList">Listo of signiture informations.</param>
-        /// <param name="TimestampInfoList">TimestampInfoList.</param>
-        public DigitalSignInfoDTO(string FileName = default(string), List<SignInfoDTO> SignInfoList = default(List<SignInfoDTO>), List<TimestampInfoDTO> TimestampInfoList = default(List<TimestampInfoDTO>))
+        /// <param name="Id">Id.</param>
+        /// <param name="DescriptionId">DescriptionId.</param>
+        /// <param name="ChildList">ChildList.</param>
+        public CertificatePolicyInfoDTO(string Id = default(string), string DescriptionId = default(string), List<CertificatePolicyChildInfoDTO> ChildList = default(List<CertificatePolicyChildInfoDTO>))
         {
-            this.FileName = FileName;
-            this.SignInfoList = SignInfoList;
-            this.TimestampInfoList = TimestampInfoList;
+            this.Id = Id;
+            this.DescriptionId = DescriptionId;
+            this.ChildList = ChildList;
         }
         
         /// <summary>
-        /// File Name
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>File Name</value>
-        [DataMember(Name="fileName", EmitDefaultValue=false)]
-        public string FileName { get; set; }
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
 
         /// <summary>
-        /// Listo of signiture informations
+        /// Gets or Sets DescriptionId
         /// </summary>
-        /// <value>Listo of signiture informations</value>
-        [DataMember(Name="signInfoList", EmitDefaultValue=false)]
-        public List<SignInfoDTO> SignInfoList { get; set; }
+        [DataMember(Name="descriptionId", EmitDefaultValue=false)]
+        public string DescriptionId { get; set; }
 
         /// <summary>
-        /// Gets or Sets TimestampInfoList
+        /// Gets or Sets ChildList
         /// </summary>
-        [DataMember(Name="timestampInfoList", EmitDefaultValue=false)]
-        public List<TimestampInfoDTO> TimestampInfoList { get; set; }
+        [DataMember(Name="childList", EmitDefaultValue=false)]
+        public List<CertificatePolicyChildInfoDTO> ChildList { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -70,10 +68,10 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class DigitalSignInfoDTO {\n");
-            sb.Append("  FileName: ").Append(FileName).Append("\n");
-            sb.Append("  SignInfoList: ").Append(SignInfoList).Append("\n");
-            sb.Append("  TimestampInfoList: ").Append(TimestampInfoList).Append("\n");
+            sb.Append("class CertificatePolicyInfoDTO {\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  DescriptionId: ").Append(DescriptionId).Append("\n");
+            sb.Append("  ChildList: ").Append(ChildList).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -94,34 +92,34 @@ namespace IO.Swagger.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as DigitalSignInfoDTO);
+            return this.Equals(input as CertificatePolicyInfoDTO);
         }
 
         /// <summary>
-        /// Returns true if DigitalSignInfoDTO instances are equal
+        /// Returns true if CertificatePolicyInfoDTO instances are equal
         /// </summary>
-        /// <param name="input">Instance of DigitalSignInfoDTO to be compared</param>
+        /// <param name="input">Instance of CertificatePolicyInfoDTO to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(DigitalSignInfoDTO input)
+        public bool Equals(CertificatePolicyInfoDTO input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.FileName == input.FileName ||
-                    (this.FileName != null &&
-                    this.FileName.Equals(input.FileName))
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.SignInfoList == input.SignInfoList ||
-                    this.SignInfoList != null &&
-                    this.SignInfoList.SequenceEqual(input.SignInfoList)
+                    this.DescriptionId == input.DescriptionId ||
+                    (this.DescriptionId != null &&
+                    this.DescriptionId.Equals(input.DescriptionId))
                 ) && 
                 (
-                    this.TimestampInfoList == input.TimestampInfoList ||
-                    this.TimestampInfoList != null &&
-                    this.TimestampInfoList.SequenceEqual(input.TimestampInfoList)
+                    this.ChildList == input.ChildList ||
+                    this.ChildList != null &&
+                    this.ChildList.SequenceEqual(input.ChildList)
                 );
         }
 
@@ -134,12 +132,12 @@ namespace IO.Swagger.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.FileName != null)
-                    hashCode = hashCode * 59 + this.FileName.GetHashCode();
-                if (this.SignInfoList != null)
-                    hashCode = hashCode * 59 + this.SignInfoList.GetHashCode();
-                if (this.TimestampInfoList != null)
-                    hashCode = hashCode * 59 + this.TimestampInfoList.GetHashCode();
+                if (this.Id != null)
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.DescriptionId != null)
+                    hashCode = hashCode * 59 + this.DescriptionId.GetHashCode();
+                if (this.ChildList != null)
+                    hashCode = hashCode * 59 + this.ChildList.GetHashCode();
                 return hashCode;
             }
         }

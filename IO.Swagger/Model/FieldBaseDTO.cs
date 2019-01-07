@@ -48,7 +48,7 @@ namespace IO.Swagger.Model
     [JsonSubtypes.KnownSubType(typeof(AttachmentFieldDTO), "AttachmentFieldDTO")]
     [JsonSubtypes.KnownSubType(typeof(ProtocolDateFieldDTO), "ProtocolDateFieldDTO")]
     [JsonSubtypes.KnownSubType(typeof(BinderFieldDTO), "BinderFieldDTO")]
-    [JsonSubtypes.KnownSubType(typeof(DocumentDateFieldDto), "DocumentDateFieldDto")]
+    [JsonSubtypes.KnownSubType(typeof(DocumentDateFieldDTO), "DocumentDateFieldDTO")]
     [JsonSubtypes.KnownSubType(typeof(AdditionalFieldDTO), "AdditionalFieldDTO")]
     [JsonSubtypes.KnownSubType(typeof(CcFieldDTO), "CcFieldDTO")]
     [JsonSubtypes.KnownSubType(typeof(StringFieldDTO), "StringFieldDTO")]

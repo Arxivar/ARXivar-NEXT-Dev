@@ -25,7 +25,7 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// ProtocolDateFieldDTO
+    /// Protoco date
     /// </summary>
     [DataContract]
     public partial class ProtocolDateFieldDTO : FieldBaseDTO,  IEquatable<ProtocolDateFieldDTO>, IValidatableObject
@@ -38,8 +38,8 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ProtocolDateFieldDTO" /> class.
         /// </summary>
-        /// <param name="Value">Value.</param>
-        /// <param name="EditTime">EditTime.</param>
+        /// <param name="Value">Protocol date value.</param>
+        /// <param name="EditTime">Last edit time of the document.</param>
         public ProtocolDateFieldDTO(DateTime? Value = default(DateTime?), bool? EditTime = default(bool?), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), string ClassName = "ProtocolDateFieldDTO", bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> Associations = default(List<AssocitationFieldItem>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(Name, ExternalId, Description, Order, DataSource, Required, Formula, ClassName, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
         {
             this.Value = Value;
@@ -47,14 +47,16 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets Value
+        /// Protocol date value
         /// </summary>
+        /// <value>Protocol date value</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public DateTime? Value { get; set; }
 
         /// <summary>
-        /// Gets or Sets EditTime
+        /// Last edit time of the document
         /// </summary>
+        /// <value>Last edit time of the document</value>
         [DataMember(Name="editTime", EmitDefaultValue=false)]
         public bool? EditTime { get; set; }
 

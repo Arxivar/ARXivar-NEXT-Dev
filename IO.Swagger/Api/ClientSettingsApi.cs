@@ -229,7 +229,7 @@ namespace IO.Swagger.Api
         /// <param name="id">Widget identifier</param>
         /// <param name="instanceId">Instance identifier</param>
         /// <param name="desktopId">Desktop identifier</param>
-        /// <param name="userSettings"></param>
+        /// <param name="userSettings">Settings information to update</param>
         /// <returns></returns>
         void ClientSettingsUpdateWidgetSetting (string id, string instanceId, int? desktopId, Object userSettings);
 
@@ -243,7 +243,7 @@ namespace IO.Swagger.Api
         /// <param name="id">Widget identifier</param>
         /// <param name="instanceId">Instance identifier</param>
         /// <param name="desktopId">Desktop identifier</param>
-        /// <param name="userSettings"></param>
+        /// <param name="userSettings">Settings information to update</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ClientSettingsUpdateWidgetSettingWithHttpInfo (string id, string instanceId, int? desktopId, Object userSettings);
         /// <summary>
@@ -480,7 +480,7 @@ namespace IO.Swagger.Api
         /// <param name="id">Widget identifier</param>
         /// <param name="instanceId">Instance identifier</param>
         /// <param name="desktopId">Desktop identifier</param>
-        /// <param name="userSettings"></param>
+        /// <param name="userSettings">Settings information to update</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task ClientSettingsUpdateWidgetSettingAsync (string id, string instanceId, int? desktopId, Object userSettings);
 
@@ -494,7 +494,7 @@ namespace IO.Swagger.Api
         /// <param name="id">Widget identifier</param>
         /// <param name="instanceId">Instance identifier</param>
         /// <param name="desktopId">Desktop identifier</param>
-        /// <param name="userSettings"></param>
+        /// <param name="userSettings">Settings information to update</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ClientSettingsUpdateWidgetSettingAsyncWithHttpInfo (string id, string instanceId, int? desktopId, Object userSettings);
         /// <summary>
@@ -2074,7 +2074,7 @@ namespace IO.Swagger.Api
         /// <param name="id">Widget identifier</param>
         /// <param name="instanceId">Instance identifier</param>
         /// <param name="desktopId">Desktop identifier</param>
-        /// <param name="userSettings"></param>
+        /// <param name="userSettings">Settings information to update</param>
         /// <returns></returns>
         public void ClientSettingsUpdateWidgetSetting (string id, string instanceId, int? desktopId, Object userSettings)
         {
@@ -2088,7 +2088,7 @@ namespace IO.Swagger.Api
         /// <param name="id">Widget identifier</param>
         /// <param name="instanceId">Instance identifier</param>
         /// <param name="desktopId">Desktop identifier</param>
-        /// <param name="userSettings"></param>
+        /// <param name="userSettings">Settings information to update</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> ClientSettingsUpdateWidgetSettingWithHttpInfo (string id, string instanceId, int? desktopId, Object userSettings)
         {
@@ -2173,7 +2173,7 @@ namespace IO.Swagger.Api
         /// <param name="id">Widget identifier</param>
         /// <param name="instanceId">Instance identifier</param>
         /// <param name="desktopId">Desktop identifier</param>
-        /// <param name="userSettings"></param>
+        /// <param name="userSettings">Settings information to update</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task ClientSettingsUpdateWidgetSettingAsync (string id, string instanceId, int? desktopId, Object userSettings)
         {
@@ -2188,7 +2188,7 @@ namespace IO.Swagger.Api
         /// <param name="id">Widget identifier</param>
         /// <param name="instanceId">Instance identifier</param>
         /// <param name="desktopId">Desktop identifier</param>
-        /// <param name="userSettings"></param>
+        /// <param name="userSettings">Settings information to update</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> ClientSettingsUpdateWidgetSettingAsyncWithHttpInfo (string id, string instanceId, int? desktopId, Object userSettings)
         {

@@ -54,7 +54,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentTypeId"></param>
+        /// <param name="documentTypeId">Document Type id</param>
         /// <returns>DocumentTypeBaseDTO</returns>
         DocumentTypeBaseDTO DocumentTypesGetBySystemId (int? documentTypeId);
 
@@ -65,7 +65,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentTypeId"></param>
+        /// <param name="documentTypeId">Document Type id</param>
         /// <returns>ApiResponse of DocumentTypeBaseDTO</returns>
         ApiResponse<DocumentTypeBaseDTO> DocumentTypesGetBySystemIdWithHttpInfo (int? documentTypeId);
         /// <summary>
@@ -171,7 +171,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentTypeId"></param>
+        /// <param name="documentTypeId">Document Type id</param>
         /// <returns>Task of DocumentTypeBaseDTO</returns>
         System.Threading.Tasks.Task<DocumentTypeBaseDTO> DocumentTypesGetBySystemIdAsync (int? documentTypeId);
 
@@ -182,7 +182,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentTypeId"></param>
+        /// <param name="documentTypeId">Document Type id</param>
         /// <returns>Task of ApiResponse (DocumentTypeBaseDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocumentTypeBaseDTO>> DocumentTypesGetBySystemIdAsyncWithHttpInfo (int? documentTypeId);
         /// <summary>
@@ -515,7 +515,7 @@ namespace IO.Swagger.Api
         /// This call returns a specific document type 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentTypeId"></param>
+        /// <param name="documentTypeId">Document Type id</param>
         /// <returns>DocumentTypeBaseDTO</returns>
         public DocumentTypeBaseDTO DocumentTypesGetBySystemId (int? documentTypeId)
         {
@@ -527,7 +527,7 @@ namespace IO.Swagger.Api
         /// This call returns a specific document type 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentTypeId"></param>
+        /// <param name="documentTypeId">Document Type id</param>
         /// <returns>ApiResponse of DocumentTypeBaseDTO</returns>
         public ApiResponse< DocumentTypeBaseDTO > DocumentTypesGetBySystemIdWithHttpInfo (int? documentTypeId)
         {
@@ -589,7 +589,7 @@ namespace IO.Swagger.Api
         /// This call returns a specific document type 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentTypeId"></param>
+        /// <param name="documentTypeId">Document Type id</param>
         /// <returns>Task of DocumentTypeBaseDTO</returns>
         public async System.Threading.Tasks.Task<DocumentTypeBaseDTO> DocumentTypesGetBySystemIdAsync (int? documentTypeId)
         {
@@ -602,7 +602,7 @@ namespace IO.Swagger.Api
         /// This call returns a specific document type 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentTypeId"></param>
+        /// <param name="documentTypeId">Document Type id</param>
         /// <returns>Task of ApiResponse (DocumentTypeBaseDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DocumentTypeBaseDTO>> DocumentTypesGetBySystemIdAsyncWithHttpInfo (int? documentTypeId)
         {

@@ -25,7 +25,7 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// StringFieldDTO
+    /// String value
     /// </summary>
     [DataContract]
     public partial class StringFieldDTO : FieldBaseDTO,  IEquatable<StringFieldDTO>, IValidatableObject
@@ -45,8 +45,9 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets Value
+        /// Value
         /// </summary>
+        /// <value>Value</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
 

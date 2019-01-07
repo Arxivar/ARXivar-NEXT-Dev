@@ -48,32 +48,37 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets KeyField
+        /// KeyField
         /// </summary>
+        /// <value>KeyField</value>
         [DataMember(Name="keyField", EmitDefaultValue=false)]
         public string KeyField { get; set; }
 
         /// <summary>
-        /// Gets or Sets SelectField
+        /// SelectField
         /// </summary>
+        /// <value>SelectField</value>
         [DataMember(Name="selectField", EmitDefaultValue=false)]
         public string SelectField { get; set; }
 
         /// <summary>
-        /// Gets or Sets Associations
+        /// Associations
         /// </summary>
+        /// <value>Associations</value>
         [DataMember(Name="associations", EmitDefaultValue=false)]
         public Dictionary<string, string> Associations { get; set; }
 
         /// <summary>
-        /// Gets or Sets FieldName
+        /// FieldName
         /// </summary>
+        /// <value>FieldName</value>
         [DataMember(Name="fieldName", EmitDefaultValue=false)]
         public string FieldName { get; set; }
 
         /// <summary>
-        /// Gets or Sets DataSource
+        /// DataSource
         /// </summary>
+        /// <value>DataSource</value>
         [DataMember(Name="dataSource", EmitDefaultValue=false)]
         public List<RowSearchResult> DataSource { get; set; }
 

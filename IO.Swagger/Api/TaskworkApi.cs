@@ -442,7 +442,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskWorkId">Taskwork identifie</param>
         /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">List of document identifier to add</param>
         /// <returns></returns>
         void TaskWorkSetProfileForTaskWorkBySelectionDocumentOperation (int? taskWorkId, string taskWorkDocumentOperationId, List<int?> docnumbers);
 
@@ -455,7 +455,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskWorkId">Taskwork identifie</param>
         /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">List of document identifier to add</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> TaskWorkSetProfileForTaskWorkBySelectionDocumentOperationWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId, List<int?> docnumbers);
         /// <summary>
@@ -1039,7 +1039,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskWorkId">Taskwork identifie</param>
         /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">List of document identifier to add</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task TaskWorkSetProfileForTaskWorkBySelectionDocumentOperationAsync (int? taskWorkId, string taskWorkDocumentOperationId, List<int?> docnumbers);
 
@@ -1052,7 +1052,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskWorkId">Taskwork identifie</param>
         /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">List of document identifier to add</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> TaskWorkSetProfileForTaskWorkBySelectionDocumentOperationAsyncWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId, List<int?> docnumbers);
         /// <summary>
@@ -4365,7 +4365,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskWorkId">Taskwork identifie</param>
         /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">List of document identifier to add</param>
         /// <returns></returns>
         public void TaskWorkSetProfileForTaskWorkBySelectionDocumentOperation (int? taskWorkId, string taskWorkDocumentOperationId, List<int?> docnumbers)
         {
@@ -4378,7 +4378,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskWorkId">Taskwork identifie</param>
         /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">List of document identifier to add</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> TaskWorkSetProfileForTaskWorkBySelectionDocumentOperationWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId, List<int?> docnumbers)
         {
@@ -4458,7 +4458,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskWorkId">Taskwork identifie</param>
         /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">List of document identifier to add</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task TaskWorkSetProfileForTaskWorkBySelectionDocumentOperationAsync (int? taskWorkId, string taskWorkDocumentOperationId, List<int?> docnumbers)
         {
@@ -4472,7 +4472,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskWorkId">Taskwork identifie</param>
         /// <param name="taskWorkDocumentOperationId">Id of the operation</param>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">List of document identifier to add</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> TaskWorkSetProfileForTaskWorkBySelectionDocumentOperationAsyncWithHttpInfo (int? taskWorkId, string taskWorkDocumentOperationId, List<int?> docnumbers)
         {

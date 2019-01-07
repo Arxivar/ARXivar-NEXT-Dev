@@ -25,28 +25,29 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// DocumentDateFieldDto
+    /// Document datetime
     /// </summary>
     [DataContract]
-    public partial class DocumentDateFieldDto : FieldBaseDTO,  IEquatable<DocumentDateFieldDto>, IValidatableObject
+    public partial class DocumentDateFieldDTO : FieldBaseDTO,  IEquatable<DocumentDateFieldDTO>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="DocumentDateFieldDto" /> class.
+        /// Initializes a new instance of the <see cref="DocumentDateFieldDTO" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected DocumentDateFieldDto() { }
+        protected DocumentDateFieldDTO() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="DocumentDateFieldDto" /> class.
+        /// Initializes a new instance of the <see cref="DocumentDateFieldDTO" /> class.
         /// </summary>
-        /// <param name="Value">Value.</param>
-        public DocumentDateFieldDto(DateTime? Value = default(DateTime?), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), string ClassName = "DocumentDateFieldDto", bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> Associations = default(List<AssocitationFieldItem>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(Name, ExternalId, Description, Order, DataSource, Required, Formula, ClassName, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
+        /// <param name="Value">Document datetime.</param>
+        public DocumentDateFieldDTO(DateTime? Value = default(DateTime?), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), string ClassName = "DocumentDateFieldDTO", bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> Associations = default(List<AssocitationFieldItem>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(Name, ExternalId, Description, Order, DataSource, Required, Formula, ClassName, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
         {
             this.Value = Value;
         }
         
         /// <summary>
-        /// Gets or Sets Value
+        /// Document datetime
         /// </summary>
+        /// <value>Document datetime</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public DateTime? Value { get; set; }
 
@@ -57,7 +58,7 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class DocumentDateFieldDto {\n");
+            sb.Append("class DocumentDateFieldDTO {\n");
             sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
@@ -80,15 +81,15 @@ namespace IO.Swagger.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as DocumentDateFieldDto);
+            return this.Equals(input as DocumentDateFieldDTO);
         }
 
         /// <summary>
-        /// Returns true if DocumentDateFieldDto instances are equal
+        /// Returns true if DocumentDateFieldDTO instances are equal
         /// </summary>
-        /// <param name="input">Instance of DocumentDateFieldDto to be compared</param>
+        /// <param name="input">Instance of DocumentDateFieldDTO to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(DocumentDateFieldDto input)
+        public bool Equals(DocumentDateFieldDTO input)
         {
             if (input == null)
                 return false;

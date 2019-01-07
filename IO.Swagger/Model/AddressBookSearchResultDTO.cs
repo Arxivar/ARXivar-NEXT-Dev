@@ -42,14 +42,16 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Gets or Sets Data
+        /// Data
         /// </summary>
+        /// <value>Data</value>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public List<RowSearchResult> Data { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsOverResult
+        /// IsOverResult
         /// </summary>
+        /// <value>IsOverResult</value>
         [DataMember(Name="isOverResult", EmitDefaultValue=false)]
         public bool? IsOverResult { get; set; }
 

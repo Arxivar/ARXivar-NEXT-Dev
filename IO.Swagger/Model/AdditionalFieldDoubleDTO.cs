@@ -44,7 +44,9 @@ namespace IO.Swagger.Model
         /// <param name="GroupId">Group Identifier.</param>
         /// <param name="BinderFieldId">Binder Field Identifier.</param>
         /// <param name="TaskWorkVariableId">Variable Identifier in taskword context.</param>
-        public AdditionalFieldDoubleDTO(double? Value = default(double?), int? Decimals = default(int?), int? AdditionalFieldType = default(int?), int? GroupId = default(int?), int? BinderFieldId = default(int?), int? TaskWorkVariableId = default(int?), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), string ClassName = "AdditionalFieldDoubleDTO", bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> Associations = default(List<AssocitationFieldItem>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(Name, ExternalId, Description, Order, DataSource, Required, Formula, ClassName, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
+        /// <param name="ValidationType">Possible values:  0: None  1: Regex  2: Formula .</param>
+        /// <param name="ValidationString">Validation string (regex or formula).</param>
+        public AdditionalFieldDoubleDTO(double? Value = default(double?), int? Decimals = default(int?), int? AdditionalFieldType = default(int?), int? GroupId = default(int?), int? BinderFieldId = default(int?), int? TaskWorkVariableId = default(int?), int? ValidationType = default(int?), string ValidationString = default(string), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), string ClassName = "AdditionalFieldDoubleDTO", bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> Associations = default(List<AssocitationFieldItem>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(Name, ExternalId, Description, Order, DataSource, Required, Formula, ClassName, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
         {
             this.Value = Value;
             this.Decimals = Decimals;
@@ -52,6 +54,8 @@ namespace IO.Swagger.Model
             this.GroupId = GroupId;
             this.BinderFieldId = BinderFieldId;
             this.TaskWorkVariableId = TaskWorkVariableId;
+            this.ValidationType = ValidationType;
+            this.ValidationString = ValidationString;
         }
         
         /// <summary>
@@ -97,6 +101,20 @@ namespace IO.Swagger.Model
         public int? TaskWorkVariableId { get; set; }
 
         /// <summary>
+        /// Possible values:  0: None  1: Regex  2: Formula 
+        /// </summary>
+        /// <value>Possible values:  0: None  1: Regex  2: Formula </value>
+        [DataMember(Name="validationType", EmitDefaultValue=false)]
+        public int? ValidationType { get; set; }
+
+        /// <summary>
+        /// Validation string (regex or formula)
+        /// </summary>
+        /// <value>Validation string (regex or formula)</value>
+        [DataMember(Name="validationString", EmitDefaultValue=false)]
+        public string ValidationString { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -111,6 +129,8 @@ namespace IO.Swagger.Model
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
             sb.Append("  BinderFieldId: ").Append(BinderFieldId).Append("\n");
             sb.Append("  TaskWorkVariableId: ").Append(TaskWorkVariableId).Append("\n");
+            sb.Append("  ValidationType: ").Append(ValidationType).Append("\n");
+            sb.Append("  ValidationString: ").Append(ValidationString).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -174,6 +194,16 @@ namespace IO.Swagger.Model
                     this.TaskWorkVariableId == input.TaskWorkVariableId ||
                     (this.TaskWorkVariableId != null &&
                     this.TaskWorkVariableId.Equals(input.TaskWorkVariableId))
+                ) && base.Equals(input) && 
+                (
+                    this.ValidationType == input.ValidationType ||
+                    (this.ValidationType != null &&
+                    this.ValidationType.Equals(input.ValidationType))
+                ) && base.Equals(input) && 
+                (
+                    this.ValidationString == input.ValidationString ||
+                    (this.ValidationString != null &&
+                    this.ValidationString.Equals(input.ValidationString))
                 );
         }
 
@@ -198,6 +228,10 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.BinderFieldId.GetHashCode();
                 if (this.TaskWorkVariableId != null)
                     hashCode = hashCode * 59 + this.TaskWorkVariableId.GetHashCode();
+                if (this.ValidationType != null)
+                    hashCode = hashCode * 59 + this.ValidationType.GetHashCode();
+                if (this.ValidationString != null)
+                    hashCode = hashCode * 59 + this.ValidationString.GetHashCode();
                 return hashCode;
             }
         }

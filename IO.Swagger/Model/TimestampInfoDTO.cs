@@ -25,7 +25,7 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// Class of Timestamp
+    /// TimestampInfoDTO
     /// </summary>
     [DataContract]
     public partial class TimestampInfoDTO :  IEquatable<TimestampInfoDTO>, IValidatableObject
@@ -33,99 +33,97 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimestampInfoDTO" /> class.
         /// </summary>
-        /// <param name="TimestampTime">Creation Date.</param>
-        /// <param name="ValidTo">Validity Date To.</param>
-        /// <param name="Serial">Serial Number.</param>
-        /// <param name="Hash">Hash.</param>
-        /// <param name="HashAlgorithm">Algorithm of Hash.</param>
-        /// <param name="Version">Version.</param>
-        /// <param name="ArxCertifiedIdentity">Identity of Certificate.</param>
-        /// <param name="Depth">Depth.</param>
-        /// <param name="IsVerified">Is Verified.</param>
-        /// <param name="WarningMessage">Message of Warning.</param>
-        public TimestampInfoDTO(DateTime? TimestampTime = default(DateTime?), DateTime? ValidTo = default(DateTime?), string Serial = default(string), string Hash = default(string), string HashAlgorithm = default(string), string Version = default(string), CertifiedIdentityDTO ArxCertifiedIdentity = default(CertifiedIdentityDTO), int? Depth = default(int?), bool? IsVerified = default(bool?), string WarningMessage = default(string))
+        /// <param name="TimestampSignatureInfo">TimestampSignatureInfo.</param>
+        /// <param name="IsValid">IsValid.</param>
+        /// <param name="TimestampValidationMessageList">TimestampValidationMessageList.</param>
+        /// <param name="TimestampTimeUtc">TimestampTimeUtc.</param>
+        /// <param name="AccurancySeconds">AccurancySeconds.</param>
+        /// <param name="HashAlgorithm">HashAlgorithm.</param>
+        /// <param name="MessageImprintDigest">MessageImprintDigest.</param>
+        /// <param name="Nonce">Nonce.</param>
+        /// <param name="Policy">Policy.</param>
+        /// <param name="SerialNumber">SerialNumber.</param>
+        /// <param name="Tsa">Tsa.</param>
+        public TimestampInfoDTO(SignatureInfoDTO TimestampSignatureInfo = default(SignatureInfoDTO), bool? IsValid = default(bool?), List<ValidationMessageDTO> TimestampValidationMessageList = default(List<ValidationMessageDTO>), DateTime? TimestampTimeUtc = default(DateTime?), string AccurancySeconds = default(string), IdValuePairDTO HashAlgorithm = default(IdValuePairDTO), string MessageImprintDigest = default(string), string Nonce = default(string), string Policy = default(string), string SerialNumber = default(string), string Tsa = default(string))
         {
-            this.TimestampTime = TimestampTime;
-            this.ValidTo = ValidTo;
-            this.Serial = Serial;
-            this.Hash = Hash;
+            this.TimestampSignatureInfo = TimestampSignatureInfo;
+            this.IsValid = IsValid;
+            this.TimestampValidationMessageList = TimestampValidationMessageList;
+            this.TimestampTimeUtc = TimestampTimeUtc;
+            this.AccurancySeconds = AccurancySeconds;
             this.HashAlgorithm = HashAlgorithm;
-            this.Version = Version;
-            this.ArxCertifiedIdentity = ArxCertifiedIdentity;
-            this.Depth = Depth;
-            this.IsVerified = IsVerified;
-            this.WarningMessage = WarningMessage;
+            this.MessageImprintDigest = MessageImprintDigest;
+            this.Nonce = Nonce;
+            this.Policy = Policy;
+            this.SerialNumber = SerialNumber;
+            this.Tsa = Tsa;
         }
         
         /// <summary>
-        /// Creation Date
+        /// Gets or Sets TimestampSignatureInfo
         /// </summary>
-        /// <value>Creation Date</value>
-        [DataMember(Name="timestampTime", EmitDefaultValue=false)]
-        public DateTime? TimestampTime { get; set; }
+        [DataMember(Name="timestampSignatureInfo", EmitDefaultValue=false)]
+        public SignatureInfoDTO TimestampSignatureInfo { get; set; }
 
         /// <summary>
-        /// Validity Date To
+        /// Gets or Sets IsValid
         /// </summary>
-        /// <value>Validity Date To</value>
-        [DataMember(Name="validTo", EmitDefaultValue=false)]
-        public DateTime? ValidTo { get; set; }
+        [DataMember(Name="isValid", EmitDefaultValue=false)]
+        public bool? IsValid { get; set; }
 
         /// <summary>
-        /// Serial Number
+        /// Gets or Sets TimestampValidationMessageList
         /// </summary>
-        /// <value>Serial Number</value>
-        [DataMember(Name="serial", EmitDefaultValue=false)]
-        public string Serial { get; set; }
+        [DataMember(Name="timestampValidationMessageList", EmitDefaultValue=false)]
+        public List<ValidationMessageDTO> TimestampValidationMessageList { get; set; }
 
         /// <summary>
-        /// Hash
+        /// Gets or Sets TimestampTimeUtc
         /// </summary>
-        /// <value>Hash</value>
-        [DataMember(Name="hash", EmitDefaultValue=false)]
-        public string Hash { get; set; }
+        [DataMember(Name="timestampTimeUtc", EmitDefaultValue=false)]
+        public DateTime? TimestampTimeUtc { get; set; }
 
         /// <summary>
-        /// Algorithm of Hash
+        /// Gets or Sets AccurancySeconds
         /// </summary>
-        /// <value>Algorithm of Hash</value>
+        [DataMember(Name="accurancySeconds", EmitDefaultValue=false)]
+        public string AccurancySeconds { get; set; }
+
+        /// <summary>
+        /// Gets or Sets HashAlgorithm
+        /// </summary>
         [DataMember(Name="hashAlgorithm", EmitDefaultValue=false)]
-        public string HashAlgorithm { get; set; }
+        public IdValuePairDTO HashAlgorithm { get; set; }
 
         /// <summary>
-        /// Version
+        /// Gets or Sets MessageImprintDigest
         /// </summary>
-        /// <value>Version</value>
-        [DataMember(Name="version", EmitDefaultValue=false)]
-        public string Version { get; set; }
+        [DataMember(Name="messageImprintDigest", EmitDefaultValue=false)]
+        public string MessageImprintDigest { get; set; }
 
         /// <summary>
-        /// Identity of Certificate
+        /// Gets or Sets Nonce
         /// </summary>
-        /// <value>Identity of Certificate</value>
-        [DataMember(Name="arxCertifiedIdentity", EmitDefaultValue=false)]
-        public CertifiedIdentityDTO ArxCertifiedIdentity { get; set; }
+        [DataMember(Name="nonce", EmitDefaultValue=false)]
+        public string Nonce { get; set; }
 
         /// <summary>
-        /// Depth
+        /// Gets or Sets Policy
         /// </summary>
-        /// <value>Depth</value>
-        [DataMember(Name="depth", EmitDefaultValue=false)]
-        public int? Depth { get; set; }
+        [DataMember(Name="policy", EmitDefaultValue=false)]
+        public string Policy { get; set; }
 
         /// <summary>
-        /// Is Verified
+        /// Gets or Sets SerialNumber
         /// </summary>
-        /// <value>Is Verified</value>
-        [DataMember(Name="isVerified", EmitDefaultValue=false)]
-        public bool? IsVerified { get; set; }
+        [DataMember(Name="serialNumber", EmitDefaultValue=false)]
+        public string SerialNumber { get; set; }
 
         /// <summary>
-        /// Message of Warning
+        /// Gets or Sets Tsa
         /// </summary>
-        /// <value>Message of Warning</value>
-        [DataMember(Name="warningMessage", EmitDefaultValue=false)]
-        public string WarningMessage { get; set; }
+        [DataMember(Name="tsa", EmitDefaultValue=false)]
+        public string Tsa { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -135,16 +133,17 @@ namespace IO.Swagger.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TimestampInfoDTO {\n");
-            sb.Append("  TimestampTime: ").Append(TimestampTime).Append("\n");
-            sb.Append("  ValidTo: ").Append(ValidTo).Append("\n");
-            sb.Append("  Serial: ").Append(Serial).Append("\n");
-            sb.Append("  Hash: ").Append(Hash).Append("\n");
+            sb.Append("  TimestampSignatureInfo: ").Append(TimestampSignatureInfo).Append("\n");
+            sb.Append("  IsValid: ").Append(IsValid).Append("\n");
+            sb.Append("  TimestampValidationMessageList: ").Append(TimestampValidationMessageList).Append("\n");
+            sb.Append("  TimestampTimeUtc: ").Append(TimestampTimeUtc).Append("\n");
+            sb.Append("  AccurancySeconds: ").Append(AccurancySeconds).Append("\n");
             sb.Append("  HashAlgorithm: ").Append(HashAlgorithm).Append("\n");
-            sb.Append("  Version: ").Append(Version).Append("\n");
-            sb.Append("  ArxCertifiedIdentity: ").Append(ArxCertifiedIdentity).Append("\n");
-            sb.Append("  Depth: ").Append(Depth).Append("\n");
-            sb.Append("  IsVerified: ").Append(IsVerified).Append("\n");
-            sb.Append("  WarningMessage: ").Append(WarningMessage).Append("\n");
+            sb.Append("  MessageImprintDigest: ").Append(MessageImprintDigest).Append("\n");
+            sb.Append("  Nonce: ").Append(Nonce).Append("\n");
+            sb.Append("  Policy: ").Append(Policy).Append("\n");
+            sb.Append("  SerialNumber: ").Append(SerialNumber).Append("\n");
+            sb.Append("  Tsa: ").Append(Tsa).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -180,24 +179,29 @@ namespace IO.Swagger.Model
 
             return 
                 (
-                    this.TimestampTime == input.TimestampTime ||
-                    (this.TimestampTime != null &&
-                    this.TimestampTime.Equals(input.TimestampTime))
+                    this.TimestampSignatureInfo == input.TimestampSignatureInfo ||
+                    (this.TimestampSignatureInfo != null &&
+                    this.TimestampSignatureInfo.Equals(input.TimestampSignatureInfo))
                 ) && 
                 (
-                    this.ValidTo == input.ValidTo ||
-                    (this.ValidTo != null &&
-                    this.ValidTo.Equals(input.ValidTo))
+                    this.IsValid == input.IsValid ||
+                    (this.IsValid != null &&
+                    this.IsValid.Equals(input.IsValid))
                 ) && 
                 (
-                    this.Serial == input.Serial ||
-                    (this.Serial != null &&
-                    this.Serial.Equals(input.Serial))
+                    this.TimestampValidationMessageList == input.TimestampValidationMessageList ||
+                    this.TimestampValidationMessageList != null &&
+                    this.TimestampValidationMessageList.SequenceEqual(input.TimestampValidationMessageList)
                 ) && 
                 (
-                    this.Hash == input.Hash ||
-                    (this.Hash != null &&
-                    this.Hash.Equals(input.Hash))
+                    this.TimestampTimeUtc == input.TimestampTimeUtc ||
+                    (this.TimestampTimeUtc != null &&
+                    this.TimestampTimeUtc.Equals(input.TimestampTimeUtc))
+                ) && 
+                (
+                    this.AccurancySeconds == input.AccurancySeconds ||
+                    (this.AccurancySeconds != null &&
+                    this.AccurancySeconds.Equals(input.AccurancySeconds))
                 ) && 
                 (
                     this.HashAlgorithm == input.HashAlgorithm ||
@@ -205,29 +209,29 @@ namespace IO.Swagger.Model
                     this.HashAlgorithm.Equals(input.HashAlgorithm))
                 ) && 
                 (
-                    this.Version == input.Version ||
-                    (this.Version != null &&
-                    this.Version.Equals(input.Version))
+                    this.MessageImprintDigest == input.MessageImprintDigest ||
+                    (this.MessageImprintDigest != null &&
+                    this.MessageImprintDigest.Equals(input.MessageImprintDigest))
                 ) && 
                 (
-                    this.ArxCertifiedIdentity == input.ArxCertifiedIdentity ||
-                    (this.ArxCertifiedIdentity != null &&
-                    this.ArxCertifiedIdentity.Equals(input.ArxCertifiedIdentity))
+                    this.Nonce == input.Nonce ||
+                    (this.Nonce != null &&
+                    this.Nonce.Equals(input.Nonce))
                 ) && 
                 (
-                    this.Depth == input.Depth ||
-                    (this.Depth != null &&
-                    this.Depth.Equals(input.Depth))
+                    this.Policy == input.Policy ||
+                    (this.Policy != null &&
+                    this.Policy.Equals(input.Policy))
                 ) && 
                 (
-                    this.IsVerified == input.IsVerified ||
-                    (this.IsVerified != null &&
-                    this.IsVerified.Equals(input.IsVerified))
+                    this.SerialNumber == input.SerialNumber ||
+                    (this.SerialNumber != null &&
+                    this.SerialNumber.Equals(input.SerialNumber))
                 ) && 
                 (
-                    this.WarningMessage == input.WarningMessage ||
-                    (this.WarningMessage != null &&
-                    this.WarningMessage.Equals(input.WarningMessage))
+                    this.Tsa == input.Tsa ||
+                    (this.Tsa != null &&
+                    this.Tsa.Equals(input.Tsa))
                 );
         }
 
@@ -240,26 +244,28 @@ namespace IO.Swagger.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.TimestampTime != null)
-                    hashCode = hashCode * 59 + this.TimestampTime.GetHashCode();
-                if (this.ValidTo != null)
-                    hashCode = hashCode * 59 + this.ValidTo.GetHashCode();
-                if (this.Serial != null)
-                    hashCode = hashCode * 59 + this.Serial.GetHashCode();
-                if (this.Hash != null)
-                    hashCode = hashCode * 59 + this.Hash.GetHashCode();
+                if (this.TimestampSignatureInfo != null)
+                    hashCode = hashCode * 59 + this.TimestampSignatureInfo.GetHashCode();
+                if (this.IsValid != null)
+                    hashCode = hashCode * 59 + this.IsValid.GetHashCode();
+                if (this.TimestampValidationMessageList != null)
+                    hashCode = hashCode * 59 + this.TimestampValidationMessageList.GetHashCode();
+                if (this.TimestampTimeUtc != null)
+                    hashCode = hashCode * 59 + this.TimestampTimeUtc.GetHashCode();
+                if (this.AccurancySeconds != null)
+                    hashCode = hashCode * 59 + this.AccurancySeconds.GetHashCode();
                 if (this.HashAlgorithm != null)
                     hashCode = hashCode * 59 + this.HashAlgorithm.GetHashCode();
-                if (this.Version != null)
-                    hashCode = hashCode * 59 + this.Version.GetHashCode();
-                if (this.ArxCertifiedIdentity != null)
-                    hashCode = hashCode * 59 + this.ArxCertifiedIdentity.GetHashCode();
-                if (this.Depth != null)
-                    hashCode = hashCode * 59 + this.Depth.GetHashCode();
-                if (this.IsVerified != null)
-                    hashCode = hashCode * 59 + this.IsVerified.GetHashCode();
-                if (this.WarningMessage != null)
-                    hashCode = hashCode * 59 + this.WarningMessage.GetHashCode();
+                if (this.MessageImprintDigest != null)
+                    hashCode = hashCode * 59 + this.MessageImprintDigest.GetHashCode();
+                if (this.Nonce != null)
+                    hashCode = hashCode * 59 + this.Nonce.GetHashCode();
+                if (this.Policy != null)
+                    hashCode = hashCode * 59 + this.Policy.GetHashCode();
+                if (this.SerialNumber != null)
+                    hashCode = hashCode * 59 + this.SerialNumber.GetHashCode();
+                if (this.Tsa != null)
+                    hashCode = hashCode * 59 + this.Tsa.GetHashCode();
                 return hashCode;
             }
         }

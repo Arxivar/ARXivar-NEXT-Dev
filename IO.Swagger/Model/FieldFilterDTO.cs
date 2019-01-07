@@ -38,13 +38,15 @@ namespace IO.Swagger.Model
         /// <param name="Filters">Array of avaible filters for the additional field.</param>
         /// <param name="ShowFilled">This property show to client if the search for this field has to be prefilled or not.</param>
         /// <param name="DefaultField">The name of filter to use for this field by default.</param>
-        public FieldFilterDTO(string KeyField = default(string), string SelectField = default(string), List<FieldBaseForSearchDTO> Filters = default(List<FieldBaseForSearchDTO>), bool? ShowFilled = default(bool?), string DefaultField = default(string))
+        /// <param name="FilteringType">Possible values:  0: Full  1: None .</param>
+        public FieldFilterDTO(string KeyField = default(string), string SelectField = default(string), List<FieldBaseForSearchDTO> Filters = default(List<FieldBaseForSearchDTO>), bool? ShowFilled = default(bool?), string DefaultField = default(string), int? FilteringType = default(int?))
         {
             this.KeyField = KeyField;
             this.SelectField = SelectField;
             this.Filters = Filters;
             this.ShowFilled = ShowFilled;
             this.DefaultField = DefaultField;
+            this.FilteringType = FilteringType;
         }
         
         /// <summary>
@@ -83,6 +85,13 @@ namespace IO.Swagger.Model
         public string DefaultField { get; set; }
 
         /// <summary>
+        /// Possible values:  0: Full  1: None 
+        /// </summary>
+        /// <value>Possible values:  0: Full  1: None </value>
+        [DataMember(Name="filteringType", EmitDefaultValue=false)]
+        public int? FilteringType { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -95,6 +104,7 @@ namespace IO.Swagger.Model
             sb.Append("  Filters: ").Append(Filters).Append("\n");
             sb.Append("  ShowFilled: ").Append(ShowFilled).Append("\n");
             sb.Append("  DefaultField: ").Append(DefaultField).Append("\n");
+            sb.Append("  FilteringType: ").Append(FilteringType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -153,6 +163,11 @@ namespace IO.Swagger.Model
                     this.DefaultField == input.DefaultField ||
                     (this.DefaultField != null &&
                     this.DefaultField.Equals(input.DefaultField))
+                ) && 
+                (
+                    this.FilteringType == input.FilteringType ||
+                    (this.FilteringType != null &&
+                    this.FilteringType.Equals(input.FilteringType))
                 );
         }
 
@@ -175,6 +190,8 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.ShowFilled.GetHashCode();
                 if (this.DefaultField != null)
                     hashCode = hashCode * 59 + this.DefaultField.GetHashCode();
+                if (this.FilteringType != null)
+                    hashCode = hashCode * 59 + this.FilteringType.GetHashCode();
                 return hashCode;
             }
         }

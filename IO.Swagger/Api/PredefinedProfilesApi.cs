@@ -34,7 +34,7 @@ namespace IO.Swagger.Api
         /// <param name="predefinedProfileId">Predefined profile identifier to clone</param>
         /// <param name="name">Name of the cloned predefined profile</param>
         /// <returns></returns>
-        void PredefinedProfilesClonePredefinedProfile (int? predefinedProfileId, string name);
+        void PredefinedProfilesClone (int? predefinedProfileId, string name);
 
         /// <summary>
         /// This call clones a predefined profile
@@ -46,7 +46,7 @@ namespace IO.Swagger.Api
         /// <param name="predefinedProfileId">Predefined profile identifier to clone</param>
         /// <param name="name">Name of the cloned predefined profile</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PredefinedProfilesClonePredefinedProfileWithHttpInfo (int? predefinedProfileId, string name);
+        ApiResponse<Object> PredefinedProfilesCloneWithHttpInfo (int? predefinedProfileId, string name);
         /// <summary>
         /// This call deletes a predefined profile
         /// </summary>
@@ -250,7 +250,7 @@ namespace IO.Swagger.Api
         /// <param name="predefinedProfileId">Predefined profile identifier to clone</param>
         /// <param name="name">Name of the cloned predefined profile</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PredefinedProfilesClonePredefinedProfileAsync (int? predefinedProfileId, string name);
+        System.Threading.Tasks.Task PredefinedProfilesCloneAsync (int? predefinedProfileId, string name);
 
         /// <summary>
         /// This call clones a predefined profile
@@ -262,7 +262,7 @@ namespace IO.Swagger.Api
         /// <param name="predefinedProfileId">Predefined profile identifier to clone</param>
         /// <param name="name">Name of the cloned predefined profile</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PredefinedProfilesClonePredefinedProfileAsyncWithHttpInfo (int? predefinedProfileId, string name);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PredefinedProfilesCloneAsyncWithHttpInfo (int? predefinedProfileId, string name);
         /// <summary>
         /// This call deletes a predefined profile
         /// </summary>
@@ -561,9 +561,9 @@ namespace IO.Swagger.Api
         /// <param name="predefinedProfileId">Predefined profile identifier to clone</param>
         /// <param name="name">Name of the cloned predefined profile</param>
         /// <returns></returns>
-        public void PredefinedProfilesClonePredefinedProfile (int? predefinedProfileId, string name)
+        public void PredefinedProfilesClone (int? predefinedProfileId, string name)
         {
-             PredefinedProfilesClonePredefinedProfileWithHttpInfo(predefinedProfileId, name);
+             PredefinedProfilesCloneWithHttpInfo(predefinedProfileId, name);
         }
 
         /// <summary>
@@ -573,16 +573,16 @@ namespace IO.Swagger.Api
         /// <param name="predefinedProfileId">Predefined profile identifier to clone</param>
         /// <param name="name">Name of the cloned predefined profile</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PredefinedProfilesClonePredefinedProfileWithHttpInfo (int? predefinedProfileId, string name)
+        public ApiResponse<Object> PredefinedProfilesCloneWithHttpInfo (int? predefinedProfileId, string name)
         {
             // verify the required parameter 'predefinedProfileId' is set
             if (predefinedProfileId == null)
-                throw new ApiException(400, "Missing required parameter 'predefinedProfileId' when calling PredefinedProfilesApi->PredefinedProfilesClonePredefinedProfile");
+                throw new ApiException(400, "Missing required parameter 'predefinedProfileId' when calling PredefinedProfilesApi->PredefinedProfilesClone");
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling PredefinedProfilesApi->PredefinedProfilesClonePredefinedProfile");
+                throw new ApiException(400, "Missing required parameter 'name' when calling PredefinedProfilesApi->PredefinedProfilesClone");
 
-            var localVarPath = "/api/PredefinedProfiles/{predefinedProfileId}/Clone/{name}";
+            var localVarPath = "/api/PredefinedProfiles/{predefinedProfileId}/clone";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -603,7 +603,7 @@ namespace IO.Swagger.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (predefinedProfileId != null) localVarPathParams.Add("predefinedProfileId", Configuration.ApiClient.ParameterToString(predefinedProfileId)); // path parameter
-            if (name != null) localVarPathParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // path parameter
+            if (name != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "name", name)); // query parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -613,14 +613,14 @@ namespace IO.Swagger.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("PredefinedProfilesClonePredefinedProfile", localVarResponse);
+                Exception exception = ExceptionFactory("PredefinedProfilesClone", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -636,9 +636,9 @@ namespace IO.Swagger.Api
         /// <param name="predefinedProfileId">Predefined profile identifier to clone</param>
         /// <param name="name">Name of the cloned predefined profile</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PredefinedProfilesClonePredefinedProfileAsync (int? predefinedProfileId, string name)
+        public async System.Threading.Tasks.Task PredefinedProfilesCloneAsync (int? predefinedProfileId, string name)
         {
-             await PredefinedProfilesClonePredefinedProfileAsyncWithHttpInfo(predefinedProfileId, name);
+             await PredefinedProfilesCloneAsyncWithHttpInfo(predefinedProfileId, name);
 
         }
 
@@ -649,16 +649,16 @@ namespace IO.Swagger.Api
         /// <param name="predefinedProfileId">Predefined profile identifier to clone</param>
         /// <param name="name">Name of the cloned predefined profile</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PredefinedProfilesClonePredefinedProfileAsyncWithHttpInfo (int? predefinedProfileId, string name)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PredefinedProfilesCloneAsyncWithHttpInfo (int? predefinedProfileId, string name)
         {
             // verify the required parameter 'predefinedProfileId' is set
             if (predefinedProfileId == null)
-                throw new ApiException(400, "Missing required parameter 'predefinedProfileId' when calling PredefinedProfilesApi->PredefinedProfilesClonePredefinedProfile");
+                throw new ApiException(400, "Missing required parameter 'predefinedProfileId' when calling PredefinedProfilesApi->PredefinedProfilesClone");
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new ApiException(400, "Missing required parameter 'name' when calling PredefinedProfilesApi->PredefinedProfilesClonePredefinedProfile");
+                throw new ApiException(400, "Missing required parameter 'name' when calling PredefinedProfilesApi->PredefinedProfilesClone");
 
-            var localVarPath = "/api/PredefinedProfiles/{predefinedProfileId}/Clone/{name}";
+            var localVarPath = "/api/PredefinedProfiles/{predefinedProfileId}/clone";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -679,7 +679,7 @@ namespace IO.Swagger.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (predefinedProfileId != null) localVarPathParams.Add("predefinedProfileId", Configuration.ApiClient.ParameterToString(predefinedProfileId)); // path parameter
-            if (name != null) localVarPathParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // path parameter
+            if (name != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "name", name)); // query parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -689,14 +689,14 @@ namespace IO.Swagger.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("PredefinedProfilesClonePredefinedProfile", localVarResponse);
+                Exception exception = ExceptionFactory("PredefinedProfilesClone", localVarResponse);
                 if (exception != null) throw exception;
             }
 

@@ -25,7 +25,7 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// AuthorityDataFieldDTO
+    /// Class of Authority data
     /// </summary>
     [DataContract]
     public partial class AuthorityDataFieldDTO : FieldBaseDTO,  IEquatable<AuthorityDataFieldDTO>, IValidatableObject
@@ -38,15 +38,16 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AuthorityDataFieldDTO" /> class.
         /// </summary>
-        /// <param name="Value">Value.</param>
+        /// <param name="Value">List of values.</param>
         public AuthorityDataFieldDTO(List<AuthorityDataDTO> Value = default(List<AuthorityDataDTO>), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), string ClassName = "AuthorityDataFieldDTO", bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> Associations = default(List<AssocitationFieldItem>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(Name, ExternalId, Description, Order, DataSource, Required, Formula, ClassName, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
         {
             this.Value = Value;
         }
         
         /// <summary>
-        /// Gets or Sets Value
+        /// List of values
         /// </summary>
+        /// <value>List of values</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public List<AuthorityDataDTO> Value { get; set; }
 

@@ -25,7 +25,7 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// ToFieldDTO
+    /// Class to
     /// </summary>
     [DataContract]
     public partial class ToFieldDTO : FieldBaseDTO,  IEquatable<ToFieldDTO>, IValidatableObject
@@ -38,15 +38,16 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ToFieldDTO" /> class.
         /// </summary>
-        /// <param name="Value">Value.</param>
+        /// <param name="Value">To List value.</param>
         public ToFieldDTO(List<UserProfileDTO> Value = default(List<UserProfileDTO>), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), string ClassName = "ToFieldDTO", bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> Associations = default(List<AssocitationFieldItem>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(Name, ExternalId, Description, Order, DataSource, Required, Formula, ClassName, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
         {
             this.Value = Value;
         }
         
         /// <summary>
-        /// Gets or Sets Value
+        /// To List value
         /// </summary>
+        /// <value>To List value</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public List<UserProfileDTO> Value { get; set; }
 

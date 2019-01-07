@@ -25,24 +25,24 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// This call returns the result of a serch in full index
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="searchFilter"></param>
+        /// <param name="searchFilter">Filter to be applied to the search</param>
         /// <returns>List&lt;RowSearchResult&gt;</returns>
         List<RowSearchResult> GlobalSearchGetFullIndexSearch (string searchFilter);
 
         /// <summary>
-        /// 
+        /// This call returns the result of a serch in full index
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="searchFilter"></param>
+        /// <param name="searchFilter">Filter to be applied to the search</param>
         /// <returns>ApiResponse of List&lt;RowSearchResult&gt;</returns>
         ApiResponse<List<RowSearchResult>> GlobalSearchGetFullIndexSearchWithHttpInfo (string searchFilter);
         /// <summary>
@@ -90,24 +90,24 @@ namespace IO.Swagger.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// This call returns the result of a serch in full index
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="searchFilter"></param>
+        /// <param name="searchFilter">Filter to be applied to the search</param>
         /// <returns>Task of List&lt;RowSearchResult&gt;</returns>
         System.Threading.Tasks.Task<List<RowSearchResult>> GlobalSearchGetFullIndexSearchAsync (string searchFilter);
 
         /// <summary>
-        /// 
+        /// This call returns the result of a serch in full index
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="searchFilter"></param>
+        /// <param name="searchFilter">Filter to be applied to the search</param>
         /// <returns>Task of ApiResponse (List&lt;RowSearchResult&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<RowSearchResult>>> GlobalSearchGetFullIndexSearchAsyncWithHttpInfo (string searchFilter);
         /// <summary>
@@ -253,10 +253,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the result of a serch in full index 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="searchFilter"></param>
+        /// <param name="searchFilter">Filter to be applied to the search</param>
         /// <returns>List&lt;RowSearchResult&gt;</returns>
         public List<RowSearchResult> GlobalSearchGetFullIndexSearch (string searchFilter)
         {
@@ -265,10 +265,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the result of a serch in full index 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="searchFilter"></param>
+        /// <param name="searchFilter">Filter to be applied to the search</param>
         /// <returns>ApiResponse of List&lt;RowSearchResult&gt;</returns>
         public ApiResponse< List<RowSearchResult> > GlobalSearchGetFullIndexSearchWithHttpInfo (string searchFilter)
         {
@@ -327,10 +327,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the result of a serch in full index 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="searchFilter"></param>
+        /// <param name="searchFilter">Filter to be applied to the search</param>
         /// <returns>Task of List&lt;RowSearchResult&gt;</returns>
         public async System.Threading.Tasks.Task<List<RowSearchResult>> GlobalSearchGetFullIndexSearchAsync (string searchFilter)
         {
@@ -340,10 +340,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call returns the result of a serch in full index 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="searchFilter"></param>
+        /// <param name="searchFilter">Filter to be applied to the search</param>
         /// <returns>Task of ApiResponse (List&lt;RowSearchResult&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<RowSearchResult>>> GlobalSearchGetFullIndexSearchAsyncWithHttpInfo (string searchFilter)
         {

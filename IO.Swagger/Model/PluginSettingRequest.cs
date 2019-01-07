@@ -25,7 +25,7 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// Class of plugin setting request
+    /// PluginSettingRequest
     /// </summary>
     [DataContract]
     public partial class PluginSettingRequest :  IEquatable<PluginSettingRequest>, IValidatableObject
@@ -33,9 +33,9 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PluginSettingRequest" /> class.
         /// </summary>
-        /// <param name="PluginId">Identifier of plugin.</param>
-        /// <param name="DesktopId">Identifier of desktop item.</param>
-        /// <param name="InstanceId">Identifier of instance.</param>
+        /// <param name="PluginId">PluginId.</param>
+        /// <param name="DesktopId">DesktopId.</param>
+        /// <param name="InstanceId">InstanceId.</param>
         /// <param name="Settings">Settings.</param>
         public PluginSettingRequest(string PluginId = default(string), string DesktopId = default(string), string InstanceId = default(string), Dictionary<string, Object> Settings = default(Dictionary<string, Object>))
         {
@@ -46,30 +46,26 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// Identifier of plugin
+        /// Gets or Sets PluginId
         /// </summary>
-        /// <value>Identifier of plugin</value>
         [DataMember(Name="pluginId", EmitDefaultValue=false)]
         public string PluginId { get; set; }
 
         /// <summary>
-        /// Identifier of desktop item
+        /// Gets or Sets DesktopId
         /// </summary>
-        /// <value>Identifier of desktop item</value>
         [DataMember(Name="desktopId", EmitDefaultValue=false)]
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// Identifier of instance
+        /// Gets or Sets InstanceId
         /// </summary>
-        /// <value>Identifier of instance</value>
         [DataMember(Name="instanceId", EmitDefaultValue=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// Settings
+        /// Gets or Sets Settings
         /// </summary>
-        /// <value>Settings</value>
         [DataMember(Name="settings", EmitDefaultValue=false)]
         public Dictionary<string, Object> Settings { get; set; }
 

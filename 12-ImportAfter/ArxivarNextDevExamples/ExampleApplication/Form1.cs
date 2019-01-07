@@ -341,6 +341,7 @@ namespace ExampleApplication
                 var profileDto = profileApi.ProfilesGet_0();
                 var classeGneric = doctypes.FirstOrDefault(i => i.Key.Equals("GENERIC", StringComparison.CurrentCultureIgnoreCase));
                 var status = statesApi.StatesGet_0();
+
                 ((StateFieldDTO) profileDto.Fields.FirstOrDefault(i => i.Name.Equals("Stato", StringComparison.CurrentCultureIgnoreCase))).Value = status.First().Id;
                 ((DocumentTypeFieldDTO) profileDto.Fields.FirstOrDefault(i => i.Name.Equals("DocumentType"))).Value = classeGneric.Id;
                 ((OriginFieldDTO) profileDto.Fields.FirstOrDefault(i => i.Name.Equals("Origine", StringComparison.CurrentCultureIgnoreCase))).Value = 0;
