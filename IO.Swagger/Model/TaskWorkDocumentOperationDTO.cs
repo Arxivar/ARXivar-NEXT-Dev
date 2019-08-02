@@ -33,52 +33,52 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TaskWorkDocumentOperationDTO" /> class.
         /// </summary>
-        /// <param name="Id">Operation Id..</param>
-        /// <param name="TaskWorkId">TaskWork Id..</param>
-        /// <param name="ProcessId">Process Id..</param>
-        /// <param name="AllowNewDocument">Archiviation enabled..</param>
-        /// <param name="AllowDocumentSelection">Selection enabled..</param>
-        /// <param name="ViewId">Indicates the id of the view to use for the search.</param>
-        /// <param name="IsRequired">Required..</param>
-        /// <param name="TaskWorkDocumentOperationType">Possible values:  0: Attachment  1: PrincipalDocument  2: SecondaryDocument .</param>
-        /// <param name="EditBuffer">Edit buffer copy..</param>
-        /// <param name="DocumentTypeType1">DocumentType Type one..</param>
-        /// <param name="DocumentTypeType2">DocumentType Type two..</param>
-        /// <param name="DocumentTypeType3">DocumentType Type three..</param>
-        /// <param name="ModuleId">Model Id..</param>
-        /// <param name="ToAssociates">Associates enabled..</param>
-        /// <param name="Description">Operation description..</param>
-        /// <param name="MaskId">Mask Id..</param>
-        /// <param name="ToSend">Send enabled..</param>
-        /// <param name="FromFileSystem">FileSystem selection..</param>
-        /// <param name="FromScanner">Scanner selection..</param>
-        /// <param name="IsExecuted">Operation Executed..</param>
-        /// <param name="RelatedBinder">Related binder id.</param>
-        /// <param name="TaskWorkDocumentOperationRealtionMode">Possible values:  0: AsChild  1: AsFather  -1: None .</param>
-        public TaskWorkDocumentOperationDTO(string Id = default(string), int? TaskWorkId = default(int?), int? ProcessId = default(int?), bool? AllowNewDocument = default(bool?), bool? AllowDocumentSelection = default(bool?), string ViewId = default(string), bool? IsRequired = default(bool?), int? TaskWorkDocumentOperationType = default(int?), bool? EditBuffer = default(bool?), int? DocumentTypeType1 = default(int?), int? DocumentTypeType2 = default(int?), int? DocumentTypeType3 = default(int?), int? ModuleId = default(int?), bool? ToAssociates = default(bool?), string Description = default(string), string MaskId = default(string), bool? ToSend = default(bool?), bool? FromFileSystem = default(bool?), bool? FromScanner = default(bool?), bool? IsExecuted = default(bool?), string RelatedBinder = default(string), int? TaskWorkDocumentOperationRealtionMode = default(int?))
+        /// <param name="id">Operation Id..</param>
+        /// <param name="taskWorkId">TaskWork Id..</param>
+        /// <param name="processId">Process Id..</param>
+        /// <param name="allowNewDocument">Archiviation enabled..</param>
+        /// <param name="allowDocumentSelection">Selection enabled..</param>
+        /// <param name="viewId">Indicates the id of the view to use for the search.</param>
+        /// <param name="isRequired">Required..</param>
+        /// <param name="taskWorkDocumentOperationType">Possible values:  0: Attachment  1: PrincipalDocument  2: SecondaryDocument .</param>
+        /// <param name="editBuffer">Edit buffer copy..</param>
+        /// <param name="documentTypeType1">DocumentType Type one..</param>
+        /// <param name="documentTypeType2">DocumentType Type two..</param>
+        /// <param name="documentTypeType3">DocumentType Type three..</param>
+        /// <param name="moduleId">Model Id..</param>
+        /// <param name="toAssociates">Associates enabled..</param>
+        /// <param name="description">Operation description..</param>
+        /// <param name="maskId">Mask Id..</param>
+        /// <param name="toSend">Send enabled..</param>
+        /// <param name="fromFileSystem">FileSystem selection..</param>
+        /// <param name="fromScanner">Scanner selection..</param>
+        /// <param name="isExecuted">Operation Executed..</param>
+        /// <param name="relatedBinder">Related binder id.</param>
+        /// <param name="taskWorkDocumentOperationRealtionMode">Possible values:  0: AsChild  1: AsFather  -1: None .</param>
+        public TaskWorkDocumentOperationDTO(string id = default(string), int? taskWorkId = default(int?), int? processId = default(int?), bool? allowNewDocument = default(bool?), bool? allowDocumentSelection = default(bool?), string viewId = default(string), bool? isRequired = default(bool?), int? taskWorkDocumentOperationType = default(int?), bool? editBuffer = default(bool?), int? documentTypeType1 = default(int?), int? documentTypeType2 = default(int?), int? documentTypeType3 = default(int?), int? moduleId = default(int?), bool? toAssociates = default(bool?), string description = default(string), string maskId = default(string), bool? toSend = default(bool?), bool? fromFileSystem = default(bool?), bool? fromScanner = default(bool?), bool? isExecuted = default(bool?), string relatedBinder = default(string), int? taskWorkDocumentOperationRealtionMode = default(int?))
         {
-            this.Id = Id;
-            this.TaskWorkId = TaskWorkId;
-            this.ProcessId = ProcessId;
-            this.AllowNewDocument = AllowNewDocument;
-            this.AllowDocumentSelection = AllowDocumentSelection;
-            this.ViewId = ViewId;
-            this.IsRequired = IsRequired;
-            this.TaskWorkDocumentOperationType = TaskWorkDocumentOperationType;
-            this.EditBuffer = EditBuffer;
-            this.DocumentTypeType1 = DocumentTypeType1;
-            this.DocumentTypeType2 = DocumentTypeType2;
-            this.DocumentTypeType3 = DocumentTypeType3;
-            this.ModuleId = ModuleId;
-            this.ToAssociates = ToAssociates;
-            this.Description = Description;
-            this.MaskId = MaskId;
-            this.ToSend = ToSend;
-            this.FromFileSystem = FromFileSystem;
-            this.FromScanner = FromScanner;
-            this.IsExecuted = IsExecuted;
-            this.RelatedBinder = RelatedBinder;
-            this.TaskWorkDocumentOperationRealtionMode = TaskWorkDocumentOperationRealtionMode;
+            this.Id = id;
+            this.TaskWorkId = taskWorkId;
+            this.ProcessId = processId;
+            this.AllowNewDocument = allowNewDocument;
+            this.AllowDocumentSelection = allowDocumentSelection;
+            this.ViewId = viewId;
+            this.IsRequired = isRequired;
+            this.TaskWorkDocumentOperationType = taskWorkDocumentOperationType;
+            this.EditBuffer = editBuffer;
+            this.DocumentTypeType1 = documentTypeType1;
+            this.DocumentTypeType2 = documentTypeType2;
+            this.DocumentTypeType3 = documentTypeType3;
+            this.ModuleId = moduleId;
+            this.ToAssociates = toAssociates;
+            this.Description = description;
+            this.MaskId = maskId;
+            this.ToSend = toSend;
+            this.FromFileSystem = fromFileSystem;
+            this.FromScanner = fromScanner;
+            this.IsExecuted = isExecuted;
+            this.RelatedBinder = relatedBinder;
+            this.TaskWorkDocumentOperationRealtionMode = taskWorkDocumentOperationRealtionMode;
         }
         
         /// <summary>
@@ -273,7 +273,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,16 +33,16 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LayoutUsersDto" /> class.
         /// </summary>
-        /// <param name="LayoutId">Layout Identifier.</param>
-        /// <param name="UserId">User Identifier.</param>
-        /// <param name="CompleteName">User Name.</param>
-        /// <param name="Category">User Category.</param>
-        public LayoutUsersDto(int? LayoutId = default(int?), int? UserId = default(int?), string CompleteName = default(string), int? Category = default(int?))
+        /// <param name="layoutId">Layout Identifier.</param>
+        /// <param name="userId">User Identifier.</param>
+        /// <param name="completeName">User Name.</param>
+        /// <param name="category">User Category.</param>
+        public LayoutUsersDto(int? layoutId = default(int?), int? userId = default(int?), string completeName = default(string), int? category = default(int?))
         {
-            this.LayoutId = LayoutId;
-            this.UserId = UserId;
-            this.CompleteName = CompleteName;
-            this.Category = Category;
+            this.LayoutId = layoutId;
+            this.UserId = userId;
+            this.CompleteName = completeName;
+            this.Category = category;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

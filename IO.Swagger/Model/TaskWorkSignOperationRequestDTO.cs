@@ -33,22 +33,22 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TaskWorkSignOperationRequestDTO" /> class.
         /// </summary>
-        /// <param name="DmWfSignId">DmWfSignId.</param>
-        /// <param name="DmTaskWorkId">DmTaskWorkId.</param>
-        /// <param name="CertId">CertId.</param>
-        /// <param name="CertExtraId">CertExtraId.</param>
-        /// <param name="Password">Password.</param>
-        /// <param name="Otp">Otp.</param>
-        /// <param name="SignElementList">SignElementList.</param>
-        public TaskWorkSignOperationRequestDTO(int? DmWfSignId = default(int?), int? DmTaskWorkId = default(int?), string CertId = default(string), string CertExtraId = default(string), string Password = default(string), string Otp = default(string), List<SignOperationElementDTO> SignElementList = default(List<SignOperationElementDTO>))
+        /// <param name="dmWfSignId">dmWfSignId.</param>
+        /// <param name="dmTaskWorkId">dmTaskWorkId.</param>
+        /// <param name="certId">certId.</param>
+        /// <param name="certExtraId">certExtraId.</param>
+        /// <param name="password">password.</param>
+        /// <param name="otp">otp.</param>
+        /// <param name="signElementList">signElementList.</param>
+        public TaskWorkSignOperationRequestDTO(int? dmWfSignId = default(int?), int? dmTaskWorkId = default(int?), string certId = default(string), string certExtraId = default(string), string password = default(string), string otp = default(string), List<SignOperationElementDTO> signElementList = default(List<SignOperationElementDTO>))
         {
-            this.DmWfSignId = DmWfSignId;
-            this.DmTaskWorkId = DmTaskWorkId;
-            this.CertId = CertId;
-            this.CertExtraId = CertExtraId;
-            this.Password = Password;
-            this.Otp = Otp;
-            this.SignElementList = SignElementList;
+            this.DmWfSignId = dmWfSignId;
+            this.DmTaskWorkId = dmTaskWorkId;
+            this.CertId = certId;
+            this.CertExtraId = certExtraId;
+            this.Password = password;
+            this.Otp = otp;
+            this.SignElementList = signElementList;
         }
         
         /// <summary>
@@ -116,7 +116,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

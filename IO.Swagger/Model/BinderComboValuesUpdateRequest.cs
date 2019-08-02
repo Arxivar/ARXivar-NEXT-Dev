@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BinderComboValuesUpdateRequest" /> class.
         /// </summary>
-        /// <param name="Values">Array of values to update.</param>
-        /// <param name="BinderComboCustomFieldId">Identifier of the binder custom combo field.</param>
-        public BinderComboValuesUpdateRequest(List<string> Values = default(List<string>), int? BinderComboCustomFieldId = default(int?))
+        /// <param name="values">Array of values to update.</param>
+        /// <param name="binderComboCustomFieldId">Identifier of the binder custom combo field.</param>
+        public BinderComboValuesUpdateRequest(List<string> values = default(List<string>), int? binderComboCustomFieldId = default(int?))
         {
-            this.Values = Values;
-            this.BinderComboCustomFieldId = BinderComboCustomFieldId;
+            this.Values = values;
+            this.BinderComboCustomFieldId = binderComboCustomFieldId;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

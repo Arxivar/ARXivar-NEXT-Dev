@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ProtocolSearchFilterDTO" /> class.
         /// </summary>
-        /// <param name="Protocol">Protocol Number.</param>
-        /// <param name="Year">Protocol Year.</param>
-        public ProtocolSearchFilterDTO(string Protocol = default(string), string Year = default(string))
+        /// <param name="protocol">Protocol Number.</param>
+        /// <param name="year">Protocol Year.</param>
+        public ProtocolSearchFilterDTO(string protocol = default(string), string year = default(string))
         {
-            this.Protocol = Protocol;
-            this.Year = Year;
+            this.Protocol = protocol;
+            this.Year = year;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IxFeSendResponseDTO" /> class.
         /// </summary>
-        /// <param name="SignCert">Signature Certificate.</param>
-        /// <param name="SendRequestId">Identifier of asynchronous activity (QueueId).</param>
-        public IxFeSendResponseDTO(SignCertDTO SignCert = default(SignCertDTO), string SendRequestId = default(string))
+        /// <param name="signCert">Signature Certificate.</param>
+        /// <param name="sendRequestId">Identifier of asynchronous activity (QueueId).</param>
+        public IxFeSendResponseDTO(SignCertDTO signCert = default(SignCertDTO), string sendRequestId = default(string))
         {
-            this.SignCert = SignCert;
-            this.SendRequestId = SendRequestId;
+            this.SignCert = signCert;
+            this.SendRequestId = sendRequestId;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

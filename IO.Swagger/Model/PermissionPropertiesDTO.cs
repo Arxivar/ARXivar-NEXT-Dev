@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PermissionPropertiesDTO" /> class.
         /// </summary>
-        /// <param name="Permission">Identifier.</param>
-        /// <param name="Description">Description.</param>
-        public PermissionPropertiesDTO(int? Permission = default(int?), string Description = default(string))
+        /// <param name="permission">Identifier.</param>
+        /// <param name="description">Description.</param>
+        public PermissionPropertiesDTO(int? permission = default(int?), string description = default(string))
         {
-            this.Permission = Permission;
-            this.Description = Description;
+            this.Permission = permission;
+            this.Description = description;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

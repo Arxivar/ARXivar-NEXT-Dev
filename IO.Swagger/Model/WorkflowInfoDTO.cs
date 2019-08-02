@@ -33,28 +33,28 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkflowInfoDTO" /> class.
         /// </summary>
-        /// <param name="Id">Identifier.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="State">Possible values:  1: In_Corso  2: Terminato .</param>
-        /// <param name="HasNote">Has Notes.</param>
-        /// <param name="HasAttachement">Has Attachments.</param>
-        /// <param name="StartDate">Start Date.</param>
-        /// <param name="EndDate">End Date.</param>
-        /// <param name="ExpireDate">Expiration Date.</param>
-        /// <param name="UserCompleteName">User Desciption.</param>
-        public WorkflowInfoDTO(int? Id = default(int?), string Name = default(string), string Description = default(string), int? State = default(int?), bool? HasNote = default(bool?), bool? HasAttachement = default(bool?), DateTime? StartDate = default(DateTime?), DateTime? EndDate = default(DateTime?), DateTime? ExpireDate = default(DateTime?), string UserCompleteName = default(string))
+        /// <param name="id">Identifier.</param>
+        /// <param name="name">Name.</param>
+        /// <param name="description">Description.</param>
+        /// <param name="state">Possible values:  1: In_Corso  2: Terminato .</param>
+        /// <param name="hasNote">Has Notes.</param>
+        /// <param name="hasAttachement">Has Attachments.</param>
+        /// <param name="startDate">Start Date.</param>
+        /// <param name="endDate">End Date.</param>
+        /// <param name="expireDate">Expiration Date.</param>
+        /// <param name="userCompleteName">User Desciption.</param>
+        public WorkflowInfoDTO(int? id = default(int?), string name = default(string), string description = default(string), int? state = default(int?), bool? hasNote = default(bool?), bool? hasAttachement = default(bool?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), DateTime? expireDate = default(DateTime?), string userCompleteName = default(string))
         {
-            this.Id = Id;
-            this.Name = Name;
-            this.Description = Description;
-            this.State = State;
-            this.HasNote = HasNote;
-            this.HasAttachement = HasAttachement;
-            this.StartDate = StartDate;
-            this.EndDate = EndDate;
-            this.ExpireDate = ExpireDate;
-            this.UserCompleteName = UserCompleteName;
+            this.Id = id;
+            this.Name = name;
+            this.Description = description;
+            this.State = state;
+            this.HasNote = hasNote;
+            this.HasAttachement = hasAttachement;
+            this.StartDate = startDate;
+            this.EndDate = endDate;
+            this.ExpireDate = expireDate;
+            this.UserCompleteName = userCompleteName;
         }
         
         /// <summary>
@@ -153,7 +153,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

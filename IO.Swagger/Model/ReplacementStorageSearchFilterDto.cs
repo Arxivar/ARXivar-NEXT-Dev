@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplacementStorageSearchFilterDto" /> class.
         /// </summary>
-        /// <param name="IsAos">IsAos.</param>
-        /// <param name="Period">Period.</param>
-        /// <param name="DmDevDocDevice">DmDevDocDevice.</param>
-        public ReplacementStorageSearchFilterDto(int? IsAos = default(int?), string Period = default(string), string DmDevDocDevice = default(string))
+        /// <param name="isAos">isAos.</param>
+        /// <param name="period">period.</param>
+        /// <param name="dmDevDocDevice">dmDevDocDevice.</param>
+        public ReplacementStorageSearchFilterDto(int? isAos = default(int?), string period = default(string), string dmDevDocDevice = default(string))
         {
-            this.IsAos = IsAos;
-            this.Period = Period;
-            this.DmDevDocDevice = DmDevDocDevice;
+            this.IsAos = isAos;
+            this.Period = period;
+            this.DmDevDocDevice = dmDevDocDevice;
         }
         
         /// <summary>
@@ -80,7 +80,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

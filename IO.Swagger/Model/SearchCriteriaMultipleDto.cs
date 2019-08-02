@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchCriteriaMultipleDto" /> class.
         /// </summary>
-        /// <param name="SearchFilterDtoList">SearchFilterDtoList.</param>
-        /// <param name="SelectFilterDto">SelectFilterDto.</param>
-        public SearchCriteriaMultipleDto(List<SearchDTO> SearchFilterDtoList = default(List<SearchDTO>), SelectDTO SelectFilterDto = default(SelectDTO))
+        /// <param name="searchFilterDtoList">searchFilterDtoList.</param>
+        /// <param name="selectFilterDto">selectFilterDto.</param>
+        public SearchCriteriaMultipleDto(List<SearchDTO> searchFilterDtoList = default(List<SearchDTO>), SelectDTO selectFilterDto = default(SelectDTO))
         {
-            this.SearchFilterDtoList = SearchFilterDtoList;
-            this.SelectFilterDto = SelectFilterDto;
+            this.SearchFilterDtoList = searchFilterDtoList;
+            this.SelectFilterDto = selectFilterDto;
         }
         
         /// <summary>
@@ -71,7 +71,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

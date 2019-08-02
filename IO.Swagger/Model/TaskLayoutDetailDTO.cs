@@ -33,24 +33,24 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TaskLayoutDetailDTO" /> class.
         /// </summary>
-        /// <param name="Id">Identifier.</param>
-        /// <param name="ElementId">Item Identifier.</param>
-        /// <param name="X">X Position.</param>
-        /// <param name="Y">Y Position.</param>
-        /// <param name="W">Width.</param>
-        /// <param name="H">Heigth.</param>
-        /// <param name="InstanceId">Instance Identifier.</param>
-        /// <param name="TaskLayoutId">Task Layout Identifier.</param>
-        public TaskLayoutDetailDTO(int? Id = default(int?), string ElementId = default(string), int? X = default(int?), int? Y = default(int?), int? W = default(int?), int? H = default(int?), string InstanceId = default(string), int? TaskLayoutId = default(int?))
+        /// <param name="id">Identifier.</param>
+        /// <param name="elementId">Item Identifier.</param>
+        /// <param name="x">X Position.</param>
+        /// <param name="y">Y Position.</param>
+        /// <param name="w">Width.</param>
+        /// <param name="h">Heigth.</param>
+        /// <param name="instanceId">Instance Identifier.</param>
+        /// <param name="taskLayoutId">Task Layout Identifier.</param>
+        public TaskLayoutDetailDTO(int? id = default(int?), string elementId = default(string), int? x = default(int?), int? y = default(int?), int? w = default(int?), int? h = default(int?), string instanceId = default(string), int? taskLayoutId = default(int?))
         {
-            this.Id = Id;
-            this.ElementId = ElementId;
-            this.X = X;
-            this.Y = Y;
-            this.W = W;
-            this.H = H;
-            this.InstanceId = InstanceId;
-            this.TaskLayoutId = TaskLayoutId;
+            this.Id = id;
+            this.ElementId = elementId;
+            this.X = x;
+            this.Y = y;
+            this.W = w;
+            this.H = h;
+            this.InstanceId = instanceId;
+            this.TaskLayoutId = taskLayoutId;
         }
         
         /// <summary>
@@ -133,7 +133,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

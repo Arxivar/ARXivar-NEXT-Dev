@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RetrievePasswordRequestDTO" /> class.
         /// </summary>
-        /// <param name="Username">Username.</param>
-        /// <param name="Mail">Email Address.</param>
-        public RetrievePasswordRequestDTO(string Username = default(string), string Mail = default(string))
+        /// <param name="username">Username.</param>
+        /// <param name="mail">Email Address.</param>
+        public RetrievePasswordRequestDTO(string username = default(string), string mail = default(string))
         {
-            this.Username = Username;
-            this.Mail = Mail;
+            this.Username = username;
+            this.Mail = mail;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

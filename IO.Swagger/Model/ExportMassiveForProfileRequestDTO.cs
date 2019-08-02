@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExportMassiveForProfileRequestDTO" /> class.
         /// </summary>
-        /// <param name="Profiles">Profiles.</param>
-        /// <param name="ForView">ForView.</param>
-        public ExportMassiveForProfileRequestDTO(List<int?> Profiles = default(List<int?>), bool? ForView = default(bool?))
+        /// <param name="profiles">profiles.</param>
+        /// <param name="forView">forView.</param>
+        public ExportMassiveForProfileRequestDTO(List<int?> profiles = default(List<int?>), bool? forView = default(bool?))
         {
-            this.Profiles = Profiles;
-            this.ForView = ForView;
+            this.Profiles = profiles;
+            this.ForView = forView;
         }
         
         /// <summary>
@@ -71,7 +71,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

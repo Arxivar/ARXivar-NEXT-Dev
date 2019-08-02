@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="KeyValueParameterDto" /> class.
         /// </summary>
-        /// <param name="Key">Key.</param>
-        /// <param name="Value">Value.</param>
-        /// <param name="ValueType">ValueType.</param>
-        public KeyValueParameterDto(string Key = default(string), Object Value = default(Object), string ValueType = default(string))
+        /// <param name="key">key.</param>
+        /// <param name="value">value.</param>
+        /// <param name="valueType">valueType.</param>
+        public KeyValueParameterDto(string key = default(string), Object value = default(Object), string valueType = default(string))
         {
-            this.Key = Key;
-            this.Value = Value;
-            this.ValueType = ValueType;
+            this.Key = key;
+            this.Value = value;
+            this.ValueType = valueType;
         }
         
         /// <summary>
@@ -80,7 +80,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -52,60 +52,60 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FieldBaseForSearchDTO" /> class.
         /// </summary>
-        /// <param name="GroupId">Group Identifier.</param>
-        /// <param name="FieldType">Possible values:  0: Standard  1: Group  2: Additional .</param>
-        /// <param name="AdditionalFieldType">Possible values:  0: Textbox  1: Databox  2: Numeric  3: Combobox  4: TableBox  5: Checkbox  6: MultiValue  7: ClasseBox  8: Group  9: RubricaBox  10: TextArea .</param>
-        /// <param name="DefaultOperator">Default Operator.</param>
-        /// <param name="TableName">Table name.</param>
-        /// <param name="BinderFieldId">Binder Identifier.</param>
-        /// <param name="Multiple">Multiple values.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="ExternalId">External identifier.</param>
-        /// <param name="Description">Label.</param>
-        /// <param name="Order">Order.</param>
-        /// <param name="DataSource">DataSource identifier.</param>
-        /// <param name="Required">Required.</param>
-        /// <param name="Formula">Formula.</param>
-        /// <param name="ClassName">Name of class (required).</param>
-        /// <param name="Locked">Locked in read-only.</param>
-        /// <param name="ComboGruppiId">Data Group Identifier.</param>
-        /// <param name="DependencyFields">List of dependent fields.</param>
-        /// <param name="Associations">Associated fields.</param>
-        /// <param name="IsAdditional">Field type additional.</param>
-        /// <param name="Visible">Visible.</param>
-        /// <param name="PredefinedProfileFormula">Formula in the context of predefined profile.</param>
-        public FieldBaseForSearchDTO(int? GroupId = default(int?), int? FieldType = default(int?), int? AdditionalFieldType = default(int?), int? DefaultOperator = default(int?), string TableName = default(string), int? BinderFieldId = default(int?), string Multiple = default(string), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), string ClassName = default(string), bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), Dictionary<string, string> Associations = default(Dictionary<string, string>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string))
+        /// <param name="groupId">Group Identifier.</param>
+        /// <param name="fieldType">Possible values:  0: Standard  1: Group  2: Additional .</param>
+        /// <param name="additionalFieldType">Possible values:  0: Textbox  1: Databox  2: Numeric  3: Combobox  4: TableBox  5: Checkbox  6: MultiValue  7: ClasseBox  8: Group  9: RubricaBox  10: TextArea .</param>
+        /// <param name="defaultOperator">Default Operator.</param>
+        /// <param name="tableName">Table name.</param>
+        /// <param name="binderFieldId">Binder Identifier.</param>
+        /// <param name="multiple">Multiple values.</param>
+        /// <param name="name">Name.</param>
+        /// <param name="externalId">External identifier.</param>
+        /// <param name="description">Label.</param>
+        /// <param name="order">Order.</param>
+        /// <param name="dataSource">DataSource identifier.</param>
+        /// <param name="required">Required.</param>
+        /// <param name="formula">Formula.</param>
+        /// <param name="className">Name of class (required).</param>
+        /// <param name="locked">Locked in read-only.</param>
+        /// <param name="comboGruppiId">Data Group Identifier.</param>
+        /// <param name="dependencyFields">List of dependent fields.</param>
+        /// <param name="associations">Associated fields.</param>
+        /// <param name="isAdditional">Field type additional.</param>
+        /// <param name="visible">Visible.</param>
+        /// <param name="predefinedProfileFormula">Formula in the context of predefined profile.</param>
+        public FieldBaseForSearchDTO(int? groupId = default(int?), int? fieldType = default(int?), int? additionalFieldType = default(int?), int? defaultOperator = default(int?), string tableName = default(string), int? binderFieldId = default(int?), string multiple = default(string), string name = default(string), string externalId = default(string), string description = default(string), int? order = default(int?), string dataSource = default(string), bool? required = default(bool?), string formula = default(string), string className = default(string), bool? locked = default(bool?), string comboGruppiId = default(string), List<DependencyFieldItem> dependencyFields = default(List<DependencyFieldItem>), Dictionary<string, string> associations = default(Dictionary<string, string>), bool? isAdditional = default(bool?), bool? visible = default(bool?), string predefinedProfileFormula = default(string))
         {
-            // to ensure "ClassName" is required (not null)
-            if (ClassName == null)
+            // to ensure "className" is required (not null)
+            if (className == null)
             {
-                throw new InvalidDataException("ClassName is a required property for FieldBaseForSearchDTO and cannot be null");
+                throw new InvalidDataException("className is a required property for FieldBaseForSearchDTO and cannot be null");
             }
             else
             {
-                this.ClassName = ClassName;
+                this.ClassName = className;
             }
-            this.GroupId = GroupId;
-            this.FieldType = FieldType;
-            this.AdditionalFieldType = AdditionalFieldType;
-            this.DefaultOperator = DefaultOperator;
-            this.TableName = TableName;
-            this.BinderFieldId = BinderFieldId;
-            this.Multiple = Multiple;
-            this.Name = Name;
-            this.ExternalId = ExternalId;
-            this.Description = Description;
-            this.Order = Order;
-            this.DataSource = DataSource;
-            this.Required = Required;
-            this.Formula = Formula;
-            this.Locked = Locked;
-            this.ComboGruppiId = ComboGruppiId;
-            this.DependencyFields = DependencyFields;
-            this.Associations = Associations;
-            this.IsAdditional = IsAdditional;
-            this.Visible = Visible;
-            this.PredefinedProfileFormula = PredefinedProfileFormula;
+            this.GroupId = groupId;
+            this.FieldType = fieldType;
+            this.AdditionalFieldType = additionalFieldType;
+            this.DefaultOperator = defaultOperator;
+            this.TableName = tableName;
+            this.BinderFieldId = binderFieldId;
+            this.Multiple = multiple;
+            this.Name = name;
+            this.ExternalId = externalId;
+            this.Description = description;
+            this.Order = order;
+            this.DataSource = dataSource;
+            this.Required = required;
+            this.Formula = formula;
+            this.Locked = locked;
+            this.ComboGruppiId = comboGruppiId;
+            this.DependencyFields = dependencyFields;
+            this.Associations = associations;
+            this.IsAdditional = isAdditional;
+            this.Visible = visible;
+            this.PredefinedProfileFormula = predefinedProfileFormula;
         }
         
         /// <summary>

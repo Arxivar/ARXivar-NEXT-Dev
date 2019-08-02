@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RemoteSignTaskWorkElementRequestDTO" /> class.
         /// </summary>
-        /// <param name="TaskWorkId">TaskWork id.</param>
-        /// <param name="PdfEmbeddedMode">Enabled Pdf Embedded Signature.</param>
-        /// <param name="SignPdfProperties">Settings of pdf signature.</param>
-        public RemoteSignTaskWorkElementRequestDTO(int? TaskWorkId = default(int?), bool? PdfEmbeddedMode = default(bool?), SignPdfPropertiesDTO SignPdfProperties = default(SignPdfPropertiesDTO))
+        /// <param name="taskWorkId">TaskWork id.</param>
+        /// <param name="pdfEmbeddedMode">Enabled Pdf Embedded Signature.</param>
+        /// <param name="signPdfProperties">Settings of pdf signature.</param>
+        public RemoteSignTaskWorkElementRequestDTO(int? taskWorkId = default(int?), bool? pdfEmbeddedMode = default(bool?), SignPdfPropertiesDTO signPdfProperties = default(SignPdfPropertiesDTO))
         {
-            this.TaskWorkId = TaskWorkId;
-            this.PdfEmbeddedMode = PdfEmbeddedMode;
-            this.SignPdfProperties = SignPdfProperties;
+            this.TaskWorkId = taskWorkId;
+            this.PdfEmbeddedMode = pdfEmbeddedMode;
+            this.SignPdfProperties = signPdfProperties;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

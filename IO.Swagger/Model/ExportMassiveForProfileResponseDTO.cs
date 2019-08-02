@@ -33,10 +33,10 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExportMassiveForProfileResponseDTO" /> class.
         /// </summary>
-        /// <param name="ExportRequestId">Identifier of export in progress.</param>
-        public ExportMassiveForProfileResponseDTO(string ExportRequestId = default(string))
+        /// <param name="exportRequestId">Identifier of export in progress.</param>
+        public ExportMassiveForProfileResponseDTO(string exportRequestId = default(string))
         {
-            this.ExportRequestId = ExportRequestId;
+            this.ExportRequestId = exportRequestId;
         }
         
         /// <summary>
@@ -63,7 +63,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

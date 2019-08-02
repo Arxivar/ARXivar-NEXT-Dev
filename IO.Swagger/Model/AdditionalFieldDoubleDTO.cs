@@ -38,24 +38,24 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AdditionalFieldDoubleDTO" /> class.
         /// </summary>
-        /// <param name="Value">Value.</param>
-        /// <param name="Decimals">Decimals number.</param>
-        /// <param name="AdditionalFieldType">Possible values:  0: Textbox  1: Databox  2: Numeric  3: Combobox  4: TableBox  5: Checkbox  6: MultiValue  7: ClasseBox  8: Group  9: RubricaBox  10: TextArea .</param>
-        /// <param name="GroupId">Group Identifier.</param>
-        /// <param name="BinderFieldId">Binder Field Identifier.</param>
-        /// <param name="TaskWorkVariableId">Variable Identifier in taskword context.</param>
-        /// <param name="ValidationType">Possible values:  0: None  1: Regex  2: Formula .</param>
-        /// <param name="ValidationString">Validation string (regex or formula).</param>
-        public AdditionalFieldDoubleDTO(double? Value = default(double?), int? Decimals = default(int?), int? AdditionalFieldType = default(int?), int? GroupId = default(int?), int? BinderFieldId = default(int?), int? TaskWorkVariableId = default(int?), int? ValidationType = default(int?), string ValidationString = default(string), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), string ClassName = "AdditionalFieldDoubleDTO", bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> Associations = default(List<AssocitationFieldItem>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(Name, ExternalId, Description, Order, DataSource, Required, Formula, ClassName, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
+        /// <param name="value">Value.</param>
+        /// <param name="decimals">Decimals number.</param>
+        /// <param name="additionalFieldType">Possible values:  0: Textbox  1: Databox  2: Numeric  3: Combobox  4: TableBox  5: Checkbox  6: MultiValue  7: ClasseBox  8: Group  9: RubricaBox  10: TextArea .</param>
+        /// <param name="groupId">Group Identifier.</param>
+        /// <param name="binderFieldId">Binder Field Identifier.</param>
+        /// <param name="taskWorkVariableId">Variable Identifier in taskword context.</param>
+        /// <param name="validationType">Possible values:  0: None  1: Regex  2: Formula .</param>
+        /// <param name="validationString">Validation string (regex or formula).</param>
+        public AdditionalFieldDoubleDTO(double? value = default(double?), int? decimals = default(int?), int? additionalFieldType = default(int?), int? groupId = default(int?), int? binderFieldId = default(int?), int? taskWorkVariableId = default(int?), int? validationType = default(int?), string validationString = default(string), string name = default(string), string externalId = default(string), string description = default(string), int? order = default(int?), string dataSource = default(string), bool? required = default(bool?), string formula = default(string), string className = "AdditionalFieldDoubleDTO", bool? locked = default(bool?), string comboGruppiId = default(string), List<DependencyFieldItem> dependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> associations = default(List<AssocitationFieldItem>), bool? isAdditional = default(bool?), bool? visible = default(bool?), string predefinedProfileFormula = default(string)) : base(name, externalId, description, order, dataSource, required, formula, className, locked, comboGruppiId, dependencyFields, associations, isAdditional, visible, predefinedProfileFormula)
         {
-            this.Value = Value;
-            this.Decimals = Decimals;
-            this.AdditionalFieldType = AdditionalFieldType;
-            this.GroupId = GroupId;
-            this.BinderFieldId = BinderFieldId;
-            this.TaskWorkVariableId = TaskWorkVariableId;
-            this.ValidationType = ValidationType;
-            this.ValidationString = ValidationString;
+            this.Value = value;
+            this.Decimals = decimals;
+            this.AdditionalFieldType = additionalFieldType;
+            this.GroupId = groupId;
+            this.BinderFieldId = binderFieldId;
+            this.TaskWorkVariableId = taskWorkVariableId;
+            this.ValidationType = validationType;
+            this.ValidationString = validationString;
         }
         
         /// <summary>

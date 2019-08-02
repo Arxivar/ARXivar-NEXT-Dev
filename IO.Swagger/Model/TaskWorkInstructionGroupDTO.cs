@@ -33,20 +33,20 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TaskWorkInstructionGroupDTO" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Order">Order.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="Deleted">Deleted.</param>
-        /// <param name="ShowInDocumentation">ShowInDocumentation.</param>
-        /// <param name="Items">Items.</param>
-        public TaskWorkInstructionGroupDTO(string Id = default(string), int? Order = default(int?), string Description = default(string), bool? Deleted = default(bool?), bool? ShowInDocumentation = default(bool?), List<TaskWorkInstructionItemDTO> Items = default(List<TaskWorkInstructionItemDTO>))
+        /// <param name="id">id.</param>
+        /// <param name="order">order.</param>
+        /// <param name="description">description.</param>
+        /// <param name="deleted">deleted.</param>
+        /// <param name="showInDocumentation">showInDocumentation.</param>
+        /// <param name="items">items.</param>
+        public TaskWorkInstructionGroupDTO(string id = default(string), int? order = default(int?), string description = default(string), bool? deleted = default(bool?), bool? showInDocumentation = default(bool?), List<TaskWorkInstructionItemDTO> items = default(List<TaskWorkInstructionItemDTO>))
         {
-            this.Id = Id;
-            this.Order = Order;
-            this.Description = Description;
-            this.Deleted = Deleted;
-            this.ShowInDocumentation = ShowInDocumentation;
-            this.Items = Items;
+            this.Id = id;
+            this.Order = order;
+            this.Description = description;
+            this.Deleted = deleted;
+            this.ShowInDocumentation = showInDocumentation;
+            this.Items = items;
         }
         
         /// <summary>
@@ -107,7 +107,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

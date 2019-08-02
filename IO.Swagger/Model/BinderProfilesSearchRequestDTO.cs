@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BinderProfilesSearchRequestDTO" /> class.
         /// </summary>
-        /// <param name="Binderids">Binders ids.</param>
-        /// <param name="SelectDto">Select for columns and positions for profiles result.</param>
-        public BinderProfilesSearchRequestDTO(List<int?> Binderids = default(List<int?>), SelectDTO SelectDto = default(SelectDTO))
+        /// <param name="binderids">Binders ids.</param>
+        /// <param name="selectDto">Select for columns and positions for profiles result.</param>
+        public BinderProfilesSearchRequestDTO(List<int?> binderids = default(List<int?>), SelectDTO selectDto = default(SelectDTO))
         {
-            this.Binderids = Binderids;
-            this.SelectDto = SelectDto;
+            this.Binderids = binderids;
+            this.SelectDto = selectDto;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

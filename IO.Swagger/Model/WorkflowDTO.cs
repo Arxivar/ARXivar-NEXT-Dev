@@ -33,36 +33,36 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkflowDTO" /> class.
         /// </summary>
-        /// <param name="Id">Identiifer.</param>
-        /// <param name="Detail">Detail.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="State">Possible values:  0: Deleted  1: Online  2: InEdit  3: Approving .</param>
-        /// <param name="OrganizationChart">Organization chart Identifier.</param>
-        /// <param name="BusinessUnit">Business unit Code.</param>
-        /// <param name="Color">Color code.</param>
-        /// <param name="Revision">Revision Number.</param>
-        /// <param name="WorkflowParentId">Parent Identifier.</param>
-        /// <param name="ApprovalDate">Date of Approval.</param>
-        /// <param name="CreationDate">Creation Date.</param>
-        /// <param name="EditDate">Last Edit Date.</param>
-        /// <param name="Reason">Reason for the Revision.</param>
-        public WorkflowDTO(int? Id = default(int?), string Detail = default(string), string Name = default(string), string Description = default(string), int? State = default(int?), int? OrganizationChart = default(int?), string BusinessUnit = default(string), int? Color = default(int?), int? Revision = default(int?), int? WorkflowParentId = default(int?), DateTime? ApprovalDate = default(DateTime?), DateTime? CreationDate = default(DateTime?), DateTime? EditDate = default(DateTime?), string Reason = default(string))
+        /// <param name="id">Identiifer.</param>
+        /// <param name="detail">Detail.</param>
+        /// <param name="name">Name.</param>
+        /// <param name="description">Description.</param>
+        /// <param name="state">Possible values:  0: Deleted  1: Online  2: InEdit  3: Approving .</param>
+        /// <param name="organizationChart">Organization chart Identifier.</param>
+        /// <param name="businessUnit">Business unit Code.</param>
+        /// <param name="color">Color code.</param>
+        /// <param name="revision">Revision Number.</param>
+        /// <param name="workflowParentId">Parent Identifier.</param>
+        /// <param name="approvalDate">Date of Approval.</param>
+        /// <param name="creationDate">Creation Date.</param>
+        /// <param name="editDate">Last Edit Date.</param>
+        /// <param name="reason">Reason for the Revision.</param>
+        public WorkflowDTO(int? id = default(int?), string detail = default(string), string name = default(string), string description = default(string), int? state = default(int?), int? organizationChart = default(int?), string businessUnit = default(string), int? color = default(int?), int? revision = default(int?), int? workflowParentId = default(int?), DateTime? approvalDate = default(DateTime?), DateTime? creationDate = default(DateTime?), DateTime? editDate = default(DateTime?), string reason = default(string))
         {
-            this.Id = Id;
-            this.Detail = Detail;
-            this.Name = Name;
-            this.Description = Description;
-            this.State = State;
-            this.OrganizationChart = OrganizationChart;
-            this.BusinessUnit = BusinessUnit;
-            this.Color = Color;
-            this.Revision = Revision;
-            this.WorkflowParentId = WorkflowParentId;
-            this.ApprovalDate = ApprovalDate;
-            this.CreationDate = CreationDate;
-            this.EditDate = EditDate;
-            this.Reason = Reason;
+            this.Id = id;
+            this.Detail = detail;
+            this.Name = name;
+            this.Description = description;
+            this.State = state;
+            this.OrganizationChart = organizationChart;
+            this.BusinessUnit = businessUnit;
+            this.Color = color;
+            this.Revision = revision;
+            this.WorkflowParentId = workflowParentId;
+            this.ApprovalDate = approvalDate;
+            this.CreationDate = creationDate;
+            this.EditDate = editDate;
+            this.Reason = reason;
         }
         
         /// <summary>
@@ -193,7 +193,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

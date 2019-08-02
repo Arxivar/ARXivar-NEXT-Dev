@@ -33,10 +33,10 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SendToIxFeSignRequiredRequestDto" /> class.
         /// </summary>
-        /// <param name="DocumentList">Document list to send.</param>
-        public SendToIxFeSignRequiredRequestDto(List<int?> DocumentList = default(List<int?>))
+        /// <param name="documentList">Document list to send.</param>
+        public SendToIxFeSignRequiredRequestDto(List<int?> documentList = default(List<int?>))
         {
-            this.DocumentList = DocumentList;
+            this.DocumentList = documentList;
         }
         
         /// <summary>
@@ -63,7 +63,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

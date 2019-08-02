@@ -33,20 +33,20 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FieldsMatrixModuleDTO" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="IdModel">Identificativo del modello office di riferimento..</param>
-        /// <param name="ModelField">Nome del campo nel modello office..</param>
-        /// <param name="ProfileField">Nome del campo di profilo..</param>
-        /// <param name="Position">Indica la posizione della colonna all&#39;interno della tabella.</param>
-        /// <param name="Label">Descrizione campo di ARXivar.</param>
-        public FieldsMatrixModuleDTO(int? Id = default(int?), int? IdModel = default(int?), string ModelField = default(string), string ProfileField = default(string), int? Position = default(int?), string Label = default(string))
+        /// <param name="id">id.</param>
+        /// <param name="idModel">Identificativo del modello office di riferimento..</param>
+        /// <param name="modelField">Nome del campo nel modello office..</param>
+        /// <param name="profileField">Nome del campo di profilo..</param>
+        /// <param name="position">Indica la posizione della colonna all&#39;interno della tabella.</param>
+        /// <param name="label">Descrizione campo di ARXivar.</param>
+        public FieldsMatrixModuleDTO(int? id = default(int?), int? idModel = default(int?), string modelField = default(string), string profileField = default(string), int? position = default(int?), string label = default(string))
         {
-            this.Id = Id;
-            this.IdModel = IdModel;
-            this.ModelField = ModelField;
-            this.ProfileField = ProfileField;
-            this.Position = Position;
-            this.Label = Label;
+            this.Id = id;
+            this.IdModel = idModel;
+            this.ModelField = modelField;
+            this.ProfileField = profileField;
+            this.Position = position;
+            this.Label = label;
         }
         
         /// <summary>
@@ -112,7 +112,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

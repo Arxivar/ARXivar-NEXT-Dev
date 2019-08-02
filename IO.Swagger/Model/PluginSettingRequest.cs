@@ -33,16 +33,16 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PluginSettingRequest" /> class.
         /// </summary>
-        /// <param name="PluginId">PluginId.</param>
-        /// <param name="DesktopId">DesktopId.</param>
-        /// <param name="InstanceId">InstanceId.</param>
-        /// <param name="Settings">Settings.</param>
-        public PluginSettingRequest(string PluginId = default(string), string DesktopId = default(string), string InstanceId = default(string), Dictionary<string, Object> Settings = default(Dictionary<string, Object>))
+        /// <param name="pluginId">pluginId.</param>
+        /// <param name="desktopId">desktopId.</param>
+        /// <param name="instanceId">instanceId.</param>
+        /// <param name="settings">settings.</param>
+        public PluginSettingRequest(string pluginId = default(string), string desktopId = default(string), string instanceId = default(string), Dictionary<string, Object> settings = default(Dictionary<string, Object>))
         {
-            this.PluginId = PluginId;
-            this.DesktopId = DesktopId;
-            this.InstanceId = InstanceId;
-            this.Settings = Settings;
+            this.PluginId = pluginId;
+            this.DesktopId = desktopId;
+            this.InstanceId = instanceId;
+            this.Settings = settings;
         }
         
         /// <summary>
@@ -89,7 +89,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

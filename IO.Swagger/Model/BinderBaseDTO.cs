@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BinderBaseDTO" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Code">Code.</param>
-        public BinderBaseDTO(int? Id = default(int?), string Name = default(string), string Code = default(string))
+        /// <param name="id">id.</param>
+        /// <param name="name">name.</param>
+        /// <param name="code">code.</param>
+        public BinderBaseDTO(int? id = default(int?), string name = default(string), string code = default(string))
         {
-            this.Id = Id;
-            this.Name = Name;
-            this.Code = Code;
+            this.Id = id;
+            this.Name = name;
+            this.Code = code;
         }
         
         /// <summary>
@@ -80,7 +80,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

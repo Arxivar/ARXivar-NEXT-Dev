@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ShippingDTO" /> class.
         /// </summary>
-        /// <param name="Code">Code.</param>
-        /// <param name="Description">Description.</param>
-        public ShippingDTO(string Code = default(string), string Description = default(string))
+        /// <param name="code">Code.</param>
+        /// <param name="description">Description.</param>
+        public ShippingDTO(string code = default(string), string description = default(string))
         {
-            this.Code = Code;
-            this.Description = Description;
+            this.Code = code;
+            this.Description = description;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

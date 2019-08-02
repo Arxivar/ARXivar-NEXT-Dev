@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AssocitationFieldItem" /> class.
         /// </summary>
-        /// <param name="FieldName">FieldName.</param>
-        /// <param name="Association">Name.</param>
-        public AssocitationFieldItem(string FieldName = default(string), string Association = default(string))
+        /// <param name="fieldName">fieldName.</param>
+        /// <param name="association">Name.</param>
+        public AssocitationFieldItem(string fieldName = default(string), string association = default(string))
         {
-            this.FieldName = FieldName;
-            this.Association = Association;
+            this.FieldName = fieldName;
+            this.Association = association;
         }
         
         /// <summary>
@@ -72,7 +72,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

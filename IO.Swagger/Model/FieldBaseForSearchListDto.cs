@@ -38,16 +38,16 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FieldBaseForSearchListDto" /> class.
         /// </summary>
-        /// <param name="_Operator">Possible values:  0: Non_Impostato  1: Uguale  2: Diverso  3: Inizia  4: Contiene  5: Termina  6: Nullo  7: Non_Nullo  8: Vuoto  9: Non_Vuoto  10: Nullo_o_Vuoto  11: Non_Nullo_e_Non_Vuoto  12: Like .</param>
-        /// <param name="And">Search by and.</param>
-        /// <param name="Valore1">The value of this field.</param>
-        /// <param name="Valore2">The second value for this field (used only for some operator).</param>
-        public FieldBaseForSearchListDto(int? _Operator = default(int?), bool? And = default(bool?), List<string> Valore1 = default(List<string>), List<string> Valore2 = default(List<string>), int? GroupId = default(int?), int? FieldType = default(int?), int? AdditionalFieldType = default(int?), int? DefaultOperator = default(int?), string TableName = default(string), int? BinderFieldId = default(int?), string Multiple = default(string), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), string ClassName = "FieldBaseForSearchListDto", bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), Dictionary<string, string> Associations = default(Dictionary<string, string>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(GroupId, FieldType, AdditionalFieldType, DefaultOperator, TableName, BinderFieldId, Multiple, Name, ExternalId, Description, Order, DataSource, Required, Formula, ClassName, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
+        /// <param name="_operator">Possible values:  0: Non_Impostato  1: Uguale  2: Diverso  3: Inizia  4: Contiene  5: Termina  6: Nullo  7: Non_Nullo  8: Vuoto  9: Non_Vuoto  10: Nullo_o_Vuoto  11: Non_Nullo_e_Non_Vuoto  12: Like .</param>
+        /// <param name="and">Search by and.</param>
+        /// <param name="valore1">The value of this field.</param>
+        /// <param name="valore2">The second value for this field (used only for some operator).</param>
+        public FieldBaseForSearchListDto(int? _operator = default(int?), bool? and = default(bool?), List<string> valore1 = default(List<string>), List<string> valore2 = default(List<string>), int? groupId = default(int?), int? fieldType = default(int?), int? additionalFieldType = default(int?), int? defaultOperator = default(int?), string tableName = default(string), int? binderFieldId = default(int?), string multiple = default(string), string name = default(string), string externalId = default(string), string description = default(string), int? order = default(int?), string dataSource = default(string), bool? required = default(bool?), string formula = default(string), string className = "FieldBaseForSearchListDto", bool? locked = default(bool?), string comboGruppiId = default(string), List<DependencyFieldItem> dependencyFields = default(List<DependencyFieldItem>), Dictionary<string, string> associations = default(Dictionary<string, string>), bool? isAdditional = default(bool?), bool? visible = default(bool?), string predefinedProfileFormula = default(string)) : base(groupId, fieldType, additionalFieldType, defaultOperator, tableName, binderFieldId, multiple, name, externalId, description, order, dataSource, required, formula, className, locked, comboGruppiId, dependencyFields, associations, isAdditional, visible, predefinedProfileFormula)
         {
-            this._Operator = _Operator;
-            this.And = And;
-            this.Valore1 = Valore1;
-            this.Valore2 = Valore2;
+            this.Operator = _operator;
+            this.And = and;
+            this.Valore1 = valore1;
+            this.Valore2 = valore2;
         }
         
         /// <summary>
@@ -55,7 +55,7 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <value>Possible values:  0: Non_Impostato  1: Uguale  2: Diverso  3: Inizia  4: Contiene  5: Termina  6: Nullo  7: Non_Nullo  8: Vuoto  9: Non_Vuoto  10: Nullo_o_Vuoto  11: Non_Nullo_e_Non_Vuoto  12: Like </value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
-        public int? _Operator { get; set; }
+        public int? Operator { get; set; }
 
         /// <summary>
         /// Search by and
@@ -87,7 +87,7 @@ namespace IO.Swagger.Model
             var sb = new StringBuilder();
             sb.Append("class FieldBaseForSearchListDto {\n");
             sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
-            sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+            sb.Append("  Operator: ").Append(Operator).Append("\n");
             sb.Append("  And: ").Append(And).Append("\n");
             sb.Append("  Valore1: ").Append(Valore1).Append("\n");
             sb.Append("  Valore2: ").Append(Valore2).Append("\n");
@@ -126,9 +126,9 @@ namespace IO.Swagger.Model
 
             return base.Equals(input) && 
                 (
-                    this._Operator == input._Operator ||
-                    (this._Operator != null &&
-                    this._Operator.Equals(input._Operator))
+                    this.Operator == input.Operator ||
+                    (this.Operator != null &&
+                    this.Operator.Equals(input.Operator))
                 ) && base.Equals(input) && 
                 (
                     this.And == input.And ||
@@ -156,8 +156,8 @@ namespace IO.Swagger.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = base.GetHashCode();
-                if (this._Operator != null)
-                    hashCode = hashCode * 59 + this._Operator.GetHashCode();
+                if (this.Operator != null)
+                    hashCode = hashCode * 59 + this.Operator.GetHashCode();
                 if (this.And != null)
                     hashCode = hashCode * 59 + this.And.GetHashCode();
                 if (this.Valore1 != null)

@@ -33,30 +33,30 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ProfessionalRoleOperationDTO" /> class.
         /// </summary>
-        /// <param name="Id">Professional role operation id..</param>
-        /// <param name="ProcessId">Process Id..</param>
-        /// <param name="ProfessionalRoleId">Professional Role Id.</param>
-        /// <param name="UserId">User Id..</param>
-        /// <param name="UserCompleteName">User complete name..</param>
-        /// <param name="OrganizationChartId">Organization chart Id..</param>
-        /// <param name="DelegationId">Delegation Id..</param>
-        /// <param name="OriginalUserId">Original user Id ..</param>
-        /// <param name="OriginalOrganizationChartId">Original user organization chart Id..</param>
-        /// <param name="ProfessionalRoleName">Professional role name..</param>
-        /// <param name="ExitCode">ExitCode related to this professional role in the task.</param>
-        public ProfessionalRoleOperationDTO(int? Id = default(int?), int? ProcessId = default(int?), int? ProfessionalRoleId = default(int?), int? UserId = default(int?), string UserCompleteName = default(string), int? OrganizationChartId = default(int?), int? DelegationId = default(int?), int? OriginalUserId = default(int?), int? OriginalOrganizationChartId = default(int?), string ProfessionalRoleName = default(string), string ExitCode = default(string))
+        /// <param name="id">Professional role operation id..</param>
+        /// <param name="processId">Process Id..</param>
+        /// <param name="professionalRoleId">Professional Role Id.</param>
+        /// <param name="userId">User Id..</param>
+        /// <param name="userCompleteName">User complete name..</param>
+        /// <param name="organizationChartId">Organization chart Id..</param>
+        /// <param name="delegationId">Delegation Id..</param>
+        /// <param name="originalUserId">Original user Id ..</param>
+        /// <param name="originalOrganizationChartId">Original user organization chart Id..</param>
+        /// <param name="professionalRoleName">Professional role name..</param>
+        /// <param name="exitCode">ExitCode related to this professional role in the task.</param>
+        public ProfessionalRoleOperationDTO(int? id = default(int?), int? processId = default(int?), int? professionalRoleId = default(int?), int? userId = default(int?), string userCompleteName = default(string), int? organizationChartId = default(int?), int? delegationId = default(int?), int? originalUserId = default(int?), int? originalOrganizationChartId = default(int?), string professionalRoleName = default(string), string exitCode = default(string))
         {
-            this.Id = Id;
-            this.ProcessId = ProcessId;
-            this.ProfessionalRoleId = ProfessionalRoleId;
-            this.UserId = UserId;
-            this.UserCompleteName = UserCompleteName;
-            this.OrganizationChartId = OrganizationChartId;
-            this.DelegationId = DelegationId;
-            this.OriginalUserId = OriginalUserId;
-            this.OriginalOrganizationChartId = OriginalOrganizationChartId;
-            this.ProfessionalRoleName = ProfessionalRoleName;
-            this.ExitCode = ExitCode;
+            this.Id = id;
+            this.ProcessId = processId;
+            this.ProfessionalRoleId = professionalRoleId;
+            this.UserId = userId;
+            this.UserCompleteName = userCompleteName;
+            this.OrganizationChartId = organizationChartId;
+            this.DelegationId = delegationId;
+            this.OriginalUserId = originalUserId;
+            this.OriginalOrganizationChartId = originalOrganizationChartId;
+            this.ProfessionalRoleName = professionalRoleName;
+            this.ExitCode = exitCode;
         }
         
         /// <summary>
@@ -163,7 +163,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

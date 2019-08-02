@@ -33,10 +33,10 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetByDocumentTypeRequestDTO" /> class.
         /// </summary>
-        /// <param name="DocumentTypeCode">DocumentTypeCode.</param>
-        public GetByDocumentTypeRequestDTO(string DocumentTypeCode = default(string))
+        /// <param name="documentTypeCode">documentTypeCode.</param>
+        public GetByDocumentTypeRequestDTO(string documentTypeCode = default(string))
         {
-            this.DocumentTypeCode = DocumentTypeCode;
+            this.DocumentTypeCode = documentTypeCode;
         }
         
         /// <summary>
@@ -62,7 +62,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

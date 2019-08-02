@@ -33,38 +33,38 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SignatureInfoDTO" /> class.
         /// </summary>
-        /// <param name="SignatureStandard">SignatureStandard.</param>
-        /// <param name="CertificateInfo">CertificateInfo.</param>
-        /// <param name="TimestampInfo">TimestampInfo.</param>
-        /// <param name="CounterSignatures">CounterSignatures.</param>
-        /// <param name="ContentType">ContentType.</param>
-        /// <param name="DigestAlgorithm">DigestAlgorithm.</param>
-        /// <param name="SignAlgorithm">SignAlgorithm.</param>
-        /// <param name="SignatureHex">SignatureHex.</param>
-        /// <param name="IsValid">IsValid.</param>
-        /// <param name="SignatureIntegrity">SignatureIntegrity.</param>
-        /// <param name="IsCounterSign">IsCounterSign.</param>
-        /// <param name="SignatureValidationMessageList">SignatureValidationMessageList.</param>
-        /// <param name="SignatureTimeUtc">SignatureTimeUtc.</param>
-        /// <param name="SignedAttributeList">SignedAttributeList.</param>
-        /// <param name="UnsignedAttributeList">UnsignedAttributeList.</param>
-        public SignatureInfoDTO(string SignatureStandard = default(string), CertificateInfoDTO CertificateInfo = default(CertificateInfoDTO), TimestampInfoDTO TimestampInfo = default(TimestampInfoDTO), List<SignatureInfoDTO> CounterSignatures = default(List<SignatureInfoDTO>), IdValuePairDTO ContentType = default(IdValuePairDTO), IdValuePairDTO DigestAlgorithm = default(IdValuePairDTO), IdValuePairDTO SignAlgorithm = default(IdValuePairDTO), string SignatureHex = default(string), bool? IsValid = default(bool?), bool? SignatureIntegrity = default(bool?), bool? IsCounterSign = default(bool?), List<ValidationMessageDTO> SignatureValidationMessageList = default(List<ValidationMessageDTO>), DateTime? SignatureTimeUtc = default(DateTime?), List<SignatureAttributeDTO> SignedAttributeList = default(List<SignatureAttributeDTO>), List<SignatureAttributeDTO> UnsignedAttributeList = default(List<SignatureAttributeDTO>))
+        /// <param name="signatureStandard">signatureStandard.</param>
+        /// <param name="certificateInfo">certificateInfo.</param>
+        /// <param name="timestampInfo">timestampInfo.</param>
+        /// <param name="counterSignatures">counterSignatures.</param>
+        /// <param name="contentType">contentType.</param>
+        /// <param name="digestAlgorithm">digestAlgorithm.</param>
+        /// <param name="signAlgorithm">signAlgorithm.</param>
+        /// <param name="signatureHex">signatureHex.</param>
+        /// <param name="isValid">isValid.</param>
+        /// <param name="signatureIntegrity">signatureIntegrity.</param>
+        /// <param name="isCounterSign">isCounterSign.</param>
+        /// <param name="signatureValidationMessageList">signatureValidationMessageList.</param>
+        /// <param name="signatureTimeUtc">signatureTimeUtc.</param>
+        /// <param name="signedAttributeList">signedAttributeList.</param>
+        /// <param name="unsignedAttributeList">unsignedAttributeList.</param>
+        public SignatureInfoDTO(string signatureStandard = default(string), CertificateInfoDTO certificateInfo = default(CertificateInfoDTO), TimestampInfoDTO timestampInfo = default(TimestampInfoDTO), List<SignatureInfoDTO> counterSignatures = default(List<SignatureInfoDTO>), IdValuePairDTO contentType = default(IdValuePairDTO), IdValuePairDTO digestAlgorithm = default(IdValuePairDTO), IdValuePairDTO signAlgorithm = default(IdValuePairDTO), string signatureHex = default(string), bool? isValid = default(bool?), bool? signatureIntegrity = default(bool?), bool? isCounterSign = default(bool?), List<ValidationMessageDTO> signatureValidationMessageList = default(List<ValidationMessageDTO>), DateTime? signatureTimeUtc = default(DateTime?), List<SignatureAttributeDTO> signedAttributeList = default(List<SignatureAttributeDTO>), List<SignatureAttributeDTO> unsignedAttributeList = default(List<SignatureAttributeDTO>))
         {
-            this.SignatureStandard = SignatureStandard;
-            this.CertificateInfo = CertificateInfo;
-            this.TimestampInfo = TimestampInfo;
-            this.CounterSignatures = CounterSignatures;
-            this.ContentType = ContentType;
-            this.DigestAlgorithm = DigestAlgorithm;
-            this.SignAlgorithm = SignAlgorithm;
-            this.SignatureHex = SignatureHex;
-            this.IsValid = IsValid;
-            this.SignatureIntegrity = SignatureIntegrity;
-            this.IsCounterSign = IsCounterSign;
-            this.SignatureValidationMessageList = SignatureValidationMessageList;
-            this.SignatureTimeUtc = SignatureTimeUtc;
-            this.SignedAttributeList = SignedAttributeList;
-            this.UnsignedAttributeList = UnsignedAttributeList;
+            this.SignatureStandard = signatureStandard;
+            this.CertificateInfo = certificateInfo;
+            this.TimestampInfo = timestampInfo;
+            this.CounterSignatures = counterSignatures;
+            this.ContentType = contentType;
+            this.DigestAlgorithm = digestAlgorithm;
+            this.SignAlgorithm = signAlgorithm;
+            this.SignatureHex = signatureHex;
+            this.IsValid = isValid;
+            this.SignatureIntegrity = signatureIntegrity;
+            this.IsCounterSign = isCounterSign;
+            this.SignatureValidationMessageList = signatureValidationMessageList;
+            this.SignatureTimeUtc = signatureTimeUtc;
+            this.SignedAttributeList = signedAttributeList;
+            this.UnsignedAttributeList = unsignedAttributeList;
         }
         
         /// <summary>
@@ -188,7 +188,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

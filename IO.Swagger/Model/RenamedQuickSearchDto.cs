@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RenamedQuickSearchDto" /> class.
         /// </summary>
-        /// <param name="QuickSearchId">Identifier of quick search.</param>
-        /// <param name="Description">Description.</param>
-        public RenamedQuickSearchDto(string QuickSearchId = default(string), string Description = default(string))
+        /// <param name="quickSearchId">Identifier of quick search.</param>
+        /// <param name="description">Description.</param>
+        public RenamedQuickSearchDto(string quickSearchId = default(string), string description = default(string))
         {
-            this.QuickSearchId = QuickSearchId;
-            this.Description = Description;
+            this.QuickSearchId = quickSearchId;
+            this.Description = description;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

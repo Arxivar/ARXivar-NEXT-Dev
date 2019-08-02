@@ -33,26 +33,26 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AccumulationPackageDocumentValidationDTO" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Docnumber">Docnumber.</param>
-        /// <param name="CreationDate">CreationDate.</param>
-        /// <param name="Status">Possible values:  0: Error  1: Verify .</param>
-        /// <param name="LastUpdate">LastUpdate.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="UserId">UserId.</param>
-        /// <param name="UserDescription">UserDescription.</param>
-        /// <param name="AccumulationPackageDescription">AccumulationPackageDescription.</param>
-        public AccumulationPackageDocumentValidationDTO(int? Id = default(int?), int? Docnumber = default(int?), DateTime? CreationDate = default(DateTime?), int? Status = default(int?), DateTime? LastUpdate = default(DateTime?), string Description = default(string), int? UserId = default(int?), string UserDescription = default(string), string AccumulationPackageDescription = default(string))
+        /// <param name="id">id.</param>
+        /// <param name="docnumber">docnumber.</param>
+        /// <param name="creationDate">creationDate.</param>
+        /// <param name="status">Possible values:  0: Error  1: Verify .</param>
+        /// <param name="lastUpdate">lastUpdate.</param>
+        /// <param name="description">description.</param>
+        /// <param name="userId">userId.</param>
+        /// <param name="userDescription">userDescription.</param>
+        /// <param name="accumulationPackageDescription">accumulationPackageDescription.</param>
+        public AccumulationPackageDocumentValidationDTO(int? id = default(int?), int? docnumber = default(int?), DateTime? creationDate = default(DateTime?), int? status = default(int?), DateTime? lastUpdate = default(DateTime?), string description = default(string), int? userId = default(int?), string userDescription = default(string), string accumulationPackageDescription = default(string))
         {
-            this.Id = Id;
-            this.Docnumber = Docnumber;
-            this.CreationDate = CreationDate;
-            this.Status = Status;
-            this.LastUpdate = LastUpdate;
-            this.Description = Description;
-            this.UserId = UserId;
-            this.UserDescription = UserDescription;
-            this.AccumulationPackageDescription = AccumulationPackageDescription;
+            this.Id = id;
+            this.Docnumber = docnumber;
+            this.CreationDate = creationDate;
+            this.Status = status;
+            this.LastUpdate = lastUpdate;
+            this.Description = description;
+            this.UserId = userId;
+            this.UserDescription = userDescription;
+            this.AccumulationPackageDescription = accumulationPackageDescription;
         }
         
         /// <summary>
@@ -135,7 +135,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,20 +33,20 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FolderArchiveModeRule" /> class.
         /// </summary>
-        /// <param name="Id">Identifier.</param>
-        /// <param name="ItemId">Item Identifier.</param>
-        /// <param name="ItemName">Item Name.</param>
-        /// <param name="UserId">User Identifier.</param>
-        /// <param name="UserCompleteName">User Name.</param>
-        /// <param name="CompositionRule">Rule.</param>
-        public FolderArchiveModeRule(int? Id = default(int?), string ItemId = default(string), string ItemName = default(string), int? UserId = default(int?), string UserCompleteName = default(string), FolderCompositionRule CompositionRule = default(FolderCompositionRule))
+        /// <param name="id">Identifier.</param>
+        /// <param name="itemId">Item Identifier.</param>
+        /// <param name="itemName">Item Name.</param>
+        /// <param name="userId">User Identifier.</param>
+        /// <param name="userCompleteName">User Name.</param>
+        /// <param name="compositionRule">Rule.</param>
+        public FolderArchiveModeRule(int? id = default(int?), string itemId = default(string), string itemName = default(string), int? userId = default(int?), string userCompleteName = default(string), FolderCompositionRule compositionRule = default(FolderCompositionRule))
         {
-            this.Id = Id;
-            this.ItemId = ItemId;
-            this.ItemName = ItemName;
-            this.UserId = UserId;
-            this.UserCompleteName = UserCompleteName;
-            this.CompositionRule = CompositionRule;
+            this.Id = id;
+            this.ItemId = itemId;
+            this.ItemName = itemName;
+            this.UserId = userId;
+            this.UserCompleteName = userCompleteName;
+            this.CompositionRule = compositionRule;
         }
         
         /// <summary>
@@ -113,7 +113,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,30 +33,30 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentWorkInfoDTO" /> class.
         /// </summary>
-        /// <param name="ProcessDocId">Document Process Identifier.</param>
-        /// <param name="Docnumber">Document Identifier.</param>
-        /// <param name="ProcessDocRevision">Document Process Revision.</param>
-        /// <param name="State">Possible values:  0: Secondario  1: Principale .</param>
-        /// <param name="Important">Important.</param>
-        /// <param name="ProcessDocDate">Creation Date of Document Process.</param>
-        /// <param name="CurrentRevision">Document Revision.</param>
-        /// <param name="UserCompleteName">User Description.</param>
-        /// <param name="InternalProtocol">Internal Protocol Number.</param>
-        /// <param name="DataDoc">Document Date.</param>
-        /// <param name="Subject">Document Subject.</param>
-        public DocumentWorkInfoDTO(int? ProcessDocId = default(int?), int? Docnumber = default(int?), int? ProcessDocRevision = default(int?), int? State = default(int?), bool? Important = default(bool?), DateTime? ProcessDocDate = default(DateTime?), int? CurrentRevision = default(int?), string UserCompleteName = default(string), string InternalProtocol = default(string), DateTime? DataDoc = default(DateTime?), string Subject = default(string))
+        /// <param name="processDocId">Document Process Identifier.</param>
+        /// <param name="docnumber">Document Identifier.</param>
+        /// <param name="processDocRevision">Document Process Revision.</param>
+        /// <param name="state">Possible values:  0: Secondario  1: Principale .</param>
+        /// <param name="important">Important.</param>
+        /// <param name="processDocDate">Creation Date of Document Process.</param>
+        /// <param name="currentRevision">Document Revision.</param>
+        /// <param name="userCompleteName">User Description.</param>
+        /// <param name="internalProtocol">Internal Protocol Number.</param>
+        /// <param name="dataDoc">Document Date.</param>
+        /// <param name="subject">Document Subject.</param>
+        public DocumentWorkInfoDTO(int? processDocId = default(int?), int? docnumber = default(int?), int? processDocRevision = default(int?), int? state = default(int?), bool? important = default(bool?), DateTime? processDocDate = default(DateTime?), int? currentRevision = default(int?), string userCompleteName = default(string), string internalProtocol = default(string), DateTime? dataDoc = default(DateTime?), string subject = default(string))
         {
-            this.ProcessDocId = ProcessDocId;
-            this.Docnumber = Docnumber;
-            this.ProcessDocRevision = ProcessDocRevision;
-            this.State = State;
-            this.Important = Important;
-            this.ProcessDocDate = ProcessDocDate;
-            this.CurrentRevision = CurrentRevision;
-            this.UserCompleteName = UserCompleteName;
-            this.InternalProtocol = InternalProtocol;
-            this.DataDoc = DataDoc;
-            this.Subject = Subject;
+            this.ProcessDocId = processDocId;
+            this.Docnumber = docnumber;
+            this.ProcessDocRevision = processDocRevision;
+            this.State = state;
+            this.Important = important;
+            this.ProcessDocDate = processDocDate;
+            this.CurrentRevision = currentRevision;
+            this.UserCompleteName = userCompleteName;
+            this.InternalProtocol = internalProtocol;
+            this.DataDoc = dataDoc;
+            this.Subject = subject;
         }
         
         /// <summary>
@@ -163,7 +163,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

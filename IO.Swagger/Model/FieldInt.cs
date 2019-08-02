@@ -33,24 +33,24 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FieldInt" /> class.
         /// </summary>
-        /// <param name="Valore2">Valore2.</param>
-        /// <param name="Valore">Valore.</param>
-        /// <param name="Operatore">Possible values:  0: Non_Impostato  1: Minore  2: Minore_Uguale  3: Uguale  4: Maggiore_Uguale  5: Maggiore  6: Diverso  7: Compreso  8: Nullo  9: Non_Nullo  10: Nullo_o_Zero  11: Non_Nullo_e_Non_Zero  12: Escluso .</param>
-        /// <param name="Nome">Nome.</param>
-        /// <param name="NomeTabella">NomeTabella.</param>
-        /// <param name="ExternalId">ExternalId.</param>
-        /// <param name="Multiple">Multiple.</param>
-        /// <param name="Label">Label.</param>
-        public FieldInt(Object Valore2 = default(Object), Object Valore = default(Object), int? Operatore = default(int?), string Nome = default(string), string NomeTabella = default(string), string ExternalId = default(string), string Multiple = default(string), string Label = default(string))
+        /// <param name="valore2">valore2.</param>
+        /// <param name="valore">valore.</param>
+        /// <param name="operatore">Possible values:  0: Non_Impostato  1: Minore  2: Minore_Uguale  3: Uguale  4: Maggiore_Uguale  5: Maggiore  6: Diverso  7: Compreso  8: Nullo  9: Non_Nullo  10: Nullo_o_Zero  11: Non_Nullo_e_Non_Zero  12: Escluso .</param>
+        /// <param name="nome">nome.</param>
+        /// <param name="nomeTabella">nomeTabella.</param>
+        /// <param name="externalId">externalId.</param>
+        /// <param name="multiple">multiple.</param>
+        /// <param name="label">label.</param>
+        public FieldInt(Object valore2 = default(Object), Object valore = default(Object), int? operatore = default(int?), string nome = default(string), string nomeTabella = default(string), string externalId = default(string), string multiple = default(string), string label = default(string))
         {
-            this.Valore2 = Valore2;
-            this.Valore = Valore;
-            this.Operatore = Operatore;
-            this.Nome = Nome;
-            this.NomeTabella = NomeTabella;
-            this.ExternalId = ExternalId;
-            this.Multiple = Multiple;
-            this.Label = Label;
+            this.Valore2 = valore2;
+            this.Valore = valore;
+            this.Operatore = operatore;
+            this.Nome = nome;
+            this.NomeTabella = nomeTabella;
+            this.ExternalId = externalId;
+            this.Multiple = multiple;
+            this.Label = label;
         }
         
         /// <summary>
@@ -126,7 +126,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

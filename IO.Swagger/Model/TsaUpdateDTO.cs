@@ -33,24 +33,24 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TsaUpdateDTO" /> class.
         /// </summary>
-        /// <param name="Description">Description.</param>
-        /// <param name="Url">Url Address.</param>
-        /// <param name="Username">Account Name.</param>
-        /// <param name="Password">Password.</param>
-        /// <param name="UpdatePassword">Updated Password.</param>
-        /// <param name="Enabled">Enabled.</param>
-        /// <param name="Port">Port Number.</param>
-        /// <param name="ProtocolType">Possible values:  0: HTTP_HTTPS  1: TCP .</param>
-        public TsaUpdateDTO(string Description = default(string), string Url = default(string), string Username = default(string), string Password = default(string), bool? UpdatePassword = default(bool?), bool? Enabled = default(bool?), int? Port = default(int?), int? ProtocolType = default(int?))
+        /// <param name="description">Description.</param>
+        /// <param name="url">Url Address.</param>
+        /// <param name="username">Account Name.</param>
+        /// <param name="password">Password.</param>
+        /// <param name="updatePassword">Updated Password.</param>
+        /// <param name="enabled">Enabled.</param>
+        /// <param name="port">Port Number.</param>
+        /// <param name="protocolType">Possible values:  0: HTTP_HTTPS  1: TCP .</param>
+        public TsaUpdateDTO(string description = default(string), string url = default(string), string username = default(string), string password = default(string), bool? updatePassword = default(bool?), bool? enabled = default(bool?), int? port = default(int?), int? protocolType = default(int?))
         {
-            this.Description = Description;
-            this.Url = Url;
-            this.Username = Username;
-            this.Password = Password;
-            this.UpdatePassword = UpdatePassword;
-            this.Enabled = Enabled;
-            this.Port = Port;
-            this.ProtocolType = ProtocolType;
+            this.Description = description;
+            this.Url = url;
+            this.Username = username;
+            this.Password = password;
+            this.UpdatePassword = updatePassword;
+            this.Enabled = enabled;
+            this.Port = port;
+            this.ProtocolType = protocolType;
         }
         
         /// <summary>
@@ -133,7 +133,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

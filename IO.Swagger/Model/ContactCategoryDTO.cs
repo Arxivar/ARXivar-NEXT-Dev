@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactCategoryDTO" /> class.
         /// </summary>
-        /// <param name="Id">The id of the contact category.</param>
-        /// <param name="Description">The name of the category.</param>
-        public ContactCategoryDTO(int? Id = default(int?), string Description = default(string))
+        /// <param name="id">The id of the contact category.</param>
+        /// <param name="description">The name of the category.</param>
+        public ContactCategoryDTO(int? id = default(int?), string description = default(string))
         {
-            this.Id = Id;
-            this.Description = Description;
+            this.Id = id;
+            this.Description = description;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

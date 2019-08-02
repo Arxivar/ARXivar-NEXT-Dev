@@ -33,18 +33,18 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ProfileResultDTO" /> class.
         /// </summary>
-        /// <param name="DocNumber">Document Identifier.</param>
-        /// <param name="InternalProtocolNumber">Internal Protocol.</param>
-        /// <param name="Year">Protocol Year.</param>
-        /// <param name="ProtocolNumber">Protocol.</param>
-        /// <param name="ShowMessage">Defines if show the messages of the result..</param>
-        public ProfileResultDTO(int? DocNumber = default(int?), string InternalProtocolNumber = default(string), string Year = default(string), string ProtocolNumber = default(string), bool? ShowMessage = default(bool?))
+        /// <param name="docNumber">Document Identifier.</param>
+        /// <param name="internalProtocolNumber">Internal Protocol.</param>
+        /// <param name="year">Protocol Year.</param>
+        /// <param name="protocolNumber">Protocol.</param>
+        /// <param name="showMessage">Defines if show the messages of the result..</param>
+        public ProfileResultDTO(int? docNumber = default(int?), string internalProtocolNumber = default(string), string year = default(string), string protocolNumber = default(string), bool? showMessage = default(bool?))
         {
-            this.DocNumber = DocNumber;
-            this.InternalProtocolNumber = InternalProtocolNumber;
-            this.Year = Year;
-            this.ProtocolNumber = ProtocolNumber;
-            this.ShowMessage = ShowMessage;
+            this.DocNumber = docNumber;
+            this.InternalProtocolNumber = internalProtocolNumber;
+            this.Year = year;
+            this.ProtocolNumber = protocolNumber;
+            this.ShowMessage = showMessage;
         }
         
         /// <summary>
@@ -103,7 +103,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

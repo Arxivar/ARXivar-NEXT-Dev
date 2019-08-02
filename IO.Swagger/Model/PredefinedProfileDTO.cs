@@ -33,28 +33,28 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PredefinedProfileDTO" /> class.
         /// </summary>
-        /// <param name="Id">Identifier.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="PostProfilationActions">List of post profilation actions.</param>
-        /// <param name="UserCompleteName">Full name of the user who created the predefined profile.</param>
-        /// <param name="CreationDate">Creation date.</param>
-        /// <param name="DocumentType">Document type identifier.</param>
-        /// <param name="Aoo">Business code.</param>
-        /// <param name="User">User identifier.</param>
-        /// <param name="CollaborationTemplateId">Collaboration Identifier.</param>
-        /// <param name="Fields">List of fields.</param>
-        public PredefinedProfileDTO(int? Id = default(int?), string Name = default(string), List<PostProfilationActionDTO> PostProfilationActions = default(List<PostProfilationActionDTO>), string UserCompleteName = default(string), DateTime? CreationDate = default(DateTime?), int? DocumentType = default(int?), string Aoo = default(string), int? User = default(int?), string CollaborationTemplateId = default(string), List<FieldBaseDTO> Fields = default(List<FieldBaseDTO>))
+        /// <param name="id">Identifier.</param>
+        /// <param name="name">Name.</param>
+        /// <param name="postProfilationActions">List of post profilation actions.</param>
+        /// <param name="userCompleteName">Full name of the user who created the predefined profile.</param>
+        /// <param name="creationDate">Creation date.</param>
+        /// <param name="documentType">Document type identifier.</param>
+        /// <param name="aoo">Business code.</param>
+        /// <param name="user">User identifier.</param>
+        /// <param name="collaborationTemplateId">Collaboration Identifier.</param>
+        /// <param name="fields">List of fields.</param>
+        public PredefinedProfileDTO(int? id = default(int?), string name = default(string), List<PostProfilationActionDTO> postProfilationActions = default(List<PostProfilationActionDTO>), string userCompleteName = default(string), DateTime? creationDate = default(DateTime?), int? documentType = default(int?), string aoo = default(string), int? user = default(int?), string collaborationTemplateId = default(string), List<FieldBaseDTO> fields = default(List<FieldBaseDTO>))
         {
-            this.Id = Id;
-            this.Name = Name;
-            this.PostProfilationActions = PostProfilationActions;
-            this.UserCompleteName = UserCompleteName;
-            this.CreationDate = CreationDate;
-            this.DocumentType = DocumentType;
-            this.Aoo = Aoo;
-            this.User = User;
-            this.CollaborationTemplateId = CollaborationTemplateId;
-            this.Fields = Fields;
+            this.Id = id;
+            this.Name = name;
+            this.PostProfilationActions = postProfilationActions;
+            this.UserCompleteName = userCompleteName;
+            this.CreationDate = creationDate;
+            this.DocumentType = documentType;
+            this.Aoo = aoo;
+            this.User = user;
+            this.CollaborationTemplateId = collaborationTemplateId;
+            this.Fields = fields;
         }
         
         /// <summary>
@@ -153,7 +153,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

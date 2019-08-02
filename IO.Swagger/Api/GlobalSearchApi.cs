@@ -25,10 +25,10 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// This call returns the result of a serch in full index
+        /// This call returns the result of a search in full index
         /// </summary>
         /// <remarks>
-        /// 
+        /// This method is deprecated. Use api/v3/GlobalSearches/search/{searchFilter&#x3D;searchFilter}
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchFilter">Filter to be applied to the search</param>
@@ -36,20 +36,20 @@ namespace IO.Swagger.Api
         List<RowSearchResult> GlobalSearchGetFullIndexSearch (string searchFilter);
 
         /// <summary>
-        /// This call returns the result of a serch in full index
+        /// This call returns the result of a search in full index
         /// </summary>
         /// <remarks>
-        /// 
+        /// This method is deprecated. Use api/v3/GlobalSearches/search/{searchFilter&#x3D;searchFilter}
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchFilter">Filter to be applied to the search</param>
         /// <returns>ApiResponse of List&lt;RowSearchResult&gt;</returns>
         ApiResponse<List<RowSearchResult>> GlobalSearchGetFullIndexSearchWithHttpInfo (string searchFilter);
         /// <summary>
-        /// This call returns the result of a serch in full index
+        /// This call returns the result of a search in full index
         /// </summary>
         /// <remarks>
-        /// 
+        /// This method is deprecated. Use api/v3/GlobalSearches/search
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fullindexsearchrequestdto"> (optional)</param>
@@ -57,10 +57,10 @@ namespace IO.Swagger.Api
         List<RowSearchResult> GlobalSearchGetFullIndexSearch_0 (FullIndexSearchRequestDto fullindexsearchrequestdto = null);
 
         /// <summary>
-        /// This call returns the result of a serch in full index
+        /// This call returns the result of a search in full index
         /// </summary>
         /// <remarks>
-        /// 
+        /// This method is deprecated. Use api/v3/GlobalSearches/search
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fullindexsearchrequestdto"> (optional)</param>
@@ -90,10 +90,10 @@ namespace IO.Swagger.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// This call returns the result of a serch in full index
+        /// This call returns the result of a search in full index
         /// </summary>
         /// <remarks>
-        /// 
+        /// This method is deprecated. Use api/v3/GlobalSearches/search/{searchFilter&#x3D;searchFilter}
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchFilter">Filter to be applied to the search</param>
@@ -101,20 +101,20 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<List<RowSearchResult>> GlobalSearchGetFullIndexSearchAsync (string searchFilter);
 
         /// <summary>
-        /// This call returns the result of a serch in full index
+        /// This call returns the result of a search in full index
         /// </summary>
         /// <remarks>
-        /// 
+        /// This method is deprecated. Use api/v3/GlobalSearches/search/{searchFilter&#x3D;searchFilter}
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchFilter">Filter to be applied to the search</param>
         /// <returns>Task of ApiResponse (List&lt;RowSearchResult&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<RowSearchResult>>> GlobalSearchGetFullIndexSearchAsyncWithHttpInfo (string searchFilter);
         /// <summary>
-        /// This call returns the result of a serch in full index
+        /// This call returns the result of a search in full index
         /// </summary>
         /// <remarks>
-        /// 
+        /// This method is deprecated. Use api/v3/GlobalSearches/search
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fullindexsearchrequestdto"> (optional)</param>
@@ -122,10 +122,10 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<List<RowSearchResult>> GlobalSearchGetFullIndexSearch_0Async (FullIndexSearchRequestDto fullindexsearchrequestdto = null);
 
         /// <summary>
-        /// This call returns the result of a serch in full index
+        /// This call returns the result of a search in full index
         /// </summary>
         /// <remarks>
-        /// 
+        /// This method is deprecated. Use api/v3/GlobalSearches/search
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fullindexsearchrequestdto"> (optional)</param>
@@ -168,7 +168,7 @@ namespace IO.Swagger.Api
         /// <returns></returns>
         public GlobalSearchApi(String basePath)
         {
-            this.Configuration = new Configuration { BasePath = basePath };
+            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
 
             ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
         }
@@ -179,10 +179,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public GlobalSearchApi(Configuration configuration = null)
+        public GlobalSearchApi(IO.Swagger.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = Configuration.Default;
+                this.Configuration = IO.Swagger.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
@@ -212,7 +212,7 @@ namespace IO.Swagger.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Configuration Configuration {get; set;}
+        public IO.Swagger.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
@@ -253,7 +253,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call returns the result of a serch in full index 
+        /// This call returns the result of a search in full index This method is deprecated. Use api/v3/GlobalSearches/search/{searchFilter&#x3D;searchFilter}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchFilter">Filter to be applied to the search</param>
@@ -265,7 +265,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call returns the result of a serch in full index 
+        /// This call returns the result of a search in full index This method is deprecated. Use api/v3/GlobalSearches/search/{searchFilter&#x3D;searchFilter}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchFilter">Filter to be applied to the search</param>
@@ -279,7 +279,7 @@ namespace IO.Swagger.Api
             var localVarPath = "/api/GlobalSearches/search/{searchFilter}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -287,7 +287,7 @@ namespace IO.Swagger.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -296,20 +296,20 @@ namespace IO.Swagger.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (searchFilter != null) localVarPathParams.Add("searchFilter", Configuration.ApiClient.ParameterToString(searchFilter)); // path parameter
+            if (searchFilter != null) localVarPathParams.Add("searchFilter", this.Configuration.ApiClient.ParameterToString(searchFilter)); // path parameter
 
             // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -323,11 +323,11 @@ namespace IO.Swagger.Api
 
             return new ApiResponse<List<RowSearchResult>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<RowSearchResult>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RowSearchResult>)));
+                (List<RowSearchResult>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RowSearchResult>)));
         }
 
         /// <summary>
-        /// This call returns the result of a serch in full index 
+        /// This call returns the result of a search in full index This method is deprecated. Use api/v3/GlobalSearches/search/{searchFilter&#x3D;searchFilter}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchFilter">Filter to be applied to the search</param>
@@ -340,7 +340,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call returns the result of a serch in full index 
+        /// This call returns the result of a search in full index This method is deprecated. Use api/v3/GlobalSearches/search/{searchFilter&#x3D;searchFilter}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchFilter">Filter to be applied to the search</param>
@@ -354,7 +354,7 @@ namespace IO.Swagger.Api
             var localVarPath = "/api/GlobalSearches/search/{searchFilter}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -362,7 +362,7 @@ namespace IO.Swagger.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -371,20 +371,20 @@ namespace IO.Swagger.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (searchFilter != null) localVarPathParams.Add("searchFilter", Configuration.ApiClient.ParameterToString(searchFilter)); // path parameter
+            if (searchFilter != null) localVarPathParams.Add("searchFilter", this.Configuration.ApiClient.ParameterToString(searchFilter)); // path parameter
 
             // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -398,11 +398,11 @@ namespace IO.Swagger.Api
 
             return new ApiResponse<List<RowSearchResult>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<RowSearchResult>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RowSearchResult>)));
+                (List<RowSearchResult>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RowSearchResult>)));
         }
 
         /// <summary>
-        /// This call returns the result of a serch in full index 
+        /// This call returns the result of a search in full index This method is deprecated. Use api/v3/GlobalSearches/search
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fullindexsearchrequestdto"> (optional)</param>
@@ -414,7 +414,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call returns the result of a serch in full index 
+        /// This call returns the result of a search in full index This method is deprecated. Use api/v3/GlobalSearches/search
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fullindexsearchrequestdto"> (optional)</param>
@@ -425,7 +425,7 @@ namespace IO.Swagger.Api
             var localVarPath = "/api/GlobalSearches/search";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -433,7 +433,7 @@ namespace IO.Swagger.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -442,13 +442,13 @@ namespace IO.Swagger.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (fullindexsearchrequestdto != null && fullindexsearchrequestdto.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(fullindexsearchrequestdto); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(fullindexsearchrequestdto); // http body (model) parameter
             }
             else
             {
@@ -456,13 +456,13 @@ namespace IO.Swagger.Api
             }
 
             // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -476,11 +476,11 @@ namespace IO.Swagger.Api
 
             return new ApiResponse<List<RowSearchResult>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<RowSearchResult>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RowSearchResult>)));
+                (List<RowSearchResult>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RowSearchResult>)));
         }
 
         /// <summary>
-        /// This call returns the result of a serch in full index 
+        /// This call returns the result of a search in full index This method is deprecated. Use api/v3/GlobalSearches/search
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fullindexsearchrequestdto"> (optional)</param>
@@ -493,7 +493,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call returns the result of a serch in full index 
+        /// This call returns the result of a search in full index This method is deprecated. Use api/v3/GlobalSearches/search
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fullindexsearchrequestdto"> (optional)</param>
@@ -504,7 +504,7 @@ namespace IO.Swagger.Api
             var localVarPath = "/api/GlobalSearches/search";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -512,7 +512,7 @@ namespace IO.Swagger.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -521,13 +521,13 @@ namespace IO.Swagger.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (fullindexsearchrequestdto != null && fullindexsearchrequestdto.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(fullindexsearchrequestdto); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(fullindexsearchrequestdto); // http body (model) parameter
             }
             else
             {
@@ -535,13 +535,13 @@ namespace IO.Swagger.Api
             }
 
             // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -555,7 +555,7 @@ namespace IO.Swagger.Api
 
             return new ApiResponse<List<RowSearchResult>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<RowSearchResult>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RowSearchResult>)));
+                (List<RowSearchResult>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RowSearchResult>)));
         }
 
         /// <summary>
@@ -585,7 +585,7 @@ namespace IO.Swagger.Api
             var localVarPath = "/api/GlobalSearches/{searchFilter}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -593,7 +593,7 @@ namespace IO.Swagger.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -602,20 +602,20 @@ namespace IO.Swagger.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (searchFilter != null) localVarPathParams.Add("searchFilter", Configuration.ApiClient.ParameterToString(searchFilter)); // path parameter
+            if (searchFilter != null) localVarPathParams.Add("searchFilter", this.Configuration.ApiClient.ParameterToString(searchFilter)); // path parameter
 
             // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -629,7 +629,7 @@ namespace IO.Swagger.Api
 
             return new ApiResponse<List<GenericItemDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<GenericItemDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GenericItemDTO>)));
+                (List<GenericItemDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GenericItemDTO>)));
         }
 
         /// <summary>
@@ -660,7 +660,7 @@ namespace IO.Swagger.Api
             var localVarPath = "/api/GlobalSearches/{searchFilter}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -668,7 +668,7 @@ namespace IO.Swagger.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -677,20 +677,20 @@ namespace IO.Swagger.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (searchFilter != null) localVarPathParams.Add("searchFilter", Configuration.ApiClient.ParameterToString(searchFilter)); // path parameter
+            if (searchFilter != null) localVarPathParams.Add("searchFilter", this.Configuration.ApiClient.ParameterToString(searchFilter)); // path parameter
 
             // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -704,7 +704,7 @@ namespace IO.Swagger.Api
 
             return new ApiResponse<List<GenericItemDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<GenericItemDTO>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GenericItemDTO>)));
+                (List<GenericItemDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GenericItemDTO>)));
         }
 
     }

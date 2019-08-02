@@ -38,12 +38,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ProtocolDateFieldDTO" /> class.
         /// </summary>
-        /// <param name="Value">Protocol date value.</param>
-        /// <param name="EditTime">Last edit time of the document.</param>
-        public ProtocolDateFieldDTO(DateTime? Value = default(DateTime?), bool? EditTime = default(bool?), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), string ClassName = "ProtocolDateFieldDTO", bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> Associations = default(List<AssocitationFieldItem>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(Name, ExternalId, Description, Order, DataSource, Required, Formula, ClassName, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
+        /// <param name="value">Protocol date value.</param>
+        /// <param name="editTime">Last edit time of the document.</param>
+        public ProtocolDateFieldDTO(DateTime? value = default(DateTime?), bool? editTime = default(bool?), string name = default(string), string externalId = default(string), string description = default(string), int? order = default(int?), string dataSource = default(string), bool? required = default(bool?), string formula = default(string), string className = "ProtocolDateFieldDTO", bool? locked = default(bool?), string comboGruppiId = default(string), List<DependencyFieldItem> dependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> associations = default(List<AssocitationFieldItem>), bool? isAdditional = default(bool?), bool? visible = default(bool?), string predefinedProfileFormula = default(string)) : base(name, externalId, description, order, dataSource, required, formula, className, locked, comboGruppiId, dependencyFields, associations, isAdditional, visible, predefinedProfileFormula)
         {
-            this.Value = Value;
-            this.EditTime = EditTime;
+            this.Value = value;
+            this.EditTime = editTime;
         }
         
         /// <summary>

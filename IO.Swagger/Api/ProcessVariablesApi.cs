@@ -93,6 +93,29 @@ namespace IO.Swagger.Api
         /// <param name="processVariables">Variables information</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ProcessVariablesSetProcessVariableValueWithHttpInfo (int? processId, ProcessVariablesFieldsDTO processVariables);
+        /// <summary>
+        /// Validate the variable data update of a specific variable
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processId">The process instance id</param>
+        /// <param name="validationData">The validation data</param>
+        /// <returns>ValidationFieldResultDTO</returns>
+        ValidationFieldResultDTO ProcessVariablesValidateVariabile (int? processId, ProcessVariableValidationDTO validationData);
+
+        /// <summary>
+        /// Validate the variable data update of a specific variable
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processId">The process instance id</param>
+        /// <param name="validationData">The validation data</param>
+        /// <returns>ApiResponse of ValidationFieldResultDTO</returns>
+        ApiResponse<ValidationFieldResultDTO> ProcessVariablesValidateVariabileWithHttpInfo (int? processId, ProcessVariableValidationDTO validationData);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -164,6 +187,29 @@ namespace IO.Swagger.Api
         /// <param name="processVariables">Variables information</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ProcessVariablesSetProcessVariableValueAsyncWithHttpInfo (int? processId, ProcessVariablesFieldsDTO processVariables);
+        /// <summary>
+        /// Validate the variable data update of a specific variable
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processId">The process instance id</param>
+        /// <param name="validationData">The validation data</param>
+        /// <returns>Task of ValidationFieldResultDTO</returns>
+        System.Threading.Tasks.Task<ValidationFieldResultDTO> ProcessVariablesValidateVariabileAsync (int? processId, ProcessVariableValidationDTO validationData);
+
+        /// <summary>
+        /// Validate the variable data update of a specific variable
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processId">The process instance id</param>
+        /// <param name="validationData">The validation data</param>
+        /// <returns>Task of ApiResponse (ValidationFieldResultDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ValidationFieldResultDTO>> ProcessVariablesValidateVariabileAsyncWithHttpInfo (int? processId, ProcessVariableValidationDTO validationData);
         #endregion Asynchronous Operations
     }
 
@@ -180,7 +226,7 @@ namespace IO.Swagger.Api
         /// <returns></returns>
         public ProcessVariablesApi(String basePath)
         {
-            this.Configuration = new Configuration { BasePath = basePath };
+            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
 
             ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
         }
@@ -191,10 +237,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public ProcessVariablesApi(Configuration configuration = null)
+        public ProcessVariablesApi(IO.Swagger.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = Configuration.Default;
+                this.Configuration = IO.Swagger.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
@@ -224,7 +270,7 @@ namespace IO.Swagger.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Configuration Configuration {get; set;}
+        public IO.Swagger.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
@@ -296,7 +342,7 @@ namespace IO.Swagger.Api
             var localVarPath = "/api/ProcessVariables/{processVariableId}/getDatasourceValues";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -309,7 +355,7 @@ namespace IO.Swagger.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -318,14 +364,14 @@ namespace IO.Swagger.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (processVariableId != null) localVarPathParams.Add("processVariableId", Configuration.ApiClient.ParameterToString(processVariableId)); // path parameter
+            if (processVariableId != null) localVarPathParams.Add("processVariableId", this.Configuration.ApiClient.ParameterToString(processVariableId)); // path parameter
             if (processVariables != null && processVariables.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(processVariables); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(processVariables); // http body (model) parameter
             }
             else
             {
@@ -333,13 +379,13 @@ namespace IO.Swagger.Api
             }
 
             // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -353,7 +399,7 @@ namespace IO.Swagger.Api
 
             return new ApiResponse<FieldValuesDTO>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FieldValuesDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FieldValuesDTO)));
+                (FieldValuesDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FieldValuesDTO)));
         }
 
         /// <summary>
@@ -389,7 +435,7 @@ namespace IO.Swagger.Api
             var localVarPath = "/api/ProcessVariables/{processVariableId}/getDatasourceValues";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -402,7 +448,7 @@ namespace IO.Swagger.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -411,14 +457,14 @@ namespace IO.Swagger.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (processVariableId != null) localVarPathParams.Add("processVariableId", Configuration.ApiClient.ParameterToString(processVariableId)); // path parameter
+            if (processVariableId != null) localVarPathParams.Add("processVariableId", this.Configuration.ApiClient.ParameterToString(processVariableId)); // path parameter
             if (processVariables != null && processVariables.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(processVariables); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(processVariables); // http body (model) parameter
             }
             else
             {
@@ -426,13 +472,13 @@ namespace IO.Swagger.Api
             }
 
             // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -446,7 +492,7 @@ namespace IO.Swagger.Api
 
             return new ApiResponse<FieldValuesDTO>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FieldValuesDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FieldValuesDTO)));
+                (FieldValuesDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FieldValuesDTO)));
         }
 
         /// <summary>
@@ -481,7 +527,7 @@ namespace IO.Swagger.Api
             var localVarPath = "/api/ProcessVariables/{processVariableId}/getFilters";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -494,7 +540,7 @@ namespace IO.Swagger.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -503,14 +549,14 @@ namespace IO.Swagger.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (processVariableId != null) localVarPathParams.Add("processVariableId", Configuration.ApiClient.ParameterToString(processVariableId)); // path parameter
+            if (processVariableId != null) localVarPathParams.Add("processVariableId", this.Configuration.ApiClient.ParameterToString(processVariableId)); // path parameter
             if (processVariables != null && processVariables.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(processVariables); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(processVariables); // http body (model) parameter
             }
             else
             {
@@ -518,13 +564,13 @@ namespace IO.Swagger.Api
             }
 
             // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -538,7 +584,7 @@ namespace IO.Swagger.Api
 
             return new ApiResponse<FieldFilterConcreteDTO>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FieldFilterConcreteDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FieldFilterConcreteDTO)));
+                (FieldFilterConcreteDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FieldFilterConcreteDTO)));
         }
 
         /// <summary>
@@ -574,7 +620,7 @@ namespace IO.Swagger.Api
             var localVarPath = "/api/ProcessVariables/{processVariableId}/getFilters";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -587,7 +633,7 @@ namespace IO.Swagger.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -596,14 +642,14 @@ namespace IO.Swagger.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (processVariableId != null) localVarPathParams.Add("processVariableId", Configuration.ApiClient.ParameterToString(processVariableId)); // path parameter
+            if (processVariableId != null) localVarPathParams.Add("processVariableId", this.Configuration.ApiClient.ParameterToString(processVariableId)); // path parameter
             if (processVariables != null && processVariables.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(processVariables); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(processVariables); // http body (model) parameter
             }
             else
             {
@@ -611,13 +657,13 @@ namespace IO.Swagger.Api
             }
 
             // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -631,7 +677,7 @@ namespace IO.Swagger.Api
 
             return new ApiResponse<FieldFilterConcreteDTO>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FieldFilterConcreteDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FieldFilterConcreteDTO)));
+                (FieldFilterConcreteDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FieldFilterConcreteDTO)));
         }
 
         /// <summary>
@@ -665,7 +711,7 @@ namespace IO.Swagger.Api
             var localVarPath = "/api/ProcessVariables/{processId}/setValues";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -678,19 +724,19 @@ namespace IO.Swagger.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (processId != null) localVarPathParams.Add("processId", Configuration.ApiClient.ParameterToString(processId)); // path parameter
+            if (processId != null) localVarPathParams.Add("processId", this.Configuration.ApiClient.ParameterToString(processId)); // path parameter
             if (processVariables != null && processVariables.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(processVariables); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(processVariables); // http body (model) parameter
             }
             else
             {
@@ -698,13 +744,13 @@ namespace IO.Swagger.Api
             }
 
             // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -753,7 +799,7 @@ namespace IO.Swagger.Api
             var localVarPath = "/api/ProcessVariables/{processId}/setValues";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -766,19 +812,19 @@ namespace IO.Swagger.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (processId != null) localVarPathParams.Add("processId", Configuration.ApiClient.ParameterToString(processId)); // path parameter
+            if (processId != null) localVarPathParams.Add("processId", this.Configuration.ApiClient.ParameterToString(processId)); // path parameter
             if (processVariables != null && processVariables.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(processVariables); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(processVariables); // http body (model) parameter
             }
             else
             {
@@ -786,13 +832,13 @@ namespace IO.Swagger.Api
             }
 
             // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -807,6 +853,191 @@ namespace IO.Swagger.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
+        }
+
+        /// <summary>
+        /// Validate the variable data update of a specific variable 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processId">The process instance id</param>
+        /// <param name="validationData">The validation data</param>
+        /// <returns>ValidationFieldResultDTO</returns>
+        public ValidationFieldResultDTO ProcessVariablesValidateVariabile (int? processId, ProcessVariableValidationDTO validationData)
+        {
+             ApiResponse<ValidationFieldResultDTO> localVarResponse = ProcessVariablesValidateVariabileWithHttpInfo(processId, validationData);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate the variable data update of a specific variable 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processId">The process instance id</param>
+        /// <param name="validationData">The validation data</param>
+        /// <returns>ApiResponse of ValidationFieldResultDTO</returns>
+        public ApiResponse< ValidationFieldResultDTO > ProcessVariablesValidateVariabileWithHttpInfo (int? processId, ProcessVariableValidationDTO validationData)
+        {
+            // verify the required parameter 'processId' is set
+            if (processId == null)
+                throw new ApiException(400, "Missing required parameter 'processId' when calling ProcessVariablesApi->ProcessVariablesValidateVariabile");
+            // verify the required parameter 'validationData' is set
+            if (validationData == null)
+                throw new ApiException(400, "Missing required parameter 'validationData' when calling ProcessVariablesApi->ProcessVariablesValidateVariabile");
+
+            var localVarPath = "/api/ProcessVariables/process/{processId}/validation";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (processId != null) localVarPathParams.Add("processId", this.Configuration.ApiClient.ParameterToString(processId)); // path parameter
+            if (validationData != null && validationData.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(validationData); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = validationData; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ProcessVariablesValidateVariabile", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ValidationFieldResultDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ValidationFieldResultDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidationFieldResultDTO)));
+        }
+
+        /// <summary>
+        /// Validate the variable data update of a specific variable 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processId">The process instance id</param>
+        /// <param name="validationData">The validation data</param>
+        /// <returns>Task of ValidationFieldResultDTO</returns>
+        public async System.Threading.Tasks.Task<ValidationFieldResultDTO> ProcessVariablesValidateVariabileAsync (int? processId, ProcessVariableValidationDTO validationData)
+        {
+             ApiResponse<ValidationFieldResultDTO> localVarResponse = await ProcessVariablesValidateVariabileAsyncWithHttpInfo(processId, validationData);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Validate the variable data update of a specific variable 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processId">The process instance id</param>
+        /// <param name="validationData">The validation data</param>
+        /// <returns>Task of ApiResponse (ValidationFieldResultDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ValidationFieldResultDTO>> ProcessVariablesValidateVariabileAsyncWithHttpInfo (int? processId, ProcessVariableValidationDTO validationData)
+        {
+            // verify the required parameter 'processId' is set
+            if (processId == null)
+                throw new ApiException(400, "Missing required parameter 'processId' when calling ProcessVariablesApi->ProcessVariablesValidateVariabile");
+            // verify the required parameter 'validationData' is set
+            if (validationData == null)
+                throw new ApiException(400, "Missing required parameter 'validationData' when calling ProcessVariablesApi->ProcessVariablesValidateVariabile");
+
+            var localVarPath = "/api/ProcessVariables/process/{processId}/validation";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (processId != null) localVarPathParams.Add("processId", this.Configuration.ApiClient.ParameterToString(processId)); // path parameter
+            if (validationData != null && validationData.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(validationData); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = validationData; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ProcessVariablesValidateVariabile", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ValidationFieldResultDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ValidationFieldResultDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ValidationFieldResultDTO)));
         }
 
     }

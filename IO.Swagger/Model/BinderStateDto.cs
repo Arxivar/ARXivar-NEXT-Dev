@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BinderStateDto" /> class.
         /// </summary>
-        /// <param name="StateCode">Code of the state.</param>
-        /// <param name="StateDescription">Description of the state.</param>
-        public BinderStateDto(int? StateCode = default(int?), string StateDescription = default(string))
+        /// <param name="stateCode">Code of the state.</param>
+        /// <param name="stateDescription">Description of the state.</param>
+        public BinderStateDto(int? stateCode = default(int?), string stateDescription = default(string))
         {
-            this.StateCode = StateCode;
-            this.StateDescription = StateDescription;
+            this.StateCode = stateCode;
+            this.StateDescription = stateDescription;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LabelTranslationsDto" /> class.
         /// </summary>
-        /// <param name="LangCode">Code.</param>
-        /// <param name="LabelTranslation">Traslated Label.</param>
-        public LabelTranslationsDto(string LangCode = default(string), string LabelTranslation = default(string))
+        /// <param name="langCode">Code.</param>
+        /// <param name="labelTranslation">Traslated Label.</param>
+        public LabelTranslationsDto(string langCode = default(string), string labelTranslation = default(string))
         {
-            this.LangCode = LangCode;
-            this.LabelTranslation = LabelTranslation;
+            this.LangCode = langCode;
+            this.LabelTranslation = labelTranslation;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

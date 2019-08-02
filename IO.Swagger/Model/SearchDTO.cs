@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchDTO" /> class.
         /// </summary>
-        /// <param name="Description">The description of the search.</param>
-        /// <param name="DaAAndOr">Possible values:  0: And  1: Or .</param>
-        /// <param name="Fields">Fields.</param>
-        public SearchDTO(string Description = default(string), int? DaAAndOr = default(int?), List<FieldBaseForSearchDTO> Fields = default(List<FieldBaseForSearchDTO>))
+        /// <param name="description">The description of the search.</param>
+        /// <param name="daAAndOr">Possible values:  0: And  1: Or .</param>
+        /// <param name="fields">Fields.</param>
+        public SearchDTO(string description = default(string), int? daAAndOr = default(int?), List<FieldBaseForSearchDTO> fields = default(List<FieldBaseForSearchDTO>))
         {
-            this.Description = Description;
-            this.DaAAndOr = DaAAndOr;
-            this.Fields = Fields;
+            this.Description = description;
+            this.DaAAndOr = daAAndOr;
+            this.Fields = fields;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

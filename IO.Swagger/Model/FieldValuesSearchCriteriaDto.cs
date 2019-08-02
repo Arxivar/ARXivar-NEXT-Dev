@@ -33,18 +33,18 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FieldValuesSearchCriteriaDto" /> class.
         /// </summary>
-        /// <param name="SearchFilterDto">Filter for search.</param>
-        /// <param name="FieldName">Field Name.</param>
-        /// <param name="FilterValue">Filter Value.</param>
-        /// <param name="FilterId">Filter Identifier.</param>
-        /// <param name="Filters">Filter Fields.</param>
-        public FieldValuesSearchCriteriaDto(SearchDTO SearchFilterDto = default(SearchDTO), string FieldName = default(string), string FilterValue = default(string), string FilterId = default(string), List<FieldBaseForSearchDTO> Filters = default(List<FieldBaseForSearchDTO>))
+        /// <param name="searchFilterDto">Filter for search.</param>
+        /// <param name="fieldName">Field Name.</param>
+        /// <param name="filterValue">Filter Value.</param>
+        /// <param name="filterId">Filter Identifier.</param>
+        /// <param name="filters">Filter Fields.</param>
+        public FieldValuesSearchCriteriaDto(SearchDTO searchFilterDto = default(SearchDTO), string fieldName = default(string), string filterValue = default(string), string filterId = default(string), List<FieldBaseForSearchDTO> filters = default(List<FieldBaseForSearchDTO>))
         {
-            this.SearchFilterDto = SearchFilterDto;
-            this.FieldName = FieldName;
-            this.FilterValue = FilterValue;
-            this.FilterId = FilterId;
-            this.Filters = Filters;
+            this.SearchFilterDto = searchFilterDto;
+            this.FieldName = fieldName;
+            this.FilterValue = filterValue;
+            this.FilterId = filterId;
+            this.Filters = filters;
         }
         
         /// <summary>
@@ -103,7 +103,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

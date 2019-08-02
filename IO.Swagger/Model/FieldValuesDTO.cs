@@ -33,18 +33,18 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FieldValuesDTO" /> class.
         /// </summary>
-        /// <param name="KeyField">KeyField.</param>
-        /// <param name="SelectField">SelectField.</param>
-        /// <param name="Associations">Associations.</param>
-        /// <param name="FieldName">FieldName.</param>
-        /// <param name="DataSource">DataSource.</param>
-        public FieldValuesDTO(string KeyField = default(string), string SelectField = default(string), Dictionary<string, string> Associations = default(Dictionary<string, string>), string FieldName = default(string), List<RowSearchResult> DataSource = default(List<RowSearchResult>))
+        /// <param name="keyField">KeyField.</param>
+        /// <param name="selectField">SelectField.</param>
+        /// <param name="associations">Associations.</param>
+        /// <param name="fieldName">FieldName.</param>
+        /// <param name="dataSource">DataSource.</param>
+        public FieldValuesDTO(string keyField = default(string), string selectField = default(string), Dictionary<string, string> associations = default(Dictionary<string, string>), string fieldName = default(string), List<RowSearchResult> dataSource = default(List<RowSearchResult>))
         {
-            this.KeyField = KeyField;
-            this.SelectField = SelectField;
-            this.Associations = Associations;
-            this.FieldName = FieldName;
-            this.DataSource = DataSource;
+            this.KeyField = keyField;
+            this.SelectField = selectField;
+            this.Associations = associations;
+            this.FieldName = fieldName;
+            this.DataSource = dataSource;
         }
         
         /// <summary>
@@ -103,7 +103,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

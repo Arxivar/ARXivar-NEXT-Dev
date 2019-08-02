@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BinderUserDefaultTypeAndStateDto" /> class.
         /// </summary>
-        /// <param name="DefaultBinderType">Default binder type.</param>
-        /// <param name="DefaultBinderState">Default binder state.</param>
-        public BinderUserDefaultTypeAndStateDto(int? DefaultBinderType = default(int?), int? DefaultBinderState = default(int?))
+        /// <param name="defaultBinderType">Default binder type.</param>
+        /// <param name="defaultBinderState">Default binder state.</param>
+        public BinderUserDefaultTypeAndStateDto(int? defaultBinderType = default(int?), int? defaultBinderState = default(int?))
         {
-            this.DefaultBinderType = DefaultBinderType;
-            this.DefaultBinderState = DefaultBinderState;
+            this.DefaultBinderType = defaultBinderType;
+            this.DefaultBinderState = defaultBinderState;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

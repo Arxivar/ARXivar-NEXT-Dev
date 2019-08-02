@@ -33,24 +33,24 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TaskWorkNoteDTO" /> class.
         /// </summary>
-        /// <param name="Date">Date.</param>
-        /// <param name="Id">Id.</param>
-        /// <param name="ProcessId">ProcessId.</param>
-        /// <param name="TaskWorkId">TaskWorkId.</param>
-        /// <param name="Note">Note.</param>
-        /// <param name="UserCompleteName">UserCompleteName.</param>
-        /// <param name="User">User.</param>
-        /// <param name="TaskWorkName">TaskWorkName.</param>
-        public TaskWorkNoteDTO(DateTime? Date = default(DateTime?), int? Id = default(int?), int? ProcessId = default(int?), int? TaskWorkId = default(int?), string Note = default(string), string UserCompleteName = default(string), int? User = default(int?), string TaskWorkName = default(string))
+        /// <param name="date">date.</param>
+        /// <param name="id">id.</param>
+        /// <param name="processId">processId.</param>
+        /// <param name="taskWorkId">taskWorkId.</param>
+        /// <param name="note">note.</param>
+        /// <param name="userCompleteName">userCompleteName.</param>
+        /// <param name="user">user.</param>
+        /// <param name="taskWorkName">taskWorkName.</param>
+        public TaskWorkNoteDTO(DateTime? date = default(DateTime?), int? id = default(int?), int? processId = default(int?), int? taskWorkId = default(int?), string note = default(string), string userCompleteName = default(string), int? user = default(int?), string taskWorkName = default(string))
         {
-            this.Date = Date;
-            this.Id = Id;
-            this.ProcessId = ProcessId;
-            this.TaskWorkId = TaskWorkId;
-            this.Note = Note;
-            this.UserCompleteName = UserCompleteName;
-            this.User = User;
-            this.TaskWorkName = TaskWorkName;
+            this.Date = date;
+            this.Id = id;
+            this.ProcessId = processId;
+            this.TaskWorkId = taskWorkId;
+            this.Note = note;
+            this.UserCompleteName = userCompleteName;
+            this.User = user;
+            this.TaskWorkName = taskWorkName;
         }
         
         /// <summary>
@@ -125,7 +125,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

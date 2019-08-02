@@ -33,20 +33,20 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ColumnSearchResult" /> class.
         /// </summary>
-        /// <param name="Position">Position.</param>
-        /// <param name="Value">Value.</param>
-        /// <param name="Label">Label.</param>
-        /// <param name="Id">Identifier.</param>
-        /// <param name="Visible">Visibility.</param>
-        /// <param name="ColumnType">Type.</param>
-        public ColumnSearchResult(int? Position = default(int?), Object Value = default(Object), string Label = default(string), string Id = default(string), bool? Visible = default(bool?), string ColumnType = default(string))
+        /// <param name="position">Position.</param>
+        /// <param name="value">Value.</param>
+        /// <param name="label">Label.</param>
+        /// <param name="id">Identifier.</param>
+        /// <param name="visible">Visibility.</param>
+        /// <param name="columnType">Type.</param>
+        public ColumnSearchResult(int? position = default(int?), Object value = default(Object), string label = default(string), string id = default(string), bool? visible = default(bool?), string columnType = default(string))
         {
-            this.Position = Position;
-            this.Value = Value;
-            this.Label = Label;
-            this.Id = Id;
-            this.Visible = Visible;
-            this.ColumnType = ColumnType;
+            this.Position = position;
+            this.Value = value;
+            this.Label = label;
+            this.Id = id;
+            this.Visible = visible;
+            this.ColumnType = columnType;
         }
         
         /// <summary>
@@ -113,7 +113,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

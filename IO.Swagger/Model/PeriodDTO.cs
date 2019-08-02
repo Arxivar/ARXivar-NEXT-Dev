@@ -33,16 +33,16 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PeriodDTO" /> class.
         /// </summary>
-        /// <param name="Period">Description.</param>
-        /// <param name="Type">Possible values:  0: Giorno  1: Mese .</param>
-        /// <param name="Start">Start.</param>
-        /// <param name="End">End.</param>
-        public PeriodDTO(string Period = default(string), int? Type = default(int?), int? Start = default(int?), int? End = default(int?))
+        /// <param name="period">Description.</param>
+        /// <param name="type">Possible values:  0: Giorno  1: Mese .</param>
+        /// <param name="start">Start.</param>
+        /// <param name="end">End.</param>
+        public PeriodDTO(string period = default(string), int? type = default(int?), int? start = default(int?), int? end = default(int?))
         {
-            this.Period = Period;
-            this.Type = Type;
-            this.Start = Start;
-            this.End = End;
+            this.Period = period;
+            this.Type = type;
+            this.Start = start;
+            this.End = end;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

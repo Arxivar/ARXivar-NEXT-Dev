@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserOptionsDto" /> class.
         /// </summary>
-        /// <param name="Search">Search Options.</param>
-        /// <param name="DocumentTypeViewMode">Possible values:  0: Code  1: Description .</param>
-        /// <param name="P7MView">P7MView.</param>
-        public UserOptionsDto(UserSearchOptionDTO Search = default(UserSearchOptionDTO), int? DocumentTypeViewMode = default(int?), bool? P7MView = default(bool?))
+        /// <param name="search">Search Options.</param>
+        /// <param name="documentTypeViewMode">Possible values:  0: Code  1: Description .</param>
+        /// <param name="p7MView">p7MView.</param>
+        public UserOptionsDto(UserSearchOptionDTO search = default(UserSearchOptionDTO), int? documentTypeViewMode = default(int?), bool? p7MView = default(bool?))
         {
-            this.Search = Search;
-            this.DocumentTypeViewMode = DocumentTypeViewMode;
-            this.P7MView = P7MView;
+            this.Search = search;
+            this.DocumentTypeViewMode = documentTypeViewMode;
+            this.P7MView = p7MView;
         }
         
         /// <summary>
@@ -82,7 +82,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StampSearchFilterDto" /> class.
         /// </summary>
-        /// <param name="StampInstanceApplied">StampInstanceApplied.</param>
-        /// <param name="StampDefinitionId">StampDefinitionId.</param>
-        public StampSearchFilterDto(int? StampInstanceApplied = default(int?), string StampDefinitionId = default(string))
+        /// <param name="stampInstanceApplied">stampInstanceApplied.</param>
+        /// <param name="stampDefinitionId">stampDefinitionId.</param>
+        public StampSearchFilterDto(int? stampInstanceApplied = default(int?), string stampDefinitionId = default(string))
         {
-            this.StampInstanceApplied = StampInstanceApplied;
-            this.StampDefinitionId = StampDefinitionId;
+            this.StampInstanceApplied = stampInstanceApplied;
+            this.StampDefinitionId = stampDefinitionId;
         }
         
         /// <summary>
@@ -71,7 +71,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,18 +33,18 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SingleProfilePermissionsDTO" /> class.
         /// </summary>
-        /// <param name="_ReadOnly">Read Only.</param>
-        /// <param name="PermissionModality">Possible values:  0: Additional  1: Exclusive .</param>
-        /// <param name="CanManagePermissions">Permissions item.</param>
-        /// <param name="UsersPermissions">List of user permissions.</param>
-        /// <param name="PermissionsProperties">Permission Properties.</param>
-        public SingleProfilePermissionsDTO(bool? _ReadOnly = default(bool?), int? PermissionModality = default(int?), List<PermissionItemDTO> CanManagePermissions = default(List<PermissionItemDTO>), List<UserPermissionDTO> UsersPermissions = default(List<UserPermissionDTO>), List<PermissionPropertiesDTO> PermissionsProperties = default(List<PermissionPropertiesDTO>))
+        /// <param name="readOnly">Read Only.</param>
+        /// <param name="permissionModality">Possible values:  0: Additional  1: Exclusive .</param>
+        /// <param name="canManagePermissions">Permissions item.</param>
+        /// <param name="usersPermissions">List of user permissions.</param>
+        /// <param name="permissionsProperties">Permission Properties.</param>
+        public SingleProfilePermissionsDTO(bool? readOnly = default(bool?), int? permissionModality = default(int?), List<PermissionItemDTO> canManagePermissions = default(List<PermissionItemDTO>), List<UserPermissionDTO> usersPermissions = default(List<UserPermissionDTO>), List<PermissionPropertiesDTO> permissionsProperties = default(List<PermissionPropertiesDTO>))
         {
-            this._ReadOnly = _ReadOnly;
-            this.PermissionModality = PermissionModality;
-            this.CanManagePermissions = CanManagePermissions;
-            this.UsersPermissions = UsersPermissions;
-            this.PermissionsProperties = PermissionsProperties;
+            this.ReadOnly = readOnly;
+            this.PermissionModality = permissionModality;
+            this.CanManagePermissions = canManagePermissions;
+            this.UsersPermissions = usersPermissions;
+            this.PermissionsProperties = permissionsProperties;
         }
         
         /// <summary>
@@ -52,7 +52,7 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <value>Read Only</value>
         [DataMember(Name="readOnly", EmitDefaultValue=false)]
-        public bool? _ReadOnly { get; set; }
+        public bool? ReadOnly { get; set; }
 
         /// <summary>
         /// Possible values:  0: Additional  1: Exclusive 
@@ -90,7 +90,7 @@ namespace IO.Swagger.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SingleProfilePermissionsDTO {\n");
-            sb.Append("  _ReadOnly: ").Append(_ReadOnly).Append("\n");
+            sb.Append("  ReadOnly: ").Append(ReadOnly).Append("\n");
             sb.Append("  PermissionModality: ").Append(PermissionModality).Append("\n");
             sb.Append("  CanManagePermissions: ").Append(CanManagePermissions).Append("\n");
             sb.Append("  UsersPermissions: ").Append(UsersPermissions).Append("\n");
@@ -103,7 +103,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -130,9 +130,9 @@ namespace IO.Swagger.Model
 
             return 
                 (
-                    this._ReadOnly == input._ReadOnly ||
-                    (this._ReadOnly != null &&
-                    this._ReadOnly.Equals(input._ReadOnly))
+                    this.ReadOnly == input.ReadOnly ||
+                    (this.ReadOnly != null &&
+                    this.ReadOnly.Equals(input.ReadOnly))
                 ) && 
                 (
                     this.PermissionModality == input.PermissionModality ||
@@ -165,8 +165,8 @@ namespace IO.Swagger.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._ReadOnly != null)
-                    hashCode = hashCode * 59 + this._ReadOnly.GetHashCode();
+                if (this.ReadOnly != null)
+                    hashCode = hashCode * 59 + this.ReadOnly.GetHashCode();
                 if (this.PermissionModality != null)
                     hashCode = hashCode * 59 + this.PermissionModality.GetHashCode();
                 if (this.CanManagePermissions != null)

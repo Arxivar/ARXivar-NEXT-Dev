@@ -33,30 +33,30 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MonitoredFolderDTO" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="UserId">UserId.</param>
-        /// <param name="Type">Possible values:  0: Manual  1: Automatic  2: Wizard .</param>
-        /// <param name="MaskId">MaskId.</param>
-        /// <param name="PredefinedProfileId">PredefinedProfileId.</param>
-        /// <param name="UseSubFolders">UseSubFolders.</param>
-        /// <param name="Path">Path.</param>
-        /// <param name="ParseMode">Possible values:  0: ByPosition  1: BySeparator  2: None .</param>
-        /// <param name="CharacterSeparator">CharacterSeparator.</param>
-        /// <param name="SoftwareType">Possible values:  0: Generic  1: ArxivarServer  2: ArxivarOcr  3: ArxivarFax  4: ArxivarBarcode  5: ArxivarSpoolRecPro  6: ArxivarSpoolPdf  7: ArxivarSpoolConsole  8: ArxivarWeb  9: ArxivarPmArchiviazione  10: ArxivarPmRubrica  11: ArxivarPmUsersAndGroups  12: ArxivarPmAllegati  13: ArxivarUnitTest  14: ArxivarStartWorkflow  15: ArxivarMailer  16: ArxivarArxService  17: ArxivarPostalizzatore  18: ArxivarSigner  19: ArxivarSdk  20: SAPR3  21: ArxivarThumbnail  22: ArxivarSharedDocument  23: ArxivarDownloaderDocument  24: ArxivarClient  25: ArxivarAWP  26: ArxivarPmOrganizationChart  27: ArxivarMobile  28: Credemtel  29: ArxivarRelationService  30: ArxivarPmLogonProviderAssoc  31: ArxivarMassiveUpdates  32: ArxivarMobileService  33: ArxivarMobileApp  34: ArxivarFasciculationService  35: ArxivarPushNotificationsService  36: ArxivarIX  37: ArxivarPmDocumentDeleting  38: ArxivarMobileOfficeSign  39: GenericWebService  40: ArxivarIndex  41: ArxDrive  42: ArxDriveExtension  43: ArxivarSmartTaskApp  44: ArxDriveMobile  45: Unimatica  46: Eni  47: ArxivarSwapOutService  48: ArxivarSuiteClient  49: ArxivarServerWcf  50: ArxAuthService  51: ArxivarSuiteServer  52: ArxivarSetup  53: ImapPlugin  54: ArxLinkClient  55: BiometricSign  56: ArxCommand  57: ArxivarPmFlatFileTextWriter  58: ArxAssistant  59: ArxLocalSign .</param>
-        /// <param name="Operativity">Possible values:  0: AskConfirm  1: Proceed  2: Buffer .</param>
-        public MonitoredFolderDTO(string Id = default(string), int? UserId = default(int?), int? Type = default(int?), string MaskId = default(string), int? PredefinedProfileId = default(int?), bool? UseSubFolders = default(bool?), string Path = default(string), int? ParseMode = default(int?), string CharacterSeparator = default(string), int? SoftwareType = default(int?), int? Operativity = default(int?))
+        /// <param name="id">id.</param>
+        /// <param name="userId">userId.</param>
+        /// <param name="type">Possible values:  0: Manual  1: Automatic  2: Wizard .</param>
+        /// <param name="maskId">maskId.</param>
+        /// <param name="predefinedProfileId">predefinedProfileId.</param>
+        /// <param name="useSubFolders">useSubFolders.</param>
+        /// <param name="path">path.</param>
+        /// <param name="parseMode">Possible values:  0: ByPosition  1: BySeparator  2: None .</param>
+        /// <param name="characterSeparator">characterSeparator.</param>
+        /// <param name="softwareType">Possible values:  0: Generic  1: ArxivarServer  2: ArxivarOcr  3: ArxivarFax  4: ArxivarBarcode  5: ArxivarSpoolRecPro  6: ArxivarSpoolPdf  7: ArxivarSpoolConsole  8: ArxivarWeb  9: ArxivarPmArchiviazione  10: ArxivarPmRubrica  11: ArxivarPmUsersAndGroups  12: ArxivarPmAllegati  13: ArxivarUnitTest  14: ArxivarStartWorkflow  15: ArxivarMailer  16: ArxivarArxService  17: ArxivarPostalizzatore  18: ArxivarSigner  19: ArxivarSdk  20: SAPR3  21: ArxivarThumbnail  22: ArxivarSharedDocument  23: ArxivarDownloaderDocument  24: ArxivarClient  25: ArxivarAWP  26: ArxivarPmOrganizationChart  27: ArxivarMobile  28: Credemtel  29: ArxivarRelationService  30: ArxivarPmLogonProviderAssoc  31: ArxivarMassiveUpdates  32: ArxivarMobileService  33: ArxivarMobileApp  34: ArxivarFasciculationService  35: ArxivarPushNotificationsService  36: ArxivarIX  37: ArxivarPmDocumentDeleting  38: ArxivarMobileOfficeSign  39: GenericWebService  40: ArxivarIndex  41: ArxDrive  42: ArxDriveExtension  43: ArxivarSmartTaskApp  44: ArxDriveMobile  45: Unimatica  46: Eni  47: ArxivarSwapOutService  48: ArxivarSuiteClient  49: ArxivarServerWcf  50: ArxAuthService  51: ArxivarSuiteServer  52: ArxivarSetup  53: ImapPlugin  54: ArxLinkClient  55: BiometricSign  56: ArxCommand  57: ArxivarPmFlatFileTextWriter  58: ArxAssistant  59: ArxLocalSign  60: ArxNode .</param>
+        /// <param name="operativity">Possible values:  0: AskConfirm  1: Proceed  2: Buffer .</param>
+        public MonitoredFolderDTO(string id = default(string), int? userId = default(int?), int? type = default(int?), string maskId = default(string), int? predefinedProfileId = default(int?), bool? useSubFolders = default(bool?), string path = default(string), int? parseMode = default(int?), string characterSeparator = default(string), int? softwareType = default(int?), int? operativity = default(int?))
         {
-            this.Id = Id;
-            this.UserId = UserId;
-            this.Type = Type;
-            this.MaskId = MaskId;
-            this.PredefinedProfileId = PredefinedProfileId;
-            this.UseSubFolders = UseSubFolders;
-            this.Path = Path;
-            this.ParseMode = ParseMode;
-            this.CharacterSeparator = CharacterSeparator;
-            this.SoftwareType = SoftwareType;
-            this.Operativity = Operativity;
+            this.Id = id;
+            this.UserId = userId;
+            this.Type = type;
+            this.MaskId = maskId;
+            this.PredefinedProfileId = predefinedProfileId;
+            this.UseSubFolders = useSubFolders;
+            this.Path = path;
+            this.ParseMode = parseMode;
+            this.CharacterSeparator = characterSeparator;
+            this.SoftwareType = softwareType;
+            this.Operativity = operativity;
         }
         
         /// <summary>
@@ -116,9 +116,9 @@ namespace IO.Swagger.Model
         public string CharacterSeparator { get; set; }
 
         /// <summary>
-        /// Possible values:  0: Generic  1: ArxivarServer  2: ArxivarOcr  3: ArxivarFax  4: ArxivarBarcode  5: ArxivarSpoolRecPro  6: ArxivarSpoolPdf  7: ArxivarSpoolConsole  8: ArxivarWeb  9: ArxivarPmArchiviazione  10: ArxivarPmRubrica  11: ArxivarPmUsersAndGroups  12: ArxivarPmAllegati  13: ArxivarUnitTest  14: ArxivarStartWorkflow  15: ArxivarMailer  16: ArxivarArxService  17: ArxivarPostalizzatore  18: ArxivarSigner  19: ArxivarSdk  20: SAPR3  21: ArxivarThumbnail  22: ArxivarSharedDocument  23: ArxivarDownloaderDocument  24: ArxivarClient  25: ArxivarAWP  26: ArxivarPmOrganizationChart  27: ArxivarMobile  28: Credemtel  29: ArxivarRelationService  30: ArxivarPmLogonProviderAssoc  31: ArxivarMassiveUpdates  32: ArxivarMobileService  33: ArxivarMobileApp  34: ArxivarFasciculationService  35: ArxivarPushNotificationsService  36: ArxivarIX  37: ArxivarPmDocumentDeleting  38: ArxivarMobileOfficeSign  39: GenericWebService  40: ArxivarIndex  41: ArxDrive  42: ArxDriveExtension  43: ArxivarSmartTaskApp  44: ArxDriveMobile  45: Unimatica  46: Eni  47: ArxivarSwapOutService  48: ArxivarSuiteClient  49: ArxivarServerWcf  50: ArxAuthService  51: ArxivarSuiteServer  52: ArxivarSetup  53: ImapPlugin  54: ArxLinkClient  55: BiometricSign  56: ArxCommand  57: ArxivarPmFlatFileTextWriter  58: ArxAssistant  59: ArxLocalSign 
+        /// Possible values:  0: Generic  1: ArxivarServer  2: ArxivarOcr  3: ArxivarFax  4: ArxivarBarcode  5: ArxivarSpoolRecPro  6: ArxivarSpoolPdf  7: ArxivarSpoolConsole  8: ArxivarWeb  9: ArxivarPmArchiviazione  10: ArxivarPmRubrica  11: ArxivarPmUsersAndGroups  12: ArxivarPmAllegati  13: ArxivarUnitTest  14: ArxivarStartWorkflow  15: ArxivarMailer  16: ArxivarArxService  17: ArxivarPostalizzatore  18: ArxivarSigner  19: ArxivarSdk  20: SAPR3  21: ArxivarThumbnail  22: ArxivarSharedDocument  23: ArxivarDownloaderDocument  24: ArxivarClient  25: ArxivarAWP  26: ArxivarPmOrganizationChart  27: ArxivarMobile  28: Credemtel  29: ArxivarRelationService  30: ArxivarPmLogonProviderAssoc  31: ArxivarMassiveUpdates  32: ArxivarMobileService  33: ArxivarMobileApp  34: ArxivarFasciculationService  35: ArxivarPushNotificationsService  36: ArxivarIX  37: ArxivarPmDocumentDeleting  38: ArxivarMobileOfficeSign  39: GenericWebService  40: ArxivarIndex  41: ArxDrive  42: ArxDriveExtension  43: ArxivarSmartTaskApp  44: ArxDriveMobile  45: Unimatica  46: Eni  47: ArxivarSwapOutService  48: ArxivarSuiteClient  49: ArxivarServerWcf  50: ArxAuthService  51: ArxivarSuiteServer  52: ArxivarSetup  53: ImapPlugin  54: ArxLinkClient  55: BiometricSign  56: ArxCommand  57: ArxivarPmFlatFileTextWriter  58: ArxAssistant  59: ArxLocalSign  60: ArxNode 
         /// </summary>
-        /// <value>Possible values:  0: Generic  1: ArxivarServer  2: ArxivarOcr  3: ArxivarFax  4: ArxivarBarcode  5: ArxivarSpoolRecPro  6: ArxivarSpoolPdf  7: ArxivarSpoolConsole  8: ArxivarWeb  9: ArxivarPmArchiviazione  10: ArxivarPmRubrica  11: ArxivarPmUsersAndGroups  12: ArxivarPmAllegati  13: ArxivarUnitTest  14: ArxivarStartWorkflow  15: ArxivarMailer  16: ArxivarArxService  17: ArxivarPostalizzatore  18: ArxivarSigner  19: ArxivarSdk  20: SAPR3  21: ArxivarThumbnail  22: ArxivarSharedDocument  23: ArxivarDownloaderDocument  24: ArxivarClient  25: ArxivarAWP  26: ArxivarPmOrganizationChart  27: ArxivarMobile  28: Credemtel  29: ArxivarRelationService  30: ArxivarPmLogonProviderAssoc  31: ArxivarMassiveUpdates  32: ArxivarMobileService  33: ArxivarMobileApp  34: ArxivarFasciculationService  35: ArxivarPushNotificationsService  36: ArxivarIX  37: ArxivarPmDocumentDeleting  38: ArxivarMobileOfficeSign  39: GenericWebService  40: ArxivarIndex  41: ArxDrive  42: ArxDriveExtension  43: ArxivarSmartTaskApp  44: ArxDriveMobile  45: Unimatica  46: Eni  47: ArxivarSwapOutService  48: ArxivarSuiteClient  49: ArxivarServerWcf  50: ArxAuthService  51: ArxivarSuiteServer  52: ArxivarSetup  53: ImapPlugin  54: ArxLinkClient  55: BiometricSign  56: ArxCommand  57: ArxivarPmFlatFileTextWriter  58: ArxAssistant  59: ArxLocalSign </value>
+        /// <value>Possible values:  0: Generic  1: ArxivarServer  2: ArxivarOcr  3: ArxivarFax  4: ArxivarBarcode  5: ArxivarSpoolRecPro  6: ArxivarSpoolPdf  7: ArxivarSpoolConsole  8: ArxivarWeb  9: ArxivarPmArchiviazione  10: ArxivarPmRubrica  11: ArxivarPmUsersAndGroups  12: ArxivarPmAllegati  13: ArxivarUnitTest  14: ArxivarStartWorkflow  15: ArxivarMailer  16: ArxivarArxService  17: ArxivarPostalizzatore  18: ArxivarSigner  19: ArxivarSdk  20: SAPR3  21: ArxivarThumbnail  22: ArxivarSharedDocument  23: ArxivarDownloaderDocument  24: ArxivarClient  25: ArxivarAWP  26: ArxivarPmOrganizationChart  27: ArxivarMobile  28: Credemtel  29: ArxivarRelationService  30: ArxivarPmLogonProviderAssoc  31: ArxivarMassiveUpdates  32: ArxivarMobileService  33: ArxivarMobileApp  34: ArxivarFasciculationService  35: ArxivarPushNotificationsService  36: ArxivarIX  37: ArxivarPmDocumentDeleting  38: ArxivarMobileOfficeSign  39: GenericWebService  40: ArxivarIndex  41: ArxDrive  42: ArxDriveExtension  43: ArxivarSmartTaskApp  44: ArxDriveMobile  45: Unimatica  46: Eni  47: ArxivarSwapOutService  48: ArxivarSuiteClient  49: ArxivarServerWcf  50: ArxAuthService  51: ArxivarSuiteServer  52: ArxivarSetup  53: ImapPlugin  54: ArxLinkClient  55: BiometricSign  56: ArxCommand  57: ArxivarPmFlatFileTextWriter  58: ArxAssistant  59: ArxLocalSign  60: ArxNode </value>
         [DataMember(Name="softwareType", EmitDefaultValue=false)]
         public int? SoftwareType { get; set; }
 
@@ -156,7 +156,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

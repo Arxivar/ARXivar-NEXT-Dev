@@ -33,22 +33,22 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LayoutDesktopDTO" /> class.
         /// </summary>
-        /// <param name="Id">Identifier.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Author">Author user.</param>
-        /// <param name="AuthorCompleteName">Author name.</param>
-        /// <param name="CreationDate">Creation Date.</param>
-        /// <param name="Details">Details.</param>
-        /// <param name="IsSystem">System Layout.</param>
-        public LayoutDesktopDTO(int? Id = default(int?), string Name = default(string), int? Author = default(int?), string AuthorCompleteName = default(string), DateTime? CreationDate = default(DateTime?), List<LayoutDesktopDetailDTO> Details = default(List<LayoutDesktopDetailDTO>), bool? IsSystem = default(bool?))
+        /// <param name="id">Identifier.</param>
+        /// <param name="name">Name.</param>
+        /// <param name="author">Author user.</param>
+        /// <param name="authorCompleteName">Author name.</param>
+        /// <param name="creationDate">Creation Date.</param>
+        /// <param name="details">Details.</param>
+        /// <param name="isSystem">System Layout.</param>
+        public LayoutDesktopDTO(int? id = default(int?), string name = default(string), int? author = default(int?), string authorCompleteName = default(string), DateTime? creationDate = default(DateTime?), List<LayoutDesktopDetailDTO> details = default(List<LayoutDesktopDetailDTO>), bool? isSystem = default(bool?))
         {
-            this.Id = Id;
-            this.Name = Name;
-            this.Author = Author;
-            this.AuthorCompleteName = AuthorCompleteName;
-            this.CreationDate = CreationDate;
-            this.Details = Details;
-            this.IsSystem = IsSystem;
+            this.Id = id;
+            this.Name = name;
+            this.Author = author;
+            this.AuthorCompleteName = authorCompleteName;
+            this.CreationDate = creationDate;
+            this.Details = details;
+            this.IsSystem = isSystem;
         }
         
         /// <summary>
@@ -123,7 +123,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

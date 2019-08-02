@@ -33,16 +33,16 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StateBaseDto" /> class.
         /// </summary>
-        /// <param name="Id">Identifier.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="IconIndex">Index of Icon.</param>
-        /// <param name="UserCanForce">If user can force the state.</param>
-        public StateBaseDto(string Id = default(string), string Description = default(string), int? IconIndex = default(int?), bool? UserCanForce = default(bool?))
+        /// <param name="id">Identifier.</param>
+        /// <param name="description">Description.</param>
+        /// <param name="iconIndex">Index of Icon.</param>
+        /// <param name="userCanForce">If user can force the state.</param>
+        public StateBaseDto(string id = default(string), string description = default(string), int? iconIndex = default(int?), bool? userCanForce = default(bool?))
         {
-            this.Id = Id;
-            this.Description = Description;
-            this.IconIndex = IconIndex;
-            this.UserCanForce = UserCanForce;
+            this.Id = id;
+            this.Description = description;
+            this.IconIndex = iconIndex;
+            this.UserCanForce = userCanForce;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

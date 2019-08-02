@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FileDTO" /> class.
         /// </summary>
-        /// <param name="FileNames">Filename list.</param>
-        /// <param name="BufferIds">Buffer id list.</param>
-        public FileDTO(List<string> FileNames = default(List<string>), List<string> BufferIds = default(List<string>))
+        /// <param name="fileNames">Filename list.</param>
+        /// <param name="bufferIds">Buffer id list.</param>
+        public FileDTO(List<string> fileNames = default(List<string>), List<string> bufferIds = default(List<string>))
         {
-            this.FileNames = FileNames;
-            this.BufferIds = BufferIds;
+            this.FileNames = fileNames;
+            this.BufferIds = bufferIds;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

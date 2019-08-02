@@ -33,18 +33,18 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TaskWorkVariableOperationDTO" /> class.
         /// </summary>
-        /// <param name="ProcessVariables">ProcessVariables.</param>
-        /// <param name="ProcessVariablesFields">ProcessVariablesFields.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="Executed">Indica se l&#39;operazione di valorizzazione variabili è stata eseguita, è la somma logica di tutte le variabili sono state valorizzate.</param>
-        /// <param name="Required">Required.</param>
-        public TaskWorkVariableOperationDTO(List<ProcessVariableDTO> ProcessVariables = default(List<ProcessVariableDTO>), ProcessVariablesFieldsDTO ProcessVariablesFields = default(ProcessVariablesFieldsDTO), string Description = default(string), bool? Executed = default(bool?), bool? Required = default(bool?))
+        /// <param name="processVariables">processVariables.</param>
+        /// <param name="processVariablesFields">processVariablesFields.</param>
+        /// <param name="description">description.</param>
+        /// <param name="executed">Indica se l&#39;operazione di valorizzazione variabili è stata eseguita, è la somma logica di tutte le variabili sono state valorizzate.</param>
+        /// <param name="required">required.</param>
+        public TaskWorkVariableOperationDTO(List<ProcessVariableDTO> processVariables = default(List<ProcessVariableDTO>), ProcessVariablesFieldsDTO processVariablesFields = default(ProcessVariablesFieldsDTO), string description = default(string), bool? executed = default(bool?), bool? required = default(bool?))
         {
-            this.ProcessVariables = ProcessVariables;
-            this.ProcessVariablesFields = ProcessVariablesFields;
-            this.Description = Description;
-            this.Executed = Executed;
-            this.Required = Required;
+            this.ProcessVariables = processVariables;
+            this.ProcessVariablesFields = processVariablesFields;
+            this.Description = description;
+            this.Executed = executed;
+            this.Required = required;
         }
         
         /// <summary>
@@ -99,7 +99,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

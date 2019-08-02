@@ -33,30 +33,30 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SignPdfPropertiesDTO" /> class.
         /// </summary>
-        /// <param name="Page">Page Number.</param>
-        /// <param name="PositionX">X Positin.</param>
-        /// <param name="PositionY">Y Position.</param>
-        /// <param name="SizeWidth">Width.</param>
-        /// <param name="SizeHeight">Heigth.</param>
-        /// <param name="Reason">Reason.</param>
-        /// <param name="ShowCN">Label of Common Name.</param>
-        /// <param name="ShowEmail">Show Email.</param>
-        /// <param name="ShowCF">Show Fiscal Code.</param>
-        /// <param name="ShowIssuer">Show Issuer.</param>
-        /// <param name="ShowTime">Show Datetime of Signature.</param>
-        public SignPdfPropertiesDTO(int? Page = default(int?), int? PositionX = default(int?), int? PositionY = default(int?), int? SizeWidth = default(int?), int? SizeHeight = default(int?), string Reason = default(string), bool? ShowCN = default(bool?), bool? ShowEmail = default(bool?), bool? ShowCF = default(bool?), bool? ShowIssuer = default(bool?), bool? ShowTime = default(bool?))
+        /// <param name="page">Page Number.</param>
+        /// <param name="positionX">X Positin.</param>
+        /// <param name="positionY">Y Position.</param>
+        /// <param name="sizeWidth">Width.</param>
+        /// <param name="sizeHeight">Heigth.</param>
+        /// <param name="reason">Reason.</param>
+        /// <param name="showCN">Label of Common Name.</param>
+        /// <param name="showEmail">Show Email.</param>
+        /// <param name="showCF">Show Fiscal Code.</param>
+        /// <param name="showIssuer">Show Issuer.</param>
+        /// <param name="showTime">Show Datetime of Signature.</param>
+        public SignPdfPropertiesDTO(int? page = default(int?), int? positionX = default(int?), int? positionY = default(int?), int? sizeWidth = default(int?), int? sizeHeight = default(int?), string reason = default(string), bool? showCN = default(bool?), bool? showEmail = default(bool?), bool? showCF = default(bool?), bool? showIssuer = default(bool?), bool? showTime = default(bool?))
         {
-            this.Page = Page;
-            this.PositionX = PositionX;
-            this.PositionY = PositionY;
-            this.SizeWidth = SizeWidth;
-            this.SizeHeight = SizeHeight;
-            this.Reason = Reason;
-            this.ShowCN = ShowCN;
-            this.ShowEmail = ShowEmail;
-            this.ShowCF = ShowCF;
-            this.ShowIssuer = ShowIssuer;
-            this.ShowTime = ShowTime;
+            this.Page = page;
+            this.PositionX = positionX;
+            this.PositionY = positionY;
+            this.SizeWidth = sizeWidth;
+            this.SizeHeight = sizeHeight;
+            this.Reason = reason;
+            this.ShowCN = showCN;
+            this.ShowEmail = showEmail;
+            this.ShowCF = showCF;
+            this.ShowIssuer = showIssuer;
+            this.ShowTime = showTime;
         }
         
         /// <summary>
@@ -163,7 +163,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ProfessionalRoleOperationsDTO" /> class.
         /// </summary>
-        /// <param name="Operations">Operations.</param>
-        /// <param name="Description">Description.</param>
-        public ProfessionalRoleOperationsDTO(List<ProfessionalRoleOperationDTO> Operations = default(List<ProfessionalRoleOperationDTO>), string Description = default(string))
+        /// <param name="operations">operations.</param>
+        /// <param name="description">description.</param>
+        public ProfessionalRoleOperationsDTO(List<ProfessionalRoleOperationDTO> operations = default(List<ProfessionalRoleOperationDTO>), string description = default(string))
         {
-            this.Operations = Operations;
-            this.Description = Description;
+            this.Operations = operations;
+            this.Description = description;
         }
         
         /// <summary>
@@ -71,7 +71,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

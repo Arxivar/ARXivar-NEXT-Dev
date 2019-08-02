@@ -33,16 +33,16 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserSearchOptionDTO" /> class.
         /// </summary>
-        /// <param name="MaxSearchItems">Maximum Number of Items for search.</param>
-        /// <param name="MaxViewItems">Maximum Number of Items for view.</param>
-        /// <param name="ExtendAInCc">Extend the search to the knowledge copy.</param>
-        /// <param name="AuthorityData">Visibility of Authority Data.</param>
-        public UserSearchOptionDTO(int? MaxSearchItems = default(int?), int? MaxViewItems = default(int?), bool? ExtendAInCc = default(bool?), bool? AuthorityData = default(bool?))
+        /// <param name="maxSearchItems">Maximum Number of Items for search.</param>
+        /// <param name="maxViewItems">Maximum Number of Items for view.</param>
+        /// <param name="extendAInCc">Extend the search to the knowledge copy.</param>
+        /// <param name="authorityData">Visibility of Authority Data.</param>
+        public UserSearchOptionDTO(int? maxSearchItems = default(int?), int? maxViewItems = default(int?), bool? extendAInCc = default(bool?), bool? authorityData = default(bool?))
         {
-            this.MaxSearchItems = MaxSearchItems;
-            this.MaxViewItems = MaxViewItems;
-            this.ExtendAInCc = ExtendAInCc;
-            this.AuthorityData = AuthorityData;
+            this.MaxSearchItems = maxSearchItems;
+            this.MaxViewItems = maxViewItems;
+            this.ExtendAInCc = extendAInCc;
+            this.AuthorityData = authorityData;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderBy" /> class.
         /// </summary>
-        /// <param name="Direction">Possible values:  0: Nothing  1: Ascending  2: Descending .</param>
-        /// <param name="Index">Index.</param>
-        public OrderBy(int? Direction = default(int?), int? Index = default(int?))
+        /// <param name="direction">Possible values:  0: Nothing  1: Ascending  2: Descending .</param>
+        /// <param name="index">index.</param>
+        public OrderBy(int? direction = default(int?), int? index = default(int?))
         {
-            this.Direction = Direction;
-            this.Index = Index;
+            this.Direction = direction;
+            this.Index = index;
         }
         
         /// <summary>
@@ -72,7 +72,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

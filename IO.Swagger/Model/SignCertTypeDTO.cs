@@ -33,16 +33,16 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SignCertTypeDTO" /> class.
         /// </summary>
-        /// <param name="SignCertType">Possible values:  0: Static  1: CoSign  2: RemoteTelecom  3: RemoteAruba .</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="RemoteProvider">Is Remote Provider.</param>
-        /// <param name="UseRelatedCert">Use Related Certificate.</param>
-        public SignCertTypeDTO(int? SignCertType = default(int?), string Description = default(string), bool? RemoteProvider = default(bool?), bool? UseRelatedCert = default(bool?))
+        /// <param name="signCertType">Possible values:  0: Static  1: CoSign  2: RemoteTelecom  3: RemoteAruba .</param>
+        /// <param name="description">Description.</param>
+        /// <param name="remoteProvider">Is Remote Provider.</param>
+        /// <param name="useRelatedCert">Use Related Certificate.</param>
+        public SignCertTypeDTO(int? signCertType = default(int?), string description = default(string), bool? remoteProvider = default(bool?), bool? useRelatedCert = default(bool?))
         {
-            this.SignCertType = SignCertType;
-            this.Description = Description;
-            this.RemoteProvider = RemoteProvider;
-            this.UseRelatedCert = UseRelatedCert;
+            this.SignCertType = signCertType;
+            this.Description = description;
+            this.RemoteProvider = remoteProvider;
+            this.UseRelatedCert = useRelatedCert;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VariablesValuesCriteriaDTO" /> class.
         /// </summary>
-        /// <param name="ProcessVariablesFields">Fields.</param>
-        /// <param name="VariableFilters">Filters.</param>
-        public VariablesValuesCriteriaDTO(ProcessVariablesFieldsDTO ProcessVariablesFields = default(ProcessVariablesFieldsDTO), VariableFiltersDTO VariableFilters = default(VariableFiltersDTO))
+        /// <param name="processVariablesFields">Fields.</param>
+        /// <param name="variableFilters">Filters.</param>
+        public VariablesValuesCriteriaDTO(ProcessVariablesFieldsDTO processVariablesFields = default(ProcessVariablesFieldsDTO), VariableFiltersDTO variableFilters = default(VariableFiltersDTO))
         {
-            this.ProcessVariablesFields = ProcessVariablesFields;
-            this.VariableFilters = VariableFilters;
+            this.ProcessVariablesFields = processVariablesFields;
+            this.VariableFilters = variableFilters;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

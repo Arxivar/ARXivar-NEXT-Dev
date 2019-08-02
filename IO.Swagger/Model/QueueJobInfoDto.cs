@@ -33,16 +33,16 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueJobInfoDto" /> class.
         /// </summary>
-        /// <param name="QueueJob">Queue Job.</param>
-        /// <param name="CreatedAt">Creation Date.</param>
-        /// <param name="History">List of history queue status.</param>
-        /// <param name="ExpireAt">Expiration Date.</param>
-        public QueueJobInfoDto(QueueJobDto QueueJob = default(QueueJobDto), DateTime? CreatedAt = default(DateTime?), List<QueueStateHistoryDto> History = default(List<QueueStateHistoryDto>), DateTime? ExpireAt = default(DateTime?))
+        /// <param name="queueJob">Queue Job.</param>
+        /// <param name="createdAt">Creation Date.</param>
+        /// <param name="history">List of history queue status.</param>
+        /// <param name="expireAt">Expiration Date.</param>
+        public QueueJobInfoDto(QueueJobDto queueJob = default(QueueJobDto), DateTime? createdAt = default(DateTime?), List<QueueStateHistoryDto> history = default(List<QueueStateHistoryDto>), DateTime? expireAt = default(DateTime?))
         {
-            this.QueueJob = QueueJob;
-            this.CreatedAt = CreatedAt;
-            this.History = History;
-            this.ExpireAt = ExpireAt;
+            this.QueueJob = queueJob;
+            this.CreatedAt = createdAt;
+            this.History = history;
+            this.ExpireAt = expireAt;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

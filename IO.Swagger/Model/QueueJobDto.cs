@@ -33,16 +33,16 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueJobDto" /> class.
         /// </summary>
-        /// <param name="JobName">Name.</param>
-        /// <param name="JobId">Identifier.</param>
-        /// <param name="QueueType">Type.</param>
-        /// <param name="MethodName">Name of method.</param>
-        public QueueJobDto(string JobName = default(string), string JobId = default(string), string QueueType = default(string), string MethodName = default(string))
+        /// <param name="jobName">Name.</param>
+        /// <param name="jobId">Identifier.</param>
+        /// <param name="queueType">Type.</param>
+        /// <param name="methodName">Name of method.</param>
+        public QueueJobDto(string jobName = default(string), string jobId = default(string), string queueType = default(string), string methodName = default(string))
         {
-            this.JobName = JobName;
-            this.JobId = JobId;
-            this.QueueType = QueueType;
-            this.MethodName = MethodName;
+            this.JobName = jobName;
+            this.JobId = jobId;
+            this.QueueType = queueType;
+            this.MethodName = methodName;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

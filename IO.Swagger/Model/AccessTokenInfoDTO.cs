@@ -33,28 +33,28 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AccessTokenInfoDTO" /> class.
         /// </summary>
-        /// <param name="AccessToken">Access Token.</param>
-        /// <param name="RefreshTokenToken">Refresh Token.</param>
-        /// <param name="TokenType">Token Type.</param>
-        /// <param name="AuthPropertyList">Properties.</param>
-        /// <param name="ExpiresUtc">Expires.</param>
-        /// <param name="IssuedUtc">Issued.</param>
-        /// <param name="IsPersistent">Authentication Persistent.</param>
-        /// <param name="ClaimInfoList">Claims.</param>
-        /// <param name="ArxUserMustChangePassword">Passeord Change.</param>
-        /// <param name="Error">Error Message.</param>
-        public AccessTokenInfoDTO(string AccessToken = default(string), string RefreshTokenToken = default(string), string TokenType = default(string), List<AuthPropertyInfoDTO> AuthPropertyList = default(List<AuthPropertyInfoDTO>), DateTime? ExpiresUtc = default(DateTime?), DateTime? IssuedUtc = default(DateTime?), bool? IsPersistent = default(bool?), List<ClaimInfoDTO> ClaimInfoList = default(List<ClaimInfoDTO>), bool? ArxUserMustChangePassword = default(bool?), MessageErrorDTO Error = default(MessageErrorDTO))
+        /// <param name="accessToken">Access Token.</param>
+        /// <param name="refreshTokenToken">Refresh Token.</param>
+        /// <param name="tokenType">Token Type.</param>
+        /// <param name="authPropertyList">Properties.</param>
+        /// <param name="expiresUtc">Expires.</param>
+        /// <param name="issuedUtc">Issued.</param>
+        /// <param name="isPersistent">Authentication Persistent.</param>
+        /// <param name="claimInfoList">Claims.</param>
+        /// <param name="arxUserMustChangePassword">Passeord Change.</param>
+        /// <param name="error">Error Message.</param>
+        public AccessTokenInfoDTO(string accessToken = default(string), string refreshTokenToken = default(string), string tokenType = default(string), List<AuthPropertyInfoDTO> authPropertyList = default(List<AuthPropertyInfoDTO>), DateTime? expiresUtc = default(DateTime?), DateTime? issuedUtc = default(DateTime?), bool? isPersistent = default(bool?), List<ClaimInfoDTO> claimInfoList = default(List<ClaimInfoDTO>), bool? arxUserMustChangePassword = default(bool?), MessageErrorDTO error = default(MessageErrorDTO))
         {
-            this.AccessToken = AccessToken;
-            this.RefreshTokenToken = RefreshTokenToken;
-            this.TokenType = TokenType;
-            this.AuthPropertyList = AuthPropertyList;
-            this.ExpiresUtc = ExpiresUtc;
-            this.IssuedUtc = IssuedUtc;
-            this.IsPersistent = IsPersistent;
-            this.ClaimInfoList = ClaimInfoList;
-            this.ArxUserMustChangePassword = ArxUserMustChangePassword;
-            this.Error = Error;
+            this.AccessToken = accessToken;
+            this.RefreshTokenToken = refreshTokenToken;
+            this.TokenType = tokenType;
+            this.AuthPropertyList = authPropertyList;
+            this.ExpiresUtc = expiresUtc;
+            this.IssuedUtc = issuedUtc;
+            this.IsPersistent = isPersistent;
+            this.ClaimInfoList = claimInfoList;
+            this.ArxUserMustChangePassword = arxUserMustChangePassword;
+            this.Error = error;
         }
         
         /// <summary>
@@ -153,7 +153,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

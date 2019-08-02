@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExportMassiveForProcessDocRequestDTO" /> class.
         /// </summary>
-        /// <param name="Items">Items.</param>
-        /// <param name="ForView">ForView.</param>
-        public ExportMassiveForProcessDocRequestDTO(List<ExportMassiveForProcessDocItemRequestDTO> Items = default(List<ExportMassiveForProcessDocItemRequestDTO>), bool? ForView = default(bool?))
+        /// <param name="items">items.</param>
+        /// <param name="forView">forView.</param>
+        public ExportMassiveForProcessDocRequestDTO(List<ExportMassiveForProcessDocItemRequestDTO> items = default(List<ExportMassiveForProcessDocItemRequestDTO>), bool? forView = default(bool?))
         {
-            this.Items = Items;
-            this.ForView = ForView;
+            this.Items = items;
+            this.ForView = forView;
         }
         
         /// <summary>
@@ -71,7 +71,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

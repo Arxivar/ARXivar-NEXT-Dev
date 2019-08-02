@@ -33,56 +33,56 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IxCeDocumentDTO" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="AttachmentId">AttachmentId.</param>
-        /// <param name="NoteId">NoteId.</param>
-        /// <param name="FatherId">FatherId.</param>
-        /// <param name="IxceId">IxceId.</param>
-        /// <param name="VatNumber">VatNumber.</param>
-        /// <param name="DocumentTypeSystemId">DocumentTypeSystemId.</param>
-        /// <param name="DocumentTypeDescription">DocumentTypeDescription.</param>
-        /// <param name="Docnumber">Docnumber.</param>
-        /// <param name="Revision">Revision.</param>
-        /// <param name="CreationDate">CreationDate.</param>
-        /// <param name="Status">Possible values:  0: Error  1: Inserted  2: ConnectorTakeCharge  3: ConnectorError  4: TakeChargeError  5: IxceTakeCharge  6: ToValidate  7: Validated  8: InError  9: Discarded  10: Preserved .</param>
-        /// <param name="InsertionHash">InsertionHash.</param>
-        /// <param name="ReceiveHash">ReceiveHash.</param>
-        /// <param name="AccumulationPackageId">AccumulationPackageId.</param>
-        /// <param name="AccumulationPackageDescription">AccumulationPackageDescription.</param>
-        /// <param name="Modified">Modified.</param>
-        /// <param name="LastUpdate">LastUpdate.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="UserId">UserId.</param>
-        /// <param name="UserDescription">UserDescription.</param>
-        /// <param name="ServiceType">Possible values:  0: IX  1: IXCE  2: IXCE_V2  3: IX_V2 .</param>
-        /// <param name="IxDocumentId">IxDocumentId.</param>
-        /// <param name="IxceIndex">IxceIndex.</param>
-        public IxCeDocumentDTO(int? Id = default(int?), int? AttachmentId = default(int?), int? NoteId = default(int?), int? FatherId = default(int?), string IxceId = default(string), string VatNumber = default(string), int? DocumentTypeSystemId = default(int?), string DocumentTypeDescription = default(string), int? Docnumber = default(int?), int? Revision = default(int?), DateTime? CreationDate = default(DateTime?), int? Status = default(int?), string InsertionHash = default(string), string ReceiveHash = default(string), int? AccumulationPackageId = default(int?), string AccumulationPackageDescription = default(string), bool? Modified = default(bool?), DateTime? LastUpdate = default(DateTime?), string Description = default(string), int? UserId = default(int?), string UserDescription = default(string), int? ServiceType = default(int?), int? IxDocumentId = default(int?), int? IxceIndex = default(int?))
+        /// <param name="id">id.</param>
+        /// <param name="attachmentId">attachmentId.</param>
+        /// <param name="noteId">noteId.</param>
+        /// <param name="fatherId">fatherId.</param>
+        /// <param name="ixceId">ixceId.</param>
+        /// <param name="vatNumber">vatNumber.</param>
+        /// <param name="documentTypeSystemId">documentTypeSystemId.</param>
+        /// <param name="documentTypeDescription">documentTypeDescription.</param>
+        /// <param name="docnumber">docnumber.</param>
+        /// <param name="revision">revision.</param>
+        /// <param name="creationDate">creationDate.</param>
+        /// <param name="status">Possible values:  0: Error  1: Inserted  2: ConnectorTakeCharge  3: ConnectorError  4: TakeChargeError  5: IxceTakeCharge  6: ToValidate  7: Validated  8: InError  9: Discarded  10: Preserved .</param>
+        /// <param name="insertionHash">insertionHash.</param>
+        /// <param name="receiveHash">receiveHash.</param>
+        /// <param name="accumulationPackageId">accumulationPackageId.</param>
+        /// <param name="accumulationPackageDescription">accumulationPackageDescription.</param>
+        /// <param name="modified">modified.</param>
+        /// <param name="lastUpdate">lastUpdate.</param>
+        /// <param name="description">description.</param>
+        /// <param name="userId">userId.</param>
+        /// <param name="userDescription">userDescription.</param>
+        /// <param name="serviceType">Possible values:  0: IX  1: IXCE  2: IXCE_V2  3: IX_V2 .</param>
+        /// <param name="ixDocumentId">ixDocumentId.</param>
+        /// <param name="ixceIndex">ixceIndex.</param>
+        public IxCeDocumentDTO(int? id = default(int?), int? attachmentId = default(int?), int? noteId = default(int?), int? fatherId = default(int?), string ixceId = default(string), string vatNumber = default(string), int? documentTypeSystemId = default(int?), string documentTypeDescription = default(string), int? docnumber = default(int?), int? revision = default(int?), DateTime? creationDate = default(DateTime?), int? status = default(int?), string insertionHash = default(string), string receiveHash = default(string), int? accumulationPackageId = default(int?), string accumulationPackageDescription = default(string), bool? modified = default(bool?), DateTime? lastUpdate = default(DateTime?), string description = default(string), int? userId = default(int?), string userDescription = default(string), int? serviceType = default(int?), int? ixDocumentId = default(int?), int? ixceIndex = default(int?))
         {
-            this.Id = Id;
-            this.AttachmentId = AttachmentId;
-            this.NoteId = NoteId;
-            this.FatherId = FatherId;
-            this.IxceId = IxceId;
-            this.VatNumber = VatNumber;
-            this.DocumentTypeSystemId = DocumentTypeSystemId;
-            this.DocumentTypeDescription = DocumentTypeDescription;
-            this.Docnumber = Docnumber;
-            this.Revision = Revision;
-            this.CreationDate = CreationDate;
-            this.Status = Status;
-            this.InsertionHash = InsertionHash;
-            this.ReceiveHash = ReceiveHash;
-            this.AccumulationPackageId = AccumulationPackageId;
-            this.AccumulationPackageDescription = AccumulationPackageDescription;
-            this.Modified = Modified;
-            this.LastUpdate = LastUpdate;
-            this.Description = Description;
-            this.UserId = UserId;
-            this.UserDescription = UserDescription;
-            this.ServiceType = ServiceType;
-            this.IxDocumentId = IxDocumentId;
-            this.IxceIndex = IxceIndex;
+            this.Id = id;
+            this.AttachmentId = attachmentId;
+            this.NoteId = noteId;
+            this.FatherId = fatherId;
+            this.IxceId = ixceId;
+            this.VatNumber = vatNumber;
+            this.DocumentTypeSystemId = documentTypeSystemId;
+            this.DocumentTypeDescription = documentTypeDescription;
+            this.Docnumber = docnumber;
+            this.Revision = revision;
+            this.CreationDate = creationDate;
+            this.Status = status;
+            this.InsertionHash = insertionHash;
+            this.ReceiveHash = receiveHash;
+            this.AccumulationPackageId = accumulationPackageId;
+            this.AccumulationPackageDescription = accumulationPackageDescription;
+            this.Modified = modified;
+            this.LastUpdate = lastUpdate;
+            this.Description = description;
+            this.UserId = userId;
+            this.UserDescription = userDescription;
+            this.ServiceType = serviceType;
+            this.IxDocumentId = ixDocumentId;
+            this.IxceIndex = ixceIndex;
         }
         
         /// <summary>
@@ -271,7 +271,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

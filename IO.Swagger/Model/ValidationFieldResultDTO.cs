@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidationFieldResultDTO" /> class.
         /// </summary>
-        /// <param name="IsValid">IsValid.</param>
-        /// <param name="ValidationErrorMessage">ValidationErrorMessage.</param>
-        public ValidationFieldResultDTO(bool? IsValid = default(bool?), string ValidationErrorMessage = default(string))
+        /// <param name="isValid">isValid.</param>
+        /// <param name="validationErrorMessage">validationErrorMessage.</param>
+        public ValidationFieldResultDTO(bool? isValid = default(bool?), string validationErrorMessage = default(string))
         {
-            this.IsValid = IsValid;
-            this.ValidationErrorMessage = ValidationErrorMessage;
+            this.IsValid = isValid;
+            this.ValidationErrorMessage = validationErrorMessage;
         }
         
         /// <summary>
@@ -71,7 +71,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AddressBookSearchResultDTO" /> class.
         /// </summary>
-        /// <param name="Data">Data.</param>
-        /// <param name="IsOverResult">IsOverResult.</param>
-        public AddressBookSearchResultDTO(List<RowSearchResult> Data = default(List<RowSearchResult>), bool? IsOverResult = default(bool?))
+        /// <param name="data">Data.</param>
+        /// <param name="isOverResult">IsOverResult.</param>
+        public AddressBookSearchResultDTO(List<RowSearchResult> data = default(List<RowSearchResult>), bool? isOverResult = default(bool?))
         {
-            this.Data = Data;
-            this.IsOverResult = IsOverResult;
+            this.Data = data;
+            this.IsOverResult = isOverResult;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

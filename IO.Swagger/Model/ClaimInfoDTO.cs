@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ClaimInfoDTO" /> class.
         /// </summary>
-        /// <param name="Type">Type.</param>
-        /// <param name="Value">Value.</param>
-        public ClaimInfoDTO(string Type = default(string), string Value = default(string))
+        /// <param name="type">Type.</param>
+        /// <param name="value">Value.</param>
+        public ClaimInfoDTO(string type = default(string), string value = default(string))
         {
-            this.Type = Type;
-            this.Value = Value;
+            this.Type = type;
+            this.Value = value;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

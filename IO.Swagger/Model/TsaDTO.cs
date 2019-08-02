@@ -33,28 +33,28 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TsaDTO" /> class.
         /// </summary>
-        /// <param name="Id">Identifier.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="Url">Url Address.</param>
-        /// <param name="Username">Account Name.</param>
-        /// <param name="PasswordIsSet">Password is set.</param>
-        /// <param name="Enabled">Enabled.</param>
-        /// <param name="Port">Port Number.</param>
-        /// <param name="ExecuteRoleName">Role Name.</param>
-        /// <param name="HashAlgorithm">Possible values:  0: SHA1  1: SHA256 .</param>
-        /// <param name="ProtocolType">Timespamp Protocol.</param>
-        public TsaDTO(string Id = default(string), string Description = default(string), string Url = default(string), string Username = default(string), bool? PasswordIsSet = default(bool?), bool? Enabled = default(bool?), int? Port = default(int?), string ExecuteRoleName = default(string), int? HashAlgorithm = default(int?), TsaProtocolDTO ProtocolType = default(TsaProtocolDTO))
+        /// <param name="id">Identifier.</param>
+        /// <param name="description">Description.</param>
+        /// <param name="url">Url Address.</param>
+        /// <param name="username">Account Name.</param>
+        /// <param name="passwordIsSet">Password is set.</param>
+        /// <param name="enabled">Enabled.</param>
+        /// <param name="port">Port Number.</param>
+        /// <param name="executeRoleName">Role Name.</param>
+        /// <param name="hashAlgorithm">Possible values:  0: SHA1  1: SHA256 .</param>
+        /// <param name="protocolType">Timespamp Protocol.</param>
+        public TsaDTO(string id = default(string), string description = default(string), string url = default(string), string username = default(string), bool? passwordIsSet = default(bool?), bool? enabled = default(bool?), int? port = default(int?), string executeRoleName = default(string), int? hashAlgorithm = default(int?), TsaProtocolDTO protocolType = default(TsaProtocolDTO))
         {
-            this.Id = Id;
-            this.Description = Description;
-            this.Url = Url;
-            this.Username = Username;
-            this.PasswordIsSet = PasswordIsSet;
-            this.Enabled = Enabled;
-            this.Port = Port;
-            this.ExecuteRoleName = ExecuteRoleName;
-            this.HashAlgorithm = HashAlgorithm;
-            this.ProtocolType = ProtocolType;
+            this.Id = id;
+            this.Description = description;
+            this.Url = url;
+            this.Username = username;
+            this.PasswordIsSet = passwordIsSet;
+            this.Enabled = enabled;
+            this.Port = port;
+            this.ExecuteRoleName = executeRoleName;
+            this.HashAlgorithm = hashAlgorithm;
+            this.ProtocolType = protocolType;
         }
         
         /// <summary>
@@ -153,7 +153,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

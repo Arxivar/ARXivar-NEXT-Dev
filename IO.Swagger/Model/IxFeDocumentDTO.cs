@@ -33,36 +33,36 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IxFeDocumentDTO" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="UserId">UserId.</param>
-        /// <param name="UserDescription">UserDescription.</param>
-        /// <param name="DocumentTypeSystemId">DocumentTypeSystemId.</param>
-        /// <param name="Docnumber">Docnumber.</param>
-        /// <param name="Revision">Revision.</param>
-        /// <param name="Status">Possible values:  0: Error  1: Inserted  2: ConnectorTakeCharge  3: ConnectorError  4: IxServiceTakeCharge  5: TemplateCompleted  6: TemplateError  7: ValidationCompleted  8: ValidationError  9: Discarded  10: ConservationCompleted  11: ConservationError  12: historicizingCompleted  13: historicizingError  14: DiscardedNotManaged  15: ResendCompleted  16: ResendError  17: SignCompleted  18: SignError  19: TransmissionCompleted  20: TransmissionError  21: DeliveryReceiptNotification  22: DeliveryMissedNotification  23: DiscardedNotification  24: ResultNotification  25: ExpirationTermsNotification  26: SendAttestationNotification  27: PositiveResultNotification  28: NegativeResultNotification  29: PositiveResultWaiting  30: NegativeResultWaiting .</param>
-        /// <param name="IxDocumentId">IxDocumentId.</param>
-        /// <param name="CreationDate">CreationDate.</param>
-        /// <param name="IxBusinessUnitVatNumber">IxBusinessUnitVatNumber.</param>
-        /// <param name="VatSectional">VatSectional.</param>
-        /// <param name="IxRuleId">IxRuleId.</param>
-        /// <param name="ServiceType">Possible values:  0: IX  1: IXCE  2: IXCE_V2  3: IX_V2 .</param>
-        public IxFeDocumentDTO(int? Id = default(int?), string Description = default(string), int? UserId = default(int?), string UserDescription = default(string), int? DocumentTypeSystemId = default(int?), int? Docnumber = default(int?), int? Revision = default(int?), int? Status = default(int?), string IxDocumentId = default(string), DateTime? CreationDate = default(DateTime?), string IxBusinessUnitVatNumber = default(string), string VatSectional = default(string), int? IxRuleId = default(int?), int? ServiceType = default(int?))
+        /// <param name="id">id.</param>
+        /// <param name="description">description.</param>
+        /// <param name="userId">userId.</param>
+        /// <param name="userDescription">userDescription.</param>
+        /// <param name="documentTypeSystemId">documentTypeSystemId.</param>
+        /// <param name="docnumber">docnumber.</param>
+        /// <param name="revision">revision.</param>
+        /// <param name="status">Possible values:  0: Error  1: Inserted  2: ConnectorTakeCharge  3: ConnectorError  4: IxServiceTakeCharge  5: TemplateCompleted  6: TemplateError  7: ValidationCompleted  8: ValidationError  9: Discarded  10: ConservationCompleted  11: ConservationError  12: historicizingCompleted  13: historicizingError  14: DiscardedNotManaged  15: ResendCompleted  16: ResendError  17: SignCompleted  18: SignError  19: TransmissionCompleted  20: TransmissionError  21: DeliveryReceiptNotification  22: DeliveryMissedNotification  23: DiscardedNotification  24: ResultNotification  25: ExpirationTermsNotification  26: SendAttestationNotification  27: PositiveResultNotification  28: NegativeResultNotification  29: PositiveResultWaiting  30: NegativeResultWaiting .</param>
+        /// <param name="ixDocumentId">ixDocumentId.</param>
+        /// <param name="creationDate">creationDate.</param>
+        /// <param name="ixBusinessUnitVatNumber">ixBusinessUnitVatNumber.</param>
+        /// <param name="vatSectional">vatSectional.</param>
+        /// <param name="ixRuleId">ixRuleId.</param>
+        /// <param name="serviceType">Possible values:  0: IX  1: IXCE  2: IXCE_V2  3: IX_V2 .</param>
+        public IxFeDocumentDTO(int? id = default(int?), string description = default(string), int? userId = default(int?), string userDescription = default(string), int? documentTypeSystemId = default(int?), int? docnumber = default(int?), int? revision = default(int?), int? status = default(int?), string ixDocumentId = default(string), DateTime? creationDate = default(DateTime?), string ixBusinessUnitVatNumber = default(string), string vatSectional = default(string), int? ixRuleId = default(int?), int? serviceType = default(int?))
         {
-            this.Id = Id;
-            this.Description = Description;
-            this.UserId = UserId;
-            this.UserDescription = UserDescription;
-            this.DocumentTypeSystemId = DocumentTypeSystemId;
-            this.Docnumber = Docnumber;
-            this.Revision = Revision;
-            this.Status = Status;
-            this.IxDocumentId = IxDocumentId;
-            this.CreationDate = CreationDate;
-            this.IxBusinessUnitVatNumber = IxBusinessUnitVatNumber;
-            this.VatSectional = VatSectional;
-            this.IxRuleId = IxRuleId;
-            this.ServiceType = ServiceType;
+            this.Id = id;
+            this.Description = description;
+            this.UserId = userId;
+            this.UserDescription = userDescription;
+            this.DocumentTypeSystemId = documentTypeSystemId;
+            this.Docnumber = docnumber;
+            this.Revision = revision;
+            this.Status = status;
+            this.IxDocumentId = ixDocumentId;
+            this.CreationDate = creationDate;
+            this.IxBusinessUnitVatNumber = ixBusinessUnitVatNumber;
+            this.VatSectional = vatSectional;
+            this.IxRuleId = ixRuleId;
+            this.ServiceType = serviceType;
         }
         
         /// <summary>
@@ -181,7 +181,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

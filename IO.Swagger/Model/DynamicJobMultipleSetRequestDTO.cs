@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DynamicJobMultipleSetRequestDTO" /> class.
         /// </summary>
-        /// <param name="DynamicJobUserId">User id of dynamic job.</param>
-        /// <param name="TaskWorkIds">TaskWork id to set.</param>
-        /// <param name="Users">Values for dynamic job.</param>
-        public DynamicJobMultipleSetRequestDTO(int? DynamicJobUserId = default(int?), List<int?> TaskWorkIds = default(List<int?>), List<UserCompleteDTO> Users = default(List<UserCompleteDTO>))
+        /// <param name="dynamicJobUserId">User id of dynamic job.</param>
+        /// <param name="taskWorkIds">TaskWork id to set.</param>
+        /// <param name="users">Values for dynamic job.</param>
+        public DynamicJobMultipleSetRequestDTO(int? dynamicJobUserId = default(int?), List<int?> taskWorkIds = default(List<int?>), List<UserCompleteDTO> users = default(List<UserCompleteDTO>))
         {
-            this.DynamicJobUserId = DynamicJobUserId;
-            this.TaskWorkIds = TaskWorkIds;
-            this.Users = Users;
+            this.DynamicJobUserId = dynamicJobUserId;
+            this.TaskWorkIds = taskWorkIds;
+            this.Users = users;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

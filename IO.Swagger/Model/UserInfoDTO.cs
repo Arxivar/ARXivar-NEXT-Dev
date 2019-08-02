@@ -33,124 +33,126 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserInfoDTO" /> class.
         /// </summary>
-        /// <param name="ServerName">Server name.</param>
-        /// <param name="Provider">Database Type.</param>
-        /// <param name="Database">Database.</param>
-        /// <param name="IsUnicode">Unicode.</param>
-        /// <param name="HasAvatar">Avatar.</param>
-        /// <param name="Roles">Roles.</param>
-        /// <param name="User">Identifier.</param>
-        /// <param name="Group">Possible values:  0: Non_Impostato  1: Admin  2: User  3: Profiler .</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="Email">Email.</param>
-        /// <param name="BusinessUnit">Business Unit.</param>
-        /// <param name="Password">Password.</param>
-        /// <param name="PasswordNew">New Password.</param>
-        /// <param name="DefaultType">Default Document Type of First Level.</param>
-        /// <param name="Type2">Default Document Type of Second Level.</param>
-        /// <param name="Type3">Default Document Type of Third Level.</param>
-        /// <param name="InternalFax">Personal Fax.</param>
-        /// <param name="LastMail">Date of last reading email.</param>
-        /// <param name="Category">Possible values:  0: U  1: S  2: M  3: F  4: G  5: I  6: D .</param>
-        /// <param name="Workflow">Enabling Workflow Management.</param>
-        /// <param name="DefaultState">Default Document Status.</param>
-        /// <param name="AddressBook">Enabling to insert new address book items into profiling.</param>
-        /// <param name="UserState">Possible values:  0: NonAttivo  1: Attivo  2: Nascosto .</param>
-        /// <param name="MailServer">Email Server.</param>
-        /// <param name="WebAccess">Access via Web.</param>
-        /// <param name="Upload">Enabled to Import.</param>
-        /// <param name="Folders">Enabled to OCR.</param>
-        /// <param name="Flow">Enabled to Workflow.</param>
-        /// <param name="Sign">Enabled to Sign.</param>
-        /// <param name="Viewer">Possible values:  0: Standard  1: Lite  2: Comunicazioni  3: Portal .</param>
-        /// <param name="Protocol">Enabled to Public Amministration (PA) Protocol.</param>
-        /// <param name="Models">Enabled to Templates.</param>
-        /// <param name="Domain">Domain.</param>
-        /// <param name="OutState">Out Status.</param>
-        /// <param name="MailBody">Email Body.</param>
-        /// <param name="Notify">Enabled to Notify.</param>
-        /// <param name="MailClient">Mailer client.</param>
-        /// <param name="HtmlBody">Possible values:  0: Disabilitato  1: SoloSpedizione  2: SoloRicezione  3: SpedizioneRicezione .</param>
-        /// <param name="RespAos">Person in Charge of AOS.</param>
-        /// <param name="AssAos">Enabled to Profile Manual Emails.</param>
-        /// <param name="CodFis">Fiscal Code.</param>
-        /// <param name="Pin">Pin.</param>
-        /// <param name="Guest">Guest.</param>
-        /// <param name="PasswordChange">Change Password.</param>
-        /// <param name="Marking">Imagine for the Digital Signature.</param>
-        /// <param name="Type">Type.</param>
-        /// <param name="MailOutDefault">Enabled to Profile Manual Outgoing Emails.</param>
-        /// <param name="BarcodeAccess">Enabled to Barcode.</param>
-        /// <param name="MustChangePassword">Possible values:  0: No  1: Yes  2: YesForChangePasswordNew .</param>
-        /// <param name="Lang">Language.</param>
-        /// <param name="ProfileDefaultId">Predefined Profile Identifier.</param>
-        /// <param name="Ws">Enabled to IX service..</param>
-        /// <param name="PswFailCount">Count of the failed attempts to change password.</param>
-        /// <param name="PswLastFailDate">Last failed Attempt to change password.</param>
-        /// <param name="PswFailIpCaller">Ip Address used by failed change password.</param>
-        /// <param name="DisablePswExpired">Disabled Expired Password.</param>
-        /// <param name="LockOutDateTimeUtc">User Date Blocked.</param>
-        /// <param name="CompleteName">Full Name.</param>
-        public UserInfoDTO(string ServerName = default(string), string Provider = default(string), string Database = default(string), bool? IsUnicode = default(bool?), bool? HasAvatar = default(bool?), List<RolesInfoDto> Roles = default(List<RolesInfoDto>), int? User = default(int?), int? Group = default(int?), string Description = default(string), string Email = default(string), string BusinessUnit = default(string), string Password = default(string), string PasswordNew = default(string), int? DefaultType = default(int?), int? Type2 = default(int?), int? Type3 = default(int?), string InternalFax = default(string), DateTime? LastMail = default(DateTime?), int? Category = default(int?), bool? Workflow = default(bool?), string DefaultState = default(string), bool? AddressBook = default(bool?), int? UserState = default(int?), string MailServer = default(string), bool? WebAccess = default(bool?), bool? Upload = default(bool?), bool? Folders = default(bool?), bool? Flow = default(bool?), bool? Sign = default(bool?), int? Viewer = default(int?), bool? Protocol = default(bool?), bool? Models = default(bool?), string Domain = default(string), string OutState = default(string), string MailBody = default(string), bool? Notify = default(bool?), string MailClient = default(string), int? HtmlBody = default(int?), bool? RespAos = default(bool?), bool? AssAos = default(bool?), string CodFis = default(string), string Pin = default(string), bool? Guest = default(bool?), bool? PasswordChange = default(bool?), byte[] Marking = default(byte[]), int? Type = default(int?), bool? MailOutDefault = default(bool?), bool? BarcodeAccess = default(bool?), int? MustChangePassword = default(int?), string Lang = default(string), int? ProfileDefaultId = default(int?), bool? Ws = default(bool?), int? PswFailCount = default(int?), DateTime? PswLastFailDate = default(DateTime?), string PswFailIpCaller = default(string), bool? DisablePswExpired = default(bool?), DateTime? LockOutDateTimeUtc = default(DateTime?), string CompleteName = default(string))
+        /// <param name="serverName">Server name.</param>
+        /// <param name="provider">Database Type.</param>
+        /// <param name="database">Database.</param>
+        /// <param name="isUnicode">Unicode.</param>
+        /// <param name="hasAvatar">Avatar.</param>
+        /// <param name="roles">Roles.</param>
+        /// <param name="user">Identifier.</param>
+        /// <param name="group">Possible values:  0: Non_Impostato  1: Admin  2: User  3: Profiler .</param>
+        /// <param name="description">Description.</param>
+        /// <param name="email">Email.</param>
+        /// <param name="businessUnit">Business Unit.</param>
+        /// <param name="password">Password.</param>
+        /// <param name="passwordNew">New Password.</param>
+        /// <param name="defaultType">Default Document Type of First Level.</param>
+        /// <param name="type2">Default Document Type of Second Level.</param>
+        /// <param name="type3">Default Document Type of Third Level.</param>
+        /// <param name="internalFax">Personal Fax.</param>
+        /// <param name="lastMail">Date of last reading email.</param>
+        /// <param name="category">Possible values:  0: U  1: S  2: M  3: F  4: G  5: I  6: D .</param>
+        /// <param name="workflow">Enabling Workflow Management.</param>
+        /// <param name="defaultState">Default Document Status.</param>
+        /// <param name="addressBook">Enabling to insert new address book items into profiling.</param>
+        /// <param name="userState">Possible values:  0: NonAttivo  1: Attivo  2: Nascosto .</param>
+        /// <param name="mailServer">Email Server.</param>
+        /// <param name="webAccess">Access via Web.</param>
+        /// <param name="upload">Enabled to Import.</param>
+        /// <param name="folders">Enabled to OCR.</param>
+        /// <param name="flow">Enabled to Workflow.</param>
+        /// <param name="sign">Enabled to Sign.</param>
+        /// <param name="viewer">Possible values:  0: Standard  1: Lite  2: Comunicazioni  3: Portal .</param>
+        /// <param name="protocol">Enabled to Public Amministration (PA) Protocol.</param>
+        /// <param name="models">Enabled to Templates.</param>
+        /// <param name="domain">Domain.</param>
+        /// <param name="outState">Out Status.</param>
+        /// <param name="mailBody">Email Body.</param>
+        /// <param name="notify">Enabled to Notify.</param>
+        /// <param name="mailClient">Mailer client.</param>
+        /// <param name="htmlBody">Possible values:  0: Disabilitato  1: SoloSpedizione  2: SoloRicezione  3: SpedizioneRicezione .</param>
+        /// <param name="respAos">Person in Charge of AOS.</param>
+        /// <param name="assAos">Enabled to Profile Manual Emails.</param>
+        /// <param name="codFis">Fiscal Code.</param>
+        /// <param name="pin">Pin.</param>
+        /// <param name="guest">Guest.</param>
+        /// <param name="passwordChange">Change Password.</param>
+        /// <param name="marking">Imagine for the Digital Signature.</param>
+        /// <param name="type">Type.</param>
+        /// <param name="mailOutDefault">Enabled to Profile Manual Outgoing Emails.</param>
+        /// <param name="barcodeAccess">Enabled to Barcode.</param>
+        /// <param name="mustChangePassword">Possible values:  0: No  1: Yes  2: YesForChangePasswordNew .</param>
+        /// <param name="lang">Language.</param>
+        /// <param name="profileDefaultId">Predefined Profile Identifier.</param>
+        /// <param name="ws">Enabled to IX service..</param>
+        /// <param name="pswFailCount">Count of the failed attempts to change password.</param>
+        /// <param name="pswLastFailDate">Last failed Attempt to change password.</param>
+        /// <param name="pswFailIpCaller">Ip Address used by failed change password.</param>
+        /// <param name="disablePswExpired">Disabled Expired Password.</param>
+        /// <param name="lockOutDateTimeUtc">User Date Blocked.</param>
+        /// <param name="completeName">Full Name.</param>
+        /// <param name="completeDescription">Full Description.</param>
+        public UserInfoDTO(string serverName = default(string), string provider = default(string), string database = default(string), bool? isUnicode = default(bool?), bool? hasAvatar = default(bool?), List<RolesInfoDto> roles = default(List<RolesInfoDto>), int? user = default(int?), int? group = default(int?), string description = default(string), string email = default(string), string businessUnit = default(string), string password = default(string), string passwordNew = default(string), int? defaultType = default(int?), int? type2 = default(int?), int? type3 = default(int?), string internalFax = default(string), DateTime? lastMail = default(DateTime?), int? category = default(int?), bool? workflow = default(bool?), string defaultState = default(string), bool? addressBook = default(bool?), int? userState = default(int?), string mailServer = default(string), bool? webAccess = default(bool?), bool? upload = default(bool?), bool? folders = default(bool?), bool? flow = default(bool?), bool? sign = default(bool?), int? viewer = default(int?), bool? protocol = default(bool?), bool? models = default(bool?), string domain = default(string), string outState = default(string), string mailBody = default(string), bool? notify = default(bool?), string mailClient = default(string), int? htmlBody = default(int?), bool? respAos = default(bool?), bool? assAos = default(bool?), string codFis = default(string), string pin = default(string), bool? guest = default(bool?), bool? passwordChange = default(bool?), byte[] marking = default(byte[]), int? type = default(int?), bool? mailOutDefault = default(bool?), bool? barcodeAccess = default(bool?), int? mustChangePassword = default(int?), string lang = default(string), int? profileDefaultId = default(int?), bool? ws = default(bool?), int? pswFailCount = default(int?), DateTime? pswLastFailDate = default(DateTime?), string pswFailIpCaller = default(string), bool? disablePswExpired = default(bool?), DateTime? lockOutDateTimeUtc = default(DateTime?), string completeName = default(string), string completeDescription = default(string))
         {
-            this.ServerName = ServerName;
-            this.Provider = Provider;
-            this.Database = Database;
-            this.IsUnicode = IsUnicode;
-            this.HasAvatar = HasAvatar;
-            this.Roles = Roles;
-            this.User = User;
-            this.Group = Group;
-            this.Description = Description;
-            this.Email = Email;
-            this.BusinessUnit = BusinessUnit;
-            this.Password = Password;
-            this.PasswordNew = PasswordNew;
-            this.DefaultType = DefaultType;
-            this.Type2 = Type2;
-            this.Type3 = Type3;
-            this.InternalFax = InternalFax;
-            this.LastMail = LastMail;
-            this.Category = Category;
-            this.Workflow = Workflow;
-            this.DefaultState = DefaultState;
-            this.AddressBook = AddressBook;
-            this.UserState = UserState;
-            this.MailServer = MailServer;
-            this.WebAccess = WebAccess;
-            this.Upload = Upload;
-            this.Folders = Folders;
-            this.Flow = Flow;
-            this.Sign = Sign;
-            this.Viewer = Viewer;
-            this.Protocol = Protocol;
-            this.Models = Models;
-            this.Domain = Domain;
-            this.OutState = OutState;
-            this.MailBody = MailBody;
-            this.Notify = Notify;
-            this.MailClient = MailClient;
-            this.HtmlBody = HtmlBody;
-            this.RespAos = RespAos;
-            this.AssAos = AssAos;
-            this.CodFis = CodFis;
-            this.Pin = Pin;
-            this.Guest = Guest;
-            this.PasswordChange = PasswordChange;
-            this.Marking = Marking;
-            this.Type = Type;
-            this.MailOutDefault = MailOutDefault;
-            this.BarcodeAccess = BarcodeAccess;
-            this.MustChangePassword = MustChangePassword;
-            this.Lang = Lang;
-            this.ProfileDefaultId = ProfileDefaultId;
-            this.Ws = Ws;
-            this.PswFailCount = PswFailCount;
-            this.PswLastFailDate = PswLastFailDate;
-            this.PswFailIpCaller = PswFailIpCaller;
-            this.DisablePswExpired = DisablePswExpired;
-            this.LockOutDateTimeUtc = LockOutDateTimeUtc;
-            this.CompleteName = CompleteName;
+            this.ServerName = serverName;
+            this.Provider = provider;
+            this.Database = database;
+            this.IsUnicode = isUnicode;
+            this.HasAvatar = hasAvatar;
+            this.Roles = roles;
+            this.User = user;
+            this.Group = group;
+            this.Description = description;
+            this.Email = email;
+            this.BusinessUnit = businessUnit;
+            this.Password = password;
+            this.PasswordNew = passwordNew;
+            this.DefaultType = defaultType;
+            this.Type2 = type2;
+            this.Type3 = type3;
+            this.InternalFax = internalFax;
+            this.LastMail = lastMail;
+            this.Category = category;
+            this.Workflow = workflow;
+            this.DefaultState = defaultState;
+            this.AddressBook = addressBook;
+            this.UserState = userState;
+            this.MailServer = mailServer;
+            this.WebAccess = webAccess;
+            this.Upload = upload;
+            this.Folders = folders;
+            this.Flow = flow;
+            this.Sign = sign;
+            this.Viewer = viewer;
+            this.Protocol = protocol;
+            this.Models = models;
+            this.Domain = domain;
+            this.OutState = outState;
+            this.MailBody = mailBody;
+            this.Notify = notify;
+            this.MailClient = mailClient;
+            this.HtmlBody = htmlBody;
+            this.RespAos = respAos;
+            this.AssAos = assAos;
+            this.CodFis = codFis;
+            this.Pin = pin;
+            this.Guest = guest;
+            this.PasswordChange = passwordChange;
+            this.Marking = marking;
+            this.Type = type;
+            this.MailOutDefault = mailOutDefault;
+            this.BarcodeAccess = barcodeAccess;
+            this.MustChangePassword = mustChangePassword;
+            this.Lang = lang;
+            this.ProfileDefaultId = profileDefaultId;
+            this.Ws = ws;
+            this.PswFailCount = pswFailCount;
+            this.PswLastFailDate = pswLastFailDate;
+            this.PswFailIpCaller = pswFailIpCaller;
+            this.DisablePswExpired = disablePswExpired;
+            this.LockOutDateTimeUtc = lockOutDateTimeUtc;
+            this.CompleteName = completeName;
+            this.CompleteDescription = completeDescription;
         }
         
         /// <summary>
@@ -560,6 +562,13 @@ namespace IO.Swagger.Model
         public string CompleteName { get; set; }
 
         /// <summary>
+        /// Full Description
+        /// </summary>
+        /// <value>Full Description</value>
+        [DataMember(Name="completeDescription", EmitDefaultValue=false)]
+        public string CompleteDescription { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -625,6 +634,7 @@ namespace IO.Swagger.Model
             sb.Append("  DisablePswExpired: ").Append(DisablePswExpired).Append("\n");
             sb.Append("  LockOutDateTimeUtc: ").Append(LockOutDateTimeUtc).Append("\n");
             sb.Append("  CompleteName: ").Append(CompleteName).Append("\n");
+            sb.Append("  CompleteDescription: ").Append(CompleteDescription).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -633,7 +643,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -948,6 +958,11 @@ namespace IO.Swagger.Model
                     this.CompleteName == input.CompleteName ||
                     (this.CompleteName != null &&
                     this.CompleteName.Equals(input.CompleteName))
+                ) && 
+                (
+                    this.CompleteDescription == input.CompleteDescription ||
+                    (this.CompleteDescription != null &&
+                    this.CompleteDescription.Equals(input.CompleteDescription))
                 );
         }
 
@@ -1076,6 +1091,8 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.LockOutDateTimeUtc.GetHashCode();
                 if (this.CompleteName != null)
                     hashCode = hashCode * 59 + this.CompleteName.GetHashCode();
+                if (this.CompleteDescription != null)
+                    hashCode = hashCode * 59 + this.CompleteDescription.GetHashCode();
                 return hashCode;
             }
         }

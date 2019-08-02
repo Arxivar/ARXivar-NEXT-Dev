@@ -33,42 +33,42 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ModelProfileSchemaDTO" /> class.
         /// </summary>
-        /// <param name="ModelId">Template Identifier.</param>
-        /// <param name="ModelDescription">Description.</param>
-        /// <param name="Options">Options.</param>
-        /// <param name="Behaviour">Behaviour.</param>
-        /// <param name="OpenModelAfterProfilation">Open file after profiling..</param>
-        /// <param name="EditModelAfterProfilation">Editing file after profiling..</param>
-        /// <param name="MaskId">Mask Identifier.</param>
-        /// <param name="Id">Identifier.</param>
-        /// <param name="Document">File data.</param>
-        /// <param name="Fields">Fields.</param>
-        /// <param name="PostProfilationActions">Post Profilation Actions.</param>
-        /// <param name="ConstrainRoleBehaviour">Possible values:  0: None  1: ForceInsert  2: State .</param>
-        /// <param name="Attachments">Attachments.</param>
-        /// <param name="Notes">Notes.</param>
-        /// <param name="PaNotes">Public Amministration Notes.</param>
-        /// <param name="AuthorityData">Authority Data.</param>
-        /// <param name="GeneratePaProtocol">Defines if a protocol has been generated.</param>
-        public ModelProfileSchemaDTO(int? ModelId = default(int?), string ModelDescription = default(string), ProfileMaskOptionsDTO Options = default(ProfileMaskOptionsDTO), ProfileMaskBehaviourDTO Behaviour = default(ProfileMaskBehaviourDTO), bool? OpenModelAfterProfilation = default(bool?), bool? EditModelAfterProfilation = default(bool?), string MaskId = default(string), int? Id = default(int?), FileDTO Document = default(FileDTO), List<FieldBaseDTO> Fields = default(List<FieldBaseDTO>), List<PostProfilationActionDTO> PostProfilationActions = default(List<PostProfilationActionDTO>), int? ConstrainRoleBehaviour = default(int?), List<string> Attachments = default(List<string>), List<NoteDTO> Notes = default(List<NoteDTO>), List<string> PaNotes = default(List<string>), AuthorityDataDTO AuthorityData = default(AuthorityDataDTO), bool? GeneratePaProtocol = default(bool?))
+        /// <param name="modelId">Template Identifier.</param>
+        /// <param name="modelDescription">Description.</param>
+        /// <param name="options">Options.</param>
+        /// <param name="behaviour">Behaviour.</param>
+        /// <param name="openModelAfterProfilation">Open file after profiling..</param>
+        /// <param name="editModelAfterProfilation">Editing file after profiling..</param>
+        /// <param name="maskId">Mask Identifier.</param>
+        /// <param name="id">Identifier.</param>
+        /// <param name="document">File data.</param>
+        /// <param name="fields">Fields.</param>
+        /// <param name="postProfilationActions">Post Profilation Actions.</param>
+        /// <param name="constrainRoleBehaviour">Possible values:  0: None  1: ForceInsert  2: State .</param>
+        /// <param name="attachments">Attachments.</param>
+        /// <param name="notes">Notes.</param>
+        /// <param name="paNotes">Public Amministration Notes.</param>
+        /// <param name="authorityData">Authority Data.</param>
+        /// <param name="generatePaProtocol">Defines if a protocol has been generated.</param>
+        public ModelProfileSchemaDTO(int? modelId = default(int?), string modelDescription = default(string), ProfileMaskOptionsDTO options = default(ProfileMaskOptionsDTO), ProfileMaskBehaviourDTO behaviour = default(ProfileMaskBehaviourDTO), bool? openModelAfterProfilation = default(bool?), bool? editModelAfterProfilation = default(bool?), string maskId = default(string), int? id = default(int?), FileDTO document = default(FileDTO), List<FieldBaseDTO> fields = default(List<FieldBaseDTO>), List<PostProfilationActionDTO> postProfilationActions = default(List<PostProfilationActionDTO>), int? constrainRoleBehaviour = default(int?), List<string> attachments = default(List<string>), List<NoteDTO> notes = default(List<NoteDTO>), List<string> paNotes = default(List<string>), AuthorityDataDTO authorityData = default(AuthorityDataDTO), bool? generatePaProtocol = default(bool?))
         {
-            this.ModelId = ModelId;
-            this.ModelDescription = ModelDescription;
-            this.Options = Options;
-            this.Behaviour = Behaviour;
-            this.OpenModelAfterProfilation = OpenModelAfterProfilation;
-            this.EditModelAfterProfilation = EditModelAfterProfilation;
-            this.MaskId = MaskId;
-            this.Id = Id;
-            this.Document = Document;
-            this.Fields = Fields;
-            this.PostProfilationActions = PostProfilationActions;
-            this.ConstrainRoleBehaviour = ConstrainRoleBehaviour;
-            this.Attachments = Attachments;
-            this.Notes = Notes;
-            this.PaNotes = PaNotes;
-            this.AuthorityData = AuthorityData;
-            this.GeneratePaProtocol = GeneratePaProtocol;
+            this.ModelId = modelId;
+            this.ModelDescription = modelDescription;
+            this.Options = options;
+            this.Behaviour = behaviour;
+            this.OpenModelAfterProfilation = openModelAfterProfilation;
+            this.EditModelAfterProfilation = editModelAfterProfilation;
+            this.MaskId = maskId;
+            this.Id = id;
+            this.Document = document;
+            this.Fields = fields;
+            this.PostProfilationActions = postProfilationActions;
+            this.ConstrainRoleBehaviour = constrainRoleBehaviour;
+            this.Attachments = attachments;
+            this.Notes = notes;
+            this.PaNotes = paNotes;
+            this.AuthorityData = authorityData;
+            this.GeneratePaProtocol = generatePaProtocol;
         }
         
         /// <summary>
@@ -223,7 +223,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

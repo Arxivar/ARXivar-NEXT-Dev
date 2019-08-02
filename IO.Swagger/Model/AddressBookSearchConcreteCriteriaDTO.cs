@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AddressBookSearchConcreteCriteriaDTO" /> class.
         /// </summary>
-        /// <param name="SearchDto">Addressbook search.</param>
-        /// <param name="SelectDto">Addressbook select.</param>
-        public AddressBookSearchConcreteCriteriaDTO(AddressBookSearchConcreteDTO SearchDto = default(AddressBookSearchConcreteDTO), SelectDTO SelectDto = default(SelectDTO))
+        /// <param name="searchDto">Addressbook search.</param>
+        /// <param name="selectDto">Addressbook select.</param>
+        public AddressBookSearchConcreteCriteriaDTO(AddressBookSearchConcreteDTO searchDto = default(AddressBookSearchConcreteDTO), SelectDTO selectDto = default(SelectDTO))
         {
-            this.SearchDto = SearchDto;
-            this.SelectDto = SelectDto;
+            this.SearchDto = searchDto;
+            this.SelectDto = selectDto;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

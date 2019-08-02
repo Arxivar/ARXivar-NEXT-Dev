@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FolderPermissionsDTO" /> class.
         /// </summary>
-        /// <param name="Spread">Spread to sub-levels folders.</param>
-        /// <param name="UsersPermissions">List of user permissions.</param>
-        /// <param name="PermissionsProperties">Permission Properties.</param>
-        public FolderPermissionsDTO(bool? Spread = default(bool?), List<UserPermissionDTO> UsersPermissions = default(List<UserPermissionDTO>), List<PermissionPropertiesDTO> PermissionsProperties = default(List<PermissionPropertiesDTO>))
+        /// <param name="spread">Spread to sub-levels folders.</param>
+        /// <param name="usersPermissions">List of user permissions.</param>
+        /// <param name="permissionsProperties">Permission Properties.</param>
+        public FolderPermissionsDTO(bool? spread = default(bool?), List<UserPermissionDTO> usersPermissions = default(List<UserPermissionDTO>), List<PermissionPropertiesDTO> permissionsProperties = default(List<PermissionPropertiesDTO>))
         {
-            this.Spread = Spread;
-            this.UsersPermissions = UsersPermissions;
-            this.PermissionsProperties = PermissionsProperties;
+            this.Spread = spread;
+            this.UsersPermissions = usersPermissions;
+            this.PermissionsProperties = permissionsProperties;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

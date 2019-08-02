@@ -33,28 +33,28 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AttachmentRevisionDTO" /> class.
         /// </summary>
-        /// <param name="Id">Identifier.</param>
-        /// <param name="AttachmentId">Identifier of attachment.</param>
-        /// <param name="Revision">Revision number.</param>
-        /// <param name="User">Identifier of the author.</param>
-        /// <param name="UserDescription">Description of the author.</param>
-        /// <param name="CreationDate">Creation Date.</param>
-        /// <param name="Path">Path to store file.</param>
-        /// <param name="FileName">Compressed File Name.</param>
-        /// <param name="OriginalFileName">File name.</param>
-        /// <param name="Hash">Hash of file.</param>
-        public AttachmentRevisionDTO(int? Id = default(int?), int? AttachmentId = default(int?), int? Revision = default(int?), int? User = default(int?), string UserDescription = default(string), DateTime? CreationDate = default(DateTime?), string Path = default(string), string FileName = default(string), string OriginalFileName = default(string), string Hash = default(string))
+        /// <param name="id">Identifier.</param>
+        /// <param name="attachmentId">Identifier of attachment.</param>
+        /// <param name="revision">Revision number.</param>
+        /// <param name="user">Identifier of the author.</param>
+        /// <param name="userDescription">Description of the author.</param>
+        /// <param name="creationDate">Creation Date.</param>
+        /// <param name="path">Path to store file.</param>
+        /// <param name="fileName">Compressed File Name.</param>
+        /// <param name="originalFileName">File name.</param>
+        /// <param name="hash">Hash of file.</param>
+        public AttachmentRevisionDTO(int? id = default(int?), int? attachmentId = default(int?), int? revision = default(int?), int? user = default(int?), string userDescription = default(string), DateTime? creationDate = default(DateTime?), string path = default(string), string fileName = default(string), string originalFileName = default(string), string hash = default(string))
         {
-            this.Id = Id;
-            this.AttachmentId = AttachmentId;
-            this.Revision = Revision;
-            this.User = User;
-            this.UserDescription = UserDescription;
-            this.CreationDate = CreationDate;
-            this.Path = Path;
-            this.FileName = FileName;
-            this.OriginalFileName = OriginalFileName;
-            this.Hash = Hash;
+            this.Id = id;
+            this.AttachmentId = attachmentId;
+            this.Revision = revision;
+            this.User = user;
+            this.UserDescription = userDescription;
+            this.CreationDate = creationDate;
+            this.Path = path;
+            this.FileName = fileName;
+            this.OriginalFileName = originalFileName;
+            this.Hash = hash;
         }
         
         /// <summary>
@@ -153,7 +153,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

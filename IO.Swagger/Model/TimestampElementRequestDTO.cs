@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimestampElementRequestDTO" /> class.
         /// </summary>
-        /// <param name="TableType">Possible values:  0: Attachment  2: TaskWorkAttachment  14: Profile  74: ProcessDoc .</param>
-        /// <param name="DocId">Document Identifier.</param>
-        /// <param name="DocExtraId">Document External Identifier.</param>
-        public TimestampElementRequestDTO(int? TableType = default(int?), string DocId = default(string), string DocExtraId = default(string))
+        /// <param name="tableType">Possible values:  0: Attachment  2: TaskWorkAttachment  14: Profile  74: ProcessDoc .</param>
+        /// <param name="docId">Document Identifier.</param>
+        /// <param name="docExtraId">Document External Identifier.</param>
+        public TimestampElementRequestDTO(int? tableType = default(int?), string docId = default(string), string docExtraId = default(string))
         {
-            this.TableType = TableType;
-            this.DocId = DocId;
-            this.DocExtraId = DocExtraId;
+            this.TableType = tableType;
+            this.DocId = docId;
+            this.DocExtraId = docExtraId;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

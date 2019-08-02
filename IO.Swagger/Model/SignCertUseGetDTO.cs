@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SignCertUseGetDTO" /> class.
         /// </summary>
-        /// <param name="SignCertId">Identifier of certificate.</param>
-        /// <param name="CertUseList">List of certificate use.</param>
-        /// <param name="CertPasswordIsSet">Password is set.</param>
-        public SignCertUseGetDTO(int? SignCertId = default(int?), List<SignCertUseDTO> CertUseList = default(List<SignCertUseDTO>), bool? CertPasswordIsSet = default(bool?))
+        /// <param name="signCertId">Identifier of certificate.</param>
+        /// <param name="certUseList">List of certificate use.</param>
+        /// <param name="certPasswordIsSet">Password is set.</param>
+        public SignCertUseGetDTO(int? signCertId = default(int?), List<SignCertUseDTO> certUseList = default(List<SignCertUseDTO>), bool? certPasswordIsSet = default(bool?))
         {
-            this.SignCertId = SignCertId;
-            this.CertUseList = CertUseList;
-            this.CertPasswordIsSet = CertPasswordIsSet;
+            this.SignCertId = signCertId;
+            this.CertUseList = certUseList;
+            this.CertPasswordIsSet = certPasswordIsSet;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

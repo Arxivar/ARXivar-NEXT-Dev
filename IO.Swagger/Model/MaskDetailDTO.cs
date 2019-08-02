@@ -33,24 +33,24 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MaskDetailDTO" /> class.
         /// </summary>
-        /// <param name="Id">Detail Identifier.</param>
-        /// <param name="MaskId">Mask Identifier.</param>
-        /// <param name="FieldName">Name of the field..</param>
-        /// <param name="Label">Label.</param>
-        /// <param name="Order">Mask detail order.</param>
-        /// <param name="_ReadOnly">Read Only.</param>
-        /// <param name="Required">Required.</param>
-        /// <param name="DetailKind">Possible values:  0: NonImpostato  1: From  2: To  3: Cc  4: Aoo  5: DocumentType  6: DataDoc  7: Numero  8: Oggetto  9: Origine  10: Stato  11: Pratiche  12: Scadenza  13: Importante  14: AbilitaWeb  15: AvviaWorkFlow  16: InviaPerFax  17: InviaPerMail  18: AllegaATaskAttivo  19: InserisciInAssociazione  20: InserisciInFascicolo  21: InserisciInRelazioneManuale  22: GestisciRevisioni  23: Note  24: Allegati  25: Aggiuntivo  26: File  27: Scanner  28: Barcode  29: SicurezzaSingoloDocumento  30: ExternalId  31: AllegaMemo  32: Senders  33: AvviaCollaboration  34: ScansioneImmediata  35: NegaCommuta  36: From_Cap  37: From_Cell  38: From_Codfis  39: From_Codice  40: From_Contatti  41: From_Email  42: From_Fax  43: From_Faxnome  44: From_Indirizzo  45: From_Localita  46: From_Mail  47: From_Mansione  48: From_Nazione  49: From_Partiva  50: From_Provincia  51: From_Reparto  52: From_Riferimento  53: From_Tel  54: From_Telnome  55: From_Ufficio  56: From_Valore  57: From_Abitazione  58: To_Cap  59: To_Cell  60: To_Codfis  61: To_Codice  62: To_Contatti  63: To_Email  64: To_Fax  65: To_Faxnome  66: To_Indirizzo  67: To_Localita  68: To_Mail  69: To_Mansione  70: To_Nazione  71: To_Partiva  72: To_Provincia  73: To_Reparto  74: To_Riferimento  75: To_Tel  76: To_Telnome  77: To_Ufficio  78: To_Valore  79: To_Abitazione  80: Cc_Cap  81: Cc_Cell  82: Cc_Codfis  83: Cc_Codice  84: Cc_Contatti  85: Cc_Email  86: Cc_Fax  87: Cc_Faxnome  88: Cc_Indirizzo  89: Cc_Localita  90: Cc_Mail  91: Cc_Mansione  92: Cc_Nazione  93: Cc_Partiva  94: Cc_Provincia  95: Cc_Reparto  96: Cc_Riferimento  97: Cc_Tel  98: Cc_Telnome  99: Cc_Ufficio  100: Cc_Valore  101: Cc_Abitazione  102: Senders_Cap  103: Senders_Cell  104: Senders_Codfis  105: Senders_Codice  106: Senders_Contatti  107: Senders_Email  108: Senders_Fax  109: Senders_Faxnome  110: Senders_Indirizzo  111: Senders_Localita  112: Senders_Mail  113: Senders_Mansione  114: Senders_Nazione  115: Senders_Partiva  116: Senders_Provincia  117: Senders_Reparto  118: Senders_Riferimento  119: Senders_Tel  120: Senders_Telnome  121: Senders_Ufficio  122: Senders_Valore  123: Senders_Abitazione  124: From_Priorita  125: To_Priorita  126: Cc_Priorita  127: Senders_Priorita .</param>
-        public MaskDetailDTO(string Id = default(string), string MaskId = default(string), string FieldName = default(string), string Label = default(string), int? Order = default(int?), bool? _ReadOnly = default(bool?), bool? Required = default(bool?), int? DetailKind = default(int?))
+        /// <param name="id">Detail Identifier.</param>
+        /// <param name="maskId">Mask Identifier.</param>
+        /// <param name="fieldName">Name of the field..</param>
+        /// <param name="label">Label.</param>
+        /// <param name="order">Mask detail order.</param>
+        /// <param name="readOnly">Read Only.</param>
+        /// <param name="required">Required.</param>
+        /// <param name="detailKind">Possible values:  0: NonImpostato  1: From  2: To  3: Cc  4: Aoo  5: DocumentType  6: DataDoc  7: Numero  8: Oggetto  9: Origine  10: Stato  11: Pratiche  12: Scadenza  13: Importante  14: AbilitaWeb  15: AvviaWorkFlow  16: InviaPerFax  17: InviaPerMail  18: AllegaATaskAttivo  19: InserisciInAssociazione  20: InserisciInFascicolo  21: InserisciInRelazioneManuale  22: GestisciRevisioni  23: Note  24: Allegati  25: Aggiuntivo  26: File  27: Scanner  28: Barcode  29: SicurezzaSingoloDocumento  30: ExternalId  31: AllegaMemo  32: Senders  33: AvviaCollaboration  34: ScansioneImmediata  35: NegaCommuta  36: From_Cap  37: From_Cell  38: From_Codfis  39: From_Codice  40: From_Contatti  41: From_Email  42: From_Fax  43: From_Faxnome  44: From_Indirizzo  45: From_Localita  46: From_Mail  47: From_Mansione  48: From_Nazione  49: From_Partiva  50: From_Provincia  51: From_Reparto  52: From_Riferimento  53: From_Tel  54: From_Telnome  55: From_Ufficio  56: From_Valore  57: From_Abitazione  58: To_Cap  59: To_Cell  60: To_Codfis  61: To_Codice  62: To_Contatti  63: To_Email  64: To_Fax  65: To_Faxnome  66: To_Indirizzo  67: To_Localita  68: To_Mail  69: To_Mansione  70: To_Nazione  71: To_Partiva  72: To_Provincia  73: To_Reparto  74: To_Riferimento  75: To_Tel  76: To_Telnome  77: To_Ufficio  78: To_Valore  79: To_Abitazione  80: Cc_Cap  81: Cc_Cell  82: Cc_Codfis  83: Cc_Codice  84: Cc_Contatti  85: Cc_Email  86: Cc_Fax  87: Cc_Faxnome  88: Cc_Indirizzo  89: Cc_Localita  90: Cc_Mail  91: Cc_Mansione  92: Cc_Nazione  93: Cc_Partiva  94: Cc_Provincia  95: Cc_Reparto  96: Cc_Riferimento  97: Cc_Tel  98: Cc_Telnome  99: Cc_Ufficio  100: Cc_Valore  101: Cc_Abitazione  102: Senders_Cap  103: Senders_Cell  104: Senders_Codfis  105: Senders_Codice  106: Senders_Contatti  107: Senders_Email  108: Senders_Fax  109: Senders_Faxnome  110: Senders_Indirizzo  111: Senders_Localita  112: Senders_Mail  113: Senders_Mansione  114: Senders_Nazione  115: Senders_Partiva  116: Senders_Provincia  117: Senders_Reparto  118: Senders_Riferimento  119: Senders_Tel  120: Senders_Telnome  121: Senders_Ufficio  122: Senders_Valore  123: Senders_Abitazione  124: From_Priorita  125: To_Priorita  126: Cc_Priorita  127: Senders_Priorita .</param>
+        public MaskDetailDTO(string id = default(string), string maskId = default(string), string fieldName = default(string), string label = default(string), int? order = default(int?), bool? readOnly = default(bool?), bool? required = default(bool?), int? detailKind = default(int?))
         {
-            this.Id = Id;
-            this.MaskId = MaskId;
-            this.FieldName = FieldName;
-            this.Label = Label;
-            this.Order = Order;
-            this._ReadOnly = _ReadOnly;
-            this.Required = Required;
-            this.DetailKind = DetailKind;
+            this.Id = id;
+            this.MaskId = maskId;
+            this.FieldName = fieldName;
+            this.Label = label;
+            this.Order = order;
+            this.ReadOnly = readOnly;
+            this.Required = required;
+            this.DetailKind = detailKind;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <value>Read Only</value>
         [DataMember(Name="readOnly", EmitDefaultValue=false)]
-        public bool? _ReadOnly { get; set; }
+        public bool? ReadOnly { get; set; }
 
         /// <summary>
         /// Required
@@ -122,7 +122,7 @@ namespace IO.Swagger.Model
             sb.Append("  FieldName: ").Append(FieldName).Append("\n");
             sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("  Order: ").Append(Order).Append("\n");
-            sb.Append("  _ReadOnly: ").Append(_ReadOnly).Append("\n");
+            sb.Append("  ReadOnly: ").Append(ReadOnly).Append("\n");
             sb.Append("  Required: ").Append(Required).Append("\n");
             sb.Append("  DetailKind: ").Append(DetailKind).Append("\n");
             sb.Append("}\n");
@@ -133,7 +133,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -185,9 +185,9 @@ namespace IO.Swagger.Model
                     this.Order.Equals(input.Order))
                 ) && 
                 (
-                    this._ReadOnly == input._ReadOnly ||
-                    (this._ReadOnly != null &&
-                    this._ReadOnly.Equals(input._ReadOnly))
+                    this.ReadOnly == input.ReadOnly ||
+                    (this.ReadOnly != null &&
+                    this.ReadOnly.Equals(input.ReadOnly))
                 ) && 
                 (
                     this.Required == input.Required ||
@@ -220,8 +220,8 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.Label.GetHashCode();
                 if (this.Order != null)
                     hashCode = hashCode * 59 + this.Order.GetHashCode();
-                if (this._ReadOnly != null)
-                    hashCode = hashCode * 59 + this._ReadOnly.GetHashCode();
+                if (this.ReadOnly != null)
+                    hashCode = hashCode * 59 + this.ReadOnly.GetHashCode();
                 if (this.Required != null)
                     hashCode = hashCode * 59 + this.Required.GetHashCode();
                 if (this.DetailKind != null)

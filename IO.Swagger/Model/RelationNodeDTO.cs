@@ -33,20 +33,20 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RelationNodeDTO" /> class.
         /// </summary>
-        /// <param name="DocNumber">Docnumber of profile.</param>
-        /// <param name="DocumentType">Document type system id.</param>
-        /// <param name="Description">Description of this node.</param>
-        /// <param name="IsGroup">Id group.</param>
-        /// <param name="AccessDenied">Access denied for the user.</param>
-        /// <param name="Childs">Child nodes.</param>
-        public RelationNodeDTO(int? DocNumber = default(int?), int? DocumentType = default(int?), string Description = default(string), bool? IsGroup = default(bool?), bool? AccessDenied = default(bool?), List<RelationNodeDTO> Childs = default(List<RelationNodeDTO>))
+        /// <param name="docNumber">Docnumber of profile.</param>
+        /// <param name="documentType">Document type system id.</param>
+        /// <param name="description">Description of this node.</param>
+        /// <param name="isGroup">Id group.</param>
+        /// <param name="accessDenied">Access denied for the user.</param>
+        /// <param name="childs">Child nodes.</param>
+        public RelationNodeDTO(int? docNumber = default(int?), int? documentType = default(int?), string description = default(string), bool? isGroup = default(bool?), bool? accessDenied = default(bool?), List<RelationNodeDTO> childs = default(List<RelationNodeDTO>))
         {
-            this.DocNumber = DocNumber;
-            this.DocumentType = DocumentType;
-            this.Description = Description;
-            this.IsGroup = IsGroup;
-            this.AccessDenied = AccessDenied;
-            this.Childs = Childs;
+            this.DocNumber = docNumber;
+            this.DocumentType = documentType;
+            this.Description = description;
+            this.IsGroup = isGroup;
+            this.AccessDenied = accessDenied;
+            this.Childs = childs;
         }
         
         /// <summary>
@@ -113,7 +113,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

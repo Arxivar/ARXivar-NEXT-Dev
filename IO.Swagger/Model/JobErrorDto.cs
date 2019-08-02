@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="JobErrorDto" /> class.
         /// </summary>
-        /// <param name="Message">Message.</param>
-        /// <param name="Code">Code.</param>
-        public JobErrorDto(string Message = default(string), string Code = default(string))
+        /// <param name="message">message.</param>
+        /// <param name="code">code.</param>
+        public JobErrorDto(string message = default(string), string code = default(string))
         {
-            this.Message = Message;
-            this.Code = Code;
+            this.Message = message;
+            this.Code = code;
         }
         
         /// <summary>
@@ -71,7 +71,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

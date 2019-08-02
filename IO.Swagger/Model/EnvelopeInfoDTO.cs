@@ -33,22 +33,22 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EnvelopeInfoDTO" /> class.
         /// </summary>
-        /// <param name="SignatureInfoList">SignatureInfoList.</param>
-        /// <param name="TimestampInfo">TimestampInfo.</param>
-        /// <param name="NestedDepth">NestedDepth.</param>
-        /// <param name="EnvelopeSha256Hash">EnvelopeSha256Hash.</param>
-        /// <param name="ContentSha256Hash">ContentSha256Hash.</param>
-        /// <param name="MimeType">MimeType.</param>
-        /// <param name="ValidationMessageList">ValidationMessageList.</param>
-        public EnvelopeInfoDTO(List<SignatureInfoDTO> SignatureInfoList = default(List<SignatureInfoDTO>), TimestampInfoDTO TimestampInfo = default(TimestampInfoDTO), int? NestedDepth = default(int?), string EnvelopeSha256Hash = default(string), string ContentSha256Hash = default(string), string MimeType = default(string), List<ValidationMessageDTO> ValidationMessageList = default(List<ValidationMessageDTO>))
+        /// <param name="signatureInfoList">signatureInfoList.</param>
+        /// <param name="timestampInfo">timestampInfo.</param>
+        /// <param name="nestedDepth">nestedDepth.</param>
+        /// <param name="envelopeSha256Hash">envelopeSha256Hash.</param>
+        /// <param name="contentSha256Hash">contentSha256Hash.</param>
+        /// <param name="mimeType">mimeType.</param>
+        /// <param name="validationMessageList">validationMessageList.</param>
+        public EnvelopeInfoDTO(List<SignatureInfoDTO> signatureInfoList = default(List<SignatureInfoDTO>), TimestampInfoDTO timestampInfo = default(TimestampInfoDTO), int? nestedDepth = default(int?), string envelopeSha256Hash = default(string), string contentSha256Hash = default(string), string mimeType = default(string), List<ValidationMessageDTO> validationMessageList = default(List<ValidationMessageDTO>))
         {
-            this.SignatureInfoList = SignatureInfoList;
-            this.TimestampInfo = TimestampInfo;
-            this.NestedDepth = NestedDepth;
-            this.EnvelopeSha256Hash = EnvelopeSha256Hash;
-            this.ContentSha256Hash = ContentSha256Hash;
-            this.MimeType = MimeType;
-            this.ValidationMessageList = ValidationMessageList;
+            this.SignatureInfoList = signatureInfoList;
+            this.TimestampInfo = timestampInfo;
+            this.NestedDepth = nestedDepth;
+            this.EnvelopeSha256Hash = envelopeSha256Hash;
+            this.ContentSha256Hash = contentSha256Hash;
+            this.MimeType = mimeType;
+            this.ValidationMessageList = validationMessageList;
         }
         
         /// <summary>
@@ -116,7 +116,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

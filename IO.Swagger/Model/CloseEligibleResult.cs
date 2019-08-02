@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CloseEligibleResult" /> class.
         /// </summary>
-        /// <param name="TaskWorkId">TaskWork id.</param>
-        /// <param name="EligibleToClose">TaskWork can closed.</param>
-        /// <param name="ErrorMEssage">Optional message if tarsWork is not concludible.</param>
-        public CloseEligibleResult(int? TaskWorkId = default(int?), bool? EligibleToClose = default(bool?), string ErrorMEssage = default(string))
+        /// <param name="taskWorkId">TaskWork id.</param>
+        /// <param name="eligibleToClose">TaskWork can closed.</param>
+        /// <param name="errorMEssage">Optional message if tarsWork is not concludible.</param>
+        public CloseEligibleResult(int? taskWorkId = default(int?), bool? eligibleToClose = default(bool?), string errorMEssage = default(string))
         {
-            this.TaskWorkId = TaskWorkId;
-            this.EligibleToClose = EligibleToClose;
-            this.ErrorMEssage = ErrorMEssage;
+            this.TaskWorkId = taskWorkId;
+            this.EligibleToClose = eligibleToClose;
+            this.ErrorMEssage = errorMEssage;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

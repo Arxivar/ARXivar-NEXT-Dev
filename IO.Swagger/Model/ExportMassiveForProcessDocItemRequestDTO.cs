@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExportMassiveForProcessDocItemRequestDTO" /> class.
         /// </summary>
-        /// <param name="ProcessDocId">ProcessDocId.</param>
-        /// <param name="TaskId">TaskId.</param>
-        public ExportMassiveForProcessDocItemRequestDTO(int? ProcessDocId = default(int?), int? TaskId = default(int?))
+        /// <param name="processDocId">processDocId.</param>
+        /// <param name="taskId">taskId.</param>
+        public ExportMassiveForProcessDocItemRequestDTO(int? processDocId = default(int?), int? taskId = default(int?))
         {
-            this.ProcessDocId = ProcessDocId;
-            this.TaskId = TaskId;
+            this.ProcessDocId = processDocId;
+            this.TaskId = taskId;
         }
         
         /// <summary>
@@ -71,7 +71,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

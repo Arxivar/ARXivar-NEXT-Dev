@@ -33,28 +33,28 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FieldString" /> class.
         /// </summary>
-        /// <param name="Valore">Valore.</param>
-        /// <param name="Operatore">Possible values:  0: Non_Impostato  1: Uguale  2: Diverso  3: Inizia  4: Contiene  5: Termina  6: Nullo  7: Non_Nullo  8: Vuoto  9: Non_Vuoto  10: Nullo_o_Vuoto  11: Non_Nullo_e_Non_Vuoto  12: Like .</param>
-        /// <param name="Size">Size.</param>
-        /// <param name="Encryption">Possible values:  0: None  1: AesEncryption .</param>
-        /// <param name="ForceCaseInsensitive">ForceCaseInsensitive.</param>
-        /// <param name="Nome">Nome.</param>
-        /// <param name="NomeTabella">NomeTabella.</param>
-        /// <param name="ExternalId">ExternalId.</param>
-        /// <param name="Multiple">Multiple.</param>
-        /// <param name="Label">Label.</param>
-        public FieldString(string Valore = default(string), int? Operatore = default(int?), int? Size = default(int?), int? Encryption = default(int?), bool? ForceCaseInsensitive = default(bool?), string Nome = default(string), string NomeTabella = default(string), string ExternalId = default(string), string Multiple = default(string), string Label = default(string))
+        /// <param name="valore">valore.</param>
+        /// <param name="operatore">Possible values:  0: Non_Impostato  1: Uguale  2: Diverso  3: Inizia  4: Contiene  5: Termina  6: Nullo  7: Non_Nullo  8: Vuoto  9: Non_Vuoto  10: Nullo_o_Vuoto  11: Non_Nullo_e_Non_Vuoto  12: Like .</param>
+        /// <param name="size">size.</param>
+        /// <param name="encryption">Possible values:  0: None  1: AesEncryption .</param>
+        /// <param name="forceCaseInsensitive">forceCaseInsensitive.</param>
+        /// <param name="nome">nome.</param>
+        /// <param name="nomeTabella">nomeTabella.</param>
+        /// <param name="externalId">externalId.</param>
+        /// <param name="multiple">multiple.</param>
+        /// <param name="label">label.</param>
+        public FieldString(string valore = default(string), int? operatore = default(int?), int? size = default(int?), int? encryption = default(int?), bool? forceCaseInsensitive = default(bool?), string nome = default(string), string nomeTabella = default(string), string externalId = default(string), string multiple = default(string), string label = default(string))
         {
-            this.Valore = Valore;
-            this.Operatore = Operatore;
-            this.Size = Size;
-            this.Encryption = Encryption;
-            this.ForceCaseInsensitive = ForceCaseInsensitive;
-            this.Nome = Nome;
-            this.NomeTabella = NomeTabella;
-            this.ExternalId = ExternalId;
-            this.Multiple = Multiple;
-            this.Label = Label;
+            this.Valore = valore;
+            this.Operatore = operatore;
+            this.Size = size;
+            this.Encryption = encryption;
+            this.ForceCaseInsensitive = forceCaseInsensitive;
+            this.Nome = nome;
+            this.NomeTabella = nomeTabella;
+            this.ExternalId = externalId;
+            this.Multiple = multiple;
+            this.Label = label;
         }
         
         /// <summary>
@@ -145,7 +145,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

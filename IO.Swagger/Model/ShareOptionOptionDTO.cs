@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ShareOptionOptionDTO" /> class.
         /// </summary>
-        /// <param name="Option">Possible values:  1: Read  2: ReadAndWrite .</param>
-        /// <param name="OptionUserMessage">User label for this option.</param>
-        public ShareOptionOptionDTO(int? Option = default(int?), string OptionUserMessage = default(string))
+        /// <param name="option">Possible values:  1: Read  2: ReadAndWrite .</param>
+        /// <param name="optionUserMessage">User label for this option.</param>
+        public ShareOptionOptionDTO(int? option = default(int?), string optionUserMessage = default(string))
         {
-            this.Option = Option;
-            this.OptionUserMessage = OptionUserMessage;
+            this.Option = option;
+            this.OptionUserMessage = optionUserMessage;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

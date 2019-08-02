@@ -33,20 +33,20 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TaskExitCodeDTO" /> class.
         /// </summary>
-        /// <param name="Id">Id of the exit code.</param>
-        /// <param name="Value">The value of the exit code.</param>
-        /// <param name="Icon">Icon idex of the exit code.</param>
-        /// <param name="TranslatedDescription">Translated description in the user language.</param>
-        /// <param name="TaskIds">Ids of taskwork eligible for this exitcode.</param>
-        /// <param name="IsDefault">Is default exit code.</param>
-        public TaskExitCodeDTO(int? Id = default(int?), string Value = default(string), int? Icon = default(int?), string TranslatedDescription = default(string), List<int?> TaskIds = default(List<int?>), bool? IsDefault = default(bool?))
+        /// <param name="id">Id of the exit code.</param>
+        /// <param name="value">The value of the exit code.</param>
+        /// <param name="icon">Icon idex of the exit code.</param>
+        /// <param name="translatedDescription">Translated description in the user language.</param>
+        /// <param name="taskIds">Ids of taskwork eligible for this exitcode.</param>
+        /// <param name="isDefault">Is default exit code.</param>
+        public TaskExitCodeDTO(int? id = default(int?), string value = default(string), int? icon = default(int?), string translatedDescription = default(string), List<int?> taskIds = default(List<int?>), bool? isDefault = default(bool?))
         {
-            this.Id = Id;
-            this.Value = Value;
-            this.Icon = Icon;
-            this.TranslatedDescription = TranslatedDescription;
-            this.TaskIds = TaskIds;
-            this.IsDefault = IsDefault;
+            this.Id = id;
+            this.Value = value;
+            this.Icon = icon;
+            this.TranslatedDescription = translatedDescription;
+            this.TaskIds = taskIds;
+            this.IsDefault = isDefault;
         }
         
         /// <summary>
@@ -113,7 +113,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

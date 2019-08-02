@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AuthPropertyInfoDTO" /> class.
         /// </summary>
-        /// <param name="Key">Key.</param>
-        /// <param name="Value">Value.</param>
-        public AuthPropertyInfoDTO(string Key = default(string), string Value = default(string))
+        /// <param name="key">Key.</param>
+        /// <param name="value">Value.</param>
+        public AuthPropertyInfoDTO(string key = default(string), string value = default(string))
         {
-            this.Key = Key;
-            this.Value = Value;
+            this.Key = key;
+            this.Value = value;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

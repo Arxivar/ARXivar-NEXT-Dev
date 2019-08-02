@@ -33,24 +33,24 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocToOcrDTO" /> class.
         /// </summary>
-        /// <param name="Docnumber">Document Identifier.</param>
-        /// <param name="Status">Possible values:  1: Pending  2: Failed  3: Scheduled  4: Pending_Rev  5: Failed_Rev  6: Scheduled_Rev .</param>
-        /// <param name="Revision">Revision of document.</param>
-        /// <param name="OcrDate">Schedule Date.</param>
-        /// <param name="User">User Identifier.</param>
-        /// <param name="Guid">Identifier.</param>
-        /// <param name="NumAttemps">Number of Attempts.</param>
-        /// <param name="ErrorMessage">Error Message.</param>
-        public DocToOcrDTO(int? Docnumber = default(int?), int? Status = default(int?), int? Revision = default(int?), DateTime? OcrDate = default(DateTime?), int? User = default(int?), string Guid = default(string), int? NumAttemps = default(int?), string ErrorMessage = default(string))
+        /// <param name="docnumber">Document Identifier.</param>
+        /// <param name="status">Possible values:  1: Pending  2: Failed  3: Scheduled  4: Pending_Rev  5: Failed_Rev  6: Scheduled_Rev .</param>
+        /// <param name="revision">Revision of document.</param>
+        /// <param name="ocrDate">Schedule Date.</param>
+        /// <param name="user">User Identifier.</param>
+        /// <param name="guid">Identifier.</param>
+        /// <param name="numAttemps">Number of Attempts.</param>
+        /// <param name="errorMessage">Error Message.</param>
+        public DocToOcrDTO(int? docnumber = default(int?), int? status = default(int?), int? revision = default(int?), DateTime? ocrDate = default(DateTime?), int? user = default(int?), string guid = default(string), int? numAttemps = default(int?), string errorMessage = default(string))
         {
-            this.Docnumber = Docnumber;
-            this.Status = Status;
-            this.Revision = Revision;
-            this.OcrDate = OcrDate;
-            this.User = User;
-            this.Guid = Guid;
-            this.NumAttemps = NumAttemps;
-            this.ErrorMessage = ErrorMessage;
+            this.Docnumber = docnumber;
+            this.Status = status;
+            this.Revision = revision;
+            this.OcrDate = ocrDate;
+            this.User = user;
+            this.Guid = guid;
+            this.NumAttemps = numAttemps;
+            this.ErrorMessage = errorMessage;
         }
         
         /// <summary>
@@ -133,7 +133,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

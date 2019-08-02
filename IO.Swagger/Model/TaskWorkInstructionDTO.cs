@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TaskWorkInstructionDTO" /> class.
         /// </summary>
-        /// <param name="TaskWorkInstructionGroups">TaskWorkInstructionGroups.</param>
-        /// <param name="TaskWorkInstructionItems">TaskWorkInstructionItems.</param>
-        public TaskWorkInstructionDTO(List<TaskWorkInstructionGroupDTO> TaskWorkInstructionGroups = default(List<TaskWorkInstructionGroupDTO>), List<TaskWorkInstructionItemDTO> TaskWorkInstructionItems = default(List<TaskWorkInstructionItemDTO>))
+        /// <param name="taskWorkInstructionGroups">taskWorkInstructionGroups.</param>
+        /// <param name="taskWorkInstructionItems">taskWorkInstructionItems.</param>
+        public TaskWorkInstructionDTO(List<TaskWorkInstructionGroupDTO> taskWorkInstructionGroups = default(List<TaskWorkInstructionGroupDTO>), List<TaskWorkInstructionItemDTO> taskWorkInstructionItems = default(List<TaskWorkInstructionItemDTO>))
         {
-            this.TaskWorkInstructionGroups = TaskWorkInstructionGroups;
-            this.TaskWorkInstructionItems = TaskWorkInstructionItems;
+            this.TaskWorkInstructionGroups = taskWorkInstructionGroups;
+            this.TaskWorkInstructionItems = taskWorkInstructionItems;
         }
         
         /// <summary>
@@ -71,7 +71,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

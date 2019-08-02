@@ -33,16 +33,16 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MaskCloneOptionsDto" /> class.
         /// </summary>
-        /// <param name="ClonePredefinedProfile">Clone the Predefined Profile.</param>
-        /// <param name="PredefinedProfileName">Predefined Profile Name.</param>
-        /// <param name="MaskName">Name.</param>
-        /// <param name="OriginalMaskId">Parent Identifier.</param>
-        public MaskCloneOptionsDto(bool? ClonePredefinedProfile = default(bool?), string PredefinedProfileName = default(string), string MaskName = default(string), string OriginalMaskId = default(string))
+        /// <param name="clonePredefinedProfile">Clone the Predefined Profile.</param>
+        /// <param name="predefinedProfileName">Predefined Profile Name.</param>
+        /// <param name="maskName">Name.</param>
+        /// <param name="originalMaskId">Parent Identifier.</param>
+        public MaskCloneOptionsDto(bool? clonePredefinedProfile = default(bool?), string predefinedProfileName = default(string), string maskName = default(string), string originalMaskId = default(string))
         {
-            this.ClonePredefinedProfile = ClonePredefinedProfile;
-            this.PredefinedProfileName = PredefinedProfileName;
-            this.MaskName = MaskName;
-            this.OriginalMaskId = OriginalMaskId;
+            this.ClonePredefinedProfile = clonePredefinedProfile;
+            this.PredefinedProfileName = predefinedProfileName;
+            this.MaskName = maskName;
+            this.OriginalMaskId = originalMaskId;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

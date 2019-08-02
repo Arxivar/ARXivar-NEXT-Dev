@@ -38,16 +38,16 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FieldBaseForSearchDoubleDto" /> class.
         /// </summary>
-        /// <param name="Decimals">Decimals.</param>
-        /// <param name="_Operator">Possible values:  0: Non_Impostato  1: Minore  2: Minore_Uguale  3: Uguale  4: Maggiore_Uguale  5: Maggiore  6: Diverso  7: Compreso  8: Nullo  9: Non_Nullo  10: Nullo_o_Zero  11: Non_Nullo_e_Non_Zero  12: Escluso .</param>
-        /// <param name="Valore1">The value of this field.</param>
-        /// <param name="Valore2">The second value for this field (used only for some operator).</param>
-        public FieldBaseForSearchDoubleDto(int? Decimals = default(int?), int? _Operator = default(int?), double? Valore1 = default(double?), double? Valore2 = default(double?), int? GroupId = default(int?), int? FieldType = default(int?), int? AdditionalFieldType = default(int?), int? DefaultOperator = default(int?), string TableName = default(string), int? BinderFieldId = default(int?), string Multiple = default(string), string Name = default(string), string ExternalId = default(string), string Description = default(string), int? Order = default(int?), string DataSource = default(string), bool? Required = default(bool?), string Formula = default(string), string ClassName = "FieldBaseForSearchDoubleDto", bool? Locked = default(bool?), string ComboGruppiId = default(string), List<DependencyFieldItem> DependencyFields = default(List<DependencyFieldItem>), Dictionary<string, string> Associations = default(Dictionary<string, string>), bool? IsAdditional = default(bool?), bool? Visible = default(bool?), string PredefinedProfileFormula = default(string)) : base(GroupId, FieldType, AdditionalFieldType, DefaultOperator, TableName, BinderFieldId, Multiple, Name, ExternalId, Description, Order, DataSource, Required, Formula, ClassName, Locked, ComboGruppiId, DependencyFields, Associations, IsAdditional, Visible, PredefinedProfileFormula)
+        /// <param name="decimals">decimals.</param>
+        /// <param name="_operator">Possible values:  0: Non_Impostato  1: Minore  2: Minore_Uguale  3: Uguale  4: Maggiore_Uguale  5: Maggiore  6: Diverso  7: Compreso  8: Nullo  9: Non_Nullo  10: Nullo_o_Zero  11: Non_Nullo_e_Non_Zero  12: Escluso .</param>
+        /// <param name="valore1">The value of this field.</param>
+        /// <param name="valore2">The second value for this field (used only for some operator).</param>
+        public FieldBaseForSearchDoubleDto(int? decimals = default(int?), int? _operator = default(int?), double? valore1 = default(double?), double? valore2 = default(double?), int? groupId = default(int?), int? fieldType = default(int?), int? additionalFieldType = default(int?), int? defaultOperator = default(int?), string tableName = default(string), int? binderFieldId = default(int?), string multiple = default(string), string name = default(string), string externalId = default(string), string description = default(string), int? order = default(int?), string dataSource = default(string), bool? required = default(bool?), string formula = default(string), string className = "FieldBaseForSearchDoubleDto", bool? locked = default(bool?), string comboGruppiId = default(string), List<DependencyFieldItem> dependencyFields = default(List<DependencyFieldItem>), Dictionary<string, string> associations = default(Dictionary<string, string>), bool? isAdditional = default(bool?), bool? visible = default(bool?), string predefinedProfileFormula = default(string)) : base(groupId, fieldType, additionalFieldType, defaultOperator, tableName, binderFieldId, multiple, name, externalId, description, order, dataSource, required, formula, className, locked, comboGruppiId, dependencyFields, associations, isAdditional, visible, predefinedProfileFormula)
         {
-            this.Decimals = Decimals;
-            this._Operator = _Operator;
-            this.Valore1 = Valore1;
-            this.Valore2 = Valore2;
+            this.Decimals = decimals;
+            this.Operator = _operator;
+            this.Valore1 = valore1;
+            this.Valore2 = valore2;
         }
         
         /// <summary>
@@ -61,7 +61,7 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <value>Possible values:  0: Non_Impostato  1: Minore  2: Minore_Uguale  3: Uguale  4: Maggiore_Uguale  5: Maggiore  6: Diverso  7: Compreso  8: Nullo  9: Non_Nullo  10: Nullo_o_Zero  11: Non_Nullo_e_Non_Zero  12: Escluso </value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
-        public int? _Operator { get; set; }
+        public int? Operator { get; set; }
 
         /// <summary>
         /// The value of this field
@@ -87,7 +87,7 @@ namespace IO.Swagger.Model
             sb.Append("class FieldBaseForSearchDoubleDto {\n");
             sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  Decimals: ").Append(Decimals).Append("\n");
-            sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+            sb.Append("  Operator: ").Append(Operator).Append("\n");
             sb.Append("  Valore1: ").Append(Valore1).Append("\n");
             sb.Append("  Valore2: ").Append(Valore2).Append("\n");
             sb.Append("}\n");
@@ -130,9 +130,9 @@ namespace IO.Swagger.Model
                     this.Decimals.Equals(input.Decimals))
                 ) && base.Equals(input) && 
                 (
-                    this._Operator == input._Operator ||
-                    (this._Operator != null &&
-                    this._Operator.Equals(input._Operator))
+                    this.Operator == input.Operator ||
+                    (this.Operator != null &&
+                    this.Operator.Equals(input.Operator))
                 ) && base.Equals(input) && 
                 (
                     this.Valore1 == input.Valore1 ||
@@ -157,8 +157,8 @@ namespace IO.Swagger.Model
                 int hashCode = base.GetHashCode();
                 if (this.Decimals != null)
                     hashCode = hashCode * 59 + this.Decimals.GetHashCode();
-                if (this._Operator != null)
-                    hashCode = hashCode * 59 + this._Operator.GetHashCode();
+                if (this.Operator != null)
+                    hashCode = hashCode * 59 + this.Operator.GetHashCode();
                 if (this.Valore1 != null)
                     hashCode = hashCode * 59 + this.Valore1.GetHashCode();
                 if (this.Valore2 != null)

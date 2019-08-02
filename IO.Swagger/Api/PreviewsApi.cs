@@ -97,6 +97,48 @@ namespace IO.Swagger.Api
         /// <param name="docnumber">Document identifier</param>
         /// <returns>ApiResponse of ProfilePreviewDTO</returns>
         ApiResponse<ProfilePreviewDTO> PreviewsGetProfilePreviewByDocnumberWithHttpInfo (int? docnumber);
+        /// <summary>
+        /// This call returns the list of preview of the document list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumbers">Document identifiers</param>
+        /// <returns>List&lt;ProfilePreviewDTO&gt;</returns>
+        List<ProfilePreviewDTO> PreviewsGetProfilesPreviewByDocnumbers (List<int?> docnumbers);
+
+        /// <summary>
+        /// This call returns the list of preview of the document list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumbers">Document identifiers</param>
+        /// <returns>ApiResponse of List&lt;ProfilePreviewDTO&gt;</returns>
+        ApiResponse<List<ProfilePreviewDTO>> PreviewsGetProfilesPreviewByDocnumbersWithHttpInfo (List<int?> docnumbers);
+        /// <summary>
+        /// This call returns the list of preview of the task document list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskPreviewList">Task document identifiers</param>
+        /// <returns>List&lt;ProfilePreviewDTO&gt;</returns>
+        List<ProfilePreviewDTO> PreviewsGetProfilesPreviewByTaskworItems (List<TaskPreviewRequestDto> taskPreviewList);
+
+        /// <summary>
+        /// This call returns the list of preview of the task document list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskPreviewList">Task document identifiers</param>
+        /// <returns>ApiResponse of List&lt;ProfilePreviewDTO&gt;</returns>
+        ApiResponse<List<ProfilePreviewDTO>> PreviewsGetProfilesPreviewByTaskworItemsWithHttpInfo (List<TaskPreviewRequestDto> taskPreviewList);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -172,6 +214,48 @@ namespace IO.Swagger.Api
         /// <param name="docnumber">Document identifier</param>
         /// <returns>Task of ApiResponse (ProfilePreviewDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<ProfilePreviewDTO>> PreviewsGetProfilePreviewByDocnumberAsyncWithHttpInfo (int? docnumber);
+        /// <summary>
+        /// This call returns the list of preview of the document list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumbers">Document identifiers</param>
+        /// <returns>Task of List&lt;ProfilePreviewDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<ProfilePreviewDTO>> PreviewsGetProfilesPreviewByDocnumbersAsync (List<int?> docnumbers);
+
+        /// <summary>
+        /// This call returns the list of preview of the document list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumbers">Document identifiers</param>
+        /// <returns>Task of ApiResponse (List&lt;ProfilePreviewDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<ProfilePreviewDTO>>> PreviewsGetProfilesPreviewByDocnumbersAsyncWithHttpInfo (List<int?> docnumbers);
+        /// <summary>
+        /// This call returns the list of preview of the task document list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskPreviewList">Task document identifiers</param>
+        /// <returns>Task of List&lt;ProfilePreviewDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<ProfilePreviewDTO>> PreviewsGetProfilesPreviewByTaskworItemsAsync (List<TaskPreviewRequestDto> taskPreviewList);
+
+        /// <summary>
+        /// This call returns the list of preview of the task document list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskPreviewList">Task document identifiers</param>
+        /// <returns>Task of ApiResponse (List&lt;ProfilePreviewDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<ProfilePreviewDTO>>> PreviewsGetProfilesPreviewByTaskworItemsAsyncWithHttpInfo (List<TaskPreviewRequestDto> taskPreviewList);
         #endregion Asynchronous Operations
     }
 
@@ -188,7 +272,7 @@ namespace IO.Swagger.Api
         /// <returns></returns>
         public PreviewsApi(String basePath)
         {
-            this.Configuration = new Configuration { BasePath = basePath };
+            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
 
             ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
         }
@@ -199,10 +283,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public PreviewsApi(Configuration configuration = null)
+        public PreviewsApi(IO.Swagger.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = Configuration.Default;
+                this.Configuration = IO.Swagger.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
@@ -232,7 +316,7 @@ namespace IO.Swagger.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Configuration Configuration {get; set;}
+        public IO.Swagger.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
@@ -309,7 +393,7 @@ namespace IO.Swagger.Api
             var localVarPath = "/api/Previews/{counterstable}/{keyid}/totalpages/{revision}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -317,7 +401,7 @@ namespace IO.Swagger.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -326,22 +410,22 @@ namespace IO.Swagger.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (counterstable != null) localVarPathParams.Add("counterstable", Configuration.ApiClient.ParameterToString(counterstable)); // path parameter
-            if (keyid != null) localVarPathParams.Add("keyid", Configuration.ApiClient.ParameterToString(keyid)); // path parameter
-            if (revision != null) localVarPathParams.Add("revision", Configuration.ApiClient.ParameterToString(revision)); // path parameter
+            if (counterstable != null) localVarPathParams.Add("counterstable", this.Configuration.ApiClient.ParameterToString(counterstable)); // path parameter
+            if (keyid != null) localVarPathParams.Add("keyid", this.Configuration.ApiClient.ParameterToString(keyid)); // path parameter
+            if (revision != null) localVarPathParams.Add("revision", this.Configuration.ApiClient.ParameterToString(revision)); // path parameter
 
             // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -355,7 +439,7 @@ namespace IO.Swagger.Api
 
             return new ApiResponse<PreviewSchemaDTO>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PreviewSchemaDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PreviewSchemaDTO)));
+                (PreviewSchemaDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PreviewSchemaDTO)));
         }
 
         /// <summary>
@@ -396,7 +480,7 @@ namespace IO.Swagger.Api
             var localVarPath = "/api/Previews/{counterstable}/{keyid}/totalpages/{revision}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -404,7 +488,7 @@ namespace IO.Swagger.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -413,22 +497,22 @@ namespace IO.Swagger.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (counterstable != null) localVarPathParams.Add("counterstable", Configuration.ApiClient.ParameterToString(counterstable)); // path parameter
-            if (keyid != null) localVarPathParams.Add("keyid", Configuration.ApiClient.ParameterToString(keyid)); // path parameter
-            if (revision != null) localVarPathParams.Add("revision", Configuration.ApiClient.ParameterToString(revision)); // path parameter
+            if (counterstable != null) localVarPathParams.Add("counterstable", this.Configuration.ApiClient.ParameterToString(counterstable)); // path parameter
+            if (keyid != null) localVarPathParams.Add("keyid", this.Configuration.ApiClient.ParameterToString(keyid)); // path parameter
+            if (revision != null) localVarPathParams.Add("revision", this.Configuration.ApiClient.ParameterToString(revision)); // path parameter
 
             // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -442,7 +526,7 @@ namespace IO.Swagger.Api
 
             return new ApiResponse<PreviewSchemaDTO>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PreviewSchemaDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PreviewSchemaDTO)));
+                (PreviewSchemaDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PreviewSchemaDTO)));
         }
 
         /// <summary>
@@ -487,7 +571,7 @@ namespace IO.Swagger.Api
             var localVarPath = "/api/Previews/{counterstable}/{keyid}/page/{pageindex}/{revision}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -495,7 +579,7 @@ namespace IO.Swagger.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -504,23 +588,23 @@ namespace IO.Swagger.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (counterstable != null) localVarPathParams.Add("counterstable", Configuration.ApiClient.ParameterToString(counterstable)); // path parameter
-            if (keyid != null) localVarPathParams.Add("keyid", Configuration.ApiClient.ParameterToString(keyid)); // path parameter
-            if (pageindex != null) localVarPathParams.Add("pageindex", Configuration.ApiClient.ParameterToString(pageindex)); // path parameter
-            if (revision != null) localVarPathParams.Add("revision", Configuration.ApiClient.ParameterToString(revision)); // path parameter
+            if (counterstable != null) localVarPathParams.Add("counterstable", this.Configuration.ApiClient.ParameterToString(counterstable)); // path parameter
+            if (keyid != null) localVarPathParams.Add("keyid", this.Configuration.ApiClient.ParameterToString(keyid)); // path parameter
+            if (pageindex != null) localVarPathParams.Add("pageindex", this.Configuration.ApiClient.ParameterToString(pageindex)); // path parameter
+            if (revision != null) localVarPathParams.Add("revision", this.Configuration.ApiClient.ParameterToString(revision)); // path parameter
 
             // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -534,7 +618,7 @@ namespace IO.Swagger.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -580,7 +664,7 @@ namespace IO.Swagger.Api
             var localVarPath = "/api/Previews/{counterstable}/{keyid}/page/{pageindex}/{revision}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -588,7 +672,7 @@ namespace IO.Swagger.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -597,23 +681,23 @@ namespace IO.Swagger.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (counterstable != null) localVarPathParams.Add("counterstable", Configuration.ApiClient.ParameterToString(counterstable)); // path parameter
-            if (keyid != null) localVarPathParams.Add("keyid", Configuration.ApiClient.ParameterToString(keyid)); // path parameter
-            if (pageindex != null) localVarPathParams.Add("pageindex", Configuration.ApiClient.ParameterToString(pageindex)); // path parameter
-            if (revision != null) localVarPathParams.Add("revision", Configuration.ApiClient.ParameterToString(revision)); // path parameter
+            if (counterstable != null) localVarPathParams.Add("counterstable", this.Configuration.ApiClient.ParameterToString(counterstable)); // path parameter
+            if (keyid != null) localVarPathParams.Add("keyid", this.Configuration.ApiClient.ParameterToString(keyid)); // path parameter
+            if (pageindex != null) localVarPathParams.Add("pageindex", this.Configuration.ApiClient.ParameterToString(pageindex)); // path parameter
+            if (revision != null) localVarPathParams.Add("revision", this.Configuration.ApiClient.ParameterToString(revision)); // path parameter
 
             // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -627,7 +711,7 @@ namespace IO.Swagger.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
         /// <summary>
@@ -657,7 +741,7 @@ namespace IO.Swagger.Api
             var localVarPath = "/api/Previews/{docnumber}/profile";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -665,7 +749,7 @@ namespace IO.Swagger.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -674,20 +758,20 @@ namespace IO.Swagger.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (docnumber != null) localVarPathParams.Add("docnumber", Configuration.ApiClient.ParameterToString(docnumber)); // path parameter
+            if (docnumber != null) localVarPathParams.Add("docnumber", this.Configuration.ApiClient.ParameterToString(docnumber)); // path parameter
 
             // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -701,7 +785,7 @@ namespace IO.Swagger.Api
 
             return new ApiResponse<ProfilePreviewDTO>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ProfilePreviewDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProfilePreviewDTO)));
+                (ProfilePreviewDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProfilePreviewDTO)));
         }
 
         /// <summary>
@@ -732,7 +816,7 @@ namespace IO.Swagger.Api
             var localVarPath = "/api/Previews/{docnumber}/profile";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -740,7 +824,7 @@ namespace IO.Swagger.Api
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -749,20 +833,20 @@ namespace IO.Swagger.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (docnumber != null) localVarPathParams.Add("docnumber", Configuration.ApiClient.ParameterToString(docnumber)); // path parameter
+            if (docnumber != null) localVarPathParams.Add("docnumber", this.Configuration.ApiClient.ParameterToString(docnumber)); // path parameter
 
             // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -776,7 +860,353 @@ namespace IO.Swagger.Api
 
             return new ApiResponse<ProfilePreviewDTO>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ProfilePreviewDTO) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProfilePreviewDTO)));
+                (ProfilePreviewDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProfilePreviewDTO)));
+        }
+
+        /// <summary>
+        /// This call returns the list of preview of the document list 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumbers">Document identifiers</param>
+        /// <returns>List&lt;ProfilePreviewDTO&gt;</returns>
+        public List<ProfilePreviewDTO> PreviewsGetProfilesPreviewByDocnumbers (List<int?> docnumbers)
+        {
+             ApiResponse<List<ProfilePreviewDTO>> localVarResponse = PreviewsGetProfilesPreviewByDocnumbersWithHttpInfo(docnumbers);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns the list of preview of the document list 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumbers">Document identifiers</param>
+        /// <returns>ApiResponse of List&lt;ProfilePreviewDTO&gt;</returns>
+        public ApiResponse< List<ProfilePreviewDTO> > PreviewsGetProfilesPreviewByDocnumbersWithHttpInfo (List<int?> docnumbers)
+        {
+            // verify the required parameter 'docnumbers' is set
+            if (docnumbers == null)
+                throw new ApiException(400, "Missing required parameter 'docnumbers' when calling PreviewsApi->PreviewsGetProfilesPreviewByDocnumbers");
+
+            var localVarPath = "/api/Previews/profiles";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (docnumbers != null && docnumbers.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(docnumbers); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = docnumbers; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PreviewsGetProfilesPreviewByDocnumbers", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<ProfilePreviewDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<ProfilePreviewDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<ProfilePreviewDTO>)));
+        }
+
+        /// <summary>
+        /// This call returns the list of preview of the document list 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumbers">Document identifiers</param>
+        /// <returns>Task of List&lt;ProfilePreviewDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<ProfilePreviewDTO>> PreviewsGetProfilesPreviewByDocnumbersAsync (List<int?> docnumbers)
+        {
+             ApiResponse<List<ProfilePreviewDTO>> localVarResponse = await PreviewsGetProfilesPreviewByDocnumbersAsyncWithHttpInfo(docnumbers);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns the list of preview of the document list 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumbers">Document identifiers</param>
+        /// <returns>Task of ApiResponse (List&lt;ProfilePreviewDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<ProfilePreviewDTO>>> PreviewsGetProfilesPreviewByDocnumbersAsyncWithHttpInfo (List<int?> docnumbers)
+        {
+            // verify the required parameter 'docnumbers' is set
+            if (docnumbers == null)
+                throw new ApiException(400, "Missing required parameter 'docnumbers' when calling PreviewsApi->PreviewsGetProfilesPreviewByDocnumbers");
+
+            var localVarPath = "/api/Previews/profiles";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (docnumbers != null && docnumbers.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(docnumbers); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = docnumbers; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PreviewsGetProfilesPreviewByDocnumbers", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<ProfilePreviewDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<ProfilePreviewDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<ProfilePreviewDTO>)));
+        }
+
+        /// <summary>
+        /// This call returns the list of preview of the task document list 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskPreviewList">Task document identifiers</param>
+        /// <returns>List&lt;ProfilePreviewDTO&gt;</returns>
+        public List<ProfilePreviewDTO> PreviewsGetProfilesPreviewByTaskworItems (List<TaskPreviewRequestDto> taskPreviewList)
+        {
+             ApiResponse<List<ProfilePreviewDTO>> localVarResponse = PreviewsGetProfilesPreviewByTaskworItemsWithHttpInfo(taskPreviewList);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns the list of preview of the task document list 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskPreviewList">Task document identifiers</param>
+        /// <returns>ApiResponse of List&lt;ProfilePreviewDTO&gt;</returns>
+        public ApiResponse< List<ProfilePreviewDTO> > PreviewsGetProfilesPreviewByTaskworItemsWithHttpInfo (List<TaskPreviewRequestDto> taskPreviewList)
+        {
+            // verify the required parameter 'taskPreviewList' is set
+            if (taskPreviewList == null)
+                throw new ApiException(400, "Missing required parameter 'taskPreviewList' when calling PreviewsApi->PreviewsGetProfilesPreviewByTaskworItems");
+
+            var localVarPath = "/api/Previews/task/profiles";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (taskPreviewList != null && taskPreviewList.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(taskPreviewList); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = taskPreviewList; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PreviewsGetProfilesPreviewByTaskworItems", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<ProfilePreviewDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<ProfilePreviewDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<ProfilePreviewDTO>)));
+        }
+
+        /// <summary>
+        /// This call returns the list of preview of the task document list 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskPreviewList">Task document identifiers</param>
+        /// <returns>Task of List&lt;ProfilePreviewDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<ProfilePreviewDTO>> PreviewsGetProfilesPreviewByTaskworItemsAsync (List<TaskPreviewRequestDto> taskPreviewList)
+        {
+             ApiResponse<List<ProfilePreviewDTO>> localVarResponse = await PreviewsGetProfilesPreviewByTaskworItemsAsyncWithHttpInfo(taskPreviewList);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns the list of preview of the task document list 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskPreviewList">Task document identifiers</param>
+        /// <returns>Task of ApiResponse (List&lt;ProfilePreviewDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<ProfilePreviewDTO>>> PreviewsGetProfilesPreviewByTaskworItemsAsyncWithHttpInfo (List<TaskPreviewRequestDto> taskPreviewList)
+        {
+            // verify the required parameter 'taskPreviewList' is set
+            if (taskPreviewList == null)
+                throw new ApiException(400, "Missing required parameter 'taskPreviewList' when calling PreviewsApi->PreviewsGetProfilesPreviewByTaskworItems");
+
+            var localVarPath = "/api/Previews/task/profiles";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (taskPreviewList != null && taskPreviewList.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(taskPreviewList); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = taskPreviewList; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PreviewsGetProfilesPreviewByTaskworItems", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<ProfilePreviewDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<ProfilePreviewDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<ProfilePreviewDTO>)));
         }
 
     }

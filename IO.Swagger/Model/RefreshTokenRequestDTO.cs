@@ -38,37 +38,37 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RefreshTokenRequestDTO" /> class.
         /// </summary>
-        /// <param name="ClientId">Client id (required).</param>
-        /// <param name="ClientSecret">Client secret (required).</param>
-        /// <param name="RefreshToken">Refresh token to be refreshed (required).</param>
-        public RefreshTokenRequestDTO(string ClientId = default(string), string ClientSecret = default(string), string RefreshToken = default(string))
+        /// <param name="clientId">Client id (required).</param>
+        /// <param name="clientSecret">Client secret (required).</param>
+        /// <param name="refreshToken">Refresh token to be refreshed (required).</param>
+        public RefreshTokenRequestDTO(string clientId = default(string), string clientSecret = default(string), string refreshToken = default(string))
         {
-            // to ensure "ClientId" is required (not null)
-            if (ClientId == null)
+            // to ensure "clientId" is required (not null)
+            if (clientId == null)
             {
-                throw new InvalidDataException("ClientId is a required property for RefreshTokenRequestDTO and cannot be null");
+                throw new InvalidDataException("clientId is a required property for RefreshTokenRequestDTO and cannot be null");
             }
             else
             {
-                this.ClientId = ClientId;
+                this.ClientId = clientId;
             }
-            // to ensure "ClientSecret" is required (not null)
-            if (ClientSecret == null)
+            // to ensure "clientSecret" is required (not null)
+            if (clientSecret == null)
             {
-                throw new InvalidDataException("ClientSecret is a required property for RefreshTokenRequestDTO and cannot be null");
-            }
-            else
-            {
-                this.ClientSecret = ClientSecret;
-            }
-            // to ensure "RefreshToken" is required (not null)
-            if (RefreshToken == null)
-            {
-                throw new InvalidDataException("RefreshToken is a required property for RefreshTokenRequestDTO and cannot be null");
+                throw new InvalidDataException("clientSecret is a required property for RefreshTokenRequestDTO and cannot be null");
             }
             else
             {
-                this.RefreshToken = RefreshToken;
+                this.ClientSecret = clientSecret;
+            }
+            // to ensure "refreshToken" is required (not null)
+            if (refreshToken == null)
+            {
+                throw new InvalidDataException("refreshToken is a required property for RefreshTokenRequestDTO and cannot be null");
+            }
+            else
+            {
+                this.RefreshToken = refreshToken;
             }
         }
         
@@ -112,7 +112,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

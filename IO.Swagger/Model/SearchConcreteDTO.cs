@@ -33,36 +33,36 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchConcreteDTO" /> class.
         /// </summary>
-        /// <param name="DaAAndOr">Possible values:  0: And  1: Or .</param>
-        /// <param name="ContactFields">Contact Fields.</param>
-        /// <param name="AooField">Business Unit.</param>
-        /// <param name="DocumentTypeField">Document Type.</param>
-        /// <param name="ProtocolField">Protocol.</param>
-        /// <param name="ConservationField">Conservation.</param>
-        /// <param name="StampField">Stamp.</param>
-        /// <param name="DateTimeFields">List of fields of type &#39;Datetime&#39;.</param>
-        /// <param name="StringFields">List of fields of type &#39;String&#39;.</param>
-        /// <param name="IntFields">List of fields of type &#39;Integer&#39;.</param>
-        /// <param name="BoolFields">List of fields of type &#39;Boolean&#39;.</param>
-        /// <param name="DoubleFields">List of fields of type &#39;Decimal&#39;.</param>
-        /// <param name="StringListFields">List of fields of type &#39;List&#39;.</param>
-        /// <param name="GroupFields">List of fields of type &#39;Group&#39;.</param>
-        public SearchConcreteDTO(int? DaAAndOr = default(int?), List<FieldBaseForSearchContactDto> ContactFields = default(List<FieldBaseForSearchContactDto>), FieldBaseForSearchAooDto AooField = default(FieldBaseForSearchAooDto), FieldBaseForSearchDocumentTypeDto DocumentTypeField = default(FieldBaseForSearchDocumentTypeDto), FieldBaseForSearchProtocolloDto ProtocolField = default(FieldBaseForSearchProtocolloDto), FieldBaseForSearchConservazioneDto ConservationField = default(FieldBaseForSearchConservazioneDto), FieldBaseForSearchStampDto StampField = default(FieldBaseForSearchStampDto), List<FieldBaseForSearchDateTimeDto> DateTimeFields = default(List<FieldBaseForSearchDateTimeDto>), List<FieldBaseForSearchStringDto> StringFields = default(List<FieldBaseForSearchStringDto>), List<FieldBaseForSearchIntDto> IntFields = default(List<FieldBaseForSearchIntDto>), List<FieldBaseForSearchBoolDto> BoolFields = default(List<FieldBaseForSearchBoolDto>), List<FieldBaseForSearchDoubleDto> DoubleFields = default(List<FieldBaseForSearchDoubleDto>), List<FieldBaseForSearchListDto> StringListFields = default(List<FieldBaseForSearchListDto>), List<FieldBaseForSearchDTO> GroupFields = default(List<FieldBaseForSearchDTO>))
+        /// <param name="daAAndOr">Possible values:  0: And  1: Or .</param>
+        /// <param name="contactFields">Contact Fields.</param>
+        /// <param name="aooField">Business Unit.</param>
+        /// <param name="documentTypeField">Document Type.</param>
+        /// <param name="protocolField">Protocol.</param>
+        /// <param name="conservationField">Conservation.</param>
+        /// <param name="stampField">Stamp.</param>
+        /// <param name="dateTimeFields">List of fields of type &#39;Datetime&#39;.</param>
+        /// <param name="stringFields">List of fields of type &#39;String&#39;.</param>
+        /// <param name="intFields">List of fields of type &#39;Integer&#39;.</param>
+        /// <param name="boolFields">List of fields of type &#39;Boolean&#39;.</param>
+        /// <param name="doubleFields">List of fields of type &#39;Decimal&#39;.</param>
+        /// <param name="stringListFields">List of fields of type &#39;List&#39;.</param>
+        /// <param name="groupFields">List of fields of type &#39;Group&#39;.</param>
+        public SearchConcreteDTO(int? daAAndOr = default(int?), List<FieldBaseForSearchContactDto> contactFields = default(List<FieldBaseForSearchContactDto>), FieldBaseForSearchAooDto aooField = default(FieldBaseForSearchAooDto), FieldBaseForSearchDocumentTypeDto documentTypeField = default(FieldBaseForSearchDocumentTypeDto), FieldBaseForSearchProtocolloDto protocolField = default(FieldBaseForSearchProtocolloDto), FieldBaseForSearchConservazioneDto conservationField = default(FieldBaseForSearchConservazioneDto), FieldBaseForSearchStampDto stampField = default(FieldBaseForSearchStampDto), List<FieldBaseForSearchDateTimeDto> dateTimeFields = default(List<FieldBaseForSearchDateTimeDto>), List<FieldBaseForSearchStringDto> stringFields = default(List<FieldBaseForSearchStringDto>), List<FieldBaseForSearchIntDto> intFields = default(List<FieldBaseForSearchIntDto>), List<FieldBaseForSearchBoolDto> boolFields = default(List<FieldBaseForSearchBoolDto>), List<FieldBaseForSearchDoubleDto> doubleFields = default(List<FieldBaseForSearchDoubleDto>), List<FieldBaseForSearchListDto> stringListFields = default(List<FieldBaseForSearchListDto>), List<FieldBaseForSearchDTO> groupFields = default(List<FieldBaseForSearchDTO>))
         {
-            this.DaAAndOr = DaAAndOr;
-            this.ContactFields = ContactFields;
-            this.AooField = AooField;
-            this.DocumentTypeField = DocumentTypeField;
-            this.ProtocolField = ProtocolField;
-            this.ConservationField = ConservationField;
-            this.StampField = StampField;
-            this.DateTimeFields = DateTimeFields;
-            this.StringFields = StringFields;
-            this.IntFields = IntFields;
-            this.BoolFields = BoolFields;
-            this.DoubleFields = DoubleFields;
-            this.StringListFields = StringListFields;
-            this.GroupFields = GroupFields;
+            this.DaAAndOr = daAAndOr;
+            this.ContactFields = contactFields;
+            this.AooField = aooField;
+            this.DocumentTypeField = documentTypeField;
+            this.ProtocolField = protocolField;
+            this.ConservationField = conservationField;
+            this.StampField = stampField;
+            this.DateTimeFields = dateTimeFields;
+            this.StringFields = stringFields;
+            this.IntFields = intFields;
+            this.BoolFields = boolFields;
+            this.DoubleFields = doubleFields;
+            this.StringListFields = stringListFields;
+            this.GroupFields = groupFields;
         }
         
         /// <summary>
@@ -193,7 +193,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

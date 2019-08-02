@@ -33,28 +33,28 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AdditionalConcreteFields" /> class.
         /// </summary>
-        /// <param name="AdditionalFieldsGroup">Additional fields of Group type.</param>
-        /// <param name="AdditionalFieldsString">Additional fields of Text type.</param>
-        /// <param name="AdditionalFieldsBoolean">Additional fields of Boolean type.</param>
-        /// <param name="AdditionalFieldsClasse">Additional fields of Matrix type.</param>
-        /// <param name="AdditionalFieldsCombo">Additional fields of Combo List type.</param>
-        /// <param name="AdditionalFieldsDateTime">Additional fields of Datatime type.</param>
-        /// <param name="AdditionalFieldsMultivalue">Additional fields of Multivalues type.</param>
-        /// <param name="AdditionalFieldsInt">Additional fields of Numeric type.</param>
-        /// <param name="AdditionalFieldsDouble">Additional fields of Decimal type.</param>
-        /// <param name="AdditionalFieldsTable">Additional fields of Table type.</param>
-        public AdditionalConcreteFields(List<AdditionalFieldGroupDTO> AdditionalFieldsGroup = default(List<AdditionalFieldGroupDTO>), List<AdditionalFieldStringDTO> AdditionalFieldsString = default(List<AdditionalFieldStringDTO>), List<AdditionalFieldBooleanDTO> AdditionalFieldsBoolean = default(List<AdditionalFieldBooleanDTO>), List<AdditionalFieldClasseDTO> AdditionalFieldsClasse = default(List<AdditionalFieldClasseDTO>), List<AdditionalFieldComboDTO> AdditionalFieldsCombo = default(List<AdditionalFieldComboDTO>), List<AdditionalFieldDateTimeDTO> AdditionalFieldsDateTime = default(List<AdditionalFieldDateTimeDTO>), List<AdditionalFieldMultivalueDTO> AdditionalFieldsMultivalue = default(List<AdditionalFieldMultivalueDTO>), List<AdditionalFieldIntDTO> AdditionalFieldsInt = default(List<AdditionalFieldIntDTO>), List<AdditionalFieldDoubleDTO> AdditionalFieldsDouble = default(List<AdditionalFieldDoubleDTO>), List<AdditionalFieldTableDTO> AdditionalFieldsTable = default(List<AdditionalFieldTableDTO>))
+        /// <param name="additionalFieldsGroup">Additional fields of Group type.</param>
+        /// <param name="additionalFieldsString">Additional fields of Text type.</param>
+        /// <param name="additionalFieldsBoolean">Additional fields of Boolean type.</param>
+        /// <param name="additionalFieldsClasse">Additional fields of Matrix type.</param>
+        /// <param name="additionalFieldsCombo">Additional fields of Combo List type.</param>
+        /// <param name="additionalFieldsDateTime">Additional fields of Datatime type.</param>
+        /// <param name="additionalFieldsMultivalue">Additional fields of Multivalues type.</param>
+        /// <param name="additionalFieldsInt">Additional fields of Numeric type.</param>
+        /// <param name="additionalFieldsDouble">Additional fields of Decimal type.</param>
+        /// <param name="additionalFieldsTable">Additional fields of Table type.</param>
+        public AdditionalConcreteFields(List<AdditionalFieldGroupDTO> additionalFieldsGroup = default(List<AdditionalFieldGroupDTO>), List<AdditionalFieldStringDTO> additionalFieldsString = default(List<AdditionalFieldStringDTO>), List<AdditionalFieldBooleanDTO> additionalFieldsBoolean = default(List<AdditionalFieldBooleanDTO>), List<AdditionalFieldClasseDTO> additionalFieldsClasse = default(List<AdditionalFieldClasseDTO>), List<AdditionalFieldComboDTO> additionalFieldsCombo = default(List<AdditionalFieldComboDTO>), List<AdditionalFieldDateTimeDTO> additionalFieldsDateTime = default(List<AdditionalFieldDateTimeDTO>), List<AdditionalFieldMultivalueDTO> additionalFieldsMultivalue = default(List<AdditionalFieldMultivalueDTO>), List<AdditionalFieldIntDTO> additionalFieldsInt = default(List<AdditionalFieldIntDTO>), List<AdditionalFieldDoubleDTO> additionalFieldsDouble = default(List<AdditionalFieldDoubleDTO>), List<AdditionalFieldTableDTO> additionalFieldsTable = default(List<AdditionalFieldTableDTO>))
         {
-            this.AdditionalFieldsGroup = AdditionalFieldsGroup;
-            this.AdditionalFieldsString = AdditionalFieldsString;
-            this.AdditionalFieldsBoolean = AdditionalFieldsBoolean;
-            this.AdditionalFieldsClasse = AdditionalFieldsClasse;
-            this.AdditionalFieldsCombo = AdditionalFieldsCombo;
-            this.AdditionalFieldsDateTime = AdditionalFieldsDateTime;
-            this.AdditionalFieldsMultivalue = AdditionalFieldsMultivalue;
-            this.AdditionalFieldsInt = AdditionalFieldsInt;
-            this.AdditionalFieldsDouble = AdditionalFieldsDouble;
-            this.AdditionalFieldsTable = AdditionalFieldsTable;
+            this.AdditionalFieldsGroup = additionalFieldsGroup;
+            this.AdditionalFieldsString = additionalFieldsString;
+            this.AdditionalFieldsBoolean = additionalFieldsBoolean;
+            this.AdditionalFieldsClasse = additionalFieldsClasse;
+            this.AdditionalFieldsCombo = additionalFieldsCombo;
+            this.AdditionalFieldsDateTime = additionalFieldsDateTime;
+            this.AdditionalFieldsMultivalue = additionalFieldsMultivalue;
+            this.AdditionalFieldsInt = additionalFieldsInt;
+            this.AdditionalFieldsDouble = additionalFieldsDouble;
+            this.AdditionalFieldsTable = additionalFieldsTable;
         }
         
         /// <summary>
@@ -153,7 +153,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

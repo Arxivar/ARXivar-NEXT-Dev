@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AuthenticationTokenResponseDTO" /> class.
         /// </summary>
-        /// <param name="RedirectUri">Redirect uri to address the browser.</param>
-        /// <param name="Error">Error code.</param>
-        /// <param name="ErrorDescription">Error desciption.</param>
-        public AuthenticationTokenResponseDTO(string RedirectUri = default(string), string Error = default(string), string ErrorDescription = default(string))
+        /// <param name="redirectUri">Redirect uri to address the browser.</param>
+        /// <param name="error">Error code.</param>
+        /// <param name="errorDescription">Error desciption.</param>
+        public AuthenticationTokenResponseDTO(string redirectUri = default(string), string error = default(string), string errorDescription = default(string))
         {
-            this.RedirectUri = RedirectUri;
-            this.Error = Error;
-            this.ErrorDescription = ErrorDescription;
+            this.RedirectUri = redirectUri;
+            this.Error = error;
+            this.ErrorDescription = errorDescription;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

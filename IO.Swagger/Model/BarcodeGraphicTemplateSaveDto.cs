@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BarcodeGraphicTemplateSaveDto" /> class.
         /// </summary>
-        /// <param name="DmTipidocumentoId">Document Type Identifier.</param>
-        /// <param name="GraphicTemplateB64">Graphic Template Blob.</param>
-        public BarcodeGraphicTemplateSaveDto(int? DmTipidocumentoId = default(int?), string GraphicTemplateB64 = default(string))
+        /// <param name="dmTipidocumentoId">Document Type Identifier.</param>
+        /// <param name="graphicTemplateB64">Graphic Template Blob.</param>
+        public BarcodeGraphicTemplateSaveDto(int? dmTipidocumentoId = default(int?), string graphicTemplateB64 = default(string))
         {
-            this.DmTipidocumentoId = DmTipidocumentoId;
-            this.GraphicTemplateB64 = GraphicTemplateB64;
+            this.DmTipidocumentoId = dmTipidocumentoId;
+            this.GraphicTemplateB64 = graphicTemplateB64;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

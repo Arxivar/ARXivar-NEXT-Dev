@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ProfileMaskBehaviourDTO" /> class.
         /// </summary>
-        /// <param name="LoadAdditional">Load the additional fields.</param>
-        /// <param name="ShowGroups">Show groups.</param>
-        /// <param name="PaMode">Possible values:  0: None  1: OnlyNever  2: OnlyOptionally  3: NeverOrOptionally  4: OnlyAlways  5: AlwaysOrNever  6: AlwaysOrOptionally  7: All .</param>
-        public ProfileMaskBehaviourDTO(bool? LoadAdditional = default(bool?), bool? ShowGroups = default(bool?), int? PaMode = default(int?))
+        /// <param name="loadAdditional">Load the additional fields.</param>
+        /// <param name="showGroups">Show groups.</param>
+        /// <param name="paMode">Possible values:  0: None  1: OnlyNever  2: OnlyOptionally  3: NeverOrOptionally  4: OnlyAlways  5: AlwaysOrNever  6: AlwaysOrOptionally  7: All .</param>
+        public ProfileMaskBehaviourDTO(bool? loadAdditional = default(bool?), bool? showGroups = default(bool?), int? paMode = default(int?))
         {
-            this.LoadAdditional = LoadAdditional;
-            this.ShowGroups = ShowGroups;
-            this.PaMode = PaMode;
+            this.LoadAdditional = loadAdditional;
+            this.ShowGroups = showGroups;
+            this.PaMode = paMode;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TaskWorkInstructionItemDTO" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Content">Content.</param>
-        /// <param name="Order">Order.</param>
-        public TaskWorkInstructionItemDTO(string Name = default(string), string Content = default(string), int? Order = default(int?))
+        /// <param name="name">name.</param>
+        /// <param name="content">content.</param>
+        /// <param name="order">order.</param>
+        public TaskWorkInstructionItemDTO(string name = default(string), string content = default(string), int? order = default(int?))
         {
-            this.Name = Name;
-            this.Content = Content;
-            this.Order = Order;
+            this.Name = name;
+            this.Content = content;
+            this.Order = order;
         }
         
         /// <summary>
@@ -80,7 +80,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

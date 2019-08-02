@@ -33,26 +33,26 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BinderTypeDTO" /> class.
         /// </summary>
-        /// <param name="Id">Identifier.</param>
-        /// <param name="BinderType">Type Identifier.</param>
-        /// <param name="FolderId">Folder Identifier.</param>
-        /// <param name="DynamicFolder">Dynamic Folder.</param>
-        /// <param name="Progressive">Progressive number.</param>
-        /// <param name="DynamicNumber">Dynamic Progressive number.</param>
-        /// <param name="ExternalId">External Identifier.</param>
-        /// <param name="Fields">Custom Fields.</param>
-        /// <param name="_Default">As default.</param>
-        public BinderTypeDTO(int? Id = default(int?), string BinderType = default(string), int? FolderId = default(int?), string DynamicFolder = default(string), int? Progressive = default(int?), string DynamicNumber = default(string), string ExternalId = default(string), List<FieldBaseDTO> Fields = default(List<FieldBaseDTO>), bool? _Default = default(bool?))
+        /// <param name="id">Identifier.</param>
+        /// <param name="binderType">Type Identifier.</param>
+        /// <param name="folderId">Folder Identifier.</param>
+        /// <param name="dynamicFolder">Dynamic Folder.</param>
+        /// <param name="progressive">Progressive number.</param>
+        /// <param name="dynamicNumber">Dynamic Progressive number.</param>
+        /// <param name="externalId">External Identifier.</param>
+        /// <param name="fields">Custom Fields.</param>
+        /// <param name="_default">As default.</param>
+        public BinderTypeDTO(int? id = default(int?), string binderType = default(string), int? folderId = default(int?), string dynamicFolder = default(string), int? progressive = default(int?), string dynamicNumber = default(string), string externalId = default(string), List<FieldBaseDTO> fields = default(List<FieldBaseDTO>), bool? _default = default(bool?))
         {
-            this.Id = Id;
-            this.BinderType = BinderType;
-            this.FolderId = FolderId;
-            this.DynamicFolder = DynamicFolder;
-            this.Progressive = Progressive;
-            this.DynamicNumber = DynamicNumber;
-            this.ExternalId = ExternalId;
-            this.Fields = Fields;
-            this._Default = _Default;
+            this.Id = id;
+            this.BinderType = binderType;
+            this.FolderId = folderId;
+            this.DynamicFolder = dynamicFolder;
+            this.Progressive = progressive;
+            this.DynamicNumber = dynamicNumber;
+            this.ExternalId = externalId;
+            this.Fields = fields;
+            this.Default = _default;
         }
         
         /// <summary>
@@ -116,7 +116,7 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <value>As default</value>
         [DataMember(Name="default", EmitDefaultValue=false)]
-        public bool? _Default { get; set; }
+        public bool? Default { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -134,7 +134,7 @@ namespace IO.Swagger.Model
             sb.Append("  DynamicNumber: ").Append(DynamicNumber).Append("\n");
             sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
             sb.Append("  Fields: ").Append(Fields).Append("\n");
-            sb.Append("  _Default: ").Append(_Default).Append("\n");
+            sb.Append("  Default: ").Append(Default).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -143,7 +143,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -210,9 +210,9 @@ namespace IO.Swagger.Model
                     this.Fields.SequenceEqual(input.Fields)
                 ) && 
                 (
-                    this._Default == input._Default ||
-                    (this._Default != null &&
-                    this._Default.Equals(input._Default))
+                    this.Default == input.Default ||
+                    (this.Default != null &&
+                    this.Default.Equals(input.Default))
                 );
         }
 
@@ -241,8 +241,8 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.ExternalId.GetHashCode();
                 if (this.Fields != null)
                     hashCode = hashCode * 59 + this.Fields.GetHashCode();
-                if (this._Default != null)
-                    hashCode = hashCode * 59 + this._Default.GetHashCode();
+                if (this.Default != null)
+                    hashCode = hashCode * 59 + this.Default.GetHashCode();
                 return hashCode;
             }
         }

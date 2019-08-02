@@ -33,22 +33,22 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ChronoInfoDTO" /> class.
         /// </summary>
-        /// <param name="ChronoId">Identifier.</param>
-        /// <param name="ChronoName">Name.</param>
-        /// <param name="IntermediateIndex">Index.</param>
-        /// <param name="StartDate">Start date.</param>
-        /// <param name="StopDate">End date.</param>
-        /// <param name="Duration">Duration.</param>
-        /// <param name="TotalItermediate">Total Value.</param>
-        public ChronoInfoDTO(string ChronoId = default(string), string ChronoName = default(string), int? IntermediateIndex = default(int?), DateTime? StartDate = default(DateTime?), DateTime? StopDate = default(DateTime?), int? Duration = default(int?), int? TotalItermediate = default(int?))
+        /// <param name="chronoId">Identifier.</param>
+        /// <param name="chronoName">Name.</param>
+        /// <param name="intermediateIndex">Index.</param>
+        /// <param name="startDate">Start date.</param>
+        /// <param name="stopDate">End date.</param>
+        /// <param name="duration">Duration.</param>
+        /// <param name="totalItermediate">Total Value.</param>
+        public ChronoInfoDTO(string chronoId = default(string), string chronoName = default(string), int? intermediateIndex = default(int?), DateTime? startDate = default(DateTime?), DateTime? stopDate = default(DateTime?), int? duration = default(int?), int? totalItermediate = default(int?))
         {
-            this.ChronoId = ChronoId;
-            this.ChronoName = ChronoName;
-            this.IntermediateIndex = IntermediateIndex;
-            this.StartDate = StartDate;
-            this.StopDate = StopDate;
-            this.Duration = Duration;
-            this.TotalItermediate = TotalItermediate;
+            this.ChronoId = chronoId;
+            this.ChronoName = chronoName;
+            this.IntermediateIndex = intermediateIndex;
+            this.StartDate = startDate;
+            this.StopDate = stopDate;
+            this.Duration = duration;
+            this.TotalItermediate = totalItermediate;
         }
         
         /// <summary>
@@ -123,7 +123,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

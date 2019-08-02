@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CertificatePolicyInfoDTO" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="DescriptionId">DescriptionId.</param>
-        /// <param name="ChildList">ChildList.</param>
-        public CertificatePolicyInfoDTO(string Id = default(string), string DescriptionId = default(string), List<CertificatePolicyChildInfoDTO> ChildList = default(List<CertificatePolicyChildInfoDTO>))
+        /// <param name="id">id.</param>
+        /// <param name="descriptionId">descriptionId.</param>
+        /// <param name="childList">childList.</param>
+        public CertificatePolicyInfoDTO(string id = default(string), string descriptionId = default(string), List<CertificatePolicyChildInfoDTO> childList = default(List<CertificatePolicyChildInfoDTO>))
         {
-            this.Id = Id;
-            this.DescriptionId = DescriptionId;
-            this.ChildList = ChildList;
+            this.Id = id;
+            this.DescriptionId = descriptionId;
+            this.ChildList = childList;
         }
         
         /// <summary>
@@ -80,7 +80,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

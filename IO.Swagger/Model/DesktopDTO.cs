@@ -33,20 +33,20 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DesktopDTO" /> class.
         /// </summary>
-        /// <param name="Masks">List of Masks.</param>
-        /// <param name="QuickSearches">List of Quick Search.</param>
-        /// <param name="Profiles">List of Documents.</param>
-        /// <param name="Views">List of Views.</param>
-        /// <param name="Models">List of Models.</param>
-        /// <param name="Folders">List of Folders.</param>
-        public DesktopDTO(List<MaskDTO> Masks = default(List<MaskDTO>), List<FindDTO> QuickSearches = default(List<FindDTO>), List<ProfileForDesktopDTO> Profiles = default(List<ProfileForDesktopDTO>), List<ViewDTO> Views = default(List<ViewDTO>), List<ModelDTO> Models = default(List<ModelDTO>), List<FolderDTO> Folders = default(List<FolderDTO>))
+        /// <param name="masks">List of Masks.</param>
+        /// <param name="quickSearches">List of Quick Search.</param>
+        /// <param name="profiles">List of Documents.</param>
+        /// <param name="views">List of Views.</param>
+        /// <param name="models">List of Models.</param>
+        /// <param name="folders">List of Folders.</param>
+        public DesktopDTO(List<MaskDTO> masks = default(List<MaskDTO>), List<FindDTO> quickSearches = default(List<FindDTO>), List<ProfileForDesktopDTO> profiles = default(List<ProfileForDesktopDTO>), List<ViewDTO> views = default(List<ViewDTO>), List<ModelDTO> models = default(List<ModelDTO>), List<FolderDTO> folders = default(List<FolderDTO>))
         {
-            this.Masks = Masks;
-            this.QuickSearches = QuickSearches;
-            this.Profiles = Profiles;
-            this.Views = Views;
-            this.Models = Models;
-            this.Folders = Folders;
+            this.Masks = masks;
+            this.QuickSearches = quickSearches;
+            this.Profiles = profiles;
+            this.Views = views;
+            this.Models = models;
+            this.Folders = folders;
         }
         
         /// <summary>
@@ -113,7 +113,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,24 +33,24 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueStateAggregationInfoDto" /> class.
         /// </summary>
-        /// <param name="Awaiting">Wainting.</param>
-        /// <param name="Enqueued">Enqueued.</param>
-        /// <param name="Processing">Processing.</param>
-        /// <param name="Scheduled">Scheduled.</param>
-        /// <param name="Failed">Failed.</param>
-        /// <param name="SuccededOk">Successful.</param>
-        /// <param name="SuccededKo">Unsuccessful.</param>
-        /// <param name="Deleted">Deleted.</param>
-        public QueueStateAggregationInfoDto(int? Awaiting = default(int?), int? Enqueued = default(int?), int? Processing = default(int?), int? Scheduled = default(int?), int? Failed = default(int?), int? SuccededOk = default(int?), int? SuccededKo = default(int?), int? Deleted = default(int?))
+        /// <param name="awaiting">Wainting.</param>
+        /// <param name="enqueued">Enqueued.</param>
+        /// <param name="processing">Processing.</param>
+        /// <param name="scheduled">Scheduled.</param>
+        /// <param name="failed">Failed.</param>
+        /// <param name="succededOk">Successful.</param>
+        /// <param name="succededKo">Unsuccessful.</param>
+        /// <param name="deleted">Deleted.</param>
+        public QueueStateAggregationInfoDto(int? awaiting = default(int?), int? enqueued = default(int?), int? processing = default(int?), int? scheduled = default(int?), int? failed = default(int?), int? succededOk = default(int?), int? succededKo = default(int?), int? deleted = default(int?))
         {
-            this.Awaiting = Awaiting;
-            this.Enqueued = Enqueued;
-            this.Processing = Processing;
-            this.Scheduled = Scheduled;
-            this.Failed = Failed;
-            this.SuccededOk = SuccededOk;
-            this.SuccededKo = SuccededKo;
-            this.Deleted = Deleted;
+            this.Awaiting = awaiting;
+            this.Enqueued = enqueued;
+            this.Processing = processing;
+            this.Scheduled = scheduled;
+            this.Failed = failed;
+            this.SuccededOk = succededOk;
+            this.SuccededKo = succededKo;
+            this.Deleted = deleted;
         }
         
         /// <summary>
@@ -133,7 +133,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

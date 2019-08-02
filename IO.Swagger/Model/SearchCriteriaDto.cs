@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchCriteriaDto" /> class.
         /// </summary>
-        /// <param name="SearchFilterDto">SearchFilterDto.</param>
-        /// <param name="SelectFilterDto">SelectFilterDto.</param>
-        public SearchCriteriaDto(SearchDTO SearchFilterDto = default(SearchDTO), SelectDTO SelectFilterDto = default(SelectDTO))
+        /// <param name="searchFilterDto">searchFilterDto.</param>
+        /// <param name="selectFilterDto">selectFilterDto.</param>
+        public SearchCriteriaDto(SearchDTO searchFilterDto = default(SearchDTO), SelectDTO selectFilterDto = default(SelectDTO))
         {
-            this.SearchFilterDto = SearchFilterDto;
-            this.SelectFilterDto = SelectFilterDto;
+            this.SearchFilterDto = searchFilterDto;
+            this.SelectFilterDto = selectFilterDto;
         }
         
         /// <summary>
@@ -71,7 +71,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

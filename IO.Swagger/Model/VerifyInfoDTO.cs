@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VerifyInfoDTO" /> class.
         /// </summary>
-        /// <param name="FileName">FileName.</param>
-        /// <param name="EnvelopeInfoList">EnvelopeInfoList.</param>
-        /// <param name="ValidationMessageList">ValidationMessageList.</param>
-        public VerifyInfoDTO(string FileName = default(string), List<EnvelopeInfoDTO> EnvelopeInfoList = default(List<EnvelopeInfoDTO>), List<ValidationMessageDTO> ValidationMessageList = default(List<ValidationMessageDTO>))
+        /// <param name="fileName">fileName.</param>
+        /// <param name="envelopeInfoList">envelopeInfoList.</param>
+        /// <param name="validationMessageList">validationMessageList.</param>
+        public VerifyInfoDTO(string fileName = default(string), List<EnvelopeInfoDTO> envelopeInfoList = default(List<EnvelopeInfoDTO>), List<ValidationMessageDTO> validationMessageList = default(List<ValidationMessageDTO>))
         {
-            this.FileName = FileName;
-            this.EnvelopeInfoList = EnvelopeInfoList;
-            this.ValidationMessageList = ValidationMessageList;
+            this.FileName = fileName;
+            this.EnvelopeInfoList = envelopeInfoList;
+            this.ValidationMessageList = validationMessageList;
         }
         
         /// <summary>
@@ -80,7 +80,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

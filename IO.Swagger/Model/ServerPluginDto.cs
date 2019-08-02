@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerPluginDto" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Version">Version.</param>
-        /// <param name="BaseUrl">Url Address.</param>
-        public ServerPluginDto(string Name = default(string), string Version = default(string), string BaseUrl = default(string))
+        /// <param name="name">Name.</param>
+        /// <param name="version">Version.</param>
+        /// <param name="baseUrl">Url Address.</param>
+        public ServerPluginDto(string name = default(string), string version = default(string), string baseUrl = default(string))
         {
-            this.Name = Name;
-            this.Version = Version;
-            this.BaseUrl = BaseUrl;
+            this.Name = name;
+            this.Version = version;
+            this.BaseUrl = baseUrl;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

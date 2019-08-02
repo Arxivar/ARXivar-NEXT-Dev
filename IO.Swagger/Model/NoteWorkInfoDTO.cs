@@ -33,18 +33,18 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NoteWorkInfoDTO" /> class.
         /// </summary>
-        /// <param name="Id">Identifier.</param>
-        /// <param name="TaskName">Name of workflow.</param>
-        /// <param name="UserCompleteName">User Description.</param>
-        /// <param name="Date">Creation Date.</param>
-        /// <param name="Text">Text.</param>
-        public NoteWorkInfoDTO(int? Id = default(int?), string TaskName = default(string), string UserCompleteName = default(string), DateTime? Date = default(DateTime?), string Text = default(string))
+        /// <param name="id">Identifier.</param>
+        /// <param name="taskName">Name of workflow.</param>
+        /// <param name="userCompleteName">User Description.</param>
+        /// <param name="date">Creation Date.</param>
+        /// <param name="text">Text.</param>
+        public NoteWorkInfoDTO(int? id = default(int?), string taskName = default(string), string userCompleteName = default(string), DateTime? date = default(DateTime?), string text = default(string))
         {
-            this.Id = Id;
-            this.TaskName = TaskName;
-            this.UserCompleteName = UserCompleteName;
-            this.Date = Date;
-            this.Text = Text;
+            this.Id = id;
+            this.TaskName = taskName;
+            this.UserCompleteName = userCompleteName;
+            this.Date = date;
+            this.Text = text;
         }
         
         /// <summary>
@@ -103,7 +103,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

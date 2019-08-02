@@ -33,20 +33,20 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserPermissionDTO" /> class.
         /// </summary>
-        /// <param name="Id">Identifier.</param>
-        /// <param name="User">Identifier of user.</param>
-        /// <param name="UserDescription">Description of the user.</param>
-        /// <param name="Category">Possible values:  0: U  1: S  2: M  3: F  4: G  5: I  6: D .</param>
-        /// <param name="Permissions">Permission list.</param>
-        /// <param name="ExternalId">External Identifier.</param>
-        public UserPermissionDTO(string Id = default(string), int? User = default(int?), string UserDescription = default(string), int? Category = default(int?), List<PermissionItemDTO> Permissions = default(List<PermissionItemDTO>), string ExternalId = default(string))
+        /// <param name="id">Identifier.</param>
+        /// <param name="user">Identifier of user.</param>
+        /// <param name="userDescription">Description of the user.</param>
+        /// <param name="category">Possible values:  0: U  1: S  2: M  3: F  4: G  5: I  6: D .</param>
+        /// <param name="permissions">Permission list.</param>
+        /// <param name="externalId">External Identifier.</param>
+        public UserPermissionDTO(string id = default(string), int? user = default(int?), string userDescription = default(string), int? category = default(int?), List<PermissionItemDTO> permissions = default(List<PermissionItemDTO>), string externalId = default(string))
         {
-            this.Id = Id;
-            this.User = User;
-            this.UserDescription = UserDescription;
-            this.Category = Category;
-            this.Permissions = Permissions;
-            this.ExternalId = ExternalId;
+            this.Id = id;
+            this.User = user;
+            this.UserDescription = userDescription;
+            this.Category = category;
+            this.Permissions = permissions;
+            this.ExternalId = externalId;
         }
         
         /// <summary>
@@ -113,7 +113,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

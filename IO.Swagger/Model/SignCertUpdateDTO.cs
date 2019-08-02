@@ -33,16 +33,16 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SignCertUpdateDTO" /> class.
         /// </summary>
-        /// <param name="CertId">Certificate Identifier.</param>
-        /// <param name="RequestOtp">Request OTP.</param>
-        /// <param name="CertDescription">Certificate Description.</param>
-        /// <param name="Delegante">Delegating.</param>
-        public SignCertUpdateDTO(string CertId = default(string), bool? RequestOtp = default(bool?), string CertDescription = default(string), string Delegante = default(string))
+        /// <param name="certId">Certificate Identifier.</param>
+        /// <param name="requestOtp">Request OTP.</param>
+        /// <param name="certDescription">Certificate Description.</param>
+        /// <param name="delegante">Delegating.</param>
+        public SignCertUpdateDTO(string certId = default(string), bool? requestOtp = default(bool?), string certDescription = default(string), string delegante = default(string))
         {
-            this.CertId = CertId;
-            this.RequestOtp = RequestOtp;
-            this.CertDescription = CertDescription;
-            this.Delegante = Delegante;
+            this.CertId = certId;
+            this.RequestOtp = requestOtp;
+            this.CertDescription = certDescription;
+            this.Delegante = delegante;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

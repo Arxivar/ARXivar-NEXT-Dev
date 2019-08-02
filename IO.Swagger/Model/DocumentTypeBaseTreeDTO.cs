@@ -33,30 +33,30 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentTypeBaseTreeDTO" /> class.
         /// </summary>
-        /// <param name="Id">Unique identifier.</param>
-        /// <param name="IdParent">Identifier of the parent document type.</param>
-        /// <param name="Key">Complete key.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="DocumentType">Identifier of the first level.</param>
-        /// <param name="Type2">Identifier of the second level.</param>
-        /// <param name="Type3">Identifier of the third level.</param>
-        /// <param name="DocState">Default value of the document status.</param>
-        /// <param name="InOut">Default value of the document inout.</param>
-        /// <param name="Childs">List of sublevel items.</param>
-        /// <param name="Pa">Required Public Administration (PA).</param>
-        public DocumentTypeBaseTreeDTO(int? Id = default(int?), int? IdParent = default(int?), string Key = default(string), string Description = default(string), int? DocumentType = default(int?), int? Type2 = default(int?), int? Type3 = default(int?), string DocState = default(string), int? InOut = default(int?), List<DocumentTypeBaseTreeDTO> Childs = default(List<DocumentTypeBaseTreeDTO>), int? Pa = default(int?))
+        /// <param name="id">Unique identifier.</param>
+        /// <param name="idParent">Identifier of the parent document type.</param>
+        /// <param name="key">Complete key.</param>
+        /// <param name="description">Description.</param>
+        /// <param name="documentType">Identifier of the first level.</param>
+        /// <param name="type2">Identifier of the second level.</param>
+        /// <param name="type3">Identifier of the third level.</param>
+        /// <param name="docState">Default value of the document status.</param>
+        /// <param name="inOut">Default value of the document inout.</param>
+        /// <param name="childs">List of sublevel items.</param>
+        /// <param name="pa">Required Public Administration (PA).</param>
+        public DocumentTypeBaseTreeDTO(int? id = default(int?), int? idParent = default(int?), string key = default(string), string description = default(string), int? documentType = default(int?), int? type2 = default(int?), int? type3 = default(int?), string docState = default(string), int? inOut = default(int?), List<DocumentTypeBaseTreeDTO> childs = default(List<DocumentTypeBaseTreeDTO>), int? pa = default(int?))
         {
-            this.Id = Id;
-            this.IdParent = IdParent;
-            this.Key = Key;
-            this.Description = Description;
-            this.DocumentType = DocumentType;
-            this.Type2 = Type2;
-            this.Type3 = Type3;
-            this.DocState = DocState;
-            this.InOut = InOut;
-            this.Childs = Childs;
-            this.Pa = Pa;
+            this.Id = id;
+            this.IdParent = idParent;
+            this.Key = key;
+            this.Description = description;
+            this.DocumentType = documentType;
+            this.Type2 = type2;
+            this.Type3 = type3;
+            this.DocState = docState;
+            this.InOut = inOut;
+            this.Childs = childs;
+            this.Pa = pa;
         }
         
         /// <summary>
@@ -163,7 +163,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

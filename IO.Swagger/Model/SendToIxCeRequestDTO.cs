@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SendToIxCeRequestDTO" /> class.
         /// </summary>
-        /// <param name="Docnumbers">Docnumbers.</param>
-        /// <param name="AccumulationPackageDescription">AccumulationPackageDescription.</param>
-        public SendToIxCeRequestDTO(List<int?> Docnumbers = default(List<int?>), string AccumulationPackageDescription = default(string))
+        /// <param name="docnumbers">docnumbers.</param>
+        /// <param name="accumulationPackageDescription">accumulationPackageDescription.</param>
+        public SendToIxCeRequestDTO(List<int?> docnumbers = default(List<int?>), string accumulationPackageDescription = default(string))
         {
-            this.Docnumbers = Docnumbers;
-            this.AccumulationPackageDescription = AccumulationPackageDescription;
+            this.Docnumbers = docnumbers;
+            this.AccumulationPackageDescription = accumulationPackageDescription;
         }
         
         /// <summary>
@@ -71,7 +71,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

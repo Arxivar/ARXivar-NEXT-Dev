@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FieldValidationCalculateArchiveCriteriaDto" /> class.
         /// </summary>
-        /// <param name="SearchFilterDto">Filter for profiling.</param>
-        /// <param name="FieldName">Field Name.</param>
-        public FieldValidationCalculateArchiveCriteriaDto(ProfileDTO SearchFilterDto = default(ProfileDTO), string FieldName = default(string))
+        /// <param name="searchFilterDto">Filter for profiling.</param>
+        /// <param name="fieldName">Field Name.</param>
+        public FieldValidationCalculateArchiveCriteriaDto(ProfileDTO searchFilterDto = default(ProfileDTO), string fieldName = default(string))
         {
-            this.SearchFilterDto = SearchFilterDto;
-            this.FieldName = FieldName;
+            this.SearchFilterDto = searchFilterDto;
+            this.FieldName = fieldName;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -38,66 +38,66 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AuthenticationTokenRequestDTO" /> class.
         /// </summary>
-        /// <param name="Username">Username (required).</param>
-        /// <param name="Password">Password (required).</param>
-        /// <param name="ClientId">Client id (required).</param>
-        /// <param name="ClientSecret">Client secret (required).</param>
-        /// <param name="LogonProviderId">Logon provider for authentication (existing association required).</param>
-        /// <param name="ImpersonateUserId">Impersonate user id.</param>
-        /// <param name="ImpersonateExternalId">Impersonate user by externalId.</param>
-        /// <param name="ClientVersion">Client version.</param>
-        /// <param name="MachineKey">Machine Key.</param>
-        /// <param name="LanguageCultureName">Language.</param>
-        /// <param name="SuccessRedirectUri">Url for success redirect.</param>
-        /// <param name="ScopeList">Request scope list.</param>
-        /// <param name="ClientIpAddress">Request client Ip.</param>
-        public AuthenticationTokenRequestDTO(string Username = default(string), string Password = default(string), string ClientId = default(string), string ClientSecret = default(string), string LogonProviderId = default(string), int? ImpersonateUserId = default(int?), string ImpersonateExternalId = default(string), string ClientVersion = default(string), string MachineKey = default(string), string LanguageCultureName = default(string), string SuccessRedirectUri = default(string), List<string> ScopeList = default(List<string>), string ClientIpAddress = default(string))
+        /// <param name="username">Username (required).</param>
+        /// <param name="password">Password (required).</param>
+        /// <param name="clientId">Client id (required).</param>
+        /// <param name="clientSecret">Client secret (required).</param>
+        /// <param name="logonProviderId">Logon provider for authentication (existing association required).</param>
+        /// <param name="impersonateUserId">Impersonate user id.</param>
+        /// <param name="impersonateExternalId">Impersonate user by externalId.</param>
+        /// <param name="clientVersion">Client version.</param>
+        /// <param name="machineKey">Machine Key.</param>
+        /// <param name="languageCultureName">Language.</param>
+        /// <param name="successRedirectUri">Url for success redirect.</param>
+        /// <param name="scopeList">Request scope list.</param>
+        /// <param name="clientIpAddress">Request client Ip.</param>
+        public AuthenticationTokenRequestDTO(string username = default(string), string password = default(string), string clientId = default(string), string clientSecret = default(string), string logonProviderId = default(string), int? impersonateUserId = default(int?), string impersonateExternalId = default(string), string clientVersion = default(string), string machineKey = default(string), string languageCultureName = default(string), string successRedirectUri = default(string), List<string> scopeList = default(List<string>), string clientIpAddress = default(string))
         {
-            // to ensure "Username" is required (not null)
-            if (Username == null)
+            // to ensure "username" is required (not null)
+            if (username == null)
             {
-                throw new InvalidDataException("Username is a required property for AuthenticationTokenRequestDTO and cannot be null");
+                throw new InvalidDataException("username is a required property for AuthenticationTokenRequestDTO and cannot be null");
             }
             else
             {
-                this.Username = Username;
+                this.Username = username;
             }
-            // to ensure "Password" is required (not null)
-            if (Password == null)
+            // to ensure "password" is required (not null)
+            if (password == null)
             {
-                throw new InvalidDataException("Password is a required property for AuthenticationTokenRequestDTO and cannot be null");
+                throw new InvalidDataException("password is a required property for AuthenticationTokenRequestDTO and cannot be null");
             }
             else
             {
-                this.Password = Password;
+                this.Password = password;
             }
-            // to ensure "ClientId" is required (not null)
-            if (ClientId == null)
+            // to ensure "clientId" is required (not null)
+            if (clientId == null)
             {
-                throw new InvalidDataException("ClientId is a required property for AuthenticationTokenRequestDTO and cannot be null");
+                throw new InvalidDataException("clientId is a required property for AuthenticationTokenRequestDTO and cannot be null");
             }
             else
             {
-                this.ClientId = ClientId;
+                this.ClientId = clientId;
             }
-            // to ensure "ClientSecret" is required (not null)
-            if (ClientSecret == null)
+            // to ensure "clientSecret" is required (not null)
+            if (clientSecret == null)
             {
-                throw new InvalidDataException("ClientSecret is a required property for AuthenticationTokenRequestDTO and cannot be null");
+                throw new InvalidDataException("clientSecret is a required property for AuthenticationTokenRequestDTO and cannot be null");
             }
             else
             {
-                this.ClientSecret = ClientSecret;
+                this.ClientSecret = clientSecret;
             }
-            this.LogonProviderId = LogonProviderId;
-            this.ImpersonateUserId = ImpersonateUserId;
-            this.ImpersonateExternalId = ImpersonateExternalId;
-            this.ClientVersion = ClientVersion;
-            this.MachineKey = MachineKey;
-            this.LanguageCultureName = LanguageCultureName;
-            this.SuccessRedirectUri = SuccessRedirectUri;
-            this.ScopeList = ScopeList;
-            this.ClientIpAddress = ClientIpAddress;
+            this.LogonProviderId = logonProviderId;
+            this.ImpersonateUserId = impersonateUserId;
+            this.ImpersonateExternalId = impersonateExternalId;
+            this.ClientVersion = clientVersion;
+            this.MachineKey = machineKey;
+            this.LanguageCultureName = languageCultureName;
+            this.SuccessRedirectUri = successRedirectUri;
+            this.ScopeList = scopeList;
+            this.ClientIpAddress = clientIpAddress;
         }
         
         /// <summary>
@@ -220,7 +220,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,10 +33,10 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatServiceSettingsDTO" /> class.
         /// </summary>
-        /// <param name="IsEnable">IsEnable.</param>
-        public ChatServiceSettingsDTO(bool? IsEnable = default(bool?))
+        /// <param name="isEnable">isEnable.</param>
+        public ChatServiceSettingsDTO(bool? isEnable = default(bool?))
         {
-            this.IsEnable = IsEnable;
+            this.IsEnable = isEnable;
         }
         
         /// <summary>
@@ -62,7 +62,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

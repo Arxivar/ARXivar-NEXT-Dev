@@ -261,11 +261,11 @@ namespace ExampleApplication
                 var doctypefield = defaultSearch.Fields.FirstOrDefault(i =>
                     i.Name.Equals("DOCUMENTTYPE", StringComparison.CurrentCultureIgnoreCase));
                 ((FieldBaseForSearchDocumentTypeDto)doctypefield).Valore1 = new DocumentTypeSearchFilterDto(classeFatture.DocumentType, classeFatture.Type2, classeFatture.Type3);
-                ((FieldBaseForSearchDocumentTypeDto)doctypefield)._Operator = 3;
+                ((FieldBaseForSearchDocumentTypeDto)doctypefield).Operator = 3;
 
                 var additionals = searchApi.SearchesGetAdditionalByClasse(classeFatture.DocumentType, classeFatture.Type2, classeFatture.Type3, "AbleBS");
                 var codiceFattura = additionals.FirstOrDefault(i => i.Description == "Codice Fattura");
-                ((FieldBaseForSearchStringDto) codiceFattura)._Operator = 11; //non nullo e non vuoto;
+                ((FieldBaseForSearchStringDto) codiceFattura).Operator = 11; //non nullo e non vuoto;
 
                 defaultSearch.Fields.Add(codiceFattura);
                 defaultSelect.Fields.FirstOrDefault(i => i.Label == "Codice Fattura").Selected = true;
@@ -484,21 +484,21 @@ namespace ExampleApplication
                 var doctypefieldFatture = searchFatture.Fields.FirstOrDefault(i =>
                     i.Name.Equals("DOCUMENTTYPE", StringComparison.CurrentCultureIgnoreCase));
                 ((FieldBaseForSearchDocumentTypeDto)doctypefieldFatture).Valore1 = new DocumentTypeSearchFilterDto(classeFatture.DocumentType, classeFatture.Type2, classeFatture.Type3);
-                ((FieldBaseForSearchDocumentTypeDto)doctypefieldFatture)._Operator = 3;
+                ((FieldBaseForSearchDocumentTypeDto)doctypefieldFatture).Operator = 3;
 
                 //Get search for the second documenttype
                 var searchBolle = searchV2Api.SearchesV2GetEmpty();
                 var doctypefieldBolle = searchBolle.Fields.FirstOrDefault(i =>
                     i.Name.Equals("DOCUMENTTYPE", StringComparison.CurrentCultureIgnoreCase));
                 ((FieldBaseForSearchDocumentTypeDto)doctypefieldBolle).Valore1 = new DocumentTypeSearchFilterDto(classeBolle.DocumentType, classeBolle.Type2, classeBolle.Type3);
-                ((FieldBaseForSearchDocumentTypeDto)doctypefieldBolle)._Operator = 3;
+                ((FieldBaseForSearchDocumentTypeDto)doctypefieldBolle).Operator = 3;
 
 
                 var baseSelect = searchV2Api.SearchesV2GetSelect_0(classeFatture.Id);
                 
                 var additionalsFatture = searchV2Api.SearchesV2GetAdditionalByClasse(classeFatture.DocumentType, classeFatture.Type2, classeFatture.Type3, "AbleBS");
                 var codiceFattura = additionalsFatture.FirstOrDefault(i => i.Description == "Codice Fattura");
-                ((FieldBaseForSearchStringDto)codiceFattura)._Operator = 11; //non nullo e non vuoto;
+                ((FieldBaseForSearchStringDto)codiceFattura).Operator = 11; //non nullo e non vuoto;
 
                 searchFatture.Fields.Add(codiceFattura);
                 baseSelect.Fields.FirstOrDefault(i => i.Label == "Codice Fattura").Selected = true;

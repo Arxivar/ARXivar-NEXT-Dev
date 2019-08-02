@@ -33,58 +33,58 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AttachmentDTO" /> class.
         /// </summary>
-        /// <param name="Id">Unique identifier.</param>
-        /// <param name="Docnumber">Document Identifier.</param>
-        /// <param name="Revision">Revision number.</param>
-        /// <param name="Filename">Name for the zip file..</param>
-        /// <param name="Filepath">Path of compressed file..</param>
-        /// <param name="Originalname">Name of the file..</param>
-        /// <param name="Device">Possible values:  0: Hd  1: Cd .</param>
-        /// <param name="Cdlabel">CD Label.</param>
-        /// <param name="Comment">Description.</param>
-        /// <param name="Importdate">Creation Date.</param>
-        /// <param name="User">Identifier of the author.</param>
-        /// <param name="UserCompleteName">Full name of the author.</param>
-        /// <param name="Block">Possible values:  0: None  1: Active  2: Marked .</param>
-        /// <param name="Compliantcopy">Replace with the profile data for web visualization.</param>
-        /// <param name="Footprint">Hash of the file.</param>
-        /// <param name="Checksend">Send the file in the case of email shipment.</param>
-        /// <param name="Aosflag">Kept in the replacement mode with the document profile.</param>
-        /// <param name="Access">Possible values:  0: Access_Denied  1: Read_Only  2: Edit  4: Full_Trust  -1: None .</param>
-        /// <param name="SaveType">Possible values:  0: File_System  1: Database .</param>
-        /// <param name="Filesize">File Size.</param>
-        /// <param name="Kind">Possible values:  0: ExternalAttachement  1: InternalAttachement .</param>
-        /// <param name="AttachedDocnumber">Document Identifier if the internal attachment.</param>
-        /// <param name="IxCheck">Send the file to IX service in the case of shipment.</param>
-        /// <param name="AttachmentRevision">AttachmentRevision.</param>
-        /// <param name="CompressionMode">Possible values:  0: None  1: CompressChilkat91  2: CompressChilkat95  3: CompressChilkat95AndCryptoAes256 .</param>
-        public AttachmentDTO(int? Id = default(int?), int? Docnumber = default(int?), int? Revision = default(int?), string Filename = default(string), string Filepath = default(string), string Originalname = default(string), int? Device = default(int?), string Cdlabel = default(string), string Comment = default(string), DateTime? Importdate = default(DateTime?), int? User = default(int?), string UserCompleteName = default(string), int? Block = default(int?), bool? Compliantcopy = default(bool?), string Footprint = default(string), bool? Checksend = default(bool?), bool? Aosflag = default(bool?), int? Access = default(int?), int? SaveType = default(int?), long? Filesize = default(long?), int? Kind = default(int?), int? AttachedDocnumber = default(int?), bool? IxCheck = default(bool?), int? AttachmentRevision = default(int?), int? CompressionMode = default(int?))
+        /// <param name="id">Unique identifier.</param>
+        /// <param name="docnumber">Document Identifier.</param>
+        /// <param name="revision">Revision number.</param>
+        /// <param name="filename">Name for the zip file..</param>
+        /// <param name="filepath">Path of compressed file..</param>
+        /// <param name="originalname">Name of the file..</param>
+        /// <param name="device">Possible values:  0: Hd  1: Cd .</param>
+        /// <param name="cdlabel">CD Label.</param>
+        /// <param name="comment">Description.</param>
+        /// <param name="importdate">Creation Date.</param>
+        /// <param name="user">Identifier of the author.</param>
+        /// <param name="userCompleteName">Full name of the author.</param>
+        /// <param name="block">Possible values:  0: None  1: Active  2: Marked .</param>
+        /// <param name="compliantcopy">Replace with the profile data for web visualization.</param>
+        /// <param name="footprint">Hash of the file.</param>
+        /// <param name="checksend">Send the file in the case of email shipment.</param>
+        /// <param name="aosflag">Kept in the replacement mode with the document profile.</param>
+        /// <param name="access">Possible values:  0: Access_Denied  1: Read_Only  2: Edit  4: Full_Trust  -1: None .</param>
+        /// <param name="saveType">Possible values:  0: File_System  1: Database .</param>
+        /// <param name="filesize">File Size.</param>
+        /// <param name="kind">Possible values:  0: ExternalAttachement  1: InternalAttachement .</param>
+        /// <param name="attachedDocnumber">Document Identifier if the internal attachment.</param>
+        /// <param name="ixCheck">Send the file to IX service in the case of shipment.</param>
+        /// <param name="attachmentRevision">attachmentRevision.</param>
+        /// <param name="compressionMode">Possible values:  0: None  1: CompressChilkat91  2: CompressChilkat95  3: CompressChilkat95AndCryptoAes256 .</param>
+        public AttachmentDTO(int? id = default(int?), int? docnumber = default(int?), int? revision = default(int?), string filename = default(string), string filepath = default(string), string originalname = default(string), int? device = default(int?), string cdlabel = default(string), string comment = default(string), DateTime? importdate = default(DateTime?), int? user = default(int?), string userCompleteName = default(string), int? block = default(int?), bool? compliantcopy = default(bool?), string footprint = default(string), bool? checksend = default(bool?), bool? aosflag = default(bool?), int? access = default(int?), int? saveType = default(int?), long? filesize = default(long?), int? kind = default(int?), int? attachedDocnumber = default(int?), bool? ixCheck = default(bool?), int? attachmentRevision = default(int?), int? compressionMode = default(int?))
         {
-            this.Id = Id;
-            this.Docnumber = Docnumber;
-            this.Revision = Revision;
-            this.Filename = Filename;
-            this.Filepath = Filepath;
-            this.Originalname = Originalname;
-            this.Device = Device;
-            this.Cdlabel = Cdlabel;
-            this.Comment = Comment;
-            this.Importdate = Importdate;
-            this.User = User;
-            this.UserCompleteName = UserCompleteName;
-            this.Block = Block;
-            this.Compliantcopy = Compliantcopy;
-            this.Footprint = Footprint;
-            this.Checksend = Checksend;
-            this.Aosflag = Aosflag;
-            this.Access = Access;
-            this.SaveType = SaveType;
-            this.Filesize = Filesize;
-            this.Kind = Kind;
-            this.AttachedDocnumber = AttachedDocnumber;
-            this.IxCheck = IxCheck;
-            this.AttachmentRevision = AttachmentRevision;
-            this.CompressionMode = CompressionMode;
+            this.Id = id;
+            this.Docnumber = docnumber;
+            this.Revision = revision;
+            this.Filename = filename;
+            this.Filepath = filepath;
+            this.Originalname = originalname;
+            this.Device = device;
+            this.Cdlabel = cdlabel;
+            this.Comment = comment;
+            this.Importdate = importdate;
+            this.User = user;
+            this.UserCompleteName = userCompleteName;
+            this.Block = block;
+            this.Compliantcopy = compliantcopy;
+            this.Footprint = footprint;
+            this.Checksend = checksend;
+            this.Aosflag = aosflag;
+            this.Access = access;
+            this.SaveType = saveType;
+            this.Filesize = filesize;
+            this.Kind = kind;
+            this.AttachedDocnumber = attachedDocnumber;
+            this.IxCheck = ixCheck;
+            this.AttachmentRevision = attachmentRevision;
+            this.CompressionMode = compressionMode;
         }
         
         /// <summary>
@@ -302,7 +302,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

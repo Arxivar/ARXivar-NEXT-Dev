@@ -33,16 +33,16 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FullTextDTO" /> class.
         /// </summary>
-        /// <param name="Id">Identifier.</param>
-        /// <param name="Docnumber">Document Identifier.</param>
-        /// <param name="Revision">Revision Number.</param>
-        /// <param name="Text">Text recognition by the OCR operation.</param>
-        public FullTextDTO(int? Id = default(int?), int? Docnumber = default(int?), int? Revision = default(int?), string Text = default(string))
+        /// <param name="id">Identifier.</param>
+        /// <param name="docnumber">Document Identifier.</param>
+        /// <param name="revision">Revision Number.</param>
+        /// <param name="text">Text recognition by the OCR operation.</param>
+        public FullTextDTO(int? id = default(int?), int? docnumber = default(int?), int? revision = default(int?), string text = default(string))
         {
-            this.Id = Id;
-            this.Docnumber = Docnumber;
-            this.Revision = Revision;
-            this.Text = Text;
+            this.Id = id;
+            this.Docnumber = docnumber;
+            this.Revision = revision;
+            this.Text = text;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

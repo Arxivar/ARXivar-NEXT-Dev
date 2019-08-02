@@ -33,30 +33,30 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactDTO" /> class.
         /// </summary>
-        /// <param name="AddressBookId">Identifier of Address Book.</param>
-        /// <param name="ContactName">Name.</param>
-        /// <param name="Job">Job.</param>
-        /// <param name="Phone">Phone Number.</param>
-        /// <param name="Fax">Fax Number.</param>
-        /// <param name="CellPhone">Mobile Phone Number.</param>
-        /// <param name="House">Address.</param>
-        /// <param name="Department">Department.</param>
-        /// <param name="Office">Office.</param>
-        /// <param name="Email">Email.</param>
-        /// <param name="Id">Identifier.</param>
-        public ContactDTO(int? AddressBookId = default(int?), string ContactName = default(string), string Job = default(string), string Phone = default(string), string Fax = default(string), string CellPhone = default(string), string House = default(string), string Department = default(string), string Office = default(string), string Email = default(string), int? Id = default(int?))
+        /// <param name="addressBookId">Identifier of Address Book.</param>
+        /// <param name="contactName">Name.</param>
+        /// <param name="job">Job.</param>
+        /// <param name="phone">Phone Number.</param>
+        /// <param name="fax">Fax Number.</param>
+        /// <param name="cellPhone">Mobile Phone Number.</param>
+        /// <param name="house">Address.</param>
+        /// <param name="department">Department.</param>
+        /// <param name="office">Office.</param>
+        /// <param name="email">Email.</param>
+        /// <param name="id">Identifier.</param>
+        public ContactDTO(int? addressBookId = default(int?), string contactName = default(string), string job = default(string), string phone = default(string), string fax = default(string), string cellPhone = default(string), string house = default(string), string department = default(string), string office = default(string), string email = default(string), int? id = default(int?))
         {
-            this.AddressBookId = AddressBookId;
-            this.ContactName = ContactName;
-            this.Job = Job;
-            this.Phone = Phone;
-            this.Fax = Fax;
-            this.CellPhone = CellPhone;
-            this.House = House;
-            this.Department = Department;
-            this.Office = Office;
-            this.Email = Email;
-            this.Id = Id;
+            this.AddressBookId = addressBookId;
+            this.ContactName = contactName;
+            this.Job = job;
+            this.Phone = phone;
+            this.Fax = fax;
+            this.CellPhone = cellPhone;
+            this.House = house;
+            this.Department = department;
+            this.Office = office;
+            this.Email = email;
+            this.Id = id;
         }
         
         /// <summary>
@@ -163,7 +163,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

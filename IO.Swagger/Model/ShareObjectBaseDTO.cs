@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ShareObjectBaseDTO" /> class.
         /// </summary>
-        /// <param name="ObjectType">Object type.</param>
-        /// <param name="ObjectId">Object unique identifier.</param>
-        public ShareObjectBaseDTO(int? ObjectType = default(int?), string ObjectId = default(string))
+        /// <param name="objectType">Object type.</param>
+        /// <param name="objectId">Object unique identifier.</param>
+        public ShareObjectBaseDTO(int? objectType = default(int?), string objectId = default(string))
         {
-            this.ObjectType = ObjectType;
-            this.ObjectId = ObjectId;
+            this.ObjectType = objectType;
+            this.ObjectId = objectId;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

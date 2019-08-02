@@ -33,10 +33,10 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserLangDto" /> class.
         /// </summary>
-        /// <param name="Username">Username.</param>
-        public UserLangDto(string Username = default(string))
+        /// <param name="username">username.</param>
+        public UserLangDto(string username = default(string))
         {
-            this.Username = Username;
+            this.Username = username;
         }
         
         /// <summary>
@@ -62,7 +62,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AooSearchFilterDto" /> class.
         /// </summary>
-        /// <param name="Code">Code.</param>
-        /// <param name="Name">Name.</param>
-        public AooSearchFilterDto(string Code = default(string), string Name = default(string))
+        /// <param name="code">Code.</param>
+        /// <param name="name">Name.</param>
+        public AooSearchFilterDto(string code = default(string), string name = default(string))
         {
-            this.Code = Code;
-            this.Name = Name;
+            this.Code = code;
+            this.Name = name;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

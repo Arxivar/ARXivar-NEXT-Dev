@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SignCertPasswordTestDTO" /> class.
         /// </summary>
-        /// <param name="Password">Password.</param>
-        /// <param name="Otp">Otp.</param>
-        /// <param name="CertRelatedId">For Remote Telecom Provider.</param>
-        public SignCertPasswordTestDTO(string Password = default(string), string Otp = default(string), string CertRelatedId = default(string))
+        /// <param name="password">password.</param>
+        /// <param name="otp">otp.</param>
+        /// <param name="certRelatedId">For Remote Telecom Provider.</param>
+        public SignCertPasswordTestDTO(string password = default(string), string otp = default(string), string certRelatedId = default(string))
         {
-            this.Password = Password;
-            this.Otp = Otp;
-            this.CertRelatedId = CertRelatedId;
+            this.Password = password;
+            this.Otp = otp;
+            this.CertRelatedId = certRelatedId;
         }
         
         /// <summary>
@@ -81,7 +81,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

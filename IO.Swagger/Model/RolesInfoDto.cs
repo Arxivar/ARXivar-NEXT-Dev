@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RolesInfoDto" /> class.
         /// </summary>
-        /// <param name="RoleName">Name.</param>
-        /// <param name="Value">Value.</param>
-        public RolesInfoDto(string RoleName = default(string), Object Value = default(Object))
+        /// <param name="roleName">Name.</param>
+        /// <param name="value">Value.</param>
+        public RolesInfoDto(string roleName = default(string), Object value = default(Object))
         {
-            this.RoleName = RoleName;
-            this.Value = Value;
+            this.RoleName = roleName;
+            this.Value = value;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

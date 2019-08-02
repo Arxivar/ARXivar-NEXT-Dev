@@ -33,36 +33,36 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ModelDTO" /> class.
         /// </summary>
-        /// <param name="Id">Identifier.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="User">Author.</param>
-        /// <param name="UserDescription">Author&#39;s model name.</param>
-        /// <param name="Type">Possible values:  1: Public  2: Private .</param>
-        /// <param name="FileName">Original File Name.</param>
-        /// <param name="LockModality">Possible values:  0: Unblocked  1: Blocked .</param>
-        /// <param name="PredefinedProfileId">Predefined Profile Identifier.</param>
-        /// <param name="GroupId">Group Identifier.</param>
-        /// <param name="GroupName">Model&#39;s group name.</param>
-        /// <param name="Extension">Extensione File.</param>
-        /// <param name="OpenAfterProfilation">Open File After to Profiliing.</param>
-        /// <param name="MaskId">Mask Identifier.</param>
-        /// <param name="PreviewFileName">File Name of the original preview file.</param>
-        public ModelDTO(int? Id = default(int?), string Description = default(string), int? User = default(int?), string UserDescription = default(string), int? Type = default(int?), string FileName = default(string), int? LockModality = default(int?), int? PredefinedProfileId = default(int?), int? GroupId = default(int?), string GroupName = default(string), string Extension = default(string), bool? OpenAfterProfilation = default(bool?), string MaskId = default(string), string PreviewFileName = default(string))
+        /// <param name="id">Identifier.</param>
+        /// <param name="description">Description.</param>
+        /// <param name="user">Author.</param>
+        /// <param name="userDescription">Author&#39;s model name.</param>
+        /// <param name="type">Possible values:  1: Public  2: Private .</param>
+        /// <param name="fileName">Original File Name.</param>
+        /// <param name="lockModality">Possible values:  0: Unblocked  1: Blocked .</param>
+        /// <param name="predefinedProfileId">Predefined Profile Identifier.</param>
+        /// <param name="groupId">Group Identifier.</param>
+        /// <param name="groupName">Model&#39;s group name.</param>
+        /// <param name="extension">Extensione File.</param>
+        /// <param name="openAfterProfilation">Open File After to Profiliing.</param>
+        /// <param name="maskId">Mask Identifier.</param>
+        /// <param name="previewFileName">File Name of the original preview file.</param>
+        public ModelDTO(int? id = default(int?), string description = default(string), int? user = default(int?), string userDescription = default(string), int? type = default(int?), string fileName = default(string), int? lockModality = default(int?), int? predefinedProfileId = default(int?), int? groupId = default(int?), string groupName = default(string), string extension = default(string), bool? openAfterProfilation = default(bool?), string maskId = default(string), string previewFileName = default(string))
         {
-            this.Id = Id;
-            this.Description = Description;
-            this.User = User;
-            this.UserDescription = UserDescription;
-            this.Type = Type;
-            this.FileName = FileName;
-            this.LockModality = LockModality;
-            this.PredefinedProfileId = PredefinedProfileId;
-            this.GroupId = GroupId;
-            this.GroupName = GroupName;
-            this.Extension = Extension;
-            this.OpenAfterProfilation = OpenAfterProfilation;
-            this.MaskId = MaskId;
-            this.PreviewFileName = PreviewFileName;
+            this.Id = id;
+            this.Description = description;
+            this.User = user;
+            this.UserDescription = userDescription;
+            this.Type = type;
+            this.FileName = fileName;
+            this.LockModality = lockModality;
+            this.PredefinedProfileId = predefinedProfileId;
+            this.GroupId = groupId;
+            this.GroupName = groupName;
+            this.Extension = extension;
+            this.OpenAfterProfilation = openAfterProfilation;
+            this.MaskId = maskId;
+            this.PreviewFileName = previewFileName;
         }
         
         /// <summary>
@@ -193,7 +193,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

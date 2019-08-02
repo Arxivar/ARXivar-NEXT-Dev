@@ -33,34 +33,34 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BinderDTO" /> class.
         /// </summary>
-        /// <param name="Id">Identifier.</param>
-        /// <param name="BinderTypeId">Type Identifier.</param>
-        /// <param name="FolderId">Folder Identifier.</param>
-        /// <param name="BinderName">Name.</param>
-        /// <param name="Code">Code.</param>
-        /// <param name="EndDate">Expiry.</param>
-        /// <param name="StartDate">Start Date.</param>
-        /// <param name="BinderState">State.</param>
-        /// <param name="User">Author Identifier.</param>
-        /// <param name="UserCompleteName">Author Name.</param>
-        /// <param name="ExternalId">External Identifier.</param>
-        /// <param name="BinderTypeDescription">Type Description.</param>
-        /// <param name="Fields">Fields.</param>
-        public BinderDTO(int? Id = default(int?), int? BinderTypeId = default(int?), int? FolderId = default(int?), string BinderName = default(string), string Code = default(string), DateTime? EndDate = default(DateTime?), DateTime? StartDate = default(DateTime?), int? BinderState = default(int?), int? User = default(int?), string UserCompleteName = default(string), string ExternalId = default(string), string BinderTypeDescription = default(string), List<FieldBaseDTO> Fields = default(List<FieldBaseDTO>))
+        /// <param name="id">Identifier.</param>
+        /// <param name="binderTypeId">Type Identifier.</param>
+        /// <param name="folderId">Folder Identifier.</param>
+        /// <param name="binderName">Name.</param>
+        /// <param name="code">Code.</param>
+        /// <param name="endDate">Expiry.</param>
+        /// <param name="startDate">Start Date.</param>
+        /// <param name="binderState">State.</param>
+        /// <param name="user">Author Identifier.</param>
+        /// <param name="userCompleteName">Author Name.</param>
+        /// <param name="externalId">External Identifier.</param>
+        /// <param name="binderTypeDescription">Type Description.</param>
+        /// <param name="fields">fields.</param>
+        public BinderDTO(int? id = default(int?), int? binderTypeId = default(int?), int? folderId = default(int?), string binderName = default(string), string code = default(string), DateTime? endDate = default(DateTime?), DateTime? startDate = default(DateTime?), int? binderState = default(int?), int? user = default(int?), string userCompleteName = default(string), string externalId = default(string), string binderTypeDescription = default(string), List<FieldBaseDTO> fields = default(List<FieldBaseDTO>))
         {
-            this.Id = Id;
-            this.BinderTypeId = BinderTypeId;
-            this.FolderId = FolderId;
-            this.BinderName = BinderName;
-            this.Code = Code;
-            this.EndDate = EndDate;
-            this.StartDate = StartDate;
-            this.BinderState = BinderState;
-            this.User = User;
-            this.UserCompleteName = UserCompleteName;
-            this.ExternalId = ExternalId;
-            this.BinderTypeDescription = BinderTypeDescription;
-            this.Fields = Fields;
+            this.Id = id;
+            this.BinderTypeId = binderTypeId;
+            this.FolderId = folderId;
+            this.BinderName = binderName;
+            this.Code = code;
+            this.EndDate = endDate;
+            this.StartDate = startDate;
+            this.BinderState = binderState;
+            this.User = user;
+            this.UserCompleteName = userCompleteName;
+            this.ExternalId = externalId;
+            this.BinderTypeDescription = binderTypeDescription;
+            this.Fields = fields;
         }
         
         /// <summary>
@@ -182,7 +182,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,16 +33,16 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IxFeSignCredential" /> class.
         /// </summary>
-        /// <param name="SignCertId">Identifier of signature certificate.</param>
-        /// <param name="Password">Password.</param>
-        /// <param name="RelatedCertId">Releted Cetificate Identifier.</param>
-        /// <param name="Otp">OPT.</param>
-        public IxFeSignCredential(int? SignCertId = default(int?), string Password = default(string), string RelatedCertId = default(string), string Otp = default(string))
+        /// <param name="signCertId">Identifier of signature certificate.</param>
+        /// <param name="password">Password.</param>
+        /// <param name="relatedCertId">Releted Cetificate Identifier.</param>
+        /// <param name="otp">OPT.</param>
+        public IxFeSignCredential(int? signCertId = default(int?), string password = default(string), string relatedCertId = default(string), string otp = default(string))
         {
-            this.SignCertId = SignCertId;
-            this.Password = Password;
-            this.RelatedCertId = RelatedCertId;
-            this.Otp = Otp;
+            this.SignCertId = signCertId;
+            this.Password = password;
+            this.RelatedCertId = relatedCertId;
+            this.Otp = otp;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

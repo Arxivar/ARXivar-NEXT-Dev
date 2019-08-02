@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SignCertUseDTO" /> class.
         /// </summary>
-        /// <param name="Id">Identifier.</param>
-        /// <param name="Aoo">Business Unit.</param>
-        /// <param name="DocumentTypeField">Document Type.</param>
-        public SignCertUseDTO(int? Id = default(int?), string Aoo = default(string), DocumentTypeFieldDTO DocumentTypeField = default(DocumentTypeFieldDTO))
+        /// <param name="id">Identifier.</param>
+        /// <param name="aoo">Business Unit.</param>
+        /// <param name="documentTypeField">Document Type.</param>
+        public SignCertUseDTO(int? id = default(int?), string aoo = default(string), DocumentTypeFieldDTO documentTypeField = default(DocumentTypeFieldDTO))
         {
-            this.Id = Id;
-            this.Aoo = Aoo;
-            this.DocumentTypeField = DocumentTypeField;
+            this.Id = id;
+            this.Aoo = aoo;
+            this.DocumentTypeField = documentTypeField;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

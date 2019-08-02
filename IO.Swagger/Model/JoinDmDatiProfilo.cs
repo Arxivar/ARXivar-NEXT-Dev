@@ -33,74 +33,74 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="JoinDmDatiProfilo" /> class.
         /// </summary>
-        /// <param name="LegameTabella">LegameTabella.</param>
-        /// <param name="Id">Id.</param>
-        /// <param name="Docnumber">Docnumber.</param>
-        /// <param name="Campo">Campo.</param>
-        /// <param name="Valore">Valore.</param>
-        /// <param name="Contatti">Contatti.</param>
-        /// <param name="Fax">Fax.</param>
-        /// <param name="Tel">Tel.</param>
-        /// <param name="Indirizzo">Indirizzo.</param>
-        /// <param name="Mail">Mail.</param>
-        /// <param name="Localita">Localita.</param>
-        /// <param name="Cap">Cap.</param>
-        /// <param name="Provincia">Provincia.</param>
-        /// <param name="Nazione">Nazione.</param>
-        /// <param name="Codice">Codice.</param>
-        /// <param name="Contatto">Contatto.</param>
-        /// <param name="Mansione">Mansione.</param>
-        /// <param name="Telnome">Telnome.</param>
-        /// <param name="Faxnome">Faxnome.</param>
-        /// <param name="Cell">Cell.</param>
-        /// <param name="Abitazione">Abitazione.</param>
-        /// <param name="Reparto">Reparto.</param>
-        /// <param name="Ufficio">Ufficio.</param>
-        /// <param name="Email">Email.</param>
-        /// <param name="Riferimento">Riferimento.</param>
-        /// <param name="Codfis">Codfis.</param>
-        /// <param name="Partiva">Partiva.</param>
-        /// <param name="Priorita">Priorita.</param>
-        /// <param name="Idrubrica">Idrubrica.</param>
-        /// <param name="Idcontatto">Idcontatto.</param>
-        /// <param name="ForceCaseInsensitive">ForceCaseInsensitive.</param>
-        /// <param name="JoinMode">Possible values:  0: INNER  1: LEFT  2: RIGHT .</param>
-        /// <param name="NomeTabella">NomeTabella.</param>
-        public JoinDmDatiProfilo(string LegameTabella = default(string), FieldInt Id = default(FieldInt), FieldInt Docnumber = default(FieldInt), FieldString Campo = default(FieldString), FieldString Valore = default(FieldString), FieldString Contatti = default(FieldString), FieldString Fax = default(FieldString), FieldString Tel = default(FieldString), FieldString Indirizzo = default(FieldString), FieldString Mail = default(FieldString), FieldString Localita = default(FieldString), FieldString Cap = default(FieldString), FieldString Provincia = default(FieldString), FieldString Nazione = default(FieldString), FieldString Codice = default(FieldString), FieldString Contatto = default(FieldString), FieldString Mansione = default(FieldString), FieldString Telnome = default(FieldString), FieldString Faxnome = default(FieldString), FieldString Cell = default(FieldString), FieldString Abitazione = default(FieldString), FieldString Reparto = default(FieldString), FieldString Ufficio = default(FieldString), FieldString Email = default(FieldString), FieldString Riferimento = default(FieldString), FieldString Codfis = default(FieldString), FieldString Partiva = default(FieldString), FieldString Priorita = default(FieldString), FieldInt Idrubrica = default(FieldInt), FieldInt Idcontatto = default(FieldInt), bool? ForceCaseInsensitive = default(bool?), int? JoinMode = default(int?), string NomeTabella = default(string))
+        /// <param name="legameTabella">legameTabella.</param>
+        /// <param name="id">id.</param>
+        /// <param name="docnumber">docnumber.</param>
+        /// <param name="campo">campo.</param>
+        /// <param name="valore">valore.</param>
+        /// <param name="contatti">contatti.</param>
+        /// <param name="fax">fax.</param>
+        /// <param name="tel">tel.</param>
+        /// <param name="indirizzo">indirizzo.</param>
+        /// <param name="mail">mail.</param>
+        /// <param name="localita">localita.</param>
+        /// <param name="cap">cap.</param>
+        /// <param name="provincia">provincia.</param>
+        /// <param name="nazione">nazione.</param>
+        /// <param name="codice">codice.</param>
+        /// <param name="contatto">contatto.</param>
+        /// <param name="mansione">mansione.</param>
+        /// <param name="telnome">telnome.</param>
+        /// <param name="faxnome">faxnome.</param>
+        /// <param name="cell">cell.</param>
+        /// <param name="abitazione">abitazione.</param>
+        /// <param name="reparto">reparto.</param>
+        /// <param name="ufficio">ufficio.</param>
+        /// <param name="email">email.</param>
+        /// <param name="riferimento">riferimento.</param>
+        /// <param name="codfis">codfis.</param>
+        /// <param name="partiva">partiva.</param>
+        /// <param name="priorita">priorita.</param>
+        /// <param name="idrubrica">idrubrica.</param>
+        /// <param name="idcontatto">idcontatto.</param>
+        /// <param name="forceCaseInsensitive">forceCaseInsensitive.</param>
+        /// <param name="joinMode">Possible values:  0: INNER  1: LEFT  2: RIGHT .</param>
+        /// <param name="nomeTabella">nomeTabella.</param>
+        public JoinDmDatiProfilo(string legameTabella = default(string), FieldInt id = default(FieldInt), FieldInt docnumber = default(FieldInt), FieldString campo = default(FieldString), FieldString valore = default(FieldString), FieldString contatti = default(FieldString), FieldString fax = default(FieldString), FieldString tel = default(FieldString), FieldString indirizzo = default(FieldString), FieldString mail = default(FieldString), FieldString localita = default(FieldString), FieldString cap = default(FieldString), FieldString provincia = default(FieldString), FieldString nazione = default(FieldString), FieldString codice = default(FieldString), FieldString contatto = default(FieldString), FieldString mansione = default(FieldString), FieldString telnome = default(FieldString), FieldString faxnome = default(FieldString), FieldString cell = default(FieldString), FieldString abitazione = default(FieldString), FieldString reparto = default(FieldString), FieldString ufficio = default(FieldString), FieldString email = default(FieldString), FieldString riferimento = default(FieldString), FieldString codfis = default(FieldString), FieldString partiva = default(FieldString), FieldString priorita = default(FieldString), FieldInt idrubrica = default(FieldInt), FieldInt idcontatto = default(FieldInt), bool? forceCaseInsensitive = default(bool?), int? joinMode = default(int?), string nomeTabella = default(string))
         {
-            this.LegameTabella = LegameTabella;
-            this.Id = Id;
-            this.Docnumber = Docnumber;
-            this.Campo = Campo;
-            this.Valore = Valore;
-            this.Contatti = Contatti;
-            this.Fax = Fax;
-            this.Tel = Tel;
-            this.Indirizzo = Indirizzo;
-            this.Mail = Mail;
-            this.Localita = Localita;
-            this.Cap = Cap;
-            this.Provincia = Provincia;
-            this.Nazione = Nazione;
-            this.Codice = Codice;
-            this.Contatto = Contatto;
-            this.Mansione = Mansione;
-            this.Telnome = Telnome;
-            this.Faxnome = Faxnome;
-            this.Cell = Cell;
-            this.Abitazione = Abitazione;
-            this.Reparto = Reparto;
-            this.Ufficio = Ufficio;
-            this.Email = Email;
-            this.Riferimento = Riferimento;
-            this.Codfis = Codfis;
-            this.Partiva = Partiva;
-            this.Priorita = Priorita;
-            this.Idrubrica = Idrubrica;
-            this.Idcontatto = Idcontatto;
-            this.ForceCaseInsensitive = ForceCaseInsensitive;
-            this.JoinMode = JoinMode;
-            this.NomeTabella = NomeTabella;
+            this.LegameTabella = legameTabella;
+            this.Id = id;
+            this.Docnumber = docnumber;
+            this.Campo = campo;
+            this.Valore = valore;
+            this.Contatti = contatti;
+            this.Fax = fax;
+            this.Tel = tel;
+            this.Indirizzo = indirizzo;
+            this.Mail = mail;
+            this.Localita = localita;
+            this.Cap = cap;
+            this.Provincia = provincia;
+            this.Nazione = nazione;
+            this.Codice = codice;
+            this.Contatto = contatto;
+            this.Mansione = mansione;
+            this.Telnome = telnome;
+            this.Faxnome = faxnome;
+            this.Cell = cell;
+            this.Abitazione = abitazione;
+            this.Reparto = reparto;
+            this.Ufficio = ufficio;
+            this.Email = email;
+            this.Riferimento = riferimento;
+            this.Codfis = codfis;
+            this.Partiva = partiva;
+            this.Priorita = priorita;
+            this.Idrubrica = idrubrica;
+            this.Idcontatto = idcontatto;
+            this.ForceCaseInsensitive = forceCaseInsensitive;
+            this.JoinMode = joinMode;
+            this.NomeTabella = nomeTabella;
         }
         
         /// <summary>
@@ -351,7 +351,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OptionsRequestDTO" /> class.
         /// </summary>
-        /// <param name="Argument">Argument.</param>
-        /// <param name="Value">Value.</param>
-        public OptionsRequestDTO(string Argument = default(string), string Value = default(string))
+        /// <param name="argument">Argument.</param>
+        /// <param name="value">Value.</param>
+        public OptionsRequestDTO(string argument = default(string), string value = default(string))
         {
-            this.Argument = Argument;
-            this.Value = Value;
+            this.Argument = argument;
+            this.Value = value;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

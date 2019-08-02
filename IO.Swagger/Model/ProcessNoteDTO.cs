@@ -33,20 +33,20 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ProcessNoteDTO" /> class.
         /// </summary>
-        /// <param name="Date">Creation Date.</param>
-        /// <param name="Id">Identifier.</param>
-        /// <param name="ProcessId">Process Identifier.</param>
-        /// <param name="Note">Text.</param>
-        /// <param name="UserCompleteName">User Description.</param>
-        /// <param name="User">User Identifier.</param>
-        public ProcessNoteDTO(DateTime? Date = default(DateTime?), int? Id = default(int?), int? ProcessId = default(int?), string Note = default(string), string UserCompleteName = default(string), int? User = default(int?))
+        /// <param name="date">Creation Date.</param>
+        /// <param name="id">Identifier.</param>
+        /// <param name="processId">Process Identifier.</param>
+        /// <param name="note">Text.</param>
+        /// <param name="userCompleteName">User Description.</param>
+        /// <param name="user">User Identifier.</param>
+        public ProcessNoteDTO(DateTime? date = default(DateTime?), int? id = default(int?), int? processId = default(int?), string note = default(string), string userCompleteName = default(string), int? user = default(int?))
         {
-            this.Date = Date;
-            this.Id = Id;
-            this.ProcessId = ProcessId;
-            this.Note = Note;
-            this.UserCompleteName = UserCompleteName;
-            this.User = User;
+            this.Date = date;
+            this.Id = id;
+            this.ProcessId = processId;
+            this.Note = note;
+            this.UserCompleteName = userCompleteName;
+            this.User = user;
         }
         
         /// <summary>
@@ -113,7 +113,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

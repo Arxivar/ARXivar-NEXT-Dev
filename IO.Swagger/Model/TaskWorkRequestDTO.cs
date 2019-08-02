@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TaskWorkRequestDTO" /> class.
         /// </summary>
-        /// <param name="Select">Select.</param>
-        /// <param name="WorkFlowIds">WorkFlowIds.</param>
-        /// <param name="TaskWorkIds">TaskWorkIds.</param>
-        public TaskWorkRequestDTO(SelectDTO Select = default(SelectDTO), List<int?> WorkFlowIds = default(List<int?>), List<int?> TaskWorkIds = default(List<int?>))
+        /// <param name="select">select.</param>
+        /// <param name="workFlowIds">workFlowIds.</param>
+        /// <param name="taskWorkIds">taskWorkIds.</param>
+        public TaskWorkRequestDTO(SelectDTO select = default(SelectDTO), List<int?> workFlowIds = default(List<int?>), List<int?> taskWorkIds = default(List<int?>))
         {
-            this.Select = Select;
-            this.WorkFlowIds = WorkFlowIds;
-            this.TaskWorkIds = TaskWorkIds;
+            this.Select = select;
+            this.WorkFlowIds = workFlowIds;
+            this.TaskWorkIds = taskWorkIds;
         }
         
         /// <summary>
@@ -80,7 +80,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

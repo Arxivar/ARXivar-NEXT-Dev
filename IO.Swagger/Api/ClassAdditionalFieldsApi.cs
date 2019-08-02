@@ -28,7 +28,7 @@ namespace IO.Swagger.Api
         /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This method is deprecated. Use api/v2/ClassAdditionalFields/fieldclasscomposevalues/{fieldName}/{documentType}/{tipo2}/{tipo3}
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fieldName">Name of the additional field</param>
@@ -43,7 +43,7 @@ namespace IO.Swagger.Api
         /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This method is deprecated. Use api/v2/ClassAdditionalFields/fieldclasscomposevalues/{fieldName}/{documentType}/{tipo2}/{tipo3}
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fieldName">Name of the additional field</param>
@@ -57,7 +57,7 @@ namespace IO.Swagger.Api
         /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This method is deprecated. Use api/v2/ClassAdditionalFields/fieldclasscomposevalues/{fieldName}/{documentTypeSystemId}
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fieldName">Name of the additional field</param>
@@ -70,7 +70,7 @@ namespace IO.Swagger.Api
         /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This method is deprecated. Use api/v2/ClassAdditionalFields/fieldclasscomposevalues/{fieldName}/{documentTypeSystemId}
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fieldName">Name of the additional field</param>
@@ -84,7 +84,7 @@ namespace IO.Swagger.Api
         /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This method is deprecated. Use api/v2/ClassAdditionalFields/fieldclasscomposevalues/{fieldName}/{documentType}/{tipo2}/{tipo3}
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fieldName">Name of the additional field</param>
@@ -99,7 +99,7 @@ namespace IO.Swagger.Api
         /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This method is deprecated. Use api/v2/ClassAdditionalFields/fieldclasscomposevalues/{fieldName}/{documentType}/{tipo2}/{tipo3}
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fieldName">Name of the additional field</param>
@@ -113,7 +113,7 @@ namespace IO.Swagger.Api
         /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This method is deprecated. Use api/v2/ClassAdditionalFields/fieldclasscomposevalues/{fieldName}/{documentTypeSystemId}
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fieldName">Name of the additional field</param>
@@ -126,7 +126,7 @@ namespace IO.Swagger.Api
         /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration)
         /// </summary>
         /// <remarks>
-        /// 
+        /// This method is deprecated. Use api/v2/ClassAdditionalFields/fieldclasscomposevalues/{fieldName}/{documentTypeSystemId}
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fieldName">Name of the additional field</param>
@@ -150,7 +150,7 @@ namespace IO.Swagger.Api
         /// <returns></returns>
         public ClassAdditionalFieldsApi(String basePath)
         {
-            this.Configuration = new Configuration { BasePath = basePath };
+            this.Configuration = new IO.Swagger.Client.Configuration { BasePath = basePath };
 
             ExceptionFactory = IO.Swagger.Client.Configuration.DefaultExceptionFactory;
         }
@@ -161,10 +161,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public ClassAdditionalFieldsApi(Configuration configuration = null)
+        public ClassAdditionalFieldsApi(IO.Swagger.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = Configuration.Default;
+                this.Configuration = IO.Swagger.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
@@ -194,7 +194,7 @@ namespace IO.Swagger.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Configuration Configuration {get; set;}
+        public IO.Swagger.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
@@ -235,7 +235,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration) 
+        /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration) This method is deprecated. Use api/v2/ClassAdditionalFields/fieldclasscomposevalues/{fieldName}/{documentType}/{tipo2}/{tipo3}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fieldName">Name of the additional field</param>
@@ -251,7 +251,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration) 
+        /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration) This method is deprecated. Use api/v2/ClassAdditionalFields/fieldclasscomposevalues/{fieldName}/{documentType}/{tipo2}/{tipo3}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fieldName">Name of the additional field</param>
@@ -281,7 +281,7 @@ namespace IO.Swagger.Api
             var localVarPath = "/api/ClassAdditionalFields/fieldclasscomposevalues/{fieldName}/{documentType}/{tipo2}/{tipo3}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -294,7 +294,7 @@ namespace IO.Swagger.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -303,17 +303,17 @@ namespace IO.Swagger.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (fieldName != null) localVarPathParams.Add("fieldName", Configuration.ApiClient.ParameterToString(fieldName)); // path parameter
-            if (documentType != null) localVarPathParams.Add("documentType", Configuration.ApiClient.ParameterToString(documentType)); // path parameter
-            if (tipo2 != null) localVarPathParams.Add("tipo2", Configuration.ApiClient.ParameterToString(tipo2)); // path parameter
-            if (tipo3 != null) localVarPathParams.Add("tipo3", Configuration.ApiClient.ParameterToString(tipo3)); // path parameter
+            if (fieldName != null) localVarPathParams.Add("fieldName", this.Configuration.ApiClient.ParameterToString(fieldName)); // path parameter
+            if (documentType != null) localVarPathParams.Add("documentType", this.Configuration.ApiClient.ParameterToString(documentType)); // path parameter
+            if (tipo2 != null) localVarPathParams.Add("tipo2", this.Configuration.ApiClient.ParameterToString(tipo2)); // path parameter
+            if (tipo3 != null) localVarPathParams.Add("tipo3", this.Configuration.ApiClient.ParameterToString(tipo3)); // path parameter
             if (docNumbers != null && docNumbers.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(docNumbers); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(docNumbers); // http body (model) parameter
             }
             else
             {
@@ -321,13 +321,13 @@ namespace IO.Swagger.Api
             }
 
             // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -341,11 +341,11 @@ namespace IO.Swagger.Api
 
             return new ApiResponse<List<RowSearchResult>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<RowSearchResult>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RowSearchResult>)));
+                (List<RowSearchResult>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RowSearchResult>)));
         }
 
         /// <summary>
-        /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration) 
+        /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration) This method is deprecated. Use api/v2/ClassAdditionalFields/fieldclasscomposevalues/{fieldName}/{documentType}/{tipo2}/{tipo3}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fieldName">Name of the additional field</param>
@@ -362,7 +362,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration) 
+        /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration) This method is deprecated. Use api/v2/ClassAdditionalFields/fieldclasscomposevalues/{fieldName}/{documentType}/{tipo2}/{tipo3}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fieldName">Name of the additional field</param>
@@ -392,7 +392,7 @@ namespace IO.Swagger.Api
             var localVarPath = "/api/ClassAdditionalFields/fieldclasscomposevalues/{fieldName}/{documentType}/{tipo2}/{tipo3}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -405,7 +405,7 @@ namespace IO.Swagger.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -414,17 +414,17 @@ namespace IO.Swagger.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (fieldName != null) localVarPathParams.Add("fieldName", Configuration.ApiClient.ParameterToString(fieldName)); // path parameter
-            if (documentType != null) localVarPathParams.Add("documentType", Configuration.ApiClient.ParameterToString(documentType)); // path parameter
-            if (tipo2 != null) localVarPathParams.Add("tipo2", Configuration.ApiClient.ParameterToString(tipo2)); // path parameter
-            if (tipo3 != null) localVarPathParams.Add("tipo3", Configuration.ApiClient.ParameterToString(tipo3)); // path parameter
+            if (fieldName != null) localVarPathParams.Add("fieldName", this.Configuration.ApiClient.ParameterToString(fieldName)); // path parameter
+            if (documentType != null) localVarPathParams.Add("documentType", this.Configuration.ApiClient.ParameterToString(documentType)); // path parameter
+            if (tipo2 != null) localVarPathParams.Add("tipo2", this.Configuration.ApiClient.ParameterToString(tipo2)); // path parameter
+            if (tipo3 != null) localVarPathParams.Add("tipo3", this.Configuration.ApiClient.ParameterToString(tipo3)); // path parameter
             if (docNumbers != null && docNumbers.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(docNumbers); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(docNumbers); // http body (model) parameter
             }
             else
             {
@@ -432,13 +432,13 @@ namespace IO.Swagger.Api
             }
 
             // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -452,11 +452,11 @@ namespace IO.Swagger.Api
 
             return new ApiResponse<List<RowSearchResult>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<RowSearchResult>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RowSearchResult>)));
+                (List<RowSearchResult>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RowSearchResult>)));
         }
 
         /// <summary>
-        /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration) 
+        /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration) This method is deprecated. Use api/v2/ClassAdditionalFields/fieldclasscomposevalues/{fieldName}/{documentTypeSystemId}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fieldName">Name of the additional field</param>
@@ -470,7 +470,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration) 
+        /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration) This method is deprecated. Use api/v2/ClassAdditionalFields/fieldclasscomposevalues/{fieldName}/{documentTypeSystemId}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fieldName">Name of the additional field</param>
@@ -492,7 +492,7 @@ namespace IO.Swagger.Api
             var localVarPath = "/api/ClassAdditionalFields/fieldclasscomposevalues/{fieldName}/{documentTypeSystemId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -505,7 +505,7 @@ namespace IO.Swagger.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -514,15 +514,15 @@ namespace IO.Swagger.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (fieldName != null) localVarPathParams.Add("fieldName", Configuration.ApiClient.ParameterToString(fieldName)); // path parameter
-            if (documentTypeSystemId != null) localVarPathParams.Add("documentTypeSystemId", Configuration.ApiClient.ParameterToString(documentTypeSystemId)); // path parameter
+            if (fieldName != null) localVarPathParams.Add("fieldName", this.Configuration.ApiClient.ParameterToString(fieldName)); // path parameter
+            if (documentTypeSystemId != null) localVarPathParams.Add("documentTypeSystemId", this.Configuration.ApiClient.ParameterToString(documentTypeSystemId)); // path parameter
             if (docNumbers != null && docNumbers.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(docNumbers); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(docNumbers); // http body (model) parameter
             }
             else
             {
@@ -530,13 +530,13 @@ namespace IO.Swagger.Api
             }
 
             // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -550,11 +550,11 @@ namespace IO.Swagger.Api
 
             return new ApiResponse<List<RowSearchResult>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<RowSearchResult>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RowSearchResult>)));
+                (List<RowSearchResult>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RowSearchResult>)));
         }
 
         /// <summary>
-        /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration) 
+        /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration) This method is deprecated. Use api/v2/ClassAdditionalFields/fieldclasscomposevalues/{fieldName}/{documentTypeSystemId}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fieldName">Name of the additional field</param>
@@ -569,7 +569,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration) 
+        /// This call retrieve the entire datasource for values in an class additional fields (the call compose columns based on call additional field configuration) This method is deprecated. Use api/v2/ClassAdditionalFields/fieldclasscomposevalues/{fieldName}/{documentTypeSystemId}
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fieldName">Name of the additional field</param>
@@ -591,7 +591,7 @@ namespace IO.Swagger.Api
             var localVarPath = "/api/ClassAdditionalFields/fieldclasscomposevalues/{fieldName}/{documentTypeSystemId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -604,7 +604,7 @@ namespace IO.Swagger.Api
                 "text/xml", 
                 "application/x-www-form-urlencoded"
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -613,15 +613,15 @@ namespace IO.Swagger.Api
                 "application/xml",
                 "text/xml"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (fieldName != null) localVarPathParams.Add("fieldName", Configuration.ApiClient.ParameterToString(fieldName)); // path parameter
-            if (documentTypeSystemId != null) localVarPathParams.Add("documentTypeSystemId", Configuration.ApiClient.ParameterToString(documentTypeSystemId)); // path parameter
+            if (fieldName != null) localVarPathParams.Add("fieldName", this.Configuration.ApiClient.ParameterToString(fieldName)); // path parameter
+            if (documentTypeSystemId != null) localVarPathParams.Add("documentTypeSystemId", this.Configuration.ApiClient.ParameterToString(documentTypeSystemId)); // path parameter
             if (docNumbers != null && docNumbers.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(docNumbers); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(docNumbers); // http body (model) parameter
             }
             else
             {
@@ -629,13 +629,13 @@ namespace IO.Swagger.Api
             }
 
             // authentication (Authorization) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -649,7 +649,7 @@ namespace IO.Swagger.Api
 
             return new ApiResponse<List<RowSearchResult>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<RowSearchResult>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RowSearchResult>)));
+                (List<RowSearchResult>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RowSearchResult>)));
         }
 
     }

@@ -33,20 +33,20 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VariableFiltersDTO" /> class.
         /// </summary>
-        /// <param name="DateTimeFields">Array of avaible filters for the additional field DateTime.</param>
-        /// <param name="StringFields">Array of avaible filters for the additional field string.</param>
-        /// <param name="IntFields">Array of avaible filters for the additional field int.</param>
-        /// <param name="BoolFields">Array of avaible filters for the additional field bool.</param>
-        /// <param name="DoubleFields">Array of avaible filters for the additional field double.</param>
-        /// <param name="StringListFields">Array of avaible filters for the additional field stringlist.</param>
-        public VariableFiltersDTO(List<FieldBaseForSearchDateTimeDto> DateTimeFields = default(List<FieldBaseForSearchDateTimeDto>), List<FieldBaseForSearchStringDto> StringFields = default(List<FieldBaseForSearchStringDto>), List<FieldBaseForSearchIntDto> IntFields = default(List<FieldBaseForSearchIntDto>), List<FieldBaseForSearchBoolDto> BoolFields = default(List<FieldBaseForSearchBoolDto>), List<FieldBaseForSearchDoubleDto> DoubleFields = default(List<FieldBaseForSearchDoubleDto>), List<FieldBaseForSearchListDto> StringListFields = default(List<FieldBaseForSearchListDto>))
+        /// <param name="dateTimeFields">Array of avaible filters for the additional field DateTime.</param>
+        /// <param name="stringFields">Array of avaible filters for the additional field string.</param>
+        /// <param name="intFields">Array of avaible filters for the additional field int.</param>
+        /// <param name="boolFields">Array of avaible filters for the additional field bool.</param>
+        /// <param name="doubleFields">Array of avaible filters for the additional field double.</param>
+        /// <param name="stringListFields">Array of avaible filters for the additional field stringlist.</param>
+        public VariableFiltersDTO(List<FieldBaseForSearchDateTimeDto> dateTimeFields = default(List<FieldBaseForSearchDateTimeDto>), List<FieldBaseForSearchStringDto> stringFields = default(List<FieldBaseForSearchStringDto>), List<FieldBaseForSearchIntDto> intFields = default(List<FieldBaseForSearchIntDto>), List<FieldBaseForSearchBoolDto> boolFields = default(List<FieldBaseForSearchBoolDto>), List<FieldBaseForSearchDoubleDto> doubleFields = default(List<FieldBaseForSearchDoubleDto>), List<FieldBaseForSearchListDto> stringListFields = default(List<FieldBaseForSearchListDto>))
         {
-            this.DateTimeFields = DateTimeFields;
-            this.StringFields = StringFields;
-            this.IntFields = IntFields;
-            this.BoolFields = BoolFields;
-            this.DoubleFields = DoubleFields;
-            this.StringListFields = StringListFields;
+            this.DateTimeFields = dateTimeFields;
+            this.StringFields = stringFields;
+            this.IntFields = intFields;
+            this.BoolFields = boolFields;
+            this.DoubleFields = doubleFields;
+            this.StringListFields = stringListFields;
         }
         
         /// <summary>
@@ -113,7 +113,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

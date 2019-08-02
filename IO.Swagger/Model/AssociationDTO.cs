@@ -33,20 +33,20 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AssociationDTO" /> class.
         /// </summary>
-        /// <param name="Id">Unique Identifier.</param>
-        /// <param name="DocNumber">Identifier of the principal profile.</param>
-        /// <param name="User">Identifier of author.</param>
-        /// <param name="Date">Creation Date.</param>
-        /// <param name="Description">Name.</param>
-        /// <param name="UserNameComplete">Full Name of the author.</param>
-        public AssociationDTO(int? Id = default(int?), int? DocNumber = default(int?), int? User = default(int?), DateTime? Date = default(DateTime?), string Description = default(string), string UserNameComplete = default(string))
+        /// <param name="id">Unique Identifier.</param>
+        /// <param name="docNumber">Identifier of the principal profile.</param>
+        /// <param name="user">Identifier of author.</param>
+        /// <param name="date">Creation Date.</param>
+        /// <param name="description">Name.</param>
+        /// <param name="userNameComplete">Full Name of the author.</param>
+        public AssociationDTO(int? id = default(int?), int? docNumber = default(int?), int? user = default(int?), DateTime? date = default(DateTime?), string description = default(string), string userNameComplete = default(string))
         {
-            this.Id = Id;
-            this.DocNumber = DocNumber;
-            this.User = User;
-            this.Date = Date;
-            this.Description = Description;
-            this.UserNameComplete = UserNameComplete;
+            this.Id = id;
+            this.DocNumber = docNumber;
+            this.User = user;
+            this.Date = date;
+            this.Description = description;
+            this.UserNameComplete = userNameComplete;
         }
         
         /// <summary>
@@ -113,7 +113,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

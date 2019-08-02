@@ -33,26 +33,26 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserDTO" /> class.
         /// </summary>
-        /// <param name="User">Identifier.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="Email">Email.</param>
-        /// <param name="BusinessUnit">Business Unit.</param>
-        /// <param name="Lang">Language.</param>
-        /// <param name="RespAos">Person in charge about Aos.</param>
-        /// <param name="CompleteName">Full name.</param>
-        /// <param name="BusinessUnitLocked">Work on single business unit.</param>
-        /// <param name="WorkingBusinessUnit">Business unit code of work.</param>
-        public UserDTO(int? User = default(int?), string Description = default(string), string Email = default(string), string BusinessUnit = default(string), string Lang = default(string), bool? RespAos = default(bool?), string CompleteName = default(string), bool? BusinessUnitLocked = default(bool?), string WorkingBusinessUnit = default(string))
+        /// <param name="user">Identifier.</param>
+        /// <param name="description">Description.</param>
+        /// <param name="email">Email.</param>
+        /// <param name="businessUnit">Business Unit.</param>
+        /// <param name="lang">Language.</param>
+        /// <param name="respAos">Person in charge about Aos.</param>
+        /// <param name="completeName">Full name.</param>
+        /// <param name="businessUnitLocked">Work on single business unit.</param>
+        /// <param name="workingBusinessUnit">Business unit code of work.</param>
+        public UserDTO(int? user = default(int?), string description = default(string), string email = default(string), string businessUnit = default(string), string lang = default(string), bool? respAos = default(bool?), string completeName = default(string), bool? businessUnitLocked = default(bool?), string workingBusinessUnit = default(string))
         {
-            this.User = User;
-            this.Description = Description;
-            this.Email = Email;
-            this.BusinessUnit = BusinessUnit;
-            this.Lang = Lang;
-            this.RespAos = RespAos;
-            this.CompleteName = CompleteName;
-            this.BusinessUnitLocked = BusinessUnitLocked;
-            this.WorkingBusinessUnit = WorkingBusinessUnit;
+            this.User = user;
+            this.Description = description;
+            this.Email = email;
+            this.BusinessUnit = businessUnit;
+            this.Lang = lang;
+            this.RespAos = respAos;
+            this.CompleteName = completeName;
+            this.BusinessUnitLocked = businessUnitLocked;
+            this.WorkingBusinessUnit = workingBusinessUnit;
         }
         
         /// <summary>
@@ -143,7 +143,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

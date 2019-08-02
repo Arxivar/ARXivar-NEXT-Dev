@@ -33,22 +33,22 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ProcessInfoDTO" /> class.
         /// </summary>
-        /// <param name="TaskInfoList">TaskInfoList.</param>
-        /// <param name="DocumentInfoList">DocumentInfoList.</param>
-        /// <param name="NoteInfoList">NoteInfoList.</param>
-        /// <param name="AttachmentInfoList">AttachmentInfoList.</param>
-        /// <param name="ProfessionalRoleInfoList">ProfessionalRoleInfoList.</param>
-        /// <param name="ChronoInfoList">ChronoInfoList.</param>
-        /// <param name="VariableInfo">VariableInfo.</param>
-        public ProcessInfoDTO(List<TaskInfoDTO> TaskInfoList = default(List<TaskInfoDTO>), List<DocumentWorkInfoDTO> DocumentInfoList = default(List<DocumentWorkInfoDTO>), List<NoteWorkInfoDTO> NoteInfoList = default(List<NoteWorkInfoDTO>), List<AttachmentWorkInfoDTO> AttachmentInfoList = default(List<AttachmentWorkInfoDTO>), List<ProfessionalRoleInfoDTO> ProfessionalRoleInfoList = default(List<ProfessionalRoleInfoDTO>), List<ChronoInfoDTO> ChronoInfoList = default(List<ChronoInfoDTO>), ProcessInfoVariableDTO VariableInfo = default(ProcessInfoVariableDTO))
+        /// <param name="taskInfoList">taskInfoList.</param>
+        /// <param name="documentInfoList">documentInfoList.</param>
+        /// <param name="noteInfoList">noteInfoList.</param>
+        /// <param name="attachmentInfoList">attachmentInfoList.</param>
+        /// <param name="professionalRoleInfoList">professionalRoleInfoList.</param>
+        /// <param name="chronoInfoList">chronoInfoList.</param>
+        /// <param name="variableInfo">variableInfo.</param>
+        public ProcessInfoDTO(List<TaskInfoDTO> taskInfoList = default(List<TaskInfoDTO>), List<DocumentWorkInfoDTO> documentInfoList = default(List<DocumentWorkInfoDTO>), List<NoteWorkInfoDTO> noteInfoList = default(List<NoteWorkInfoDTO>), List<AttachmentWorkInfoDTO> attachmentInfoList = default(List<AttachmentWorkInfoDTO>), List<ProfessionalRoleInfoDTO> professionalRoleInfoList = default(List<ProfessionalRoleInfoDTO>), List<ChronoInfoDTO> chronoInfoList = default(List<ChronoInfoDTO>), ProcessInfoVariableDTO variableInfo = default(ProcessInfoVariableDTO))
         {
-            this.TaskInfoList = TaskInfoList;
-            this.DocumentInfoList = DocumentInfoList;
-            this.NoteInfoList = NoteInfoList;
-            this.AttachmentInfoList = AttachmentInfoList;
-            this.ProfessionalRoleInfoList = ProfessionalRoleInfoList;
-            this.ChronoInfoList = ChronoInfoList;
-            this.VariableInfo = VariableInfo;
+            this.TaskInfoList = taskInfoList;
+            this.DocumentInfoList = documentInfoList;
+            this.NoteInfoList = noteInfoList;
+            this.AttachmentInfoList = attachmentInfoList;
+            this.ProfessionalRoleInfoList = professionalRoleInfoList;
+            this.ChronoInfoList = chronoInfoList;
+            this.VariableInfo = variableInfo;
         }
         
         /// <summary>
@@ -116,7 +116,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

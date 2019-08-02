@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IxFeDocumentCompleteDTO" /> class.
         /// </summary>
-        /// <param name="IxFeDocument">IxFeDocument.</param>
-        /// <param name="Details">Details.</param>
-        public IxFeDocumentCompleteDTO(IxFeDocumentDTO IxFeDocument = default(IxFeDocumentDTO), List<IxFeDocumentDetailDTO> Details = default(List<IxFeDocumentDetailDTO>))
+        /// <param name="ixFeDocument">ixFeDocument.</param>
+        /// <param name="details">details.</param>
+        public IxFeDocumentCompleteDTO(IxFeDocumentDTO ixFeDocument = default(IxFeDocumentDTO), List<IxFeDocumentDetailDTO> details = default(List<IxFeDocumentDetailDTO>))
         {
-            this.IxFeDocument = IxFeDocument;
-            this.Details = Details;
+            this.IxFeDocument = ixFeDocument;
+            this.Details = details;
         }
         
         /// <summary>
@@ -71,7 +71,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

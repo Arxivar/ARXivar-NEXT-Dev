@@ -33,20 +33,20 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ProcessVariablesFieldsDTO" /> class.
         /// </summary>
-        /// <param name="BooleanVariables">List of variables in boolean format.</param>
-        /// <param name="StringVariables">List of variables in string format.</param>
-        /// <param name="ComboVariables">List of variables in list format.</param>
-        /// <param name="DateTimeVariables">List of variables in datetime format.</param>
-        /// <param name="DoubleVariables">List of variables in decimal format.</param>
-        /// <param name="TableVariables">List of variables in table format.</param>
-        public ProcessVariablesFieldsDTO(List<AdditionalFieldBooleanDTO> BooleanVariables = default(List<AdditionalFieldBooleanDTO>), List<AdditionalFieldStringDTO> StringVariables = default(List<AdditionalFieldStringDTO>), List<AdditionalFieldComboDTO> ComboVariables = default(List<AdditionalFieldComboDTO>), List<AdditionalFieldDateTimeDTO> DateTimeVariables = default(List<AdditionalFieldDateTimeDTO>), List<AdditionalFieldDoubleDTO> DoubleVariables = default(List<AdditionalFieldDoubleDTO>), List<AdditionalFieldTableDTO> TableVariables = default(List<AdditionalFieldTableDTO>))
+        /// <param name="booleanVariables">List of variables in boolean format.</param>
+        /// <param name="stringVariables">List of variables in string format.</param>
+        /// <param name="comboVariables">List of variables in list format.</param>
+        /// <param name="dateTimeVariables">List of variables in datetime format.</param>
+        /// <param name="doubleVariables">List of variables in decimal format.</param>
+        /// <param name="tableVariables">List of variables in table format.</param>
+        public ProcessVariablesFieldsDTO(List<AdditionalFieldBooleanDTO> booleanVariables = default(List<AdditionalFieldBooleanDTO>), List<AdditionalFieldStringDTO> stringVariables = default(List<AdditionalFieldStringDTO>), List<AdditionalFieldComboDTO> comboVariables = default(List<AdditionalFieldComboDTO>), List<AdditionalFieldDateTimeDTO> dateTimeVariables = default(List<AdditionalFieldDateTimeDTO>), List<AdditionalFieldDoubleDTO> doubleVariables = default(List<AdditionalFieldDoubleDTO>), List<AdditionalFieldTableDTO> tableVariables = default(List<AdditionalFieldTableDTO>))
         {
-            this.BooleanVariables = BooleanVariables;
-            this.StringVariables = StringVariables;
-            this.ComboVariables = ComboVariables;
-            this.DateTimeVariables = DateTimeVariables;
-            this.DoubleVariables = DoubleVariables;
-            this.TableVariables = TableVariables;
+            this.BooleanVariables = booleanVariables;
+            this.StringVariables = stringVariables;
+            this.ComboVariables = comboVariables;
+            this.DateTimeVariables = dateTimeVariables;
+            this.DoubleVariables = doubleVariables;
+            this.TableVariables = tableVariables;
         }
         
         /// <summary>
@@ -113,7 +113,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,18 +33,18 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserGroupDTO" /> class.
         /// </summary>
-        /// <param name="Id">Group ID..</param>
-        /// <param name="Description">Group description..</param>
-        /// <param name="CompleteName">Complete Name.</param>
-        /// <param name="BusinessUnitCode">BusinessUnit code.</param>
-        /// <param name="State">Possible values:  0: NonAttivo  1: Attivo  2: Nascosto .</param>
-        public UserGroupDTO(int? Id = default(int?), string Description = default(string), string CompleteName = default(string), string BusinessUnitCode = default(string), int? State = default(int?))
+        /// <param name="id">Group ID..</param>
+        /// <param name="description">Group description..</param>
+        /// <param name="completeName">Complete Name.</param>
+        /// <param name="businessUnitCode">BusinessUnit code.</param>
+        /// <param name="state">Possible values:  0: NonAttivo  1: Attivo  2: Nascosto .</param>
+        public UserGroupDTO(int? id = default(int?), string description = default(string), string completeName = default(string), string businessUnitCode = default(string), int? state = default(int?))
         {
-            this.Id = Id;
-            this.Description = Description;
-            this.CompleteName = CompleteName;
-            this.BusinessUnitCode = BusinessUnitCode;
-            this.State = State;
+            this.Id = id;
+            this.Description = description;
+            this.CompleteName = completeName;
+            this.BusinessUnitCode = businessUnitCode;
+            this.State = state;
         }
         
         /// <summary>
@@ -103,7 +103,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StampDefinitionDTO" /> class.
         /// </summary>
-        /// <param name="Id">Identifier.</param>
-        /// <param name="StampName">Name.</param>
-        /// <param name="StampDescription">Description.</param>
-        public StampDefinitionDTO(string Id = default(string), string StampName = default(string), string StampDescription = default(string))
+        /// <param name="id">Identifier.</param>
+        /// <param name="stampName">Name.</param>
+        /// <param name="stampDescription">Description.</param>
+        public StampDefinitionDTO(string id = default(string), string stampName = default(string), string stampDescription = default(string))
         {
-            this.Id = Id;
-            this.StampName = StampName;
-            this.StampDescription = StampDescription;
+            this.Id = id;
+            this.StampName = stampName;
+            this.StampDescription = stampDescription;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

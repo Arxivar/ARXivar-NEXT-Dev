@@ -33,16 +33,16 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ProcessAttachmentInsertDto" /> class.
         /// </summary>
-        /// <param name="TaskworkId">Taskwork Identifier.</param>
-        /// <param name="Docnumber">Document Identifier.</param>
-        /// <param name="ToSend">Set the attachment \&quot;tosend\&quot; flag.</param>
-        /// <param name="Link">Create a link.</param>
-        public ProcessAttachmentInsertDto(int? TaskworkId = default(int?), int? Docnumber = default(int?), bool? ToSend = default(bool?), bool? Link = default(bool?))
+        /// <param name="taskworkId">Taskwork Identifier.</param>
+        /// <param name="docnumber">Document Identifier.</param>
+        /// <param name="toSend">Set the attachment \&quot;tosend\&quot; flag.</param>
+        /// <param name="link">Create a link.</param>
+        public ProcessAttachmentInsertDto(int? taskworkId = default(int?), int? docnumber = default(int?), bool? toSend = default(bool?), bool? link = default(bool?))
         {
-            this.TaskworkId = TaskworkId;
-            this.Docnumber = Docnumber;
-            this.ToSend = ToSend;
-            this.Link = Link;
+            this.TaskworkId = taskworkId;
+            this.Docnumber = docnumber;
+            this.ToSend = toSend;
+            this.Link = link;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,10 +33,10 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TaskWorkReassignRequest" /> class.
         /// </summary>
-        /// <param name="UserIds">UserIds.</param>
-        public TaskWorkReassignRequest(List<int?> UserIds = default(List<int?>))
+        /// <param name="userIds">userIds.</param>
+        public TaskWorkReassignRequest(List<int?> userIds = default(List<int?>))
         {
-            this.UserIds = UserIds;
+            this.UserIds = userIds;
         }
         
         /// <summary>
@@ -62,7 +62,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SendOutcomeRequestDTO" /> class.
         /// </summary>
-        /// <param name="Docnumber">Docnumber.</param>
-        /// <param name="PositiveOutcome">PositiveOutcome.</param>
-        /// <param name="Reason">Reason.</param>
-        public SendOutcomeRequestDTO(int? Docnumber = default(int?), bool? PositiveOutcome = default(bool?), string Reason = default(string))
+        /// <param name="docnumber">docnumber.</param>
+        /// <param name="positiveOutcome">positiveOutcome.</param>
+        /// <param name="reason">reason.</param>
+        public SendOutcomeRequestDTO(int? docnumber = default(int?), bool? positiveOutcome = default(bool?), string reason = default(string))
         {
-            this.Docnumber = Docnumber;
-            this.PositiveOutcome = PositiveOutcome;
-            this.Reason = Reason;
+            this.Docnumber = docnumber;
+            this.PositiveOutcome = positiveOutcome;
+            this.Reason = reason;
         }
         
         /// <summary>
@@ -80,7 +80,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

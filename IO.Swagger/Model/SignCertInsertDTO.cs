@@ -33,18 +33,18 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SignCertInsertDTO" /> class.
         /// </summary>
-        /// <param name="CertId">Certificate Identifier.</param>
-        /// <param name="RequestOtp">Request OTP.</param>
-        /// <param name="CertDescription">Certificate Description.</param>
-        /// <param name="Delegante">Delegating.</param>
-        /// <param name="CertType">Possible values:  0: Static  1: CoSign  2: RemoteTelecom  3: RemoteAruba .</param>
-        public SignCertInsertDTO(string CertId = default(string), bool? RequestOtp = default(bool?), string CertDescription = default(string), string Delegante = default(string), int? CertType = default(int?))
+        /// <param name="certId">Certificate Identifier.</param>
+        /// <param name="requestOtp">Request OTP.</param>
+        /// <param name="certDescription">Certificate Description.</param>
+        /// <param name="delegante">Delegating.</param>
+        /// <param name="certType">Possible values:  0: Static  1: CoSign  2: RemoteTelecom  3: RemoteAruba .</param>
+        public SignCertInsertDTO(string certId = default(string), bool? requestOtp = default(bool?), string certDescription = default(string), string delegante = default(string), int? certType = default(int?))
         {
-            this.CertId = CertId;
-            this.RequestOtp = RequestOtp;
-            this.CertDescription = CertDescription;
-            this.Delegante = Delegante;
-            this.CertType = CertType;
+            this.CertId = certId;
+            this.RequestOtp = requestOtp;
+            this.CertDescription = certDescription;
+            this.Delegante = delegante;
+            this.CertType = certType;
         }
         
         /// <summary>
@@ -103,7 +103,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

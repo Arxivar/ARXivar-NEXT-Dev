@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ShareObjectOptionsDTO" /> class.
         /// </summary>
-        /// <param name="Options">List of share options.</param>
-        /// <param name="ObjectType">Object type.</param>
-        /// <param name="ObjectId">Object unique identifier.</param>
-        public ShareObjectOptionsDTO(List<ShareOptionOptionDTO> Options = default(List<ShareOptionOptionDTO>), int? ObjectType = default(int?), string ObjectId = default(string))
+        /// <param name="options">List of share options.</param>
+        /// <param name="objectType">Object type.</param>
+        /// <param name="objectId">Object unique identifier.</param>
+        public ShareObjectOptionsDTO(List<ShareOptionOptionDTO> options = default(List<ShareOptionOptionDTO>), int? objectType = default(int?), string objectId = default(string))
         {
-            this.Options = Options;
-            this.ObjectType = ObjectType;
-            this.ObjectId = ObjectId;
+            this.Options = options;
+            this.ObjectType = objectType;
+            this.ObjectId = objectId;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

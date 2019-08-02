@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RemoteSignResponseDTO" /> class.
         /// </summary>
-        /// <param name="SignCert">Signature Certificate.</param>
-        /// <param name="SignRequestId">Identifier of signature in progress.</param>
-        public RemoteSignResponseDTO(SignCertDTO SignCert = default(SignCertDTO), string SignRequestId = default(string))
+        /// <param name="signCert">Signature Certificate.</param>
+        /// <param name="signRequestId">Identifier of signature in progress.</param>
+        public RemoteSignResponseDTO(SignCertDTO signCert = default(SignCertDTO), string signRequestId = default(string))
         {
-            this.SignCert = SignCert;
-            this.SignRequestId = SignRequestId;
+            this.SignCert = signCert;
+            this.SignRequestId = signRequestId;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

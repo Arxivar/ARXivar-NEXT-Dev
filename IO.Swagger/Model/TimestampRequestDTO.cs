@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimestampRequestDTO" /> class.
         /// </summary>
-        /// <param name="TsaId">Timestamp Identifier.</param>
-        /// <param name="TimestampElementList">Items.</param>
-        public TimestampRequestDTO(string TsaId = default(string), List<TimestampElementRequestDTO> TimestampElementList = default(List<TimestampElementRequestDTO>))
+        /// <param name="tsaId">Timestamp Identifier.</param>
+        /// <param name="timestampElementList">Items.</param>
+        public TimestampRequestDTO(string tsaId = default(string), List<TimestampElementRequestDTO> timestampElementList = default(List<TimestampElementRequestDTO>))
         {
-            this.TsaId = TsaId;
-            this.TimestampElementList = TimestampElementList;
+            this.TsaId = tsaId;
+            this.TimestampElementList = timestampElementList;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

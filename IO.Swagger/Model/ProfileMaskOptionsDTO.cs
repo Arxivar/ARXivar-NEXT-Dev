@@ -33,18 +33,18 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ProfileMaskOptionsDTO" /> class.
         /// </summary>
-        /// <param name="ShowNotes">Show notes.</param>
-        /// <param name="ShowAttachments">Show attachments.</param>
-        /// <param name="ShowFileSelection">Show file selection.</param>
-        /// <param name="ShowScannerSelection">Show scanner selection.</param>
-        /// <param name="ShowBarcodeSelection">Show barcode selection.</param>
-        public ProfileMaskOptionsDTO(bool? ShowNotes = default(bool?), bool? ShowAttachments = default(bool?), bool? ShowFileSelection = default(bool?), bool? ShowScannerSelection = default(bool?), bool? ShowBarcodeSelection = default(bool?))
+        /// <param name="showNotes">Show notes.</param>
+        /// <param name="showAttachments">Show attachments.</param>
+        /// <param name="showFileSelection">Show file selection.</param>
+        /// <param name="showScannerSelection">Show scanner selection.</param>
+        /// <param name="showBarcodeSelection">Show barcode selection.</param>
+        public ProfileMaskOptionsDTO(bool? showNotes = default(bool?), bool? showAttachments = default(bool?), bool? showFileSelection = default(bool?), bool? showScannerSelection = default(bool?), bool? showBarcodeSelection = default(bool?))
         {
-            this.ShowNotes = ShowNotes;
-            this.ShowAttachments = ShowAttachments;
-            this.ShowFileSelection = ShowFileSelection;
-            this.ShowScannerSelection = ShowScannerSelection;
-            this.ShowBarcodeSelection = ShowBarcodeSelection;
+            this.ShowNotes = showNotes;
+            this.ShowAttachments = showAttachments;
+            this.ShowFileSelection = showFileSelection;
+            this.ShowScannerSelection = showScannerSelection;
+            this.ShowBarcodeSelection = showBarcodeSelection;
         }
         
         /// <summary>
@@ -103,7 +103,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

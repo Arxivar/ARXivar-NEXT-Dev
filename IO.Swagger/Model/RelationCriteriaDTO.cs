@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RelationCriteriaDTO" /> class.
         /// </summary>
-        /// <param name="DocNumber">Document Identifier.</param>
-        /// <param name="RelationExploringMethod">Possible values:  0: Class  1: Fathers  2: childs .</param>
-        /// <param name="Select">Columns to show for the documents contained.</param>
-        public RelationCriteriaDTO(int? DocNumber = default(int?), int? RelationExploringMethod = default(int?), SelectDTO Select = default(SelectDTO))
+        /// <param name="docNumber">Document Identifier.</param>
+        /// <param name="relationExploringMethod">Possible values:  0: Class  1: Fathers  2: childs .</param>
+        /// <param name="select">Columns to show for the documents contained.</param>
+        public RelationCriteriaDTO(int? docNumber = default(int?), int? relationExploringMethod = default(int?), SelectDTO select = default(SelectDTO))
         {
-            this.DocNumber = DocNumber;
-            this.RelationExploringMethod = RelationExploringMethod;
-            this.Select = Select;
+            this.DocNumber = docNumber;
+            this.RelationExploringMethod = relationExploringMethod;
+            this.Select = select;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

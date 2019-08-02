@@ -33,14 +33,14 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IdValuePairDTO" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Value">Value.</param>
-        /// <param name="Type">Type.</param>
-        public IdValuePairDTO(string Id = default(string), string Value = default(string), string Type = default(string))
+        /// <param name="id">id.</param>
+        /// <param name="value">value.</param>
+        /// <param name="type">type.</param>
+        public IdValuePairDTO(string id = default(string), string value = default(string), string type = default(string))
         {
-            this.Id = Id;
-            this.Value = Value;
-            this.Type = Type;
+            this.Id = id;
+            this.Value = value;
+            this.Type = type;
         }
         
         /// <summary>
@@ -80,7 +80,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

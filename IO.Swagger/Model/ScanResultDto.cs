@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScanResultDto" /> class.
         /// </summary>
-        /// <param name="BufferIds">BufferIds.</param>
-        /// <param name="FileNames">FileNames.</param>
-        public ScanResultDto(List<string> BufferIds = default(List<string>), List<string> FileNames = default(List<string>))
+        /// <param name="bufferIds">bufferIds.</param>
+        /// <param name="fileNames">fileNames.</param>
+        public ScanResultDto(List<string> bufferIds = default(List<string>), List<string> fileNames = default(List<string>))
         {
-            this.BufferIds = BufferIds;
-            this.FileNames = FileNames;
+            this.BufferIds = bufferIds;
+            this.FileNames = fileNames;
         }
         
         /// <summary>
@@ -71,7 +71,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,16 +33,16 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TaskWorkCloseRequest" /> class.
         /// </summary>
-        /// <param name="TaskWorkIds">List of Taskwork identifier.</param>
-        /// <param name="ExitCode">Exit Code.</param>
-        /// <param name="Password">Password.</param>
-        /// <param name="Note">Note.</param>
-        public TaskWorkCloseRequest(List<int?> TaskWorkIds = default(List<int?>), string ExitCode = default(string), string Password = default(string), string Note = default(string))
+        /// <param name="taskWorkIds">List of Taskwork identifier.</param>
+        /// <param name="exitCode">Exit Code.</param>
+        /// <param name="password">Password.</param>
+        /// <param name="note">Note.</param>
+        public TaskWorkCloseRequest(List<int?> taskWorkIds = default(List<int?>), string exitCode = default(string), string password = default(string), string note = default(string))
         {
-            this.TaskWorkIds = TaskWorkIds;
-            this.ExitCode = ExitCode;
-            this.Password = Password;
-            this.Note = Note;
+            this.TaskWorkIds = taskWorkIds;
+            this.ExitCode = exitCode;
+            this.Password = password;
+            this.Note = note;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

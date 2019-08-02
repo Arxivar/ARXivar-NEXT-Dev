@@ -33,16 +33,16 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FolderArchiveModeInfo" /> class.
         /// </summary>
-        /// <param name="FolderId">Folder Identifier.</param>
-        /// <param name="FolderName">Folder Name.</param>
-        /// <param name="Rules">Rules.</param>
-        /// <param name="ArchiveMode">Possible values:  0: None  1: AutoWithDefaultProfile  2: ManualWithMask .</param>
-        public FolderArchiveModeInfo(int? FolderId = default(int?), string FolderName = default(string), List<FolderArchiveModeRule> Rules = default(List<FolderArchiveModeRule>), int? ArchiveMode = default(int?))
+        /// <param name="folderId">Folder Identifier.</param>
+        /// <param name="folderName">Folder Name.</param>
+        /// <param name="rules">Rules.</param>
+        /// <param name="archiveMode">Possible values:  0: None  1: AutoWithDefaultProfile  2: ManualWithMask .</param>
+        public FolderArchiveModeInfo(int? folderId = default(int?), string folderName = default(string), List<FolderArchiveModeRule> rules = default(List<FolderArchiveModeRule>), int? archiveMode = default(int?))
         {
-            this.FolderId = FolderId;
-            this.FolderName = FolderName;
-            this.Rules = Rules;
-            this.ArchiveMode = ArchiveMode;
+            this.FolderId = folderId;
+            this.FolderName = folderName;
+            this.Rules = rules;
+            this.ArchiveMode = archiveMode;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

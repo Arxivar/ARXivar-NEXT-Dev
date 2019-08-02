@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SelectDTO" /> class.
         /// </summary>
-        /// <param name="Fields">Fields.</param>
-        /// <param name="MaxItems">Maximum Number of items.</param>
-        public SelectDTO(List<FieldBaseForSelectDTO> Fields = default(List<FieldBaseForSelectDTO>), int? MaxItems = default(int?))
+        /// <param name="fields">Fields.</param>
+        /// <param name="maxItems">Maximum Number of items.</param>
+        public SelectDTO(List<FieldBaseForSelectDTO> fields = default(List<FieldBaseForSelectDTO>), int? maxItems = default(int?))
         {
-            this.Fields = Fields;
-            this.MaxItems = MaxItems;
+            this.Fields = fields;
+            this.MaxItems = maxItems;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

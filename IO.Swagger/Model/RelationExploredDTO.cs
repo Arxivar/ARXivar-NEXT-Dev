@@ -33,12 +33,12 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RelationExploredDTO" /> class.
         /// </summary>
-        /// <param name="RootNode">Root node.</param>
-        /// <param name="ComposedValues">Entire datasource of contained profiles.</param>
-        public RelationExploredDTO(RelationNodeDTO RootNode = default(RelationNodeDTO), List<RowSearchResult> ComposedValues = default(List<RowSearchResult>))
+        /// <param name="rootNode">Root node.</param>
+        /// <param name="composedValues">Entire datasource of contained profiles.</param>
+        public RelationExploredDTO(RelationNodeDTO rootNode = default(RelationNodeDTO), List<RowSearchResult> composedValues = default(List<RowSearchResult>))
         {
-            this.RootNode = RootNode;
-            this.ComposedValues = ComposedValues;
+            this.RootNode = rootNode;
+            this.ComposedValues = composedValues;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace IO.Swagger.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
