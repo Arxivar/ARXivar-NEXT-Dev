@@ -60,7 +60,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="processDocId">Identifier of the document you want to checkin</param>
         /// <param name="taskWorkId">Identifier of the document you want to checkin</param>
-        /// <param name="fileId">Identifier of file you want to upload</param>
+        /// <param name="fileId">Identifier of file in the cache you want to upload</param>
         /// <returns></returns>
         void CheckInOutV2CheckInForTask (int? processDocId, int? taskWorkId, string fileId);
 
@@ -73,7 +73,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="processDocId">Identifier of the document you want to checkin</param>
         /// <param name="taskWorkId">Identifier of the document you want to checkin</param>
-        /// <param name="fileId">Identifier of file you want to upload</param>
+        /// <param name="fileId">Identifier of file in the cache you want to upload</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> CheckInOutV2CheckInForTaskWithHttpInfo (int? processDocId, int? taskWorkId, string fileId);
         /// <summary>
@@ -244,7 +244,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="processDocId">Identifier of the document you want to checkin</param>
         /// <param name="taskWorkId">Identifier of the document you want to checkin</param>
-        /// <param name="fileId">Identifier of file you want to upload</param>
+        /// <param name="fileId">Identifier of file in the cache you want to upload</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task CheckInOutV2CheckInForTaskAsync (int? processDocId, int? taskWorkId, string fileId);
 
@@ -257,7 +257,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="processDocId">Identifier of the document you want to checkin</param>
         /// <param name="taskWorkId">Identifier of the document you want to checkin</param>
-        /// <param name="fileId">Identifier of file you want to upload</param>
+        /// <param name="fileId">Identifier of file in the cache you want to upload</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CheckInOutV2CheckInForTaskAsyncWithHttpInfo (int? processDocId, int? taskWorkId, string fileId);
         /// <summary>
@@ -671,7 +671,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="processDocId">Identifier of the document you want to checkin</param>
         /// <param name="taskWorkId">Identifier of the document you want to checkin</param>
-        /// <param name="fileId">Identifier of file you want to upload</param>
+        /// <param name="fileId">Identifier of file in the cache you want to upload</param>
         /// <returns></returns>
         public void CheckInOutV2CheckInForTask (int? processDocId, int? taskWorkId, string fileId)
         {
@@ -684,7 +684,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="processDocId">Identifier of the document you want to checkin</param>
         /// <param name="taskWorkId">Identifier of the document you want to checkin</param>
-        /// <param name="fileId">Identifier of file you want to upload</param>
+        /// <param name="fileId">Identifier of file in the cache you want to upload</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> CheckInOutV2CheckInForTaskWithHttpInfo (int? processDocId, int? taskWorkId, string fileId)
         {
@@ -752,7 +752,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="processDocId">Identifier of the document you want to checkin</param>
         /// <param name="taskWorkId">Identifier of the document you want to checkin</param>
-        /// <param name="fileId">Identifier of file you want to upload</param>
+        /// <param name="fileId">Identifier of file in the cache you want to upload</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task CheckInOutV2CheckInForTaskAsync (int? processDocId, int? taskWorkId, string fileId)
         {
@@ -766,7 +766,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="processDocId">Identifier of the document you want to checkin</param>
         /// <param name="taskWorkId">Identifier of the document you want to checkin</param>
-        /// <param name="fileId">Identifier of file you want to upload</param>
+        /// <param name="fileId">Identifier of file in the cache you want to upload</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> CheckInOutV2CheckInForTaskAsyncWithHttpInfo (int? processDocId, int? taskWorkId, string fileId)
         {

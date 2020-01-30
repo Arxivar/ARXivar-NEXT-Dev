@@ -25,24 +25,68 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// This call returns all users defined in Arxivar
+        /// This call deletes user specified
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;UserCompleteDTO&gt;</returns>
-        List<UserCompleteDTO> UsersGet ();
+        /// <param name="id">Identifier</param>
+        /// <returns></returns>
+        void UsersDelete (int? id);
 
         /// <summary>
-        /// This call returns all users defined in Arxivar
+        /// This call deletes user specified
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;UserCompleteDTO&gt;</returns>
-        ApiResponse<List<UserCompleteDTO>> UsersGetWithHttpInfo ();
+        /// <param name="id">Identifier</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> UsersDeleteWithHttpInfo (int? id);
+        /// <summary>
+        /// This call returns a specific user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <returns>UserInfoDTO</returns>
+        UserInfoDTO UsersGet (int? id);
+
+        /// <summary>
+        /// This call returns a specific user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <returns>ApiResponse of UserInfoDTO</returns>
+        ApiResponse<UserInfoDTO> UsersGetWithHttpInfo (int? id);
+        /// <summary>
+        /// This call gets user object for update
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <returns>UserUpdateDTO</returns>
+        UserUpdateDTO UsersGetForUpdate (int? id);
+
+        /// <summary>
+        /// This call gets user object for update
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <returns>ApiResponse of UserUpdateDTO</returns>
+        ApiResponse<UserUpdateDTO> UsersGetForUpdateWithHttpInfo (int? id);
         /// <summary>
         /// This call returns all user groups defined in Arxivar
         /// </summary>
@@ -103,6 +147,46 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of UserInfoDTO</returns>
         ApiResponse<UserInfoDTO> UsersGetUserInfoWithHttpInfo ();
         /// <summary>
+        /// This call returns all users defined in Arxivar
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List&lt;UserCompleteDTO&gt;</returns>
+        List<UserCompleteDTO> UsersGet_0 ();
+
+        /// <summary>
+        /// This call returns all users defined in Arxivar
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List&lt;UserCompleteDTO&gt;</returns>
+        ApiResponse<List<UserCompleteDTO>> UsersGet_0WithHttpInfo ();
+        /// <summary>
+        /// This call inserts a new user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userInsert">User information to insert</param>
+        /// <returns>UserCompleteDTO</returns>
+        UserCompleteDTO UsersInsert (UserInsertDTO userInsert);
+
+        /// <summary>
+        /// This call inserts a new user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userInsert">User information to insert</param>
+        /// <returns>ApiResponse of UserCompleteDTO</returns>
+        ApiResponse<UserCompleteDTO> UsersInsertWithHttpInfo (UserInsertDTO userInsert);
+        /// <summary>
         /// This call updates the user languages
         /// </summary>
         /// <remarks>
@@ -123,27 +207,94 @@ namespace IO.Swagger.Api
         /// <param name="lang">Language code to set</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UsersSetLangWithHttpInfo (string lang);
+        /// <summary>
+        /// This call updates a given user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <param name="userUpdate">User information to update</param>
+        /// <returns>UserCompleteDTO</returns>
+        UserCompleteDTO UsersUpdate (int? id, UserUpdateDTO userUpdate);
+
+        /// <summary>
+        /// This call updates a given user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <param name="userUpdate">User information to update</param>
+        /// <returns>ApiResponse of UserCompleteDTO</returns>
+        ApiResponse<UserCompleteDTO> UsersUpdateWithHttpInfo (int? id, UserUpdateDTO userUpdate);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// This call returns all users defined in Arxivar
+        /// This call deletes user specified
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;UserCompleteDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<UserCompleteDTO>> UsersGetAsync ();
+        /// <param name="id">Identifier</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task UsersDeleteAsync (int? id);
 
         /// <summary>
-        /// This call returns all users defined in Arxivar
+        /// This call deletes user specified
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;UserCompleteDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UserCompleteDTO>>> UsersGetAsyncWithHttpInfo ();
+        /// <param name="id">Identifier</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> UsersDeleteAsyncWithHttpInfo (int? id);
+        /// <summary>
+        /// This call returns a specific user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <returns>Task of UserInfoDTO</returns>
+        System.Threading.Tasks.Task<UserInfoDTO> UsersGetAsync (int? id);
+
+        /// <summary>
+        /// This call returns a specific user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <returns>Task of ApiResponse (UserInfoDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserInfoDTO>> UsersGetAsyncWithHttpInfo (int? id);
+        /// <summary>
+        /// This call gets user object for update
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <returns>Task of UserUpdateDTO</returns>
+        System.Threading.Tasks.Task<UserUpdateDTO> UsersGetForUpdateAsync (int? id);
+
+        /// <summary>
+        /// This call gets user object for update
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <returns>Task of ApiResponse (UserUpdateDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserUpdateDTO>> UsersGetForUpdateAsyncWithHttpInfo (int? id);
         /// <summary>
         /// This call returns all user groups defined in Arxivar
         /// </summary>
@@ -204,6 +355,46 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (UserInfoDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserInfoDTO>> UsersGetUserInfoAsyncWithHttpInfo ();
         /// <summary>
+        /// This call returns all users defined in Arxivar
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of List&lt;UserCompleteDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<UserCompleteDTO>> UsersGet_0Async ();
+
+        /// <summary>
+        /// This call returns all users defined in Arxivar
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (List&lt;UserCompleteDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UserCompleteDTO>>> UsersGet_0AsyncWithHttpInfo ();
+        /// <summary>
+        /// This call inserts a new user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userInsert">User information to insert</param>
+        /// <returns>Task of UserCompleteDTO</returns>
+        System.Threading.Tasks.Task<UserCompleteDTO> UsersInsertAsync (UserInsertDTO userInsert);
+
+        /// <summary>
+        /// This call inserts a new user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userInsert">User information to insert</param>
+        /// <returns>Task of ApiResponse (UserCompleteDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserCompleteDTO>> UsersInsertAsyncWithHttpInfo (UserInsertDTO userInsert);
+        /// <summary>
         /// This call updates the user languages
         /// </summary>
         /// <remarks>
@@ -224,6 +415,29 @@ namespace IO.Swagger.Api
         /// <param name="lang">Language code to set</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UsersSetLangAsyncWithHttpInfo (string lang);
+        /// <summary>
+        /// This call updates a given user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <param name="userUpdate">User information to update</param>
+        /// <returns>Task of UserCompleteDTO</returns>
+        System.Threading.Tasks.Task<UserCompleteDTO> UsersUpdateAsync (int? id, UserUpdateDTO userUpdate);
+
+        /// <summary>
+        /// This call updates a given user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <param name="userUpdate">User information to update</param>
+        /// <returns>Task of ApiResponse (UserCompleteDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserCompleteDTO>> UsersUpdateAsyncWithHttpInfo (int? id, UserUpdateDTO userUpdate);
         #endregion Asynchronous Operations
     }
 
@@ -325,25 +539,169 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call returns all users defined in Arxivar 
+        /// This call deletes user specified 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;UserCompleteDTO&gt;</returns>
-        public List<UserCompleteDTO> UsersGet ()
+        /// <param name="id">Identifier</param>
+        /// <returns></returns>
+        public void UsersDelete (int? id)
         {
-             ApiResponse<List<UserCompleteDTO>> localVarResponse = UsersGetWithHttpInfo();
+             UsersDeleteWithHttpInfo(id);
+        }
+
+        /// <summary>
+        /// This call deletes user specified 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> UsersDeleteWithHttpInfo (int? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling UsersApi->UsersDelete");
+
+            var localVarPath = "/api/Users/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsersDelete", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// This call deletes user specified 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task UsersDeleteAsync (int? id)
+        {
+             await UsersDeleteAsyncWithHttpInfo(id);
+
+        }
+
+        /// <summary>
+        /// This call deletes user specified 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UsersDeleteAsyncWithHttpInfo (int? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling UsersApi->UsersDelete");
+
+            var localVarPath = "/api/Users/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsersDelete", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// This call returns a specific user 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <returns>UserInfoDTO</returns>
+        public UserInfoDTO UsersGet (int? id)
+        {
+             ApiResponse<UserInfoDTO> localVarResponse = UsersGetWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// This call returns all users defined in Arxivar 
+        /// This call returns a specific user 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;UserCompleteDTO&gt;</returns>
-        public ApiResponse< List<UserCompleteDTO> > UsersGetWithHttpInfo ()
+        /// <param name="id">Identifier</param>
+        /// <returns>ApiResponse of UserInfoDTO</returns>
+        public ApiResponse< UserInfoDTO > UsersGetWithHttpInfo (int? id)
         {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling UsersApi->UsersGet");
 
-            var localVarPath = "/api/Users";
+            var localVarPath = "/api/Users/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -367,6 +725,7 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -387,32 +746,37 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UserCompleteDTO>>(localVarStatusCode,
+            return new ApiResponse<UserInfoDTO>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<UserCompleteDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UserCompleteDTO>)));
+                (UserInfoDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserInfoDTO)));
         }
 
         /// <summary>
-        /// This call returns all users defined in Arxivar 
+        /// This call returns a specific user 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;UserCompleteDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<UserCompleteDTO>> UsersGetAsync ()
+        /// <param name="id">Identifier</param>
+        /// <returns>Task of UserInfoDTO</returns>
+        public async System.Threading.Tasks.Task<UserInfoDTO> UsersGetAsync (int? id)
         {
-             ApiResponse<List<UserCompleteDTO>> localVarResponse = await UsersGetAsyncWithHttpInfo();
+             ApiResponse<UserInfoDTO> localVarResponse = await UsersGetAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// This call returns all users defined in Arxivar 
+        /// This call returns a specific user 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;UserCompleteDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UserCompleteDTO>>> UsersGetAsyncWithHttpInfo ()
+        /// <param name="id">Identifier</param>
+        /// <returns>Task of ApiResponse (UserInfoDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserInfoDTO>> UsersGetAsyncWithHttpInfo (int? id)
         {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling UsersApi->UsersGet");
 
-            var localVarPath = "/api/Users";
+            var localVarPath = "/api/Users/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -436,6 +800,7 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -456,9 +821,158 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UserCompleteDTO>>(localVarStatusCode,
+            return new ApiResponse<UserInfoDTO>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<UserCompleteDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UserCompleteDTO>)));
+                (UserInfoDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserInfoDTO)));
+        }
+
+        /// <summary>
+        /// This call gets user object for update 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <returns>UserUpdateDTO</returns>
+        public UserUpdateDTO UsersGetForUpdate (int? id)
+        {
+             ApiResponse<UserUpdateDTO> localVarResponse = UsersGetForUpdateWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call gets user object for update 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <returns>ApiResponse of UserUpdateDTO</returns>
+        public ApiResponse< UserUpdateDTO > UsersGetForUpdateWithHttpInfo (int? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling UsersApi->UsersGetForUpdate");
+
+            var localVarPath = "/api/Users/ForUpdate/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsersGetForUpdate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UserUpdateDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UserUpdateDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserUpdateDTO)));
+        }
+
+        /// <summary>
+        /// This call gets user object for update 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <returns>Task of UserUpdateDTO</returns>
+        public async System.Threading.Tasks.Task<UserUpdateDTO> UsersGetForUpdateAsync (int? id)
+        {
+             ApiResponse<UserUpdateDTO> localVarResponse = await UsersGetForUpdateAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call gets user object for update 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <returns>Task of ApiResponse (UserUpdateDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserUpdateDTO>> UsersGetForUpdateAsyncWithHttpInfo (int? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling UsersApi->UsersGetForUpdate");
+
+            var localVarPath = "/api/Users/ForUpdate/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsersGetForUpdate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UserUpdateDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UserUpdateDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserUpdateDTO)));
         }
 
         /// <summary>
@@ -885,6 +1399,316 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
+        /// This call returns all users defined in Arxivar 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List&lt;UserCompleteDTO&gt;</returns>
+        public List<UserCompleteDTO> UsersGet_0 ()
+        {
+             ApiResponse<List<UserCompleteDTO>> localVarResponse = UsersGet_0WithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns all users defined in Arxivar 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List&lt;UserCompleteDTO&gt;</returns>
+        public ApiResponse< List<UserCompleteDTO> > UsersGet_0WithHttpInfo ()
+        {
+
+            var localVarPath = "/api/Users";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsersGet_0", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UserCompleteDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<UserCompleteDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UserCompleteDTO>)));
+        }
+
+        /// <summary>
+        /// This call returns all users defined in Arxivar 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of List&lt;UserCompleteDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UserCompleteDTO>> UsersGet_0Async ()
+        {
+             ApiResponse<List<UserCompleteDTO>> localVarResponse = await UsersGet_0AsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns all users defined in Arxivar 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (List&lt;UserCompleteDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UserCompleteDTO>>> UsersGet_0AsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/Users";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsersGet_0", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<UserCompleteDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<UserCompleteDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UserCompleteDTO>)));
+        }
+
+        /// <summary>
+        /// This call inserts a new user 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userInsert">User information to insert</param>
+        /// <returns>UserCompleteDTO</returns>
+        public UserCompleteDTO UsersInsert (UserInsertDTO userInsert)
+        {
+             ApiResponse<UserCompleteDTO> localVarResponse = UsersInsertWithHttpInfo(userInsert);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call inserts a new user 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userInsert">User information to insert</param>
+        /// <returns>ApiResponse of UserCompleteDTO</returns>
+        public ApiResponse< UserCompleteDTO > UsersInsertWithHttpInfo (UserInsertDTO userInsert)
+        {
+            // verify the required parameter 'userInsert' is set
+            if (userInsert == null)
+                throw new ApiException(400, "Missing required parameter 'userInsert' when calling UsersApi->UsersInsert");
+
+            var localVarPath = "/api/Users";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userInsert != null && userInsert.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(userInsert); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = userInsert; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsersInsert", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UserCompleteDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UserCompleteDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserCompleteDTO)));
+        }
+
+        /// <summary>
+        /// This call inserts a new user 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userInsert">User information to insert</param>
+        /// <returns>Task of UserCompleteDTO</returns>
+        public async System.Threading.Tasks.Task<UserCompleteDTO> UsersInsertAsync (UserInsertDTO userInsert)
+        {
+             ApiResponse<UserCompleteDTO> localVarResponse = await UsersInsertAsyncWithHttpInfo(userInsert);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call inserts a new user 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userInsert">User information to insert</param>
+        /// <returns>Task of ApiResponse (UserCompleteDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserCompleteDTO>> UsersInsertAsyncWithHttpInfo (UserInsertDTO userInsert)
+        {
+            // verify the required parameter 'userInsert' is set
+            if (userInsert == null)
+                throw new ApiException(400, "Missing required parameter 'userInsert' when calling UsersApi->UsersInsert");
+
+            var localVarPath = "/api/Users";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userInsert != null && userInsert.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(userInsert); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = userInsert; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsersInsert", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UserCompleteDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UserCompleteDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserCompleteDTO)));
+        }
+
+        /// <summary>
         /// This call updates the user languages 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1021,6 +1845,191 @@ namespace IO.Swagger.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
+        }
+
+        /// <summary>
+        /// This call updates a given user 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <param name="userUpdate">User information to update</param>
+        /// <returns>UserCompleteDTO</returns>
+        public UserCompleteDTO UsersUpdate (int? id, UserUpdateDTO userUpdate)
+        {
+             ApiResponse<UserCompleteDTO> localVarResponse = UsersUpdateWithHttpInfo(id, userUpdate);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call updates a given user 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <param name="userUpdate">User information to update</param>
+        /// <returns>ApiResponse of UserCompleteDTO</returns>
+        public ApiResponse< UserCompleteDTO > UsersUpdateWithHttpInfo (int? id, UserUpdateDTO userUpdate)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling UsersApi->UsersUpdate");
+            // verify the required parameter 'userUpdate' is set
+            if (userUpdate == null)
+                throw new ApiException(400, "Missing required parameter 'userUpdate' when calling UsersApi->UsersUpdate");
+
+            var localVarPath = "/api/Users/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (userUpdate != null && userUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(userUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = userUpdate; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsersUpdate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UserCompleteDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UserCompleteDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserCompleteDTO)));
+        }
+
+        /// <summary>
+        /// This call updates a given user 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <param name="userUpdate">User information to update</param>
+        /// <returns>Task of UserCompleteDTO</returns>
+        public async System.Threading.Tasks.Task<UserCompleteDTO> UsersUpdateAsync (int? id, UserUpdateDTO userUpdate)
+        {
+             ApiResponse<UserCompleteDTO> localVarResponse = await UsersUpdateAsyncWithHttpInfo(id, userUpdate);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call updates a given user 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier</param>
+        /// <param name="userUpdate">User information to update</param>
+        /// <returns>Task of ApiResponse (UserCompleteDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserCompleteDTO>> UsersUpdateAsyncWithHttpInfo (int? id, UserUpdateDTO userUpdate)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling UsersApi->UsersUpdate");
+            // verify the required parameter 'userUpdate' is set
+            if (userUpdate == null)
+                throw new ApiException(400, "Missing required parameter 'userUpdate' when calling UsersApi->UsersUpdate");
+
+            var localVarPath = "/api/Users/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (userUpdate != null && userUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(userUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = userUpdate; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UsersUpdate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<UserCompleteDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UserCompleteDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserCompleteDTO)));
         }
 
     }

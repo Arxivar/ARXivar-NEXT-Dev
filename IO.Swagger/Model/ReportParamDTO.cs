@@ -35,10 +35,12 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <param name="id">Parameter id.</param>
         /// <param name="configuration">Parameter configuration.</param>
-        public ReportParamDTO(string id = default(string), FieldBaseForSearchDTO configuration = default(FieldBaseForSearchDTO))
+        /// <param name="paramDetailList">List of parameter details.</param>
+        public ReportParamDTO(string id = default(string), FieldBaseForSearchDTO configuration = default(FieldBaseForSearchDTO), List<ReportParamDetailDTO> paramDetailList = default(List<ReportParamDetailDTO>))
         {
             this.Id = id;
             this.Configuration = configuration;
+            this.ParamDetailList = paramDetailList;
         }
         
         /// <summary>
@@ -56,6 +58,13 @@ namespace IO.Swagger.Model
         public FieldBaseForSearchDTO Configuration { get; set; }
 
         /// <summary>
+        /// List of parameter details
+        /// </summary>
+        /// <value>List of parameter details</value>
+        [DataMember(Name="paramDetailList", EmitDefaultValue=false)]
+        public List<ReportParamDetailDTO> ParamDetailList { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -65,6 +74,7 @@ namespace IO.Swagger.Model
             sb.Append("class ReportParamDTO {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Configuration: ").Append(Configuration).Append("\n");
+            sb.Append("  ParamDetailList: ").Append(ParamDetailList).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,6 +118,11 @@ namespace IO.Swagger.Model
                     this.Configuration == input.Configuration ||
                     (this.Configuration != null &&
                     this.Configuration.Equals(input.Configuration))
+                ) && 
+                (
+                    this.ParamDetailList == input.ParamDetailList ||
+                    this.ParamDetailList != null &&
+                    this.ParamDetailList.SequenceEqual(input.ParamDetailList)
                 );
         }
 
@@ -124,6 +139,8 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.Configuration != null)
                     hashCode = hashCode * 59 + this.Configuration.GetHashCode();
+                if (this.ParamDetailList != null)
+                    hashCode = hashCode * 59 + this.ParamDetailList.GetHashCode();
                 return hashCode;
             }
         }

@@ -30,42 +30,43 @@ namespace IO.Swagger.Model
     /// </summary>
     [DataContract]
     [JsonConverter(typeof(JsonSubtypes), "className")]
-    [JsonSubtypes.KnownSubType(typeof(OriginalFieldDTO), "OriginalFieldDTO")]
-    [JsonSubtypes.KnownSubType(typeof(AdditionalFieldGroupDTO), "AdditionalFieldGroupDTO")]
-    [JsonSubtypes.KnownSubType(typeof(OriginFieldDTO), "OriginFieldDTO")]
     [JsonSubtypes.KnownSubType(typeof(AdditionalFieldDateTimeDTO), "AdditionalFieldDateTimeDTO")]
-    [JsonSubtypes.KnownSubType(typeof(AdditionalFieldTableDTO), "AdditionalFieldTableDTO")]
+    [JsonSubtypes.KnownSubType(typeof(InstructionFieldDTO), "InstructionFieldDTO")]
     [JsonSubtypes.KnownSubType(typeof(DocumentDateExpiredFieldDTO), "DocumentDateExpiredFieldDTO")]
-    [JsonSubtypes.KnownSubType(typeof(StateFieldDTO), "StateFieldDTO")]
     [JsonSubtypes.KnownSubType(typeof(ToFieldDTO), "ToFieldDTO")]
     [JsonSubtypes.KnownSubType(typeof(AdditionalFieldStringDTO), "AdditionalFieldStringDTO")]
     [JsonSubtypes.KnownSubType(typeof(AdditionalFieldDoubleDTO), "AdditionalFieldDoubleDTO")]
     [JsonSubtypes.KnownSubType(typeof(FolderFieldDTO), "FolderFieldDTO")]
-    [JsonSubtypes.KnownSubType(typeof(AdditionalFieldBooleanDTO), "AdditionalFieldBooleanDTO")]
     [JsonSubtypes.KnownSubType(typeof(NumberFieldDTO), "NumberFieldDTO")]
     [JsonSubtypes.KnownSubType(typeof(NoteFieldDTO), "NoteFieldDTO")]
-    [JsonSubtypes.KnownSubType(typeof(AuthorityDataFieldDTO), "AuthorityDataFieldDTO")]
-    [JsonSubtypes.KnownSubType(typeof(AttachmentFieldDTO), "AttachmentFieldDTO")]
     [JsonSubtypes.KnownSubType(typeof(ProtocolDateFieldDTO), "ProtocolDateFieldDTO")]
     [JsonSubtypes.KnownSubType(typeof(BinderFieldDTO), "BinderFieldDTO")]
-    [JsonSubtypes.KnownSubType(typeof(DocumentDateFieldDTO), "DocumentDateFieldDTO")]
-    [JsonSubtypes.KnownSubType(typeof(AdditionalFieldDTO), "AdditionalFieldDTO")]
     [JsonSubtypes.KnownSubType(typeof(CcFieldDTO), "CcFieldDTO")]
     [JsonSubtypes.KnownSubType(typeof(StringFieldDTO), "StringFieldDTO")]
+    [JsonSubtypes.KnownSubType(typeof(AdditionalFieldConfigurationComboDTO), "AdditionalFieldConfigurationComboDTO")]
+    [JsonSubtypes.KnownSubType(typeof(FromFieldDTO), "FromFieldDTO")]
+    [JsonSubtypes.KnownSubType(typeof(AdditionalFieldMultivalueDTO), "AdditionalFieldMultivalueDTO")]
+    [JsonSubtypes.KnownSubType(typeof(AssociationFieldDTO), "AssociationFieldDTO")]
+    [JsonSubtypes.KnownSubType(typeof(AdditionalFieldIntDTO), "AdditionalFieldIntDTO")]
+    [JsonSubtypes.KnownSubType(typeof(BarcodeFieldDTO), "BarcodeFieldDTO")]
+    [JsonSubtypes.KnownSubType(typeof(OriginalFieldDTO), "OriginalFieldDTO")]
+    [JsonSubtypes.KnownSubType(typeof(AdditionalFieldGroupDTO), "AdditionalFieldGroupDTO")]
+    [JsonSubtypes.KnownSubType(typeof(OriginFieldDTO), "OriginFieldDTO")]
+    [JsonSubtypes.KnownSubType(typeof(AdditionalFieldTableDTO), "AdditionalFieldTableDTO")]
+    [JsonSubtypes.KnownSubType(typeof(StateFieldDTO), "StateFieldDTO")]
+    [JsonSubtypes.KnownSubType(typeof(AdditionalFieldBooleanDTO), "AdditionalFieldBooleanDTO")]
+    [JsonSubtypes.KnownSubType(typeof(AuthorityDataFieldDTO), "AuthorityDataFieldDTO")]
+    [JsonSubtypes.KnownSubType(typeof(AttachmentFieldDTO), "AttachmentFieldDTO")]
+    [JsonSubtypes.KnownSubType(typeof(DocumentDateFieldDTO), "DocumentDateFieldDTO")]
+    [JsonSubtypes.KnownSubType(typeof(AdditionalFieldDTO), "AdditionalFieldDTO")]
     [JsonSubtypes.KnownSubType(typeof(SendersFieldDTO), "SendersFieldDTO")]
     [JsonSubtypes.KnownSubType(typeof(BusinessUnitFieldDTO), "BusinessUnitFieldDTO")]
-    [JsonSubtypes.KnownSubType(typeof(AdditionalFieldConfigurationComboDTO), "AdditionalFieldConfigurationComboDTO")]
     [JsonSubtypes.KnownSubType(typeof(AdditionalFieldClasseDTO), "AdditionalFieldClasseDTO")]
     [JsonSubtypes.KnownSubType(typeof(AdditionalFieldComboDTO), "AdditionalFieldComboDTO")]
-    [JsonSubtypes.KnownSubType(typeof(FromFieldDTO), "FromFieldDTO")]
     [JsonSubtypes.KnownSubType(typeof(ImportantFieldDTO), "ImportantFieldDTO")]
-    [JsonSubtypes.KnownSubType(typeof(AdditionalFieldMultivalueDTO), "AdditionalFieldMultivalueDTO")]
     [JsonSubtypes.KnownSubType(typeof(BinderPreviewFieldDTO), "BinderPreviewFieldDTO")]
-    [JsonSubtypes.KnownSubType(typeof(AssociationFieldDTO), "AssociationFieldDTO")]
     [JsonSubtypes.KnownSubType(typeof(SubjectFieldDTO), "SubjectFieldDTO")]
-    [JsonSubtypes.KnownSubType(typeof(AdditionalFieldIntDTO), "AdditionalFieldIntDTO")]
     [JsonSubtypes.KnownSubType(typeof(DocumentTypeFieldDTO), "DocumentTypeFieldDTO")]
-    [JsonSubtypes.KnownSubType(typeof(BarcodeFieldDTO), "BarcodeFieldDTO")]
     public partial class FieldBaseDTO :  IEquatable<FieldBaseDTO>, IValidatableObject
     {
         /// <summary>
@@ -91,7 +92,11 @@ namespace IO.Swagger.Model
         /// <param name="isAdditional">Field type additional.</param>
         /// <param name="visible">Visible.</param>
         /// <param name="predefinedProfileFormula">Formula in the context of predefined profile.</param>
-        public FieldBaseDTO(string name = default(string), string externalId = default(string), string description = default(string), int? order = default(int?), string dataSource = default(string), bool? required = default(bool?), string formula = default(string), string className = default(string), bool? locked = default(bool?), string comboGruppiId = default(string), List<DependencyFieldItem> dependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> associations = default(List<AssocitationFieldItem>), bool? isAdditional = default(bool?), bool? visible = default(bool?), string predefinedProfileFormula = default(string))
+        /// <param name="visibilityCondition">The visibility condition formula for this mask field.</param>
+        /// <param name="addressBookDefaultFilter">The preferred address book for search contacts for this field.</param>
+        /// <param name="enabledAddressBook">Possible addressbook for selection for this field.</param>
+        /// <param name="columns">Number of display columns for the field.</param>
+        public FieldBaseDTO(string name = default(string), string externalId = default(string), string description = default(string), int? order = default(int?), string dataSource = default(string), bool? required = default(bool?), string formula = default(string), string className = default(string), bool? locked = default(bool?), string comboGruppiId = default(string), List<DependencyFieldItem> dependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> associations = default(List<AssocitationFieldItem>), bool? isAdditional = default(bool?), bool? visible = default(bool?), string predefinedProfileFormula = default(string), string visibilityCondition = default(string), int? addressBookDefaultFilter = default(int?), List<int?> enabledAddressBook = default(List<int?>), int? columns = default(int?))
         {
             // to ensure "className" is required (not null)
             if (className == null)
@@ -116,6 +121,10 @@ namespace IO.Swagger.Model
             this.IsAdditional = isAdditional;
             this.Visible = visible;
             this.PredefinedProfileFormula = predefinedProfileFormula;
+            this.VisibilityCondition = visibilityCondition;
+            this.AddressBookDefaultFilter = addressBookDefaultFilter;
+            this.EnabledAddressBook = enabledAddressBook;
+            this.Columns = columns;
         }
         
         /// <summary>
@@ -224,6 +233,34 @@ namespace IO.Swagger.Model
         public string PredefinedProfileFormula { get; set; }
 
         /// <summary>
+        /// The visibility condition formula for this mask field
+        /// </summary>
+        /// <value>The visibility condition formula for this mask field</value>
+        [DataMember(Name="visibilityCondition", EmitDefaultValue=false)]
+        public string VisibilityCondition { get; set; }
+
+        /// <summary>
+        /// The preferred address book for search contacts for this field
+        /// </summary>
+        /// <value>The preferred address book for search contacts for this field</value>
+        [DataMember(Name="addressBookDefaultFilter", EmitDefaultValue=false)]
+        public int? AddressBookDefaultFilter { get; set; }
+
+        /// <summary>
+        /// Possible addressbook for selection for this field
+        /// </summary>
+        /// <value>Possible addressbook for selection for this field</value>
+        [DataMember(Name="enabledAddressBook", EmitDefaultValue=false)]
+        public List<int?> EnabledAddressBook { get; set; }
+
+        /// <summary>
+        /// Number of display columns for the field
+        /// </summary>
+        /// <value>Number of display columns for the field</value>
+        [DataMember(Name="columns", EmitDefaultValue=false)]
+        public int? Columns { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -246,6 +283,10 @@ namespace IO.Swagger.Model
             sb.Append("  IsAdditional: ").Append(IsAdditional).Append("\n");
             sb.Append("  Visible: ").Append(Visible).Append("\n");
             sb.Append("  PredefinedProfileFormula: ").Append(PredefinedProfileFormula).Append("\n");
+            sb.Append("  VisibilityCondition: ").Append(VisibilityCondition).Append("\n");
+            sb.Append("  AddressBookDefaultFilter: ").Append(AddressBookDefaultFilter).Append("\n");
+            sb.Append("  EnabledAddressBook: ").Append(EnabledAddressBook).Append("\n");
+            sb.Append("  Columns: ").Append(Columns).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -354,6 +395,26 @@ namespace IO.Swagger.Model
                     this.PredefinedProfileFormula == input.PredefinedProfileFormula ||
                     (this.PredefinedProfileFormula != null &&
                     this.PredefinedProfileFormula.Equals(input.PredefinedProfileFormula))
+                ) && 
+                (
+                    this.VisibilityCondition == input.VisibilityCondition ||
+                    (this.VisibilityCondition != null &&
+                    this.VisibilityCondition.Equals(input.VisibilityCondition))
+                ) && 
+                (
+                    this.AddressBookDefaultFilter == input.AddressBookDefaultFilter ||
+                    (this.AddressBookDefaultFilter != null &&
+                    this.AddressBookDefaultFilter.Equals(input.AddressBookDefaultFilter))
+                ) && 
+                (
+                    this.EnabledAddressBook == input.EnabledAddressBook ||
+                    this.EnabledAddressBook != null &&
+                    this.EnabledAddressBook.SequenceEqual(input.EnabledAddressBook)
+                ) && 
+                (
+                    this.Columns == input.Columns ||
+                    (this.Columns != null &&
+                    this.Columns.Equals(input.Columns))
                 );
         }
 
@@ -396,6 +457,14 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.Visible.GetHashCode();
                 if (this.PredefinedProfileFormula != null)
                     hashCode = hashCode * 59 + this.PredefinedProfileFormula.GetHashCode();
+                if (this.VisibilityCondition != null)
+                    hashCode = hashCode * 59 + this.VisibilityCondition.GetHashCode();
+                if (this.AddressBookDefaultFilter != null)
+                    hashCode = hashCode * 59 + this.AddressBookDefaultFilter.GetHashCode();
+                if (this.EnabledAddressBook != null)
+                    hashCode = hashCode * 59 + this.EnabledAddressBook.GetHashCode();
+                if (this.Columns != null)
+                    hashCode = hashCode * 59 + this.Columns.GetHashCode();
                 return hashCode;
             }
         }

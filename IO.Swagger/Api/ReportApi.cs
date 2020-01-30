@@ -25,7 +25,49 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Execute a report by id
+        /// Deletes a report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier of the report</param>
+        /// <returns>Object</returns>
+        Object ReportDelete (string id);
+
+        /// <summary>
+        /// Deletes a report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier of the report</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> ReportDeleteWithHttpInfo (string id);
+        /// <summary>
+        /// Deletes the template file of the report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <returns></returns>
+        void ReportDeleteReportTemplate (string id);
+
+        /// <summary>
+        /// Deletes the template file of the report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReportDeleteReportTemplateWithHttpInfo (string id);
+        /// <summary>
+        /// Executes a report by id
         /// </summary>
         /// <remarks>
         /// 
@@ -36,7 +78,7 @@ namespace IO.Swagger.Api
         System.IO.Stream ReportExecuteById (ReportExecuteRequestDTO executerequest = null);
 
         /// <summary>
-        /// Execute a report by id
+        /// Executes a report by id
         /// </summary>
         /// <remarks>
         /// 
@@ -46,7 +88,7 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> ReportExecuteByIdWithHttpInfo (ReportExecuteRequestDTO executerequest = null);
         /// <summary>
-        /// Execute a report with one or more output formats by id. The operation is async
+        /// Executes a report with one or more output formats by id. The operation is async
         /// </summary>
         /// <remarks>
         /// 
@@ -57,7 +99,7 @@ namespace IO.Swagger.Api
         ReportExecuteAsyncResponseDTO ReportExecuteMultpileAsyncById (ReportExecuteMultipleRequestDTO executerequest = null);
 
         /// <summary>
-        /// Execute a report with one or more output formats by id. The operation is async
+        /// Executes a report with one or more output formats by id. The operation is async
         /// </summary>
         /// <remarks>
         /// 
@@ -88,6 +130,50 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ReportGetByIdWithHttpInfo (string id);
         /// <summary>
+        /// Get Find Group by Id considering report permissions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>FindGroupDTO</returns>
+        FindGroupDTO ReportGetFindGroupById (string findGroupId, string reportId);
+
+        /// <summary>
+        /// Get Find Group by Id considering report permissions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>ApiResponse of FindGroupDTO</returns>
+        ApiResponse<FindGroupDTO> ReportGetFindGroupByIdWithHttpInfo (string findGroupId, string reportId);
+        /// <summary>
+        /// List of Find Group considering report permissions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportId"></param>
+        /// <returns>List&lt;FindGroupDTO&gt;</returns>
+        List<FindGroupDTO> ReportGetFindGroupList (string reportId);
+
+        /// <summary>
+        /// List of Find Group considering report permissions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportId"></param>
+        /// <returns>ApiResponse of List&lt;FindGroupDTO&gt;</returns>
+        ApiResponse<List<FindGroupDTO>> ReportGetFindGroupListWithHttpInfo (string reportId);
+        /// <summary>
         /// Returns the list of all the report available for the user
         /// </summary>
         /// <remarks>
@@ -106,10 +192,268 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ReportGetListWithHttpInfo ();
+        /// <summary>
+        /// Returns permissions of report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>PermissionsDTO</returns>
+        PermissionsDTO ReportGetPermission (string id);
+
+        /// <summary>
+        /// Returns permissions of report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>ApiResponse of PermissionsDTO</returns>
+        ApiResponse<PermissionsDTO> ReportGetPermissionWithHttpInfo (string id);
+        /// <summary>
+        /// Gets report data source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>Object</returns>
+        Object ReportGetReportDataSource (string findGroupId, string reportId);
+
+        /// <summary>
+        /// Gets report data source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> ReportGetReportDataSourceWithHttpInfo (string findGroupId, string reportId);
+        /// <summary>
+        /// Gets report parameters datasource
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>List&lt;ReportParamDataSourceDTO&gt;</returns>
+        List<ReportParamDataSourceDTO> ReportGetReportParamDataSourceByFindGroupId (string findGroupId, string reportId);
+
+        /// <summary>
+        /// Gets report parameters datasource
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>ApiResponse of List&lt;ReportParamDataSourceDTO&gt;</returns>
+        ApiResponse<List<ReportParamDataSourceDTO>> ReportGetReportParamDataSourceByFindGroupIdWithHttpInfo (string findGroupId, string reportId);
+        /// <summary>
+        /// Gets the report template file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <param name="editMode">Determine if report references are visible (optional)</param>
+        /// <returns>string</returns>
+        string ReportGetReportTemplate (string id, bool? editMode = null);
+
+        /// <summary>
+        /// Gets the report template file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <param name="editMode">Determine if report references are visible (optional)</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> ReportGetReportTemplateWithHttpInfo (string id, bool? editMode = null);
+        /// <summary>
+        /// Executes a query for internal data source in edit mode
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Object</returns>
+        Object ReportHandlerEditMode ();
+
+        /// <summary>
+        /// Executes a query for internal data source in edit mode
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> ReportHandlerEditModeWithHttpInfo ();
+        /// <summary>
+        /// Executes a query for internal data source in running mode
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Object</returns>
+        Object ReportHandlerRunningMode ();
+
+        /// <summary>
+        /// Executes a query for internal data source in running mode
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> ReportHandlerRunningModeWithHttpInfo ();
+        /// <summary>
+        /// Inserts a new report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportdto"> (optional)</param>
+        /// <returns>ReportDTO</returns>
+        ReportDTO ReportInsertReport (ReportDTO reportdto = null);
+
+        /// <summary>
+        /// Inserts a new report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportdto"> (optional)</param>
+        /// <returns>ApiResponse of ReportDTO</returns>
+        ApiResponse<ReportDTO> ReportInsertReportWithHttpInfo (ReportDTO reportdto = null);
+        /// <summary>
+        /// Sets report permissions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report Identifier</param>
+        /// <param name="permissions">Permissions data</param>
+        /// <returns></returns>
+        void ReportSetPermission (string id, PermissionsDTO permissions);
+
+        /// <summary>
+        /// Sets report permissions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report Identifier</param>
+        /// <param name="permissions">Permissions data</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReportSetPermissionWithHttpInfo (string id, PermissionsDTO permissions);
+        /// <summary>
+        /// Updates the report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportdto"> (optional)</param>
+        /// <returns>ReportDTO</returns>
+        ReportDTO ReportUpdateReport (ReportDTO reportdto = null);
+
+        /// <summary>
+        /// Updates the report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportdto"> (optional)</param>
+        /// <returns>ApiResponse of ReportDTO</returns>
+        ApiResponse<ReportDTO> ReportUpdateReportWithHttpInfo (ReportDTO reportdto = null);
+        /// <summary>
+        /// Updates the template file of the report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <param name="reportTemplate">Report template</param>
+        /// <returns></returns>
+        void ReportUpdateReportTemplate (string id, string reportTemplate);
+
+        /// <summary>
+        /// Updates the template file of the report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <param name="reportTemplate">Report template</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReportUpdateReportTemplateWithHttpInfo (string id, string reportTemplate);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Execute a report by id
+        /// Deletes a report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier of the report</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> ReportDeleteAsync (string id);
+
+        /// <summary>
+        /// Deletes a report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier of the report</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ReportDeleteAsyncWithHttpInfo (string id);
+        /// <summary>
+        /// Deletes the template file of the report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task ReportDeleteReportTemplateAsync (string id);
+
+        /// <summary>
+        /// Deletes the template file of the report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ReportDeleteReportTemplateAsyncWithHttpInfo (string id);
+        /// <summary>
+        /// Executes a report by id
         /// </summary>
         /// <remarks>
         /// 
@@ -120,7 +464,7 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<System.IO.Stream> ReportExecuteByIdAsync (ReportExecuteRequestDTO executerequest = null);
 
         /// <summary>
-        /// Execute a report by id
+        /// Executes a report by id
         /// </summary>
         /// <remarks>
         /// 
@@ -130,7 +474,7 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> ReportExecuteByIdAsyncWithHttpInfo (ReportExecuteRequestDTO executerequest = null);
         /// <summary>
-        /// Execute a report with one or more output formats by id. The operation is async
+        /// Executes a report with one or more output formats by id. The operation is async
         /// </summary>
         /// <remarks>
         /// 
@@ -141,7 +485,7 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<ReportExecuteAsyncResponseDTO> ReportExecuteMultpileAsyncByIdAsync (ReportExecuteMultipleRequestDTO executerequest = null);
 
         /// <summary>
-        /// Execute a report with one or more output formats by id. The operation is async
+        /// Executes a report with one or more output formats by id. The operation is async
         /// </summary>
         /// <remarks>
         /// 
@@ -172,6 +516,50 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ReportGetByIdAsyncWithHttpInfo (string id);
         /// <summary>
+        /// Get Find Group by Id considering report permissions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>Task of FindGroupDTO</returns>
+        System.Threading.Tasks.Task<FindGroupDTO> ReportGetFindGroupByIdAsync (string findGroupId, string reportId);
+
+        /// <summary>
+        /// Get Find Group by Id considering report permissions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>Task of ApiResponse (FindGroupDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FindGroupDTO>> ReportGetFindGroupByIdAsyncWithHttpInfo (string findGroupId, string reportId);
+        /// <summary>
+        /// List of Find Group considering report permissions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportId"></param>
+        /// <returns>Task of List&lt;FindGroupDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<FindGroupDTO>> ReportGetFindGroupListAsync (string reportId);
+
+        /// <summary>
+        /// List of Find Group considering report permissions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportId"></param>
+        /// <returns>Task of ApiResponse (List&lt;FindGroupDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<FindGroupDTO>>> ReportGetFindGroupListAsyncWithHttpInfo (string reportId);
+        /// <summary>
         /// Returns the list of all the report available for the user
         /// </summary>
         /// <remarks>
@@ -190,6 +578,222 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ReportGetListAsyncWithHttpInfo ();
+        /// <summary>
+        /// Returns permissions of report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>Task of PermissionsDTO</returns>
+        System.Threading.Tasks.Task<PermissionsDTO> ReportGetPermissionAsync (string id);
+
+        /// <summary>
+        /// Returns permissions of report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>Task of ApiResponse (PermissionsDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PermissionsDTO>> ReportGetPermissionAsyncWithHttpInfo (string id);
+        /// <summary>
+        /// Gets report data source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> ReportGetReportDataSourceAsync (string findGroupId, string reportId);
+
+        /// <summary>
+        /// Gets report data source
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ReportGetReportDataSourceAsyncWithHttpInfo (string findGroupId, string reportId);
+        /// <summary>
+        /// Gets report parameters datasource
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>Task of List&lt;ReportParamDataSourceDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<ReportParamDataSourceDTO>> ReportGetReportParamDataSourceByFindGroupIdAsync (string findGroupId, string reportId);
+
+        /// <summary>
+        /// Gets report parameters datasource
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>Task of ApiResponse (List&lt;ReportParamDataSourceDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<ReportParamDataSourceDTO>>> ReportGetReportParamDataSourceByFindGroupIdAsyncWithHttpInfo (string findGroupId, string reportId);
+        /// <summary>
+        /// Gets the report template file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <param name="editMode">Determine if report references are visible (optional)</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> ReportGetReportTemplateAsync (string id, bool? editMode = null);
+
+        /// <summary>
+        /// Gets the report template file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <param name="editMode">Determine if report references are visible (optional)</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> ReportGetReportTemplateAsyncWithHttpInfo (string id, bool? editMode = null);
+        /// <summary>
+        /// Executes a query for internal data source in edit mode
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> ReportHandlerEditModeAsync ();
+
+        /// <summary>
+        /// Executes a query for internal data source in edit mode
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ReportHandlerEditModeAsyncWithHttpInfo ();
+        /// <summary>
+        /// Executes a query for internal data source in running mode
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> ReportHandlerRunningModeAsync ();
+
+        /// <summary>
+        /// Executes a query for internal data source in running mode
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ReportHandlerRunningModeAsyncWithHttpInfo ();
+        /// <summary>
+        /// Inserts a new report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportdto"> (optional)</param>
+        /// <returns>Task of ReportDTO</returns>
+        System.Threading.Tasks.Task<ReportDTO> ReportInsertReportAsync (ReportDTO reportdto = null);
+
+        /// <summary>
+        /// Inserts a new report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportdto"> (optional)</param>
+        /// <returns>Task of ApiResponse (ReportDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ReportDTO>> ReportInsertReportAsyncWithHttpInfo (ReportDTO reportdto = null);
+        /// <summary>
+        /// Sets report permissions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report Identifier</param>
+        /// <param name="permissions">Permissions data</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task ReportSetPermissionAsync (string id, PermissionsDTO permissions);
+
+        /// <summary>
+        /// Sets report permissions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report Identifier</param>
+        /// <param name="permissions">Permissions data</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ReportSetPermissionAsyncWithHttpInfo (string id, PermissionsDTO permissions);
+        /// <summary>
+        /// Updates the report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportdto"> (optional)</param>
+        /// <returns>Task of ReportDTO</returns>
+        System.Threading.Tasks.Task<ReportDTO> ReportUpdateReportAsync (ReportDTO reportdto = null);
+
+        /// <summary>
+        /// Updates the report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportdto"> (optional)</param>
+        /// <returns>Task of ApiResponse (ReportDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ReportDTO>> ReportUpdateReportAsyncWithHttpInfo (ReportDTO reportdto = null);
+        /// <summary>
+        /// Updates the template file of the report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <param name="reportTemplate">Report template</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task ReportUpdateReportTemplateAsync (string id, string reportTemplate);
+
+        /// <summary>
+        /// Updates the template file of the report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <param name="reportTemplate">Report template</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ReportUpdateReportTemplateAsyncWithHttpInfo (string id, string reportTemplate);
         #endregion Asynchronous Operations
     }
 
@@ -291,7 +895,295 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Execute a report by id 
+        /// Deletes a report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier of the report</param>
+        /// <returns>Object</returns>
+        public Object ReportDelete (string id)
+        {
+             ApiResponse<Object> localVarResponse = ReportDeleteWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Deletes a report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier of the report</param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > ReportDeleteWithHttpInfo (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ReportApi->ReportDelete");
+
+            var localVarPath = "/api/Report/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportDelete", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Deletes a report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier of the report</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> ReportDeleteAsync (string id)
+        {
+             ApiResponse<Object> localVarResponse = await ReportDeleteAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Deletes a report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identifier of the report</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ReportDeleteAsyncWithHttpInfo (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ReportApi->ReportDelete");
+
+            var localVarPath = "/api/Report/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportDelete", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Deletes the template file of the report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <returns></returns>
+        public void ReportDeleteReportTemplate (string id)
+        {
+             ReportDeleteReportTemplateWithHttpInfo(id);
+        }
+
+        /// <summary>
+        /// Deletes the template file of the report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReportDeleteReportTemplateWithHttpInfo (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ReportApi->ReportDeleteReportTemplate");
+
+            var localVarPath = "/api/Report/{id}/DeleteTemplate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportDeleteReportTemplate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Deletes the template file of the report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task ReportDeleteReportTemplateAsync (string id)
+        {
+             await ReportDeleteReportTemplateAsyncWithHttpInfo(id);
+
+        }
+
+        /// <summary>
+        /// Deletes the template file of the report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ReportDeleteReportTemplateAsyncWithHttpInfo (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ReportApi->ReportDeleteReportTemplate");
+
+            var localVarPath = "/api/Report/{id}/DeleteTemplate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportDeleteReportTemplate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Executes a report by id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executerequest"> (optional)</param>
@@ -303,7 +1195,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Execute a report by id 
+        /// Executes a report by id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executerequest"> (optional)</param>
@@ -366,7 +1258,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Execute a report by id 
+        /// Executes a report by id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executerequest"> (optional)</param>
@@ -379,7 +1271,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Execute a report by id 
+        /// Executes a report by id 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executerequest"> (optional)</param>
@@ -442,7 +1334,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Execute a report with one or more output formats by id. The operation is async 
+        /// Executes a report with one or more output formats by id. The operation is async 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executerequest"> (optional)</param>
@@ -454,7 +1346,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Execute a report with one or more output formats by id. The operation is async 
+        /// Executes a report with one or more output formats by id. The operation is async 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executerequest"> (optional)</param>
@@ -520,7 +1412,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Execute a report with one or more output formats by id. The operation is async 
+        /// Executes a report with one or more output formats by id. The operation is async 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executerequest"> (optional)</param>
@@ -533,7 +1425,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// Execute a report with one or more output formats by id. The operation is async 
+        /// Executes a report with one or more output formats by id. The operation is async 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="executerequest"> (optional)</param>
@@ -746,6 +1638,316 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
+        /// Get Find Group by Id considering report permissions 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>FindGroupDTO</returns>
+        public FindGroupDTO ReportGetFindGroupById (string findGroupId, string reportId)
+        {
+             ApiResponse<FindGroupDTO> localVarResponse = ReportGetFindGroupByIdWithHttpInfo(findGroupId, reportId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Find Group by Id considering report permissions 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>ApiResponse of FindGroupDTO</returns>
+        public ApiResponse< FindGroupDTO > ReportGetFindGroupByIdWithHttpInfo (string findGroupId, string reportId)
+        {
+            // verify the required parameter 'findGroupId' is set
+            if (findGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'findGroupId' when calling ReportApi->ReportGetFindGroupById");
+            // verify the required parameter 'reportId' is set
+            if (reportId == null)
+                throw new ApiException(400, "Missing required parameter 'reportId' when calling ReportApi->ReportGetFindGroupById");
+
+            var localVarPath = "/api/Report/FindGroup/{findGroupId}/{reportId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (findGroupId != null) localVarPathParams.Add("findGroupId", this.Configuration.ApiClient.ParameterToString(findGroupId)); // path parameter
+            if (reportId != null) localVarPathParams.Add("reportId", this.Configuration.ApiClient.ParameterToString(reportId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportGetFindGroupById", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FindGroupDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FindGroupDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FindGroupDTO)));
+        }
+
+        /// <summary>
+        /// Get Find Group by Id considering report permissions 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>Task of FindGroupDTO</returns>
+        public async System.Threading.Tasks.Task<FindGroupDTO> ReportGetFindGroupByIdAsync (string findGroupId, string reportId)
+        {
+             ApiResponse<FindGroupDTO> localVarResponse = await ReportGetFindGroupByIdAsyncWithHttpInfo(findGroupId, reportId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Find Group by Id considering report permissions 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>Task of ApiResponse (FindGroupDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FindGroupDTO>> ReportGetFindGroupByIdAsyncWithHttpInfo (string findGroupId, string reportId)
+        {
+            // verify the required parameter 'findGroupId' is set
+            if (findGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'findGroupId' when calling ReportApi->ReportGetFindGroupById");
+            // verify the required parameter 'reportId' is set
+            if (reportId == null)
+                throw new ApiException(400, "Missing required parameter 'reportId' when calling ReportApi->ReportGetFindGroupById");
+
+            var localVarPath = "/api/Report/FindGroup/{findGroupId}/{reportId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (findGroupId != null) localVarPathParams.Add("findGroupId", this.Configuration.ApiClient.ParameterToString(findGroupId)); // path parameter
+            if (reportId != null) localVarPathParams.Add("reportId", this.Configuration.ApiClient.ParameterToString(reportId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportGetFindGroupById", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FindGroupDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FindGroupDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FindGroupDTO)));
+        }
+
+        /// <summary>
+        /// List of Find Group considering report permissions 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportId"></param>
+        /// <returns>List&lt;FindGroupDTO&gt;</returns>
+        public List<FindGroupDTO> ReportGetFindGroupList (string reportId)
+        {
+             ApiResponse<List<FindGroupDTO>> localVarResponse = ReportGetFindGroupListWithHttpInfo(reportId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List of Find Group considering report permissions 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportId"></param>
+        /// <returns>ApiResponse of List&lt;FindGroupDTO&gt;</returns>
+        public ApiResponse< List<FindGroupDTO> > ReportGetFindGroupListWithHttpInfo (string reportId)
+        {
+            // verify the required parameter 'reportId' is set
+            if (reportId == null)
+                throw new ApiException(400, "Missing required parameter 'reportId' when calling ReportApi->ReportGetFindGroupList");
+
+            var localVarPath = "/api/Report/FindGroupList/{reportId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reportId != null) localVarPathParams.Add("reportId", this.Configuration.ApiClient.ParameterToString(reportId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportGetFindGroupList", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<FindGroupDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<FindGroupDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<FindGroupDTO>)));
+        }
+
+        /// <summary>
+        /// List of Find Group considering report permissions 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportId"></param>
+        /// <returns>Task of List&lt;FindGroupDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<FindGroupDTO>> ReportGetFindGroupListAsync (string reportId)
+        {
+             ApiResponse<List<FindGroupDTO>> localVarResponse = await ReportGetFindGroupListAsyncWithHttpInfo(reportId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// List of Find Group considering report permissions 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportId"></param>
+        /// <returns>Task of ApiResponse (List&lt;FindGroupDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<FindGroupDTO>>> ReportGetFindGroupListAsyncWithHttpInfo (string reportId)
+        {
+            // verify the required parameter 'reportId' is set
+            if (reportId == null)
+                throw new ApiException(400, "Missing required parameter 'reportId' when calling ReportApi->ReportGetFindGroupList");
+
+            var localVarPath = "/api/Report/FindGroupList/{reportId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reportId != null) localVarPathParams.Add("reportId", this.Configuration.ApiClient.ParameterToString(reportId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportGetFindGroupList", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<FindGroupDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<FindGroupDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<FindGroupDTO>)));
+        }
+
+        /// <summary>
         /// Returns the list of all the report available for the user 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
@@ -872,6 +2074,1570 @@ namespace IO.Swagger.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("ReportGetList", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Returns permissions of report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>PermissionsDTO</returns>
+        public PermissionsDTO ReportGetPermission (string id)
+        {
+             ApiResponse<PermissionsDTO> localVarResponse = ReportGetPermissionWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns permissions of report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>ApiResponse of PermissionsDTO</returns>
+        public ApiResponse< PermissionsDTO > ReportGetPermissionWithHttpInfo (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ReportApi->ReportGetPermission");
+
+            var localVarPath = "/api/Report/{id}/Permissions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportGetPermission", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PermissionsDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PermissionsDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PermissionsDTO)));
+        }
+
+        /// <summary>
+        /// Returns permissions of report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>Task of PermissionsDTO</returns>
+        public async System.Threading.Tasks.Task<PermissionsDTO> ReportGetPermissionAsync (string id)
+        {
+             ApiResponse<PermissionsDTO> localVarResponse = await ReportGetPermissionAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns permissions of report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>Task of ApiResponse (PermissionsDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PermissionsDTO>> ReportGetPermissionAsyncWithHttpInfo (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ReportApi->ReportGetPermission");
+
+            var localVarPath = "/api/Report/{id}/Permissions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportGetPermission", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PermissionsDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PermissionsDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PermissionsDTO)));
+        }
+
+        /// <summary>
+        /// Gets report data source 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>Object</returns>
+        public Object ReportGetReportDataSource (string findGroupId, string reportId)
+        {
+             ApiResponse<Object> localVarResponse = ReportGetReportDataSourceWithHttpInfo(findGroupId, reportId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets report data source 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > ReportGetReportDataSourceWithHttpInfo (string findGroupId, string reportId)
+        {
+            // verify the required parameter 'findGroupId' is set
+            if (findGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'findGroupId' when calling ReportApi->ReportGetReportDataSource");
+            // verify the required parameter 'reportId' is set
+            if (reportId == null)
+                throw new ApiException(400, "Missing required parameter 'reportId' when calling ReportApi->ReportGetReportDataSource");
+
+            var localVarPath = "/api/Report/DataSource/{findGroupId}/{reportId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (findGroupId != null) localVarPathParams.Add("findGroupId", this.Configuration.ApiClient.ParameterToString(findGroupId)); // path parameter
+            if (reportId != null) localVarPathParams.Add("reportId", this.Configuration.ApiClient.ParameterToString(reportId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportGetReportDataSource", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Gets report data source 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> ReportGetReportDataSourceAsync (string findGroupId, string reportId)
+        {
+             ApiResponse<Object> localVarResponse = await ReportGetReportDataSourceAsyncWithHttpInfo(findGroupId, reportId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets report data source 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ReportGetReportDataSourceAsyncWithHttpInfo (string findGroupId, string reportId)
+        {
+            // verify the required parameter 'findGroupId' is set
+            if (findGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'findGroupId' when calling ReportApi->ReportGetReportDataSource");
+            // verify the required parameter 'reportId' is set
+            if (reportId == null)
+                throw new ApiException(400, "Missing required parameter 'reportId' when calling ReportApi->ReportGetReportDataSource");
+
+            var localVarPath = "/api/Report/DataSource/{findGroupId}/{reportId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (findGroupId != null) localVarPathParams.Add("findGroupId", this.Configuration.ApiClient.ParameterToString(findGroupId)); // path parameter
+            if (reportId != null) localVarPathParams.Add("reportId", this.Configuration.ApiClient.ParameterToString(reportId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportGetReportDataSource", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Gets report parameters datasource 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>List&lt;ReportParamDataSourceDTO&gt;</returns>
+        public List<ReportParamDataSourceDTO> ReportGetReportParamDataSourceByFindGroupId (string findGroupId, string reportId)
+        {
+             ApiResponse<List<ReportParamDataSourceDTO>> localVarResponse = ReportGetReportParamDataSourceByFindGroupIdWithHttpInfo(findGroupId, reportId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets report parameters datasource 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>ApiResponse of List&lt;ReportParamDataSourceDTO&gt;</returns>
+        public ApiResponse< List<ReportParamDataSourceDTO> > ReportGetReportParamDataSourceByFindGroupIdWithHttpInfo (string findGroupId, string reportId)
+        {
+            // verify the required parameter 'findGroupId' is set
+            if (findGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'findGroupId' when calling ReportApi->ReportGetReportParamDataSourceByFindGroupId");
+            // verify the required parameter 'reportId' is set
+            if (reportId == null)
+                throw new ApiException(400, "Missing required parameter 'reportId' when calling ReportApi->ReportGetReportParamDataSourceByFindGroupId");
+
+            var localVarPath = "/api/Report/ParamDataSource/{findGroupId}/{reportId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (findGroupId != null) localVarPathParams.Add("findGroupId", this.Configuration.ApiClient.ParameterToString(findGroupId)); // path parameter
+            if (reportId != null) localVarPathParams.Add("reportId", this.Configuration.ApiClient.ParameterToString(reportId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportGetReportParamDataSourceByFindGroupId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<ReportParamDataSourceDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<ReportParamDataSourceDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<ReportParamDataSourceDTO>)));
+        }
+
+        /// <summary>
+        /// Gets report parameters datasource 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>Task of List&lt;ReportParamDataSourceDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<ReportParamDataSourceDTO>> ReportGetReportParamDataSourceByFindGroupIdAsync (string findGroupId, string reportId)
+        {
+             ApiResponse<List<ReportParamDataSourceDTO>> localVarResponse = await ReportGetReportParamDataSourceByFindGroupIdAsyncWithHttpInfo(findGroupId, reportId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets report parameters datasource 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="findGroupId"></param>
+        /// <param name="reportId"></param>
+        /// <returns>Task of ApiResponse (List&lt;ReportParamDataSourceDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<ReportParamDataSourceDTO>>> ReportGetReportParamDataSourceByFindGroupIdAsyncWithHttpInfo (string findGroupId, string reportId)
+        {
+            // verify the required parameter 'findGroupId' is set
+            if (findGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'findGroupId' when calling ReportApi->ReportGetReportParamDataSourceByFindGroupId");
+            // verify the required parameter 'reportId' is set
+            if (reportId == null)
+                throw new ApiException(400, "Missing required parameter 'reportId' when calling ReportApi->ReportGetReportParamDataSourceByFindGroupId");
+
+            var localVarPath = "/api/Report/ParamDataSource/{findGroupId}/{reportId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (findGroupId != null) localVarPathParams.Add("findGroupId", this.Configuration.ApiClient.ParameterToString(findGroupId)); // path parameter
+            if (reportId != null) localVarPathParams.Add("reportId", this.Configuration.ApiClient.ParameterToString(reportId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportGetReportParamDataSourceByFindGroupId", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<ReportParamDataSourceDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<ReportParamDataSourceDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<ReportParamDataSourceDTO>)));
+        }
+
+        /// <summary>
+        /// Gets the report template file 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <param name="editMode">Determine if report references are visible (optional)</param>
+        /// <returns>string</returns>
+        public string ReportGetReportTemplate (string id, bool? editMode = null)
+        {
+             ApiResponse<string> localVarResponse = ReportGetReportTemplateWithHttpInfo(id, editMode);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets the report template file 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <param name="editMode">Determine if report references are visible (optional)</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > ReportGetReportTemplateWithHttpInfo (string id, bool? editMode = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ReportApi->ReportGetReportTemplate");
+
+            var localVarPath = "/api/Report/{id}/Template";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (editMode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "editMode", editMode)); // query parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportGetReportTemplate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Gets the report template file 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <param name="editMode">Determine if report references are visible (optional)</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> ReportGetReportTemplateAsync (string id, bool? editMode = null)
+        {
+             ApiResponse<string> localVarResponse = await ReportGetReportTemplateAsyncWithHttpInfo(id, editMode);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets the report template file 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <param name="editMode">Determine if report references are visible (optional)</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> ReportGetReportTemplateAsyncWithHttpInfo (string id, bool? editMode = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ReportApi->ReportGetReportTemplate");
+
+            var localVarPath = "/api/Report/{id}/Template";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (editMode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "editMode", editMode)); // query parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportGetReportTemplate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Executes a query for internal data source in edit mode 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Object</returns>
+        public Object ReportHandlerEditMode ()
+        {
+             ApiResponse<Object> localVarResponse = ReportHandlerEditModeWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Executes a query for internal data source in edit mode 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > ReportHandlerEditModeWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/Report/DataSourceHandlerForEdit";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportHandlerEditMode", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Executes a query for internal data source in edit mode 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> ReportHandlerEditModeAsync ()
+        {
+             ApiResponse<Object> localVarResponse = await ReportHandlerEditModeAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Executes a query for internal data source in edit mode 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ReportHandlerEditModeAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/Report/DataSourceHandlerForEdit";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportHandlerEditMode", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Executes a query for internal data source in running mode 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Object</returns>
+        public Object ReportHandlerRunningMode ()
+        {
+             ApiResponse<Object> localVarResponse = ReportHandlerRunningModeWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Executes a query for internal data source in running mode 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > ReportHandlerRunningModeWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/Report/DataSourceHandlerForRun";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportHandlerRunningMode", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Executes a query for internal data source in running mode 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> ReportHandlerRunningModeAsync ()
+        {
+             ApiResponse<Object> localVarResponse = await ReportHandlerRunningModeAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Executes a query for internal data source in running mode 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ReportHandlerRunningModeAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/Report/DataSourceHandlerForRun";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportHandlerRunningMode", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Inserts a new report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportdto"> (optional)</param>
+        /// <returns>ReportDTO</returns>
+        public ReportDTO ReportInsertReport (ReportDTO reportdto = null)
+        {
+             ApiResponse<ReportDTO> localVarResponse = ReportInsertReportWithHttpInfo(reportdto);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Inserts a new report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportdto"> (optional)</param>
+        /// <returns>ApiResponse of ReportDTO</returns>
+        public ApiResponse< ReportDTO > ReportInsertReportWithHttpInfo (ReportDTO reportdto = null)
+        {
+
+            var localVarPath = "/api/Report/Insert";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reportdto != null && reportdto.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reportdto); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reportdto; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportInsertReport", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ReportDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ReportDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportDTO)));
+        }
+
+        /// <summary>
+        /// Inserts a new report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportdto"> (optional)</param>
+        /// <returns>Task of ReportDTO</returns>
+        public async System.Threading.Tasks.Task<ReportDTO> ReportInsertReportAsync (ReportDTO reportdto = null)
+        {
+             ApiResponse<ReportDTO> localVarResponse = await ReportInsertReportAsyncWithHttpInfo(reportdto);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Inserts a new report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportdto"> (optional)</param>
+        /// <returns>Task of ApiResponse (ReportDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ReportDTO>> ReportInsertReportAsyncWithHttpInfo (ReportDTO reportdto = null)
+        {
+
+            var localVarPath = "/api/Report/Insert";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reportdto != null && reportdto.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reportdto); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reportdto; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportInsertReport", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ReportDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ReportDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportDTO)));
+        }
+
+        /// <summary>
+        /// Sets report permissions 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report Identifier</param>
+        /// <param name="permissions">Permissions data</param>
+        /// <returns></returns>
+        public void ReportSetPermission (string id, PermissionsDTO permissions)
+        {
+             ReportSetPermissionWithHttpInfo(id, permissions);
+        }
+
+        /// <summary>
+        /// Sets report permissions 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report Identifier</param>
+        /// <param name="permissions">Permissions data</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReportSetPermissionWithHttpInfo (string id, PermissionsDTO permissions)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ReportApi->ReportSetPermission");
+            // verify the required parameter 'permissions' is set
+            if (permissions == null)
+                throw new ApiException(400, "Missing required parameter 'permissions' when calling ReportApi->ReportSetPermission");
+
+            var localVarPath = "/api/Report/{id}/Permissions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (permissions != null && permissions.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(permissions); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = permissions; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportSetPermission", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Sets report permissions 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report Identifier</param>
+        /// <param name="permissions">Permissions data</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task ReportSetPermissionAsync (string id, PermissionsDTO permissions)
+        {
+             await ReportSetPermissionAsyncWithHttpInfo(id, permissions);
+
+        }
+
+        /// <summary>
+        /// Sets report permissions 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report Identifier</param>
+        /// <param name="permissions">Permissions data</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ReportSetPermissionAsyncWithHttpInfo (string id, PermissionsDTO permissions)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ReportApi->ReportSetPermission");
+            // verify the required parameter 'permissions' is set
+            if (permissions == null)
+                throw new ApiException(400, "Missing required parameter 'permissions' when calling ReportApi->ReportSetPermission");
+
+            var localVarPath = "/api/Report/{id}/Permissions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (permissions != null && permissions.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(permissions); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = permissions; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportSetPermission", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Updates the report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportdto"> (optional)</param>
+        /// <returns>ReportDTO</returns>
+        public ReportDTO ReportUpdateReport (ReportDTO reportdto = null)
+        {
+             ApiResponse<ReportDTO> localVarResponse = ReportUpdateReportWithHttpInfo(reportdto);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Updates the report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportdto"> (optional)</param>
+        /// <returns>ApiResponse of ReportDTO</returns>
+        public ApiResponse< ReportDTO > ReportUpdateReportWithHttpInfo (ReportDTO reportdto = null)
+        {
+
+            var localVarPath = "/api/Report/Update";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reportdto != null && reportdto.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reportdto); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reportdto; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportUpdateReport", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ReportDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ReportDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportDTO)));
+        }
+
+        /// <summary>
+        /// Updates the report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportdto"> (optional)</param>
+        /// <returns>Task of ReportDTO</returns>
+        public async System.Threading.Tasks.Task<ReportDTO> ReportUpdateReportAsync (ReportDTO reportdto = null)
+        {
+             ApiResponse<ReportDTO> localVarResponse = await ReportUpdateReportAsyncWithHttpInfo(reportdto);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Updates the report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportdto"> (optional)</param>
+        /// <returns>Task of ApiResponse (ReportDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ReportDTO>> ReportUpdateReportAsyncWithHttpInfo (ReportDTO reportdto = null)
+        {
+
+            var localVarPath = "/api/Report/Update";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (reportdto != null && reportdto.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reportdto); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reportdto; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportUpdateReport", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ReportDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ReportDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReportDTO)));
+        }
+
+        /// <summary>
+        /// Updates the template file of the report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <param name="reportTemplate">Report template</param>
+        /// <returns></returns>
+        public void ReportUpdateReportTemplate (string id, string reportTemplate)
+        {
+             ReportUpdateReportTemplateWithHttpInfo(id, reportTemplate);
+        }
+
+        /// <summary>
+        /// Updates the template file of the report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <param name="reportTemplate">Report template</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReportUpdateReportTemplateWithHttpInfo (string id, string reportTemplate)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ReportApi->ReportUpdateReportTemplate");
+            // verify the required parameter 'reportTemplate' is set
+            if (reportTemplate == null)
+                throw new ApiException(400, "Missing required parameter 'reportTemplate' when calling ReportApi->ReportUpdateReportTemplate");
+
+            var localVarPath = "/api/Report/{id}/UpdateTemplate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (reportTemplate != null && reportTemplate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reportTemplate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reportTemplate; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportUpdateReportTemplate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Updates the template file of the report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <param name="reportTemplate">Report template</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task ReportUpdateReportTemplateAsync (string id, string reportTemplate)
+        {
+             await ReportUpdateReportTemplateAsyncWithHttpInfo(id, reportTemplate);
+
+        }
+
+        /// <summary>
+        /// Updates the template file of the report 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Report id</param>
+        /// <param name="reportTemplate">Report template</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ReportUpdateReportTemplateAsyncWithHttpInfo (string id, string reportTemplate)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ReportApi->ReportUpdateReportTemplate");
+            // verify the required parameter 'reportTemplate' is set
+            if (reportTemplate == null)
+                throw new ApiException(400, "Missing required parameter 'reportTemplate' when calling ReportApi->ReportUpdateReportTemplate");
+
+            var localVarPath = "/api/Report/{id}/UpdateTemplate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (reportTemplate != null && reportTemplate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reportTemplate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reportTemplate; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportUpdateReportTemplate", localVarResponse);
                 if (exception != null) throw exception;
             }
 

@@ -40,12 +40,18 @@ namespace IO.Swagger.Model
         /// <param name="hasAvatar">Avatar.</param>
         /// <param name="roles">Roles.</param>
         /// <param name="user">Identifier.</param>
+        /// <param name="passwordNew">New Password.</param>
+        /// <param name="profileDefaultId">Predefined Profile Identifier.</param>
+        /// <param name="pswFailCount">Count of the failed attempts to change password.</param>
+        /// <param name="pswLastFailDate">Last failed Attempt to change password.</param>
+        /// <param name="pswFailIpCaller">Ip Address used by failed change password.</param>
+        /// <param name="lockOutDateTimeUtc">User Date Blocked.</param>
+        /// <param name="completeName">Full Name.</param>
         /// <param name="group">Possible values:  0: Non_Impostato  1: Admin  2: User  3: Profiler .</param>
         /// <param name="description">Description.</param>
         /// <param name="email">Email.</param>
         /// <param name="businessUnit">Business Unit.</param>
         /// <param name="password">Password.</param>
-        /// <param name="passwordNew">New Password.</param>
         /// <param name="defaultType">Default Document Type of First Level.</param>
         /// <param name="type2">Default Document Type of Second Level.</param>
         /// <param name="type3">Default Document Type of Third Level.</param>
@@ -83,16 +89,12 @@ namespace IO.Swagger.Model
         /// <param name="barcodeAccess">Enabled to Barcode.</param>
         /// <param name="mustChangePassword">Possible values:  0: No  1: Yes  2: YesForChangePasswordNew .</param>
         /// <param name="lang">Language.</param>
-        /// <param name="profileDefaultId">Predefined Profile Identifier.</param>
         /// <param name="ws">Enabled to IX service..</param>
-        /// <param name="pswFailCount">Count of the failed attempts to change password.</param>
-        /// <param name="pswLastFailDate">Last failed Attempt to change password.</param>
-        /// <param name="pswFailIpCaller">Ip Address used by failed change password.</param>
         /// <param name="disablePswExpired">Disabled Expired Password.</param>
-        /// <param name="lockOutDateTimeUtc">User Date Blocked.</param>
-        /// <param name="completeName">Full Name.</param>
         /// <param name="completeDescription">Full Description.</param>
-        public UserInfoDTO(string serverName = default(string), string provider = default(string), string database = default(string), bool? isUnicode = default(bool?), bool? hasAvatar = default(bool?), List<RolesInfoDto> roles = default(List<RolesInfoDto>), int? user = default(int?), int? group = default(int?), string description = default(string), string email = default(string), string businessUnit = default(string), string password = default(string), string passwordNew = default(string), int? defaultType = default(int?), int? type2 = default(int?), int? type3 = default(int?), string internalFax = default(string), DateTime? lastMail = default(DateTime?), int? category = default(int?), bool? workflow = default(bool?), string defaultState = default(string), bool? addressBook = default(bool?), int? userState = default(int?), string mailServer = default(string), bool? webAccess = default(bool?), bool? upload = default(bool?), bool? folders = default(bool?), bool? flow = default(bool?), bool? sign = default(bool?), int? viewer = default(int?), bool? protocol = default(bool?), bool? models = default(bool?), string domain = default(string), string outState = default(string), string mailBody = default(string), bool? notify = default(bool?), string mailClient = default(string), int? htmlBody = default(int?), bool? respAos = default(bool?), bool? assAos = default(bool?), string codFis = default(string), string pin = default(string), bool? guest = default(bool?), bool? passwordChange = default(bool?), byte[] marking = default(byte[]), int? type = default(int?), bool? mailOutDefault = default(bool?), bool? barcodeAccess = default(bool?), int? mustChangePassword = default(int?), string lang = default(string), int? profileDefaultId = default(int?), bool? ws = default(bool?), int? pswFailCount = default(int?), DateTime? pswLastFailDate = default(DateTime?), string pswFailIpCaller = default(string), bool? disablePswExpired = default(bool?), DateTime? lockOutDateTimeUtc = default(DateTime?), string completeName = default(string), string completeDescription = default(string))
+        /// <param name="canAddVirtualStamps">Possible values:  0: NotApplied  1: Allow  2: Denied .</param>
+        /// <param name="canApplyStaps">Possible values:  0: NotApplied  1: Allow  2: Denied .</param>
+        public UserInfoDTO(string serverName = default(string), string provider = default(string), string database = default(string), bool? isUnicode = default(bool?), bool? hasAvatar = default(bool?), List<RolesInfoDto> roles = default(List<RolesInfoDto>), int? user = default(int?), string passwordNew = default(string), int? profileDefaultId = default(int?), int? pswFailCount = default(int?), DateTime? pswLastFailDate = default(DateTime?), string pswFailIpCaller = default(string), DateTime? lockOutDateTimeUtc = default(DateTime?), string completeName = default(string), int? group = default(int?), string description = default(string), string email = default(string), string businessUnit = default(string), string password = default(string), int? defaultType = default(int?), int? type2 = default(int?), int? type3 = default(int?), string internalFax = default(string), DateTime? lastMail = default(DateTime?), int? category = default(int?), bool? workflow = default(bool?), string defaultState = default(string), bool? addressBook = default(bool?), int? userState = default(int?), string mailServer = default(string), bool? webAccess = default(bool?), bool? upload = default(bool?), bool? folders = default(bool?), bool? flow = default(bool?), bool? sign = default(bool?), int? viewer = default(int?), bool? protocol = default(bool?), bool? models = default(bool?), string domain = default(string), string outState = default(string), string mailBody = default(string), bool? notify = default(bool?), string mailClient = default(string), int? htmlBody = default(int?), bool? respAos = default(bool?), bool? assAos = default(bool?), string codFis = default(string), string pin = default(string), bool? guest = default(bool?), bool? passwordChange = default(bool?), byte[] marking = default(byte[]), int? type = default(int?), bool? mailOutDefault = default(bool?), bool? barcodeAccess = default(bool?), int? mustChangePassword = default(int?), string lang = default(string), bool? ws = default(bool?), bool? disablePswExpired = default(bool?), string completeDescription = default(string), int? canAddVirtualStamps = default(int?), int? canApplyStaps = default(int?))
         {
             this.ServerName = serverName;
             this.Provider = provider;
@@ -101,12 +103,18 @@ namespace IO.Swagger.Model
             this.HasAvatar = hasAvatar;
             this.Roles = roles;
             this.User = user;
+            this.PasswordNew = passwordNew;
+            this.ProfileDefaultId = profileDefaultId;
+            this.PswFailCount = pswFailCount;
+            this.PswLastFailDate = pswLastFailDate;
+            this.PswFailIpCaller = pswFailIpCaller;
+            this.LockOutDateTimeUtc = lockOutDateTimeUtc;
+            this.CompleteName = completeName;
             this.Group = group;
             this.Description = description;
             this.Email = email;
             this.BusinessUnit = businessUnit;
             this.Password = password;
-            this.PasswordNew = passwordNew;
             this.DefaultType = defaultType;
             this.Type2 = type2;
             this.Type3 = type3;
@@ -144,15 +152,11 @@ namespace IO.Swagger.Model
             this.BarcodeAccess = barcodeAccess;
             this.MustChangePassword = mustChangePassword;
             this.Lang = lang;
-            this.ProfileDefaultId = profileDefaultId;
             this.Ws = ws;
-            this.PswFailCount = pswFailCount;
-            this.PswLastFailDate = pswLastFailDate;
-            this.PswFailIpCaller = pswFailIpCaller;
             this.DisablePswExpired = disablePswExpired;
-            this.LockOutDateTimeUtc = lockOutDateTimeUtc;
-            this.CompleteName = completeName;
             this.CompleteDescription = completeDescription;
+            this.CanAddVirtualStamps = canAddVirtualStamps;
+            this.CanApplyStaps = canApplyStaps;
         }
         
         /// <summary>
@@ -205,6 +209,55 @@ namespace IO.Swagger.Model
         public int? User { get; set; }
 
         /// <summary>
+        /// New Password
+        /// </summary>
+        /// <value>New Password</value>
+        [DataMember(Name="passwordNew", EmitDefaultValue=false)]
+        public string PasswordNew { get; set; }
+
+        /// <summary>
+        /// Predefined Profile Identifier
+        /// </summary>
+        /// <value>Predefined Profile Identifier</value>
+        [DataMember(Name="profileDefault_Id", EmitDefaultValue=false)]
+        public int? ProfileDefaultId { get; set; }
+
+        /// <summary>
+        /// Count of the failed attempts to change password
+        /// </summary>
+        /// <value>Count of the failed attempts to change password</value>
+        [DataMember(Name="pswFailCount", EmitDefaultValue=false)]
+        public int? PswFailCount { get; set; }
+
+        /// <summary>
+        /// Last failed Attempt to change password
+        /// </summary>
+        /// <value>Last failed Attempt to change password</value>
+        [DataMember(Name="pswLastFailDate", EmitDefaultValue=false)]
+        public DateTime? PswLastFailDate { get; set; }
+
+        /// <summary>
+        /// Ip Address used by failed change password
+        /// </summary>
+        /// <value>Ip Address used by failed change password</value>
+        [DataMember(Name="pswFailIpCaller", EmitDefaultValue=false)]
+        public string PswFailIpCaller { get; set; }
+
+        /// <summary>
+        /// User Date Blocked
+        /// </summary>
+        /// <value>User Date Blocked</value>
+        [DataMember(Name="lockOutDateTimeUtc", EmitDefaultValue=false)]
+        public DateTime? LockOutDateTimeUtc { get; set; }
+
+        /// <summary>
+        /// Full Name
+        /// </summary>
+        /// <value>Full Name</value>
+        [DataMember(Name="completeName", EmitDefaultValue=false)]
+        public string CompleteName { get; set; }
+
+        /// <summary>
         /// Possible values:  0: Non_Impostato  1: Admin  2: User  3: Profiler 
         /// </summary>
         /// <value>Possible values:  0: Non_Impostato  1: Admin  2: User  3: Profiler </value>
@@ -238,13 +291,6 @@ namespace IO.Swagger.Model
         /// <value>Password</value>
         [DataMember(Name="password", EmitDefaultValue=false)]
         public string Password { get; set; }
-
-        /// <summary>
-        /// New Password
-        /// </summary>
-        /// <value>New Password</value>
-        [DataMember(Name="passwordNew", EmitDefaultValue=false)]
-        public string PasswordNew { get; set; }
 
         /// <summary>
         /// Default Document Type of First Level
@@ -506,39 +552,11 @@ namespace IO.Swagger.Model
         public string Lang { get; set; }
 
         /// <summary>
-        /// Predefined Profile Identifier
-        /// </summary>
-        /// <value>Predefined Profile Identifier</value>
-        [DataMember(Name="profileDefault_Id", EmitDefaultValue=false)]
-        public int? ProfileDefaultId { get; set; }
-
-        /// <summary>
         /// Enabled to IX service.
         /// </summary>
         /// <value>Enabled to IX service.</value>
         [DataMember(Name="ws", EmitDefaultValue=false)]
         public bool? Ws { get; set; }
-
-        /// <summary>
-        /// Count of the failed attempts to change password
-        /// </summary>
-        /// <value>Count of the failed attempts to change password</value>
-        [DataMember(Name="pswFailCount", EmitDefaultValue=false)]
-        public int? PswFailCount { get; set; }
-
-        /// <summary>
-        /// Last failed Attempt to change password
-        /// </summary>
-        /// <value>Last failed Attempt to change password</value>
-        [DataMember(Name="pswLastFailDate", EmitDefaultValue=false)]
-        public DateTime? PswLastFailDate { get; set; }
-
-        /// <summary>
-        /// Ip Address used by failed change password
-        /// </summary>
-        /// <value>Ip Address used by failed change password</value>
-        [DataMember(Name="pswFailIpCaller", EmitDefaultValue=false)]
-        public string PswFailIpCaller { get; set; }
 
         /// <summary>
         /// Disabled Expired Password
@@ -548,25 +566,25 @@ namespace IO.Swagger.Model
         public bool? DisablePswExpired { get; set; }
 
         /// <summary>
-        /// User Date Blocked
-        /// </summary>
-        /// <value>User Date Blocked</value>
-        [DataMember(Name="lockOutDateTimeUtc", EmitDefaultValue=false)]
-        public DateTime? LockOutDateTimeUtc { get; set; }
-
-        /// <summary>
-        /// Full Name
-        /// </summary>
-        /// <value>Full Name</value>
-        [DataMember(Name="completeName", EmitDefaultValue=false)]
-        public string CompleteName { get; set; }
-
-        /// <summary>
         /// Full Description
         /// </summary>
         /// <value>Full Description</value>
         [DataMember(Name="completeDescription", EmitDefaultValue=false)]
         public string CompleteDescription { get; set; }
+
+        /// <summary>
+        /// Possible values:  0: NotApplied  1: Allow  2: Denied 
+        /// </summary>
+        /// <value>Possible values:  0: NotApplied  1: Allow  2: Denied </value>
+        [DataMember(Name="canAddVirtualStamps", EmitDefaultValue=false)]
+        public int? CanAddVirtualStamps { get; set; }
+
+        /// <summary>
+        /// Possible values:  0: NotApplied  1: Allow  2: Denied 
+        /// </summary>
+        /// <value>Possible values:  0: NotApplied  1: Allow  2: Denied </value>
+        [DataMember(Name="canApplyStaps", EmitDefaultValue=false)]
+        public int? CanApplyStaps { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -583,12 +601,18 @@ namespace IO.Swagger.Model
             sb.Append("  HasAvatar: ").Append(HasAvatar).Append("\n");
             sb.Append("  Roles: ").Append(Roles).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  PasswordNew: ").Append(PasswordNew).Append("\n");
+            sb.Append("  ProfileDefaultId: ").Append(ProfileDefaultId).Append("\n");
+            sb.Append("  PswFailCount: ").Append(PswFailCount).Append("\n");
+            sb.Append("  PswLastFailDate: ").Append(PswLastFailDate).Append("\n");
+            sb.Append("  PswFailIpCaller: ").Append(PswFailIpCaller).Append("\n");
+            sb.Append("  LockOutDateTimeUtc: ").Append(LockOutDateTimeUtc).Append("\n");
+            sb.Append("  CompleteName: ").Append(CompleteName).Append("\n");
             sb.Append("  Group: ").Append(Group).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  BusinessUnit: ").Append(BusinessUnit).Append("\n");
             sb.Append("  Password: ").Append(Password).Append("\n");
-            sb.Append("  PasswordNew: ").Append(PasswordNew).Append("\n");
             sb.Append("  DefaultType: ").Append(DefaultType).Append("\n");
             sb.Append("  Type2: ").Append(Type2).Append("\n");
             sb.Append("  Type3: ").Append(Type3).Append("\n");
@@ -626,15 +650,11 @@ namespace IO.Swagger.Model
             sb.Append("  BarcodeAccess: ").Append(BarcodeAccess).Append("\n");
             sb.Append("  MustChangePassword: ").Append(MustChangePassword).Append("\n");
             sb.Append("  Lang: ").Append(Lang).Append("\n");
-            sb.Append("  ProfileDefaultId: ").Append(ProfileDefaultId).Append("\n");
             sb.Append("  Ws: ").Append(Ws).Append("\n");
-            sb.Append("  PswFailCount: ").Append(PswFailCount).Append("\n");
-            sb.Append("  PswLastFailDate: ").Append(PswLastFailDate).Append("\n");
-            sb.Append("  PswFailIpCaller: ").Append(PswFailIpCaller).Append("\n");
             sb.Append("  DisablePswExpired: ").Append(DisablePswExpired).Append("\n");
-            sb.Append("  LockOutDateTimeUtc: ").Append(LockOutDateTimeUtc).Append("\n");
-            sb.Append("  CompleteName: ").Append(CompleteName).Append("\n");
             sb.Append("  CompleteDescription: ").Append(CompleteDescription).Append("\n");
+            sb.Append("  CanAddVirtualStamps: ").Append(CanAddVirtualStamps).Append("\n");
+            sb.Append("  CanApplyStaps: ").Append(CanApplyStaps).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -705,6 +725,41 @@ namespace IO.Swagger.Model
                     this.User.Equals(input.User))
                 ) && 
                 (
+                    this.PasswordNew == input.PasswordNew ||
+                    (this.PasswordNew != null &&
+                    this.PasswordNew.Equals(input.PasswordNew))
+                ) && 
+                (
+                    this.ProfileDefaultId == input.ProfileDefaultId ||
+                    (this.ProfileDefaultId != null &&
+                    this.ProfileDefaultId.Equals(input.ProfileDefaultId))
+                ) && 
+                (
+                    this.PswFailCount == input.PswFailCount ||
+                    (this.PswFailCount != null &&
+                    this.PswFailCount.Equals(input.PswFailCount))
+                ) && 
+                (
+                    this.PswLastFailDate == input.PswLastFailDate ||
+                    (this.PswLastFailDate != null &&
+                    this.PswLastFailDate.Equals(input.PswLastFailDate))
+                ) && 
+                (
+                    this.PswFailIpCaller == input.PswFailIpCaller ||
+                    (this.PswFailIpCaller != null &&
+                    this.PswFailIpCaller.Equals(input.PswFailIpCaller))
+                ) && 
+                (
+                    this.LockOutDateTimeUtc == input.LockOutDateTimeUtc ||
+                    (this.LockOutDateTimeUtc != null &&
+                    this.LockOutDateTimeUtc.Equals(input.LockOutDateTimeUtc))
+                ) && 
+                (
+                    this.CompleteName == input.CompleteName ||
+                    (this.CompleteName != null &&
+                    this.CompleteName.Equals(input.CompleteName))
+                ) && 
+                (
                     this.Group == input.Group ||
                     (this.Group != null &&
                     this.Group.Equals(input.Group))
@@ -728,11 +783,6 @@ namespace IO.Swagger.Model
                     this.Password == input.Password ||
                     (this.Password != null &&
                     this.Password.Equals(input.Password))
-                ) && 
-                (
-                    this.PasswordNew == input.PasswordNew ||
-                    (this.PasswordNew != null &&
-                    this.PasswordNew.Equals(input.PasswordNew))
                 ) && 
                 (
                     this.DefaultType == input.DefaultType ||
@@ -920,29 +970,9 @@ namespace IO.Swagger.Model
                     this.Lang.Equals(input.Lang))
                 ) && 
                 (
-                    this.ProfileDefaultId == input.ProfileDefaultId ||
-                    (this.ProfileDefaultId != null &&
-                    this.ProfileDefaultId.Equals(input.ProfileDefaultId))
-                ) && 
-                (
                     this.Ws == input.Ws ||
                     (this.Ws != null &&
                     this.Ws.Equals(input.Ws))
-                ) && 
-                (
-                    this.PswFailCount == input.PswFailCount ||
-                    (this.PswFailCount != null &&
-                    this.PswFailCount.Equals(input.PswFailCount))
-                ) && 
-                (
-                    this.PswLastFailDate == input.PswLastFailDate ||
-                    (this.PswLastFailDate != null &&
-                    this.PswLastFailDate.Equals(input.PswLastFailDate))
-                ) && 
-                (
-                    this.PswFailIpCaller == input.PswFailIpCaller ||
-                    (this.PswFailIpCaller != null &&
-                    this.PswFailIpCaller.Equals(input.PswFailIpCaller))
                 ) && 
                 (
                     this.DisablePswExpired == input.DisablePswExpired ||
@@ -950,19 +980,19 @@ namespace IO.Swagger.Model
                     this.DisablePswExpired.Equals(input.DisablePswExpired))
                 ) && 
                 (
-                    this.LockOutDateTimeUtc == input.LockOutDateTimeUtc ||
-                    (this.LockOutDateTimeUtc != null &&
-                    this.LockOutDateTimeUtc.Equals(input.LockOutDateTimeUtc))
-                ) && 
-                (
-                    this.CompleteName == input.CompleteName ||
-                    (this.CompleteName != null &&
-                    this.CompleteName.Equals(input.CompleteName))
-                ) && 
-                (
                     this.CompleteDescription == input.CompleteDescription ||
                     (this.CompleteDescription != null &&
                     this.CompleteDescription.Equals(input.CompleteDescription))
+                ) && 
+                (
+                    this.CanAddVirtualStamps == input.CanAddVirtualStamps ||
+                    (this.CanAddVirtualStamps != null &&
+                    this.CanAddVirtualStamps.Equals(input.CanAddVirtualStamps))
+                ) && 
+                (
+                    this.CanApplyStaps == input.CanApplyStaps ||
+                    (this.CanApplyStaps != null &&
+                    this.CanApplyStaps.Equals(input.CanApplyStaps))
                 );
         }
 
@@ -989,6 +1019,20 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.Roles.GetHashCode();
                 if (this.User != null)
                     hashCode = hashCode * 59 + this.User.GetHashCode();
+                if (this.PasswordNew != null)
+                    hashCode = hashCode * 59 + this.PasswordNew.GetHashCode();
+                if (this.ProfileDefaultId != null)
+                    hashCode = hashCode * 59 + this.ProfileDefaultId.GetHashCode();
+                if (this.PswFailCount != null)
+                    hashCode = hashCode * 59 + this.PswFailCount.GetHashCode();
+                if (this.PswLastFailDate != null)
+                    hashCode = hashCode * 59 + this.PswLastFailDate.GetHashCode();
+                if (this.PswFailIpCaller != null)
+                    hashCode = hashCode * 59 + this.PswFailIpCaller.GetHashCode();
+                if (this.LockOutDateTimeUtc != null)
+                    hashCode = hashCode * 59 + this.LockOutDateTimeUtc.GetHashCode();
+                if (this.CompleteName != null)
+                    hashCode = hashCode * 59 + this.CompleteName.GetHashCode();
                 if (this.Group != null)
                     hashCode = hashCode * 59 + this.Group.GetHashCode();
                 if (this.Description != null)
@@ -999,8 +1043,6 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.BusinessUnit.GetHashCode();
                 if (this.Password != null)
                     hashCode = hashCode * 59 + this.Password.GetHashCode();
-                if (this.PasswordNew != null)
-                    hashCode = hashCode * 59 + this.PasswordNew.GetHashCode();
                 if (this.DefaultType != null)
                     hashCode = hashCode * 59 + this.DefaultType.GetHashCode();
                 if (this.Type2 != null)
@@ -1075,24 +1117,16 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.MustChangePassword.GetHashCode();
                 if (this.Lang != null)
                     hashCode = hashCode * 59 + this.Lang.GetHashCode();
-                if (this.ProfileDefaultId != null)
-                    hashCode = hashCode * 59 + this.ProfileDefaultId.GetHashCode();
                 if (this.Ws != null)
                     hashCode = hashCode * 59 + this.Ws.GetHashCode();
-                if (this.PswFailCount != null)
-                    hashCode = hashCode * 59 + this.PswFailCount.GetHashCode();
-                if (this.PswLastFailDate != null)
-                    hashCode = hashCode * 59 + this.PswLastFailDate.GetHashCode();
-                if (this.PswFailIpCaller != null)
-                    hashCode = hashCode * 59 + this.PswFailIpCaller.GetHashCode();
                 if (this.DisablePswExpired != null)
                     hashCode = hashCode * 59 + this.DisablePswExpired.GetHashCode();
-                if (this.LockOutDateTimeUtc != null)
-                    hashCode = hashCode * 59 + this.LockOutDateTimeUtc.GetHashCode();
-                if (this.CompleteName != null)
-                    hashCode = hashCode * 59 + this.CompleteName.GetHashCode();
                 if (this.CompleteDescription != null)
                     hashCode = hashCode * 59 + this.CompleteDescription.GetHashCode();
+                if (this.CanAddVirtualStamps != null)
+                    hashCode = hashCode * 59 + this.CanAddVirtualStamps.GetHashCode();
+                if (this.CanApplyStaps != null)
+                    hashCode = hashCode * 59 + this.CanApplyStaps.GetHashCode();
                 return hashCode;
             }
         }

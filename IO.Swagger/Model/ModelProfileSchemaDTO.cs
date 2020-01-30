@@ -40,6 +40,7 @@ namespace IO.Swagger.Model
         /// <param name="openModelAfterProfilation">Open file after profiling..</param>
         /// <param name="editModelAfterProfilation">Editing file after profiling..</param>
         /// <param name="maskId">Mask Identifier.</param>
+        /// <param name="showOption">Possible values:  0: EmptyProfile  1: PredefinedProfile  2: Mask .</param>
         /// <param name="id">Identifier.</param>
         /// <param name="document">File data.</param>
         /// <param name="fields">Fields.</param>
@@ -50,7 +51,7 @@ namespace IO.Swagger.Model
         /// <param name="paNotes">Public Amministration Notes.</param>
         /// <param name="authorityData">Authority Data.</param>
         /// <param name="generatePaProtocol">Defines if a protocol has been generated.</param>
-        public ModelProfileSchemaDTO(int? modelId = default(int?), string modelDescription = default(string), ProfileMaskOptionsDTO options = default(ProfileMaskOptionsDTO), ProfileMaskBehaviourDTO behaviour = default(ProfileMaskBehaviourDTO), bool? openModelAfterProfilation = default(bool?), bool? editModelAfterProfilation = default(bool?), string maskId = default(string), int? id = default(int?), FileDTO document = default(FileDTO), List<FieldBaseDTO> fields = default(List<FieldBaseDTO>), List<PostProfilationActionDTO> postProfilationActions = default(List<PostProfilationActionDTO>), int? constrainRoleBehaviour = default(int?), List<string> attachments = default(List<string>), List<NoteDTO> notes = default(List<NoteDTO>), List<string> paNotes = default(List<string>), AuthorityDataDTO authorityData = default(AuthorityDataDTO), bool? generatePaProtocol = default(bool?))
+        public ModelProfileSchemaDTO(int? modelId = default(int?), string modelDescription = default(string), ProfileMaskOptionsDTO options = default(ProfileMaskOptionsDTO), ProfileMaskBehaviourDTO behaviour = default(ProfileMaskBehaviourDTO), bool? openModelAfterProfilation = default(bool?), bool? editModelAfterProfilation = default(bool?), string maskId = default(string), int? showOption = default(int?), int? id = default(int?), FileDTO document = default(FileDTO), List<FieldBaseDTO> fields = default(List<FieldBaseDTO>), List<PostProfilationActionDTO> postProfilationActions = default(List<PostProfilationActionDTO>), int? constrainRoleBehaviour = default(int?), List<string> attachments = default(List<string>), List<NoteDTO> notes = default(List<NoteDTO>), List<string> paNotes = default(List<string>), AuthorityDataDTO authorityData = default(AuthorityDataDTO), bool? generatePaProtocol = default(bool?))
         {
             this.ModelId = modelId;
             this.ModelDescription = modelDescription;
@@ -59,6 +60,7 @@ namespace IO.Swagger.Model
             this.OpenModelAfterProfilation = openModelAfterProfilation;
             this.EditModelAfterProfilation = editModelAfterProfilation;
             this.MaskId = maskId;
+            this.ShowOption = showOption;
             this.Id = id;
             this.Document = document;
             this.Fields = fields;
@@ -119,6 +121,13 @@ namespace IO.Swagger.Model
         /// <value>Mask Identifier</value>
         [DataMember(Name="maskId", EmitDefaultValue=false)]
         public string MaskId { get; set; }
+
+        /// <summary>
+        /// Possible values:  0: EmptyProfile  1: PredefinedProfile  2: Mask 
+        /// </summary>
+        /// <value>Possible values:  0: EmptyProfile  1: PredefinedProfile  2: Mask </value>
+        [DataMember(Name="showOption", EmitDefaultValue=false)]
+        public int? ShowOption { get; set; }
 
         /// <summary>
         /// Identifier
@@ -205,6 +214,7 @@ namespace IO.Swagger.Model
             sb.Append("  OpenModelAfterProfilation: ").Append(OpenModelAfterProfilation).Append("\n");
             sb.Append("  EditModelAfterProfilation: ").Append(EditModelAfterProfilation).Append("\n");
             sb.Append("  MaskId: ").Append(MaskId).Append("\n");
+            sb.Append("  ShowOption: ").Append(ShowOption).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Document: ").Append(Document).Append("\n");
             sb.Append("  Fields: ").Append(Fields).Append("\n");
@@ -285,6 +295,11 @@ namespace IO.Swagger.Model
                     this.MaskId.Equals(input.MaskId))
                 ) && 
                 (
+                    this.ShowOption == input.ShowOption ||
+                    (this.ShowOption != null &&
+                    this.ShowOption.Equals(input.ShowOption))
+                ) && 
+                (
                     this.Id == input.Id ||
                     (this.Id != null &&
                     this.Id.Equals(input.Id))
@@ -359,6 +374,8 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.EditModelAfterProfilation.GetHashCode();
                 if (this.MaskId != null)
                     hashCode = hashCode * 59 + this.MaskId.GetHashCode();
+                if (this.ShowOption != null)
+                    hashCode = hashCode * 59 + this.ShowOption.GetHashCode();
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.Document != null)

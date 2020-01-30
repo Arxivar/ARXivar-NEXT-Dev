@@ -37,12 +37,14 @@ namespace IO.Swagger.Model
         /// <param name="userId">User Identifier.</param>
         /// <param name="completeName">User Name.</param>
         /// <param name="category">User Category.</param>
-        public LayoutUsersDto(int? layoutId = default(int?), int? userId = default(int?), string completeName = default(string), int? category = default(int?))
+        /// <param name="isUserDisabled">isUserDisabled.</param>
+        public LayoutUsersDto(int? layoutId = default(int?), int? userId = default(int?), string completeName = default(string), int? category = default(int?), bool? isUserDisabled = default(bool?))
         {
             this.LayoutId = layoutId;
             this.UserId = userId;
             this.CompleteName = completeName;
             this.Category = category;
+            this.IsUserDisabled = isUserDisabled;
         }
         
         /// <summary>
@@ -74,6 +76,12 @@ namespace IO.Swagger.Model
         public int? Category { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsUserDisabled
+        /// </summary>
+        [DataMember(Name="isUserDisabled", EmitDefaultValue=false)]
+        public bool? IsUserDisabled { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -85,6 +93,7 @@ namespace IO.Swagger.Model
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  CompleteName: ").Append(CompleteName).Append("\n");
             sb.Append("  Category: ").Append(Category).Append("\n");
+            sb.Append("  IsUserDisabled: ").Append(IsUserDisabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -138,6 +147,11 @@ namespace IO.Swagger.Model
                     this.Category == input.Category ||
                     (this.Category != null &&
                     this.Category.Equals(input.Category))
+                ) && 
+                (
+                    this.IsUserDisabled == input.IsUserDisabled ||
+                    (this.IsUserDisabled != null &&
+                    this.IsUserDisabled.Equals(input.IsUserDisabled))
                 );
         }
 
@@ -158,6 +172,8 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.CompleteName.GetHashCode();
                 if (this.Category != null)
                     hashCode = hashCode * 59 + this.Category.GetHashCode();
+                if (this.IsUserDisabled != null)
+                    hashCode = hashCode * 59 + this.IsUserDisabled.GetHashCode();
                 return hashCode;
             }
         }

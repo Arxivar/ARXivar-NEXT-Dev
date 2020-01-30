@@ -41,11 +41,12 @@ namespace IO.Swagger.Model
         /// <param name="authorCompleteName">Author name.</param>
         /// <param name="modifier">Modifier user.</param>
         /// <param name="modifierCompleteName">Modifier name.</param>
+        /// <param name="hasReportFile">The report has a template file set.</param>
         /// <param name="creationDate">Creation date of the report.</param>
         /// <param name="lastUpdateDate">The last update of the report.</param>
         /// <param name="idFindGroup">Id of the find group of the source.</param>
         /// <param name="security">Information about the report security.</param>
-        public ReportBaseDTO(string id = default(string), string externalId = default(string), string name = default(string), string description = default(string), int? author = default(int?), string authorCompleteName = default(string), int? modifier = default(int?), string modifierCompleteName = default(string), DateTime? creationDate = default(DateTime?), DateTime? lastUpdateDate = default(DateTime?), string idFindGroup = default(string), ReportSecurityDTO security = default(ReportSecurityDTO))
+        public ReportBaseDTO(string id = default(string), string externalId = default(string), string name = default(string), string description = default(string), int? author = default(int?), string authorCompleteName = default(string), int? modifier = default(int?), string modifierCompleteName = default(string), bool? hasReportFile = default(bool?), DateTime? creationDate = default(DateTime?), DateTime? lastUpdateDate = default(DateTime?), string idFindGroup = default(string), ReportSecurityDTO security = default(ReportSecurityDTO))
         {
             this.Id = id;
             this.ExternalId = externalId;
@@ -55,6 +56,7 @@ namespace IO.Swagger.Model
             this.AuthorCompleteName = authorCompleteName;
             this.Modifier = modifier;
             this.ModifierCompleteName = modifierCompleteName;
+            this.HasReportFile = hasReportFile;
             this.CreationDate = creationDate;
             this.LastUpdateDate = lastUpdateDate;
             this.IdFindGroup = idFindGroup;
@@ -118,6 +120,13 @@ namespace IO.Swagger.Model
         public string ModifierCompleteName { get; set; }
 
         /// <summary>
+        /// The report has a template file set
+        /// </summary>
+        /// <value>The report has a template file set</value>
+        [DataMember(Name="hasReportFile", EmitDefaultValue=false)]
+        public bool? HasReportFile { get; set; }
+
+        /// <summary>
         /// Creation date of the report
         /// </summary>
         /// <value>Creation date of the report</value>
@@ -161,6 +170,7 @@ namespace IO.Swagger.Model
             sb.Append("  AuthorCompleteName: ").Append(AuthorCompleteName).Append("\n");
             sb.Append("  Modifier: ").Append(Modifier).Append("\n");
             sb.Append("  ModifierCompleteName: ").Append(ModifierCompleteName).Append("\n");
+            sb.Append("  HasReportFile: ").Append(HasReportFile).Append("\n");
             sb.Append("  CreationDate: ").Append(CreationDate).Append("\n");
             sb.Append("  LastUpdateDate: ").Append(LastUpdateDate).Append("\n");
             sb.Append("  IdFindGroup: ").Append(IdFindGroup).Append("\n");
@@ -240,6 +250,11 @@ namespace IO.Swagger.Model
                     this.ModifierCompleteName.Equals(input.ModifierCompleteName))
                 ) && 
                 (
+                    this.HasReportFile == input.HasReportFile ||
+                    (this.HasReportFile != null &&
+                    this.HasReportFile.Equals(input.HasReportFile))
+                ) && 
+                (
                     this.CreationDate == input.CreationDate ||
                     (this.CreationDate != null &&
                     this.CreationDate.Equals(input.CreationDate))
@@ -286,6 +301,8 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.Modifier.GetHashCode();
                 if (this.ModifierCompleteName != null)
                     hashCode = hashCode * 59 + this.ModifierCompleteName.GetHashCode();
+                if (this.HasReportFile != null)
+                    hashCode = hashCode * 59 + this.HasReportFile.GetHashCode();
                 if (this.CreationDate != null)
                     hashCode = hashCode * 59 + this.CreationDate.GetHashCode();
                 if (this.LastUpdateDate != null)

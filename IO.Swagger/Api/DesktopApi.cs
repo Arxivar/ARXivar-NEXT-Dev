@@ -25,6 +25,27 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// This call delete items from desktop
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="desktopItemDeleteRequestDTO"></param>
+        /// <returns></returns>
+        void DesktopDeleteItem (DesktopItemDeleteRequestDTO desktopItemDeleteRequestDTO);
+
+        /// <summary>
+        /// This call delete items from desktop
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="desktopItemDeleteRequestDTO"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DesktopDeleteItemWithHttpInfo (DesktopItemDeleteRequestDTO desktopItemDeleteRequestDTO);
+        /// <summary>
         /// This call returns the desktop items for the user (old ARXivar desktop functionality)
         /// </summary>
         /// <remarks>
@@ -44,28 +65,49 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of DesktopDTO</returns>
         ApiResponse<DesktopDTO> DesktopGetWithHttpInfo ();
         /// <summary>
-        /// 
+        /// This call add profiles to dekstop
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">Profile docnumbers to add</param>
         /// <returns></returns>
         void DesktopInsertDocnumbers (List<int?> docnumbers);
 
         /// <summary>
-        /// 
+        /// This call add profiles to dekstop
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">Profile docnumbers to add</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DesktopInsertDocnumbersWithHttpInfo (List<int?> docnumbers);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// This call delete items from desktop
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="desktopItemDeleteRequestDTO"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DesktopDeleteItemAsync (DesktopItemDeleteRequestDTO desktopItemDeleteRequestDTO);
+
+        /// <summary>
+        /// This call delete items from desktop
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="desktopItemDeleteRequestDTO"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DesktopDeleteItemAsyncWithHttpInfo (DesktopItemDeleteRequestDTO desktopItemDeleteRequestDTO);
         /// <summary>
         /// This call returns the desktop items for the user (old ARXivar desktop functionality)
         /// </summary>
@@ -86,24 +128,24 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (DesktopDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<DesktopDTO>> DesktopGetAsyncWithHttpInfo ();
         /// <summary>
-        /// 
+        /// This call add profiles to dekstop
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">Profile docnumbers to add</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DesktopInsertDocnumbersAsync (List<int?> docnumbers);
 
         /// <summary>
-        /// 
+        /// This call add profiles to dekstop
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">Profile docnumbers to add</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DesktopInsertDocnumbersAsyncWithHttpInfo (List<int?> docnumbers);
         #endregion Asynchronous Operations
@@ -207,6 +249,169 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
+        /// This call delete items from desktop 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="desktopItemDeleteRequestDTO"></param>
+        /// <returns></returns>
+        public void DesktopDeleteItem (DesktopItemDeleteRequestDTO desktopItemDeleteRequestDTO)
+        {
+             DesktopDeleteItemWithHttpInfo(desktopItemDeleteRequestDTO);
+        }
+
+        /// <summary>
+        /// This call delete items from desktop 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="desktopItemDeleteRequestDTO"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DesktopDeleteItemWithHttpInfo (DesktopItemDeleteRequestDTO desktopItemDeleteRequestDTO)
+        {
+            // verify the required parameter 'desktopItemDeleteRequestDTO' is set
+            if (desktopItemDeleteRequestDTO == null)
+                throw new ApiException(400, "Missing required parameter 'desktopItemDeleteRequestDTO' when calling DesktopApi->DesktopDeleteItem");
+
+            var localVarPath = "/api/desktop";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (desktopItemDeleteRequestDTO != null && desktopItemDeleteRequestDTO.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(desktopItemDeleteRequestDTO); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = desktopItemDeleteRequestDTO; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DesktopDeleteItem", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// This call delete items from desktop 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="desktopItemDeleteRequestDTO"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DesktopDeleteItemAsync (DesktopItemDeleteRequestDTO desktopItemDeleteRequestDTO)
+        {
+             await DesktopDeleteItemAsyncWithHttpInfo(desktopItemDeleteRequestDTO);
+
+        }
+
+        /// <summary>
+        /// This call delete items from desktop 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="desktopItemDeleteRequestDTO"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DesktopDeleteItemAsyncWithHttpInfo (DesktopItemDeleteRequestDTO desktopItemDeleteRequestDTO)
+        {
+            // verify the required parameter 'desktopItemDeleteRequestDTO' is set
+            if (desktopItemDeleteRequestDTO == null)
+                throw new ApiException(400, "Missing required parameter 'desktopItemDeleteRequestDTO' when calling DesktopApi->DesktopDeleteItem");
+
+            var localVarPath = "/api/desktop";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (desktopItemDeleteRequestDTO != null && desktopItemDeleteRequestDTO.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(desktopItemDeleteRequestDTO); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = desktopItemDeleteRequestDTO; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DesktopDeleteItem", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
         /// This call returns the desktop items for the user (old ARXivar desktop functionality) 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
@@ -225,7 +430,7 @@ namespace IO.Swagger.Api
         public ApiResponse< DesktopDTO > DesktopGetWithHttpInfo ()
         {
 
-            var localVarPath = "/api/Desktop";
+            var localVarPath = "/api/desktop";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -294,7 +499,7 @@ namespace IO.Swagger.Api
         public async System.Threading.Tasks.Task<ApiResponse<DesktopDTO>> DesktopGetAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/api/Desktop";
+            var localVarPath = "/api/desktop";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -344,10 +549,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add profiles to dekstop 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">Profile docnumbers to add</param>
         /// <returns></returns>
         public void DesktopInsertDocnumbers (List<int?> docnumbers)
         {
@@ -355,10 +560,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add profiles to dekstop 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">Profile docnumbers to add</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DesktopInsertDocnumbersWithHttpInfo (List<int?> docnumbers)
         {
@@ -425,10 +630,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add profiles to dekstop 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">Profile docnumbers to add</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DesktopInsertDocnumbersAsync (List<int?> docnumbers)
         {
@@ -437,10 +642,10 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        ///  
+        /// This call add profiles to dekstop 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="docnumbers"></param>
+        /// <param name="docnumbers">Profile docnumbers to add</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DesktopInsertDocnumbersAsyncWithHttpInfo (List<int?> docnumbers)
         {

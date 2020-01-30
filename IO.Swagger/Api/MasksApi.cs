@@ -25,6 +25,27 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Tells if the mask can be upgraded to advanced
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId"></param>
+        /// <returns>bool?</returns>
+        bool? MasksCanUpgradeToAdvanced (string maskId);
+
+        /// <summary>
+        /// Tells if the mask can be upgraded to advanced
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId"></param>
+        /// <returns>ApiResponse of bool?</returns>
+        ApiResponse<bool?> MasksCanUpgradeToAdvancedWithHttpInfo (string maskId);
+        /// <summary>
         /// This call clones a mask
         /// </summary>
         /// <remarks>
@@ -397,6 +418,27 @@ namespace IO.Swagger.Api
         ApiResponse<MaskDTO> MasksUpdateMaskWithHttpInfo (string id, MaskDTO mask = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Tells if the mask can be upgraded to advanced
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId"></param>
+        /// <returns>Task of bool?</returns>
+        System.Threading.Tasks.Task<bool?> MasksCanUpgradeToAdvancedAsync (string maskId);
+
+        /// <summary>
+        /// Tells if the mask can be upgraded to advanced
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId"></param>
+        /// <returns>Task of ApiResponse (bool?)</returns>
+        System.Threading.Tasks.Task<ApiResponse<bool?>> MasksCanUpgradeToAdvancedAsyncWithHttpInfo (string maskId);
         /// <summary>
         /// This call clones a mask
         /// </summary>
@@ -866,6 +908,155 @@ namespace IO.Swagger.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Tells if the mask can be upgraded to advanced 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId"></param>
+        /// <returns>bool?</returns>
+        public bool? MasksCanUpgradeToAdvanced (string maskId)
+        {
+             ApiResponse<bool?> localVarResponse = MasksCanUpgradeToAdvancedWithHttpInfo(maskId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Tells if the mask can be upgraded to advanced 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId"></param>
+        /// <returns>ApiResponse of bool?</returns>
+        public ApiResponse< bool? > MasksCanUpgradeToAdvancedWithHttpInfo (string maskId)
+        {
+            // verify the required parameter 'maskId' is set
+            if (maskId == null)
+                throw new ApiException(400, "Missing required parameter 'maskId' when calling MasksApi->MasksCanUpgradeToAdvanced");
+
+            var localVarPath = "/api/Masks/{maskId}/CanUpgradeToAdvanced";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (maskId != null) localVarPathParams.Add("maskId", this.Configuration.ApiClient.ParameterToString(maskId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MasksCanUpgradeToAdvanced", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<bool?>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (bool?) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(bool?)));
+        }
+
+        /// <summary>
+        /// Tells if the mask can be upgraded to advanced 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId"></param>
+        /// <returns>Task of bool?</returns>
+        public async System.Threading.Tasks.Task<bool?> MasksCanUpgradeToAdvancedAsync (string maskId)
+        {
+             ApiResponse<bool?> localVarResponse = await MasksCanUpgradeToAdvancedAsyncWithHttpInfo(maskId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Tells if the mask can be upgraded to advanced 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="maskId"></param>
+        /// <returns>Task of ApiResponse (bool?)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<bool?>> MasksCanUpgradeToAdvancedAsyncWithHttpInfo (string maskId)
+        {
+            // verify the required parameter 'maskId' is set
+            if (maskId == null)
+                throw new ApiException(400, "Missing required parameter 'maskId' when calling MasksApi->MasksCanUpgradeToAdvanced");
+
+            var localVarPath = "/api/Masks/{maskId}/CanUpgradeToAdvanced";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (maskId != null) localVarPathParams.Add("maskId", this.Configuration.ApiClient.ParameterToString(maskId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("MasksCanUpgradeToAdvanced", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<bool?>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (bool?) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(bool?)));
         }
 
         /// <summary>

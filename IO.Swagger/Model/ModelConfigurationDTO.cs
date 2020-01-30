@@ -36,8 +36,8 @@ namespace IO.Swagger.Model
         /// <param name="predefinedProfile">Predefined profile for model.</param>
         /// <param name="mask">Predefined Profile.</param>
         /// <param name="showOption">Possible values:  0: EmptyProfile  1: PredefinedProfile  2: Mask .</param>
-        /// <param name="documentCacheId">File forTtemplate.</param>
-        /// <param name="previewDocumentCacheId">File for preview template.</param>
+        /// <param name="documentCacheId">File in cache for template.</param>
+        /// <param name="previewDocumentCacheId">File in cache for preview template.</param>
         /// <param name="fieldsModule">Fields.</param>
         /// <param name="id">Identifier.</param>
         /// <param name="description">Description.</param>
@@ -99,16 +99,16 @@ namespace IO.Swagger.Model
         public int? ShowOption { get; set; }
 
         /// <summary>
-        /// File forTtemplate
+        /// File in cache for template
         /// </summary>
-        /// <value>File forTtemplate</value>
+        /// <value>File in cache for template</value>
         [DataMember(Name="documentCacheId", EmitDefaultValue=false)]
         public string DocumentCacheId { get; set; }
 
         /// <summary>
-        /// File for preview template
+        /// File in cache for preview template
         /// </summary>
-        /// <value>File for preview template</value>
+        /// <value>File in cache for preview template</value>
         [DataMember(Name="previewDocumentCacheId", EmitDefaultValue=false)]
         public string PreviewDocumentCacheId { get; set; }
 

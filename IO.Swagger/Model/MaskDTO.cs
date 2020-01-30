@@ -49,7 +49,8 @@ namespace IO.Swagger.Model
         /// <param name="predefinedProfile">Predefined Profile associated with the mask.</param>
         /// <param name="maskDetails">Details.</param>
         /// <param name="maskClassOptions">Options on document type.</param>
-        public MaskDTO(string id = default(string), string maskName = default(string), string maskDescription = default(string), int? predefinedProfileId = default(int?), int? user = default(int?), string externalId = default(string), bool? isRoot = default(bool?), int? type = default(int?), int? paMode = default(int?), bool? showAdditional = default(bool?), int? kind = default(int?), bool? showGroups = default(bool?), string userCompleteName = default(string), PredefinedProfileDTO predefinedProfile = default(PredefinedProfileDTO), List<MaskDetailDTO> maskDetails = default(List<MaskDetailDTO>), List<MaskClassOptionsDTO> maskClassOptions = default(List<MaskClassOptionsDTO>))
+        /// <param name="useAdvancedTool">This option indicates if the mask use new features for ARXivar Next Portal.</param>
+        public MaskDTO(string id = default(string), string maskName = default(string), string maskDescription = default(string), int? predefinedProfileId = default(int?), int? user = default(int?), string externalId = default(string), bool? isRoot = default(bool?), int? type = default(int?), int? paMode = default(int?), bool? showAdditional = default(bool?), int? kind = default(int?), bool? showGroups = default(bool?), string userCompleteName = default(string), PredefinedProfileDTO predefinedProfile = default(PredefinedProfileDTO), List<MaskDetailDTO> maskDetails = default(List<MaskDetailDTO>), List<MaskClassOptionsDTO> maskClassOptions = default(List<MaskClassOptionsDTO>), bool? useAdvancedTool = default(bool?))
         {
             this.Id = id;
             this.MaskName = maskName;
@@ -67,6 +68,7 @@ namespace IO.Swagger.Model
             this.PredefinedProfile = predefinedProfile;
             this.MaskDetails = maskDetails;
             this.MaskClassOptions = maskClassOptions;
+            this.UseAdvancedTool = useAdvancedTool;
         }
         
         /// <summary>
@@ -182,6 +184,13 @@ namespace IO.Swagger.Model
         public List<MaskClassOptionsDTO> MaskClassOptions { get; set; }
 
         /// <summary>
+        /// This option indicates if the mask use new features for ARXivar Next Portal
+        /// </summary>
+        /// <value>This option indicates if the mask use new features for ARXivar Next Portal</value>
+        [DataMember(Name="useAdvancedTool", EmitDefaultValue=false)]
+        public bool? UseAdvancedTool { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -205,6 +214,7 @@ namespace IO.Swagger.Model
             sb.Append("  PredefinedProfile: ").Append(PredefinedProfile).Append("\n");
             sb.Append("  MaskDetails: ").Append(MaskDetails).Append("\n");
             sb.Append("  MaskClassOptions: ").Append(MaskClassOptions).Append("\n");
+            sb.Append("  UseAdvancedTool: ").Append(UseAdvancedTool).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -318,6 +328,11 @@ namespace IO.Swagger.Model
                     this.MaskClassOptions == input.MaskClassOptions ||
                     this.MaskClassOptions != null &&
                     this.MaskClassOptions.SequenceEqual(input.MaskClassOptions)
+                ) && 
+                (
+                    this.UseAdvancedTool == input.UseAdvancedTool ||
+                    (this.UseAdvancedTool != null &&
+                    this.UseAdvancedTool.Equals(input.UseAdvancedTool))
                 );
         }
 
@@ -362,6 +377,8 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.MaskDetails.GetHashCode();
                 if (this.MaskClassOptions != null)
                     hashCode = hashCode * 59 + this.MaskClassOptions.GetHashCode();
+                if (this.UseAdvancedTool != null)
+                    hashCode = hashCode * 59 + this.UseAdvancedTool.GetHashCode();
                 return hashCode;
             }
         }

@@ -37,14 +37,16 @@ namespace IO.Swagger.Model
         /// <param name="user">Identifier of user.</param>
         /// <param name="userDescription">Description of the user.</param>
         /// <param name="category">Possible values:  0: U  1: S  2: M  3: F  4: G  5: I  6: D .</param>
+        /// <param name="isUserDisabled">User is disabled (non active or hidden).</param>
         /// <param name="permissions">Permission list.</param>
         /// <param name="externalId">External Identifier.</param>
-        public UserPermissionDTO(string id = default(string), int? user = default(int?), string userDescription = default(string), int? category = default(int?), List<PermissionItemDTO> permissions = default(List<PermissionItemDTO>), string externalId = default(string))
+        public UserPermissionDTO(string id = default(string), int? user = default(int?), string userDescription = default(string), int? category = default(int?), bool? isUserDisabled = default(bool?), List<PermissionItemDTO> permissions = default(List<PermissionItemDTO>), string externalId = default(string))
         {
             this.Id = id;
             this.User = user;
             this.UserDescription = userDescription;
             this.Category = category;
+            this.IsUserDisabled = isUserDisabled;
             this.Permissions = permissions;
             this.ExternalId = externalId;
         }
@@ -78,6 +80,13 @@ namespace IO.Swagger.Model
         public int? Category { get; set; }
 
         /// <summary>
+        /// User is disabled (non active or hidden)
+        /// </summary>
+        /// <value>User is disabled (non active or hidden)</value>
+        [DataMember(Name="isUserDisabled", EmitDefaultValue=false)]
+        public bool? IsUserDisabled { get; set; }
+
+        /// <summary>
         /// Permission list
         /// </summary>
         /// <value>Permission list</value>
@@ -103,6 +112,7 @@ namespace IO.Swagger.Model
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  UserDescription: ").Append(UserDescription).Append("\n");
             sb.Append("  Category: ").Append(Category).Append("\n");
+            sb.Append("  IsUserDisabled: ").Append(IsUserDisabled).Append("\n");
             sb.Append("  Permissions: ").Append(Permissions).Append("\n");
             sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
             sb.Append("}\n");
@@ -160,6 +170,11 @@ namespace IO.Swagger.Model
                     this.Category.Equals(input.Category))
                 ) && 
                 (
+                    this.IsUserDisabled == input.IsUserDisabled ||
+                    (this.IsUserDisabled != null &&
+                    this.IsUserDisabled.Equals(input.IsUserDisabled))
+                ) && 
+                (
                     this.Permissions == input.Permissions ||
                     this.Permissions != null &&
                     this.Permissions.SequenceEqual(input.Permissions)
@@ -188,6 +203,8 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.UserDescription.GetHashCode();
                 if (this.Category != null)
                     hashCode = hashCode * 59 + this.Category.GetHashCode();
+                if (this.IsUserDisabled != null)
+                    hashCode = hashCode * 59 + this.IsUserDisabled.GetHashCode();
                 if (this.Permissions != null)
                     hashCode = hashCode * 59 + this.Permissions.GetHashCode();
                 if (this.ExternalId != null)

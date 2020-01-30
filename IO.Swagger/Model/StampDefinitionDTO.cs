@@ -36,11 +36,21 @@ namespace IO.Swagger.Model
         /// <param name="id">Identifier.</param>
         /// <param name="stampName">Name.</param>
         /// <param name="stampDescription">Description.</param>
-        public StampDefinitionDTO(string id = default(string), string stampName = default(string), string stampDescription = default(string))
+        /// <param name="isResizable">Is Resizable..</param>
+        /// <param name="removeAfterApplied">Indicates if the stamp definition must be removed after applied.</param>
+        /// <param name="xaml">Xaml string for the stamp..</param>
+        /// <param name="dmTipidocumentoId">Document type of stamp..</param>
+        /// <param name="bindings">List of binding for the stamp..</param>
+        public StampDefinitionDTO(string id = default(string), string stampName = default(string), string stampDescription = default(string), bool? isResizable = default(bool?), bool? removeAfterApplied = default(bool?), string xaml = default(string), int? dmTipidocumentoId = default(int?), List<StampDefinitionBindingElementDTO> bindings = default(List<StampDefinitionBindingElementDTO>))
         {
             this.Id = id;
             this.StampName = stampName;
             this.StampDescription = stampDescription;
+            this.IsResizable = isResizable;
+            this.RemoveAfterApplied = removeAfterApplied;
+            this.Xaml = xaml;
+            this.DmTipidocumentoId = dmTipidocumentoId;
+            this.Bindings = bindings;
         }
         
         /// <summary>
@@ -65,6 +75,41 @@ namespace IO.Swagger.Model
         public string StampDescription { get; set; }
 
         /// <summary>
+        /// Is Resizable.
+        /// </summary>
+        /// <value>Is Resizable.</value>
+        [DataMember(Name="isResizable", EmitDefaultValue=false)]
+        public bool? IsResizable { get; set; }
+
+        /// <summary>
+        /// Indicates if the stamp definition must be removed after applied
+        /// </summary>
+        /// <value>Indicates if the stamp definition must be removed after applied</value>
+        [DataMember(Name="removeAfterApplied", EmitDefaultValue=false)]
+        public bool? RemoveAfterApplied { get; set; }
+
+        /// <summary>
+        /// Xaml string for the stamp.
+        /// </summary>
+        /// <value>Xaml string for the stamp.</value>
+        [DataMember(Name="xaml", EmitDefaultValue=false)]
+        public string Xaml { get; set; }
+
+        /// <summary>
+        /// Document type of stamp.
+        /// </summary>
+        /// <value>Document type of stamp.</value>
+        [DataMember(Name="dmTipidocumentoId", EmitDefaultValue=false)]
+        public int? DmTipidocumentoId { get; set; }
+
+        /// <summary>
+        /// List of binding for the stamp.
+        /// </summary>
+        /// <value>List of binding for the stamp.</value>
+        [DataMember(Name="bindings", EmitDefaultValue=false)]
+        public List<StampDefinitionBindingElementDTO> Bindings { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -75,6 +120,11 @@ namespace IO.Swagger.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  StampName: ").Append(StampName).Append("\n");
             sb.Append("  StampDescription: ").Append(StampDescription).Append("\n");
+            sb.Append("  IsResizable: ").Append(IsResizable).Append("\n");
+            sb.Append("  RemoveAfterApplied: ").Append(RemoveAfterApplied).Append("\n");
+            sb.Append("  Xaml: ").Append(Xaml).Append("\n");
+            sb.Append("  DmTipidocumentoId: ").Append(DmTipidocumentoId).Append("\n");
+            sb.Append("  Bindings: ").Append(Bindings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -123,6 +173,31 @@ namespace IO.Swagger.Model
                     this.StampDescription == input.StampDescription ||
                     (this.StampDescription != null &&
                     this.StampDescription.Equals(input.StampDescription))
+                ) && 
+                (
+                    this.IsResizable == input.IsResizable ||
+                    (this.IsResizable != null &&
+                    this.IsResizable.Equals(input.IsResizable))
+                ) && 
+                (
+                    this.RemoveAfterApplied == input.RemoveAfterApplied ||
+                    (this.RemoveAfterApplied != null &&
+                    this.RemoveAfterApplied.Equals(input.RemoveAfterApplied))
+                ) && 
+                (
+                    this.Xaml == input.Xaml ||
+                    (this.Xaml != null &&
+                    this.Xaml.Equals(input.Xaml))
+                ) && 
+                (
+                    this.DmTipidocumentoId == input.DmTipidocumentoId ||
+                    (this.DmTipidocumentoId != null &&
+                    this.DmTipidocumentoId.Equals(input.DmTipidocumentoId))
+                ) && 
+                (
+                    this.Bindings == input.Bindings ||
+                    this.Bindings != null &&
+                    this.Bindings.SequenceEqual(input.Bindings)
                 );
         }
 
@@ -141,6 +216,16 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.StampName.GetHashCode();
                 if (this.StampDescription != null)
                     hashCode = hashCode * 59 + this.StampDescription.GetHashCode();
+                if (this.IsResizable != null)
+                    hashCode = hashCode * 59 + this.IsResizable.GetHashCode();
+                if (this.RemoveAfterApplied != null)
+                    hashCode = hashCode * 59 + this.RemoveAfterApplied.GetHashCode();
+                if (this.Xaml != null)
+                    hashCode = hashCode * 59 + this.Xaml.GetHashCode();
+                if (this.DmTipidocumentoId != null)
+                    hashCode = hashCode * 59 + this.DmTipidocumentoId.GetHashCode();
+                if (this.Bindings != null)
+                    hashCode = hashCode * 59 + this.Bindings.GetHashCode();
                 return hashCode;
             }
         }

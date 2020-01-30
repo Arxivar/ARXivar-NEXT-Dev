@@ -308,6 +308,31 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> DocumentsGetForExternalAttachmentWithHttpInfo (int? id, bool? forView = null);
         /// <summary>
+        /// This call gets the document as attachment inside of an eml file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Docnumber</param>
+        /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
+        /// <param name="createZip">Attachment as zip</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream DocumentsGetForMail (int? id, bool? forView, bool? createZip);
+
+        /// <summary>
+        /// This call gets the document as attachment inside of an eml file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Docnumber</param>
+        /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
+        /// <param name="createZip">Attachment as zip</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> DocumentsGetForMailWithHttpInfo (int? id, bool? forView, bool? createZip);
+        /// <summary>
         /// This call returns the file associated with the attachment into in a process workflow
         /// </summary>
         /// <remarks>
@@ -495,6 +520,75 @@ namespace IO.Swagger.Api
         /// <param name="id">Document Identifier</param>
         /// <returns>ApiResponse of bool?</returns>
         ApiResponse<bool?> DocumentsGetHasDocumentForProfileWithHttpInfo (int? id);
+        /// <summary>
+        /// Creates an asynchronous queue job that creates an eml file with process documents in attachment
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailMassiveForProcessDocRequest"></param>
+        /// <returns>MailMassiveForProfileResponseDTO</returns>
+        MailMassiveForProfileResponseDTO DocumentsGetMailMassiveForProcessDoc (MailMassiveForProcessDocRequestDTO mailMassiveForProcessDocRequest);
+
+        /// <summary>
+        /// Creates an asynchronous queue job that creates an eml file with process documents in attachment
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailMassiveForProcessDocRequest"></param>
+        /// <returns>ApiResponse of MailMassiveForProfileResponseDTO</returns>
+        ApiResponse<MailMassiveForProfileResponseDTO> DocumentsGetMailMassiveForProcessDocWithHttpInfo (MailMassiveForProcessDocRequestDTO mailMassiveForProcessDocRequest);
+        /// <summary>
+        /// Creates an asynchronous queue job that creates an eml file with documents in attachment
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailMassiveForProfileRequest"></param>
+        /// <returns>MailMassiveForProfileResponseDTO</returns>
+        MailMassiveForProfileResponseDTO DocumentsGetMailMassiveForProfile (MailMassiveForProfileRequestDTO mailMassiveForProfileRequest);
+
+        /// <summary>
+        /// Creates an asynchronous queue job that creates an eml file with documents in attachment
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailMassiveForProfileRequest"></param>
+        /// <returns>ApiResponse of MailMassiveForProfileResponseDTO</returns>
+        ApiResponse<MailMassiveForProfileResponseDTO> DocumentsGetMailMassiveForProfileWithHttpInfo (MailMassiveForProfileRequestDTO mailMassiveForProfileRequest);
+        /// <summary>
+        /// This call gets the process document as attachment inside of an eml file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processDocId">Id of process document</param>
+        /// <param name="taskWorkId">Id of task</param>
+        /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
+        /// <param name="createZip">Attachment as zip</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream DocumentsGetProcessdocForMail (int? processDocId, int? taskWorkId, bool? forView, bool? createZip);
+
+        /// <summary>
+        /// This call gets the process document as attachment inside of an eml file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processDocId">Id of process document</param>
+        /// <param name="taskWorkId">Id of task</param>
+        /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
+        /// <param name="createZip">Attachment as zip</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> DocumentsGetProcessdocForMailWithHttpInfo (int? processDocId, int? taskWorkId, bool? forView, bool? createZip);
         /// <summary>
         /// This call retrieve the attachemnt file by its revision
         /// </summary>
@@ -829,6 +923,31 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DocumentsGetForExternalAttachmentAsyncWithHttpInfo (int? id, bool? forView = null);
         /// <summary>
+        /// This call gets the document as attachment inside of an eml file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Docnumber</param>
+        /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
+        /// <param name="createZip">Attachment as zip</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> DocumentsGetForMailAsync (int? id, bool? forView, bool? createZip);
+
+        /// <summary>
+        /// This call gets the document as attachment inside of an eml file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Docnumber</param>
+        /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
+        /// <param name="createZip">Attachment as zip</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DocumentsGetForMailAsyncWithHttpInfo (int? id, bool? forView, bool? createZip);
+        /// <summary>
         /// This call returns the file associated with the attachment into in a process workflow
         /// </summary>
         /// <remarks>
@@ -1016,6 +1135,75 @@ namespace IO.Swagger.Api
         /// <param name="id">Document Identifier</param>
         /// <returns>Task of ApiResponse (bool?)</returns>
         System.Threading.Tasks.Task<ApiResponse<bool?>> DocumentsGetHasDocumentForProfileAsyncWithHttpInfo (int? id);
+        /// <summary>
+        /// Creates an asynchronous queue job that creates an eml file with process documents in attachment
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailMassiveForProcessDocRequest"></param>
+        /// <returns>Task of MailMassiveForProfileResponseDTO</returns>
+        System.Threading.Tasks.Task<MailMassiveForProfileResponseDTO> DocumentsGetMailMassiveForProcessDocAsync (MailMassiveForProcessDocRequestDTO mailMassiveForProcessDocRequest);
+
+        /// <summary>
+        /// Creates an asynchronous queue job that creates an eml file with process documents in attachment
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailMassiveForProcessDocRequest"></param>
+        /// <returns>Task of ApiResponse (MailMassiveForProfileResponseDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MailMassiveForProfileResponseDTO>> DocumentsGetMailMassiveForProcessDocAsyncWithHttpInfo (MailMassiveForProcessDocRequestDTO mailMassiveForProcessDocRequest);
+        /// <summary>
+        /// Creates an asynchronous queue job that creates an eml file with documents in attachment
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailMassiveForProfileRequest"></param>
+        /// <returns>Task of MailMassiveForProfileResponseDTO</returns>
+        System.Threading.Tasks.Task<MailMassiveForProfileResponseDTO> DocumentsGetMailMassiveForProfileAsync (MailMassiveForProfileRequestDTO mailMassiveForProfileRequest);
+
+        /// <summary>
+        /// Creates an asynchronous queue job that creates an eml file with documents in attachment
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailMassiveForProfileRequest"></param>
+        /// <returns>Task of ApiResponse (MailMassiveForProfileResponseDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MailMassiveForProfileResponseDTO>> DocumentsGetMailMassiveForProfileAsyncWithHttpInfo (MailMassiveForProfileRequestDTO mailMassiveForProfileRequest);
+        /// <summary>
+        /// This call gets the process document as attachment inside of an eml file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processDocId">Id of process document</param>
+        /// <param name="taskWorkId">Id of task</param>
+        /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
+        /// <param name="createZip">Attachment as zip</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> DocumentsGetProcessdocForMailAsync (int? processDocId, int? taskWorkId, bool? forView, bool? createZip);
+
+        /// <summary>
+        /// This call gets the process document as attachment inside of an eml file
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processDocId">Id of process document</param>
+        /// <param name="taskWorkId">Id of task</param>
+        /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
+        /// <param name="createZip">Attachment as zip</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DocumentsGetProcessdocForMailAsyncWithHttpInfo (int? processDocId, int? taskWorkId, bool? forView, bool? createZip);
         /// <summary>
         /// This call retrieve the attachemnt file by its revision
         /// </summary>
@@ -3112,6 +3300,173 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
+        /// This call gets the document as attachment inside of an eml file 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Docnumber</param>
+        /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
+        /// <param name="createZip">Attachment as zip</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream DocumentsGetForMail (int? id, bool? forView, bool? createZip)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = DocumentsGetForMailWithHttpInfo(id, forView, createZip);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call gets the document as attachment inside of an eml file 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Docnumber</param>
+        /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
+        /// <param name="createZip">Attachment as zip</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > DocumentsGetForMailWithHttpInfo (int? id, bool? forView, bool? createZip)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling DocumentsApi->DocumentsGetForMail");
+            // verify the required parameter 'forView' is set
+            if (forView == null)
+                throw new ApiException(400, "Missing required parameter 'forView' when calling DocumentsApi->DocumentsGetForMail");
+            // verify the required parameter 'createZip' is set
+            if (createZip == null)
+                throw new ApiException(400, "Missing required parameter 'createZip' when calling DocumentsApi->DocumentsGetForMail");
+
+            var localVarPath = "/api/Documents/GetMail/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (forView != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "forView", forView)); // query parameter
+            if (createZip != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "createZip", createZip)); // query parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentsGetForMail", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// This call gets the document as attachment inside of an eml file 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Docnumber</param>
+        /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
+        /// <param name="createZip">Attachment as zip</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> DocumentsGetForMailAsync (int? id, bool? forView, bool? createZip)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await DocumentsGetForMailAsyncWithHttpInfo(id, forView, createZip);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call gets the document as attachment inside of an eml file 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Docnumber</param>
+        /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
+        /// <param name="createZip">Attachment as zip</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DocumentsGetForMailAsyncWithHttpInfo (int? id, bool? forView, bool? createZip)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling DocumentsApi->DocumentsGetForMail");
+            // verify the required parameter 'forView' is set
+            if (forView == null)
+                throw new ApiException(400, "Missing required parameter 'forView' when calling DocumentsApi->DocumentsGetForMail");
+            // verify the required parameter 'createZip' is set
+            if (createZip == null)
+                throw new ApiException(400, "Missing required parameter 'createZip' when calling DocumentsApi->DocumentsGetForMail");
+
+            var localVarPath = "/api/Documents/GetMail/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (forView != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "forView", forView)); // query parameter
+            if (createZip != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "createZip", createZip)); // query parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentsGetForMail", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
         /// This call returns the file associated with the attachment into in a process workflow 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4349,6 +4704,531 @@ namespace IO.Swagger.Api
             return new ApiResponse<bool?>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (bool?) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(bool?)));
+        }
+
+        /// <summary>
+        /// Creates an asynchronous queue job that creates an eml file with process documents in attachment 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailMassiveForProcessDocRequest"></param>
+        /// <returns>MailMassiveForProfileResponseDTO</returns>
+        public MailMassiveForProfileResponseDTO DocumentsGetMailMassiveForProcessDoc (MailMassiveForProcessDocRequestDTO mailMassiveForProcessDocRequest)
+        {
+             ApiResponse<MailMassiveForProfileResponseDTO> localVarResponse = DocumentsGetMailMassiveForProcessDocWithHttpInfo(mailMassiveForProcessDocRequest);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Creates an asynchronous queue job that creates an eml file with process documents in attachment 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailMassiveForProcessDocRequest"></param>
+        /// <returns>ApiResponse of MailMassiveForProfileResponseDTO</returns>
+        public ApiResponse< MailMassiveForProfileResponseDTO > DocumentsGetMailMassiveForProcessDocWithHttpInfo (MailMassiveForProcessDocRequestDTO mailMassiveForProcessDocRequest)
+        {
+            // verify the required parameter 'mailMassiveForProcessDocRequest' is set
+            if (mailMassiveForProcessDocRequest == null)
+                throw new ApiException(400, "Missing required parameter 'mailMassiveForProcessDocRequest' when calling DocumentsApi->DocumentsGetMailMassiveForProcessDoc");
+
+            var localVarPath = "/api/Documents/GetMailMassiveProcessDoc";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (mailMassiveForProcessDocRequest != null && mailMassiveForProcessDocRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(mailMassiveForProcessDocRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = mailMassiveForProcessDocRequest; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentsGetMailMassiveForProcessDoc", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MailMassiveForProfileResponseDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MailMassiveForProfileResponseDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MailMassiveForProfileResponseDTO)));
+        }
+
+        /// <summary>
+        /// Creates an asynchronous queue job that creates an eml file with process documents in attachment 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailMassiveForProcessDocRequest"></param>
+        /// <returns>Task of MailMassiveForProfileResponseDTO</returns>
+        public async System.Threading.Tasks.Task<MailMassiveForProfileResponseDTO> DocumentsGetMailMassiveForProcessDocAsync (MailMassiveForProcessDocRequestDTO mailMassiveForProcessDocRequest)
+        {
+             ApiResponse<MailMassiveForProfileResponseDTO> localVarResponse = await DocumentsGetMailMassiveForProcessDocAsyncWithHttpInfo(mailMassiveForProcessDocRequest);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Creates an asynchronous queue job that creates an eml file with process documents in attachment 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailMassiveForProcessDocRequest"></param>
+        /// <returns>Task of ApiResponse (MailMassiveForProfileResponseDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MailMassiveForProfileResponseDTO>> DocumentsGetMailMassiveForProcessDocAsyncWithHttpInfo (MailMassiveForProcessDocRequestDTO mailMassiveForProcessDocRequest)
+        {
+            // verify the required parameter 'mailMassiveForProcessDocRequest' is set
+            if (mailMassiveForProcessDocRequest == null)
+                throw new ApiException(400, "Missing required parameter 'mailMassiveForProcessDocRequest' when calling DocumentsApi->DocumentsGetMailMassiveForProcessDoc");
+
+            var localVarPath = "/api/Documents/GetMailMassiveProcessDoc";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (mailMassiveForProcessDocRequest != null && mailMassiveForProcessDocRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(mailMassiveForProcessDocRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = mailMassiveForProcessDocRequest; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentsGetMailMassiveForProcessDoc", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MailMassiveForProfileResponseDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MailMassiveForProfileResponseDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MailMassiveForProfileResponseDTO)));
+        }
+
+        /// <summary>
+        /// Creates an asynchronous queue job that creates an eml file with documents in attachment 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailMassiveForProfileRequest"></param>
+        /// <returns>MailMassiveForProfileResponseDTO</returns>
+        public MailMassiveForProfileResponseDTO DocumentsGetMailMassiveForProfile (MailMassiveForProfileRequestDTO mailMassiveForProfileRequest)
+        {
+             ApiResponse<MailMassiveForProfileResponseDTO> localVarResponse = DocumentsGetMailMassiveForProfileWithHttpInfo(mailMassiveForProfileRequest);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Creates an asynchronous queue job that creates an eml file with documents in attachment 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailMassiveForProfileRequest"></param>
+        /// <returns>ApiResponse of MailMassiveForProfileResponseDTO</returns>
+        public ApiResponse< MailMassiveForProfileResponseDTO > DocumentsGetMailMassiveForProfileWithHttpInfo (MailMassiveForProfileRequestDTO mailMassiveForProfileRequest)
+        {
+            // verify the required parameter 'mailMassiveForProfileRequest' is set
+            if (mailMassiveForProfileRequest == null)
+                throw new ApiException(400, "Missing required parameter 'mailMassiveForProfileRequest' when calling DocumentsApi->DocumentsGetMailMassiveForProfile");
+
+            var localVarPath = "/api/Documents/GetMailMassive";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (mailMassiveForProfileRequest != null && mailMassiveForProfileRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(mailMassiveForProfileRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = mailMassiveForProfileRequest; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentsGetMailMassiveForProfile", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MailMassiveForProfileResponseDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MailMassiveForProfileResponseDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MailMassiveForProfileResponseDTO)));
+        }
+
+        /// <summary>
+        /// Creates an asynchronous queue job that creates an eml file with documents in attachment 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailMassiveForProfileRequest"></param>
+        /// <returns>Task of MailMassiveForProfileResponseDTO</returns>
+        public async System.Threading.Tasks.Task<MailMassiveForProfileResponseDTO> DocumentsGetMailMassiveForProfileAsync (MailMassiveForProfileRequestDTO mailMassiveForProfileRequest)
+        {
+             ApiResponse<MailMassiveForProfileResponseDTO> localVarResponse = await DocumentsGetMailMassiveForProfileAsyncWithHttpInfo(mailMassiveForProfileRequest);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Creates an asynchronous queue job that creates an eml file with documents in attachment 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailMassiveForProfileRequest"></param>
+        /// <returns>Task of ApiResponse (MailMassiveForProfileResponseDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MailMassiveForProfileResponseDTO>> DocumentsGetMailMassiveForProfileAsyncWithHttpInfo (MailMassiveForProfileRequestDTO mailMassiveForProfileRequest)
+        {
+            // verify the required parameter 'mailMassiveForProfileRequest' is set
+            if (mailMassiveForProfileRequest == null)
+                throw new ApiException(400, "Missing required parameter 'mailMassiveForProfileRequest' when calling DocumentsApi->DocumentsGetMailMassiveForProfile");
+
+            var localVarPath = "/api/Documents/GetMailMassive";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (mailMassiveForProfileRequest != null && mailMassiveForProfileRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(mailMassiveForProfileRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = mailMassiveForProfileRequest; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentsGetMailMassiveForProfile", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MailMassiveForProfileResponseDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MailMassiveForProfileResponseDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MailMassiveForProfileResponseDTO)));
+        }
+
+        /// <summary>
+        /// This call gets the process document as attachment inside of an eml file 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processDocId">Id of process document</param>
+        /// <param name="taskWorkId">Id of task</param>
+        /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
+        /// <param name="createZip">Attachment as zip</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream DocumentsGetProcessdocForMail (int? processDocId, int? taskWorkId, bool? forView, bool? createZip)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = DocumentsGetProcessdocForMailWithHttpInfo(processDocId, taskWorkId, forView, createZip);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call gets the process document as attachment inside of an eml file 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processDocId">Id of process document</param>
+        /// <param name="taskWorkId">Id of task</param>
+        /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
+        /// <param name="createZip">Attachment as zip</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > DocumentsGetProcessdocForMailWithHttpInfo (int? processDocId, int? taskWorkId, bool? forView, bool? createZip)
+        {
+            // verify the required parameter 'processDocId' is set
+            if (processDocId == null)
+                throw new ApiException(400, "Missing required parameter 'processDocId' when calling DocumentsApi->DocumentsGetProcessdocForMail");
+            // verify the required parameter 'taskWorkId' is set
+            if (taskWorkId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkId' when calling DocumentsApi->DocumentsGetProcessdocForMail");
+            // verify the required parameter 'forView' is set
+            if (forView == null)
+                throw new ApiException(400, "Missing required parameter 'forView' when calling DocumentsApi->DocumentsGetProcessdocForMail");
+            // verify the required parameter 'createZip' is set
+            if (createZip == null)
+                throw new ApiException(400, "Missing required parameter 'createZip' when calling DocumentsApi->DocumentsGetProcessdocForMail");
+
+            var localVarPath = "/api/Documents/GetMail/ForTask/{processDocId}/{taskWorkId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (processDocId != null) localVarPathParams.Add("processDocId", this.Configuration.ApiClient.ParameterToString(processDocId)); // path parameter
+            if (taskWorkId != null) localVarPathParams.Add("taskWorkId", this.Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
+            if (forView != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "forView", forView)); // query parameter
+            if (createZip != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "createZip", createZip)); // query parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentsGetProcessdocForMail", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// This call gets the process document as attachment inside of an eml file 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processDocId">Id of process document</param>
+        /// <param name="taskWorkId">Id of task</param>
+        /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
+        /// <param name="createZip">Attachment as zip</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> DocumentsGetProcessdocForMailAsync (int? processDocId, int? taskWorkId, bool? forView, bool? createZip)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await DocumentsGetProcessdocForMailAsyncWithHttpInfo(processDocId, taskWorkId, forView, createZip);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call gets the process document as attachment inside of an eml file 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processDocId">Id of process document</param>
+        /// <param name="taskWorkId">Id of task</param>
+        /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
+        /// <param name="createZip">Attachment as zip</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DocumentsGetProcessdocForMailAsyncWithHttpInfo (int? processDocId, int? taskWorkId, bool? forView, bool? createZip)
+        {
+            // verify the required parameter 'processDocId' is set
+            if (processDocId == null)
+                throw new ApiException(400, "Missing required parameter 'processDocId' when calling DocumentsApi->DocumentsGetProcessdocForMail");
+            // verify the required parameter 'taskWorkId' is set
+            if (taskWorkId == null)
+                throw new ApiException(400, "Missing required parameter 'taskWorkId' when calling DocumentsApi->DocumentsGetProcessdocForMail");
+            // verify the required parameter 'forView' is set
+            if (forView == null)
+                throw new ApiException(400, "Missing required parameter 'forView' when calling DocumentsApi->DocumentsGetProcessdocForMail");
+            // verify the required parameter 'createZip' is set
+            if (createZip == null)
+                throw new ApiException(400, "Missing required parameter 'createZip' when calling DocumentsApi->DocumentsGetProcessdocForMail");
+
+            var localVarPath = "/api/Documents/GetMail/ForTask/{processDocId}/{taskWorkId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (processDocId != null) localVarPathParams.Add("processDocId", this.Configuration.ApiClient.ParameterToString(processDocId)); // path parameter
+            if (taskWorkId != null) localVarPathParams.Add("taskWorkId", this.Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
+            if (forView != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "forView", forView)); // query parameter
+            if (createZip != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "createZip", createZip)); // query parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentsGetProcessdocForMail", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
         }
 
         /// <summary>
