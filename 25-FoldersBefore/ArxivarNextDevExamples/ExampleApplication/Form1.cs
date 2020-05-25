@@ -274,12 +274,12 @@ namespace ExampleApplication
                 ((FieldBaseForSearchDocumentTypeDto) doctypefield).Valore1 =
                     new DocumentTypeSearchFilterDto(classeFatture.DocumentType, classeFatture.Type2,
                         classeFatture.Type3);
-                ((FieldBaseForSearchDocumentTypeDto) doctypefield).Operator = 3;
+                ((FieldBaseForSearchDocumentTypeDto) doctypefield)._Operator = 3;
 
                 var additionals = searchApi.SearchesGetAdditionalByClasse(classeFatture.DocumentType,
                     classeFatture.Type2, classeFatture.Type3, "AbleBS");
                 var codiceFattura = additionals.FirstOrDefault(i => i.Description == "Codice Fattura");
-                ((FieldBaseForSearchStringDto) codiceFattura).Operator = 11; //non nullo e non vuoto;
+                ((FieldBaseForSearchStringDto) codiceFattura)._Operator = 11; //non nullo e non vuoto;
 
                 defaultSearch.Fields.Add(codiceFattura);
                 defaultSelect.Fields.FirstOrDefault(i => i.Label == "Codice Fattura").Selected = true;
@@ -510,7 +510,7 @@ namespace ExampleApplication
                 ((FieldBaseForSearchDocumentTypeDto) doctypefieldFatture).Valore1 =
                     new DocumentTypeSearchFilterDto(classeFatture.DocumentType, classeFatture.Type2,
                         classeFatture.Type3);
-                ((FieldBaseForSearchDocumentTypeDto) doctypefieldFatture).Operator = 3;
+                ((FieldBaseForSearchDocumentTypeDto) doctypefieldFatture)._Operator = 3;
 
                 //Get search for the second documenttype
                 var searchBolle = searchV2Api.SearchesV2GetEmpty();
@@ -518,7 +518,7 @@ namespace ExampleApplication
                     i.Name.Equals("DOCUMENTTYPE", StringComparison.CurrentCultureIgnoreCase));
                 ((FieldBaseForSearchDocumentTypeDto) doctypefieldBolle).Valore1 =
                     new DocumentTypeSearchFilterDto(classeBolle.DocumentType, classeBolle.Type2, classeBolle.Type3);
-                ((FieldBaseForSearchDocumentTypeDto) doctypefieldBolle).Operator = 3;
+                ((FieldBaseForSearchDocumentTypeDto) doctypefieldBolle)._Operator = 3;
 
 
                 var baseSelect = searchV2Api.SearchesV2GetSelect_0(classeFatture.Id);
@@ -526,7 +526,7 @@ namespace ExampleApplication
                 var additionalsFatture = searchV2Api.SearchesV2GetAdditionalByClasse(classeFatture.DocumentType,
                     classeFatture.Type2, classeFatture.Type3, "AbleBS");
                 var codiceFattura = additionalsFatture.FirstOrDefault(i => i.Description == "Codice Fattura");
-                ((FieldBaseForSearchStringDto) codiceFattura).Operator = 11; //non nullo e non vuoto;
+                ((FieldBaseForSearchStringDto) codiceFattura)._Operator = 11; //non nullo e non vuoto;
 
                 searchFatture.Fields.Add(codiceFattura);
                 baseSelect.Fields.FirstOrDefault(i => i.Label == "Codice Fattura").Selected = true;
@@ -614,7 +614,7 @@ namespace ExampleApplication
 
                 //Set search for specific addressbook category
                 var catRubrica = search.IntFields.FirstOrDefault(i => i.Name.Equals("Dm_Rubrica.CATEGORIA", StringComparison.CurrentCultureIgnoreCase));
-                catRubrica.Operator = 3;
+                catRubrica._Operator = 3;
                 catRubrica.Multiple = addressBookCategory.Id.ToString();
 
                 //Set select for wanted fields
@@ -626,7 +626,7 @@ namespace ExampleApplication
                 select.Fields.FirstOrDefault(i => i.Name == "DM_RUBRICA_INDIRIZZO").Selected = true;
                 select.Fields.FirstOrDefault(i => i.Name == "DM_RUBRICA_TEL").Selected = true;
                 select.Fields.FirstOrDefault(i => i.Name == "DM_RUBRICA_LOCALITA").Selected = true;
-
+                
                 var addressBook = addressBookSearchApi.AddressBookSearchPostSearch(new AddressBookSearchConcreteCriteriaDTO(search, select));
 
 
@@ -662,31 +662,6 @@ namespace ExampleApplication
                 addressBookDto.Location = "Updated at " + DateTime.Now.ToString("G");
                 addressBookApi.AddressBookUpdateAddressBook(addressBookDto.Id, addressBookDto);
             }
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-            var authApi = new IO.Swagger.Api.AuthenticationApi(Configuration);
-            var ticket = authApi.AuthenticationInsertLogonTicket(new LogonTicketRequestDto(2, "", 1, null, Settings.ExampleSettings.AppName, Settings.ExampleSettings.AppSecret, null, null, null));
-
-            labelLogonToken.Text = "Ottenuto un logo token per l'utente 2 valido one shot, Token: " + ticket.LogonTicket;
-
-            var url = "http://NEXTYEAR2020/ARXivarNextWebPortal/Account/LogonTicket/" + ticket.LogonTicket;
-            logonTicketUrl.Text = url;
-            logonTicketUrlFull.Text = url + "?lang=EN&ReturnUrl=%2FARXivarNextWebPortal%2F#!/tasklistrepeater?showTask=1";
-
-        }
-
-        private void button14_Click(object sender, EventArgs e)
-        {
-            var authApi = new IO.Swagger.Api.AuthenticationApi(Configuration);
-            var ticket = authApi.AuthenticationInsertLogonTicket(new LogonTicketRequestDto(2, "", null, DateTime.Now.AddDays(10), Settings.ExampleSettings.AppName, Settings.ExampleSettings.AppSecret, null, null, null));
-
-            labelLogonToken.Text = "Ottenuto un logo token per l'utente 2 valido per 10 giorni, Token: " + ticket.LogonTicket;
-
-            var url = "http://NEXTYEAR2020/ARXivarNextWebPortal/Account/LogonTicket/" + ticket.LogonTicket;
-            logonTicketUrl.Text = url;
-            logonTicketUrlFull.Text = url + "?lang=EN&ReturnUrl=%2FARXivarNextWebPortal%2F#!/tasklistrepeater?showTask=1";
         }
     }
 }

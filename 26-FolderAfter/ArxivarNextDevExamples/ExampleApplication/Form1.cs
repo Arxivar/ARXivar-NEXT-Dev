@@ -8,6 +8,7 @@ using System.Dynamic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -687,6 +688,155 @@ namespace ExampleApplication
             var url = "http://NEXTYEAR2020/ARXivarNextWebPortal/Account/LogonTicket/" + ticket.LogonTicket;
             logonTicketUrl.Text = url;
             logonTicketUrlFull.Text = url + "?lang=EN&ReturnUrl=%2FARXivarNextWebPortal%2F#!/tasklistrepeater?showTask=1";
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            foldersTree.Nodes.Clear();
+
+            FillFolders(null);
+        }
+
+        private void FillFolders(TreeNode node)
+        {
+            var folderApi = new IO.Swagger.Api.FoldersApi(Configuration);
+            var folders = folderApi.FoldersGetByParentId(node == null ? 0 : Convert.ToInt32(node.Name));
+
+            foreach (var folderDto in folders)
+            {
+                if(node == null)
+                    foldersTree.Nodes.Add(folderDto.Id.ToString(), folderDto.Name);
+                else
+                {
+                    node.Nodes.Add(folderDto.Id.ToString(), folderDto.Name);
+                }
+            }
+        }
+
+        private void foldersTree_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            if (e.Node != null)
+            {
+                if (e.Node.Nodes.Count == 0)
+                {
+                    FillFolders(e.Node);
+                }
+
+                SearchDocument(Convert.ToInt32(e.Node.Name));
+            }
+        }
+
+        private void SearchDocument(int folderId)
+        {
+            try
+            {
+
+                var folderApi = new IO.Swagger.Api.FoldersApi(Configuration);
+                var searchV2Api = new IO.Swagger.Api.SearchesV2Api(Configuration);
+
+                var baseSelect = searchV2Api.SearchesV2GetSelect();
+                baseSelect.MaxItems = 0;
+
+                var values = folderApi.FoldersGetDocumentsById(folderId, baseSelect);
+                var profiles = new DataTable();
+
+                foreach (var columnSearchResult in values.First().Columns)
+                {
+                    profiles.Columns.Add(columnSearchResult.Label);
+                }
+
+                foreach (var rowSearchResult in values)
+                {
+                    profiles.Rows.Add(rowSearchResult.Columns.Select(i => i.Value).ToArray());
+                }
+
+                folderDocumentGrid.DataSource = profiles;
+            }
+            catch (Exception exception)
+            {
+                errorLabel.Text = exception.Message;
+            }
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            var folderApi = new IO.Swagger.Api.FoldersApi(Configuration);
+
+            if (foldersTree.SelectedNode == null)
+            {
+                MessageBox.Show("Selezionare un fascicolo nell'albero", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            int docnumberToAddInt;
+            if (!int.TryParse(docnumberToAdd.Text, out docnumberToAddInt) || docnumberToAddInt == 0)
+            {
+                MessageBox.Show("Inserire un docnumber da aggiungere", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            folderApi.FoldersInsertDocnumbers(Convert.ToInt32(foldersTree.SelectedNode.Name), new List<int?>(){ docnumberToAddInt} );
+            SearchDocument(Convert.ToInt32(foldersTree.SelectedNode.Name));
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            var folderApi = new IO.Swagger.Api.FoldersApi(Configuration);
+
+            if (foldersTree.SelectedNode == null)
+            {
+                MessageBox.Show("Selezionare un fascicolo nell'albero", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            var name = Prompt.ShowDialog("Inserire il nome del nuovo fascicolo", "Crea Fascicolo");
+            if (name != string.Empty)
+            {
+                folderApi.FoldersNew(Convert.ToInt32(foldersTree.SelectedNode.Name), name);
+                foldersTree.SelectedNode.Nodes.Clear();
+                FillFolders(foldersTree.SelectedNode);
+            }
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            var folderApi = new IO.Swagger.Api.FoldersApi(Configuration);
+
+            if (foldersTree.SelectedNode == null)
+            {
+                MessageBox.Show("Selezionare un fascicolo nell'albero", "Attenzione", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            folderApi.FoldersDelete(Convert.ToInt32(foldersTree.SelectedNode.Name));
+            var padre = foldersTree.SelectedNode.Parent;
+            if (padre != null)
+            {
+                padre.Nodes.Clear();
+                FillFolders(padre);
+            }
+        }
+    }
+
+    public static class Prompt
+    {
+        public static string ShowDialog(string text, string caption)
+        {
+            Form prompt = new Form()
+            {
+                Width = 500,
+                Height = 150,
+                FormBorderStyle = FormBorderStyle.FixedDialog,
+                Text = caption,
+                StartPosition = FormStartPosition.CenterScreen
+            };
+            Label textLabel = new Label() { Left = 50, Top=20, Width=400, Text=text };
+            TextBox textBox = new TextBox() { Left = 50, Top=50, Width=400 };
+            Button confirmation = new Button() { Text = "Ok", Left=350, Width=100, Top=70, DialogResult = DialogResult.OK };
+            confirmation.Click += (sender, e) => { prompt.Close(); };
+            prompt.Controls.Add(textBox);
+            prompt.Controls.Add(confirmation);
+            prompt.Controls.Add(textLabel);
+            prompt.AcceptButton = confirmation;
+
+            return prompt.ShowDialog() == DialogResult.OK ? textBox.Text : "";
         }
     }
 }

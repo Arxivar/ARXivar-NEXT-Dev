@@ -10,6 +10,6 @@ namespace Settings
     {
         public static string AppName = "ArxivarNextDev";
         public static string AppSecret = "F4E38542DA0047E1";
-        public static string ApiBaseUrl = "http://NEXTYEAR2020/ARXivarNextWebApi/";
+        public static string ApiBaseUrl = "http://79.21.2.148/ARXivarNextWebApi/";
     }
 }
