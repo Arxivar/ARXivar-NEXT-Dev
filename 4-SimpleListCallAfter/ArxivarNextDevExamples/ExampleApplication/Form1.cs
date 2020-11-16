@@ -124,7 +124,7 @@ namespace ExampleApplication
                     var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
                     //Get DocumentTypes list
 
-                    var docTypes = docTypesApi.DocumentTypesGet(1, aooCode);
+                    var docTypes = docTypesApi.DocumentTypesGet_0(1, aooCode);
                     //Bind to the grid
                     aooTable.DataSource = docTypes;
                 }

@@ -131,7 +131,7 @@ namespace ExampleApplication
                     var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
                     //Get DocumentTypes list
 
-                    var docTypes = docTypesApi.DocumentTypesGet(1, aooCode);
+                    var docTypes = docTypesApi.DocumentTypesGet_0(1, aooCode);
                     //Bind to the grid
                     aooTable.DataSource = docTypes;
                 }
@@ -167,7 +167,7 @@ namespace ExampleApplication
             for (int i = 0; i < 100; i++)
             {
                 var aoos = await aooApi.BusinessUnitsGetAsync(0, "");
-                doctypes = await docTypesApi.DocumentTypesGetAsync(1, aoos.First().Code);
+                doctypes = await docTypesApi.DocumentTypesGet_0Async(1, aoos.First().Code);
             }
 
             aooTable.Invoke((MethodInvoker)delegate ()
@@ -252,7 +252,7 @@ namespace ExampleApplication
                 var searchApi = new IO.Swagger.Api.SearchesApi(Configuration);
 
                 var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
-                var docTypes = docTypesApi.DocumentTypesGet(1, "AbleBS");
+                var docTypes = docTypesApi.DocumentTypesGet_0(1, "AbleBS");
                 var classeFatture = docTypes.FirstOrDefault(i => i.Key == "AMM.FATT");
 
                 var defaultSearch = searchApi.SearchesGet();
@@ -331,7 +331,7 @@ namespace ExampleApplication
             var aoo = aooApi.BusinessUnitsGet();
 
             var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
-            var doctypes = docTypesApi.DocumentTypesGet(1, aoo.First().Code);
+            var doctypes = docTypesApi.DocumentTypesGet_0(1, aoo.First().Code);
 
 
             var fo = new OpenFileDialog();
@@ -475,7 +475,7 @@ namespace ExampleApplication
                 var searchV2Api = new IO.Swagger.Api.SearchesV2Api(Configuration);
                 
                 var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
-                var docTypes = docTypesApi.DocumentTypesGet(1, "AbleBS");
+                var docTypes = docTypesApi.DocumentTypesGet_0(1, "AbleBS");
                 var classeFatture = docTypes.FirstOrDefault(i => i.Key == "AMM.FATT");
                 var classeBolle = docTypes.FirstOrDefault(i => i.Key == "AMM.BOL");
 

@@ -137,7 +137,7 @@ namespace ExampleApplication
                     var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
                     //Get DocumentTypes list
 
-                    var docTypes = docTypesApi.DocumentTypesGet(1, aooCode);
+                    var docTypes = docTypesApi.DocumentTypesGet_0(1, aooCode);
                     //Bind to the grid
                     aooTable.DataSource = docTypes;
                 }
@@ -174,7 +174,7 @@ namespace ExampleApplication
             for (int i = 0; i < 100; i++)
             {
                 var aoos = await aooApi.BusinessUnitsGetAsync(0, "");
-                doctypes = await docTypesApi.DocumentTypesGetAsync(1, aoos.First().Code);
+                doctypes = await docTypesApi.DocumentTypesGet_0Async(1, aoos.First().Code);
             }
 
             aooTable.Invoke((MethodInvoker) delegate()
@@ -263,7 +263,7 @@ namespace ExampleApplication
                 var searchApi = new IO.Swagger.Api.SearchesApi(Configuration);
 
                 var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
-                var docTypes = docTypesApi.DocumentTypesGet(1, "AbleBS");
+                var docTypes = docTypesApi.DocumentTypesGet_0(1, "AbleBS");
                 var classeFatture = docTypes.FirstOrDefault(i => i.Key == "AMM.FATT");
 
                 var defaultSearch = searchApi.SearchesGet();
@@ -274,12 +274,12 @@ namespace ExampleApplication
                 ((FieldBaseForSearchDocumentTypeDto) doctypefield).Valore1 =
                     new DocumentTypeSearchFilterDto(classeFatture.DocumentType, classeFatture.Type2,
                         classeFatture.Type3);
-                ((FieldBaseForSearchDocumentTypeDto) doctypefield)._Operator = 3;
+                ((FieldBaseForSearchDocumentTypeDto) doctypefield).Operator = 3;
 
                 var additionals = searchApi.SearchesGetAdditionalByClasse(classeFatture.DocumentType,
                     classeFatture.Type2, classeFatture.Type3, "AbleBS");
                 var codiceFattura = additionals.FirstOrDefault(i => i.Description == "Codice Fattura");
-                ((FieldBaseForSearchStringDto) codiceFattura)._Operator = 11; //non nullo e non vuoto;
+                ((FieldBaseForSearchStringDto) codiceFattura).Operator = 11; //non nullo e non vuoto;
 
                 defaultSearch.Fields.Add(codiceFattura);
                 defaultSelect.Fields.FirstOrDefault(i => i.Label == "Codice Fattura").Selected = true;
@@ -346,7 +346,7 @@ namespace ExampleApplication
             var aoo = aooApi.BusinessUnitsGet();
 
             var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
-            var doctypes = docTypesApi.DocumentTypesGet(1, aoo.First().Code);
+            var doctypes = docTypesApi.DocumentTypesGet_0(1, aoo.First().Code);
 
 
             var fo = new OpenFileDialog();
@@ -499,7 +499,7 @@ namespace ExampleApplication
                 var searchV2Api = new IO.Swagger.Api.SearchesV2Api(Configuration);
 
                 var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
-                var docTypes = docTypesApi.DocumentTypesGet(1, "AbleBS");
+                var docTypes = docTypesApi.DocumentTypesGet_0(1, "AbleBS");
                 var classeFatture = docTypes.FirstOrDefault(i => i.Key == "AMM.FATT");
                 var classeBolle = docTypes.FirstOrDefault(i => i.Key == "AMM.BOL");
 
@@ -510,7 +510,7 @@ namespace ExampleApplication
                 ((FieldBaseForSearchDocumentTypeDto) doctypefieldFatture).Valore1 =
                     new DocumentTypeSearchFilterDto(classeFatture.DocumentType, classeFatture.Type2,
                         classeFatture.Type3);
-                ((FieldBaseForSearchDocumentTypeDto) doctypefieldFatture)._Operator = 3;
+                ((FieldBaseForSearchDocumentTypeDto) doctypefieldFatture).Operator = 3;
 
                 //Get search for the second documenttype
                 var searchBolle = searchV2Api.SearchesV2GetEmpty();
@@ -518,7 +518,7 @@ namespace ExampleApplication
                     i.Name.Equals("DOCUMENTTYPE", StringComparison.CurrentCultureIgnoreCase));
                 ((FieldBaseForSearchDocumentTypeDto) doctypefieldBolle).Valore1 =
                     new DocumentTypeSearchFilterDto(classeBolle.DocumentType, classeBolle.Type2, classeBolle.Type3);
-                ((FieldBaseForSearchDocumentTypeDto) doctypefieldBolle)._Operator = 3;
+                ((FieldBaseForSearchDocumentTypeDto) doctypefieldBolle).Operator = 3;
 
 
                 var baseSelect = searchV2Api.SearchesV2GetSelect_0(classeFatture.Id);
@@ -526,7 +526,7 @@ namespace ExampleApplication
                 var additionalsFatture = searchV2Api.SearchesV2GetAdditionalByClasse(classeFatture.DocumentType,
                     classeFatture.Type2, classeFatture.Type3, "AbleBS");
                 var codiceFattura = additionalsFatture.FirstOrDefault(i => i.Description == "Codice Fattura");
-                ((FieldBaseForSearchStringDto) codiceFattura)._Operator = 11; //non nullo e non vuoto;
+                ((FieldBaseForSearchStringDto) codiceFattura).Operator = 11; //non nullo e non vuoto;
 
                 searchFatture.Fields.Add(codiceFattura);
                 baseSelect.Fields.FirstOrDefault(i => i.Label == "Codice Fattura").Selected = true;
@@ -614,7 +614,7 @@ namespace ExampleApplication
 
                 //Set search for specific addressbook category
                 var catRubrica = search.IntFields.FirstOrDefault(i => i.Name.Equals("Dm_Rubrica.CATEGORIA", StringComparison.CurrentCultureIgnoreCase));
-                catRubrica._Operator = 3;
+                catRubrica.Operator = 3;
                 catRubrica.Multiple = addressBookCategory.Id.ToString();
 
                 //Set select for wanted fields
