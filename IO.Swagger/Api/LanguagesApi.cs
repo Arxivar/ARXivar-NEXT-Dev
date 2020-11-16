@@ -52,8 +52,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lang">Language code</param>
         /// <param name="part">Context of use</param>
-        /// <returns>Object</returns>
-        Object LanguagesGetProfilo (string lang, string part);
+        /// <returns>DictionaryHttpActionResult</returns>
+        DictionaryHttpActionResult LanguagesGetProfilo (string lang, string part);
 
         /// <summary>
         /// This call gets a language service for profile
@@ -64,8 +64,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lang">Language code</param>
         /// <param name="part">Context of use</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> LanguagesGetProfiloWithHttpInfo (string lang, string part);
+        /// <returns>ApiResponse of DictionaryHttpActionResult</returns>
+        ApiResponse<DictionaryHttpActionResult> LanguagesGetProfiloWithHttpInfo (string lang, string part);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -96,8 +96,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lang">Language code</param>
         /// <param name="part">Context of use</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> LanguagesGetProfiloAsync (string lang, string part);
+        /// <returns>Task of DictionaryHttpActionResult</returns>
+        System.Threading.Tasks.Task<DictionaryHttpActionResult> LanguagesGetProfiloAsync (string lang, string part);
 
         /// <summary>
         /// This call gets a language service for profile
@@ -108,8 +108,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lang">Language code</param>
         /// <param name="part">Context of use</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> LanguagesGetProfiloAsyncWithHttpInfo (string lang, string part);
+        /// <returns>Task of ApiResponse (DictionaryHttpActionResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DictionaryHttpActionResult>> LanguagesGetProfiloAsyncWithHttpInfo (string lang, string part);
         #endregion Asynchronous Operations
     }
 
@@ -353,10 +353,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lang">Language code</param>
         /// <param name="part">Context of use</param>
-        /// <returns>Object</returns>
-        public Object LanguagesGetProfilo (string lang, string part)
+        /// <returns>DictionaryHttpActionResult</returns>
+        public DictionaryHttpActionResult LanguagesGetProfilo (string lang, string part)
         {
-             ApiResponse<Object> localVarResponse = LanguagesGetProfiloWithHttpInfo(lang, part);
+             ApiResponse<DictionaryHttpActionResult> localVarResponse = LanguagesGetProfiloWithHttpInfo(lang, part);
              return localVarResponse.Data;
         }
 
@@ -366,8 +366,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lang">Language code</param>
         /// <param name="part">Context of use</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > LanguagesGetProfiloWithHttpInfo (string lang, string part)
+        /// <returns>ApiResponse of DictionaryHttpActionResult</returns>
+        public ApiResponse< DictionaryHttpActionResult > LanguagesGetProfiloWithHttpInfo (string lang, string part)
         {
             // verify the required parameter 'lang' is set
             if (lang == null)
@@ -392,9 +392,7 @@ namespace IO.Swagger.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
+                "text/json"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -422,9 +420,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<DictionaryHttpActionResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (DictionaryHttpActionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DictionaryHttpActionResult)));
         }
 
         /// <summary>
@@ -433,10 +431,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lang">Language code</param>
         /// <param name="part">Context of use</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> LanguagesGetProfiloAsync (string lang, string part)
+        /// <returns>Task of DictionaryHttpActionResult</returns>
+        public async System.Threading.Tasks.Task<DictionaryHttpActionResult> LanguagesGetProfiloAsync (string lang, string part)
         {
-             ApiResponse<Object> localVarResponse = await LanguagesGetProfiloAsyncWithHttpInfo(lang, part);
+             ApiResponse<DictionaryHttpActionResult> localVarResponse = await LanguagesGetProfiloAsyncWithHttpInfo(lang, part);
              return localVarResponse.Data;
 
         }
@@ -447,8 +445,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lang">Language code</param>
         /// <param name="part">Context of use</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> LanguagesGetProfiloAsyncWithHttpInfo (string lang, string part)
+        /// <returns>Task of ApiResponse (DictionaryHttpActionResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DictionaryHttpActionResult>> LanguagesGetProfiloAsyncWithHttpInfo (string lang, string part)
         {
             // verify the required parameter 'lang' is set
             if (lang == null)
@@ -473,9 +471,7 @@ namespace IO.Swagger.Api
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
                 "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
+                "text/json"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -503,9 +499,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<DictionaryHttpActionResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (DictionaryHttpActionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DictionaryHttpActionResult)));
         }
 
     }

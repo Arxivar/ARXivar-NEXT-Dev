@@ -317,8 +317,9 @@ namespace IO.Swagger.Api
         /// <param name="id">Docnumber</param>
         /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
         /// <param name="createZip">Attachment as zip</param>
+        /// <param name="addAttachments">Add also the documents attachments</param>
         /// <returns>System.IO.Stream</returns>
-        System.IO.Stream DocumentsGetForMail (int? id, bool? forView, bool? createZip);
+        System.IO.Stream DocumentsGetForMail (int? id, bool? forView, bool? createZip, bool? addAttachments);
 
         /// <summary>
         /// This call gets the document as attachment inside of an eml file
@@ -330,8 +331,9 @@ namespace IO.Swagger.Api
         /// <param name="id">Docnumber</param>
         /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
         /// <param name="createZip">Attachment as zip</param>
+        /// <param name="addAttachments">Add also the documents attachments</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
-        ApiResponse<System.IO.Stream> DocumentsGetForMailWithHttpInfo (int? id, bool? forView, bool? createZip);
+        ApiResponse<System.IO.Stream> DocumentsGetForMailWithHttpInfo (int? id, bool? forView, bool? createZip, bool? addAttachments);
         /// <summary>
         /// This call returns the file associated with the attachment into in a process workflow
         /// </summary>
@@ -573,8 +575,9 @@ namespace IO.Swagger.Api
         /// <param name="taskWorkId">Id of task</param>
         /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
         /// <param name="createZip">Attachment as zip</param>
+        /// <param name="addAttachments">Add also the documents attachments</param>
         /// <returns>System.IO.Stream</returns>
-        System.IO.Stream DocumentsGetProcessdocForMail (int? processDocId, int? taskWorkId, bool? forView, bool? createZip);
+        System.IO.Stream DocumentsGetProcessdocForMail (int? processDocId, int? taskWorkId, bool? forView, bool? createZip, bool? addAttachments);
 
         /// <summary>
         /// This call gets the process document as attachment inside of an eml file
@@ -587,8 +590,9 @@ namespace IO.Swagger.Api
         /// <param name="taskWorkId">Id of task</param>
         /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
         /// <param name="createZip">Attachment as zip</param>
+        /// <param name="addAttachments">Add also the documents attachments</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
-        ApiResponse<System.IO.Stream> DocumentsGetProcessdocForMailWithHttpInfo (int? processDocId, int? taskWorkId, bool? forView, bool? createZip);
+        ApiResponse<System.IO.Stream> DocumentsGetProcessdocForMailWithHttpInfo (int? processDocId, int? taskWorkId, bool? forView, bool? createZip, bool? addAttachments);
         /// <summary>
         /// This call retrieve the attachemnt file by its revision
         /// </summary>
@@ -637,6 +641,31 @@ namespace IO.Swagger.Api
         /// <param name="docNumber">Document Identifier</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DocumentsSetDocumentWithHttpInfo (string cacheId, int? docNumber);
+        /// <summary>
+        /// This call update a file associated to a profile. The update mode is specified by the update option parameter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cacheId">Identifier of cache</param>
+        /// <param name="docNumber">Document Identifier</param>
+        /// <param name="updateOption">Possible values:  0: None  1: ForceRevision  2: ForceOverWrite </param>
+        /// <returns></returns>
+        void DocumentsSetDocumentWithOption (string cacheId, int? docNumber, int? updateOption);
+
+        /// <summary>
+        /// This call update a file associated to a profile. The update mode is specified by the update option parameter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cacheId">Identifier of cache</param>
+        /// <param name="docNumber">Document Identifier</param>
+        /// <param name="updateOption">Possible values:  0: None  1: ForceRevision  2: ForceOverWrite </param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DocumentsSetDocumentWithOptionWithHttpInfo (string cacheId, int? docNumber, int? updateOption);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -932,8 +961,9 @@ namespace IO.Swagger.Api
         /// <param name="id">Docnumber</param>
         /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
         /// <param name="createZip">Attachment as zip</param>
+        /// <param name="addAttachments">Add also the documents attachments</param>
         /// <returns>Task of System.IO.Stream</returns>
-        System.Threading.Tasks.Task<System.IO.Stream> DocumentsGetForMailAsync (int? id, bool? forView, bool? createZip);
+        System.Threading.Tasks.Task<System.IO.Stream> DocumentsGetForMailAsync (int? id, bool? forView, bool? createZip, bool? addAttachments);
 
         /// <summary>
         /// This call gets the document as attachment inside of an eml file
@@ -945,8 +975,9 @@ namespace IO.Swagger.Api
         /// <param name="id">Docnumber</param>
         /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
         /// <param name="createZip">Attachment as zip</param>
+        /// <param name="addAttachments">Add also the documents attachments</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DocumentsGetForMailAsyncWithHttpInfo (int? id, bool? forView, bool? createZip);
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DocumentsGetForMailAsyncWithHttpInfo (int? id, bool? forView, bool? createZip, bool? addAttachments);
         /// <summary>
         /// This call returns the file associated with the attachment into in a process workflow
         /// </summary>
@@ -1188,8 +1219,9 @@ namespace IO.Swagger.Api
         /// <param name="taskWorkId">Id of task</param>
         /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
         /// <param name="createZip">Attachment as zip</param>
+        /// <param name="addAttachments">Add also the documents attachments</param>
         /// <returns>Task of System.IO.Stream</returns>
-        System.Threading.Tasks.Task<System.IO.Stream> DocumentsGetProcessdocForMailAsync (int? processDocId, int? taskWorkId, bool? forView, bool? createZip);
+        System.Threading.Tasks.Task<System.IO.Stream> DocumentsGetProcessdocForMailAsync (int? processDocId, int? taskWorkId, bool? forView, bool? createZip, bool? addAttachments);
 
         /// <summary>
         /// This call gets the process document as attachment inside of an eml file
@@ -1202,8 +1234,9 @@ namespace IO.Swagger.Api
         /// <param name="taskWorkId">Id of task</param>
         /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
         /// <param name="createZip">Attachment as zip</param>
+        /// <param name="addAttachments">Add also the documents attachments</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DocumentsGetProcessdocForMailAsyncWithHttpInfo (int? processDocId, int? taskWorkId, bool? forView, bool? createZip);
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DocumentsGetProcessdocForMailAsyncWithHttpInfo (int? processDocId, int? taskWorkId, bool? forView, bool? createZip, bool? addAttachments);
         /// <summary>
         /// This call retrieve the attachemnt file by its revision
         /// </summary>
@@ -1252,6 +1285,31 @@ namespace IO.Swagger.Api
         /// <param name="docNumber">Document Identifier</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DocumentsSetDocumentAsyncWithHttpInfo (string cacheId, int? docNumber);
+        /// <summary>
+        /// This call update a file associated to a profile. The update mode is specified by the update option parameter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cacheId">Identifier of cache</param>
+        /// <param name="docNumber">Document Identifier</param>
+        /// <param name="updateOption">Possible values:  0: None  1: ForceRevision  2: ForceOverWrite </param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DocumentsSetDocumentWithOptionAsync (string cacheId, int? docNumber, int? updateOption);
+
+        /// <summary>
+        /// This call update a file associated to a profile. The update mode is specified by the update option parameter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cacheId">Identifier of cache</param>
+        /// <param name="docNumber">Document Identifier</param>
+        /// <param name="updateOption">Possible values:  0: None  1: ForceRevision  2: ForceOverWrite </param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DocumentsSetDocumentWithOptionAsyncWithHttpInfo (string cacheId, int? docNumber, int? updateOption);
         #endregion Asynchronous Operations
     }
 
@@ -3306,10 +3364,11 @@ namespace IO.Swagger.Api
         /// <param name="id">Docnumber</param>
         /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
         /// <param name="createZip">Attachment as zip</param>
+        /// <param name="addAttachments">Add also the documents attachments</param>
         /// <returns>System.IO.Stream</returns>
-        public System.IO.Stream DocumentsGetForMail (int? id, bool? forView, bool? createZip)
+        public System.IO.Stream DocumentsGetForMail (int? id, bool? forView, bool? createZip, bool? addAttachments)
         {
-             ApiResponse<System.IO.Stream> localVarResponse = DocumentsGetForMailWithHttpInfo(id, forView, createZip);
+             ApiResponse<System.IO.Stream> localVarResponse = DocumentsGetForMailWithHttpInfo(id, forView, createZip, addAttachments);
              return localVarResponse.Data;
         }
 
@@ -3320,8 +3379,9 @@ namespace IO.Swagger.Api
         /// <param name="id">Docnumber</param>
         /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
         /// <param name="createZip">Attachment as zip</param>
+        /// <param name="addAttachments">Add also the documents attachments</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
-        public ApiResponse< System.IO.Stream > DocumentsGetForMailWithHttpInfo (int? id, bool? forView, bool? createZip)
+        public ApiResponse< System.IO.Stream > DocumentsGetForMailWithHttpInfo (int? id, bool? forView, bool? createZip, bool? addAttachments)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -3332,6 +3392,9 @@ namespace IO.Swagger.Api
             // verify the required parameter 'createZip' is set
             if (createZip == null)
                 throw new ApiException(400, "Missing required parameter 'createZip' when calling DocumentsApi->DocumentsGetForMail");
+            // verify the required parameter 'addAttachments' is set
+            if (addAttachments == null)
+                throw new ApiException(400, "Missing required parameter 'addAttachments' when calling DocumentsApi->DocumentsGetForMail");
 
             var localVarPath = "/api/Documents/GetMail/{id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3357,6 +3420,7 @@ namespace IO.Swagger.Api
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (forView != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "forView", forView)); // query parameter
             if (createZip != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "createZip", createZip)); // query parameter
+            if (addAttachments != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "addAttachments", addAttachments)); // query parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -3389,10 +3453,11 @@ namespace IO.Swagger.Api
         /// <param name="id">Docnumber</param>
         /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
         /// <param name="createZip">Attachment as zip</param>
+        /// <param name="addAttachments">Add also the documents attachments</param>
         /// <returns>Task of System.IO.Stream</returns>
-        public async System.Threading.Tasks.Task<System.IO.Stream> DocumentsGetForMailAsync (int? id, bool? forView, bool? createZip)
+        public async System.Threading.Tasks.Task<System.IO.Stream> DocumentsGetForMailAsync (int? id, bool? forView, bool? createZip, bool? addAttachments)
         {
-             ApiResponse<System.IO.Stream> localVarResponse = await DocumentsGetForMailAsyncWithHttpInfo(id, forView, createZip);
+             ApiResponse<System.IO.Stream> localVarResponse = await DocumentsGetForMailAsyncWithHttpInfo(id, forView, createZip, addAttachments);
              return localVarResponse.Data;
 
         }
@@ -3404,8 +3469,9 @@ namespace IO.Swagger.Api
         /// <param name="id">Docnumber</param>
         /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
         /// <param name="createZip">Attachment as zip</param>
+        /// <param name="addAttachments">Add also the documents attachments</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DocumentsGetForMailAsyncWithHttpInfo (int? id, bool? forView, bool? createZip)
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DocumentsGetForMailAsyncWithHttpInfo (int? id, bool? forView, bool? createZip, bool? addAttachments)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -3416,6 +3482,9 @@ namespace IO.Swagger.Api
             // verify the required parameter 'createZip' is set
             if (createZip == null)
                 throw new ApiException(400, "Missing required parameter 'createZip' when calling DocumentsApi->DocumentsGetForMail");
+            // verify the required parameter 'addAttachments' is set
+            if (addAttachments == null)
+                throw new ApiException(400, "Missing required parameter 'addAttachments' when calling DocumentsApi->DocumentsGetForMail");
 
             var localVarPath = "/api/Documents/GetMail/{id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3441,6 +3510,7 @@ namespace IO.Swagger.Api
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (forView != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "forView", forView)); // query parameter
             if (createZip != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "createZip", createZip)); // query parameter
+            if (addAttachments != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "addAttachments", addAttachments)); // query parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -5060,10 +5130,11 @@ namespace IO.Swagger.Api
         /// <param name="taskWorkId">Id of task</param>
         /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
         /// <param name="createZip">Attachment as zip</param>
+        /// <param name="addAttachments">Add also the documents attachments</param>
         /// <returns>System.IO.Stream</returns>
-        public System.IO.Stream DocumentsGetProcessdocForMail (int? processDocId, int? taskWorkId, bool? forView, bool? createZip)
+        public System.IO.Stream DocumentsGetProcessdocForMail (int? processDocId, int? taskWorkId, bool? forView, bool? createZip, bool? addAttachments)
         {
-             ApiResponse<System.IO.Stream> localVarResponse = DocumentsGetProcessdocForMailWithHttpInfo(processDocId, taskWorkId, forView, createZip);
+             ApiResponse<System.IO.Stream> localVarResponse = DocumentsGetProcessdocForMailWithHttpInfo(processDocId, taskWorkId, forView, createZip, addAttachments);
              return localVarResponse.Data;
         }
 
@@ -5075,8 +5146,9 @@ namespace IO.Swagger.Api
         /// <param name="taskWorkId">Id of task</param>
         /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
         /// <param name="createZip">Attachment as zip</param>
+        /// <param name="addAttachments">Add also the documents attachments</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
-        public ApiResponse< System.IO.Stream > DocumentsGetProcessdocForMailWithHttpInfo (int? processDocId, int? taskWorkId, bool? forView, bool? createZip)
+        public ApiResponse< System.IO.Stream > DocumentsGetProcessdocForMailWithHttpInfo (int? processDocId, int? taskWorkId, bool? forView, bool? createZip, bool? addAttachments)
         {
             // verify the required parameter 'processDocId' is set
             if (processDocId == null)
@@ -5090,6 +5162,9 @@ namespace IO.Swagger.Api
             // verify the required parameter 'createZip' is set
             if (createZip == null)
                 throw new ApiException(400, "Missing required parameter 'createZip' when calling DocumentsApi->DocumentsGetProcessdocForMail");
+            // verify the required parameter 'addAttachments' is set
+            if (addAttachments == null)
+                throw new ApiException(400, "Missing required parameter 'addAttachments' when calling DocumentsApi->DocumentsGetProcessdocForMail");
 
             var localVarPath = "/api/Documents/GetMail/ForTask/{processDocId}/{taskWorkId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5116,6 +5191,7 @@ namespace IO.Swagger.Api
             if (taskWorkId != null) localVarPathParams.Add("taskWorkId", this.Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
             if (forView != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "forView", forView)); // query parameter
             if (createZip != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "createZip", createZip)); // query parameter
+            if (addAttachments != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "addAttachments", addAttachments)); // query parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -5149,10 +5225,11 @@ namespace IO.Swagger.Api
         /// <param name="taskWorkId">Id of task</param>
         /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
         /// <param name="createZip">Attachment as zip</param>
+        /// <param name="addAttachments">Add also the documents attachments</param>
         /// <returns>Task of System.IO.Stream</returns>
-        public async System.Threading.Tasks.Task<System.IO.Stream> DocumentsGetProcessdocForMailAsync (int? processDocId, int? taskWorkId, bool? forView, bool? createZip)
+        public async System.Threading.Tasks.Task<System.IO.Stream> DocumentsGetProcessdocForMailAsync (int? processDocId, int? taskWorkId, bool? forView, bool? createZip, bool? addAttachments)
         {
-             ApiResponse<System.IO.Stream> localVarResponse = await DocumentsGetProcessdocForMailAsyncWithHttpInfo(processDocId, taskWorkId, forView, createZip);
+             ApiResponse<System.IO.Stream> localVarResponse = await DocumentsGetProcessdocForMailAsyncWithHttpInfo(processDocId, taskWorkId, forView, createZip, addAttachments);
              return localVarResponse.Data;
 
         }
@@ -5165,8 +5242,9 @@ namespace IO.Swagger.Api
         /// <param name="taskWorkId">Id of task</param>
         /// <param name="forView">Cryptographic envelopes will be removed and stylesheet applied</param>
         /// <param name="createZip">Attachment as zip</param>
+        /// <param name="addAttachments">Add also the documents attachments</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DocumentsGetProcessdocForMailAsyncWithHttpInfo (int? processDocId, int? taskWorkId, bool? forView, bool? createZip)
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DocumentsGetProcessdocForMailAsyncWithHttpInfo (int? processDocId, int? taskWorkId, bool? forView, bool? createZip, bool? addAttachments)
         {
             // verify the required parameter 'processDocId' is set
             if (processDocId == null)
@@ -5180,6 +5258,9 @@ namespace IO.Swagger.Api
             // verify the required parameter 'createZip' is set
             if (createZip == null)
                 throw new ApiException(400, "Missing required parameter 'createZip' when calling DocumentsApi->DocumentsGetProcessdocForMail");
+            // verify the required parameter 'addAttachments' is set
+            if (addAttachments == null)
+                throw new ApiException(400, "Missing required parameter 'addAttachments' when calling DocumentsApi->DocumentsGetProcessdocForMail");
 
             var localVarPath = "/api/Documents/GetMail/ForTask/{processDocId}/{taskWorkId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5206,6 +5287,7 @@ namespace IO.Swagger.Api
             if (taskWorkId != null) localVarPathParams.Add("taskWorkId", this.Configuration.ApiClient.ParameterToString(taskWorkId)); // path parameter
             if (forView != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "forView", forView)); // query parameter
             if (createZip != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "createZip", createZip)); // query parameter
+            if (addAttachments != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "addAttachments", addAttachments)); // query parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -5535,6 +5617,169 @@ namespace IO.Swagger.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("DocumentsSetDocument", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// This call update a file associated to a profile. The update mode is specified by the update option parameter 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cacheId">Identifier of cache</param>
+        /// <param name="docNumber">Document Identifier</param>
+        /// <param name="updateOption">Possible values:  0: None  1: ForceRevision  2: ForceOverWrite </param>
+        /// <returns></returns>
+        public void DocumentsSetDocumentWithOption (string cacheId, int? docNumber, int? updateOption)
+        {
+             DocumentsSetDocumentWithOptionWithHttpInfo(cacheId, docNumber, updateOption);
+        }
+
+        /// <summary>
+        /// This call update a file associated to a profile. The update mode is specified by the update option parameter 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cacheId">Identifier of cache</param>
+        /// <param name="docNumber">Document Identifier</param>
+        /// <param name="updateOption">Possible values:  0: None  1: ForceRevision  2: ForceOverWrite </param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DocumentsSetDocumentWithOptionWithHttpInfo (string cacheId, int? docNumber, int? updateOption)
+        {
+            // verify the required parameter 'cacheId' is set
+            if (cacheId == null)
+                throw new ApiException(400, "Missing required parameter 'cacheId' when calling DocumentsApi->DocumentsSetDocumentWithOption");
+            // verify the required parameter 'docNumber' is set
+            if (docNumber == null)
+                throw new ApiException(400, "Missing required parameter 'docNumber' when calling DocumentsApi->DocumentsSetDocumentWithOption");
+            // verify the required parameter 'updateOption' is set
+            if (updateOption == null)
+                throw new ApiException(400, "Missing required parameter 'updateOption' when calling DocumentsApi->DocumentsSetDocumentWithOption");
+
+            var localVarPath = "/api/Documents/{docNumber}/{cacheId}/{updateOption}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (cacheId != null) localVarPathParams.Add("cacheId", this.Configuration.ApiClient.ParameterToString(cacheId)); // path parameter
+            if (docNumber != null) localVarPathParams.Add("docNumber", this.Configuration.ApiClient.ParameterToString(docNumber)); // path parameter
+            if (updateOption != null) localVarPathParams.Add("updateOption", this.Configuration.ApiClient.ParameterToString(updateOption)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentsSetDocumentWithOption", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// This call update a file associated to a profile. The update mode is specified by the update option parameter 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cacheId">Identifier of cache</param>
+        /// <param name="docNumber">Document Identifier</param>
+        /// <param name="updateOption">Possible values:  0: None  1: ForceRevision  2: ForceOverWrite </param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DocumentsSetDocumentWithOptionAsync (string cacheId, int? docNumber, int? updateOption)
+        {
+             await DocumentsSetDocumentWithOptionAsyncWithHttpInfo(cacheId, docNumber, updateOption);
+
+        }
+
+        /// <summary>
+        /// This call update a file associated to a profile. The update mode is specified by the update option parameter 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cacheId">Identifier of cache</param>
+        /// <param name="docNumber">Document Identifier</param>
+        /// <param name="updateOption">Possible values:  0: None  1: ForceRevision  2: ForceOverWrite </param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DocumentsSetDocumentWithOptionAsyncWithHttpInfo (string cacheId, int? docNumber, int? updateOption)
+        {
+            // verify the required parameter 'cacheId' is set
+            if (cacheId == null)
+                throw new ApiException(400, "Missing required parameter 'cacheId' when calling DocumentsApi->DocumentsSetDocumentWithOption");
+            // verify the required parameter 'docNumber' is set
+            if (docNumber == null)
+                throw new ApiException(400, "Missing required parameter 'docNumber' when calling DocumentsApi->DocumentsSetDocumentWithOption");
+            // verify the required parameter 'updateOption' is set
+            if (updateOption == null)
+                throw new ApiException(400, "Missing required parameter 'updateOption' when calling DocumentsApi->DocumentsSetDocumentWithOption");
+
+            var localVarPath = "/api/Documents/{docNumber}/{cacheId}/{updateOption}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (cacheId != null) localVarPathParams.Add("cacheId", this.Configuration.ApiClient.ParameterToString(cacheId)); // path parameter
+            if (docNumber != null) localVarPathParams.Add("docNumber", this.Configuration.ApiClient.ParameterToString(docNumber)); // path parameter
+            if (updateOption != null) localVarPathParams.Add("updateOption", this.Configuration.ApiClient.ParameterToString(updateOption)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentsSetDocumentWithOption", localVarResponse);
                 if (exception != null) throw exception;
             }
 

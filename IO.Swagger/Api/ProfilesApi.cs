@@ -631,6 +631,27 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of ProfileResultDTO</returns>
         ApiResponse<ProfileResultDTO> ProfilesPostForBarcodeWithHttpInfo (ProfileDTO profile = null);
         /// <summary>
+        /// This call performs the insertion of new profile for mail
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mail"></param>
+        /// <returns>ProfileMailResponseDTO</returns>
+        ProfileMailResponseDTO ProfilesPostForMail (MailDTO mail);
+
+        /// <summary>
+        /// This call performs the insertion of new profile for mail
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mail"></param>
+        /// <returns>ApiResponse of ProfileMailResponseDTO</returns>
+        ApiResponse<ProfileMailResponseDTO> ProfilesPostForMailWithHttpInfo (MailDTO mail);
+        /// <summary>
         /// This call updates an existent profile
         /// </summary>
         /// <remarks>
@@ -1326,6 +1347,27 @@ namespace IO.Swagger.Api
         /// <param name="profile"> (optional)</param>
         /// <returns>Task of ApiResponse (ProfileResultDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<ProfileResultDTO>> ProfilesPostForBarcodeAsyncWithHttpInfo (ProfileDTO profile = null);
+        /// <summary>
+        /// This call performs the insertion of new profile for mail
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mail"></param>
+        /// <returns>Task of ProfileMailResponseDTO</returns>
+        System.Threading.Tasks.Task<ProfileMailResponseDTO> ProfilesPostForMailAsync (MailDTO mail);
+
+        /// <summary>
+        /// This call performs the insertion of new profile for mail
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mail"></param>
+        /// <returns>Task of ApiResponse (ProfileMailResponseDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ProfileMailResponseDTO>> ProfilesPostForMailAsyncWithHttpInfo (MailDTO mail);
         /// <summary>
         /// This call updates an existent profile
         /// </summary>
@@ -5882,6 +5924,179 @@ namespace IO.Swagger.Api
             return new ApiResponse<ProfileResultDTO>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ProfileResultDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProfileResultDTO)));
+        }
+
+        /// <summary>
+        /// This call performs the insertion of new profile for mail 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mail"></param>
+        /// <returns>ProfileMailResponseDTO</returns>
+        public ProfileMailResponseDTO ProfilesPostForMail (MailDTO mail)
+        {
+             ApiResponse<ProfileMailResponseDTO> localVarResponse = ProfilesPostForMailWithHttpInfo(mail);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call performs the insertion of new profile for mail 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mail"></param>
+        /// <returns>ApiResponse of ProfileMailResponseDTO</returns>
+        public ApiResponse< ProfileMailResponseDTO > ProfilesPostForMailWithHttpInfo (MailDTO mail)
+        {
+            // verify the required parameter 'mail' is set
+            if (mail == null)
+                throw new ApiException(400, "Missing required parameter 'mail' when calling ProfilesApi->ProfilesPostForMail");
+
+            var localVarPath = "/api/Profiles/formail";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (mail != null && mail.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(mail); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = mail; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ProfilesPostForMail", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ProfileMailResponseDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ProfileMailResponseDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProfileMailResponseDTO)));
+        }
+
+        /// <summary>
+        /// This call performs the insertion of new profile for mail 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mail"></param>
+        /// <returns>Task of ProfileMailResponseDTO</returns>
+        public async System.Threading.Tasks.Task<ProfileMailResponseDTO> ProfilesPostForMailAsync (MailDTO mail)
+        {
+             ApiResponse<ProfileMailResponseDTO> localVarResponse = await ProfilesPostForMailAsyncWithHttpInfo(mail);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call performs the insertion of new profile for mail 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mail"></param>
+        /// <returns>Task of ApiResponse (ProfileMailResponseDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ProfileMailResponseDTO>> ProfilesPostForMailAsyncWithHttpInfo (MailDTO mail)
+        {
+            // verify the required parameter 'mail' is set
+            if (mail == null)
+                throw new ApiException(400, "Missing required parameter 'mail' when calling ProfilesApi->ProfilesPostForMail");
+
+            var localVarPath = "/api/Profiles/formail";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (mail != null && mail.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(mail); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = mail; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ProfilesPostForMail", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ProfileMailResponseDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ProfileMailResponseDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProfileMailResponseDTO)));
         }
 
         /// <summary>

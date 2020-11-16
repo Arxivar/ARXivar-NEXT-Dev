@@ -514,7 +514,7 @@ namespace IO.Swagger.Management.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="automaticReferenceId"></param>
+        /// <param name="automaticReferenceId">Document Type system id</param>
         /// <returns>AutomaticReferenceDTO</returns>
         AutomaticReferenceDTO DocumentTypesManagementGetReferencesById (int? automaticReferenceId);
 
@@ -525,7 +525,7 @@ namespace IO.Swagger.Management.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="automaticReferenceId"></param>
+        /// <param name="automaticReferenceId">Document Type system id</param>
         /// <returns>ApiResponse of AutomaticReferenceDTO</returns>
         ApiResponse<AutomaticReferenceDTO> DocumentTypesManagementGetReferencesByIdWithHttpInfo (int? automaticReferenceId);
         /// <summary>
@@ -1441,7 +1441,7 @@ namespace IO.Swagger.Management.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="automaticReferenceId"></param>
+        /// <param name="automaticReferenceId">Document Type system id</param>
         /// <returns>Task of AutomaticReferenceDTO</returns>
         System.Threading.Tasks.Task<AutomaticReferenceDTO> DocumentTypesManagementGetReferencesByIdAsync (int? automaticReferenceId);
 
@@ -1452,7 +1452,7 @@ namespace IO.Swagger.Management.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="automaticReferenceId"></param>
+        /// <param name="automaticReferenceId">Document Type system id</param>
         /// <returns>Task of ApiResponse (AutomaticReferenceDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<AutomaticReferenceDTO>> DocumentTypesManagementGetReferencesByIdAsyncWithHttpInfo (int? automaticReferenceId);
         /// <summary>
@@ -5341,7 +5341,7 @@ namespace IO.Swagger.Management.Api
         /// This call returns automatic reference by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="automaticReferenceId"></param>
+        /// <param name="automaticReferenceId">Document Type system id</param>
         /// <returns>AutomaticReferenceDTO</returns>
         public AutomaticReferenceDTO DocumentTypesManagementGetReferencesById (int? automaticReferenceId)
         {
@@ -5353,7 +5353,7 @@ namespace IO.Swagger.Management.Api
         /// This call returns automatic reference by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="automaticReferenceId"></param>
+        /// <param name="automaticReferenceId">Document Type system id</param>
         /// <returns>ApiResponse of AutomaticReferenceDTO</returns>
         public ApiResponse< AutomaticReferenceDTO > DocumentTypesManagementGetReferencesByIdWithHttpInfo (int? automaticReferenceId)
         {
@@ -5361,7 +5361,7 @@ namespace IO.Swagger.Management.Api
             if (automaticReferenceId == null)
                 throw new ApiException(400, "Missing required parameter 'automaticReferenceId' when calling DocumentTypesManagementApi->DocumentTypesManagementGetReferencesById");
 
-            var localVarPath = "/api/management/DocumentTypes/AutomaticReferences/{AutomaticReferenceId}";
+            var localVarPath = "/api/management/DocumentTypes/AutomaticReferences/{automaticReferenceId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -5385,7 +5385,7 @@ namespace IO.Swagger.Management.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (automaticReferenceId != null) localVarPathParams.Add("AutomaticReferenceId", this.Configuration.ApiClient.ParameterToString(automaticReferenceId)); // path parameter
+            if (automaticReferenceId != null) localVarPathParams.Add("automaticReferenceId", this.Configuration.ApiClient.ParameterToString(automaticReferenceId)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -5415,7 +5415,7 @@ namespace IO.Swagger.Management.Api
         /// This call returns automatic reference by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="automaticReferenceId"></param>
+        /// <param name="automaticReferenceId">Document Type system id</param>
         /// <returns>Task of AutomaticReferenceDTO</returns>
         public async System.Threading.Tasks.Task<AutomaticReferenceDTO> DocumentTypesManagementGetReferencesByIdAsync (int? automaticReferenceId)
         {
@@ -5428,7 +5428,7 @@ namespace IO.Swagger.Management.Api
         /// This call returns automatic reference by its id 
         /// </summary>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="automaticReferenceId"></param>
+        /// <param name="automaticReferenceId">Document Type system id</param>
         /// <returns>Task of ApiResponse (AutomaticReferenceDTO)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AutomaticReferenceDTO>> DocumentTypesManagementGetReferencesByIdAsyncWithHttpInfo (int? automaticReferenceId)
         {
@@ -5436,7 +5436,7 @@ namespace IO.Swagger.Management.Api
             if (automaticReferenceId == null)
                 throw new ApiException(400, "Missing required parameter 'automaticReferenceId' when calling DocumentTypesManagementApi->DocumentTypesManagementGetReferencesById");
 
-            var localVarPath = "/api/management/DocumentTypes/AutomaticReferences/{AutomaticReferenceId}";
+            var localVarPath = "/api/management/DocumentTypes/AutomaticReferences/{automaticReferenceId}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -5460,7 +5460,7 @@ namespace IO.Swagger.Management.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (automaticReferenceId != null) localVarPathParams.Add("AutomaticReferenceId", this.Configuration.ApiClient.ParameterToString(automaticReferenceId)); // path parameter
+            if (automaticReferenceId != null) localVarPathParams.Add("automaticReferenceId", this.Configuration.ApiClient.ParameterToString(automaticReferenceId)); // path parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))

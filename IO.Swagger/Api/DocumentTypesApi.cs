@@ -25,28 +25,24 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// This call returns the document types that the user can access
+        /// This call returns all the document types configured
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
-        /// <param name="businessUnitCode">Business Unit (optional) (optional)</param>
         /// <returns>List&lt;DocumentTypeBaseDTO&gt;</returns>
-        List<DocumentTypeBaseDTO> DocumentTypesGet (int? mode, string businessUnitCode = null);
+        List<DocumentTypeBaseDTO> DocumentTypesGet ();
 
         /// <summary>
-        /// This call returns the document types that the user can access
+        /// This call returns all the document types configured
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
-        /// <param name="businessUnitCode">Business Unit (optional) (optional)</param>
         /// <returns>ApiResponse of List&lt;DocumentTypeBaseDTO&gt;</returns>
-        ApiResponse<List<DocumentTypeBaseDTO>> DocumentTypesGetWithHttpInfo (int? mode, string businessUnitCode = null);
+        ApiResponse<List<DocumentTypeBaseDTO>> DocumentTypesGetWithHttpInfo ();
         /// <summary>
         /// This call returns a specific document type
         /// </summary>
@@ -139,8 +135,25 @@ namespace IO.Swagger.Api
         /// <param name="forProtocol">If the type is of Protocol (PA) (default false)</param>
         /// <returns>ApiResponse of DocumentTypeBaseTreeDTO</returns>
         ApiResponse<DocumentTypeBaseTreeDTO> DocumentTypesGetTreeOldWithHttpInfo (int? mode, string businessunitcode, bool? forProtocol);
-        #endregion Synchronous Operations
-        #region Asynchronous Operations
+        /// <summary>
+        /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>DocumentTypeBaseTreeDTO</returns>
+        DocumentTypeBaseTreeDTO DocumentTypesGetTree_0 ();
+
+        /// <summary>
+        /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of DocumentTypeBaseTreeDTO</returns>
+        ApiResponse<DocumentTypeBaseTreeDTO> DocumentTypesGetTree_0WithHttpInfo ();
         /// <summary>
         /// This call returns the document types that the user can access
         /// </summary>
@@ -150,8 +163,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
         /// <param name="businessUnitCode">Business Unit (optional) (optional)</param>
-        /// <returns>Task of List&lt;DocumentTypeBaseDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<DocumentTypeBaseDTO>> DocumentTypesGetAsync (int? mode, string businessUnitCode = null);
+        /// <returns>List&lt;DocumentTypeBaseDTO&gt;</returns>
+        List<DocumentTypeBaseDTO> DocumentTypesGet_0 (int? mode, string businessUnitCode = null);
 
         /// <summary>
         /// This call returns the document types that the user can access
@@ -162,8 +175,29 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
         /// <param name="businessUnitCode">Business Unit (optional) (optional)</param>
+        /// <returns>ApiResponse of List&lt;DocumentTypeBaseDTO&gt;</returns>
+        ApiResponse<List<DocumentTypeBaseDTO>> DocumentTypesGet_0WithHttpInfo (int? mode, string businessUnitCode = null);
+        #endregion Synchronous Operations
+        #region Asynchronous Operations
+        /// <summary>
+        /// This call returns all the document types configured
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of List&lt;DocumentTypeBaseDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<DocumentTypeBaseDTO>> DocumentTypesGetAsync ();
+
+        /// <summary>
+        /// This call returns all the document types configured
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;DocumentTypeBaseDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<DocumentTypeBaseDTO>>> DocumentTypesGetAsyncWithHttpInfo (int? mode, string businessUnitCode = null);
+        System.Threading.Tasks.Task<ApiResponse<List<DocumentTypeBaseDTO>>> DocumentTypesGetAsyncWithHttpInfo ();
         /// <summary>
         /// This call returns a specific document type
         /// </summary>
@@ -256,6 +290,48 @@ namespace IO.Swagger.Api
         /// <param name="forProtocol">If the type is of Protocol (PA) (default false)</param>
         /// <returns>Task of ApiResponse (DocumentTypeBaseTreeDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocumentTypeBaseTreeDTO>> DocumentTypesGetTreeOldAsyncWithHttpInfo (int? mode, string businessunitcode, bool? forProtocol);
+        /// <summary>
+        /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of DocumentTypeBaseTreeDTO</returns>
+        System.Threading.Tasks.Task<DocumentTypeBaseTreeDTO> DocumentTypesGetTree_0Async ();
+
+        /// <summary>
+        /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (DocumentTypeBaseTreeDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DocumentTypeBaseTreeDTO>> DocumentTypesGetTree_0AsyncWithHttpInfo ();
+        /// <summary>
+        /// This call returns the document types that the user can access
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
+        /// <param name="businessUnitCode">Business Unit (optional) (optional)</param>
+        /// <returns>Task of List&lt;DocumentTypeBaseDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<DocumentTypeBaseDTO>> DocumentTypesGet_0Async (int? mode, string businessUnitCode = null);
+
+        /// <summary>
+        /// This call returns the document types that the user can access
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
+        /// <param name="businessUnitCode">Business Unit (optional) (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;DocumentTypeBaseDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<DocumentTypeBaseDTO>>> DocumentTypesGet_0AsyncWithHttpInfo (int? mode, string businessUnitCode = null);
         #endregion Asynchronous Operations
     }
 
@@ -357,32 +433,25 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call returns the document types that the user can access 
+        /// This call returns all the document types configured 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
-        /// <param name="businessUnitCode">Business Unit (optional) (optional)</param>
         /// <returns>List&lt;DocumentTypeBaseDTO&gt;</returns>
-        public List<DocumentTypeBaseDTO> DocumentTypesGet (int? mode, string businessUnitCode = null)
+        public List<DocumentTypeBaseDTO> DocumentTypesGet ()
         {
-             ApiResponse<List<DocumentTypeBaseDTO>> localVarResponse = DocumentTypesGetWithHttpInfo(mode, businessUnitCode);
+             ApiResponse<List<DocumentTypeBaseDTO>> localVarResponse = DocumentTypesGetWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// This call returns the document types that the user can access 
+        /// This call returns all the document types configured 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
-        /// <param name="businessUnitCode">Business Unit (optional) (optional)</param>
         /// <returns>ApiResponse of List&lt;DocumentTypeBaseDTO&gt;</returns>
-        public ApiResponse< List<DocumentTypeBaseDTO> > DocumentTypesGetWithHttpInfo (int? mode, string businessUnitCode = null)
+        public ApiResponse< List<DocumentTypeBaseDTO> > DocumentTypesGetWithHttpInfo ()
         {
-            // verify the required parameter 'mode' is set
-            if (mode == null)
-                throw new ApiException(400, "Missing required parameter 'mode' when calling DocumentTypesApi->DocumentTypesGet");
 
-            var localVarPath = "/api/DocumentTypes/{mode}/mode";
+            var localVarPath = "/api/DocumentTypes";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -406,8 +475,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (mode != null) localVarPathParams.Add("mode", this.Configuration.ApiClient.ParameterToString(mode)); // path parameter
-            if (businessUnitCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "businessUnitCode", businessUnitCode)); // query parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -434,33 +501,26 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call returns the document types that the user can access 
+        /// This call returns all the document types configured 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
-        /// <param name="businessUnitCode">Business Unit (optional) (optional)</param>
         /// <returns>Task of List&lt;DocumentTypeBaseDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<DocumentTypeBaseDTO>> DocumentTypesGetAsync (int? mode, string businessUnitCode = null)
+        public async System.Threading.Tasks.Task<List<DocumentTypeBaseDTO>> DocumentTypesGetAsync ()
         {
-             ApiResponse<List<DocumentTypeBaseDTO>> localVarResponse = await DocumentTypesGetAsyncWithHttpInfo(mode, businessUnitCode);
+             ApiResponse<List<DocumentTypeBaseDTO>> localVarResponse = await DocumentTypesGetAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// This call returns the document types that the user can access 
+        /// This call returns all the document types configured 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
-        /// <param name="businessUnitCode">Business Unit (optional) (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;DocumentTypeBaseDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<DocumentTypeBaseDTO>>> DocumentTypesGetAsyncWithHttpInfo (int? mode, string businessUnitCode = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<DocumentTypeBaseDTO>>> DocumentTypesGetAsyncWithHttpInfo ()
         {
-            // verify the required parameter 'mode' is set
-            if (mode == null)
-                throw new ApiException(400, "Missing required parameter 'mode' when calling DocumentTypesApi->DocumentTypesGet");
 
-            var localVarPath = "/api/DocumentTypes/{mode}/mode";
+            var localVarPath = "/api/DocumentTypes";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -484,8 +544,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (mode != null) localVarPathParams.Add("mode", this.Configuration.ApiClient.ParameterToString(mode)); // path parameter
-            if (businessUnitCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "businessUnitCode", businessUnitCode)); // query parameter
 
             // authentication (Authorization) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1147,6 +1205,298 @@ namespace IO.Swagger.Api
             return new ApiResponse<DocumentTypeBaseTreeDTO>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DocumentTypeBaseTreeDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentTypeBaseTreeDTO)));
+        }
+
+        /// <summary>
+        /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>DocumentTypeBaseTreeDTO</returns>
+        public DocumentTypeBaseTreeDTO DocumentTypesGetTree_0 ()
+        {
+             ApiResponse<DocumentTypeBaseTreeDTO> localVarResponse = DocumentTypesGetTree_0WithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of DocumentTypeBaseTreeDTO</returns>
+        public ApiResponse< DocumentTypeBaseTreeDTO > DocumentTypesGetTree_0WithHttpInfo ()
+        {
+
+            var localVarPath = "/api/DocumentTypes/GetTree";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentTypesGetTree_0", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentTypeBaseTreeDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentTypeBaseTreeDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentTypeBaseTreeDTO)));
+        }
+
+        /// <summary>
+        /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of DocumentTypeBaseTreeDTO</returns>
+        public async System.Threading.Tasks.Task<DocumentTypeBaseTreeDTO> DocumentTypesGetTree_0Async ()
+        {
+             ApiResponse<DocumentTypeBaseTreeDTO> localVarResponse = await DocumentTypesGetTree_0AsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns the document types that the user can access but in a preformatted tree with parent/child relationship 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (DocumentTypeBaseTreeDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentTypeBaseTreeDTO>> DocumentTypesGetTree_0AsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/DocumentTypes/GetTree";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentTypesGetTree_0", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentTypeBaseTreeDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentTypeBaseTreeDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DocumentTypeBaseTreeDTO)));
+        }
+
+        /// <summary>
+        /// This call returns the document types that the user can access 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
+        /// <param name="businessUnitCode">Business Unit (optional) (optional)</param>
+        /// <returns>List&lt;DocumentTypeBaseDTO&gt;</returns>
+        public List<DocumentTypeBaseDTO> DocumentTypesGet_0 (int? mode, string businessUnitCode = null)
+        {
+             ApiResponse<List<DocumentTypeBaseDTO>> localVarResponse = DocumentTypesGet_0WithHttpInfo(mode, businessUnitCode);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns the document types that the user can access 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
+        /// <param name="businessUnitCode">Business Unit (optional) (optional)</param>
+        /// <returns>ApiResponse of List&lt;DocumentTypeBaseDTO&gt;</returns>
+        public ApiResponse< List<DocumentTypeBaseDTO> > DocumentTypesGet_0WithHttpInfo (int? mode, string businessUnitCode = null)
+        {
+            // verify the required parameter 'mode' is set
+            if (mode == null)
+                throw new ApiException(400, "Missing required parameter 'mode' when calling DocumentTypesApi->DocumentTypesGet_0");
+
+            var localVarPath = "/api/DocumentTypes/{mode}/mode";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (mode != null) localVarPathParams.Add("mode", this.Configuration.ApiClient.ParameterToString(mode)); // path parameter
+            if (businessUnitCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "businessUnitCode", businessUnitCode)); // query parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentTypesGet_0", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DocumentTypeBaseDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<DocumentTypeBaseDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DocumentTypeBaseDTO>)));
+        }
+
+        /// <summary>
+        /// This call returns the document types that the user can access 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
+        /// <param name="businessUnitCode">Business Unit (optional) (optional)</param>
+        /// <returns>Task of List&lt;DocumentTypeBaseDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<DocumentTypeBaseDTO>> DocumentTypesGet_0Async (int? mode, string businessUnitCode = null)
+        {
+             ApiResponse<List<DocumentTypeBaseDTO>> localVarResponse = await DocumentTypesGet_0AsyncWithHttpInfo(mode, businessUnitCode);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns the document types that the user can access 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mode">Possible values:  0: Archive  1: Search  2: EditProfile </param>
+        /// <param name="businessUnitCode">Business Unit (optional) (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;DocumentTypeBaseDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<DocumentTypeBaseDTO>>> DocumentTypesGet_0AsyncWithHttpInfo (int? mode, string businessUnitCode = null)
+        {
+            // verify the required parameter 'mode' is set
+            if (mode == null)
+                throw new ApiException(400, "Missing required parameter 'mode' when calling DocumentTypesApi->DocumentTypesGet_0");
+
+            var localVarPath = "/api/DocumentTypes/{mode}/mode";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (mode != null) localVarPathParams.Add("mode", this.Configuration.ApiClient.ParameterToString(mode)); // path parameter
+            if (businessUnitCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "businessUnitCode", businessUnitCode)); // query parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DocumentTypesGet_0", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<DocumentTypeBaseDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<DocumentTypeBaseDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DocumentTypeBaseDTO>)));
         }
 
     }

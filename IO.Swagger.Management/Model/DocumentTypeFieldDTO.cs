@@ -40,10 +40,14 @@ namespace IO.Swagger.Management.Model
         /// </summary>
         /// <param name="value">Document type id.</param>
         /// <param name="displayValue">Document type display value.</param>
-        public DocumentTypeFieldDTO(int? value = default(int?), string displayValue = default(string), string name = default(string), string externalId = default(string), string description = default(string), int? order = default(int?), string dataSource = default(string), bool? required = default(bool?), string formula = default(string), string className = "DocumentTypeFieldDTO", bool? locked = default(bool?), string comboGruppiId = default(string), List<DependencyFieldItem> dependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> associations = default(List<AssocitationFieldItem>), bool? isAdditional = default(bool?), bool? visible = default(bool?), string predefinedProfileFormula = default(string), string visibilityCondition = default(string), int? addressBookDefaultFilter = default(int?), List<int?> enabledAddressBook = default(List<int?>), int? columns = default(int?)) : base(name, externalId, description, order, dataSource, required, formula, className, locked, comboGruppiId, dependencyFields, associations, isAdditional, visible, predefinedProfileFormula, visibilityCondition, addressBookDefaultFilter, enabledAddressBook, columns)
+        /// <param name="code">Document type code.</param>
+        /// <param name="classDescription">Document type description.</param>
+        public DocumentTypeFieldDTO(int? value = default(int?), string displayValue = default(string), string code = default(string), string classDescription = default(string), string name = default(string), string externalId = default(string), string description = default(string), int? order = default(int?), string dataSource = default(string), bool? required = default(bool?), string formula = default(string), string className = "DocumentTypeFieldDTO", bool? locked = default(bool?), string comboGruppiId = default(string), List<DependencyFieldItem> dependencyFields = default(List<DependencyFieldItem>), List<AssocitationFieldItem> associations = default(List<AssocitationFieldItem>), bool? isAdditional = default(bool?), bool? visible = default(bool?), string predefinedProfileFormula = default(string), string visibilityCondition = default(string), int? addressBookDefaultFilter = default(int?), List<int?> enabledAddressBook = default(List<int?>), int? columns = default(int?)) : base(name, externalId, description, order, dataSource, required, formula, className, locked, comboGruppiId, dependencyFields, associations, isAdditional, visible, predefinedProfileFormula, visibilityCondition, addressBookDefaultFilter, enabledAddressBook, columns)
         {
             this.Value = value;
             this.DisplayValue = displayValue;
+            this.Code = code;
+            this.ClassDescription = classDescription;
         }
         
         /// <summary>
@@ -61,6 +65,20 @@ namespace IO.Swagger.Management.Model
         public string DisplayValue { get; set; }
 
         /// <summary>
+        /// Document type code
+        /// </summary>
+        /// <value>Document type code</value>
+        [DataMember(Name="code", EmitDefaultValue=false)]
+        public string Code { get; set; }
+
+        /// <summary>
+        /// Document type description
+        /// </summary>
+        /// <value>Document type description</value>
+        [DataMember(Name="classDescription", EmitDefaultValue=false)]
+        public string ClassDescription { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -71,6 +89,8 @@ namespace IO.Swagger.Management.Model
             sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  DisplayValue: ").Append(DisplayValue).Append("\n");
+            sb.Append("  Code: ").Append(Code).Append("\n");
+            sb.Append("  ClassDescription: ").Append(ClassDescription).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -114,6 +134,16 @@ namespace IO.Swagger.Management.Model
                     this.DisplayValue == input.DisplayValue ||
                     (this.DisplayValue != null &&
                     this.DisplayValue.Equals(input.DisplayValue))
+                ) && base.Equals(input) && 
+                (
+                    this.Code == input.Code ||
+                    (this.Code != null &&
+                    this.Code.Equals(input.Code))
+                ) && base.Equals(input) && 
+                (
+                    this.ClassDescription == input.ClassDescription ||
+                    (this.ClassDescription != null &&
+                    this.ClassDescription.Equals(input.ClassDescription))
                 );
         }
 
@@ -130,6 +160,10 @@ namespace IO.Swagger.Management.Model
                     hashCode = hashCode * 59 + this.Value.GetHashCode();
                 if (this.DisplayValue != null)
                     hashCode = hashCode * 59 + this.DisplayValue.GetHashCode();
+                if (this.Code != null)
+                    hashCode = hashCode * 59 + this.Code.GetHashCode();
+                if (this.ClassDescription != null)
+                    hashCode = hashCode * 59 + this.ClassDescription.GetHashCode();
                 return hashCode;
             }
         }

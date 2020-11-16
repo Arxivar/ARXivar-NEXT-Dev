@@ -31,7 +31,7 @@ namespace IO.Swagger.Management.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dbProperties"></param>
+        /// <param name="dbProperties">Database properties</param>
         /// <returns>bool?</returns>
         bool? UtilitiesManagementCheckDbConnection (DbPropertiesDTO dbProperties);
 
@@ -42,9 +42,30 @@ namespace IO.Swagger.Management.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dbProperties"></param>
+        /// <param name="dbProperties">Database properties</param>
         /// <returns>ApiResponse of bool?</returns>
         ApiResponse<bool?> UtilitiesManagementCheckDbConnectionWithHttpInfo (DbPropertiesDTO dbProperties);
+        /// <summary>
+        /// This call allows to check mail connection
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailServerSettings">Mail server settings</param>
+        /// <returns>bool?</returns>
+        bool? UtilitiesManagementCheckMailConnection (MailServerSettingsDTO mailServerSettings);
+
+        /// <summary>
+        /// This call allows to check mail connection
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailServerSettings">Mail server settings</param>
+        /// <returns>ApiResponse of bool?</returns>
+        ApiResponse<bool?> UtilitiesManagementCheckMailConnectionWithHttpInfo (MailServerSettingsDTO mailServerSettings);
         /// <summary>
         /// This call returns all fields for specific context
         /// </summary>
@@ -52,10 +73,9 @@ namespace IO.Swagger.Management.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentTypeId">Document Type system id</param>
-        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders </param>
+        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders  3: SqlQuery  4: ApiCall  5: DataSource  6: AdditionalFieldSource  7: AdditionalFieldDestination  8: Formula </param>
         /// <returns>List&lt;FieldManagementDTO&gt;</returns>
-        List<FieldManagementDTO> UtilitiesManagementGetFields (int? documentTypeId, int? fieldManagementMode);
+        List<FieldManagementDTO> UtilitiesManagementGetFields (int? fieldManagementMode);
 
         /// <summary>
         /// This call returns all fields for specific context
@@ -64,10 +84,32 @@ namespace IO.Swagger.Management.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentTypeId">Document Type system id</param>
-        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders </param>
+        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders  3: SqlQuery  4: ApiCall  5: DataSource  6: AdditionalFieldSource  7: AdditionalFieldDestination  8: Formula </param>
         /// <returns>ApiResponse of List&lt;FieldManagementDTO&gt;</returns>
-        ApiResponse<List<FieldManagementDTO>> UtilitiesManagementGetFieldsWithHttpInfo (int? documentTypeId, int? fieldManagementMode);
+        ApiResponse<List<FieldManagementDTO>> UtilitiesManagementGetFieldsWithHttpInfo (int? fieldManagementMode);
+        /// <summary>
+        /// This call returns all fields by docuemnt type for specific context
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentTypeId">Document Type identifier</param>
+        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders  3: SqlQuery  4: ApiCall  5: DataSource  6: AdditionalFieldSource  7: AdditionalFieldDestination  8: Formula </param>
+        /// <returns>List&lt;FieldManagementDTO&gt;</returns>
+        List<FieldManagementDTO> UtilitiesManagementGetFields_0 (int? documentTypeId, int? fieldManagementMode);
+
+        /// <summary>
+        /// This call returns all fields by docuemnt type for specific context
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentTypeId">Document Type identifier</param>
+        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders  3: SqlQuery  4: ApiCall  5: DataSource  6: AdditionalFieldSource  7: AdditionalFieldDestination  8: Formula </param>
+        /// <returns>ApiResponse of List&lt;FieldManagementDTO&gt;</returns>
+        ApiResponse<List<FieldManagementDTO>> UtilitiesManagementGetFields_0WithHttpInfo (int? documentTypeId, int? fieldManagementMode);
         /// <summary>
         /// This call returns all fonts supported for pdf options
         /// </summary>
@@ -176,7 +218,7 @@ namespace IO.Swagger.Management.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dbProperties"></param>
+        /// <param name="dbProperties">Database properties</param>
         /// <returns>Task of bool?</returns>
         System.Threading.Tasks.Task<bool?> UtilitiesManagementCheckDbConnectionAsync (DbPropertiesDTO dbProperties);
 
@@ -187,9 +229,30 @@ namespace IO.Swagger.Management.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dbProperties"></param>
+        /// <param name="dbProperties">Database properties</param>
         /// <returns>Task of ApiResponse (bool?)</returns>
         System.Threading.Tasks.Task<ApiResponse<bool?>> UtilitiesManagementCheckDbConnectionAsyncWithHttpInfo (DbPropertiesDTO dbProperties);
+        /// <summary>
+        /// This call allows to check mail connection
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailServerSettings">Mail server settings</param>
+        /// <returns>Task of bool?</returns>
+        System.Threading.Tasks.Task<bool?> UtilitiesManagementCheckMailConnectionAsync (MailServerSettingsDTO mailServerSettings);
+
+        /// <summary>
+        /// This call allows to check mail connection
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailServerSettings">Mail server settings</param>
+        /// <returns>Task of ApiResponse (bool?)</returns>
+        System.Threading.Tasks.Task<ApiResponse<bool?>> UtilitiesManagementCheckMailConnectionAsyncWithHttpInfo (MailServerSettingsDTO mailServerSettings);
         /// <summary>
         /// This call returns all fields for specific context
         /// </summary>
@@ -197,10 +260,9 @@ namespace IO.Swagger.Management.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentTypeId">Document Type system id</param>
-        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders </param>
+        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders  3: SqlQuery  4: ApiCall  5: DataSource  6: AdditionalFieldSource  7: AdditionalFieldDestination  8: Formula </param>
         /// <returns>Task of List&lt;FieldManagementDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<FieldManagementDTO>> UtilitiesManagementGetFieldsAsync (int? documentTypeId, int? fieldManagementMode);
+        System.Threading.Tasks.Task<List<FieldManagementDTO>> UtilitiesManagementGetFieldsAsync (int? fieldManagementMode);
 
         /// <summary>
         /// This call returns all fields for specific context
@@ -209,10 +271,32 @@ namespace IO.Swagger.Management.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentTypeId">Document Type system id</param>
-        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders </param>
+        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders  3: SqlQuery  4: ApiCall  5: DataSource  6: AdditionalFieldSource  7: AdditionalFieldDestination  8: Formula </param>
         /// <returns>Task of ApiResponse (List&lt;FieldManagementDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<FieldManagementDTO>>> UtilitiesManagementGetFieldsAsyncWithHttpInfo (int? documentTypeId, int? fieldManagementMode);
+        System.Threading.Tasks.Task<ApiResponse<List<FieldManagementDTO>>> UtilitiesManagementGetFieldsAsyncWithHttpInfo (int? fieldManagementMode);
+        /// <summary>
+        /// This call returns all fields by docuemnt type for specific context
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentTypeId">Document Type identifier</param>
+        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders  3: SqlQuery  4: ApiCall  5: DataSource  6: AdditionalFieldSource  7: AdditionalFieldDestination  8: Formula </param>
+        /// <returns>Task of List&lt;FieldManagementDTO&gt;</returns>
+        System.Threading.Tasks.Task<List<FieldManagementDTO>> UtilitiesManagementGetFields_0Async (int? documentTypeId, int? fieldManagementMode);
+
+        /// <summary>
+        /// This call returns all fields by docuemnt type for specific context
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentTypeId">Document Type identifier</param>
+        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders  3: SqlQuery  4: ApiCall  5: DataSource  6: AdditionalFieldSource  7: AdditionalFieldDestination  8: Formula </param>
+        /// <returns>Task of ApiResponse (List&lt;FieldManagementDTO&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<FieldManagementDTO>>> UtilitiesManagementGetFields_0AsyncWithHttpInfo (int? documentTypeId, int? fieldManagementMode);
         /// <summary>
         /// This call returns all fonts supported for pdf options
         /// </summary>
@@ -416,7 +500,7 @@ namespace IO.Swagger.Management.Api
         /// This call allows to check database connection 
         /// </summary>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dbProperties"></param>
+        /// <param name="dbProperties">Database properties</param>
         /// <returns>bool?</returns>
         public bool? UtilitiesManagementCheckDbConnection (DbPropertiesDTO dbProperties)
         {
@@ -428,7 +512,7 @@ namespace IO.Swagger.Management.Api
         /// This call allows to check database connection 
         /// </summary>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dbProperties"></param>
+        /// <param name="dbProperties">Database properties</param>
         /// <returns>ApiResponse of bool?</returns>
         public ApiResponse< bool? > UtilitiesManagementCheckDbConnectionWithHttpInfo (DbPropertiesDTO dbProperties)
         {
@@ -502,7 +586,7 @@ namespace IO.Swagger.Management.Api
         /// This call allows to check database connection 
         /// </summary>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dbProperties"></param>
+        /// <param name="dbProperties">Database properties</param>
         /// <returns>Task of bool?</returns>
         public async System.Threading.Tasks.Task<bool?> UtilitiesManagementCheckDbConnectionAsync (DbPropertiesDTO dbProperties)
         {
@@ -515,7 +599,7 @@ namespace IO.Swagger.Management.Api
         /// This call allows to check database connection 
         /// </summary>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="dbProperties"></param>
+        /// <param name="dbProperties">Database properties</param>
         /// <returns>Task of ApiResponse (bool?)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<bool?>> UtilitiesManagementCheckDbConnectionAsyncWithHttpInfo (DbPropertiesDTO dbProperties)
         {
@@ -586,15 +670,187 @@ namespace IO.Swagger.Management.Api
         }
 
         /// <summary>
+        /// This call allows to check mail connection 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailServerSettings">Mail server settings</param>
+        /// <returns>bool?</returns>
+        public bool? UtilitiesManagementCheckMailConnection (MailServerSettingsDTO mailServerSettings)
+        {
+             ApiResponse<bool?> localVarResponse = UtilitiesManagementCheckMailConnectionWithHttpInfo(mailServerSettings);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call allows to check mail connection 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailServerSettings">Mail server settings</param>
+        /// <returns>ApiResponse of bool?</returns>
+        public ApiResponse< bool? > UtilitiesManagementCheckMailConnectionWithHttpInfo (MailServerSettingsDTO mailServerSettings)
+        {
+            // verify the required parameter 'mailServerSettings' is set
+            if (mailServerSettings == null)
+                throw new ApiException(400, "Missing required parameter 'mailServerSettings' when calling UtilitiesManagementApi->UtilitiesManagementCheckMailConnection");
+
+            var localVarPath = "/api/management/Utilities/CheckMailConnection";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (mailServerSettings != null && mailServerSettings.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(mailServerSettings); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = mailServerSettings; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UtilitiesManagementCheckMailConnection", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<bool?>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (bool?) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(bool?)));
+        }
+
+        /// <summary>
+        /// This call allows to check mail connection 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailServerSettings">Mail server settings</param>
+        /// <returns>Task of bool?</returns>
+        public async System.Threading.Tasks.Task<bool?> UtilitiesManagementCheckMailConnectionAsync (MailServerSettingsDTO mailServerSettings)
+        {
+             ApiResponse<bool?> localVarResponse = await UtilitiesManagementCheckMailConnectionAsyncWithHttpInfo(mailServerSettings);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call allows to check mail connection 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="mailServerSettings">Mail server settings</param>
+        /// <returns>Task of ApiResponse (bool?)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<bool?>> UtilitiesManagementCheckMailConnectionAsyncWithHttpInfo (MailServerSettingsDTO mailServerSettings)
+        {
+            // verify the required parameter 'mailServerSettings' is set
+            if (mailServerSettings == null)
+                throw new ApiException(400, "Missing required parameter 'mailServerSettings' when calling UtilitiesManagementApi->UtilitiesManagementCheckMailConnection");
+
+            var localVarPath = "/api/management/Utilities/CheckMailConnection";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (mailServerSettings != null && mailServerSettings.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(mailServerSettings); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = mailServerSettings; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UtilitiesManagementCheckMailConnection", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<bool?>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (bool?) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(bool?)));
+        }
+
+        /// <summary>
         /// This call returns all fields for specific context 
         /// </summary>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentTypeId">Document Type system id</param>
-        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders </param>
+        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders  3: SqlQuery  4: ApiCall  5: DataSource  6: AdditionalFieldSource  7: AdditionalFieldDestination  8: Formula </param>
         /// <returns>List&lt;FieldManagementDTO&gt;</returns>
-        public List<FieldManagementDTO> UtilitiesManagementGetFields (int? documentTypeId, int? fieldManagementMode)
+        public List<FieldManagementDTO> UtilitiesManagementGetFields (int? fieldManagementMode)
         {
-             ApiResponse<List<FieldManagementDTO>> localVarResponse = UtilitiesManagementGetFieldsWithHttpInfo(documentTypeId, fieldManagementMode);
+             ApiResponse<List<FieldManagementDTO>> localVarResponse = UtilitiesManagementGetFieldsWithHttpInfo(fieldManagementMode);
              return localVarResponse.Data;
         }
 
@@ -602,17 +858,167 @@ namespace IO.Swagger.Management.Api
         /// This call returns all fields for specific context 
         /// </summary>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentTypeId">Document Type system id</param>
-        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders </param>
+        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders  3: SqlQuery  4: ApiCall  5: DataSource  6: AdditionalFieldSource  7: AdditionalFieldDestination  8: Formula </param>
         /// <returns>ApiResponse of List&lt;FieldManagementDTO&gt;</returns>
-        public ApiResponse< List<FieldManagementDTO> > UtilitiesManagementGetFieldsWithHttpInfo (int? documentTypeId, int? fieldManagementMode)
+        public ApiResponse< List<FieldManagementDTO> > UtilitiesManagementGetFieldsWithHttpInfo (int? fieldManagementMode)
         {
-            // verify the required parameter 'documentTypeId' is set
-            if (documentTypeId == null)
-                throw new ApiException(400, "Missing required parameter 'documentTypeId' when calling UtilitiesManagementApi->UtilitiesManagementGetFields");
             // verify the required parameter 'fieldManagementMode' is set
             if (fieldManagementMode == null)
                 throw new ApiException(400, "Missing required parameter 'fieldManagementMode' when calling UtilitiesManagementApi->UtilitiesManagementGetFields");
+
+            var localVarPath = "/api/management/Utilities/Fields";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (fieldManagementMode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "fieldManagementMode", fieldManagementMode)); // query parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UtilitiesManagementGetFields", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<FieldManagementDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<FieldManagementDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<FieldManagementDTO>)));
+        }
+
+        /// <summary>
+        /// This call returns all fields for specific context 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders  3: SqlQuery  4: ApiCall  5: DataSource  6: AdditionalFieldSource  7: AdditionalFieldDestination  8: Formula </param>
+        /// <returns>Task of List&lt;FieldManagementDTO&gt;</returns>
+        public async System.Threading.Tasks.Task<List<FieldManagementDTO>> UtilitiesManagementGetFieldsAsync (int? fieldManagementMode)
+        {
+             ApiResponse<List<FieldManagementDTO>> localVarResponse = await UtilitiesManagementGetFieldsAsyncWithHttpInfo(fieldManagementMode);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns all fields for specific context 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders  3: SqlQuery  4: ApiCall  5: DataSource  6: AdditionalFieldSource  7: AdditionalFieldDestination  8: Formula </param>
+        /// <returns>Task of ApiResponse (List&lt;FieldManagementDTO&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<FieldManagementDTO>>> UtilitiesManagementGetFieldsAsyncWithHttpInfo (int? fieldManagementMode)
+        {
+            // verify the required parameter 'fieldManagementMode' is set
+            if (fieldManagementMode == null)
+                throw new ApiException(400, "Missing required parameter 'fieldManagementMode' when calling UtilitiesManagementApi->UtilitiesManagementGetFields");
+
+            var localVarPath = "/api/management/Utilities/Fields";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (fieldManagementMode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "fieldManagementMode", fieldManagementMode)); // query parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UtilitiesManagementGetFields", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<FieldManagementDTO>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<FieldManagementDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<FieldManagementDTO>)));
+        }
+
+        /// <summary>
+        /// This call returns all fields by docuemnt type for specific context 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentTypeId">Document Type identifier</param>
+        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders  3: SqlQuery  4: ApiCall  5: DataSource  6: AdditionalFieldSource  7: AdditionalFieldDestination  8: Formula </param>
+        /// <returns>List&lt;FieldManagementDTO&gt;</returns>
+        public List<FieldManagementDTO> UtilitiesManagementGetFields_0 (int? documentTypeId, int? fieldManagementMode)
+        {
+             ApiResponse<List<FieldManagementDTO>> localVarResponse = UtilitiesManagementGetFields_0WithHttpInfo(documentTypeId, fieldManagementMode);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns all fields by docuemnt type for specific context 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="documentTypeId">Document Type identifier</param>
+        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders  3: SqlQuery  4: ApiCall  5: DataSource  6: AdditionalFieldSource  7: AdditionalFieldDestination  8: Formula </param>
+        /// <returns>ApiResponse of List&lt;FieldManagementDTO&gt;</returns>
+        public ApiResponse< List<FieldManagementDTO> > UtilitiesManagementGetFields_0WithHttpInfo (int? documentTypeId, int? fieldManagementMode)
+        {
+            // verify the required parameter 'documentTypeId' is set
+            if (documentTypeId == null)
+                throw new ApiException(400, "Missing required parameter 'documentTypeId' when calling UtilitiesManagementApi->UtilitiesManagementGetFields_0");
+            // verify the required parameter 'fieldManagementMode' is set
+            if (fieldManagementMode == null)
+                throw new ApiException(400, "Missing required parameter 'fieldManagementMode' when calling UtilitiesManagementApi->UtilitiesManagementGetFields_0");
 
             var localVarPath = "/api/management/Utilities/Fields/{documentTypeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -656,7 +1062,7 @@ namespace IO.Swagger.Management.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UtilitiesManagementGetFields", localVarResponse);
+                Exception exception = ExceptionFactory("UtilitiesManagementGetFields_0", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -666,34 +1072,34 @@ namespace IO.Swagger.Management.Api
         }
 
         /// <summary>
-        /// This call returns all fields for specific context 
+        /// This call returns all fields by docuemnt type for specific context 
         /// </summary>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentTypeId">Document Type system id</param>
-        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders </param>
+        /// <param name="documentTypeId">Document Type identifier</param>
+        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders  3: SqlQuery  4: ApiCall  5: DataSource  6: AdditionalFieldSource  7: AdditionalFieldDestination  8: Formula </param>
         /// <returns>Task of List&lt;FieldManagementDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<FieldManagementDTO>> UtilitiesManagementGetFieldsAsync (int? documentTypeId, int? fieldManagementMode)
+        public async System.Threading.Tasks.Task<List<FieldManagementDTO>> UtilitiesManagementGetFields_0Async (int? documentTypeId, int? fieldManagementMode)
         {
-             ApiResponse<List<FieldManagementDTO>> localVarResponse = await UtilitiesManagementGetFieldsAsyncWithHttpInfo(documentTypeId, fieldManagementMode);
+             ApiResponse<List<FieldManagementDTO>> localVarResponse = await UtilitiesManagementGetFields_0AsyncWithHttpInfo(documentTypeId, fieldManagementMode);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// This call returns all fields for specific context 
+        /// This call returns all fields by docuemnt type for specific context 
         /// </summary>
         /// <exception cref="IO.Swagger.Management.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentTypeId">Document Type system id</param>
-        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders </param>
+        /// <param name="documentTypeId">Document Type identifier</param>
+        /// <param name="fieldManagementMode">Possible values:  0: Standard  1: UniquenessRules  2: Folders  3: SqlQuery  4: ApiCall  5: DataSource  6: AdditionalFieldSource  7: AdditionalFieldDestination  8: Formula </param>
         /// <returns>Task of ApiResponse (List&lt;FieldManagementDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<FieldManagementDTO>>> UtilitiesManagementGetFieldsAsyncWithHttpInfo (int? documentTypeId, int? fieldManagementMode)
+        public async System.Threading.Tasks.Task<ApiResponse<List<FieldManagementDTO>>> UtilitiesManagementGetFields_0AsyncWithHttpInfo (int? documentTypeId, int? fieldManagementMode)
         {
             // verify the required parameter 'documentTypeId' is set
             if (documentTypeId == null)
-                throw new ApiException(400, "Missing required parameter 'documentTypeId' when calling UtilitiesManagementApi->UtilitiesManagementGetFields");
+                throw new ApiException(400, "Missing required parameter 'documentTypeId' when calling UtilitiesManagementApi->UtilitiesManagementGetFields_0");
             // verify the required parameter 'fieldManagementMode' is set
             if (fieldManagementMode == null)
-                throw new ApiException(400, "Missing required parameter 'fieldManagementMode' when calling UtilitiesManagementApi->UtilitiesManagementGetFields");
+                throw new ApiException(400, "Missing required parameter 'fieldManagementMode' when calling UtilitiesManagementApi->UtilitiesManagementGetFields_0");
 
             var localVarPath = "/api/management/Utilities/Fields/{documentTypeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -737,7 +1143,7 @@ namespace IO.Swagger.Management.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UtilitiesManagementGetFields", localVarResponse);
+                Exception exception = ExceptionFactory("UtilitiesManagementGetFields_0", localVarResponse);
                 if (exception != null) throw exception;
             }
 

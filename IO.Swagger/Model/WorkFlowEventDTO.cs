@@ -33,21 +33,25 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkFlowEventDTO" /> class.
         /// </summary>
-        /// <param name="workFlowName">workFlowName.</param>
+        /// <param name="workflowName">workflowName.</param>
         /// <param name="eventId">eventId.</param>
+        /// <param name="workflowVersion">Possible values:  0: V1  1: V2 .</param>
         /// <param name="workflowId">workflowId.</param>
-        public WorkFlowEventDTO(string workFlowName = default(string), int? eventId = default(int?), int? workflowId = default(int?))
+        /// <param name="diagramId">diagramId.</param>
+        public WorkFlowEventDTO(string workflowName = default(string), int? eventId = default(int?), int? workflowVersion = default(int?), int? workflowId = default(int?), string diagramId = default(string))
         {
-            this.WorkFlowName = workFlowName;
+            this.WorkflowName = workflowName;
             this.EventId = eventId;
+            this.WorkflowVersion = workflowVersion;
             this.WorkflowId = workflowId;
+            this.DiagramId = diagramId;
         }
         
         /// <summary>
-        /// Gets or Sets WorkFlowName
+        /// Gets or Sets WorkflowName
         /// </summary>
-        [DataMember(Name="workFlowName", EmitDefaultValue=false)]
-        public string WorkFlowName { get; set; }
+        [DataMember(Name="workflowName", EmitDefaultValue=false)]
+        public string WorkflowName { get; set; }
 
         /// <summary>
         /// Gets or Sets EventId
@@ -56,10 +60,23 @@ namespace IO.Swagger.Model
         public int? EventId { get; set; }
 
         /// <summary>
+        /// Possible values:  0: V1  1: V2 
+        /// </summary>
+        /// <value>Possible values:  0: V1  1: V2 </value>
+        [DataMember(Name="workflowVersion", EmitDefaultValue=false)]
+        public int? WorkflowVersion { get; set; }
+
+        /// <summary>
         /// Gets or Sets WorkflowId
         /// </summary>
         [DataMember(Name="workflowId", EmitDefaultValue=false)]
         public int? WorkflowId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DiagramId
+        /// </summary>
+        [DataMember(Name="diagramId", EmitDefaultValue=false)]
+        public string DiagramId { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -69,9 +86,11 @@ namespace IO.Swagger.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WorkFlowEventDTO {\n");
-            sb.Append("  WorkFlowName: ").Append(WorkFlowName).Append("\n");
+            sb.Append("  WorkflowName: ").Append(WorkflowName).Append("\n");
             sb.Append("  EventId: ").Append(EventId).Append("\n");
+            sb.Append("  WorkflowVersion: ").Append(WorkflowVersion).Append("\n");
             sb.Append("  WorkflowId: ").Append(WorkflowId).Append("\n");
+            sb.Append("  DiagramId: ").Append(DiagramId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -107,9 +126,9 @@ namespace IO.Swagger.Model
 
             return 
                 (
-                    this.WorkFlowName == input.WorkFlowName ||
-                    (this.WorkFlowName != null &&
-                    this.WorkFlowName.Equals(input.WorkFlowName))
+                    this.WorkflowName == input.WorkflowName ||
+                    (this.WorkflowName != null &&
+                    this.WorkflowName.Equals(input.WorkflowName))
                 ) && 
                 (
                     this.EventId == input.EventId ||
@@ -117,9 +136,19 @@ namespace IO.Swagger.Model
                     this.EventId.Equals(input.EventId))
                 ) && 
                 (
+                    this.WorkflowVersion == input.WorkflowVersion ||
+                    (this.WorkflowVersion != null &&
+                    this.WorkflowVersion.Equals(input.WorkflowVersion))
+                ) && 
+                (
                     this.WorkflowId == input.WorkflowId ||
                     (this.WorkflowId != null &&
                     this.WorkflowId.Equals(input.WorkflowId))
+                ) && 
+                (
+                    this.DiagramId == input.DiagramId ||
+                    (this.DiagramId != null &&
+                    this.DiagramId.Equals(input.DiagramId))
                 );
         }
 
@@ -132,12 +161,16 @@ namespace IO.Swagger.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.WorkFlowName != null)
-                    hashCode = hashCode * 59 + this.WorkFlowName.GetHashCode();
+                if (this.WorkflowName != null)
+                    hashCode = hashCode * 59 + this.WorkflowName.GetHashCode();
                 if (this.EventId != null)
                     hashCode = hashCode * 59 + this.EventId.GetHashCode();
+                if (this.WorkflowVersion != null)
+                    hashCode = hashCode * 59 + this.WorkflowVersion.GetHashCode();
                 if (this.WorkflowId != null)
                     hashCode = hashCode * 59 + this.WorkflowId.GetHashCode();
+                if (this.DiagramId != null)
+                    hashCode = hashCode * 59 + this.DiagramId.GetHashCode();
                 return hashCode;
             }
         }

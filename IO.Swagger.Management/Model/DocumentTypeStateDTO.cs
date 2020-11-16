@@ -35,10 +35,12 @@ namespace IO.Swagger.Management.Model
         /// </summary>
         /// <param name="documentType">Document type.</param>
         /// <param name="stateId">State value.</param>
-        public DocumentTypeStateDTO(DocumentTypeSimpleDTO documentType = default(DocumentTypeSimpleDTO), string stateId = default(string))
+        /// <param name="state">State basic information for visualization.</param>
+        public DocumentTypeStateDTO(DocumentTypeSimpleDTO documentType = default(DocumentTypeSimpleDTO), string stateId = default(string), StateSimpleDTO state = default(StateSimpleDTO))
         {
             this.DocumentType = documentType;
             this.StateId = stateId;
+            this.State = state;
         }
         
         /// <summary>
@@ -56,6 +58,13 @@ namespace IO.Swagger.Management.Model
         public string StateId { get; set; }
 
         /// <summary>
+        /// State basic information for visualization
+        /// </summary>
+        /// <value>State basic information for visualization</value>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateSimpleDTO State { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -65,6 +74,7 @@ namespace IO.Swagger.Management.Model
             sb.Append("class DocumentTypeStateDTO {\n");
             sb.Append("  DocumentType: ").Append(DocumentType).Append("\n");
             sb.Append("  StateId: ").Append(StateId).Append("\n");
+            sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,6 +118,11 @@ namespace IO.Swagger.Management.Model
                     this.StateId == input.StateId ||
                     (this.StateId != null &&
                     this.StateId.Equals(input.StateId))
+                ) && 
+                (
+                    this.State == input.State ||
+                    (this.State != null &&
+                    this.State.Equals(input.State))
                 );
         }
 
@@ -124,6 +139,8 @@ namespace IO.Swagger.Management.Model
                     hashCode = hashCode * 59 + this.DocumentType.GetHashCode();
                 if (this.StateId != null)
                     hashCode = hashCode * 59 + this.StateId.GetHashCode();
+                if (this.State != null)
+                    hashCode = hashCode * 59 + this.State.GetHashCode();
                 return hashCode;
             }
         }

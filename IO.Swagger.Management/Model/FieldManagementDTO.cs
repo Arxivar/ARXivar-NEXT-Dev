@@ -33,18 +33,36 @@ namespace IO.Swagger.Management.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FieldManagementDTO" /> class.
         /// </summary>
+        /// <param name="documentType">Document type for additional field.</param>
+        /// <param name="dataType">Possible values:  0: Integer  1: String  2: DateTime  3: Double  4: Boolean  5: DmDatiProfilo .</param>
         /// <param name="name">Name.</param>
         /// <param name="description">Label.</param>
         /// <param name="table">Possible values:  0: Empty  1: DM_PROFILE  2: DM_PROFILE_MULTIVALUES  3: DM_DATIPROFILO  4: DM_DATI_ENTE  5: _Function_ .</param>
         /// <param name="type">Possible values:  0: Standard  1: Additional  2: Contacts  3: PA  4: BodyData  5: Function .</param>
-        public FieldManagementDTO(string name = default(string), string description = default(string), int? table = default(int?), int? type = default(int?))
+        public FieldManagementDTO(DocumentTypeSimpleDTO documentType = default(DocumentTypeSimpleDTO), int? dataType = default(int?), string name = default(string), string description = default(string), int? table = default(int?), int? type = default(int?))
         {
+            this.DocumentType = documentType;
+            this.DataType = dataType;
             this.Name = name;
             this.Description = description;
             this.Table = table;
             this.Type = type;
         }
         
+        /// <summary>
+        /// Document type for additional field
+        /// </summary>
+        /// <value>Document type for additional field</value>
+        [DataMember(Name="documentType", EmitDefaultValue=false)]
+        public DocumentTypeSimpleDTO DocumentType { get; set; }
+
+        /// <summary>
+        /// Possible values:  0: Integer  1: String  2: DateTime  3: Double  4: Boolean  5: DmDatiProfilo 
+        /// </summary>
+        /// <value>Possible values:  0: Integer  1: String  2: DateTime  3: Double  4: Boolean  5: DmDatiProfilo </value>
+        [DataMember(Name="dataType", EmitDefaultValue=false)]
+        public int? DataType { get; set; }
+
         /// <summary>
         /// Name
         /// </summary>
@@ -81,6 +99,8 @@ namespace IO.Swagger.Management.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FieldManagementDTO {\n");
+            sb.Append("  DocumentType: ").Append(DocumentType).Append("\n");
+            sb.Append("  DataType: ").Append(DataType).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Table: ").Append(Table).Append("\n");
@@ -120,6 +140,16 @@ namespace IO.Swagger.Management.Model
 
             return 
                 (
+                    this.DocumentType == input.DocumentType ||
+                    (this.DocumentType != null &&
+                    this.DocumentType.Equals(input.DocumentType))
+                ) && 
+                (
+                    this.DataType == input.DataType ||
+                    (this.DataType != null &&
+                    this.DataType.Equals(input.DataType))
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -150,6 +180,10 @@ namespace IO.Swagger.Management.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.DocumentType != null)
+                    hashCode = hashCode * 59 + this.DocumentType.GetHashCode();
+                if (this.DataType != null)
+                    hashCode = hashCode * 59 + this.DataType.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Description != null)

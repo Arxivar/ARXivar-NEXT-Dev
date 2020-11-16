@@ -88,7 +88,7 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> BufferGetFileWithHttpInfo (string id);
         /// <summary>
-        /// This call returns the list of the document in the buffer for the monitored folder
+        /// This call returns the list of the document in the buffer for the monitored folder (Mail type included)
         /// </summary>
         /// <remarks>
         /// 
@@ -98,7 +98,7 @@ namespace IO.Swagger.Api
         List<BufferSimpleElement> BufferGetForMonitoredFolder ();
 
         /// <summary>
-        /// This call returns the list of the document in the buffer for the monitored folder
+        /// This call returns the list of the document in the buffer for the monitored folder (Mail type included)
         /// </summary>
         /// <remarks>
         /// 
@@ -134,7 +134,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted </param>
+        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted  6: Mail </param>
         /// <param name="description">Description</param>
         /// <param name="file">The file</param>
         /// <returns>List&lt;string&gt;</returns>
@@ -147,7 +147,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted </param>
+        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted  6: Mail </param>
         /// <param name="description">Description</param>
         /// <param name="file">The file</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
@@ -159,7 +159,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted </param>
+        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted  6: Mail </param>
         /// <param name="monitoredFolderId">If the buffer is related to a monitored folder</param>
         /// <param name="description">Description</param>
         /// <param name="file">The file</param>
@@ -173,7 +173,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted </param>
+        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted  6: Mail </param>
         /// <param name="monitoredFolderId">If the buffer is related to a monitored folder</param>
         /// <param name="description">Description</param>
         /// <param name="file">The file</param>
@@ -245,7 +245,7 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> BufferGetFileAsyncWithHttpInfo (string id);
         /// <summary>
-        /// This call returns the list of the document in the buffer for the monitored folder
+        /// This call returns the list of the document in the buffer for the monitored folder (Mail type included)
         /// </summary>
         /// <remarks>
         /// 
@@ -255,7 +255,7 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<List<BufferSimpleElement>> BufferGetForMonitoredFolderAsync ();
 
         /// <summary>
-        /// This call returns the list of the document in the buffer for the monitored folder
+        /// This call returns the list of the document in the buffer for the monitored folder (Mail type included)
         /// </summary>
         /// <remarks>
         /// 
@@ -291,7 +291,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted </param>
+        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted  6: Mail </param>
         /// <param name="description">Description</param>
         /// <param name="file">The file</param>
         /// <returns>Task of List&lt;string&gt;</returns>
@@ -304,7 +304,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted </param>
+        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted  6: Mail </param>
         /// <param name="description">Description</param>
         /// <param name="file">The file</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
@@ -316,7 +316,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted </param>
+        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted  6: Mail </param>
         /// <param name="monitoredFolderId">If the buffer is related to a monitored folder</param>
         /// <param name="description">Description</param>
         /// <param name="file">The file</param>
@@ -330,7 +330,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted </param>
+        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted  6: Mail </param>
         /// <param name="monitoredFolderId">If the buffer is related to a monitored folder</param>
         /// <param name="description">Description</param>
         /// <param name="file">The file</param>
@@ -878,7 +878,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call returns the list of the document in the buffer for the monitored folder 
+        /// This call returns the list of the document in the buffer for the monitored folder (Mail type included) 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;BufferSimpleElement&gt;</returns>
@@ -889,7 +889,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call returns the list of the document in the buffer for the monitored folder 
+        /// This call returns the list of the document in the buffer for the monitored folder (Mail type included) 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;BufferSimpleElement&gt;</returns>
@@ -946,7 +946,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call returns the list of the document in the buffer for the monitored folder 
+        /// This call returns the list of the document in the buffer for the monitored folder (Mail type included) 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;BufferSimpleElement&gt;</returns>
@@ -958,7 +958,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call returns the list of the document in the buffer for the monitored folder 
+        /// This call returns the list of the document in the buffer for the monitored folder (Mail type included) 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;BufferSimpleElement&gt;)</returns>
@@ -1169,7 +1169,7 @@ namespace IO.Swagger.Api
         /// This call allows to add a file to the buffer 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted </param>
+        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted  6: Mail </param>
         /// <param name="description">Description</param>
         /// <param name="file">The file</param>
         /// <returns>List&lt;string&gt;</returns>
@@ -1183,7 +1183,7 @@ namespace IO.Swagger.Api
         /// This call allows to add a file to the buffer 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted </param>
+        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted  6: Mail </param>
         /// <param name="description">Description</param>
         /// <param name="file">The file</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
@@ -1256,7 +1256,7 @@ namespace IO.Swagger.Api
         /// This call allows to add a file to the buffer 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted </param>
+        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted  6: Mail </param>
         /// <param name="description">Description</param>
         /// <param name="file">The file</param>
         /// <returns>Task of List&lt;string&gt;</returns>
@@ -1271,7 +1271,7 @@ namespace IO.Swagger.Api
         /// This call allows to add a file to the buffer 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted </param>
+        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted  6: Mail </param>
         /// <param name="description">Description</param>
         /// <param name="file">The file</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
@@ -1344,7 +1344,7 @@ namespace IO.Swagger.Api
         /// This call allows to add a file to the buffer 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted </param>
+        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted  6: Mail </param>
         /// <param name="monitoredFolderId">If the buffer is related to a monitored folder</param>
         /// <param name="description">Description</param>
         /// <param name="file">The file</param>
@@ -1359,7 +1359,7 @@ namespace IO.Swagger.Api
         /// This call allows to add a file to the buffer 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted </param>
+        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted  6: Mail </param>
         /// <param name="monitoredFolderId">If the buffer is related to a monitored folder</param>
         /// <param name="description">Description</param>
         /// <param name="file">The file</param>
@@ -1437,7 +1437,7 @@ namespace IO.Swagger.Api
         /// This call allows to add a file to the buffer 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted </param>
+        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted  6: Mail </param>
         /// <param name="monitoredFolderId">If the buffer is related to a monitored folder</param>
         /// <param name="description">Description</param>
         /// <param name="file">The file</param>
@@ -1453,7 +1453,7 @@ namespace IO.Swagger.Api
         /// This call allows to add a file to the buffer 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted </param>
+        /// <param name="elementTypeEnum">Possible values:  0: DmBuffer  1: NextArchive  2: MonitoredFolder  3: ProcessDocThumbnail  4: CloneProfile  5: ReportExecuted  6: Mail </param>
         /// <param name="monitoredFolderId">If the buffer is related to a monitored folder</param>
         /// <param name="description">Description</param>
         /// <param name="file">The file</param>

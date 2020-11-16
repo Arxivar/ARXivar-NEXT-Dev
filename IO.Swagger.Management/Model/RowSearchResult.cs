@@ -33,7 +33,7 @@ namespace IO.Swagger.Management.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RowSearchResult" /> class.
         /// </summary>
-        /// <param name="rowSerchResultContext">Possible values:  0: None  1: Profiles  2: InternalAttachments  3: ExternalAttachments  4: AddressBook  5: CheckInOut  6: TaskWork  7: TaskWorkAttachements  8: TaskNotes  9: TaskWorkHistory .</param>
+        /// <param name="rowSerchResultContext">Possible values:  0: None  1: Profiles  2: InternalAttachments  3: ExternalAttachments  4: AddressBook  5: CheckInOut  6: TaskWork  7: TaskWorkAttachements  8: TaskNotes  9: TaskWorkHistory  10: SqlQuery  11: ApiCall .</param>
         /// <param name="columns">columns.</param>
         public RowSearchResult(int? rowSerchResultContext = default(int?), List<ColumnSearchResult> columns = default(List<ColumnSearchResult>))
         {
@@ -42,9 +42,9 @@ namespace IO.Swagger.Management.Model
         }
         
         /// <summary>
-        /// Possible values:  0: None  1: Profiles  2: InternalAttachments  3: ExternalAttachments  4: AddressBook  5: CheckInOut  6: TaskWork  7: TaskWorkAttachements  8: TaskNotes  9: TaskWorkHistory 
+        /// Possible values:  0: None  1: Profiles  2: InternalAttachments  3: ExternalAttachments  4: AddressBook  5: CheckInOut  6: TaskWork  7: TaskWorkAttachements  8: TaskNotes  9: TaskWorkHistory  10: SqlQuery  11: ApiCall 
         /// </summary>
-        /// <value>Possible values:  0: None  1: Profiles  2: InternalAttachments  3: ExternalAttachments  4: AddressBook  5: CheckInOut  6: TaskWork  7: TaskWorkAttachements  8: TaskNotes  9: TaskWorkHistory </value>
+        /// <value>Possible values:  0: None  1: Profiles  2: InternalAttachments  3: ExternalAttachments  4: AddressBook  5: CheckInOut  6: TaskWork  7: TaskWorkAttachements  8: TaskNotes  9: TaskWorkHistory  10: SqlQuery  11: ApiCall </value>
         [DataMember(Name="rowSerchResultContext", EmitDefaultValue=false)]
         public int? RowSerchResultContext { get; set; }
 

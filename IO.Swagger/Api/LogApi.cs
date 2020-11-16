@@ -45,6 +45,27 @@ namespace IO.Swagger.Api
         /// <param name="docNumber">Document identifier</param>
         /// <returns>ApiResponse of List&lt;LogDTO&gt;</returns>
         ApiResponse<List<LogDTO>> LogGetLogWithHttpInfo (int? docNumber);
+        /// <summary>
+        /// This call writes a log document
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="model">Model for log writing</param>
+        /// <returns>bool?</returns>
+        bool? LogWriteDocnumberLog (DocnumberLogDTO model);
+
+        /// <summary>
+        /// This call writes a log document
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="model">Model for log writing</param>
+        /// <returns>ApiResponse of bool?</returns>
+        ApiResponse<bool?> LogWriteDocnumberLogWithHttpInfo (DocnumberLogDTO model);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -68,6 +89,27 @@ namespace IO.Swagger.Api
         /// <param name="docNumber">Document identifier</param>
         /// <returns>Task of ApiResponse (List&lt;LogDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<LogDTO>>> LogGetLogAsyncWithHttpInfo (int? docNumber);
+        /// <summary>
+        /// This call writes a log document
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="model">Model for log writing</param>
+        /// <returns>Task of bool?</returns>
+        System.Threading.Tasks.Task<bool?> LogWriteDocnumberLogAsync (DocnumberLogDTO model);
+
+        /// <summary>
+        /// This call writes a log document
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="model">Model for log writing</param>
+        /// <returns>Task of ApiResponse (bool?)</returns>
+        System.Threading.Tasks.Task<ApiResponse<bool?>> LogWriteDocnumberLogAsyncWithHttpInfo (DocnumberLogDTO model);
         #endregion Asynchronous Operations
     }
 
@@ -315,6 +357,179 @@ namespace IO.Swagger.Api
             return new ApiResponse<List<LogDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (List<LogDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LogDTO>)));
+        }
+
+        /// <summary>
+        /// This call writes a log document 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="model">Model for log writing</param>
+        /// <returns>bool?</returns>
+        public bool? LogWriteDocnumberLog (DocnumberLogDTO model)
+        {
+             ApiResponse<bool?> localVarResponse = LogWriteDocnumberLogWithHttpInfo(model);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call writes a log document 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="model">Model for log writing</param>
+        /// <returns>ApiResponse of bool?</returns>
+        public ApiResponse< bool? > LogWriteDocnumberLogWithHttpInfo (DocnumberLogDTO model)
+        {
+            // verify the required parameter 'model' is set
+            if (model == null)
+                throw new ApiException(400, "Missing required parameter 'model' when calling LogApi->LogWriteDocnumberLog");
+
+            var localVarPath = "/api/Log";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (model != null && model.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(model); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = model; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("LogWriteDocnumberLog", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<bool?>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (bool?) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(bool?)));
+        }
+
+        /// <summary>
+        /// This call writes a log document 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="model">Model for log writing</param>
+        /// <returns>Task of bool?</returns>
+        public async System.Threading.Tasks.Task<bool?> LogWriteDocnumberLogAsync (DocnumberLogDTO model)
+        {
+             ApiResponse<bool?> localVarResponse = await LogWriteDocnumberLogAsyncWithHttpInfo(model);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call writes a log document 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="model">Model for log writing</param>
+        /// <returns>Task of ApiResponse (bool?)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<bool?>> LogWriteDocnumberLogAsyncWithHttpInfo (DocnumberLogDTO model)
+        {
+            // verify the required parameter 'model' is set
+            if (model == null)
+                throw new ApiException(400, "Missing required parameter 'model' when calling LogApi->LogWriteDocnumberLog");
+
+            var localVarPath = "/api/Log";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (model != null && model.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(model); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = model; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("LogWriteDocnumberLog", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<bool?>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (bool?) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(bool?)));
         }
 
     }

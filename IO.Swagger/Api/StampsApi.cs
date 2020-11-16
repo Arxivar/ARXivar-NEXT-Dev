@@ -388,6 +388,52 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> StampsInsertStampInstanceFromProcessDocWithHttpInfo (int? processDocId, List<StampsInstanceDTO> toInsert);
         /// <summary>
+        /// This call returns the generated image for a stamp definition and a docnumber
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Document Identifier</param>
+        /// <param name="stampDefinition">Stamp definition object</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream StampsRenderStampDefinitionForDocnumber (int? docnumber, StampDefinitionDTO stampDefinition);
+
+        /// <summary>
+        /// This call returns the generated image for a stamp definition and a docnumber
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Document Identifier</param>
+        /// <param name="stampDefinition">Stamp definition object</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> StampsRenderStampDefinitionForDocnumberWithHttpInfo (int? docnumber, StampDefinitionDTO stampDefinition);
+        /// <summary>
+        /// This call returns the generated image for a stamp definition and a processDocId
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processDocId">Workflow Document Identifier</param>
+        /// <param name="stampDefinition">Stamp definition object</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream StampsRenderStampDefinitionForProcessDoc (int? processDocId, StampDefinitionDTO stampDefinition);
+
+        /// <summary>
+        /// This call returns the generated image for a stamp definition and a processDocId
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processDocId">Workflow Document Identifier</param>
+        /// <param name="stampDefinition">Stamp definition object</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> StampsRenderStampDefinitionForProcessDocWithHttpInfo (int? processDocId, StampDefinitionDTO stampDefinition);
+        /// <summary>
         /// This call updates new stampinstances for docnumber
         /// </summary>
         /// <remarks>
@@ -798,6 +844,52 @@ namespace IO.Swagger.Api
         /// <param name="toInsert"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> StampsInsertStampInstanceFromProcessDocAsyncWithHttpInfo (int? processDocId, List<StampsInstanceDTO> toInsert);
+        /// <summary>
+        /// This call returns the generated image for a stamp definition and a docnumber
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Document Identifier</param>
+        /// <param name="stampDefinition">Stamp definition object</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> StampsRenderStampDefinitionForDocnumberAsync (int? docnumber, StampDefinitionDTO stampDefinition);
+
+        /// <summary>
+        /// This call returns the generated image for a stamp definition and a docnumber
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Document Identifier</param>
+        /// <param name="stampDefinition">Stamp definition object</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> StampsRenderStampDefinitionForDocnumberAsyncWithHttpInfo (int? docnumber, StampDefinitionDTO stampDefinition);
+        /// <summary>
+        /// This call returns the generated image for a stamp definition and a processDocId
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processDocId">Workflow Document Identifier</param>
+        /// <param name="stampDefinition">Stamp definition object</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> StampsRenderStampDefinitionForProcessDocAsync (int? processDocId, StampDefinitionDTO stampDefinition);
+
+        /// <summary>
+        /// This call returns the generated image for a stamp definition and a processDocId
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processDocId">Workflow Document Identifier</param>
+        /// <param name="stampDefinition">Stamp definition object</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> StampsRenderStampDefinitionForProcessDocAsyncWithHttpInfo (int? processDocId, StampDefinitionDTO stampDefinition);
         /// <summary>
         /// This call updates new stampinstances for docnumber
         /// </summary>
@@ -3535,6 +3627,364 @@ namespace IO.Swagger.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
+        }
+
+        /// <summary>
+        /// This call returns the generated image for a stamp definition and a docnumber 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Document Identifier</param>
+        /// <param name="stampDefinition">Stamp definition object</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream StampsRenderStampDefinitionForDocnumber (int? docnumber, StampDefinitionDTO stampDefinition)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = StampsRenderStampDefinitionForDocnumberWithHttpInfo(docnumber, stampDefinition);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns the generated image for a stamp definition and a docnumber 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Document Identifier</param>
+        /// <param name="stampDefinition">Stamp definition object</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > StampsRenderStampDefinitionForDocnumberWithHttpInfo (int? docnumber, StampDefinitionDTO stampDefinition)
+        {
+            // verify the required parameter 'docnumber' is set
+            if (docnumber == null)
+                throw new ApiException(400, "Missing required parameter 'docnumber' when calling StampsApi->StampsRenderStampDefinitionForDocnumber");
+            // verify the required parameter 'stampDefinition' is set
+            if (stampDefinition == null)
+                throw new ApiException(400, "Missing required parameter 'stampDefinition' when calling StampsApi->StampsRenderStampDefinitionForDocnumber");
+
+            var localVarPath = "/api/Stamps/renderStampDefinitionForDocnumber/{docnumber}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (docnumber != null) localVarPathParams.Add("docnumber", this.Configuration.ApiClient.ParameterToString(docnumber)); // path parameter
+            if (stampDefinition != null && stampDefinition.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(stampDefinition); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = stampDefinition; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("StampsRenderStampDefinitionForDocnumber", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// This call returns the generated image for a stamp definition and a docnumber 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Document Identifier</param>
+        /// <param name="stampDefinition">Stamp definition object</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> StampsRenderStampDefinitionForDocnumberAsync (int? docnumber, StampDefinitionDTO stampDefinition)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await StampsRenderStampDefinitionForDocnumberAsyncWithHttpInfo(docnumber, stampDefinition);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns the generated image for a stamp definition and a docnumber 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Document Identifier</param>
+        /// <param name="stampDefinition">Stamp definition object</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> StampsRenderStampDefinitionForDocnumberAsyncWithHttpInfo (int? docnumber, StampDefinitionDTO stampDefinition)
+        {
+            // verify the required parameter 'docnumber' is set
+            if (docnumber == null)
+                throw new ApiException(400, "Missing required parameter 'docnumber' when calling StampsApi->StampsRenderStampDefinitionForDocnumber");
+            // verify the required parameter 'stampDefinition' is set
+            if (stampDefinition == null)
+                throw new ApiException(400, "Missing required parameter 'stampDefinition' when calling StampsApi->StampsRenderStampDefinitionForDocnumber");
+
+            var localVarPath = "/api/Stamps/renderStampDefinitionForDocnumber/{docnumber}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (docnumber != null) localVarPathParams.Add("docnumber", this.Configuration.ApiClient.ParameterToString(docnumber)); // path parameter
+            if (stampDefinition != null && stampDefinition.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(stampDefinition); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = stampDefinition; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("StampsRenderStampDefinitionForDocnumber", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// This call returns the generated image for a stamp definition and a processDocId 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processDocId">Workflow Document Identifier</param>
+        /// <param name="stampDefinition">Stamp definition object</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream StampsRenderStampDefinitionForProcessDoc (int? processDocId, StampDefinitionDTO stampDefinition)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = StampsRenderStampDefinitionForProcessDocWithHttpInfo(processDocId, stampDefinition);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns the generated image for a stamp definition and a processDocId 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processDocId">Workflow Document Identifier</param>
+        /// <param name="stampDefinition">Stamp definition object</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > StampsRenderStampDefinitionForProcessDocWithHttpInfo (int? processDocId, StampDefinitionDTO stampDefinition)
+        {
+            // verify the required parameter 'processDocId' is set
+            if (processDocId == null)
+                throw new ApiException(400, "Missing required parameter 'processDocId' when calling StampsApi->StampsRenderStampDefinitionForProcessDoc");
+            // verify the required parameter 'stampDefinition' is set
+            if (stampDefinition == null)
+                throw new ApiException(400, "Missing required parameter 'stampDefinition' when calling StampsApi->StampsRenderStampDefinitionForProcessDoc");
+
+            var localVarPath = "/api/Stamps/renderStampDefinitionForProcessDoc/{processDocId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (processDocId != null) localVarPathParams.Add("processDocId", this.Configuration.ApiClient.ParameterToString(processDocId)); // path parameter
+            if (stampDefinition != null && stampDefinition.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(stampDefinition); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = stampDefinition; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("StampsRenderStampDefinitionForProcessDoc", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// This call returns the generated image for a stamp definition and a processDocId 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processDocId">Workflow Document Identifier</param>
+        /// <param name="stampDefinition">Stamp definition object</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> StampsRenderStampDefinitionForProcessDocAsync (int? processDocId, StampDefinitionDTO stampDefinition)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await StampsRenderStampDefinitionForProcessDocAsyncWithHttpInfo(processDocId, stampDefinition);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns the generated image for a stamp definition and a processDocId 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="processDocId">Workflow Document Identifier</param>
+        /// <param name="stampDefinition">Stamp definition object</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> StampsRenderStampDefinitionForProcessDocAsyncWithHttpInfo (int? processDocId, StampDefinitionDTO stampDefinition)
+        {
+            // verify the required parameter 'processDocId' is set
+            if (processDocId == null)
+                throw new ApiException(400, "Missing required parameter 'processDocId' when calling StampsApi->StampsRenderStampDefinitionForProcessDoc");
+            // verify the required parameter 'stampDefinition' is set
+            if (stampDefinition == null)
+                throw new ApiException(400, "Missing required parameter 'stampDefinition' when calling StampsApi->StampsRenderStampDefinitionForProcessDoc");
+
+            var localVarPath = "/api/Stamps/renderStampDefinitionForProcessDoc/{processDocId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (processDocId != null) localVarPathParams.Add("processDocId", this.Configuration.ApiClient.ParameterToString(processDocId)); // path parameter
+            if (stampDefinition != null && stampDefinition.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(stampDefinition); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = stampDefinition; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("StampsRenderStampDefinitionForProcessDoc", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
         }
 
         /// <summary>

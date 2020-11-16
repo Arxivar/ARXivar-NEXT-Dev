@@ -25,6 +25,27 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// This call insert new barcode
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="barcodeInsertRequest">Barcode insert request</param>
+        /// <returns>BarcodeDTO</returns>
+        BarcodeDTO BarcodeBarcodeInsert (BarcodeInsertRequestDTO barcodeInsertRequest);
+
+        /// <summary>
+        /// This call insert new barcode
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="barcodeInsertRequest">Barcode insert request</param>
+        /// <returns>ApiResponse of BarcodeDTO</returns>
+        ApiResponse<BarcodeDTO> BarcodeBarcodeInsertWithHttpInfo (BarcodeInsertRequestDTO barcodeInsertRequest);
+        /// <summary>
         /// This call returns the barcode grapich user template
         /// </summary>
         /// <remarks>
@@ -276,6 +297,27 @@ namespace IO.Swagger.Api
         ApiResponse<Object> BarcodeSetBarcodeUserTemplateWithHttpInfo (BarcodeTemplateDto templateDto);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// This call insert new barcode
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="barcodeInsertRequest">Barcode insert request</param>
+        /// <returns>Task of BarcodeDTO</returns>
+        System.Threading.Tasks.Task<BarcodeDTO> BarcodeBarcodeInsertAsync (BarcodeInsertRequestDTO barcodeInsertRequest);
+
+        /// <summary>
+        /// This call insert new barcode
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="barcodeInsertRequest">Barcode insert request</param>
+        /// <returns>Task of ApiResponse (BarcodeDTO)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BarcodeDTO>> BarcodeBarcodeInsertAsyncWithHttpInfo (BarcodeInsertRequestDTO barcodeInsertRequest);
         /// <summary>
         /// This call returns the barcode grapich user template
         /// </summary>
@@ -624,6 +666,179 @@ namespace IO.Swagger.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// This call insert new barcode 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="barcodeInsertRequest">Barcode insert request</param>
+        /// <returns>BarcodeDTO</returns>
+        public BarcodeDTO BarcodeBarcodeInsert (BarcodeInsertRequestDTO barcodeInsertRequest)
+        {
+             ApiResponse<BarcodeDTO> localVarResponse = BarcodeBarcodeInsertWithHttpInfo(barcodeInsertRequest);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call insert new barcode 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="barcodeInsertRequest">Barcode insert request</param>
+        /// <returns>ApiResponse of BarcodeDTO</returns>
+        public ApiResponse< BarcodeDTO > BarcodeBarcodeInsertWithHttpInfo (BarcodeInsertRequestDTO barcodeInsertRequest)
+        {
+            // verify the required parameter 'barcodeInsertRequest' is set
+            if (barcodeInsertRequest == null)
+                throw new ApiException(400, "Missing required parameter 'barcodeInsertRequest' when calling BarcodeApi->BarcodeBarcodeInsert");
+
+            var localVarPath = "/api/Barcode";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (barcodeInsertRequest != null && barcodeInsertRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(barcodeInsertRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = barcodeInsertRequest; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("BarcodeBarcodeInsert", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<BarcodeDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (BarcodeDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BarcodeDTO)));
+        }
+
+        /// <summary>
+        /// This call insert new barcode 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="barcodeInsertRequest">Barcode insert request</param>
+        /// <returns>Task of BarcodeDTO</returns>
+        public async System.Threading.Tasks.Task<BarcodeDTO> BarcodeBarcodeInsertAsync (BarcodeInsertRequestDTO barcodeInsertRequest)
+        {
+             ApiResponse<BarcodeDTO> localVarResponse = await BarcodeBarcodeInsertAsyncWithHttpInfo(barcodeInsertRequest);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call insert new barcode 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="barcodeInsertRequest">Barcode insert request</param>
+        /// <returns>Task of ApiResponse (BarcodeDTO)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BarcodeDTO>> BarcodeBarcodeInsertAsyncWithHttpInfo (BarcodeInsertRequestDTO barcodeInsertRequest)
+        {
+            // verify the required parameter 'barcodeInsertRequest' is set
+            if (barcodeInsertRequest == null)
+                throw new ApiException(400, "Missing required parameter 'barcodeInsertRequest' when calling BarcodeApi->BarcodeBarcodeInsert");
+
+            var localVarPath = "/api/Barcode";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (barcodeInsertRequest != null && barcodeInsertRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(barcodeInsertRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = barcodeInsertRequest; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("BarcodeBarcodeInsert", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<BarcodeDTO>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (BarcodeDTO) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BarcodeDTO)));
         }
 
         /// <summary>

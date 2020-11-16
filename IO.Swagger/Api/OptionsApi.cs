@@ -148,6 +148,27 @@ namespace IO.Swagger.Api
         /// <param name="requestDto">Option information</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> OptionsSetByArgomentoUtenteWithHttpInfo (OptionsRequestDTO requestDto);
+        /// <summary>
+        /// This call writes options by argument and field
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestDto">Option information</param>
+        /// <returns></returns>
+        void OptionsSetOpzioniUtenteByArgomentoCampo (OptionsFieldRequestDTO requestDto);
+
+        /// <summary>
+        /// This call writes options by argument and field
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestDto">Option information</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> OptionsSetOpzioniUtenteByArgomentoCampoWithHttpInfo (OptionsFieldRequestDTO requestDto);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -274,6 +295,27 @@ namespace IO.Swagger.Api
         /// <param name="requestDto">Option information</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> OptionsSetByArgomentoUtenteAsyncWithHttpInfo (OptionsRequestDTO requestDto);
+        /// <summary>
+        /// This call writes options by argument and field
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestDto">Option information</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task OptionsSetOpzioniUtenteByArgomentoCampoAsync (OptionsFieldRequestDTO requestDto);
+
+        /// <summary>
+        /// This call writes options by argument and field
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestDto">Option information</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> OptionsSetOpzioniUtenteByArgomentoCampoAsyncWithHttpInfo (OptionsFieldRequestDTO requestDto);
         #endregion Asynchronous Operations
     }
 
@@ -1262,6 +1304,169 @@ namespace IO.Swagger.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("OptionsSetByArgomentoUtente", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// This call writes options by argument and field 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestDto">Option information</param>
+        /// <returns></returns>
+        public void OptionsSetOpzioniUtenteByArgomentoCampo (OptionsFieldRequestDTO requestDto)
+        {
+             OptionsSetOpzioniUtenteByArgomentoCampoWithHttpInfo(requestDto);
+        }
+
+        /// <summary>
+        /// This call writes options by argument and field 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestDto">Option information</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> OptionsSetOpzioniUtenteByArgomentoCampoWithHttpInfo (OptionsFieldRequestDTO requestDto)
+        {
+            // verify the required parameter 'requestDto' is set
+            if (requestDto == null)
+                throw new ApiException(400, "Missing required parameter 'requestDto' when calling OptionsApi->OptionsSetOpzioniUtenteByArgomentoCampo");
+
+            var localVarPath = "/api/Options/topicField";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (requestDto != null && requestDto.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(requestDto); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = requestDto; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("OptionsSetOpzioniUtenteByArgomentoCampo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// This call writes options by argument and field 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestDto">Option information</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task OptionsSetOpzioniUtenteByArgomentoCampoAsync (OptionsFieldRequestDTO requestDto)
+        {
+             await OptionsSetOpzioniUtenteByArgomentoCampoAsyncWithHttpInfo(requestDto);
+
+        }
+
+        /// <summary>
+        /// This call writes options by argument and field 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="requestDto">Option information</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> OptionsSetOpzioniUtenteByArgomentoCampoAsyncWithHttpInfo (OptionsFieldRequestDTO requestDto)
+        {
+            // verify the required parameter 'requestDto' is set
+            if (requestDto == null)
+                throw new ApiException(400, "Missing required parameter 'requestDto' when calling OptionsApi->OptionsSetOpzioniUtenteByArgomentoCampo");
+
+            var localVarPath = "/api/Options/topicField";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (requestDto != null && requestDto.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(requestDto); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = requestDto; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("OptionsSetOpzioniUtenteByArgomentoCampo", localVarResponse);
                 if (exception != null) throw exception;
             }
 

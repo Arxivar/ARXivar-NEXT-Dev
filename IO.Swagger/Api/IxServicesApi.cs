@@ -25,6 +25,27 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// This call set approved a document to IX-FE Service
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber</param>
+        /// <returns></returns>
+        void IxServicesApprove (int? docnumber);
+
+        /// <summary>
+        /// This call set approved a document to IX-FE Service
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> IxServicesApproveWithHttpInfo (int? docnumber);
+        /// <summary>
         /// This method return the possibility for user to delete a accumulation package
         /// </summary>
         /// <remarks>
@@ -258,6 +279,29 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of List&lt;IxFeDocumentCompleteDTO&gt;</returns>
         ApiResponse<List<IxFeDocumentCompleteDTO>> IxServicesGetIxFeCompleteDetailsByDocnumberWithHttpInfo (int? docnumber);
         /// <summary>
+        /// This call set rejected a document to IX-FE Service
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber</param>
+        /// <param name="reason"></param>
+        /// <returns></returns>
+        void IxServicesReject (int? docnumber, string reason);
+
+        /// <summary>
+        /// This call set rejected a document to IX-FE Service
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber</param>
+        /// <param name="reason"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> IxServicesRejectWithHttpInfo (int? docnumber, string reason);
+        /// <summary>
         /// This call send an outcome value for a docnumber (for invoice from IX-CE service)
         /// </summary>
         /// <remarks>
@@ -343,6 +387,27 @@ namespace IO.Swagger.Api
         ApiResponse<bool?> IxServicesSendToIxFeSignRequiredWithHttpInfo (SendToIxFeSignRequiredRequestDto request);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// This call set approved a document to IX-FE Service
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task IxServicesApproveAsync (int? docnumber);
+
+        /// <summary>
+        /// This call set approved a document to IX-FE Service
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> IxServicesApproveAsyncWithHttpInfo (int? docnumber);
         /// <summary>
         /// This method return the possibility for user to delete a accumulation package
         /// </summary>
@@ -577,6 +642,29 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (List&lt;IxFeDocumentCompleteDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<IxFeDocumentCompleteDTO>>> IxServicesGetIxFeCompleteDetailsByDocnumberAsyncWithHttpInfo (int? docnumber);
         /// <summary>
+        /// This call set rejected a document to IX-FE Service
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber</param>
+        /// <param name="reason"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task IxServicesRejectAsync (int? docnumber, string reason);
+
+        /// <summary>
+        /// This call set rejected a document to IX-FE Service
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber</param>
+        /// <param name="reason"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> IxServicesRejectAsyncWithHttpInfo (int? docnumber, string reason);
+        /// <summary>
         /// This call send an outcome value for a docnumber (for invoice from IX-CE service)
         /// </summary>
         /// <remarks>
@@ -758,6 +846,145 @@ namespace IO.Swagger.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// This call set approved a document to IX-FE Service 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber</param>
+        /// <returns></returns>
+        public void IxServicesApprove (int? docnumber)
+        {
+             IxServicesApproveWithHttpInfo(docnumber);
+        }
+
+        /// <summary>
+        /// This call set approved a document to IX-FE Service 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> IxServicesApproveWithHttpInfo (int? docnumber)
+        {
+            // verify the required parameter 'docnumber' is set
+            if (docnumber == null)
+                throw new ApiException(400, "Missing required parameter 'docnumber' when calling IxServicesApi->IxServicesApprove");
+
+            var localVarPath = "/api/IxServices/FE/{docnumber}/Approve";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (docnumber != null) localVarPathParams.Add("docnumber", this.Configuration.ApiClient.ParameterToString(docnumber)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("IxServicesApprove", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// This call set approved a document to IX-FE Service 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task IxServicesApproveAsync (int? docnumber)
+        {
+             await IxServicesApproveAsyncWithHttpInfo(docnumber);
+
+        }
+
+        /// <summary>
+        /// This call set approved a document to IX-FE Service 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> IxServicesApproveAsyncWithHttpInfo (int? docnumber)
+        {
+            // verify the required parameter 'docnumber' is set
+            if (docnumber == null)
+                throw new ApiException(400, "Missing required parameter 'docnumber' when calling IxServicesApi->IxServicesApprove");
+
+            var localVarPath = "/api/IxServices/FE/{docnumber}/Approve";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (docnumber != null) localVarPathParams.Add("docnumber", this.Configuration.ApiClient.ParameterToString(docnumber)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("IxServicesApprove", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
@@ -2369,6 +2596,181 @@ namespace IO.Swagger.Api
             return new ApiResponse<List<IxFeDocumentCompleteDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (List<IxFeDocumentCompleteDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<IxFeDocumentCompleteDTO>)));
+        }
+
+        /// <summary>
+        /// This call set rejected a document to IX-FE Service 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber</param>
+        /// <param name="reason"></param>
+        /// <returns></returns>
+        public void IxServicesReject (int? docnumber, string reason)
+        {
+             IxServicesRejectWithHttpInfo(docnumber, reason);
+        }
+
+        /// <summary>
+        /// This call set rejected a document to IX-FE Service 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber</param>
+        /// <param name="reason"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> IxServicesRejectWithHttpInfo (int? docnumber, string reason)
+        {
+            // verify the required parameter 'docnumber' is set
+            if (docnumber == null)
+                throw new ApiException(400, "Missing required parameter 'docnumber' when calling IxServicesApi->IxServicesReject");
+            // verify the required parameter 'reason' is set
+            if (reason == null)
+                throw new ApiException(400, "Missing required parameter 'reason' when calling IxServicesApi->IxServicesReject");
+
+            var localVarPath = "/api/IxServices/FE/{docnumber}/Reject";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (docnumber != null) localVarPathParams.Add("docnumber", this.Configuration.ApiClient.ParameterToString(docnumber)); // path parameter
+            if (reason != null && reason.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reason); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reason; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("IxServicesReject", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// This call set rejected a document to IX-FE Service 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber</param>
+        /// <param name="reason"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task IxServicesRejectAsync (int? docnumber, string reason)
+        {
+             await IxServicesRejectAsyncWithHttpInfo(docnumber, reason);
+
+        }
+
+        /// <summary>
+        /// This call set rejected a document to IX-FE Service 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="docnumber">Docnumber</param>
+        /// <param name="reason"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> IxServicesRejectAsyncWithHttpInfo (int? docnumber, string reason)
+        {
+            // verify the required parameter 'docnumber' is set
+            if (docnumber == null)
+                throw new ApiException(400, "Missing required parameter 'docnumber' when calling IxServicesApi->IxServicesReject");
+            // verify the required parameter 'reason' is set
+            if (reason == null)
+                throw new ApiException(400, "Missing required parameter 'reason' when calling IxServicesApi->IxServicesReject");
+
+            var localVarPath = "/api/IxServices/FE/{docnumber}/Reject";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (docnumber != null) localVarPathParams.Add("docnumber", this.Configuration.ApiClient.ParameterToString(docnumber)); // path parameter
+            if (reason != null && reason.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(reason); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = reason; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("IxServicesReject", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>

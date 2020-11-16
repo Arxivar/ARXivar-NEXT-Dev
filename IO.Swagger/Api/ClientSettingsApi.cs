@@ -31,7 +31,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pluginId">Identifier of plugin</param>
+        /// <param name="pluginId"></param>
         /// <returns>Object</returns>
         Object ClientSettingsGetPluginSettings (string pluginId);
 
@@ -42,9 +42,34 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pluginId">Identifier of plugin</param>
+        /// <param name="pluginId"></param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> ClientSettingsGetPluginSettingsWithHttpInfo (string pluginId);
+        /// <summary>
+        /// This call returns the settings of plugin
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pluginId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="desktopId"></param>
+        /// <returns>Object</returns>
+        Object ClientSettingsGetPluginSettings_0 (string pluginId, string instanceId, string desktopId);
+
+        /// <summary>
+        /// This call returns the settings of plugin
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pluginId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="desktopId"></param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> ClientSettingsGetPluginSettings_0WithHttpInfo (string pluginId, string instanceId, string desktopId);
         /// <summary>
         /// This call returns the plugin settings of connected user
         /// </summary>
@@ -161,8 +186,8 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pluginId">Identifier of plugin</param>
-        /// <param name="setting">Settings information to update</param>
+        /// <param name="pluginId"></param>
+        /// <param name="setting"></param>
         /// <returns></returns>
         void ClientSettingsUpdatePluginSetting (string pluginId, Object setting);
 
@@ -173,10 +198,37 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pluginId">Identifier of plugin</param>
-        /// <param name="setting">Settings information to update</param>
+        /// <param name="pluginId"></param>
+        /// <param name="setting"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ClientSettingsUpdatePluginSettingWithHttpInfo (string pluginId, Object setting);
+        /// <summary>
+        /// This call upade the setting of plugin
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pluginId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="desktopId"></param>
+        /// <param name="setting"></param>
+        /// <returns></returns>
+        void ClientSettingsUpdatePluginSetting_0 (string pluginId, string instanceId, string desktopId, Object setting);
+
+        /// <summary>
+        /// This call upade the setting of plugin
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pluginId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="desktopId"></param>
+        /// <param name="setting"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ClientSettingsUpdatePluginSetting_0WithHttpInfo (string pluginId, string instanceId, string desktopId, Object setting);
         /// <summary>
         /// This call upade the plugin settings of connected user
         /// </summary>
@@ -282,7 +334,7 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pluginId">Identifier of plugin</param>
+        /// <param name="pluginId"></param>
         /// <returns>Task of Object</returns>
         System.Threading.Tasks.Task<Object> ClientSettingsGetPluginSettingsAsync (string pluginId);
 
@@ -293,9 +345,34 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pluginId">Identifier of plugin</param>
+        /// <param name="pluginId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ClientSettingsGetPluginSettingsAsyncWithHttpInfo (string pluginId);
+        /// <summary>
+        /// This call returns the settings of plugin
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pluginId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="desktopId"></param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> ClientSettingsGetPluginSettings_0Async (string pluginId, string instanceId, string desktopId);
+
+        /// <summary>
+        /// This call returns the settings of plugin
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pluginId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="desktopId"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ClientSettingsGetPluginSettings_0AsyncWithHttpInfo (string pluginId, string instanceId, string desktopId);
         /// <summary>
         /// This call returns the plugin settings of connected user
         /// </summary>
@@ -412,8 +489,8 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pluginId">Identifier of plugin</param>
-        /// <param name="setting">Settings information to update</param>
+        /// <param name="pluginId"></param>
+        /// <param name="setting"></param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task ClientSettingsUpdatePluginSettingAsync (string pluginId, Object setting);
 
@@ -424,10 +501,37 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pluginId">Identifier of plugin</param>
-        /// <param name="setting">Settings information to update</param>
+        /// <param name="pluginId"></param>
+        /// <param name="setting"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ClientSettingsUpdatePluginSettingAsyncWithHttpInfo (string pluginId, Object setting);
+        /// <summary>
+        /// This call upade the setting of plugin
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pluginId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="desktopId"></param>
+        /// <param name="setting"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task ClientSettingsUpdatePluginSetting_0Async (string pluginId, string instanceId, string desktopId, Object setting);
+
+        /// <summary>
+        /// This call upade the setting of plugin
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pluginId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="desktopId"></param>
+        /// <param name="setting"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ClientSettingsUpdatePluginSetting_0AsyncWithHttpInfo (string pluginId, string instanceId, string desktopId, Object setting);
         /// <summary>
         /// This call upade the plugin settings of connected user
         /// </summary>
@@ -628,7 +732,7 @@ namespace IO.Swagger.Api
         /// This call returns the settings of plugin 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pluginId">Identifier of plugin</param>
+        /// <param name="pluginId"></param>
         /// <returns>Object</returns>
         public Object ClientSettingsGetPluginSettings (string pluginId)
         {
@@ -640,7 +744,7 @@ namespace IO.Swagger.Api
         /// This call returns the settings of plugin 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pluginId">Identifier of plugin</param>
+        /// <param name="pluginId"></param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > ClientSettingsGetPluginSettingsWithHttpInfo (string pluginId)
         {
@@ -702,7 +806,7 @@ namespace IO.Swagger.Api
         /// This call returns the settings of plugin 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pluginId">Identifier of plugin</param>
+        /// <param name="pluginId"></param>
         /// <returns>Task of Object</returns>
         public async System.Threading.Tasks.Task<Object> ClientSettingsGetPluginSettingsAsync (string pluginId)
         {
@@ -715,7 +819,7 @@ namespace IO.Swagger.Api
         /// This call returns the settings of plugin 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pluginId">Identifier of plugin</param>
+        /// <param name="pluginId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> ClientSettingsGetPluginSettingsAsyncWithHttpInfo (string pluginId)
         {
@@ -765,6 +869,179 @@ namespace IO.Swagger.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("ClientSettingsGetPluginSettings", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// This call returns the settings of plugin 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pluginId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="desktopId"></param>
+        /// <returns>Object</returns>
+        public Object ClientSettingsGetPluginSettings_0 (string pluginId, string instanceId, string desktopId)
+        {
+             ApiResponse<Object> localVarResponse = ClientSettingsGetPluginSettings_0WithHttpInfo(pluginId, instanceId, desktopId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// This call returns the settings of plugin 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pluginId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="desktopId"></param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > ClientSettingsGetPluginSettings_0WithHttpInfo (string pluginId, string instanceId, string desktopId)
+        {
+            // verify the required parameter 'pluginId' is set
+            if (pluginId == null)
+                throw new ApiException(400, "Missing required parameter 'pluginId' when calling ClientSettingsApi->ClientSettingsGetPluginSettings_0");
+            // verify the required parameter 'instanceId' is set
+            if (instanceId == null)
+                throw new ApiException(400, "Missing required parameter 'instanceId' when calling ClientSettingsApi->ClientSettingsGetPluginSettings_0");
+            // verify the required parameter 'desktopId' is set
+            if (desktopId == null)
+                throw new ApiException(400, "Missing required parameter 'desktopId' when calling ClientSettingsApi->ClientSettingsGetPluginSettings_0");
+
+            var localVarPath = "/api/Settings/plugin/{pluginId}/{instanceId}/{desktopId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pluginId != null) localVarPathParams.Add("pluginId", this.Configuration.ApiClient.ParameterToString(pluginId)); // path parameter
+            if (instanceId != null) localVarPathParams.Add("instanceId", this.Configuration.ApiClient.ParameterToString(instanceId)); // path parameter
+            if (desktopId != null) localVarPathParams.Add("desktopId", this.Configuration.ApiClient.ParameterToString(desktopId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ClientSettingsGetPluginSettings_0", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// This call returns the settings of plugin 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pluginId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="desktopId"></param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> ClientSettingsGetPluginSettings_0Async (string pluginId, string instanceId, string desktopId)
+        {
+             ApiResponse<Object> localVarResponse = await ClientSettingsGetPluginSettings_0AsyncWithHttpInfo(pluginId, instanceId, desktopId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// This call returns the settings of plugin 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pluginId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="desktopId"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ClientSettingsGetPluginSettings_0AsyncWithHttpInfo (string pluginId, string instanceId, string desktopId)
+        {
+            // verify the required parameter 'pluginId' is set
+            if (pluginId == null)
+                throw new ApiException(400, "Missing required parameter 'pluginId' when calling ClientSettingsApi->ClientSettingsGetPluginSettings_0");
+            // verify the required parameter 'instanceId' is set
+            if (instanceId == null)
+                throw new ApiException(400, "Missing required parameter 'instanceId' when calling ClientSettingsApi->ClientSettingsGetPluginSettings_0");
+            // verify the required parameter 'desktopId' is set
+            if (desktopId == null)
+                throw new ApiException(400, "Missing required parameter 'desktopId' when calling ClientSettingsApi->ClientSettingsGetPluginSettings_0");
+
+            var localVarPath = "/api/Settings/plugin/{pluginId}/{instanceId}/{desktopId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pluginId != null) localVarPathParams.Add("pluginId", this.Configuration.ApiClient.ParameterToString(pluginId)); // path parameter
+            if (instanceId != null) localVarPathParams.Add("instanceId", this.Configuration.ApiClient.ParameterToString(instanceId)); // path parameter
+            if (desktopId != null) localVarPathParams.Add("desktopId", this.Configuration.ApiClient.ParameterToString(desktopId)); // path parameter
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ClientSettingsGetPluginSettings_0", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1570,8 +1847,8 @@ namespace IO.Swagger.Api
         /// This call upade the setting of plugin 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pluginId">Identifier of plugin</param>
-        /// <param name="setting">Settings information to update</param>
+        /// <param name="pluginId"></param>
+        /// <param name="setting"></param>
         /// <returns></returns>
         public void ClientSettingsUpdatePluginSetting (string pluginId, Object setting)
         {
@@ -1582,8 +1859,8 @@ namespace IO.Swagger.Api
         /// This call upade the setting of plugin 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pluginId">Identifier of plugin</param>
-        /// <param name="setting">Settings information to update</param>
+        /// <param name="pluginId"></param>
+        /// <param name="setting"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> ClientSettingsUpdatePluginSettingWithHttpInfo (string pluginId, Object setting)
         {
@@ -1657,8 +1934,8 @@ namespace IO.Swagger.Api
         /// This call upade the setting of plugin 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pluginId">Identifier of plugin</param>
-        /// <param name="setting">Settings information to update</param>
+        /// <param name="pluginId"></param>
+        /// <param name="setting"></param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task ClientSettingsUpdatePluginSettingAsync (string pluginId, Object setting)
         {
@@ -1670,8 +1947,8 @@ namespace IO.Swagger.Api
         /// This call upade the setting of plugin 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pluginId">Identifier of plugin</param>
-        /// <param name="setting">Settings information to update</param>
+        /// <param name="pluginId"></param>
+        /// <param name="setting"></param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> ClientSettingsUpdatePluginSettingAsyncWithHttpInfo (string pluginId, Object setting)
         {
@@ -1733,6 +2010,205 @@ namespace IO.Swagger.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("ClientSettingsUpdatePluginSetting", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// This call upade the setting of plugin 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pluginId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="desktopId"></param>
+        /// <param name="setting"></param>
+        /// <returns></returns>
+        public void ClientSettingsUpdatePluginSetting_0 (string pluginId, string instanceId, string desktopId, Object setting)
+        {
+             ClientSettingsUpdatePluginSetting_0WithHttpInfo(pluginId, instanceId, desktopId, setting);
+        }
+
+        /// <summary>
+        /// This call upade the setting of plugin 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pluginId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="desktopId"></param>
+        /// <param name="setting"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ClientSettingsUpdatePluginSetting_0WithHttpInfo (string pluginId, string instanceId, string desktopId, Object setting)
+        {
+            // verify the required parameter 'pluginId' is set
+            if (pluginId == null)
+                throw new ApiException(400, "Missing required parameter 'pluginId' when calling ClientSettingsApi->ClientSettingsUpdatePluginSetting_0");
+            // verify the required parameter 'instanceId' is set
+            if (instanceId == null)
+                throw new ApiException(400, "Missing required parameter 'instanceId' when calling ClientSettingsApi->ClientSettingsUpdatePluginSetting_0");
+            // verify the required parameter 'desktopId' is set
+            if (desktopId == null)
+                throw new ApiException(400, "Missing required parameter 'desktopId' when calling ClientSettingsApi->ClientSettingsUpdatePluginSetting_0");
+            // verify the required parameter 'setting' is set
+            if (setting == null)
+                throw new ApiException(400, "Missing required parameter 'setting' when calling ClientSettingsApi->ClientSettingsUpdatePluginSetting_0");
+
+            var localVarPath = "/api/Settings/plugin/{pluginId}/{instanceId}/{desktopId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pluginId != null) localVarPathParams.Add("pluginId", this.Configuration.ApiClient.ParameterToString(pluginId)); // path parameter
+            if (instanceId != null) localVarPathParams.Add("instanceId", this.Configuration.ApiClient.ParameterToString(instanceId)); // path parameter
+            if (desktopId != null) localVarPathParams.Add("desktopId", this.Configuration.ApiClient.ParameterToString(desktopId)); // path parameter
+            if (setting != null && setting.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(setting); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = setting; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ClientSettingsUpdatePluginSetting_0", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// This call upade the setting of plugin 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pluginId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="desktopId"></param>
+        /// <param name="setting"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task ClientSettingsUpdatePluginSetting_0Async (string pluginId, string instanceId, string desktopId, Object setting)
+        {
+             await ClientSettingsUpdatePluginSetting_0AsyncWithHttpInfo(pluginId, instanceId, desktopId, setting);
+
+        }
+
+        /// <summary>
+        /// This call upade the setting of plugin 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pluginId"></param>
+        /// <param name="instanceId"></param>
+        /// <param name="desktopId"></param>
+        /// <param name="setting"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ClientSettingsUpdatePluginSetting_0AsyncWithHttpInfo (string pluginId, string instanceId, string desktopId, Object setting)
+        {
+            // verify the required parameter 'pluginId' is set
+            if (pluginId == null)
+                throw new ApiException(400, "Missing required parameter 'pluginId' when calling ClientSettingsApi->ClientSettingsUpdatePluginSetting_0");
+            // verify the required parameter 'instanceId' is set
+            if (instanceId == null)
+                throw new ApiException(400, "Missing required parameter 'instanceId' when calling ClientSettingsApi->ClientSettingsUpdatePluginSetting_0");
+            // verify the required parameter 'desktopId' is set
+            if (desktopId == null)
+                throw new ApiException(400, "Missing required parameter 'desktopId' when calling ClientSettingsApi->ClientSettingsUpdatePluginSetting_0");
+            // verify the required parameter 'setting' is set
+            if (setting == null)
+                throw new ApiException(400, "Missing required parameter 'setting' when calling ClientSettingsApi->ClientSettingsUpdatePluginSetting_0");
+
+            var localVarPath = "/api/Settings/plugin/{pluginId}/{instanceId}/{desktopId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (pluginId != null) localVarPathParams.Add("pluginId", this.Configuration.ApiClient.ParameterToString(pluginId)); // path parameter
+            if (instanceId != null) localVarPathParams.Add("instanceId", this.Configuration.ApiClient.ParameterToString(instanceId)); // path parameter
+            if (desktopId != null) localVarPathParams.Add("desktopId", this.Configuration.ApiClient.ParameterToString(desktopId)); // path parameter
+            if (setting != null && setting.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(setting); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = setting; // byte array
+            }
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ClientSettingsUpdatePluginSetting_0", localVarResponse);
                 if (exception != null) throw exception;
             }
 

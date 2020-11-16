@@ -86,6 +86,25 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of List&lt;ClaimInfoDTO&gt;</returns>
         ApiResponse<List<ClaimInfoDTO>> AuthenticationGetAcecssTokenClaimsWithHttpInfo ();
         /// <summary>
+        /// Get current user info context
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>IdentityInfoDto</returns>
+        IdentityInfoDto AuthenticationGetIdentityInfo ();
+
+        /// <summary>
+        /// Get current user info context
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of IdentityInfoDto</returns>
+        ApiResponse<IdentityInfoDto> AuthenticationGetIdentityInfoWithHttpInfo ();
+        /// <summary>
         /// This call returns a specific logon provider by id
         /// </summary>
         /// <remarks>
@@ -267,7 +286,7 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of AuthenticationTokenDTO</returns>
         ApiResponse<AuthenticationTokenDTO> AuthenticationGetTokenByLogonTicketWithHttpInfo (AuthenticationTokenByLogonTicketRequestDTO logonTicketRequest);
         /// <summary>
-        /// This call returns a new authentication token with info given a logon ticket (admin required)
+        /// This call returns a new authentication token with info given a logon ticket
         /// </summary>
         /// <remarks>
         /// 
@@ -278,7 +297,7 @@ namespace IO.Swagger.Api
         AccessTokenInfoDTO AuthenticationGetTokenInfoByLogonTicket (AuthenticationTokenByLogonTicketRequestDTO logonTicketRequest);
 
         /// <summary>
-        /// This call returns a new authentication token with info given a logon ticket (admin required)
+        /// This call returns a new authentication token with info given a logon ticket
         /// </summary>
         /// <remarks>
         /// 
@@ -477,6 +496,25 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (List&lt;ClaimInfoDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<ClaimInfoDTO>>> AuthenticationGetAcecssTokenClaimsAsyncWithHttpInfo ();
         /// <summary>
+        /// Get current user info context
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of IdentityInfoDto</returns>
+        System.Threading.Tasks.Task<IdentityInfoDto> AuthenticationGetIdentityInfoAsync ();
+
+        /// <summary>
+        /// Get current user info context
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (IdentityInfoDto)</returns>
+        System.Threading.Tasks.Task<ApiResponse<IdentityInfoDto>> AuthenticationGetIdentityInfoAsyncWithHttpInfo ();
+        /// <summary>
         /// This call returns a specific logon provider by id
         /// </summary>
         /// <remarks>
@@ -658,7 +696,7 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (AuthenticationTokenDTO)</returns>
         System.Threading.Tasks.Task<ApiResponse<AuthenticationTokenDTO>> AuthenticationGetTokenByLogonTicketAsyncWithHttpInfo (AuthenticationTokenByLogonTicketRequestDTO logonTicketRequest);
         /// <summary>
-        /// This call returns a new authentication token with info given a logon ticket (admin required)
+        /// This call returns a new authentication token with info given a logon ticket
         /// </summary>
         /// <remarks>
         /// 
@@ -669,7 +707,7 @@ namespace IO.Swagger.Api
         System.Threading.Tasks.Task<AccessTokenInfoDTO> AuthenticationGetTokenInfoByLogonTicketAsync (AuthenticationTokenByLogonTicketRequestDTO logonTicketRequest);
 
         /// <summary>
-        /// This call returns a new authentication token with info given a logon ticket (admin required)
+        /// This call returns a new authentication token with info given a logon ticket
         /// </summary>
         /// <remarks>
         /// 
@@ -1317,6 +1355,143 @@ namespace IO.Swagger.Api
             return new ApiResponse<List<ClaimInfoDTO>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (List<ClaimInfoDTO>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<ClaimInfoDTO>)));
+        }
+
+        /// <summary>
+        /// Get current user info context 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>IdentityInfoDto</returns>
+        public IdentityInfoDto AuthenticationGetIdentityInfo ()
+        {
+             ApiResponse<IdentityInfoDto> localVarResponse = AuthenticationGetIdentityInfoWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get current user info context 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of IdentityInfoDto</returns>
+        public ApiResponse< IdentityInfoDto > AuthenticationGetIdentityInfoWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/Authentication/identityInfo";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AuthenticationGetIdentityInfo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<IdentityInfoDto>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (IdentityInfoDto) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityInfoDto)));
+        }
+
+        /// <summary>
+        /// Get current user info context 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of IdentityInfoDto</returns>
+        public async System.Threading.Tasks.Task<IdentityInfoDto> AuthenticationGetIdentityInfoAsync ()
+        {
+             ApiResponse<IdentityInfoDto> localVarResponse = await AuthenticationGetIdentityInfoAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get current user info context 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (IdentityInfoDto)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<IdentityInfoDto>> AuthenticationGetIdentityInfoAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/api/Authentication/identityInfo";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+            // authentication (Authorization) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AuthenticationGetIdentityInfo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<IdentityInfoDto>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (IdentityInfoDto) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityInfoDto)));
         }
 
         /// <summary>
@@ -2685,7 +2860,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call returns a new authentication token with info given a logon ticket (admin required) 
+        /// This call returns a new authentication token with info given a logon ticket 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="logonTicketRequest"></param>
@@ -2697,7 +2872,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call returns a new authentication token with info given a logon ticket (admin required) 
+        /// This call returns a new authentication token with info given a logon ticket 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="logonTicketRequest"></param>
@@ -2771,7 +2946,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call returns a new authentication token with info given a logon ticket (admin required) 
+        /// This call returns a new authentication token with info given a logon ticket 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="logonTicketRequest"></param>
@@ -2784,7 +2959,7 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// This call returns a new authentication token with info given a logon ticket (admin required) 
+        /// This call returns a new authentication token with info given a logon ticket 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="logonTicketRequest"></param>
