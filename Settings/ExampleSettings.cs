@@ -9,7 +9,8 @@ namespace Settings
     public static class ExampleSettings
     {
         public static string AppName = "ArxivarNextDev";
-        public static string AppSecret = "F4E38542DA0047E1";
-        public static string ApiBaseUrl = "http://79.21.2.148/ARXivarNextWebApi/";
+        public static string AppSecret = "B7BC104D566940B1A8B9C5EC66B4E409";
+        public static string ApiBaseUrl = "http://localhost/ARXivarResourceServer/";
+        public static string WorkflowApiBaseUrl = "http://localhost/ARXivarWorkflowServer/";
     }
 }
