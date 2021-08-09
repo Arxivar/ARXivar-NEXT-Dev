@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using IO.Swagger.Management.Client;
-using IO.Swagger.Management.Model;
-using IO.Swagger.Model;
+using Abletech.WebApi.Client.Arxivar.Model;
+using Abletech.WebApi.Client.ArxivarManagement.Client;
+using Abletech.WebApi.Client.ArxivarManagement.Model;
 
 namespace ExampleApplication
 {
@@ -27,7 +27,7 @@ namespace ExampleApplication
         private string _authToken;
         private string _refreshToken;
 
-        public IO.Swagger.Management.Client.Configuration Configuration
+        public Abletech.WebApi.Client.ArxivarManagement.Client.Configuration Configuration
         {
             get
             {
@@ -46,7 +46,7 @@ namespace ExampleApplication
             try
             {
                 //Inizialize Authentication api (Authentication api not require authentication token)
-                var authApi = new IO.Swagger.Api.AuthenticationApi(_apiUrl);
+                var authApi = new Abletech.WebApi.Client.Arxivar.Api.AuthenticationApi(_apiUrl);
                 //Login to obtain a valid token (and a refresh token)
 
                 /*
@@ -82,14 +82,14 @@ namespace ExampleApplication
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var aooManagementApi = new IO.Swagger.Management.Api.BusinessUnitsManagementApi(Configuration);
+            var aooManagementApi = new Abletech.WebApi.Client.ArxivarManagement.Api.BusinessUnitsManagementApi(Configuration);
             var aoos = aooManagementApi.BusinessUnitsManagementGet();
             aooGrid.DataSource = aoos;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var documentTypesManagementApi = new IO.Swagger.Management.Api.DocumentTypesManagementApi(Configuration);
+            var documentTypesManagementApi = new Abletech.WebApi.Client.ArxivarManagement.Api.DocumentTypesManagementApi(Configuration);
             var documentTypes = documentTypesManagementApi.DocumentTypesManagementGetList();
             docTypeGrid.DataSource = documentTypes;
         }
@@ -100,7 +100,7 @@ namespace ExampleApplication
             {
                 var documentTypeId = ((DocumentTypeCompleteDTO) docTypeGrid.SelectedRows[0].DataBoundItem).Id;
                     
-                var additionalFieldsManagementApi = new IO.Swagger.Management.Api.AdditionalFieldsManagementApi(Configuration);
+                var additionalFieldsManagementApi = new Abletech.WebApi.Client.ArxivarManagement.Api.AdditionalFieldsManagementApi(Configuration);
                 var additionalFields = additionalFieldsManagementApi.AdditionalFieldsManagementGetAdditionalFieldsByDocumentTypeId(documentTypeId);
                 docTypeGrid.DataSource = additionalFields;
             }

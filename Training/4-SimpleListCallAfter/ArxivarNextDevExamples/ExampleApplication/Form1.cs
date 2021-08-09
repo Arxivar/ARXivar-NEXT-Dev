@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Abletech.WebApi.Client.Arxivar.Client;
+using Abletech.WebApi.Client.Arxivar.Model;
 
 namespace ExampleApplication
 {
@@ -24,7 +24,7 @@ namespace ExampleApplication
         private string _authToken;
         private string _refreshToken;
 
-        public IO.Swagger.Client.Configuration Configuration
+        public Abletech.WebApi.Client.Arxivar.Client.Configuration Configuration
         {
             get
             {
@@ -47,7 +47,7 @@ namespace ExampleApplication
             try
             {
                 //Inizialize Authentication api (Authentication api not require authentication token)
-                var authApi = new IO.Swagger.Api.AuthenticationApi(_apiUrl);
+                var authApi = new Abletech.WebApi.Client.Arxivar.Api.AuthenticationApi(_apiUrl);
                 //Login to obtain a valid token (and a refresh token)
                 var resultToken = authApi.AuthenticationGetToken(new AuthenticationTokenRequestDTO(userTxt.Text, passwordTxt.Text, _appId, _secret));
 
@@ -74,7 +74,7 @@ namespace ExampleApplication
             try
             {
                 //Inizialize Authentication api (Authentication api not require authentication token)
-                var authApi = new IO.Swagger.Api.AuthenticationApi(_apiUrl);
+                var authApi = new Abletech.WebApi.Client.Arxivar.Api.AuthenticationApi(_apiUrl);
                 //Try to obtain a new token with the refresh token provided durin login procedure
                 var resultToken = authApi.AuthenticationRefresh(new RefreshTokenRequestDTO(_appId, _secret, _refreshToken));
                 _authToken = resultToken.AccessToken;
@@ -125,7 +125,7 @@ namespace ExampleApplication
                     var aooCode = ((BusinessUnitDTO) aooTable.SelectedRows[0].DataBoundItem).Code;
 
                     //Inizializzo "DocumentTypes Api"
-                    var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
+                    var docTypesApi = new Abletech.WebApi.Client.Arxivar.Api.DocumentTypesApi(Configuration);
 
                     //Mi faccio ritornare la lista delle classi documentali censite
                     var docTypes = docTypesApi.DocumentTypesGet_0(1, aooCode);

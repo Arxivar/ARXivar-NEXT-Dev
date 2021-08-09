@@ -32,6 +32,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Abletech.WebApi.Client.Arxivar.NetFx, Version=2.5.1.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\ARXivar.WebApi.Client.Arxivar.NetFx.2.5.1\lib\net45\Abletech.WebApi.Client.Arxivar.NetFx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="JsonSubTypes, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\JsonSubTypes.1.2.0\lib\net45\JsonSubTypes.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.1.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\RestSharp.105.1.0\lib\net45\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -65,6 +81,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -79,10 +96,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\IO.Swagger\IO.Swagger.csproj">
-      <Project>{c9dccbc7-5483-46f8-a94b-6b3c551069b1}</Project>
-      <Name>IO.Swagger</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\Settings\Settings.csproj">
       <Project>{595a9496-fb05-4e08-b983-78cf5b034bc9}</Project>
       <Name>Settings</Name>

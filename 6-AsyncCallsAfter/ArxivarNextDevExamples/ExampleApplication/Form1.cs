@@ -10,8 +10,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Threading;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Abletech.WebApi.Client.Arxivar.Client;
+using Abletech.WebApi.Client.Arxivar.Model;
 
 namespace ExampleApplication
 {
@@ -27,7 +27,7 @@ namespace ExampleApplication
         private string _authToken;
         private string _refreshToken;
 
-        public IO.Swagger.Client.Configuration Configuration
+        public Abletech.WebApi.Client.Arxivar.Client.Configuration Configuration
         {
             get
             {
@@ -50,7 +50,7 @@ namespace ExampleApplication
             try
             {
                 //Inizialize Authentication api (Authentication api not require authentication token)
-                var authApi = new IO.Swagger.Api.AuthenticationApi(_apiUrl);
+                var authApi = new Abletech.WebApi.Client.Arxivar.Api.AuthenticationApi(_apiUrl);
                 //Login to obtain a valid token (and a refresh token)
                 var resultToken = authApi.AuthenticationGetToken(new AuthenticationTokenRequestDTO(userTxt.Text, passwordTxt.Text, _appId, _secret));
 
@@ -77,7 +77,7 @@ namespace ExampleApplication
             try
             {
                 //Inizialize Authentication api (Authentication api not require authentication token)
-                var authApi = new IO.Swagger.Api.AuthenticationApi(_apiUrl);
+                var authApi = new Abletech.WebApi.Client.Arxivar.Api.AuthenticationApi(_apiUrl);
                 //Try to obtain a new token with the refresh token provided durin login procedure
                 var resultToken = authApi.AuthenticationRefresh(new RefreshTokenRequestDTO(_appId, _secret, _refreshToken));
                 _authToken = resultToken.AccessToken;
@@ -104,7 +104,7 @@ namespace ExampleApplication
             try
             {
                 //Inizialize BusinessUnit Api
-                var aooApi = new IO.Swagger.Api.BusinessUnitsApi(Configuration);
+                var aooApi = new Abletech.WebApi.Client.Arxivar.Api.BusinessUnitsApi(Configuration);
                 //Get Aoo list
                 var businessUnits = aooApi.BusinessUnitsGet();
                 //Bind to the grid as IEnumerable<T>
@@ -124,7 +124,7 @@ namespace ExampleApplication
                 {
                     var aooCode = ((BusinessUnitDTO) aooTable.SelectedRows[0].DataBoundItem).Code;
                     //Inizialize DocumentTypes Api
-                    var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
+                    var docTypesApi = new Abletech.WebApi.Client.Arxivar.Api.DocumentTypesApi(Configuration);
                     //Get DocumentTypes list
 
                     var docTypes = docTypesApi.DocumentTypesGet_0(1, aooCode);
@@ -144,8 +144,8 @@ namespace ExampleApplication
             try
             {
                 //Inizialize BusinessUnit & DocumentTypes Api
-                var aooApi = new IO.Swagger.Api.BusinessUnitsApi(Configuration);
-                var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
+                var aooApi = new Abletech.WebApi.Client.Arxivar.Api.BusinessUnitsApi(Configuration);
+                var docTypesApi = new Abletech.WebApi.Client.Arxivar.Api.DocumentTypesApi(Configuration);
                 //Call Async method
                 AsyncDocTypes(aooApi, docTypesApi);
                 //Test asyncronous operations
@@ -157,7 +157,7 @@ namespace ExampleApplication
             }
         }
 
-        private async Task AsyncDocTypes(IO.Swagger.Api.BusinessUnitsApi aooApi, IO.Swagger.Api.DocumentTypesApi docTypesApi)
+        private async Task AsyncDocTypes(Abletech.WebApi.Client.Arxivar.Api.BusinessUnitsApi aooApi, Abletech.WebApi.Client.Arxivar.Api.DocumentTypesApi docTypesApi)
         {
             List<DocumentTypeBaseDTO> doctypes = null;
             for (int i = 0; i < 100; i++)

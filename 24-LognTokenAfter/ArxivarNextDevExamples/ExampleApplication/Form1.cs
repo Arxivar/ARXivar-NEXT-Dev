@@ -12,8 +12,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Abletech.WebApi.Client.Arxivar.Client;
+using Abletech.WebApi.Client.Arxivar.Model;
 using Newtonsoft.Json;
 using RestSharp;
 
@@ -31,7 +31,7 @@ namespace ExampleApplication
         private string _authToken;
         private string _refreshToken;
 
-        public IO.Swagger.Client.Configuration Configuration
+        public Abletech.WebApi.Client.Arxivar.Client.Configuration Configuration
         {
             get
             {
@@ -55,7 +55,7 @@ namespace ExampleApplication
             try
             {
                 //Inizialize Authentication api (Authentication api not require authentication token)
-                var authApi = new IO.Swagger.Api.AuthenticationApi(_apiUrl);
+                var authApi = new Abletech.WebApi.Client.Arxivar.Api.AuthenticationApi(_apiUrl);
                 //Login to obtain a valid token (and a refresh token)
                 var resultToken =
                     authApi.AuthenticationGetToken(
@@ -85,7 +85,7 @@ namespace ExampleApplication
             try
             {
                 //Inizialize Authentication api (Authentication api not require authentication token)
-                var authApi = new IO.Swagger.Api.AuthenticationApi(_apiUrl);
+                var authApi = new Abletech.WebApi.Client.Arxivar.Api.AuthenticationApi(_apiUrl);
                 //Try to obtain a new token with the refresh token provided durin login procedure
                 var resultToken =
                     authApi.AuthenticationRefresh(new RefreshTokenRequestDTO(_appId, _secret, _refreshToken));
@@ -114,7 +114,7 @@ namespace ExampleApplication
             try
             {
                 //Inizialize BusinessUnit Api
-                var aooApi = new IO.Swagger.Api.BusinessUnitsApi(Configuration);
+                var aooApi = new Abletech.WebApi.Client.Arxivar.Api.BusinessUnitsApi(Configuration);
                 //Get Aoo list
                 var businessUnits = aooApi.BusinessUnitsGet();
                 //Bind to the grid as IEnumerable<T>
@@ -134,7 +134,7 @@ namespace ExampleApplication
                 {
                     var aooCode = ((BusinessUnitDTO) aooTable.SelectedRows[0].DataBoundItem).Code;
                     //Inizialize DocumentTypes Api
-                    var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
+                    var docTypesApi = new Abletech.WebApi.Client.Arxivar.Api.DocumentTypesApi(Configuration);
                     //Get DocumentTypes list
 
                     var docTypes = docTypesApi.DocumentTypesGet_0(1, aooCode);
@@ -154,8 +154,8 @@ namespace ExampleApplication
             try
             {
                 //Inizialize BusinessUnit & DocumentTypes Api
-                var aooApi = new IO.Swagger.Api.BusinessUnitsApi(Configuration);
-                var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
+                var aooApi = new Abletech.WebApi.Client.Arxivar.Api.BusinessUnitsApi(Configuration);
+                var docTypesApi = new Abletech.WebApi.Client.Arxivar.Api.DocumentTypesApi(Configuration);
                 //Call Async method
                 AsyncDocTypes(aooApi, docTypesApi);
                 //Test asyncronous operations
@@ -167,8 +167,8 @@ namespace ExampleApplication
             }
         }
 
-        private async Task AsyncDocTypes(IO.Swagger.Api.BusinessUnitsApi aooApi,
-            IO.Swagger.Api.DocumentTypesApi docTypesApi)
+        private async Task AsyncDocTypes(Abletech.WebApi.Client.Arxivar.Api.BusinessUnitsApi aooApi,
+            Abletech.WebApi.Client.Arxivar.Api.DocumentTypesApi docTypesApi)
         {
             List<DocumentTypeBaseDTO> doctypes = null;
             for (int i = 0; i < 100; i++)
@@ -188,7 +188,7 @@ namespace ExampleApplication
         {
             try
             {
-                var maskApi = new IO.Swagger.Api.MasksApi(Configuration);
+                var maskApi = new Abletech.WebApi.Client.Arxivar.Api.MasksApi(Configuration);
                 var masks = maskApi.MasksGetList();
                 datagridComplex.DataSource = masks;
 
@@ -204,7 +204,7 @@ namespace ExampleApplication
         {
             try
             {
-                var maskApi = new IO.Swagger.Api.MasksApi(Configuration);
+                var maskApi = new Abletech.WebApi.Client.Arxivar.Api.MasksApi(Configuration);
                 if (datagridComplex.SelectedRows != null && datagridComplex.SelectedRows.Count > 0)
                 {
                     var mascheraSelezionata = (MaskDTO) datagridComplex.SelectedRows[0].DataBoundItem;
@@ -223,7 +223,7 @@ namespace ExampleApplication
         {
             try
             {
-                var predefinedProfileApi = new IO.Swagger.Api.PredefinedProfilesApi(Configuration);
+                var predefinedProfileApi = new Abletech.WebApi.Client.Arxivar.Api.PredefinedProfilesApi(Configuration);
                 var predefProfiles = predefinedProfileApi.PredefinedProfilesGet();
                 datagridComplex.DataSource = predefProfiles;
 
@@ -238,7 +238,7 @@ namespace ExampleApplication
         {
             try
             {
-                var predefinedProfileApi = new IO.Swagger.Api.PredefinedProfilesApi(Configuration);
+                var predefinedProfileApi = new Abletech.WebApi.Client.Arxivar.Api.PredefinedProfilesApi(Configuration);
                 if (datagridComplex.SelectedRows != null && datagridComplex.SelectedRows.Count > 0)
                 {
                     var predefinedProfileSelected =
@@ -260,9 +260,9 @@ namespace ExampleApplication
         {
             try
             {
-                var searchApi = new IO.Swagger.Api.SearchesApi(Configuration);
+                var searchApi = new Abletech.WebApi.Client.Arxivar.Api.SearchesApi(Configuration);
 
-                var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
+                var docTypesApi = new Abletech.WebApi.Client.Arxivar.Api.DocumentTypesApi(Configuration);
                 var docTypes = docTypesApi.DocumentTypesGet_0(1, "AbleBS");
                 var classeFatture = docTypes.FirstOrDefault(i => i.Key == "AMM.FATT");
 
@@ -309,7 +309,7 @@ namespace ExampleApplication
         {
             try
             {
-                var documentApi = new IO.Swagger.Api.DocumentsApi(Configuration);
+                var documentApi = new Abletech.WebApi.Client.Arxivar.Api.DocumentsApi(Configuration);
                 if (searchGrid.SelectedRows != null && searchGrid.SelectedRows.Count > 0)
                 {
                     var doc = documentApi.DocumentsGetForProfileWithHttpInfo(
@@ -338,14 +338,14 @@ namespace ExampleApplication
 
         private void buttonImport_Click(object sender, EventArgs e)
         {
-            var bufferApi = new IO.Swagger.Api.BufferApi(Configuration);
-            var profileApi = new IO.Swagger.Api.ProfilesApi(Configuration);
-            var statesApi = new IO.Swagger.Api.StatesApi(Configuration);
+            var bufferApi = new Abletech.WebApi.Client.Arxivar.Api.BufferApi(Configuration);
+            var profileApi = new Abletech.WebApi.Client.Arxivar.Api.ProfilesApi(Configuration);
+            var statesApi = new Abletech.WebApi.Client.Arxivar.Api.StatesApi(Configuration);
 
-            var aooApi = new IO.Swagger.Api.BusinessUnitsApi(Configuration);
+            var aooApi = new Abletech.WebApi.Client.Arxivar.Api.BusinessUnitsApi(Configuration);
             var aoo = aooApi.BusinessUnitsGet();
 
-            var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
+            var docTypesApi = new Abletech.WebApi.Client.Arxivar.Api.DocumentTypesApi(Configuration);
             var doctypes = docTypesApi.DocumentTypesGet_0(1, aoo.First().Code);
 
 
@@ -393,8 +393,8 @@ namespace ExampleApplication
 
         private void button4_Click(object sender, EventArgs e)
         {
-            var wfApi = new IO.Swagger.Api.WorkflowApi(Configuration);
-            var documentApi = new IO.Swagger.Api.DocumentsApi(Configuration);
+            var wfApi = new Abletech.WebApi.Client.Arxivar.Api.WorkflowApi(Configuration);
+            var documentApi = new Abletech.WebApi.Client.Arxivar.Api.DocumentsApi(Configuration);
 
             if (searchGrid.SelectedRows != null && searchGrid.SelectedRows.Count > 0)
             {
@@ -407,8 +407,8 @@ namespace ExampleApplication
 
         private void button5_Click(object sender, EventArgs e)
         {
-            var wfApi = new IO.Swagger.Api.WorkflowApi(Configuration);
-            var documentApi = new IO.Swagger.Api.DocumentsApi(Configuration);
+            var wfApi = new Abletech.WebApi.Client.Arxivar.Api.WorkflowApi(Configuration);
+            var documentApi = new Abletech.WebApi.Client.Arxivar.Api.DocumentsApi(Configuration);
 
             if (searchGrid.SelectedRows != null && searchGrid.SelectedRows.Count > 0)
             {
@@ -423,7 +423,7 @@ namespace ExampleApplication
 
         private void button6_Click(object sender, EventArgs e)
         {
-            var taskApi = new IO.Swagger.Api.TaskWorkApi(Configuration);
+            var taskApi = new Abletech.WebApi.Client.Arxivar.Api.TaskWorkApi(Configuration);
             var select = taskApi.TaskWorkGetDefaultSelect();
             var tasks = taskApi.TaskWorkGetTasks(new TaskWorkRequestDTO(select));
 
@@ -446,7 +446,7 @@ namespace ExampleApplication
         {
             try
             {
-                var taskApi = new IO.Swagger.Api.TaskWorkApi(Configuration);
+                var taskApi = new Abletech.WebApi.Client.Arxivar.Api.TaskWorkApi(Configuration);
                 if (wfGrid.SelectedRows != null && wfGrid.SelectedRows.Count > 0)
                 {
                     var exitcodes = taskApi.TaskWorkGetExitCodesByTaskWorkIds(new List<int?>()
@@ -464,7 +464,7 @@ namespace ExampleApplication
         {
             try
             {
-                var profilesApi = new IO.Swagger.Api.ProfilesApi(Configuration);
+                var profilesApi = new Abletech.WebApi.Client.Arxivar.Api.ProfilesApi(Configuration);
                 var profile = profilesApi.ProfilesGetSchema(48, true);
 
                 //Update a standard field of the profile
@@ -496,9 +496,9 @@ namespace ExampleApplication
         {
             try
             {
-                var searchV2Api = new IO.Swagger.Api.SearchesV2Api(Configuration);
+                var searchV2Api = new Abletech.WebApi.Client.Arxivar.Api.SearchesV2Api(Configuration);
 
-                var docTypesApi = new IO.Swagger.Api.DocumentTypesApi(Configuration);
+                var docTypesApi = new Abletech.WebApi.Client.Arxivar.Api.DocumentTypesApi(Configuration);
                 var docTypes = docTypesApi.DocumentTypesGet_0(1, "AbleBS");
                 var classeFatture = docTypes.FirstOrDefault(i => i.Key == "AMM.FATT");
                 var classeBolle = docTypes.FirstOrDefault(i => i.Key == "AMM.BOL");
@@ -596,14 +596,14 @@ namespace ExampleApplication
 
         private void button10_Click(object sender, EventArgs e)
         {
-            var addBookCatApi = new IO.Swagger.Api.AddressBookCategoryApi(Configuration);
+            var addBookCatApi = new Abletech.WebApi.Client.Arxivar.Api.AddressBookCategoryApi(Configuration);
             var categories = addBookCatApi.AddressBookCategoryGet();
             gridAddressBook.DataSource = categories;
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            var addressBookSearchApi = new IO.Swagger.Api.AddressBookSearchApi(Configuration);
+            var addressBookSearchApi = new Abletech.WebApi.Client.Arxivar.Api.AddressBookSearchApi(Configuration);
 
             if (gridAddressBook.SelectedRows != null && gridAddressBook.SelectedRows.Count > 0)
             {
@@ -654,7 +654,7 @@ namespace ExampleApplication
 
         private void button12_Click(object sender, EventArgs e)
         {
-            var addressBookApi = new IO.Swagger.Api.AddressBookApi(Configuration);
+            var addressBookApi = new Abletech.WebApi.Client.Arxivar.Api.AddressBookApi(Configuration);
             if (gridAddressBook.SelectedRows != null && gridAddressBook.SelectedRows.Count > 0)
             {
                 var addressBookDto = addressBookApi.AddressBookGetById(int.Parse(gridAddressBook.SelectedRows[0].Cells["Rubrica"].Value
@@ -666,7 +666,7 @@ namespace ExampleApplication
 
         private void button13_Click(object sender, EventArgs e)
         {
-            var authApi = new IO.Swagger.Api.AuthenticationApi(Configuration);
+            var authApi = new Abletech.WebApi.Client.Arxivar.Api.AuthenticationApi(Configuration);
             var ticket = authApi.AuthenticationInsertLogonTicket(new LogonTicketRequestDto(2, "", 1, null, Settings.ExampleSettings.AppName, Settings.ExampleSettings.AppSecret, null, null, null));
 
             labelLogonToken.Text = "Ottenuto un logo token per l'utente 2 valido one shot, Token: " + ticket.LogonTicket;
@@ -679,7 +679,7 @@ namespace ExampleApplication
 
         private void button14_Click(object sender, EventArgs e)
         {
-            var authApi = new IO.Swagger.Api.AuthenticationApi(Configuration);
+            var authApi = new Abletech.WebApi.Client.Arxivar.Api.AuthenticationApi(Configuration);
             var ticket = authApi.AuthenticationInsertLogonTicket(new LogonTicketRequestDto(2, "", null, DateTime.Now.AddDays(10), Settings.ExampleSettings.AppName, Settings.ExampleSettings.AppSecret, null, null, null));
 
             labelLogonToken.Text = "Ottenuto un logo token per l'utente 2 valido per 10 giorni, Token: " + ticket.LogonTicket;

@@ -7,8 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using IO.Swagger.Management.Client;
-using IO.Swagger.Model;
+using Abletech.WebApi.Client.Arxivar.Model;
 
 namespace ExampleApplication
 {
@@ -26,12 +25,12 @@ namespace ExampleApplication
         private string _authToken;
         private string _refreshToken;
 
-        public IO.Swagger.Management.Client.Configuration Configuration
+        public Abletech.WebApi.Client.ArxivarManagement.Client.Configuration Configuration
         {
             get
             {
                 //Build a configuration object with the Token provided during login procedure or refresh token procedure
-                return new Configuration()
+                return new Abletech.WebApi.Client.ArxivarManagement.Client.Configuration()
                 {
                     BasePath = _apiUrl,
                     ApiKey = new Dictionary<string, string>() { { "Authorization", _authToken} },
@@ -45,7 +44,7 @@ namespace ExampleApplication
             try
             {
                 //Inizialize Authentication api (Authentication api not require authentication token)
-                var authApi = new IO.Swagger.Api.AuthenticationApi(_apiUrl);
+                var authApi = new Abletech.WebApi.Client.Arxivar.Api.AuthenticationApi(_apiUrl);
                 //Login to obtain a valid token (and a refresh token)
 
                 /*
@@ -81,7 +80,7 @@ namespace ExampleApplication
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var aooManagementApi = new IO.Swagger.Management.Api.BusinessUnitsManagementApi(Configuration);
+            var aooManagementApi = new Abletech.WebApi.Client.ArxivarManagement.Api.BusinessUnitsManagementApi(Configuration);
             var aoos = aooManagementApi.BusinessUnitsManagementGet();
             aooGrid.DataSource = aoos;
         }
